@@ -1,0 +1,11 @@
+body{{font-family:Inter,system-ui;margin:0;color:#111}}
+.container{{max-width:1000px;margin:auto;padding:20px}}
+.header{{border-bottom:1px solid #eee;background:#fff;position:sticky;top:0}}
+.header__inner{{display:flex;justify-content:space-between;align-items:center}}
+.brand{{font-size:22px;font-weight:700}}
+.meta{{font-size:13px;color:#666}}
+.actions .btn{{margin-left:10px}}
+.btn{{background:#111;color:#fff;padding:10px 14px;border-radius:999px;text-decoration:none}}
+.btn-outline{{background:#fff;color:#111;border:1px solid #111}}
+.hero{{padding:60px 0;background:#fafafa}}
+.contacts{{padding:40px 0}}
