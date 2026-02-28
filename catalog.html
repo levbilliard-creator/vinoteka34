@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Каталог — Винотека</title>
+  <meta name="description" content="Каталог витрины Vinoteka34: фильтры по категориям и цене."/>
+  <link rel="stylesheet" href="./styles.css?v=3" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="./index.html">
+        <div class="brand-badge" aria-hidden="true"></div>
+        <div>
+          <div class="brand-title">Винотека</div>
+          <div class="brand-sub">Каталог‑витрина</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="./index.html#contacts">Контакты</a>
+        <a class="btn btn-outline" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Сомелье в Telegram</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h2 style="margin-bottom:10px">Каталог</h2>
+
+      <form class="form" id="filters">
+        <input class="input" id="q" placeholder="Поиск (например: Шабли, джин, сыр…)" />
+        <select class="input" id="cat">
+          <option value="">Категория: все</option>
+        </select>
+        <select class="input" id="wineColor">
+          <option value="">Цвет вина: любой</option>
+          <option>Красное</option><option>Белое</option><option>Розовое</option><option>Оранжевое</option><option>Игристое</option>
+        </select>
+        <input class="input" id="pmin" inputmode="numeric" placeholder="Цена от, ₽" />
+        <input class="input" id="pmax" inputmode="numeric" placeholder="Цена до, ₽" />
+        <button class="btn btn-outline" type="button" id="reset">Сброс</button>
+      </form>
+
+      <div class="small" style="margin:10px 0 14px" id="meta">Загрузка…</div>
+
+      <table class="table" id="table">
+        <thead>
+          <tr>
+            <th style="width:44%">Название</th>
+            <th>Категория</th>
+            <th>Цена</th>
+            <th>Наличие</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="small" style="margin-top:10px">
+        Если нужна консультация или “вино к блюду” — пишите: <a href="https://t.me/vinotekakaram" target="_blank" rel="noopener">t.me/vinotekakaram</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="small">Цены и наличие — ориентировочно. Уточняйте в магазине.</div>
+    </div>
+  </footer>
+
+  <script src="./app.js?v=3"></script>
+</body>
+</html>

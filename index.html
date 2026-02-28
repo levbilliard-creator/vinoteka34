@@ -2,42 +2,177 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Винотека</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Винотека — vinoteka34.ru</title>
+  <meta name="description" content="Винотека на Карамышевской набережной: подбор сомелье, редкие вина, дегустации. Москва."/>
+  <link rel="stylesheet" href="./styles.css?v=3" />
 </head>
 <body>
-<header class="header">
-  <div class="container header__inner">
-    <div>
-      <div class="brand">Винотека</div>
-      <div class="meta">Ежедневно 12:00–23:00 • Москва, Карамышевская набережная, д. 34</div>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="./index.html">
+        <div class="brand-badge" aria-hidden="true"></div>
+        <div>
+          <div class="brand-title">Винотека</div>
+          <div class="brand-sub">Ежедневно 12:00–23:00 • Москва, Карамышевская наб., 34</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="./catalog.html">Каталог</a>
+        <a href="#events">Дегустации</a>
+        <a href="#contacts">Контакты</a>
+        <a class="btn btn-outline" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Сомелье в Telegram</a>
+      </nav>
     </div>
-    <div class="actions">
-      <a class="btn" href="https://t.me/vinotekakaram" target="_blank">Telegram</a>
-      <a class="btn btn-outline" href="tel:+74959471010">+7 495 947-10-10</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="hero-media">
+            <img src="./assets/img/hero.jpg" alt="Интерьер Винотеки" loading="eager" />
+            <div class="hero-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="hero-content">
+            <div class="kicker">Бутик • Клуб • Сомелье‑сервис</div>
+            <h1 class="h1">Подберём вино под ваш вкус</h1>
+            <p class="lead">Скажете блюдо, бюджет и настроение — мы предложим варианты и соберём набор. Самовывоз или доставка по согласованию.</p>
+            <div class="actions">
+              <a class="btn" href="./catalog.html">Открыть каталог</a>
+              <a class="btn btn-outline" href="#pick">Подобрать по вкусу</a>
+              <a class="btn btn-outline" href="tel:+74959471010">Позвонить: +7 495 947‑10‑10</a>
+            </div>
+            <div class="small" style="margin-top:10px">18+ Алкогольная продукция. Пожалуйста, подтвердите возраст при покупке.</div>
+          </div>
+        </div>
+
+        <div class="hero-card side">
+          <div class="pill"><strong>УТП</strong> <span>подбор сомелье, редкие позиции, подарки</span></div>
+          <div class="pill"><strong>Вино недели</strong> <span>спросите в Telegram — подберём</span></div>
+          <div class="pill"><strong>Самовывоз</strong> <span>Карамышевская набережная, д. 34</span></div>
+          <div class="pill"><strong>Часы</strong> <span>ежедневно 12:00–23:00</span></div>
+          <hr class="sep"/>
+          <h3 id="pick">Быстрый подбор</h3>
+          <p>Оставьте запрос — откроется Telegram‑чат с заготовкой сообщения.</p>
+          <form class="form" id="pickForm">
+            <input class="input" name="budget" placeholder="Бюджет, ₽ (например 2500)" />
+            <input class="input" name="taste" placeholder="Вкус (сухое/фруктовое/минеральное…)" />
+            <input class="input" name="food" placeholder="К блюду (мясо/рыба/сыр…)" />
+            <button class="btn" type="submit">Отправить в Telegram</button>
+          </form>
+          <div class="small">Если Telegram не открывается — напишите нам: <a href="https://t.me/vinotekakaram" target="_blank" rel="noopener">@vinotekakaram</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Категории</h2>
+        <div class="grid-tiles">
+          <a class="tile" href="./catalog.html?cat=Вино"><div class="t-title">Вино</div><p class="t-sub">красное • белое • розе • игристое</p></a>
+          <a class="tile" href="./catalog.html?cat=Безалкогольное"><div class="t-title">Безалкогольное</div><p class="t-sub">вода • тоники • напитки</p></a>
+          <a class="tile" href="./catalog.html?cat=Виски"><div class="t-title">Виски</div><p class="t-sub">классика и редкости</p></a>
+          <a class="tile" href="./catalog.html?cat=Джин"><div class="t-title">Джин</div><p class="t-sub">сеты и бутылки</p></a>
+          <a class="tile" href="./catalog.html?cat=Ликёры/Аперитивы"><div class="t-title">Аперитивы</div><p class="t-sub">вермуты • биттеры • амаро</p></a>
+          <a class="tile" href="./catalog.html?cat=Гастрономия"><div class="t-title">Гастрономия</div><p class="t-sub">сыры • мясные деликатесы</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="events">
+      <div class="container">
+        <h2>Дегустации и мероприятия</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Дегустации по записи</h3>
+            <p>Мини‑группы, темы по странам/сортам. Узнать ближайшие даты — в Telegram.</p>
+          </div>
+          <div class="card">
+            <h3>Подарочные наборы</h3>
+            <p>Соберём набор под повод и бюджет, добавим гастрономию и упаковку.</p>
+          </div>
+          <div class="card">
+            <h3>Сомелье онлайн</h3>
+            <p>Напишите, что любите и что готовите — мы предложим варианты из наличия.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Фото</h2>
+        <div class="gallery">
+          <img src="./assets/img/gallery-1.jpg" alt="Винотека — фото 1" loading="lazy"/>
+          <img src="./assets/img/gallery-2.jpg" alt="Винотека — фото 2" loading="lazy"/>
+          <img src="./assets/img/gallery-3.jpg" alt="Винотека — фото 3" loading="lazy"/>
+          <img src="./assets/img/gallery-4.jpg" alt="Винотека — фото 4" loading="lazy"/>
+          <img src="./assets/img/gallery-5.jpg" alt="Винотека — фото 5" loading="lazy"/>
+          <img src="./assets/img/gallery-6.jpg" alt="Винотека — фото 6" loading="lazy"/>
+          <img src="./assets/img/gallery-7.jpg" alt="Винотека — фото 7" loading="lazy"/>
+          <img src="./assets/img/gallery-8.jpg" alt="Винотека — фото 8" loading="lazy"/>
+        </div>
+        <div class="small" style="margin-top:10px">Больше фото и новинки — в Telegram.</div>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container">
+        <h2>Контакты</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Адрес</h3>
+            <p>Москва, Карамышевская набережная, д. 34</p>
+            <p style="margin-top:10px"><a class="btn btn-outline" href="https://yandex.ru/maps/?text=Москва%2C%20Карамышевская%20набережная%2C%2034" target="_blank" rel="noopener">Открыть карту</a></p>
+          </div>
+          <div class="card">
+            <h3>Телефон</h3>
+            <p><a href="tel:+74959471010">+7 495 947‑10‑10</a></p>
+            <p style="margin-top:10px"><span class="tag">12:00–23:00</span></p>
+          </div>
+          <div class="card">
+            <h3>Telegram</h3>
+            <p><a href="https://t.me/vinotekakaram" target="_blank" rel="noopener">t.me/vinotekakaram</a></p>
+            <p style="margin-top:10px"><span class="tag">сommelier online</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="small">
+          <strong>Важно:</strong> сайт‑витрина. Алкогольная продукция 18+. Условия продажи и выдачи — в точке продаж.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© Винотека, vinoteka34.ru</div>
+      <div class="small">Сделано на Cloudflare Pages.</div>
     </div>
-  </div>
-</header>
+  </footer>
 
-<section class="hero">
-  <div class="container">
-    <h1>Подберём вино под ваш вкус</h1>
-    <p>Бутик • Клуб • Сомелье‑сервис</p>
-  </div>
-</section>
-
-<section class="contacts">
-  <div class="container">
-    <h2>Контакты</h2>
-    <p><b>Адрес:</b> Москва, Карамышевская набережная, д. 34</p>
-    <p><b>Телефон:</b> <a href="tel:+74959471010">+7 495 947-10-10</a></p>
-    <p><b>Telegram:</b> <a href="https://t.me/vinotekakaram">t.me/vinotekakaram</a></p>
-  </div>
-</section>
-
-<script>window.__ASSET_NAMES__=["photo_1_2026-02-15_15-47-16.jpg", "photo_2_2026-02-15_15-47-16.jpg", "photo_3_2026-02-15_15-47-16.jpg", "photo_4_2026-02-15_15-47-16.jpg", "photo_5_2026-02-15_15-47-16.jpg", "photo_6_2026-02-15_15-47-16.jpg"];</script>
-<script src="/app.js"></script>
+  <script>
+    const form = document.getElementById('pickForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const budget = (fd.get('budget')||'').toString().trim();
+      const taste = (fd.get('taste')||'').toString().trim();
+      const food = (fd.get('food')||'').toString().trim();
+      const lines = [
+        'Здравствуйте! Нужен подбор вина.',
+        budget ? `Бюджет: ${budget} ₽` : null,
+        taste ? `Вкус: ${taste}` : null,
+        food ? `К блюду: ${food}` : null
+      ].filter(Boolean);
+      const text = encodeURIComponent(lines.join('\n'));
+      window.open(`https://t.me/share/url?url=&text=${text}`, '_blank');
+    });
+  </script>
 </body>
 </html>
