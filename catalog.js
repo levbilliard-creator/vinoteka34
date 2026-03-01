@@ -1,3 +1,24 @@
+
+// GROUP_FILTER_PATCH_V8
+function getGroupFromUrl(){
+  const params = new URLSearchParams(window.location.search);
+  return (params.get('group') || '').trim();
+}
+const GROUP_MAP = {
+  wine: (item)=> ['Вино','Игристое'].includes(item.category),
+  spirits: (item)=> ['Виски','Водка','Джин','Ром','Текила','Коньяк/Бренди'].includes(item.category),
+  nonalc: (item)=> ['Другое'].includes(item.category),
+  snacks: (item)=> ['Снеки'].includes(item.category),
+  tea: (item)=> ['Чай'].includes(item.category),
+  glass: (item)=> ['Стекло'].includes(item.category),
+};
+function applyGroupFilter(items){
+  const g = getGroupFromUrl();
+  if(!g) return items;
+  const fn = GROUP_MAP[g];
+  if(!fn) return items;
+  return items.filter(fn);
+}
 const TG="https://t.me/vinotekakaram";
 const GROUP=new URLSearchParams(location.search).get("group");
 function inGroup(p){
