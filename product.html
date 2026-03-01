@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Товар — Винотека</title>
+  <meta name="description" content="Карточка товара. Цены на сайте. Сомелье онлайн в Telegram."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="top">
+  <div class="wrap top__inner">
+    <a class="logo" href="/">Винотека</a>
+    <nav class="nav">
+      <a href="/">Главная</a>
+      <a class="is-on" href="/catalog.html">Каталог</a>
+      <a href="/#tastings">Дегустации</a>
+      <a href="/#contacts">Контакты</a>
+    </nav>
+    <div class="top__actions">
+      <a class="btn btn--ghost" href="tel:+74959471010">+7 495 947-10-10</a>
+      <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Telegram</a>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="wrap">
+    <div class="crumbs">
+      <a href="/catalog.html">Каталог</a> <span class="muted">/</span> <span id="crumbTitle" class="muted">Товар</span>
+    </div>
+
+    <div class="product" id="product">
+      <div class="product__media">
+        <div class="product__img">
+          <img id="pImg" src="/assets/img/hero.jpg" alt="">
+        </div>
+        <div class="note" id="imgNote">Фото временное. Позже добавим фото каждой позиции.</div>
+      </div>
+
+      <div class="product__info">
+        <h1 class="h1" id="pTitle">Загрузка…</h1>
+        <div class="muted" id="pMeta"></div>
+
+        <div class="product__buy">
+          <div>
+            <div class="price" id="pPrice"></div>
+            <div class="muted" id="pStock"></div>
+          </div>
+          <div class="product__btns">
+            <a class="btn btn--tg" id="askBtn" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Спросить сомелье</a>
+            <a class="btn btn--ghost" href="tel:+74959471010">Позвонить</a>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <div class="card__t">Вкус и аромат</div>
+            <div class="muted" id="pTaste"></div>
+          </div>
+          <div class="card">
+            <div class="card__t">С чем пить</div>
+            <div class="muted" id="pPair"></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="card__t">Рекомендации подачи</div>
+          <div class="muted" id="pServe"></div>
+        </div>
+
+        <div class="note" style="margin-top:12px">18+. Алкоголь. Пожалуйста, подтверждайте возраст. Продажа и выдача — по правилам РФ.</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:22px">Похожие позиции</h2>
+    <div class="grid" id="similar"></div>
+
+    <div class="section section--alt" style="margin-top:26px;border-radius:18px">
+      <div class="wrap" style="padding:18px">
+        <div class="box__t">Нужен подбор под блюдо или бюджет?</div>
+        <div class="muted">Напишите в Telegram: предпочтения, бюджет и блюдо — подберём 3–5 вариантов.</div>
+        <div style="margin-top:12px">
+          <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Написать сомелье</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<a class="fab" href="https://t.me/vinotekakaram" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+<script src="/product.js"></script>
+</body>
+</html>

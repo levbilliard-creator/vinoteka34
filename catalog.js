@@ -23,7 +23,7 @@ function buildCard(p){
     <div class="p">
       <div class="p__top">
         <div style="min-width:0">
-          <div class="p__t">${p.title}</div>
+          <a class="p__t p__tlink" href="/product.html?id=${p.id}">${p.title}</a>
           <div class="p__sub">${sub||''}</div>
         </div>
         <div class="badges">${badgeHtml}</div>
