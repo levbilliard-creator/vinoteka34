@@ -1,4 +1,17 @@
 const TG="https://t.me/vinotekakaram";
+const GROUP=new URLSearchParams(location.search).get("group");
+function inGroup(p){
+  const cat=(p.category||"").toLowerCase();
+  const name=((p.full_name||p.title||"")+" "+(p.description||"")).toLowerCase();
+  if(!GROUP) return true;
+  if(GROUP==="wine") return ["вино","игристое"].includes(cat);
+  if(GROUP==="spirits") return ["виски","водка","джин","коньяк/бренди","ром","текила"].includes(cat);
+  if(GROUP==="snacks") return cat==="снеки";
+  if(GROUP==="nonalc") return cat==="другое" && /(безалк|безалког|вода|тоник|лимонад|сок)/.test(name);
+  if(GROUP==="tea") return cat==="другое" && /(чай|улун|пуэр)/.test(name);
+  if(GROUP==="glass") return /(бокал|стекл|декантер|штопор|пробк|аксессуар)/.test(name);
+  return cat===GROUP; // fallback
+}
 function rub(n){return new Intl.NumberFormat("ru-RU").format(n)+" ₽";}
 function toNum(v){if(v==null) return null; const s=String(v).replace(/\s/g,'').replace(',', '.'); const n=Number(s); return Number.isFinite(n)?n:null;}
 function uniq(arr){return [...new Set(arr.filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ru'));}

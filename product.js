@@ -75,23 +75,44 @@ function sanitize(text){
 }
 
 function similarItems(all, p){
-  // score: same category, same color, same country, price proximity
-  const basePrice=p.price_rub||0;
+  // Критерии похожих: тип продукта + цвет вина + сорт(а) винограда + регион/страна.
+  const pG = new Set((p.grapes||[]).map(g=>String(g).toLowerCase()));
+  const pPrice = p.price_rub||0;
+
+  function score(x){
+    let s = 0;
+
+    // 1) Тип/категория
+    if ((x.category||'') === (p.category||'')) s += 6;
+
+    // 2) Цвет (для вина)
+    if ((x.color||'') && (x.color||'') === (p.color||'')) s += 4;
+
+    // 3) Сорта винограда: пересечение
+    const xG = (x.grapes||[]).map(g=>String(g).toLowerCase());
+    let overlap = 0;
+    for (const g of xG){ if (pG.has(g)) overlap++; }
+    s += overlap * 5; // важнее цены
+
+    // 4) Страна/регион
+    if ((x.country||'') && (x.country||'') === (p.country||'')) s += 2;
+    if ((x.region||'') && (x.region||'') === (p.region||'')) s += 2;
+
+    // 5) Цена только как лёгкий tie-breaker
+    const dp = Math.abs((x.price_rub||0) - pPrice);
+    s += Math.max(0, 1.5 - Math.min(1.5, dp/4000));
+
+    return s;
+  }
+
   return all
-    .filter(x=>x.id!==p.id)
-    .map(x=>{
-      let s=0;
-      if(x.category===p.category) s+=3;
-      if((x.color||'')===(p.color||'')) s+=2;
-      if((x.country||'')===(p.country||'')) s+=1;
-      const dp=Math.abs((x.price_rub||0)-basePrice);
-      s+= Math.max(0, 2 - Math.min(2, dp/2000)); // closer price -> higher
-      return {x,s};
-    })
-    .sort((a,b)=>b.s-a.s)
+    .filter(x => x.id !== p.id)
+    .map(x => ({ x, s: score(x) }))
+    .sort((a,b) => b.s - a.s)
     .slice(0,6)
-    .map(o=>o.x);
+    .map(o => o.x);
 }
+
 
 function buildCard(p){
   const badges=[];
