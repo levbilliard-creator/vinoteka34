@@ -31,6 +31,7 @@ h1{font-size:42px;line-height:1.05;margin:12px 0}
 .hero__media{position:sticky;top:86px}
 .hero__img{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card)}
 .hero__img img{display:block;width:100%;height:360px;object-fit:cover}
+.hero__img video{display:block;width:100%;height:360px;object-fit:cover}
 .hero__thumbs{display:flex;gap:8px;overflow:auto;padding:10px}
 .thumb{border:1px solid var(--line);border-radius:14px;overflow:hidden;flex:0 0 auto;width:78px;height:56px;opacity:.85;cursor:pointer;background:var(--card2)}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block}
@@ -104,3 +105,6 @@ h2{margin:0 0 14px;font-size:28px}
 
 .videoWrap{border:1px solid #1f1f1f;border-radius:24px;overflow:hidden;background:#0b0b0b}
 .video{width:100%;height:auto;display:block}
+
+.thumb--link{display:block}
+.thumb--link img{width:100%;height:100%;object-fit:cover;display:block}
