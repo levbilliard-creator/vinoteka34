@@ -2,72 +2,94 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Каталог — Винотека</title>
-  <meta name="description" content="Каталог витрины Vinoteka34: фильтры по категориям и цене."/>
-  <link rel="stylesheet" href="./styles.css?v=3" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Каталог — Винотека на Карамышевской</title>
+  <meta name="description" content="Каталог вин и напитков. Поиск, фильтры по категории, стране и цене. Цены на сайте. Спросить сомелье в Telegram."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="./index.html">
-        <div class="brand-badge" aria-hidden="true"></div>
-        <div>
-          <div class="brand-title">Винотека</div>
-          <div class="brand-sub">Каталог‑витрина</div>
-        </div>
-      </a>
-      <nav class="nav-links">
-        <a href="./index.html#contacts">Контакты</a>
-        <a class="btn btn-outline" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Сомелье в Telegram</a>
-      </nav>
+<header class="top">
+  <div class="wrap top__inner">
+    <a class="logo" href="/">Винотека</a>
+    <nav class="nav">
+      <a href="/">Главная</a>
+      <a class="is-on" href="/catalog.html">Каталог</a>
+      <a href="/#tastings">Дегустации</a>
+      <a href="/#contacts">Контакты</a>
+    </nav>
+    <div class="top__actions">
+      <a class="btn btn--ghost" href="tel:+74959471010">+7 495 947-10-10</a>
+      <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Telegram</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="section">
-    <div class="container">
-      <h2 style="margin-bottom:10px">Каталог</h2>
+<main class="section">
+  <div class="wrap">
+    <div class="headrow">
+      <div>
+        <h1 class="h1">Каталог</h1>
+        <div class="muted">Цены на сайте • Спросить сомелье — в 1 клик</div>
+      </div>
+      <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Сомелье онлайн</a>
+    </div>
 
-      <form class="form" id="filters">
-        <input class="input" id="q" placeholder="Поиск (например: Шабли, джин, сыр…)" />
-        <select class="input" id="cat">
-          <option value="">Категория: все</option>
+    <div class="filters">
+      <div class="field">
+        <label>Поиск</label>
+        <input id="q" type="search" placeholder="Название / регион / артикул..." autocomplete="off">
+      </div>
+      <div class="field">
+        <label>Категория</label>
+        <select id="cat"><option value="">Все</option></select>
+      </div>
+      <div class="field">
+        <label>Цвет (для вина)</label>
+        <select id="color">
+          <option value="">Любой</option>
+          <option>Красное</option>
+          <option>Белое</option>
+          <option>Розовое</option>
+          <option>Игристое</option>
         </select>
-        <select class="input" id="wineColor">
-          <option value="">Цвет вина: любой</option>
-          <option>Красное</option><option>Белое</option><option>Розовое</option><option>Оранжевое</option><option>Игристое</option>
+      </div>
+      <div class="field">
+        <label>Страна</label>
+        <select id="country"><option value="">Любая</option></select>
+      </div>
+      <div class="field">
+        <label>Цена, ₽</label>
+        <div class="row">
+          <input id="minP" inputmode="numeric" placeholder="от">
+          <input id="maxP" inputmode="numeric" placeholder="до">
+        </div>
+      </div>
+      <div class="field">
+        <label>Сортировка</label>
+        <select id="sort">
+          <option value="popular">По умолчанию</option>
+          <option value="price_asc">Цена ↑</option>
+          <option value="price_desc">Цена ↓</option>
+          <option value="name_asc">Название A→Я</option>
         </select>
-        <input class="input" id="pmin" inputmode="numeric" placeholder="Цена от, ₽" />
-        <input class="input" id="pmax" inputmode="numeric" placeholder="Цена до, ₽" />
-        <button class="btn btn-outline" type="button" id="reset">Сброс</button>
-      </form>
-
-      <div class="small" style="margin:10px 0 14px" id="meta">Загрузка…</div>
-
-      <table class="table" id="table">
-        <thead>
-          <tr>
-            <th style="width:44%">Название</th>
-            <th>Категория</th>
-            <th>Цена</th>
-            <th>Наличие</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <div class="small" style="margin-top:10px">
-        Если нужна консультация или “вино к блюду” — пишите: <a href="https://t.me/vinotekakaram" target="_blank" rel="noopener">t.me/vinotekakaram</a>
+      </div>
+      <div class="field actions">
+        <label>&nbsp;</label>
+        <button class="btn btn--ghost" id="reset" type="button">Сбросить</button>
       </div>
     </div>
-  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="small">Цены и наличие — ориентировочно. Уточняйте в магазине.</div>
-    </div>
-  </footer>
+    <div class="meta" id="meta"></div>
+    <div class="grid" id="grid"></div>
 
-  <script src="./app.js?v=3"></script>
+    <div class="note" style="margin-top:18px">18+. Алкоголь. Пожалуйста, подтверждайте возраст.</div>
+  </div>
+</main>
+
+<a class="fab" href="https://t.me/vinotekakaram" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+<script src="/catalog.js"></script>
 </body>
 </html>

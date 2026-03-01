@@ -1,16 +1,2 @@
 /*
-  X-Frame-Options: DENY
-  Referrer-Policy: strict-origin-when-cross-origin
-  X-Content-Type-Options: nosniff
-
-/index.html
-  Cache-Control: no-store
-
-/catalog.html
-  Cache-Control: no-store
-
-/app.js
-  Cache-Control: no-store
-
-/data/*
   Cache-Control: no-store
