@@ -64,7 +64,7 @@ function buildCard(p){
     <div class="p">
       <div class="p__top">
         <div style="min-width:0">
-          <a class="p__t p__tlink" href="/product.html?id=${p.id}">${p.title}</a>
+          <a class="p__t p__tlink" href="/product.html?id=${p.id}">${cleanBadPhrases(p.title)}</a>
           <div class="p__sub">${sub||''}</div>
         </div>
         <div class="badges">${badgeHtml}</div>
@@ -91,7 +91,7 @@ function apply(items){
 
   let out=base.filter(p=>{
     if(q){
-      const hay=`${p.title} ${p.full_name} ${p.region||''} ${p.country||''}`.toLowerCase();
+      const hay=`${cleanBadPhrases(p.title)} ${p.full_name} ${p.region||''} ${p.country||''}`.toLowerCase();
       if(!hay.includes(q)) return false;
     }
     if(cat && p.category!==cat) return false;

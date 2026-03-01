@@ -125,7 +125,7 @@ function buildCard(p){
     <div class="p">
       <div class="p__top">
         <div style="min-width:0">
-          <a class="p__t p__tlink" href="/product.html?id=${p.id}">${p.title}</a>
+          <a class="p__t p__tlink" href="/product.html?id=${p.id}">${cleanBadPhrases(p.title)}</a>
           <div class="p__sub">${sub||''}</div>
         </div>
         <div class="badges">${badgeHtml}</div>
@@ -147,7 +147,7 @@ function buildCard(p){
 
   const ov=overrides[String(p.id)] || {};
 
-  document.title = `${p.title} — Винотека`;
+  document.title = `${cleanBadPhrases(p.title)} — Винотека`;
   document.getElementById('pTitle').textContent = p.title;
   document.getElementById('crumbTitle').textContent = p.title;
 
