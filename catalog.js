@@ -86,7 +86,20 @@ function inferColor(p) {
   }
 
   function toNum(v) {
-    const n = Number(String(v ?? "").replace(",", "."));
+    // Accept values like "4 052", "4 052 ₽", "4052", "4,052.50"
+    const raw = String(v ?? "").replace(/\s|\u00A0|\u202F/g, "");
+    const cleaned = raw.replace(/[^0-9,\.\-]/g, "");
+    if (!cleaned) return null;
+    // If both comma and dot exist, assume comma is thousands separator and remove commas
+    let normalized = cleaned;
+    const hasComma = normalized.includes(",");
+    const hasDot = normalized.includes(".");
+    if (hasComma && hasDot) {
+      normalized = normalized.replace(/,/g, "");
+    } else if (hasComma && !hasDot) {
+      normalized = normalized.replace(/,/g, ".");
+    }
+    const n = Number(normalized);
     return Number.isFinite(n) ? n : null;
   }
 
