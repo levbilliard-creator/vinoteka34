@@ -19,15 +19,54 @@
   // Current inventory categories:
   // ["Вино","Игристое","Виски","Водка","Джин","Коньяк/Бренди","Пиво/Сидр","Ром","Снеки","Текила","Другое"]
   const GROUPS = {
-    wine: { title: "Вино", categories: ["Вино", "Игристое"] },
-    spirits: { title: "Крепкие напитки", categories: ["Виски", "Водка", "Джин", "Коньяк/Бренди", "Ром", "Текила"] },
-    // Пока в текущем файле нет безалкогольных позиций — оставляем пустым (появятся в следующей выгрузке).
-    nonalc: { title: "Безалкогольные напитки", categories: [] },
-    snacks: { title: "Закуски", categories: ["Снеки"] },
-    tea: { title: "Чаи", categories: [] },
-    // В текущем файле «стекло/аксессуары» лежит в категории «Другое».
-    glass: { title: "Стекло и аксессуары", categories: ["Другое"] },
-  };
+  all:   { title: "Каталог" },
+  wine:  { title: "Вино" },
+  spirits:{ title: "Крепкие напитки" },
+  nonalc:{ title: "Безалкогольные напитки" },
+  snacks:{ title: "Закуски" },
+  tea:   { title: "Чаи" },
+  glass: { title: "Стекло и аксессуары" },
+};
+
+function normStr(v) {
+  return (v || "").toString().trim().toLowerCase();
+}
+
+function inferGroup(p) {
+  const cat = normStr(p.category);
+  const name = normStr(p.title || p.name || p.full_name || "");
+  // explicit category buckets
+  if (cat.includes("вино") || cat.includes("игрист")) return "wine";
+  if (cat.includes("крепк") || cat.includes("алкоголь")) return "spirits";
+
+  // keyword heuristics (works even when category is "Другое")
+  const nonalcKw = ["вода", "минерал", "газир", "сод", "кола", "coca", "coke", "pepsi", "tonic", "тоник", "лимонад", "сок", "айран", "морс", "kombucha", "комбуч", "энерг", "чайный напиток", "матча латте"];
+  if (nonalcKw.some(k => name.includes(k))) return "nonalc";
+
+  const teaKw = ["чай", "улун", "пуэр", "ассам", "сенча", "матча", "эрл грей", "earl grey"];
+  if (teaKw.some(k => name.includes(k))) return "tea";
+
+  const snacksKw = ["сыр", "колбас", "хамон", "паштет", "олив", "орех", "шоколад", "чипс", "крекер", "прошутто", "bresaola", "prosciutto", "salami"];
+  if (snacksKw.some(k => name.includes(k))) return "snacks";
+
+  const glassKw = ["бокал", "стакан", "декантер", "штопор", "пробк", "аэратор", "стекл", "аксессуар", "glass", "decanter", "corkscrew"];
+  if (glassKw.some(k => name.includes(k))) return "glass";
+
+  return "all";
+}
+
+function inferColor(p) {
+  const c = (p.color || "").toString().trim();
+  if (c) return c;
+  const name = normStr(p.title || p.name || p.full_name || "");
+  if (name.includes("бел")) return "Белое";
+  if (name.includes("красн")) return "Красное";
+  if (name.includes("роз")) return "Розовое";
+  if (name.includes("оранж")) return "Оранжевое";
+  if (name.includes("игрист") || name.includes("шампан")) return "Игристое";
+  return "";
+}
+
 
   function getParam(name) {
     return new URLSearchParams(location.search).get(name) || "";
@@ -60,7 +99,7 @@
     const subtitle = escapeHtml([p.region, p.country].filter(Boolean).join(" • "));
     const price = Number(p.price_rub || 0).toLocaleString("ru-RU");
     const cat = escapeHtml(p.category || "");
-    const color = escapeHtml(p.color || "");
+    const color = escapeHtml(inferColor(p) || "");
 
     const badges = [];
     if (p.type === "wine" && color) badges.push(`<span class="pill">${color}</span>`);
@@ -124,7 +163,7 @@
     }
     if (cat) out = out.filter((p) => (p.category || "") === cat);
     if (ctry) out = out.filter((p) => (p.country || "") === ctry);
-    if (col) out = out.filter((p) => (p.color || "") === col);
+    if (col) out = out.filter((p) => inferColor(p) === col);
     if (minP != null) out = out.filter((p) => Number(p.price_rub || 0) >= minP);
     if (maxP != null) out = out.filter((p) => Number(p.price_rub || 0) <= maxP);
 
@@ -176,7 +215,7 @@
       category: p.category ?? "",
       country: p.country ?? "",
       region: p.region ?? "",
-      color: p.color ?? "",
+      color: inferColor(p) || "",
       price_rub: Number(p.price_rub ?? 0),
       stock: Number(p.stock ?? 0),
       sku: p.sku ?? "",
@@ -226,7 +265,7 @@
       // Populate select filters based on *grouped* items
       setSelectOptions(elCategory, uniq(items.map((p) => p.category).filter(Boolean)), true);
       setSelectOptions(elCountry, uniq(items.map((p) => p.country).filter(Boolean)), true);
-      setSelectOptions(elColor, uniq(items.map((p) => p.color).filter(Boolean)), true);
+      setSelectOptions(elColor, uniq(items.map((p) => inferColor(p)).filter(Boolean)), true);
 
       render(items, total);
       wireEvents(items, total);
