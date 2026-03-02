@@ -37,10 +37,19 @@ function inferGroup(p) {
   const name = normStr(p.title || p.name || p.full_name || "");
   // explicit category buckets
   if (cat.includes("вино") || cat.includes("игрист")) return "wine";
-  if (cat.includes("крепк") || cat.includes("алкоголь")) return "spirits";
+  // Spirits: categories are often specific ("водка", "виски", "коньяк/бренди"...)
+  const spiritsCatKw = [
+    "водк", "виск", "конья", "бренд", "ром", "джин", "текил", "ликер", "настой", "биттер",
+    "арман", "кальвад", "грапп", "абсент", "самогон", "саке", "вермут", "портвей", "херес"
+  ];
+  if (spiritsCatKw.some(k => cat.includes(k))) return "spirits";
+
+  // Non-alcoholic: move water / cola / soft drinks here
+  const nonalcCatKw = ["вода", "газ", "лимонад", "сок", "тоник", "безалког", "комбуч", "морс", "айран", "энерг"];
+  if (nonalcCatKw.some(k => cat.includes(k))) return "nonalc";
 
   // keyword heuristics (works even when category is "Другое")
-  const nonalcKw = ["вода", "минерал", "газир", "сод", "кола", "coca", "coke", "pepsi", "tonic", "тоник", "лимонад", "сок", "айран", "морс", "kombucha", "комбуч", "энерг", "чайный напиток", "матча латте"];
+  const nonalcKw = ["вода", "минерал", "газир", "сод", "кола", "coca", "coke", "pepsi", "schweppes", "tonic", "тоник", "лимонад", "сок", "айран", "морс", "kombucha", "комбуч", "энерг", "чайный напиток", "матча латте"];
   if (nonalcKw.some(k => name.includes(k))) return "nonalc";
 
   const teaKw = ["чай", "улун", "пуэр", "ассам", "сенча", "матча", "эрл грей", "earl grey"];
@@ -226,7 +235,9 @@ function inferColor(p) {
     const g = getParam("group");
     const gInfo = GROUPS[g] || null;
 
-    if (gInfo && elTitle) elTitle.textContent = gInfo.title;
+    const title = gInfo ? gInfo.title : "Каталог";
+    if (elTitle) elTitle.textContent = title;
+    document.title = `ВИНОТЕКА — ${title}`;
 
     // show color filter only for wine group
     const colorWrap = document.querySelector('[data-filter="color"]') || elColor?.closest(".filter");
@@ -234,8 +245,8 @@ function inferColor(p) {
 
     if (!gInfo) return items;
 
-    const allowed = new Set(gInfo.categories);
-    return items.filter((p) => allowed.has(p.category));
+    // Categories vary ("Водка", "Виски", "Вода"...), so infer group by category/name.
+    return items.filter((p) => inferGroup(p) === g);
   }
 
   function initSortOptions() {
