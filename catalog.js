@@ -1,203 +1,247 @@
+(() => {
+  const $ = (id) => document.getElementById(id);
 
-// GROUP_FILTER_PATCH_V8
-function getGroupFromUrl(){
-  const params = new URLSearchParams(window.location.search);
-  return (params.get('group') || '').trim();
-}
-const GROUP_MAP = {
-  wine: (item)=> ['Вино','Игристое'].includes(item.category),
-  spirits: (item)=> ['Виски','Водка','Джин','Ром','Текила','Коньяк/Бренди'].includes(item.category),
-  nonalc: (item)=> ['Другое'].includes(item.category),
-  snacks: (item)=> ['Снеки'].includes(item.category),
-  tea: (item)=> ['Чай'].includes(item.category),
-  glass: (item)=> ['Стекло'].includes(item.category),
-};
-function applyGroupFilter(items){
-  const g = getGroupFromUrl();
-  if(!g) return items;
-  const fn = GROUP_MAP[g];
-  if(!fn) return items;
-  return items.filter(fn);
-}
-const TG="https://t.me/vinotekakaram";
-const GROUP=new URLSearchParams(location.search).get("group");
-function inGroup(p){
-  if(!GROUP || GROUP==="all") return true;
-  const cat=(p.category||"").toLowerCase();
-  const name=((p.full_name||p.title||"")+" "+(p.description||"")).toLowerCase();
+  const elTitle = $("pageTitle");
+  const elMeta = $("meta");
+  const elGrid = $("grid");
 
-  if(GROUP==="wine"){
-    return cat.includes('вино') || cat.includes('игрист');
-  }
-  if(GROUP==="spirits"){
-    return ['виски','водка','джин','коньяк','бренди','ром','текила','ликер','настойка','кальвадос','граппа','арманьяк'].some(x=>cat.includes(x));
-  }
-  if(GROUP==="snacks"){
-    return ['снэк','снеки','закус','сыр','деликатес','шокол','паштет','хамон','прошутто','брезаола'].some(x=>cat.includes(x))
-      || /(сыр|паштет|хамон|прошутто|брезаола|закуск)/.test(name);
-  }
-  if(GROUP==="nonalc"){
-    return ['безалк','безалког','вода','тоник','лимонад','сок','соки','кола','напиток'].some(x=>cat.includes(x))
-      || /(безалк|безалког|вода|тоник|лимонад|сок)/.test(name);
-  }
-  if(GROUP==="tea"){
-    return ['чай','кофе'].some(x=>cat.includes(x)) || /(чай|улун|пуэр|кофе)/.test(name);
-  }
-  if(GROUP==="glass"){
-    return ['стекло','аксесс'].some(x=>cat.includes(x)) || /(бокал|стекл|декантер|штопор|пробк|аксессуар)/.test(name);
-  }
-  return true;
-}
+  const elQ = $("q");
+  const elCategory = $("category");
+  const elColor = $("color");
+  const elCountry = $("country");
+  const elMin = $("minPrice");
+  const elMax = $("maxPrice");
+  const elSort = $("sort");
+  const elReset = $("resetBtn");
 
-function groupTitle(){
-  const map={
-    all:'Каталог',
-    wine:'Вино',
-    spirits:'Крепкие напитки',
-    nonalc:'Безалкогольные напитки',
-    snacks:'Закуски',
-    tea:'Чаи',
-    glass:'Стекло и аксессуары'
+  // --- Group mapping (tiles -> categories) ---
+  // IMPORTANT: categories must match *exactly* what is stored in data/products.json.
+  // Current inventory categories:
+  // ["Вино","Игристое","Виски","Водка","Джин","Коньяк/Бренди","Пиво/Сидр","Ром","Снеки","Текила","Другое"]
+  const GROUPS = {
+    wine: { title: "Вино", categories: ["Вино", "Игристое"] },
+    spirits: { title: "Крепкие напитки", categories: ["Виски", "Водка", "Джин", "Коньяк/Бренди", "Ром", "Текила"] },
+    // Пока в текущем файле нет безалкогольных позиций — оставляем пустым (появятся в следующей выгрузке).
+    nonalc: { title: "Безалкогольные напитки", categories: [] },
+    snacks: { title: "Закуски", categories: ["Снеки"] },
+    tea: { title: "Чаи", categories: [] },
+    // В текущем файле «стекло/аксессуары» лежит в категории «Другое».
+    glass: { title: "Стекло и аксессуары", categories: ["Другое"] },
   };
-  return map[(GROUP||'all').toLowerCase()] || 'Каталог';
-}
-function rub(n){return new Intl.NumberFormat("ru-RU").format(n)+" ₽";}
-function toNum(v){if(v==null) return null; const s=String(v).replace(/\s/g,'').replace(',', '.'); const n=Number(s); return Number.isFinite(n)?n:null;}
-function uniq(arr){return [...new Set(arr.filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ru'));}
 
-async function loadItems(){
-  const res=await fetch('/data/products.json', {cache:'no-store'});
-  const data=await res.json();
-  return data.items||[];
-}
+  function getParam(name) {
+    return new URLSearchParams(location.search).get(name) || "";
+  }
 
-function buildCard(p){
-  const badges=[];
-  if(p.category) badges.push(p.category);
-  if(p.color) badges.push(p.color);
-  if(p.country) badges.push(p.country);
+  function norm(s) {
+    return String(s ?? "").toLowerCase().trim();
+  }
 
-  const badgeHtml=badges.slice(0,3).map(b=>`<span class="badge">${b}</span>`).join('');
-  const sub=[p.region?`Регион: ${p.region}`:null, (p.stock!=null?`Наличие: ${p.stock}`:null)].filter(Boolean).join(' • ');
-  const msg=encodeURIComponent(`Здравствуйте! Хочу уточнить по позиции:\n\n${p.full_name}\nЦена: ${p.price_rub} ₽`);
-  const href=`${TG}?text=${msg}`;
-  return `
-    <div class="p">
-      <div class="p__top">
-        <div style="min-width:0">
-          <a class="p__t p__tlink" href="/product.html?id=${p.id}">${cleanBadPhrases(p.title)}</a>
-          <div class="p__sub">${sub||''}</div>
+  function toNum(v) {
+    const n = Number(String(v ?? "").replace(",", "."));
+    return Number.isFinite(n) ? n : null;
+  }
+
+  function uniq(arr) {
+    return Array.from(new Set(arr)).sort((a, b) => a.localeCompare(b, "ru"));
+  }
+
+  function escapeHtml(s) {
+    return String(s ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  function buildCard(p) {
+    const title = escapeHtml(p.title);
+    const subtitle = escapeHtml([p.region, p.country].filter(Boolean).join(" • "));
+    const price = Number(p.price_rub || 0).toLocaleString("ru-RU");
+    const cat = escapeHtml(p.category || "");
+    const color = escapeHtml(p.color || "");
+
+    const badges = [];
+    if (p.type === "wine" && color) badges.push(`<span class="pill">${color}</span>`);
+    if (cat) badges.push(`<span class="pill">${cat}</span>`);
+
+    return `
+      <article class="card product">
+        <div class="prod-head">
+          <div class="prod-title-wrap">
+            <a class="prod-title" href="/product.html?id=${encodeURIComponent(p.id)}">${title}</a>
+            <div class="muted">${subtitle || "&nbsp;"}</div>
+            <div class="muted">Наличие: ${escapeHtml(p.stock ?? 0)}</div>
+          </div>
+          <div class="prod-pills">${badges.join("")}</div>
         </div>
-        <div class="badges">${badgeHtml}</div>
-      </div>
-      <div class="p__bot">
-        <div>
-          <div class="price">${rub(p.price_rub)}</div>
-          <div class="p__sub">Цена на сайте</div>
+        <div class="prod-foot">
+          <div>
+            <div class="price">${price} ₽</div>
+            <div class="muted">Цена на сайте</div>
+          </div>
+          <a class="btn" href="/product.html?id=${encodeURIComponent(p.id)}">Открыть</a>
         </div>
-        <a class="btn btn--tg" href="${href}" target="_blank" rel="noopener">Спросить</a>
-      </div>
-    </div>`;
-}
+      </article>
+    `;
+  }
 
-function apply(items){
-  const base=(items||[]).filter(inGroup);
-  const q=document.getElementById('q').value.trim().toLowerCase();
-  let cat=document.getElementById('cat').value;
-  let color=document.getElementById('color').value;
-  let country=document.getElementById('country').value;
+  function setSelectOptions(selectEl, values, includeAll = true) {
+    if (!selectEl) return;
+    const current = selectEl.value;
+    const opts = [];
+    if (includeAll) opts.push(`<option value="">Все</option>`);
+    for (const v of values) opts.push(`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`);
+    selectEl.innerHTML = opts.join("");
+    // try keep current if possible
+    selectEl.value = values.includes(current) ? current : "";
+  }
 
-  // normalize placeholders so they don't act like real filters
-  if(cat==='Все') cat='';
-  if(color==='Любой' || color==='Любая') color='';
-  if(country==='Любая' || country==='Любой') country='';
+  async function loadData() {
+    // cache-bust to avoid Cloudflare/browser caching during rapid updates
+    const url = `/data/products.json?v=${Date.now()}`;
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(`Не удалось загрузить каталог (${res.status})`);
+    return res.json();
+  }
 
-  const minP=parseInt(document.getElementById('minP').value,10);
-  const maxP=parseInt(document.getElementById('maxP').value,10);
-  const sort=document.getElementById('sort').value;
+  function applyFilters(items) {
+    const q = norm(elQ?.value);
+    const cat = elCategory?.value || "";
+    const col = elColor?.value || "";
+    const ctry = elCountry?.value || "";
+    const minP = toNum(elMin?.value);
+    const maxP = toNum(elMax?.value);
 
-  let out=base.filter(p=>{
-    if(q){
-      const hay=`${cleanBadPhrases(p.title)} ${p.full_name} ${p.region||''} ${p.country||''}`.toLowerCase();
-      if(!hay.includes(q)) return false;
+    let out = items;
+
+    if (q) {
+      out = out.filter((p) => {
+        const hay = norm(`${p.title} ${p.region} ${p.country} ${p.sku}`);
+        return hay.includes(q);
+      });
     }
-    if(cat && p.category!==cat) return false;
-    if(color && (p.color||'')!==color) return false;
-    if(country && (p.country||'')!==country) return false;
-    if(minP!=null && p.price_rub<minP) return false;
-    if(maxP!=null && p.price_rub>maxP) return false;
-    return true;
-  });
+    if (cat) out = out.filter((p) => (p.category || "") === cat);
+    if (ctry) out = out.filter((p) => (p.country || "") === ctry);
+    if (col) out = out.filter((p) => (p.color || "") === col);
+    if (minP != null) out = out.filter((p) => Number(p.price_rub || 0) >= minP);
+    if (maxP != null) out = out.filter((p) => Number(p.price_rub || 0) <= maxP);
 
-  if(sort==='price_asc') out.sort((a,b)=>a.price_rub-b.price_rub);
-  if(sort==='price_desc') out.sort((a,b)=>b.price_rub-a.price_rub);
-  if(sort==='name_asc') out.sort((a,b)=>a.title.localeCompare(b.title,'ru'));
+    // sort
+    const s = elSort?.value || "";
+    if (s === "price_asc") out = [...out].sort((a, b) => (a.price_rub || 0) - (b.price_rub || 0));
+    else if (s === "price_desc") out = [...out].sort((a, b) => (b.price_rub || 0) - (a.price_rub || 0));
+    else if (s === "name") out = [...out].sort((a, b) => String(a.title).localeCompare(String(b.title), "ru"));
+    else if (s === "stock") out = [...out].sort((a, b) => (b.stock || 0) - (a.stock || 0));
 
-  const metaEl = document.getElementById('meta');
-  if(metaEl) metaEl.textContent = `Показано: ${out.length} из ${base.length}`;
+    return out;
+  }
 
-  let gridEl = document.getElementById('grid');
-  if(!gridEl){
-    // Fallback: если разметка страницы отличается (например, из-за clean URLs),
-    // создаём контейнер для карточек.
-    gridEl = document.createElement('div');
-    gridEl.id = 'grid';
-    gridEl.className = 'grid3';
-    const anchor = document.getElementById('filters') || metaEl || document.querySelector('main') || document.body;
-    if(anchor && anchor.parentNode){
-      anchor.parentNode.insertBefore(gridEl, anchor.nextSibling);
-    } else {
-      document.body.appendChild(gridEl);
+  function render(items, total) {
+    if (!elGrid) return;
+    elGrid.innerHTML = items.map(buildCard).join("");
+    if (elMeta) elMeta.textContent = `Показано: ${items.length} из ${total}`;
+  }
+
+  function wireEvents(items, total) {
+    const onChange = () => render(applyFilters(items), total);
+
+    [elQ, elCategory, elColor, elCountry, elMin, elMax, elSort].forEach((el) => {
+      if (!el) return;
+      el.addEventListener("input", onChange);
+      el.addEventListener("change", onChange);
+    });
+
+    if (elReset) {
+      elReset.addEventListener("click", () => {
+        if (elQ) elQ.value = "";
+        if (elCategory) elCategory.value = "";
+        if (elColor) elColor.value = "";
+        if (elCountry) elCountry.value = "";
+        if (elMin) elMin.value = "";
+        if (elMax) elMax.value = "";
+        if (elSort) elSort.value = "";
+        onChange();
+      });
     }
   }
-  gridEl.innerHTML = out.map(buildCard).join('');
-}
 
-function applyHashDefaults(){
-  const h=decodeURIComponent(location.hash||'');
-  // #cat=Вино&color=Красное
-  if(!h.startsWith('#')) return;
-  const qs=h.slice(1).split('&').reduce((acc,p)=>{ const [k,v]=p.split('='); if(k&&v) acc[k]=v; return acc;},{});
-  if(qs.cat) document.getElementById('cat').value=qs.cat;
-  if(qs.color) document.getElementById('color').value=qs.color;
-}
+  function normalizeData(raw) {
+    const items = (raw && raw.items) ? raw.items : [];
+    return items.map((p) => ({
+      ...p,
+      // defensive defaults
+      title: p.title ?? "",
+      category: p.category ?? "",
+      country: p.country ?? "",
+      region: p.region ?? "",
+      color: p.color ?? "",
+      price_rub: Number(p.price_rub ?? 0),
+      stock: Number(p.stock ?? 0),
+      sku: p.sku ?? "",
+    }));
+  }
 
-(async function(){
-  const items=await loadItems();
+  function applyGroup(items) {
+    const g = getParam("group");
+    const gInfo = GROUPS[g] || null;
 
-  const base=items.filter(inGroup);
-  // title for grouped catalog
-  const titleEl=document.getElementById('catalogTitle');
-  if(titleEl) titleEl.textContent=groupTitle();
-  document.title = `${groupTitle()} — Винотека`;
-  // build select options
-  const cats=uniq(base.map(x=>x.category));
-  const countries=uniq(base.map(x=>x.country));
+    if (gInfo && elTitle) elTitle.textContent = gInfo.title;
 
-  const catSel=document.getElementById('cat');
-  cats.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;catSel.appendChild(o);});
+    // show color filter only for wine group
+    const colorWrap = document.querySelector('[data-filter="color"]') || elColor?.closest(".filter");
+    if (colorWrap) colorWrap.style.display = (g === "wine") ? "" : "none";
 
-  const cSel=document.getElementById('country');
-  countries.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;cSel.appendChild(o);});
+    if (!gInfo) return items;
 
-  applyHashDefaults();
+    const allowed = new Set(gInfo.categories);
+    return items.filter((p) => allowed.has(p.category));
+  }
 
-  ['q','cat','color','country','minP','maxP','sort'].forEach(id=>{
-    document.getElementById(id).addEventListener('input',()=>apply(items));
-    document.getElementById(id).addEventListener('change',()=>apply(items));
-  });
+  function initSortOptions() {
+    if (!elSort) return;
+    // Keep existing options if present, otherwise set
+    const has = elSort.querySelector("option");
+    if (has) return;
+    elSort.innerHTML = `
+      <option value="">По умолчанию</option>
+      <option value="price_asc">Цена ↑</option>
+      <option value="price_desc">Цена ↓</option>
+      <option value="name">Название</option>
+      <option value="stock">Наличие</option>
+    `;
+  }
 
-  document.getElementById('reset').addEventListener('click',()=>{
-    document.getElementById('q').value='';
-    document.getElementById('cat').value='';
-    document.getElementById('color').value='';
-    document.getElementById('country').value='';
-    document.getElementById('minP').value='';
-    document.getElementById('maxP').value='';
-    document.getElementById('sort').value='popular';
-    history.replaceState(null,'',location.pathname);
-    apply(items);
-  });
+  async function main() {
+    try {
+      initSortOptions();
 
-  apply(items);
+      const raw = await loadData();
+      let items = normalizeData(raw);
+      items = applyGroup(items);
+
+      const total = items.length;
+
+      // Populate select filters based on *grouped* items
+      setSelectOptions(elCategory, uniq(items.map((p) => p.category).filter(Boolean)), true);
+      setSelectOptions(elCountry, uniq(items.map((p) => p.country).filter(Boolean)), true);
+      setSelectOptions(elColor, uniq(items.map((p) => p.color).filter(Boolean)), true);
+
+      render(items, total);
+      wireEvents(items, total);
+    } catch (e) {
+      console.error(e);
+      if (elGrid) {
+        elGrid.innerHTML = `
+          <div class="card" style="padding:16px">
+            <div style="font-weight:700;margin-bottom:6px">Каталог временно недоступен</div>
+            <div class="muted">${escapeHtml(e?.message || "Ошибка загрузки")}</div>
+          </div>
+        `;
+      }
+    }
+  }
+
+  main();
 })();
