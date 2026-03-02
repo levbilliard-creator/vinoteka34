@@ -103,11 +103,17 @@ function buildCard(p){
 function apply(items){
   const base=(items||[]).filter(inGroup);
   const q=document.getElementById('q').value.trim().toLowerCase();
-  const cat=document.getElementById('cat').value;
-  const color=document.getElementById('color').value;
-  const country=document.getElementById('country').value;
-  const minP=toNum(document.getElementById('minP').value);
-  const maxP=toNum(document.getElementById('maxP').value);
+  let cat=document.getElementById('cat').value;
+  let color=document.getElementById('color').value;
+  let country=document.getElementById('country').value;
+
+  // normalize placeholders so they don't act like real filters
+  if(cat==='Все') cat='';
+  if(color==='Любой' || color==='Любая') color='';
+  if(country==='Любая' || country==='Любой') country='';
+
+  const minP=parseInt(document.getElementById('minP').value,10);
+  const maxP=parseInt(document.getElementById('maxP').value,10);
   const sort=document.getElementById('sort').value;
 
   let out=base.filter(p=>{

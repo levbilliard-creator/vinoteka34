@@ -1,135 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ВИНОТЕКА</title>
-  <meta name="description" content="ВИНОТЕКА (Москва, Карамышевская набережная, д. 34). Подберём вино, учитывая ваш вкус. Ежедневно 12:00–23:00. Цены на сайте. Telegram сомелье онлайн."/>
-  <meta name="robots" content="index,follow" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ВИНОТЕКА</title>
+<meta content="ВИНОТЕКА (Москва, Карамышевская набережная, д. 34). Подберём вино, учитывая ваш вкус. Ежедневно 12:00–23:00. Цены на сайте. Telegram сомелье онлайн." name="description"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/styles.css" rel="stylesheet">
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</link></head>
 <body>
 <header class="top">
-  <div class="wrap top__inner">
-    <a class="logo" href="/">ВИНОТЕКА</a>
-    <nav class="nav">
-      <a href="/#about">Бутик • Клуб • Сомелье</a>
-      <a href="/catalog">Каталог</a>
-      <a href="/#tastings">Дегустации</a>
-      <a href="/#contacts">Контакты</a>
-    </nav>
-    <div class="top__actions">
-      <a class="btn btn--ghost" href="tel:+74959471010">+7 495 947-10-10</a>
-      <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Telegram</a>
-    </div>
-  </div>
+<div class="wrap top__inner">
+<a class="logo" href="/">ВИНОТЕКА</a>
+<nav class="nav">
+<a href="/#about">Бутик • Клуб • Сомелье</a>
+<a href="/catalog">Каталог</a>
+<a href="/#tastings">Дегустации</a>
+<a href="/#contacts">Контакты</a>
+</nav>
+<div class="top__actions">
+<a class="btn btn--ghost" href="tel:+74959471010">+7 495 947-10-10</a>
+<a class="btn btn--tg" href="https://t.me/vinotekakaram" rel="noopener" target="_blank">Telegram</a>
+</div>
+</div>
 </header>
-
 <main>
-  <section class="hero">
-    <div class="wrap hero__grid">
-      <div class="hero__copy">
-        <div class="pill">Москва • Москва, Карамышевская набережная, д. 34 • 12:00–23:00</div>
-        <h1>Подберём вино, учитывая ваш вкус</h1>
-        <p class="lead">Бутик, клуб и сомелье-сервис. Индивидуальный подход к каждому гостю. Подбираем вино на ваш вкус, заботимся о вашем бюджете и гарантируем хорошее настроение от выбора.</p>
-        <div class="hero__cta">
-          <a class="btn" href="/catalog.html">Открыть каталог</a>
-          <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Сомелье онлайн</a>
-        </div>
-
-        <div class="tiles">
-          <a class="tile" href="/catalog?group=wine">Вино</a>
-          <a class="tile" href="/catalog?group=spirits">Крепкие напитки</a>
-          <a class="tile" href="/catalog?group=nonalc">Безалкогольные напитки</a>
-          <a class="tile" href="/catalog?group=snacks">Закуски</a>
-          <a class="tile" href="/catalog?group=tea">Чаи</a>
-          <a class="tile" href="/catalog?group=glass">Стекло и аксессуары</a>
-        </div>
-      </div>
-
-      <div class="hero__media">
-        <div class="hero__img">
-      <video class="hero__video" src="assets/intro.mp4" autoplay muted loop playsinline poster="assets/img/hero.jpg"></video>
-    </div>
-        <div class="hero__thumbs" id="thumbs"></div>
-      </div>
-    </div>
-  </section>
-  <section class="section" id="video">
-    <div class="container">
-      <div class="section__head">
-        <h2>Атмосфера</h2>
-        <div class="muted">Короткое видео из «ВИНОТЕКИ».</div>
-      </div>
-      <div class="videoWrap">
-        <img class="mediaFrame__img" src="assets/img/g1.jpg" alt="Атмосфера" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-
-  <section id="about" class="section">
-    <div class="wrap">
-      <h2>Не просто магазин вина</h2>
-      <div class="grid3">
-        <div class="card">
-          <div class="card__t">Сомелье — подбор</div>
-          <div class="muted">К ужину, в подарок, на дегустацию или корпоратив. Быстро в Telegram.</div>
-        </div>
-        <div class="card">
-          <div class="card__t">Редкие позиции</div>
-          <div class="muted">В каталоге — актуальные цены и наличие.</div>
-        </div>
-        <div class="card">
-          <div class="card__t">Клуб</div>
-          <div class="muted">Еженедельные дегустации по четвергам, обычно 3–5 человек, бесплатно.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="tastings" class="section section--alt">
-    <div class="wrap">
-      <h2>Дегустации по четвергам</h2>
-      <p class="muted">Формат: 3–5 человек • Стоимость: бесплатно • Раз в неделю по четвергам. Запись в Telegram.</p>
-      <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Записаться</a>
-    </div>
-  </section>
-
-  <section id="contacts" class="section">
-    <div class="wrap contact">
-      <div>
-        <h2>Контакты</h2>
-        <div class="line"><b>Адрес:</b> Москва, Карамышевская набережная, д. 34</div>
-        <div class="line"><b>Телефон:</b> <a href="tel:+74959471010">+7 495 947-10-10</a></div>
-        <div class="line"><b>Telegram:</b> <a href="https://t.me/vinotekakaram" target="_blank" rel="noopener">t.me/vinotekakaram</a></div>
-        <div class="line"><b>График:</b> ежедневно 12:00–23:00</div>
-        <div class="note">18+. Алкоголь. Пожалуйста, подтверждайте возраст.</div>
-      </div>
-      <div class="contact__cta">
-        <div class="box">
-          <div class="box__t">Быстрый подбор</div>
-          <div class="muted">Напишите предпочтения — подберём 3–5 вариантов и предложим цены.</div>
-          <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Написать сомелье</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <div class="muted">© <span id="y"></span> ВИНОТЕКА • vinoteka34.ru</div>
-      <div class="muted">Сделано на Cloudflare Pages</div>
-    </div>
-  </footer>
+<section class="hero">
+<div class="wrap hero__grid">
+<div class="hero__copy">
+<div class="pill">Москва • Москва, Карамышевская набережная, д. 34 • 12:00–23:00</div>
+<h1>Подберём вино, учитывая ваш вкус</h1>
+<p class="lead">Бутик, клуб и сомелье-сервис. Индивидуальный подход к каждому гостю. Подбираем вино на ваш вкус, заботимся о вашем бюджете и гарантируем хорошее настроение от выбора.</p>
+<div class="hero__cta">
+<a class="btn" href="/catalog.html">Открыть каталог</a>
+<a class="btn btn--tg" href="https://t.me/vinotekakaram" rel="noopener" target="_blank">Сомелье онлайн</a>
+</div>
+<div class="tiles">
+<a class="tile" href="/catalog?group=wine">Вино</a>
+<a class="tile" href="/catalog?group=spirits">Крепкие напитки</a>
+<a class="tile" href="/catalog?group=nonalc">Безалкогольные напитки</a>
+<a class="tile" href="/catalog?group=snacks">Закуски</a>
+<a class="tile" href="/catalog?group=tea">Чаи</a>
+<a class="tile" href="/catalog?group=glass">Стекло и аксессуары</a>
+</div>
+</div>
+<div class="hero__media">
+<div class="hero__img">
+<img alt="ВИНОТЕКА — интерьер" class="hero__video" src="assets/img/hero.jpg"/>
+</div>
+<div class="hero__thumbs" id="thumbs"></div>
+</div>
+</div>
+</section>
+<section class="section" id="video">
+<div class="container">
+<div class="section__head">
+<h2>Атмосфера</h2>
+<div class="muted">Короткое видео из «ВИНОТЕКИ».</div>
+</div>
+<div class="videoWrap">
+<img alt="Атмосфера" class="mediaFrame__img" loading="lazy" src="assets/img/g1.jpg"/>
+</div>
+</div>
+</section>
+<section class="section" id="about">
+<div class="wrap">
+<h2>Не просто магазин вина</h2>
+<div class="grid3">
+<div class="card">
+<div class="card__t">Сомелье — подбор</div>
+<div class="muted">К ужину, в подарок, на дегустацию или корпоратив. Быстро в Telegram.</div>
+</div>
+<div class="card">
+<div class="card__t">Редкие позиции</div>
+<div class="muted">В каталоге — актуальные цены и наличие.</div>
+</div>
+<div class="card">
+<div class="card__t">Клуб</div>
+<div class="muted">Еженедельные дегустации по четвергам, обычно 3–5 человек, бесплатно.</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section--alt" id="tastings">
+<div class="wrap">
+<h2>Дегустации по четвергам</h2>
+<p class="muted">Формат: 3–5 человек • Стоимость: бесплатно • Раз в неделю по четвергам. Запись в Telegram.</p>
+<a class="btn btn--tg" href="https://t.me/vinotekakaram" rel="noopener" target="_blank">Записаться</a>
+</div>
+</section>
+<section class="section" id="contacts">
+<div class="wrap contact">
+<div>
+<h2>Контакты</h2>
+<div class="line"><b>Адрес:</b> Москва, Карамышевская набережная, д. 34</div>
+<div class="line"><b>Телефон:</b> <a href="tel:+74959471010">+7 495 947-10-10</a></div>
+<div class="line"><b>Telegram:</b> <a href="https://t.me/vinotekakaram" rel="noopener" target="_blank">t.me/vinotekakaram</a></div>
+<div class="line"><b>График:</b> ежедневно 12:00–23:00</div>
+<div class="note">18+. Алкоголь. Пожалуйста, подтверждайте возраст.</div>
+</div>
+<div class="contact__cta">
+<div class="box">
+<div class="box__t">Быстрый подбор</div>
+<div class="muted">Напишите предпочтения — подберём 3–5 вариантов и предложим цены.</div>
+<a class="btn btn--tg" href="https://t.me/vinotekakaram" rel="noopener" target="_blank">Написать сомелье</a>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="wrap footer__inner">
+<div class="muted">© <span id="y"></span> ВИНОТЕКА • vinoteka34.ru</div>
+<div class="muted">Сделано на Cloudflare Pages</div>
+</div>
+</footer>
 </main>
-
-<a class="fab" href="https://t.me/vinotekakaram" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
-
+<a aria-label="Telegram" class="fab" href="https://t.me/vinotekakaram" rel="noopener" target="_blank">TG</a>
 <script>
   window.__GALLERY__ = ["g1.jpg", "g2.jpg", "g3.jpg", "g4.jpg", "g5.jpg", "g6.jpg", "g7.jpg", "g8.jpg", "g9.jpg", "g10.jpg"];
 </script>
