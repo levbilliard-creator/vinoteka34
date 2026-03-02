@@ -133,8 +133,24 @@ function apply(items){
   if(sort==='price_desc') out.sort((a,b)=>b.price_rub-a.price_rub);
   if(sort==='name_asc') out.sort((a,b)=>a.title.localeCompare(b.title,'ru'));
 
-  document.getElementById('meta').textContent=`Показано: ${out.length} из ${base.length}`;
-  document.getElementById('grid').innerHTML=out.map(buildCard).join('');
+  const metaEl = document.getElementById('meta');
+  if(metaEl) metaEl.textContent = `Показано: ${out.length} из ${base.length}`;
+
+  let gridEl = document.getElementById('grid');
+  if(!gridEl){
+    // Fallback: если разметка страницы отличается (например, из-за clean URLs),
+    // создаём контейнер для карточек.
+    gridEl = document.createElement('div');
+    gridEl.id = 'grid';
+    gridEl.className = 'grid3';
+    const anchor = document.getElementById('filters') || metaEl || document.querySelector('main') || document.body;
+    if(anchor && anchor.parentNode){
+      anchor.parentNode.insertBefore(gridEl, anchor.nextSibling);
+    } else {
+      document.body.appendChild(gridEl);
+    }
+  }
+  gridEl.innerHTML = out.map(buildCard).join('');
 }
 
 function applyHashDefaults(){
