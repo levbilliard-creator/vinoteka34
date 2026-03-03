@@ -42,6 +42,7 @@ h2{margin:0 0 14px;font-size:28px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .card{border:1px solid var(--line);background:#ffffff06;border-radius:18px;padding:16px}
 .card__t{font-weight:800;margin-bottom:8px}
+.card__en{margin-top:-6px;margin-bottom:8px;opacity:.7;font-size:13px;line-height:1.2}
 .muted{color:var(--muted)}
 .contact{display:grid;grid-template-columns:1fr .9fr;gap:14px;align-items:start}
 .line{margin:10px 0;color:var(--muted)}
@@ -52,6 +53,7 @@ h2{margin:0 0 14px;font-size:28px}
 .footer__inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .fab{position:fixed;right:16px;bottom:16px;width:54px;height:54px;border-radius:999px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;text-decoration:none;box-shadow:0 10px 26px rgba(0,0,0,.35);z-index:20}
 .h1{font-size:34px;margin:0}
+.p-title-en{margin-top:6px;opacity:.75;font-size:16px;line-height:1.25}
 .headrow{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .filters{margin-top:14px;border:1px solid var(--line);background:#ffffff06;border-radius:18px;padding:14px;display:grid;grid-template-columns:1.2fr .7fr .7fr .8fr .9fr .7fr .4fr;gap:10px}
 .field label{display:block;font-size:12px;color:var(--muted);margin:0 0 6px}

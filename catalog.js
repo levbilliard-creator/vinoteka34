@@ -116,8 +116,42 @@ function inferColor(p) {
       .replaceAll("'", "&#039;");
   }
 
+  // Remove unwanted phrases from titles (safety net)
+  function cleanBadPhrases(text) {
+    const bad = [
+      "вино выдержанное",
+      "вино сортовое",
+      "вино марочное",
+      "вино ординарное",
+    ];
+    let t = String(text || "");
+    for (const b of bad) t = t.replace(new RegExp(`\\b${b}\\b`, "ig"), "");
+    return t.replace(/\s{2,}/g, " ").trim();
+  }
+
+  // Simple RU→LAT transliteration for bilingual titles (Variant A)
+  function translitToLatin(input) {
+    const map = {
+      а:"a",б:"b",в:"v",г:"g",д:"d",е:"e",ё:"yo",ж:"zh",з:"z",и:"i",й:"y",к:"k",л:"l",м:"m",н:"n",о:"o",п:"p",р:"r",с:"s",т:"t",у:"u",ф:"f",х:"kh",ц:"ts",ч:"ch",ш:"sh",щ:"shch",ъ:"",ы:"y",ь:"",э:"e",ю:"yu",я:"ya",
+    };
+    return String(input || "")
+      .split("")
+      .map((ch) => {
+        const low = ch.toLowerCase();
+        const rep = map[low];
+        if (rep === undefined) return ch;
+        if (ch === low) return rep;
+        return rep.charAt(0).toUpperCase() + rep.slice(1);
+      })
+      .join("")
+      .replace(/\s{2,}/g, " ")
+      .trim();
+  }
+
   function buildCard(p) {
     const title = escapeHtml(p.title);
+    const titleEnRaw = (p.title_en || "").trim();
+    const titleEn = escapeHtml(titleEnRaw);
     const subtitle = escapeHtml([p.region, p.country].filter(Boolean).join(" • "));
     const price = Number(p.price_rub || 0).toLocaleString("ru-RU");
     const cat = escapeHtml(p.category || "");
@@ -132,6 +166,7 @@ function inferColor(p) {
         <div class="prod-head">
           <div class="prod-title-wrap">
             <a class="prod-title" href="/product.html?id=${encodeURIComponent(p.id)}">${title}</a>
+            ${titleEnRaw && titleEnRaw !== p.title ? `<div class="card__en">${titleEn}</div>` : ``}
             <div class="muted">${subtitle || "&nbsp;"}</div>
             <div class="muted">Наличие: ${escapeHtml(p.stock ?? 0)}</div>
           </div>
@@ -230,18 +265,30 @@ function inferColor(p) {
 
   function normalizeData(raw) {
     const items = (raw && raw.items) ? raw.items : [];
-    return items.map((p) => ({
-      ...p,
-      // defensive defaults
-      title: p.title ?? "",
-      category: p.category ?? "",
-      country: p.country ?? "",
-      region: p.region ?? "",
-      color: inferColor(p) || "",
-      price_rub: Number(p.price_rub ?? 0),
-      stock: Number(p.stock ?? 0),
-      sku: p.sku ?? "",
-    }));
+    return items.map((p) => {
+      const title = cleanBadPhrases(p.title ?? "");
+      const category = p.category ?? "";
+      const group = inferGroup({ ...p, title, category });
+      const titleEnRaw = (p.title_en ?? p.name_en ?? p.titleEn ?? p.nameEn ?? "").toString().trim();
+      const title_en = titleEnRaw
+        ? titleEnRaw
+        : ((group === "wine" || group === "spirits") ? translitToLatin(title) : "");
+
+      return {
+        ...p,
+        // defensive defaults
+        title,
+        title_en,
+        category,
+        country: p.country ?? "",
+        region: p.region ?? "",
+        group,
+        color: inferColor({ ...p, title, category }) || "",
+        price_rub: Number(p.price_rub ?? 0),
+        stock: Number(p.stock ?? 0),
+        sku: p.sku ?? "",
+      };
+    });
   }
 
   function applyGroup(items) {

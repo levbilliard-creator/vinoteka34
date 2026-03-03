@@ -1,5 +1,37 @@
 const TG="https://t.me/vinotekakaram";
 
+// Remove unwanted phrases from titles (safety net)
+function cleanBadPhrases(text) {
+  const bad = [
+    "вино выдержанное",
+    "вино сортовое",
+    "вино марочное",
+    "вино ординарное",
+  ];
+  let t = String(text || "");
+  for (const b of bad) t = t.replace(new RegExp(`\\b${b}\\b`, "ig"), "");
+  return t.replace(/\s{2,}/g, " ").trim();
+}
+
+// Simple RU→LAT transliteration for bilingual titles (Variant A)
+function translitToLatin(input) {
+  const map = {
+    а:"a",б:"b",в:"v",г:"g",д:"d",е:"e",ё:"yo",ж:"zh",з:"z",и:"i",й:"y",к:"k",л:"l",м:"m",н:"n",о:"o",п:"p",р:"r",с:"s",т:"t",у:"u",ф:"f",х:"kh",ц:"ts",ч:"ch",ш:"sh",щ:"shch",ъ:"",ы:"y",ь:"",э:"e",ю:"yu",я:"ya",
+  };
+  return String(input || "")
+    .split("")
+    .map((ch) => {
+      const low = ch.toLowerCase();
+      const rep = map[low];
+      if (rep === undefined) return ch;
+      if (ch === low) return rep;
+      return rep.charAt(0).toUpperCase() + rep.slice(1);
+    })
+    .join("")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 function rub(n){return new Intl.NumberFormat("ru-RU").format(n)+" ₽";}
 
 function getId(){
@@ -147,9 +179,24 @@ function buildCard(p){
 
   const ov=overrides[String(p.id)] || {};
 
-  document.title = `${cleanBadPhrases(p.title)} — Винотека`;
-  document.getElementById('pTitle').textContent = p.title;
-  document.getElementById('crumbTitle').textContent = p.title;
+  const title = cleanBadPhrases(p.title || "");
+  const group = String(p.group || "");
+  const titleEnRaw = (p.title_en || p.name_en || p.titleEn || p.nameEn || "").toString().trim();
+  const titleEn = titleEnRaw ? titleEnRaw : ((group === "wine" || group === "spirits") ? translitToLatin(title) : "");
+
+  document.title = `${title || 'Товар'} — ВИНОТЕКА`;
+  document.getElementById('pTitle').textContent = title || 'Товар';
+  const pTitleEnEl = document.getElementById('pTitleEn');
+  if (pTitleEnEl) {
+    if (titleEn && titleEn !== title) {
+      pTitleEnEl.textContent = titleEn;
+      pTitleEnEl.style.display = '';
+    } else {
+      pTitleEnEl.textContent = '';
+      pTitleEnEl.style.display = 'none';
+    }
+  }
+  document.getElementById('crumbTitle').textContent = title || 'Товар';
 
   const meta=[p.category, p.color, p.country, p.region].filter(Boolean).join(' • ');
   document.getElementById('pMeta').textContent = meta;
