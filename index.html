@@ -17,7 +17,8 @@
 <header class="top">
 <div class="wrap top__inner">
 <a class="logo" href="/">ВИНОТЕКА</a>
-<nav class="nav">
+    <button class="navbtn" id="navbtn" type="button" aria-label="Меню">☰</button>
+<nav class="nav" id="nav">
 <a href="/#about">Бутик • Клуб • Сомелье</a>
 <a href="/catalog">Каталог</a>
 <a href="/#tastings">Дегустации</a>
@@ -117,5 +118,14 @@
   window.__GALLERY__ = ["g1.jpg", "g2.jpg", "g3.jpg", "g4.jpg", "g5.jpg", "g6.jpg", "g7.jpg", "g8.jpg", "g9.jpg", "g10.jpg"];
 </script>
 <script src="/app.js"></script>
+<script>
+(function(){
+  const b=document.getElementById('navbtn');
+  if(!b) return;
+  b.addEventListener('click', ()=>document.body.classList.toggle('nav-open'));
+  const nav=document.getElementById('nav');
+  nav && nav.addEventListener('click', (e)=>{ if(e.target && e.target.tagName==='A') document.body.classList.remove('nav-open'); });
+})();
+</script>
 </body>
 </html>

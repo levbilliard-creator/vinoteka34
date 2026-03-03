@@ -15,7 +15,8 @@
 <header class="top">
   <div class="wrap top__inner">
     <a class="logo" href="/">ВИНОТЕКА</a>
-    <nav class="nav">
+    <button class="navbtn" id="navbtn" type="button" aria-label="Меню">☰</button>
+    <nav class="nav" id="nav">
       <a href="/">Главная</a>
       <a class="is-on" href="/catalog.html">Каталог</a>
       <a href="/#tastings">Дегустации</a>
@@ -38,7 +39,10 @@
       <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Сомелье онлайн</a>
     </div>
 
-    <div class="filters">
+    <details class="filtersPanel" id="filtersPanel" open>
+  <summary>Фильтры и поиск</summary>
+  <div class="filtersPanel__inner">
+<div class="filters">
       <div class="field">
         <label>Поиск</label>
         <input id="q" type="search" placeholder="Название / регион / артикул..." autocomplete="off">
@@ -82,8 +86,9 @@
         <button class="btn btn--ghost" id="reset" type="button">Сбросить</button>
       </div>
     </div>
-
-    <div class="meta" id="meta"></div>
+  </div>
+</details>
+<div class="meta id="meta"></div>
     <div class="grid" id="grid"></div>
 
     <div class="note" style="margin-top:18px">18+. Алкоголь. Пожалуйста, подтверждайте возраст.</div>
@@ -92,5 +97,14 @@
 
 <a class="fab" href="https://t.me/vinotekakaram" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
 <script src="/catalog.js"></script>
+<script>
+(function(){
+  const b=document.getElementById('navbtn');
+  if(!b) return;
+  b.addEventListener('click', ()=>document.body.classList.toggle('nav-open'));
+  const nav=document.getElementById('nav');
+  nav && nav.addEventListener('click', (e)=>{ if(e.target && e.target.tagName==='A') document.body.classList.remove('nav-open'); });
+})();
+</script>
 </body>
 </html>
