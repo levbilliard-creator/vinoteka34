@@ -128,3 +128,26 @@ body.nav-open .nav a{padding:12px 6px}
   .tile{padding:16px}
   .field input,.field select{padding:12px 12px}
 }
+
+
+.btn__icon{display:inline-flex;align-items:center;justify-content:center;margin-right:10px;font-weight:700;}
+.btn__text{display:inline;}
+
+
+
+@media (max-width: 560px){
+  .top__inner{gap:10px}
+  .logo{font-size:18px;letter-spacing:.06em}
+  .top__actions{gap:10px}
+  .top__actions .btn{padding:10px 12px;font-size:14px}
+  .btn--phone,.btn--tg{width:52px;height:52px;min-width:52px;padding:0;justify-content:center}
+  .btn--phone .btn__text,.btn--tg .btn__text{display:none}
+  .btn--phone .btn__icon,.btn--tg .btn__icon{margin:0;font-size:16px}
+  .hero h1{font-size:40px;line-height:1.05}
+  .hero p{font-size:16px}
+  .hero__actions{flex-direction:column}
+  .hero__actions .btn{width:100%}
+  .tiles{grid-template-columns:1fr;gap:14px}
+  .tile{padding:18px}
+}
+
