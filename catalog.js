@@ -156,11 +156,10 @@ function formatPrice(value){
   }
 }
 
-function createPill(text, extraClass=''){
-  const el = document.createElement('span');
-  el.className = 'pill' + (extraClass ? (' ' + extraClass) : '');
-  el.textContent = text || '';
-  return el;
+// Create pill as HTML string (so it can be safely used inside template literals)
+function pillHtml(text, extraClass = '') {
+  const cls = 'pill' + (extraClass ? (' ' + extraClass) : '');
+  return `<span class="${cls}">${escapeHtml(text || '')}</span>`;
 }
 
   function uniq(arr) {
@@ -211,12 +210,12 @@ function createPill(text, extraClass=''){
   
 function buildCard(item) {
   const href = `/product.html?id=${encodeURIComponent(item.id)}`;
-  const enTitle = (item.en || item.title || "").trim();
-  const ruTitle = (item.ru || "").trim();
+  const ruTitle = (item.ru || item.title || "").trim();
+  const enTitle = (item.en || item.title_en || "").trim() || titleEN(item);
   const titleHtml = ruTitle ? `${escapeHtml(enTitle)}<br><span class="card__en">${escapeHtml(ruTitle)}</span>` : escapeHtml(enTitle);
 
   const kind = (item.category || "Товар").trim();
-  const price = formatPrice(item.price);
+  const price = formatPrice(item.price_rub ?? item.price);
   const regionLine = [item.region, item.country].filter(Boolean).join(" • ");
   const stockLine = typeof item.stock === "number" ? `Наличие: ${item.stock}` : "";
 
@@ -228,7 +227,7 @@ function buildCard(item) {
   }
 
   const traitsHtml = traits.length
-    ? `<div class="pill-row">${traits.map(t => createPill(t, "pill")).join("")}</div>`
+    ? `<div class="pill-row">${traits.map(t => pillHtml(t, "pill--trait")).join("")}</div>`
     : `<div class="pill-row"></div>`;
 
   return `

@@ -165,11 +165,14 @@ function buildCard(p){
   if(p.country) badges.push(p.country);
   const badgeHtml=badges.slice(0,3).map(b=>`<span class="badge">${b}</span>`).join('');
   const sub=[p.region?`Регион: ${p.region}`:null,(p.stock!=null?`Наличие: ${p.stock}`:null)].filter(Boolean).join(' • ');
+  const ruTitle = cleanBadPhrases(p.title);
+  const enTitle = (p.title_en || '').trim() || titleEN(p);
+  const titleHtml = `${escapeHtml(enTitle)}<br><span class="p__en">${escapeHtml(ruTitle)}</span>`;
   return `
     <div class="p">
       <div class="p__top">
         <div style="min-width:0">
-          <a class="p__t p__tlink" href="/product.html?id=${p.id}">${cleanBadPhrases(p.title)}</a>
+          <a class="p__t p__tlink" href="/product.html?id=${p.id}">${titleHtml}</a>
           <div class="p__sub">${sub||''}</div>
         </div>
         <div class="badges">${badgeHtml}</div>
