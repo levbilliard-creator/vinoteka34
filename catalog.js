@@ -143,6 +143,26 @@ function getWineTraits(item) {
     return Number.isFinite(n) ? n : null;
   }
 
+
+// --- helpers (layout v2) ---
+function formatPrice(value){
+  const n = toNum(value);
+  if (n === null) return '';
+  try {
+    return new Intl.NumberFormat('ru-RU').format(Math.round(n)) + ' ₽';
+  } catch (e) {
+    // fallback
+    return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽';
+  }
+}
+
+function createPill(text, extraClass=''){
+  const el = document.createElement('span');
+  el.className = 'pill' + (extraClass ? (' ' + extraClass) : '');
+  el.textContent = text || '';
+  return el;
+}
+
   function uniq(arr) {
     return Array.from(new Set(arr)).sort((a, b) => a.localeCompare(b, "ru"));
   }
