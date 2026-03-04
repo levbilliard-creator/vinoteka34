@@ -13,6 +13,18 @@ function cleanBadPhrases(text) {
   return t.replace(/\s{2,}/g, " ").trim();
 }
 
+function cleanTitle(s){
+  if(!s) return '';
+  s = cleanBadPhrases(String(s));
+  s = s.replace(/^\s*вино\s+/i, '');
+  s = s.replace(/\s+(сухое|полусухое|полусладкое|сладкое|брют|экстра\s*брют|экстра\s*драй|экстра\s*сухое)\s+(белое|красное|розовое)\s*$/i, '');
+  s = s.replace(/\s+(белое|красное|розовое)\s*$/i, '');
+  s = s.replace(/\s+(сухое|полусухое|полусладкое|сладкое|брют|экстра\s*брют|экстра\s*драй|экстра\s*сухое)\s*$/i, '');
+  s = s.replace(/\s{2,}/g,' ').trim();
+  return s;
+}
+
+
 // Simple RU→LAT transliteration for bilingual titles (Variant A)
 function translitToLatin(input) {
   const map = {
@@ -179,9 +191,9 @@ function buildCard(p){
 
   const ov=overrides[String(p.id)] || {};
 
-  const title = cleanBadPhrases(p.title || "");
+  const title = cleanTitle(p.title || "");
   const group = String(p.group || "");
-  const titleEnRaw = (p.title_en || p.name_en || p.titleEn || p.nameEn || "").toString().trim();
+  const titleEnRaw = cleanTitle((p.title_en || p.name_en || p.titleEn || p.nameEn || '')).toString().trim();
   const titleEn = titleEnRaw ? titleEnRaw : ((group === "wine" || group === "spirits") ? translitToLatin(title) : "");
 
   document.title = `${title || 'Товар'} — ВИНОТЕКА`;

@@ -165,8 +165,9 @@ function inferColor(p) {
   }
 
   function buildCard(p) {
-    const title = escapeHtml(p.title);
-    const titleEnRaw = (p.title_en || "").trim();
+    const titleRaw = cleanTitle(p.title);
+    const title = escapeHtml(titleRaw);
+    const titleEnRaw = cleanTitle(p.title_en || '').trim();
     const titleEn = escapeHtml(titleEnRaw);
     const subtitle = escapeHtml([p.region, p.country].filter(Boolean).join(" • "));
     const price = Number(p.price_rub || 0).toLocaleString("ru-RU");
@@ -181,8 +182,8 @@ function inferColor(p) {
       <article class="card product">
         <div class="prod-head">
           <div class="prod-title-wrap">
-            <a class="prod-title" href="/product.html?id=${encodeURIComponent(p.id)}">${title}</a>
-            ${titleEnRaw && titleEnRaw !== p.title ? `<div class="card__en">${titleEn}</div>` : ``}
+            <a class="prod-title" href="/product.html?id=${encodeURIComponent(p.id)}">${titleEnRaw ? titleEn : title}</a>
+            ${titleEnRaw ? `<div class="card__ru">${title}</div>` : ``}
             <div class="muted">${subtitle || "&nbsp;"}</div>
             <div class="muted">Наличие: ${escapeHtml(p.stock ?? 0)}</div>
           </div>
@@ -370,4 +371,18 @@ function inferColor(p) {
   }
 
   main();
-})();
+}
+
+function cleanTitle(s){
+  if(!s) return '';
+  s = cleanBadPhrases(String(s));
+  // remove generic word "вино" in the name (type is shown via badges/filters)
+  s = s.replace(/^\s*вино\s+/i, '');
+  // remove trailing taste/color descriptors from the title
+  s = s.replace(/\s+(сухое|полусухое|полусладкое|сладкое|брют|экстра\s*брют|экстра\s*драй|экстра\s*сухое)\s+(белое|красное|розовое)\s*$/i, '');
+  s = s.replace(/\s+(белое|красное|розовое)\s*$/i, '');
+  s = s.replace(/\s+(сухое|полусухое|полусладкое|сладкое|брют|экстра\s*брют|экстра\s*драй|экстра\s*сухое)\s*$/i, '');
+  s = s.replace(/\s{2,}/g,' ').trim();
+  return s;
+}
+)();
