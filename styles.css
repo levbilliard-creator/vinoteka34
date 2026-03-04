@@ -167,3 +167,22 @@ body.nav-open .nav a{padding:12px 6px}
 
 
 .product__subtitle{font-size:18px; opacity:.8; margin-top:6px;}
+
+
+/* --- Catalog card layout v2 --- */
+.card.product{ display:flex; flex-direction:column; height:100%; }
+.prod-head{ display:flex; gap:14px; align-items:stretch; }
+.prod-title-wrap{ min-width:0; flex:1; }
+.prod-title{ display:block; font-weight:700; line-height:1.15; }
+.prod-right{ width:170px; display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+.prod-kind{ font-size:12px; opacity:.9; padding:6px 10px; border:1px solid rgba(255,255,255,.12); border-radius:999px; }
+.prod-right-bottom{ margin-top:auto; display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
+.prod-price{ font-size:22px; font-weight:800; letter-spacing:.2px; }
+.prod-price-note{ font-size:12px; opacity:.7; }
+.btn-open{ align-self:flex-end; }
+.pill-row{ display:flex; flex-wrap:wrap; gap:8px; }
+@media (max-width: 760px){
+  .prod-head{ flex-direction:column; }
+  .prod-right{ width:100%; align-items:flex-start; }
+  .prod-right-bottom{ align-items:flex-start; }
+}

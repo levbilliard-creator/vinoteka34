@@ -92,6 +92,30 @@ function inferColor(p) {
   return "";
 }
 
+function inferSweetness(item) {
+  const t = ((item.title || "") + " " + (item.ru || "") + " " + (item.en || "")).toLowerCase();
+  if (/(брют|brut)/.test(t)) return "Брют";
+  if (/(экстра\s*драй|extra\s*dry)/.test(t)) return "Экстра драй";
+  if (/(деми\s*сек|demi\s*sec)/.test(t)) return "Деми-сек";
+  if (/(полусладк|semi\s*sweet)/.test(t)) return "Полусладкое";
+  if (/(полусух|semi\s*dry)/.test(t)) return "Полусухое";
+  if (/(сладк|sweet)/.test(t)) return "Сладкое";
+  if (/(сух|dry)/.test(t)) return "Сухое";
+  return "";
+}
+
+function getWineTraits(item) {
+  const traits = [];
+  const type = (item.category || "").trim();
+  if (type && type.toLowerCase() === "игристое") traits.push("Игристое");
+  const color = (item.color || inferColor(item) || "").trim();
+  if (color && !traits.includes(color)) traits.push(color);
+  const sweet = inferSweetness(item);
+  if (sweet && !traits.includes(sweet)) traits.push(sweet);
+  return traits;
+}
+
+
 
   function getParam(name) {
     return new URLSearchParams(location.search).get(name) || "";
@@ -164,43 +188,57 @@ function inferColor(p) {
       .trim();
   }
 
-  function buildCard(p) {
-    const titleRaw = cleanTitle(p.title);
-    const title = escapeHtml(titleRaw);
-    const titleEnRaw = cleanTitle(p.title_en || '').trim();
-    const titleEn = escapeHtml(titleEnRaw);
-    const subtitle = escapeHtml([p.region, p.country].filter(Boolean).join(" • "));
-    const price = Number(p.price_rub || 0).toLocaleString("ru-RU");
-    const cat = escapeHtml(p.category || "");
-    const color = escapeHtml(inferColor(p) || "");
+  
+function buildCard(item) {
+  const href = `/product.html?id=${encodeURIComponent(item.id)}`;
+  const enTitle = (item.en || item.title || "").trim();
+  const ruTitle = (item.ru || "").trim();
+  const titleHtml = ruTitle ? `${escapeHtml(enTitle)}<br><span class="card__en">${escapeHtml(ruTitle)}</span>` : escapeHtml(enTitle);
 
-    const badges = [];
-    if (p.type === "wine" && color) badges.push(`<span class="pill">${color}</span>`);
-    if (cat) badges.push(`<span class="pill">${cat}</span>`);
+  const kind = (item.category || "Товар").trim();
+  const price = formatPrice(item.price);
+  const regionLine = [item.region, item.country].filter(Boolean).join(" • ");
+  const stockLine = typeof item.stock === "number" ? `Наличие: ${item.stock}` : "";
 
-    return `
-      <article class="card product">
-        <div class="prod-head">
-          <div class="prod-title-wrap">
-            <a class="prod-title" href="/product.html?id=${encodeURIComponent(p.id)}">${titleEnRaw ? titleEn : title}</a>
-            ${titleEnRaw ? `<div class="card__ru">${title}</div>` : ``}
-            <div class="muted">${subtitle || "&nbsp;"}</div>
-            <div class="muted">Наличие: ${escapeHtml(p.stock ?? 0)}</div>
-          </div>
-          <div class="prod-pills">${badges.join("")}</div>
-        </div>
-        <div class="prod-foot">
-          <div>
-            <div class="price">${price} ₽</div>
-            <div class="muted">Цена на сайте</div>
-          </div>
-          <a class="btn" href="/product.html?id=${encodeURIComponent(p.id)}">Открыть</a>
-        </div>
-      </article>
-    `;
+  let traits = [];
+  if ((item.group || "").toLowerCase() === "wine") {
+    traits = getWineTraits(item);
+  } else if (item.color) {
+    traits = [item.color];
   }
 
-  function setSelectOptions(selectEl, values, includeAll = true) {
+  const traitsHtml = traits.length
+    ? `<div class="pill-row">${traits.map(t => createPill(t, "pill")).join("")}</div>`
+    : `<div class="pill-row"></div>`;
+
+  return `
+    <article class="card product">
+      <div class="prod-head">
+        <div class="prod-title-wrap">
+          <a class="prod-title" href="${href}">${titleHtml}</a>
+          ${regionLine ? `<div class="muted small">${escapeHtml(regionLine)}</div>` : ""}
+          ${stockLine ? `<div class="muted small">${escapeHtml(stockLine)}</div>` : ""}
+        </div>
+
+        <div class="prod-right">
+          <div class="prod-kind">${escapeHtml(kind)}</div>
+
+          <div class="prod-right-bottom">
+            <div class="prod-price">${price}</div>
+            <div class="prod-price-note">Цена на сайте</div>
+            <a class="btn btn-open" href="${href}">Открыть</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-foot">
+        ${traitsHtml}
+      </div>
+    </article>
+  `;
+}
+
+function setSelectOptions(selectEl, values, includeAll = true) {
     if (!selectEl) return;
     const current = selectEl.value;
     const opts = [];
