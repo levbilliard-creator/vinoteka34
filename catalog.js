@@ -371,7 +371,6 @@ function inferColor(p) {
   }
 
   main();
-}
 
 function cleanTitle(s){
   if(!s) return '';
@@ -385,4 +384,5 @@ function cleanTitle(s){
   s = s.replace(/\s{2,}/g,' ').trim();
   return s;
 }
-)();
+
+})();
