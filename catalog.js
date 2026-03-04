@@ -16,134 +16,150 @@ const elSort = $("sort");
 const elReset = $("resetBtn");
 
 
-function cleanTitle(text){
+const GROUPS = {
+all:{title:"Каталог"},
+wine:{title:"Вино"},
+spirits:{title:"Крепкие напитки"},
+nonalc:{title:"Безалкогольные напитки"},
+snacks:{title:"Закуски"},
+tea:{title:"Чаи"},
+glass:{title:"Стекло и аксессуары"},
+};
 
+
+function removeWineWord(text){
 if(!text) return "";
+return text.replace(/^\s*вино\s+/i,"").trim();
+}
 
-let t = String(text);
 
-t = t.replace(/^\s*вино\s+/i,'');
+function toLatin(str){
+if(!str) return "";
+const map={
+'А':'A','Б':'B','В':'V','Г':'G','Д':'D','Е':'E','Ё':'E','Ж':'Zh','З':'Z','И':'I','Й':'Y','К':'K','Л':'L','М':'M','Н':'N','О':'O','П':'P','Р':'R','С':'S','Т':'T','У':'U','Ф':'F','Х':'Kh','Ц':'Ts','Ч':'Ch','Ш':'Sh','Щ':'Shch','Ъ':'','Ы':'Y','Ь':'','Э':'E','Ю':'Yu','Я':'Ya',
+'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'e','ж':'zh','з':'z','и':'i','й':'y','к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f','х':'kh','ц':'ts','ч':'ch','ш':'sh','щ':'shch','ъ':'','ы':'y','ь':'','э':'e','ю':'yu','я':'ya'
+};
+return String(str).split("").map(ch=>map[ch]??ch).join("").replace(/\s+/g," ").trim();
+}
 
-t = t.replace(/\b(сухое|полусухое|полусладкое|сладкое|брют|extra\s*dry|extra\s*brut)\b/ig,'');
 
-t = t.replace(/\b(белое|красное|розовое)\b/ig,'');
+function titleEN(p){
+const src=(p&&p.title_en)?String(p.title_en).trim():"";
+if(src) return removeWineWord(src);
+return removeWineWord(toLatin(p&&p.title?p.title:""));
+}
 
-t = t.replace(/\s{2,}/g,' ').trim();
 
-return t;
+function normStr(v){
+return(v||"").toString().trim().toLowerCase();
+}
 
+
+function inferGroup(p){
+
+const cat=normStr(p.category);
+
+if(cat.includes("вино")||cat.includes("игрист")) return "wine";
+
+const spirits=["водк","виск","конья","бренд","ром","джин","текил","ликер"];
+
+if(spirits.some(k=>cat.includes(k))) return "spirits";
+
+return "all";
+}
+
+
+function inferColor(p){
+
+const c=(p.color||"").toString().trim();
+if(c) return c;
+
+const name=normStr(p.title||"");
+
+if(name.includes("бел")) return "Белое";
+if(name.includes("красн")) return "Красное";
+if(name.includes("роз")) return "Розовое";
+if(name.includes("игрист")) return "Игристое";
+
+return "";
 }
 
 
 function inferSweetness(item){
 
-const t = (
-(item.title || "") + " " +
-(item.ru || "") + " " +
-(item.en || "")
-).toLowerCase();
+const t=((item.title||"")+" "+(item.ru||"")+" "+(item.en||"")).toLowerCase();
 
 if(/брют|brut/.test(t)) return "Брют";
-
-if(/extra\s*dry|экстра\s*драй/.test(t)) return "Экстра драй";
-
+if(/экстра\s*драй|extra\s*dry/.test(t)) return "Экстра драй";
 if(/полуслад/.test(t)) return "Полусладкое";
-
 if(/полусух/.test(t)) return "Полусухое";
-
 if(/сух/.test(t)) return "Сухое";
-
 if(/sweet/.test(t)) return "Сладкое";
 
 return "";
-
 }
 
 
-function inferColor(item){
+function getWineTraits(item){
 
-const name = (item.title || "").toLowerCase();
+const traits=[];
 
-if(name.includes("бел")) return "Белое";
-
-if(name.includes("красн")) return "Красное";
-
-if(name.includes("роз")) return "Розовое";
-
-if(name.includes("игрист")) return "Игристое";
-
-return "";
-
-}
-
-
-function getTraits(item){
-
-const traits = [];
-
-const color = inferColor(item);
-
-const sweet = inferSweetness(item);
-
+const color=inferColor(item);
 if(color) traits.push(color);
 
+const sweet=inferSweetness(item);
 if(sweet) traits.push(sweet);
 
 return traits;
+}
 
+
+function formatPrice(v){
+
+const n=Number(v);
+if(!Number.isFinite(n)) return "";
+
+return new Intl.NumberFormat("ru-RU").format(n)+" ₽";
 }
 
 
 function escapeHtml(s){
-
-return String(s ?? "")
+return String(s??"")
 .replaceAll("&","&amp;")
 .replaceAll("<","&lt;")
 .replaceAll(">","&gt;")
 .replaceAll('"',"&quot;")
 .replaceAll("'","&#039;");
-
-}
-
-
-function formatPrice(value){
-
-const n = Number(value);
-
-if(!Number.isFinite(n)) return "";
-
-return new Intl.NumberFormat("ru-RU").format(n) + " ₽";
-
 }
 
 
 function buildCard(item){
 
-const href = `/product.html?id=${encodeURIComponent(item.id)}`;
+const href=`/product.html?id=${encodeURIComponent(item.id)}`;
 
-const ruTitle = cleanTitle(item.ru || item.title || "");
+const ruTitle=removeWineWord(item.ru||item.title||"");
+const enTitle=removeWineWord((item.en||item.title_en||"").trim()||titleEN(item));
 
-const enTitle = cleanTitle(item.en || item.title_en || "");
+const titleHtml=ruTitle
+?`${escapeHtml(enTitle)}<br><span class="card__en">${escapeHtml(ruTitle)}</span>`
+:escapeHtml(enTitle);
 
-const titleHtml = ruTitle
-? `${escapeHtml(enTitle)}<br><span class="card__en">${escapeHtml(ruTitle)}</span>`
-: escapeHtml(enTitle);
+const price=formatPrice(item.price_rub??item.price);
 
-const price = formatPrice(item.price_rub ?? item.price);
+const regionLine=[item.region,item.country].filter(Boolean).join(" • ");
 
-const regionLine = [item.region, item.country].filter(Boolean).join(" • ");
+const stockLine=typeof item.stock==="number"
+?`Наличие: ${item.stock}`
+:"";
 
-const stockLine = typeof item.stock === "number"
-? `Наличие: ${item.stock}`
-: "";
+const traits=getWineTraits(item);
 
-const traits = getTraits(item);
+const traitsHtml=traits.length
+?`<div class="pill-row">${traits.map(t=>`<span class="pill">${t}</span>`).join("")}</div>`
+:"";
 
-const traitsHtml = traits.length
-? `<div class="pill-row">${traits.map(t=>`<span class="pill">${t}</span>`).join("")}</div>`
-: "";
 
-return `
+return`
 
 <article class="card product">
 
@@ -153,9 +169,9 @@ return `
 
 <a class="prod-title" href="${href}">${titleHtml}</a>
 
-${regionLine ? `<div class="muted small">${escapeHtml(regionLine)}</div>` : ""}
+${regionLine?`<div class="muted small">${escapeHtml(regionLine)}</div>`:""}
 
-${stockLine ? `<div class="muted small">${escapeHtml(stockLine)}</div>` : ""}
+${stockLine?`<div class="muted small">${escapeHtml(stockLine)}</div>`:""}
 
 </div>
 
@@ -186,12 +202,10 @@ ${traitsHtml}
 
 async function loadData(){
 
-const res = await fetch(`/data/products.json?v=${Date.now()}`);
-
+const res=await fetch(`/data/products.json?v=${Date.now()}`,{cache:"no-store"});
 if(!res.ok) throw new Error("Ошибка загрузки каталога");
 
 return res.json();
-
 }
 
 
@@ -199,9 +213,9 @@ function render(items,total){
 
 if(!elGrid) return;
 
-elGrid.innerHTML = items.map(buildCard).join("");
+elGrid.innerHTML=items.map(buildCard).join("");
 
-if(elMeta) elMeta.textContent = `Показано: ${items.length} из ${total}`;
+if(elMeta) elMeta.textContent=`Показано: ${items.length} из ${total}`;
 
 }
 
@@ -210,9 +224,9 @@ async function main(){
 
 try{
 
-const raw = await loadData();
+const raw=await loadData();
 
-const items = raw.items || [];
+const items=(raw&&raw.items)?raw.items:[];
 
 render(items,items.length);
 
@@ -222,13 +236,18 @@ console.error(e);
 
 if(elGrid){
 
-elGrid.innerHTML = `
+elGrid.innerHTML=`
+
 <div class="card" style="padding:16px">
+
 <div style="font-weight:700;margin-bottom:6px">
 Каталог временно недоступен
 </div>
+
 <div class="muted">${escapeHtml(e?.message)}</div>
+
 </div>
+
 `;
 
 }
