@@ -21,6 +21,11 @@ items.forEach(item=>{
 const card=document.createElement("div");
 card.className="card";
 
+/* карточка кликабельная */
+card.onclick=()=>{
+window.location="/product.html?id="+item.id;
+};
+
 const titleEN=item.title_en || "";
 const titleRU=item.title_ru || item.title || "";
 
@@ -35,11 +40,9 @@ const price=item.price_rub
 
 let tags="";
 
-if(item.color)
+if(item.color){
 tags+=`<span class="tag">${item.color}</span>`;
-
-if(item.category==="Игристое")
-tags+=`<span class="tag">Игристое</span>`;
+}
 
 card.innerHTML=`
 
@@ -51,7 +54,7 @@ card.innerHTML=`
 
 <div class="price">${price}</div>
 
-<div>${tags}</div>
+<div class="tags">${tags}</div>
 
 `;
 
