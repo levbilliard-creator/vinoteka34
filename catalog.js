@@ -93,14 +93,29 @@ function inferColor(p) {
 }
 
 function inferSweetness(item) {
-  const t = ((item.title || "") + " " + (item.ru || "") + " " + (item.en || "")).toLowerCase();
+
+  const t = (
+    (item.title || "") + " " +
+    (item.ru || "") + " " +
+    (item.en || "")
+  ).toLowerCase();
+
   if (/(брют|brut)/.test(t)) return "Брют";
+
+  if (/(экстра\s*брют|extra\s*brut)/.test(t)) return "Экстра брют";
+
   if (/(экстра\s*драй|extra\s*dry)/.test(t)) return "Экстра драй";
+
   if (/(деми\s*сек|demi\s*sec)/.test(t)) return "Деми-сек";
+
   if (/(полусладк|semi\s*sweet)/.test(t)) return "Полусладкое";
+
   if (/(полусух|semi\s*dry)/.test(t)) return "Полусухое";
+
   if (/(сладк|sweet)/.test(t)) return "Сладкое";
+
   if (/(сух|dry)/.test(t)) return "Сухое";
+
   return "";
 }
 
