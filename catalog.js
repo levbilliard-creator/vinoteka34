@@ -5,11 +5,8 @@ if(!title) return "";
 let t = title;
 
 t = t.replace(/вино/gi,"");
-
 t = t.replace(/сухое|полусухое|полусладкое|сладкое/gi,"");
-
 t = t.replace(/белое|красное|розовое/gi,"");
-
 t = t.replace(/брют|экстра драй|экстра брют/gi,"");
 
 t = t.replace(/\s+/g," ").trim();
@@ -17,168 +14,96 @@ t = t.replace(/\s+/g," ").trim();
 return t;
 
 }
-(function(){
 
-/* ---------- CONFIG ---------- */
-
-const DATA_URL = "products.json";
-
-const GROUPS = {
-  wine: "Вино",
-  sparkling: "Игристое",
-  spirits: "Крепкий алкоголь"
-};
-
-/* ---------- HELPERS ---------- */
-
-function q(sel){ return document.querySelector(sel); }
-
-function escapeHtml(str){
-  if(!str) return "";
-  return String(str)
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;");
-}
-
-function formatPrice(n){
-  if(!n) return "";
-  return Number(n).toLocaleString("ru-RU") + " ₽";
-}
-
-/* ---------- CARD ---------- */
-
-function buildTags(item){
-
-  let tags=[];
-
-  if(item.color) tags.push(item.color);
-
-  if(item.category==="Игристое") tags.push("Игристое");
-
-  return tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join("");
-
-}
-
-function buildCard(item){
-
-  const titleEN = escapeHtml(item.title_en || "");
-  const titleRU = escapeHtml(item.title_ru || "");
-
-  const country = escapeHtml(item.country || "");
-  const region = escapeHtml(item.region || "");
-
-  const meta = [country,region].filter(Boolean).join(" • ");
-
-  const price = formatPrice(item.price_rub);
-
-  const tags = buildTags(item);
-
-  return `
-
-  <div class="card">
-
-      <div class="card-header">
-
-          <div class="title-en">${titleEN}</div>
-
-          <div class="title-ru">${titleRU}</div>
-
-      </div>
-
-      <div class="meta">${meta}</div>
-
-      <div class="tags">${tags}</div>
-
-      <div class="card-bottom">
-
-          <div class="price">${price}</div>
-
-          <button class="open-btn">Открыть</button>
-
-      </div>
-
-  </div>
-
-  `;
-}
-
-/* ---------- FILTER ---------- */
-
-function applyGroupFilter(items){
-
-  const params = new URLSearchParams(location.search);
-
-  const group = params.get("group");
-
-  if(!group) return items;
-
-  if(!GROUPS[group]) return items;
-
-  const category = GROUPS[group];
-
-  return items.filter(p => p.category === category);
-
-}
-
-/* ---------- RENDER ---------- */
-
-function render(items){
-
-  const grid = q("#catalog");
-
-  if(!grid) return;
-
-  grid.innerHTML="";
-
-  if(!items.length){
-
-    grid.innerHTML=`<div class="card">Каталог пуст</div>`;
-    return;
-
-  }
-
-  const html = items.map(buildCard).join("");
-
-  grid.innerHTML = html;
-
-}
-
-/* ---------- LOAD ---------- */
 
 async function loadCatalog(){
 
-  try{
+const response = await fetch("products.json");
+const data = await response.json();
 
-    const res = await fetch(DATA_URL);
+let items = data.items;
 
-    const data = await res.json();
+const grid = document.getElementById("catalog");
 
-    let items = data.items || [];
+grid.innerHTML="";
 
-    items = applyGroupFilter(items);
 
-    render(items);
+const params = new URLSearchParams(window.location.search);
+const group = params.get("group");
 
-  }
 
-  catch(e){
+if(group){
 
-    console.error(e);
+items = items.filter(item => {
 
-    const grid = q("#catalog");
+if(group==="wine") return item.category==="Вино";
 
-    if(grid){
-      grid.innerHTML =
-        `<div class="card">Ошибка загрузки каталога</div>`;
-    }
+if(group==="sparkling") return item.category==="Игристое";
 
-  }
+if(group==="spirits") return item.category==="Крепкий алкоголь";
+
+return true;
+
+});
 
 }
 
-/* ---------- START ---------- */
 
-document.addEventListener("DOMContentLoaded", loadCatalog);
+items.forEach(item=>{
 
-})();
+const card=document.createElement("div");
+card.className="card";
+
+
+const titleRU = cleanWineTitle(item.title_ru || item.title || "");
+const titleEN = item.title_en || "";
+
+
+let tags="";
+
+if(item.color)
+tags+=`<span class="tag">${item.color}</span>`;
+
+if(item.category==="Игристое")
+tags+=`<span class="tag">Игристое</span>`;
+
+
+card.innerHTML=`
+
+<div class="title-en">
+${titleEN}
+</div>
+
+<div class="title-ru">
+${titleRU}
+</div>
+
+<div class="meta">
+${item.country ?? ""} ${item.region ? "• "+item.region : ""}
+</div>
+
+<div class="bottom">
+
+<div class="price">
+${Number(item.price_rub).toLocaleString()} ₽
+</div>
+
+<button class="open-btn">
+Открыть
+</button>
+
+</div>
+
+<div class="tags">
+${tags}
+</div>
+
+`;
+
+grid.appendChild(card);
+
+});
+
+}
+
+loadCatalog();
