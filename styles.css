@@ -42,7 +42,18 @@ h2{margin:0 0 14px;font-size:28px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .card{border:1px solid var(--line);background:#ffffff06;border-radius:18px;padding:16px}
 .card__t{font-weight:800;margin-bottom:8px}
-.card__en{margin-top:-6px;margin-bottom:8px;opacity:.7;font-size:13px;line-height:1.2}
+.card__en{display:block;margin-top:6px;margin-bottom:8px;opacity:.7;font-size:13px;line-height:1.25;
+  overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+
+/* --- Product card layout (catalog) --- */
+.card.product{padding:18px;border-radius:22px}
+.prod-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.prod-title-wrap{flex:1;min-width:0}
+.prod-title{display:block;font-weight:700;line-height:1.15;text-decoration:underline;text-underline-offset:3px;
+  overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.prod-pills{display:flex;flex-direction:column;gap:10px;align-items:flex-end;flex-shrink:0}
+.prod-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:16px}
+.prod-foot > div{min-width:0}
 .muted{color:var(--muted)}
 .contact{display:grid;grid-template-columns:1fr .9fr;gap:14px;align-items:start}
 .line{margin:10px 0;color:var(--muted)}
