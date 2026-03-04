@@ -11,18 +11,13 @@ const elGrid = $("grid");
 const GROUPS = {
 all:{title:"Каталог"},
 wine:{title:"Вино"},
-spirits:{title:"Крепкие напитки"},
+spirits:{title:"Крепкие напитки"}
 };
 
 /* ---------------- HELPERS ---------------- */
 
 function norm(v){
 return (v||"").toString().toLowerCase().trim();
-}
-
-function removeWineWord(text){
-if(!text) return "";
-return text.replace(/^\s*вино\s+/i,"").trim();
 }
 
 function escapeHtml(s){
@@ -41,6 +36,26 @@ const n=Number(v);
 if(!Number.isFinite(n)) return "";
 
 return new Intl.NumberFormat("ru-RU").format(n)+" ₽";
+
+}
+
+/* ---------------- TITLE CLEANER ---------------- */
+
+function cleanTitle(text){
+
+if(!text) return "";
+
+let t=text;
+
+t=t.replace(/^вино\s+/i,"");
+
+t=t.replace(/\b(сухое|полусухое|полусладкое|сладкое|брют|экстра драй|экстра брют)\b/ig,"");
+
+t=t.replace(/\b(белое|красное|розовое|игристое)\b/ig,"");
+
+t=t.replace(/\s{2,}/g," ").trim();
+
+return t;
 
 }
 
@@ -67,6 +82,7 @@ return "all";
 function inferColor(p){
 
 const c=(p.color||"").trim();
+
 if(c) return c;
 
 const t=norm(p.title);
@@ -77,6 +93,7 @@ if(t.includes("роз")) return "Розовое";
 if(t.includes("игрист")) return "Игристое";
 
 return "";
+
 }
 
 function inferSweetness(p){
@@ -88,7 +105,6 @@ if(t.includes("экстра драй")) return "Экстра драй";
 if(t.includes("полусух")) return "Полусухое";
 if(t.includes("полуслад")) return "Полусладкое";
 if(t.includes("сух")) return "Сухое";
-if(t.includes("sweet")) return "Сладкое";
 
 return "";
 
@@ -112,11 +128,17 @@ return traits;
 
 function buildCard(item){
 
-const href=`/product.html?id=${item.id}`;
+const href=`/product.html?id=${encodeURIComponent(item.id)}`;
 
-const ruTitle=removeWineWord(item.title);
+const ruTitle=cleanTitle(item.title||"");
 
-const price=formatPrice(item.price_rub);
+const enTitle=(item.title_en||item.en||"").trim();
+
+const titleHtml=enTitle
+?`${escapeHtml(enTitle)}<br><span class="card__en">${escapeHtml(ruTitle)}</span>`
+:escapeHtml(ruTitle);
+
+const price=formatPrice(item.price_rub??item.price);
 
 const region=[item.region,item.country].filter(Boolean).join(" • ");
 
@@ -127,7 +149,7 @@ const stock=item.stock!=null
 const traits=getWineTraits(item);
 
 const traitsHtml=traits.length
-?`<div class="pill-row">${traits.map(t=>`<span class="pill">${t}</span>`).join("")}</div>`
+?`<div class="pill-row">${traits.map(t=>`<span class="pill">${escapeHtml(t)}</span>`).join("")}</div>`
 :"";
 
 return `
@@ -139,7 +161,7 @@ return `
 <div class="prod-title-wrap">
 
 <a class="prod-title" href="${href}">
-${escapeHtml(ruTitle)}
+${titleHtml}
 </a>
 
 ${region?`<div class="muted small">${escapeHtml(region)}</div>`:""}
@@ -210,9 +232,8 @@ const raw=await loadData();
 
 let items=(raw && raw.items)?raw.items:[];
 
-/* GROUP FILTER */
-
 const params=new URLSearchParams(location.search);
+
 const group=params.get("group");
 
 if(group){
@@ -221,12 +242,11 @@ items=items.filter(p=>inferGroup(p)===group);
 
 }
 
-/* TITLE */
+if(group && GROUPS[group]){
 
-if(group && GROUPS[group])
 document.title="ВИНОТЕКА — "+GROUPS[group].title;
 
-/* RENDER */
+}
 
 render(items,items.length);
 
