@@ -1,275 +1,184 @@
-(() => {
+function cleanWineTitle(title){
 
-const $ = (id) => document.getElementById(id);
+if(!title) return "";
 
-const elTitle = $("pageTitle");
-const elMeta = $("meta");
-const elGrid = $("grid");
+let t = title;
 
-/* ---------------- GROUPS ---------------- */
+t = t.replace(/вино/gi,"");
 
-const GROUPS = {
-all:{title:"Каталог"},
-wine:{title:"Вино"},
-spirits:{title:"Крепкие напитки"}
-};
+t = t.replace(/сухое|полусухое|полусладкое|сладкое/gi,"");
 
-/* ---------------- HELPERS ---------------- */
+t = t.replace(/белое|красное|розовое/gi,"");
 
-function norm(v){
-return (v||"").toString().toLowerCase().trim();
-}
+t = t.replace(/брют|экстра драй|экстра брют/gi,"");
 
-function escapeHtml(s){
-return String(s??"")
-.replaceAll("&","&amp;")
-.replaceAll("<","&lt;")
-.replaceAll(">","&gt;")
-.replaceAll('"',"&quot;")
-.replaceAll("'","&#039;");
-}
-
-function formatPrice(v){
-
-const n=Number(v);
-
-if(!Number.isFinite(n)) return "";
-
-return new Intl.NumberFormat("ru-RU").format(n)+" ₽";
-
-}
-
-/* ---------------- TITLE CLEANER ---------------- */
-
-function cleanTitle(text){
-
-if(!text) return "";
-
-let t=text;
-
-t=t.replace(/^вино\s+/i,"");
-
-t=t.replace(/\b(сухое|полусухое|полусладкое|сладкое|брют|экстра драй|экстра брют)\b/ig,"");
-
-t=t.replace(/\b(белое|красное|розовое|игристое)\b/ig,"");
-
-t=t.replace(/\s{2,}/g," ").trim();
+t = t.replace(/\s+/g," ").trim();
 
 return t;
 
 }
+(function(){
 
-/* ---------------- GROUP DETECTION ---------------- */
+/* ---------- CONFIG ---------- */
 
-function inferGroup(p){
+const DATA_URL = "products.json";
 
-const cat=norm(p.category);
+const GROUPS = {
+  wine: "Вино",
+  sparkling: "Игристое",
+  spirits: "Крепкий алкоголь"
+};
 
-if(cat.includes("вино")||cat.includes("игрист"))
-return "wine";
+/* ---------- HELPERS ---------- */
 
-const spirits=["водк","виск","конья","бренд","ром","джин","текил"];
+function q(sel){ return document.querySelector(sel); }
 
-if(spirits.some(k=>cat.includes(k)))
-return "spirits";
-
-return "all";
-
+function escapeHtml(str){
+  if(!str) return "";
+  return String(str)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;");
 }
 
-/* ---------------- WINE TRAITS ---------------- */
-
-function inferColor(p){
-
-const c=(p.color||"").trim();
-
-if(c) return c;
-
-const t=norm(p.title);
-
-if(t.includes("бел")) return "Белое";
-if(t.includes("красн")) return "Красное";
-if(t.includes("роз")) return "Розовое";
-if(t.includes("игрист")) return "Игристое";
-
-return "";
-
+function formatPrice(n){
+  if(!n) return "";
+  return Number(n).toLocaleString("ru-RU") + " ₽";
 }
 
-function inferSweetness(p){
+/* ---------- CARD ---------- */
 
-const t=norm(p.title+" "+p.full_name);
+function buildTags(item){
 
-if(t.includes("брют")) return "Брют";
-if(t.includes("экстра драй")) return "Экстра драй";
-if(t.includes("полусух")) return "Полусухое";
-if(t.includes("полуслад")) return "Полусладкое";
-if(t.includes("сух")) return "Сухое";
+  let tags=[];
 
-return "";
+  if(item.color) tags.push(item.color);
 
-}
+  if(item.category==="Игристое") tags.push("Игристое");
 
-function getWineTraits(p){
-
-const traits=[];
-
-const color=inferColor(p);
-if(color) traits.push(color);
-
-const sweet=inferSweetness(p);
-if(sweet) traits.push(sweet);
-
-return traits;
+  return tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join("");
 
 }
-
-/* ---------------- CARD ---------------- */
 
 function buildCard(item){
 
-const href=`/product.html?id=${encodeURIComponent(item.id)}`;
+  const titleEN = escapeHtml(item.title_en || "");
+  const titleRU = escapeHtml(item.title_ru || "");
 
-const ruTitle=cleanTitle(item.title||"");
+  const country = escapeHtml(item.country || "");
+  const region = escapeHtml(item.region || "");
 
-const enTitle=(item.title_en||item.en||"").trim();
+  const meta = [country,region].filter(Boolean).join(" • ");
 
-const titleHtml=enTitle
-?`${escapeHtml(enTitle)}<br><span class="card__en">${escapeHtml(ruTitle)}</span>`
-:escapeHtml(ruTitle);
+  const price = formatPrice(item.price_rub);
 
-const price=formatPrice(item.price_rub??item.price);
+  const tags = buildTags(item);
 
-const region=[item.region,item.country].filter(Boolean).join(" • ");
+  return `
 
-const stock=item.stock!=null
-?`Наличие: ${item.stock}`
-:"";
+  <div class="card">
 
-const traits=getWineTraits(item);
+      <div class="card-header">
 
-const traitsHtml=traits.length
-?`<div class="pill-row">${traits.map(t=>`<span class="pill">${escapeHtml(t)}</span>`).join("")}</div>`
-:"";
+          <div class="title-en">${titleEN}</div>
 
-return `
+          <div class="title-ru">${titleRU}</div>
 
-<article class="card product">
+      </div>
 
-<div class="prod-head">
+      <div class="meta">${meta}</div>
 
-<div class="prod-title-wrap">
+      <div class="tags">${tags}</div>
 
-<a class="prod-title" href="${href}">
-${titleHtml}
-</a>
+      <div class="card-bottom">
 
-${region?`<div class="muted small">${escapeHtml(region)}</div>`:""}
+          <div class="price">${price}</div>
 
-${stock?`<div class="muted small">${stock}</div>`:""}
+          <button class="open-btn">Открыть</button>
 
-</div>
+      </div>
 
-<div class="prod-right">
+  </div>
 
-<div class="prod-price">${price}</div>
+  `;
+}
 
-<div class="prod-price-note">Цена на сайте</div>
+/* ---------- FILTER ---------- */
 
-<a class="btn btn-open" href="${href}">
-Открыть
-</a>
+function applyGroupFilter(items){
 
-</div>
+  const params = new URLSearchParams(location.search);
 
-</div>
+  const group = params.get("group");
 
-<div class="prod-foot">
+  if(!group) return items;
 
-${traitsHtml}
+  if(!GROUPS[group]) return items;
 
-</div>
+  const category = GROUPS[group];
 
-</article>
-
-`;
+  return items.filter(p => p.category === category);
 
 }
 
-/* ---------------- DATA ---------------- */
+/* ---------- RENDER ---------- */
 
-async function loadData(){
+function render(items){
 
-const res=await fetch("/data/products.json?v="+Date.now(),{cache:"no-store"});
+  const grid = q("#catalog");
 
-if(!res.ok)
-throw new Error("Ошибка загрузки каталога");
+  if(!grid) return;
 
-return res.json();
+  grid.innerHTML="";
 
-}
+  if(!items.length){
 
-/* ---------------- RENDER ---------------- */
+    grid.innerHTML=`<div class="card">Каталог пуст</div>`;
+    return;
 
-function render(items,total){
+  }
 
-if(!elGrid) return;
+  const html = items.map(buildCard).join("");
 
-elGrid.innerHTML=items.map(buildCard).join("");
-
-if(elMeta)
-elMeta.textContent=`Показано: ${items.length} из ${total}`;
+  grid.innerHTML = html;
 
 }
 
-/* ---------------- MAIN ---------------- */
+/* ---------- LOAD ---------- */
 
-async function main(){
+async function loadCatalog(){
 
-try{
+  try{
 
-const raw=await loadData();
+    const res = await fetch(DATA_URL);
 
-let items=(raw && raw.items)?raw.items:[];
+    const data = await res.json();
 
-const params=new URLSearchParams(location.search);
+    let items = data.items || [];
 
-const group=params.get("group");
+    items = applyGroupFilter(items);
 
-if(group){
+    render(items);
 
-items=items.filter(p=>inferGroup(p)===group);
+  }
 
-}
+  catch(e){
 
-if(group && GROUPS[group]){
+    console.error(e);
 
-document.title="ВИНОТЕКА — "+GROUPS[group].title;
+    const grid = q("#catalog");
 
-}
+    if(grid){
+      grid.innerHTML =
+        `<div class="card">Ошибка загрузки каталога</div>`;
+    }
 
-render(items,items.length);
-
-}catch(e){
-
-console.error(e);
-
-elGrid.innerHTML=`
-
-<div class="card" style="padding:20px">
-
-<b>Каталог временно недоступен</b>
-
-<div>${escapeHtml(e.message)}</div>
-
-</div>
-
-`;
+  }
 
 }
 
-}
+/* ---------- START ---------- */
 
-main();
+document.addEventListener("DOMContentLoaded", loadCatalog);
 
 })();
