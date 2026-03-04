@@ -2,7 +2,7 @@ async function loadCatalog(){
 
 try{
 
-const res = await fetch("products.json");
+const res = await fetch("/data/products.json");
 const data = await res.json();
 
 const grid = document.getElementById("catalog");
