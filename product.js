@@ -185,16 +185,17 @@ function buildCard(p){
   const titleEn = titleEnRaw ? titleEnRaw : ((group === "wine" || group === "spirits") ? translitToLatin(title) : "");
 
   document.title = `${title || 'Товар'} — ВИНОТЕКА`;
-  document.getElementById('pTitle').textContent = title || 'Товар';
-  const pTitleEnEl = document.getElementById('pTitleEn');
-  if (pTitleEnEl) {
-    if (titleEn && titleEn !== title) {
-      pTitleEnEl.textContent = titleEn;
-      pTitleEnEl.style.display = '';
-    } else {
-      pTitleEnEl.textContent = '';
-      pTitleEnEl.style.display = 'none';
-    }
+
+  const pTitleEnEl = document.getElementById('pTitleEn'); // верхняя строка
+  const pTitleRuEl = document.getElementById('pTitle');   // нижняя строка (русская)
+
+  if (titleEn && titleEn !== title) {
+    if (pTitleEnEl) pTitleEnEl.textContent = titleEn;
+    if (pTitleRuEl) { pTitleRuEl.textContent = title || ''; pTitleRuEl.style.display = ''; }
+  } else {
+    // если англ. варианта нет — показываем только русское (вверху)
+    if (pTitleEnEl) pTitleEnEl.textContent = title || 'Товар';
+    if (pTitleRuEl) { pTitleRuEl.textContent = ''; pTitleRuEl.style.display = 'none'; }
   }
   document.getElementById('crumbTitle').textContent = title || 'Товар';
 
