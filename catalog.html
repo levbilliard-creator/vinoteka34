@@ -1,110 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Каталог — ВИНОТЕКА на Карамышевской</title>
-  <meta name="description" content="Каталог вин и напитков. Поиск, фильтры по категории, стране и цене. Цены на сайте. Спросить сомелье в Telegram."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Винотека — Каталог</title>
+
+<link rel="stylesheet" href="/styles.css">
+
+<style>
+
+.catalog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.card{
+background:#111;
+border:1px solid #2a2a2a;
+border-radius:12px;
+padding:20px;
+color:white;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.title-en{
+font-weight:700;
+font-size:16px;
+}
+
+.title-ru{
+opacity:0.7;
+font-size:14px;
+}
+
+.meta{
+opacity:0.6;
+font-size:13px;
+}
+
+.price{
+font-size:22px;
+font-weight:700;
+margin-top:10px;
+}
+
+.open-btn{
+margin-top:10px;
+padding:8px 14px;
+border-radius:8px;
+border:1px solid #444;
+background:#1b1b1b;
+color:white;
+cursor:pointer;
+}
+
+.tags{
+margin-top:10px;
+display:flex;
+gap:6px;
+flex-wrap:wrap;
+}
+
+.tag{
+font-size:12px;
+padding:4px 8px;
+border-radius:20px;
+border:1px solid #444;
+}
+
+</style>
+
 </head>
+
 <body>
+
 <header class="top">
-  <div class="wrap top__inner">
-    <a class="logo" href="/">ВИНОТЕКА</a>
-    <button class="navbtn" id="navbtn" type="button" aria-label="Меню">☰</button>
-    <nav class="nav" id="nav">
-      <a href="/">Главная</a>
-      <a class="is-on" href="/catalog.html">Каталог</a>
-      <a href="/#tastings">Дегустации</a>
-      <a href="/#contacts">Контакты</a>
-    </nav>
-    <div class="top__actions">
-      <a class="btn btn--ghost btn--phone" href="tel:+74959471010" aria-label="Позвонить"><span class="btn__icon">☎</span><span class="btn__text">+7 495 947-10-10</span></a>
-      <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Telegram</a>
-    </div>
-  </div>
+
+<div class="container">
+
+<h1>ВИНОТЕКА</h1>
+
+</div>
+
 </header>
 
+
 <main class="section">
-  <div class="wrap">
-    <div class="headrow">
-      <div>
-        <h1 class="h1" id="catalogTitle">Каталог</h1>
-        <div class="muted">Цены на сайте • Откройте карточку товара кликом по названию</div>
-      </div>
-      <a class="btn btn--tg" href="https://t.me/vinotekakaram" target="_blank" rel="noopener">Сомелье онлайн</a>
-    </div>
 
-    <details class="filtersPanel" id="filtersPanel" open>
-  <summary>Фильтры и поиск</summary>
-  <div class="filtersPanel__inner">
-<div class="filters">
-      <div class="field">
-        <label>Поиск</label>
-        <input id="q" type="search" placeholder="Название / регион / артикул..." autocomplete="off">
-      </div>
-      <div class="field">
-        <label>Категория</label>
-        <select id="cat"><option value="">Все</option></select>
-      </div>
-      <div class="field">
-        <label>Цвет (для вина)</label>
-        <select id="color">
-          <option value="">Любой</option>
-          <option>Красное</option>
-          <option>Белое</option>
-          <option>Розовое</option>
-          <option>Игристое</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Страна</label>
-        <select id="country"><option value="">Любая</option></select>
-      </div>
-      <div class="field">
-        <label>Цена, ₽</label>
-        <div class="row">
-          <input id="minP" inputmode="numeric" placeholder="от">
-          <input id="maxP" inputmode="numeric" placeholder="до">
-        </div>
-      </div>
-      <div class="field">
-        <label>Сортировка</label>
-        <select id="sort">
-          <option value="popular">По умолчанию</option>
-          <option value="price_asc">Цена ↑</option>
-          <option value="price_desc">Цена ↓</option>
-          <option value="name_asc">Название A→Я</option>
-        </select>
-      </div>
-      <div class="field actions">
-        <label>&nbsp;</label>
-        <button class="btn btn--ghost" id="reset" type="button">Сбросить</button>
-      </div>
-    </div>
-  </div>
-</details>
-<div class="meta id="meta"></div>
-    <div class="grid" id="grid"></div>
+<div class="container">
 
-    <div class="note" style="margin-top:18px">18+. Алкоголь. Пожалуйста, подтверждайте возраст.</div>
-  </div>
+<h1>Каталог</h1>
+
+<p>
+Цены на сайте • Откройте карточку товара кликом по названию
+</p>
+
+<div id="catalog" class="catalog-grid"></div>
+
+</div>
+
 </main>
 
-<a class="fab" href="https://t.me/vinotekakaram" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+
 <script src="/catalog.js"></script>
-<script>
-(function(){
-  const b=document.getElementById('navbtn');
-  if(!b) return;
-  b.addEventListener('click', ()=>document.body.classList.toggle('nav-open'));
-  const nav=document.getElementById('nav');
-  nav && nav.addEventListener('click', (e)=>{ if(e.target && e.target.tagName==='A') document.body.classList.remove('nav-open'); });
-})();
-</script>
+
 </body>
+
 </html>
