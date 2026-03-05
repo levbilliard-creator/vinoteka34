@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Каталог</title>
+<title>Каталог вин</title>
 
 <link rel="stylesheet" href="styles.css">
 
 </head>
 
+
 <body>
+
 
 <header class="header">
 
@@ -24,7 +27,6 @@
 <nav class="nav">
 
 <a href="index.html">Главная</a>
-<a href="#">Бутик</a>
 <a href="#">Клуб</a>
 <a href="#">Сомелье</a>
 <a href="catalog.html">Каталог</a>
@@ -37,47 +39,65 @@
 </header>
 
 
-<main>
 
-<section class="section">
+<section class="catalog">
 
 <div class="container">
 
-<h1>Каталог вин</h1>
+<h1 class="catalog-title">
+Каталог вин
+</h1>
 
-<div class="catalog-grid">
 
-<div class="wine-card">
-<img src="assets/img/wine1.jpg">
-<h3>Desquiciado Syrah</h3>
-<div class="wine-meta">Аргентина</div>
-<div class="wine-price">2400 ₽</div>
-<button class="btn">Спросить сомелье</button>
+
+<div class="filters">
+
+<select id="countryFilter">
+
+<option value="">Все страны</option>
+<option value="France">Франция</option>
+<option value="Italy">Италия</option>
+<option value="Argentina">Аргентина</option>
+<option value="Spain">Испания</option>
+
+</select>
+
+
+
+<select id="typeFilter">
+
+<option value="">Тип вина</option>
+<option value="red">Красное</option>
+<option value="white">Белое</option>
+<option value="sparkling">Игристое</option>
+
+</select>
+
+
+
+<select id="sortPrice">
+
+<option value="">Цена</option>
+<option value="asc">Дешевле</option>
+<option value="desc">Дороже</option>
+
+</select>
+
 </div>
 
-<div class="wine-card">
-<img src="assets/img/wine2.jpg">
-<h3>Chianti Classico</h3>
-<div class="wine-meta">Италия</div>
-<div class="wine-price">2500 ₽</div>
-<button class="btn">Спросить сомелье</button>
-</div>
 
-<div class="wine-card">
-<img src="assets/img/wine3.jpg">
-<h3>Riesling Mosel</h3>
-<div class="wine-meta">Германия</div>
-<div class="wine-price">2300 ₽</div>
-<button class="btn">Спросить сомелье</button>
-</div>
 
-</div>
+<div id="wineGrid" class="wine-grid"></div>
+
 
 </div>
 
 </section>
 
-</main>
+
+
+<script src="products.js"></script>
+<script src="catalog.js"></script>
 
 </body>
 </html>
