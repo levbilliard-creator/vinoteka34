@@ -9,6 +9,28 @@
 
 <link rel="stylesheet" href="styles.css">
 
+<style>
+
+.catalog-controls{
+display:flex;
+gap:20px;
+margin:30px 0;
+flex-wrap:wrap;
+}
+
+.catalog-controls input,
+.catalog-controls select{
+
+padding:10px 12px;
+border-radius:6px;
+border:1px solid #333;
+background:#14181f;
+color:white;
+
+}
+
+</style>
+
 </head>
 
 <body>
@@ -45,123 +67,174 @@
 
 <h1>Каталог вин</h1>
 
-<div class="catalog-grid">
 
-<!-- 1 -->
-<div class="wine-card">
-<img src="assets/img/wine1.jpg">
-<h3>Chateau Bordeaux</h3>
-<div class="wine-meta">Франция • Красное • Сухое</div>
-<div class="wine-price">2900 ₽</div>
-<button class="btn">Открыть</button>
-</div>
+<div class="catalog-controls">
 
-<!-- 2 -->
-<div class="wine-card">
-<img src="assets/img/wine2.jpg">
-<h3>Chianti Classico</h3>
-<div class="wine-meta">Италия • Красное • Сухое</div>
-<div class="wine-price">2500 ₽</div>
-<button class="btn">Открыть</button>
-</div>
+<input
+id="search"
+placeholder="Поиск вина..."
+>
 
-<!-- 3 -->
-<div class="wine-card">
-<img src="assets/img/wine3.jpg">
-<h3>Riesling Mosel</h3>
-<div class="wine-meta">Германия • Белое • Сухое</div>
-<div class="wine-price">2300 ₽</div>
-<button class="btn">Открыть</button>
-</div>
+<select id="filter">
 
-<!-- 4 -->
-<div class="wine-card">
-<img src="assets/img/wine4.jpg">
-<h3>Pinot Noir</h3>
-<div class="wine-meta">Франция • Красное</div>
-<div class="wine-price">3100 ₽</div>
-<button class="btn">Открыть</button>
-</div>
+<option value="all">Все</option>
+<option value="red">Красное</option>
+<option value="white">Белое</option>
+<option value="sparkling">Игристое</option>
 
-<!-- 5 -->
-<div class="wine-card">
-<img src="assets/img/wine5.jpg">
-<h3>Sauvignon Blanc</h3>
-<div class="wine-meta">Новая Зеландия • Белое</div>
-<div class="wine-price">2700 ₽</div>
-<button class="btn">Открыть</button>
-</div>
+</select>
 
-<!-- 6 -->
-<div class="wine-card">
-<img src="assets/img/wine6.jpg">
-<h3>Rioja Reserva</h3>
-<div class="wine-meta">Испания • Красное</div>
-<div class="wine-price">2600 ₽</div>
-<button class="btn">Открыть</button>
-</div>
+<select id="sort">
 
-<!-- 7 -->
-<div class="wine-card">
-<img src="assets/img/wine7.jpg">
-<h3>Prosecco DOC</h3>
-<div class="wine-meta">Италия • Игристое</div>
-<div class="wine-price">2100 ₽</div>
-<button class="btn">Открыть</button>
-</div>
+<option value="default">Сортировка</option>
+<option value="price_low">Цена ↑</option>
+<option value="price_high">Цена ↓</option>
 
-<!-- 8 -->
-<div class="wine-card">
-<img src="assets/img/wine8.jpg">
-<h3>Malbec Mendoza</h3>
-<div class="wine-meta">Аргентина • Красное</div>
-<div class="wine-price">2400 ₽</div>
-<button class="btn">Открыть</button>
-</div>
-
-<!-- 9 -->
-<div class="wine-card">
-<img src="assets/img/wine9.jpg">
-<h3>Chardonnay</h3>
-<div class="wine-meta">Франция • Белое</div>
-<div class="wine-price">2800 ₽</div>
-<button class="btn">Открыть</button>
-</div>
-
-<!-- 10 -->
-<div class="wine-card">
-<img src="assets/img/wine10.jpg">
-<h3>Barolo</h3>
-<div class="wine-meta">Италия • Красное</div>
-<div class="wine-price">4900 ₽</div>
-<button class="btn">Открыть</button>
-</div>
-
-<!-- 11 -->
-<div class="wine-card">
-<img src="assets/img/wine11.jpg">
-<h3>Gewürztraminer</h3>
-<div class="wine-meta">Германия • Белое</div>
-<div class="wine-price">2300 ₽</div>
-<button class="btn">Открыть</button>
-</div>
-
-<!-- 12 -->
-<div class="wine-card">
-<img src="assets/img/wine12.jpg">
-<h3>Champagne Brut</h3>
-<div class="wine-meta">Франция • Игристое</div>
-<div class="wine-price">5900 ₽</div>
-<button class="btn">Открыть</button>
-</div>
+</select>
 
 </div>
+
+
+<div
+id="catalog"
+class="catalog-grid"
+></div>
 
 </div>
 
 </section>
 
 </main>
+
+
+<script>
+
+const wines = [
+
+{ name:"Chateau Bordeaux", type:"red", country:"Франция", price:2900, img:"assets/img/wine1.jpg" },
+
+{ name:"Chianti Classico", type:"red", country:"Италия", price:2500, img:"assets/img/wine2.jpg" },
+
+{ name:"Riesling Mosel", type:"white", country:"Германия", price:2300, img:"assets/img/wine3.jpg" },
+
+{ name:"Pinot Noir", type:"red", country:"Франция", price:3100, img:"assets/img/wine4.jpg" },
+
+{ name:"Sauvignon Blanc", type:"white", country:"Новая Зеландия", price:2700, img:"assets/img/wine5.jpg" },
+
+{ name:"Rioja Reserva", type:"red", country:"Испания", price:2600, img:"assets/img/wine6.jpg" },
+
+{ name:"Prosecco DOC", type:"sparkling", country:"Италия", price:2100, img:"assets/img/wine7.jpg" },
+
+{ name:"Malbec Mendoza", type:"red", country:"Аргентина", price:2400, img:"assets/img/wine8.jpg" },
+
+{ name:"Chardonnay", type:"white", country:"Франция", price:2800, img:"assets/img/wine9.jpg" },
+
+{ name:"Barolo", type:"red", country:"Италия", price:4900, img:"assets/img/wine10.jpg" },
+
+{ name:"Gewürztraminer", type:"white", country:"Германия", price:2300, img:"assets/img/wine11.jpg" },
+
+{ name:"Champagne Brut", type:"sparkling", country:"Франция", price:5900, img:"assets/img/wine12.jpg" }
+
+]
+
+
+const catalog = document.getElementById("catalog")
+const search = document.getElementById("search")
+const filter = document.getElementById("filter")
+const sort = document.getElementById("sort")
+
+
+function render(list){
+
+catalog.innerHTML = ""
+
+list.forEach(wine=>{
+
+catalog.innerHTML += `
+
+<div class="wine-card">
+
+<img src="${wine.img}">
+
+<h3>${wine.name}</h3>
+
+<div class="wine-meta">
+${wine.country}
+</div>
+
+<div class="wine-price">
+${wine.price} ₽
+</div>
+
+<button class="btn">
+Спросить сомелье
+</button>
+
+</div>
+
+`
+
+})
+
+}
+
+
+function update(){
+
+let list = [...wines]
+
+
+const text = search.value.toLowerCase()
+
+if(text){
+
+list = list.filter(w =>
+w.name.toLowerCase().includes(text)
+)
+
+}
+
+
+const type = filter.value
+
+if(type !== "all"){
+
+list = list.filter(w =>
+w.type === type
+)
+
+}
+
+
+const sortValue = sort.value
+
+if(sortValue === "price_low"){
+
+list.sort((a,b)=>a.price-b.price)
+
+}
+
+if(sortValue === "price_high"){
+
+list.sort((a,b)=>b.price-a.price)
+
+}
+
+
+render(list)
+
+}
+
+
+search.oninput = update
+filter.onchange = update
+sort.onchange = update
+
+
+render(wines)
+
+</script>
+
 
 </body>
 </html>
