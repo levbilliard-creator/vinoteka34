@@ -5,22 +5,16 @@ padding:0;
 }
 
 body{
-font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+font-family:Inter,system-ui,Arial;
 background:#0b0d10;
-color:#ffffff;
-line-height:1.6;
+color:#fff;
 }
-
-/* контейнер */
 
 .container{
 max-width:1200px;
 margin:0 auto;
-padding:0 24px;
-width:100%;
+padding:0 20px;
 }
-
-/* header */
 
 .header{
 border-bottom:1px solid #1f232b;
@@ -31,7 +25,6 @@ padding:20px 0;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:30px;
 }
 
 .logo{
@@ -47,33 +40,11 @@ gap:20px;
 .nav a{
 color:#d1d5db;
 text-decoration:none;
-font-size:15px;
 }
 
 .nav a:hover{
 color:#fff;
 }
-
-.contacts{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.phone{
-font-size:14px;
-}
-
-.telegram{
-border:1px solid #3a3f45;
-padding:6px 10px;
-border-radius:6px;
-text-decoration:none;
-color:#fff;
-font-size:14px;
-}
-
-/* hero */
 
 .hero{
 padding:120px 0;
@@ -82,14 +53,8 @@ padding:120px 0;
 .hero-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:70px;
+gap:60px;
 align-items:center;
-}
-
-.hero-meta{
-color:#9ca3af;
-font-size:13px;
-margin-bottom:12px;
 }
 
 .hero h1{
@@ -99,45 +64,7 @@ margin-bottom:20px;
 
 .hero p{
 color:#9ca3af;
-margin-bottom:25px;
-max-width:520px;
-}
-
-.hero-buttons{
-display:flex;
-gap:12px;
-margin-bottom:15px;
-}
-
-.btn{
-background:#ffffff;
-color:#000;
-padding:10px 16px;
-border-radius:6px;
-text-decoration:none;
-font-size:14px;
-}
-
-.btn-outline{
-border:1px solid #3a3f45;
-padding:10px 16px;
-border-radius:6px;
-text-decoration:none;
-color:#fff;
-font-size:14px;
-}
-
-.hero-cats{
-margin-top:12px;
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-}
-
-.hero-cats a{
-color:#9ca3af;
-font-size:13px;
-text-decoration:none;
+margin-bottom:20px;
 }
 
 .hero-image img{
@@ -145,24 +72,57 @@ width:100%;
 border-radius:10px;
 }
 
-/* sections */
+.btn{
+background:#ffffff;
+color:#000;
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+border:none;
+cursor:pointer;
+}
+
+.btn-outline{
+border:1px solid #3a3f45;
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+color:#fff;
+}
 
 .section{
-padding:90px 0;
+padding:80px 0;
 }
 
-.section h2{
-font-size:28px;
-margin-bottom:15px;
+.catalog-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:40px;
 }
 
-.section p{
-color:#9ca3af;
-max-width:600px;
+.wine-card{
+background:#14181f;
+padding:20px;
+border-radius:10px;
+}
+
+.wine-card img{
+width:100%;
+border-radius:6px;
 margin-bottom:10px;
 }
 
-/* telegram button */
+.wine-meta{
+color:#9ca3af;
+font-size:13px;
+margin-bottom:8px;
+}
+
+.wine-price{
+font-weight:600;
+margin-bottom:10px;
+}
 
 .tg-fab{
 position:fixed;
@@ -173,23 +133,4 @@ padding:12px 16px;
 border-radius:10px;
 color:#fff;
 text-decoration:none;
-}
-
-/* mobile */
-
-@media(max-width:900px){
-
-.hero-grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:36px;
-}
-
-.header-inner{
-flex-direction:column;
-align-items:flex-start;
-}
-
 }

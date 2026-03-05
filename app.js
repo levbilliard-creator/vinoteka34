@@ -1,9 +1,1 @@
-(function(){
-
-const y = document.getElementById("y");
-
-if(y){
-y.textContent = new Date().getFullYear();
-}
-
-})();
+console.log("vinoteka site loaded");
