@@ -5,6 +5,8 @@ try{
 const res = await fetch("/data/products.json");
 const data = await res.json();
 
+const items = data.items || data;
+
 const grid = document.getElementById("catalog");
 
 if(!grid){
@@ -12,49 +14,70 @@ console.error("catalog container not found");
 return;
 }
 
-let items = data.items || data;
-
 grid.innerHTML="";
 
-items.forEach(item=>{
+const urlParams = new URLSearchParams(window.location.search);
+const group = urlParams.get("group");
+
+let filtered = items;
+
+if(group){
+
+if(group==="wine"){
+filtered = items.filter(i=>i.category==="Вино");
+}
+
+if(group==="sparkling"){
+filtered = items.filter(i=>i.category==="Игристое");
+}
+
+if(group==="spirits"){
+filtered = items.filter(i=>
+i.category==="Виски" ||
+i.category==="Ром" ||
+i.category==="Джин" ||
+i.category==="Текила" ||
+i.category==="Коньяк/Бренди"
+);
+}
+
+}
+
+filtered.forEach(item=>{
 
 const card=document.createElement("div");
 card.className="card";
 
-/* карточка кликабельная */
-card.onclick=()=>{
-window.location="/product.html?id="+item.id;
-};
-
-const titleEN=item.title_en || "";
-const titleRU=item.title_ru || item.title || "";
+const title=item.title || "";
 
 const country=item.country || "";
 const region=item.region || "";
 
 const meta=[country,region].filter(Boolean).join(" • ");
 
-const price=item.price_rub
-? Number(item.price_rub).toLocaleString("ru-RU")+" ₽"
-: "";
+let price="";
 
-let tags="";
+if(item.price_rub){
+price=Number(item.price_rub).toLocaleString("ru-RU")+" ₽";
+}
+
+let colorTag="";
 
 if(item.color){
-tags+=`<span class="tag">${item.color}</span>`;
+colorTag=`<span class="tag">${item.color}</span>`;
 }
 
 card.innerHTML=`
 
-<div class="title-en">${titleEN}</div>
-
-<div class="title-ru">${titleRU}</div>
+<h3>${title}</h3>
 
 <div class="meta">${meta}</div>
 
 <div class="price">${price}</div>
 
-<div class="tags">${tags}</div>
+<div class="tags">
+${colorTag}
+</div>
 
 `;
 
@@ -62,14 +85,15 @@ grid.appendChild(card);
 
 });
 
+}catch(e){
+
+console.error(e);
+
+const grid = document.getElementById("catalog");
+
+if(grid){
+grid.innerHTML="<p>Ошибка загрузки каталога</p>";
 }
-
-catch(e){
-
-console.error("catalog load error",e);
-
-document.getElementById("catalog").innerHTML=
-"<p>Ошибка загрузки каталога</p>";
 
 }
 
