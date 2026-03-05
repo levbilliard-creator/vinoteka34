@@ -1,136 +1,267 @@
 *{
-box-sizing:border-box;
 margin:0;
 padding:0;
+box-sizing:border-box;
 }
 
 body{
-font-family:Inter,system-ui,Arial;
-background:#0b0d10;
-color:#fff;
+
+font-family:Arial, Helvetica, sans-serif;
+background:#05090f;
+color:white;
+
 }
 
 .container{
-max-width:1200px;
-margin:0 auto;
-padding:0 20px;
+
+width:1200px;
+margin:auto;
+
 }
 
+
+
 .header{
-border-bottom:1px solid #1f232b;
+
+border-bottom:1px solid #16202c;
 padding:20px 0;
+
 }
 
 .header-inner{
+
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
+
 }
 
 .logo{
-font-size:26px;
+
 font-weight:700;
+font-size:22px;
+
 }
 
 .nav{
+
 display:flex;
-gap:20px;
+gap:28px;
+
 }
 
 .nav a{
-color:#d1d5db;
+
 text-decoration:none;
+color:#c6d0de;
+font-size:14px;
+
 }
 
-.nav a:hover{
-color:#fff;
+.contacts{
+
+text-align:right;
+
 }
+
+.phone{
+
+font-size:14px;
+
+}
+
+.telegram{
+
+color:#6ea8ff;
+font-size:13px;
+
+}
+
+
 
 .hero{
-padding:120px 0;
+
+padding:80px 0;
+
 }
 
 .hero-grid{
+
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
+grid-template-columns:1fr 420px;
+gap:100px;
 align-items:center;
+
+}
+
+.hero-meta{
+
+font-size:13px;
+color:#9aa7b6;
+margin-bottom:20px;
+
 }
 
 .hero h1{
-font-size:48px;
+
+font-size:44px;
 margin-bottom:20px;
+
 }
 
 .hero p{
-color:#9ca3af;
-margin-bottom:20px;
+
+color:#9aa7b6;
+margin-bottom:30px;
+line-height:1.6;
+
 }
 
-.hero-image img{
-width:100%;
-border-radius:10px;
+
+
+.hero-buttons{
+
+display:flex;
+gap:14px;
+margin-bottom:20px;
+
 }
 
 .btn{
-background:#ffffff;
-color:#000;
-padding:12px 20px;
+
+background:white;
+color:black;
+padding:12px 22px;
 border-radius:8px;
 text-decoration:none;
-border:none;
-cursor:pointer;
+font-weight:600;
+
 }
 
 .btn-outline{
-border:1px solid #3a3f45;
-padding:12px 20px;
+
+border:1px solid #2a3746;
+padding:12px 22px;
 border-radius:8px;
 text-decoration:none;
-color:#fff;
+color:white;
+
 }
 
-.section{
+
+
+.categories{
+
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+
+}
+
+.cat{
+
+padding:8px 14px;
+border:1px solid #243040;
+border-radius:20px;
+font-size:13px;
+color:#b8c4d6;
+text-decoration:none;
+
+}
+
+.cat:hover{
+
+background:#1a2533;
+border-color:#3c4f67;
+color:white;
+
+}
+
+
+
+.hero-image img{
+
+width:420px;
+border-radius:16px;
+
+}
+
+
+
+.featured{
+
 padding:80px 0;
+
 }
 
-.catalog-grid{
+.featured h2{
+
+margin-bottom:30px;
+
+}
+
+
+
+.wine-grid{
+
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(4,1fr);
 gap:30px;
-margin-top:40px;
+
 }
 
 .wine-card{
-background:#14181f;
+
+background:#0d131b;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
+border:1px solid #1c2735;
+
 }
 
-.wine-card img{
-width:100%;
-border-radius:6px;
-margin-bottom:10px;
-}
+.wine-type{
 
-.wine-meta{
-color:#9ca3af;
-font-size:13px;
+font-size:12px;
+color:#9aa7b6;
 margin-bottom:8px;
+
+}
+
+.wine-title{
+
+font-size:18px;
+margin-bottom:10px;
+
 }
 
 .wine-price{
-font-weight:600;
-margin-bottom:10px;
+
+font-size:16px;
+margin-bottom:14px;
+
 }
 
+.wine-btn{
+
+background:white;
+border:none;
+padding:8px 14px;
+border-radius:6px;
+cursor:pointer;
+
+}
+
+
+
 .tg-fab{
+
 position:fixed;
-right:25px;
-bottom:25px;
-background:#2b6df8;
+right:30px;
+bottom:30px;
+background:#2d6bff;
+color:white;
 padding:12px 16px;
 border-radius:10px;
-color:#fff;
 text-decoration:none;
+
 }
