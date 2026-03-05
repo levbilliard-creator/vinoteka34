@@ -2,10 +2,7 @@ async function loadCatalog(){
 
 const grid = document.getElementById("catalog");
 
-if(!grid){
-console.error("catalog container not found");
-return;
-}
+if(!grid) return;
 
 grid.innerHTML="Загрузка...";
 
@@ -20,51 +17,50 @@ grid.innerHTML="";
 
 items.forEach(item=>{
 
-const titleEN = item.title_en || item.title || "";
-const titleRU = item.title_ru || "";
+const titleEN = item.title_en || "";
+const titleRU = item.title_ru || item.title || "";
 
 const country = item.country || "";
 const region = item.region || "";
 
-const meta = [country,region].filter(Boolean).join(" • ");
+const meta=[country,region].filter(Boolean).join(" • ");
 
 let price="";
-
 if(item.price_rub){
 price = Number(item.price_rub).toLocaleString("ru-RU")+" ₽";
 }
 
-let color = item.color || "";
+let color="";
+if(item.color){
+color=item.color;
+}
 
 const card=document.createElement("div");
-
 card.className="wine-card";
 
 card.innerHTML=`
 
-<div class="wine-title-en">
-${titleEN}
-</div>
+<a class="wine-link" href="/product.html?id=${item.id}">
 
-<div class="wine-title-ru">
-${titleRU}
-</div>
+<div class="wine-title-en">${titleEN}</div>
 
-<div class="wine-meta">
-${meta}
-</div>
+<div class="wine-title-ru">${titleRU}</div>
+
+<div class="wine-meta">${meta}</div>
 
 <div class="wine-bottom">
 
-<div class="wine-price">
-${price}
-</div>
+<div class="wine-price">${price}</div>
 
-<div class="wine-color">
-${color}
-</div>
+<div class="wine-color">${color}</div>
 
 </div>
+
+<div class="wine-open">
+Открыть →
+</div>
+
+</a>
 
 `;
 
@@ -75,7 +71,6 @@ grid.appendChild(card);
 }catch(e){
 
 grid.innerHTML="Ошибка загрузки каталога";
-
 console.error(e);
 
 }
