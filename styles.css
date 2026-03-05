@@ -114,3 +114,8 @@ border-radius:10px;
 text-decoration:none;
 font-weight:600;
 }
+main{
+max-width:1200px;
+margin:0 auto;
+padding:40px 20px;
+}
