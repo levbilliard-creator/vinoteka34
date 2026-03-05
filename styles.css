@@ -88,8 +88,8 @@ padding:80px 0;
 .hero-grid{
 
 display:grid;
-grid-template-columns:1fr 420px;
-gap:100px;
+grid-template-columns:1fr 520px;
+gap:80px;
 align-items:center;
 
 }
@@ -165,89 +165,15 @@ border:1px solid #243040;
 border-radius:20px;
 font-size:13px;
 color:#b8c4d6;
-text-decoration:none;
-
-}
-
-.cat:hover{
-
-background:#1a2533;
-border-color:#3c4f67;
-color:white;
 
 }
 
 
 
-.hero-image img{
+.hero-video video{
 
-width:420px;
+width:520px;
 border-radius:16px;
-
-}
-
-
-
-.featured{
-
-padding:80px 0;
-
-}
-
-.featured h2{
-
-margin-bottom:30px;
-
-}
-
-
-
-.wine-grid{
-
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-
-}
-
-.wine-card{
-
-background:#0d131b;
-padding:20px;
-border-radius:12px;
-border:1px solid #1c2735;
-
-}
-
-.wine-type{
-
-font-size:12px;
-color:#9aa7b6;
-margin-bottom:8px;
-
-}
-
-.wine-title{
-
-font-size:18px;
-margin-bottom:10px;
-
-}
-
-.wine-price{
-
-font-size:16px;
-margin-bottom:14px;
-
-}
-
-.wine-btn{
-
-background:white;
-border:none;
-padding:8px 14px;
-border-radius:6px;
-cursor:pointer;
 
 }
 
