@@ -1,12 +1,5 @@
 async function loadCatalog(){
 
-try{
-
-const res = await fetch("/data/products.json");
-const data = await res.json();
-
-const items = data.items || data;
-
 const grid = document.getElementById("catalog");
 
 if(!grid){
@@ -14,69 +7,63 @@ console.error("catalog container not found");
 return;
 }
 
+grid.innerHTML="Загрузка...";
+
+try{
+
+const res = await fetch("/data/products.json");
+const data = await res.json();
+
+const items = data.items || data;
+
 grid.innerHTML="";
 
-const urlParams = new URLSearchParams(window.location.search);
-const group = urlParams.get("group");
+items.forEach(item=>{
 
-let filtered = items;
+const titleEN = item.title_en || item.title || "";
+const titleRU = item.title_ru || "";
 
-if(group){
+const country = item.country || "";
+const region = item.region || "";
 
-if(group==="wine"){
-filtered = items.filter(i=>i.category==="Вино");
-}
-
-if(group==="sparkling"){
-filtered = items.filter(i=>i.category==="Игристое");
-}
-
-if(group==="spirits"){
-filtered = items.filter(i=>
-i.category==="Виски" ||
-i.category==="Ром" ||
-i.category==="Джин" ||
-i.category==="Текила" ||
-i.category==="Коньяк/Бренди"
-);
-}
-
-}
-
-filtered.forEach(item=>{
-
-const card=document.createElement("div");
-card.className="card";
-
-const title=item.title || "";
-
-const country=item.country || "";
-const region=item.region || "";
-
-const meta=[country,region].filter(Boolean).join(" • ");
+const meta = [country,region].filter(Boolean).join(" • ");
 
 let price="";
 
 if(item.price_rub){
-price=Number(item.price_rub).toLocaleString("ru-RU")+" ₽";
+price = Number(item.price_rub).toLocaleString("ru-RU")+" ₽";
 }
 
-let colorTag="";
+let color = item.color || "";
 
-if(item.color){
-colorTag=`<span class="tag">${item.color}</span>`;
-}
+const card=document.createElement("div");
+
+card.className="wine-card";
 
 card.innerHTML=`
 
-<h3>${title}</h3>
+<div class="wine-title-en">
+${titleEN}
+</div>
 
-<div class="meta">${meta}</div>
+<div class="wine-title-ru">
+${titleRU}
+</div>
 
-<div class="price">${price}</div>
+<div class="wine-meta">
+${meta}
+</div>
 
-<div class="tags">
-${colorTag}
+<div class="wine-bottom">
+
+<div class="wine-price">
+${price}
+</div>
+
+<div class="wine-color">
+${color}
+</div>
+
 </div>
 
 `;
@@ -87,13 +74,9 @@ grid.appendChild(card);
 
 }catch(e){
 
+grid.innerHTML="Ошибка загрузки каталога";
+
 console.error(e);
-
-const grid = document.getElementById("catalog");
-
-if(grid){
-grid.innerHTML="<p>Ошибка загрузки каталога</p>";
-}
 
 }
 
