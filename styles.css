@@ -115,11 +115,39 @@ color:white;
 
 
 .categories{
+
 display:flex;
-gap:10px;
 flex-wrap:wrap;
+gap:12px;
+
+max-width:520px;
+margin-top:10px;
+
 }
 
+.cat{
+
+padding:8px 16px;
+
+border:1px solid #243040;
+border-radius:20px;
+
+font-size:13px;
+color:#b8c4d6;
+
+background:#0b1118;
+
+transition:0.2s;
+
+}
+
+.cat:hover{
+
+border-color:#3b4f68;
+background:#111a24;
+color:white;
+
+}
 .cat{
 padding:8px 14px;
 border:1px solid #243040;
