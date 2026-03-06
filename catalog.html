@@ -4,99 +4,28 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Каталог вин</title>
+<title>Каталог — Vinoteka34</title>
 
 <link rel="stylesheet" href="styles.css">
 
 </head>
 
-
 <body>
-
 
 <header class="header">
 
-<div class="container header-inner">
-
-<div class="logo">
-ВИНОТЕКА
-</div>
-
-<nav class="nav">
-
-<a href="index.html">Главная</a>
-<a href="#">Клуб</a>
-<a href="#">Сомелье</a>
-<a href="catalog.html">Каталог</a>
-<a href="#">Контакты</a>
-
-</nav>
-
-</div>
+<a href="index.html" class="logo">ВИНОТЕКА</a>
 
 </header>
 
 
+<section class="catalog-container">
 
-<section class="catalog">
-
-<div class="container">
-
-<h1 class="catalog-title">
-Каталог вин
-</h1>
-
-
-
-<div class="filters">
-
-<select id="countryFilter">
-
-<option value="">Все страны</option>
-<option value="France">Франция</option>
-<option value="Italy">Италия</option>
-<option value="Argentina">Аргентина</option>
-<option value="Spain">Испания</option>
-
-</select>
-
-
-
-<select id="typeFilter">
-
-<option value="">Тип вина</option>
-<option value="red">Красное</option>
-<option value="white">Белое</option>
-<option value="sparkling">Игристое</option>
-
-</select>
-
-
-
-<select id="sortPrice">
-
-<option value="">Цена</option>
-<option value="asc">Дешевле</option>
-<option value="desc">Дороже</option>
-
-</select>
-
-</div>
-
-
-
-<div id="wineGrid" class="wine-grid"></div>
-
-
-</div>
+<div id="catalog" class="catalog-grid"></div>
 
 </section>
 
 
-
-<script src="products.js"></script>
 <script src="catalog.js"></script>
 
 </body>

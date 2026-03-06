@@ -1,67 +1,49 @@
-const grid = document.getElementById("wineGrid")
+async function loadCatalog(){
 
-function renderWines(list){
+const response = await fetch("data/products.json")
 
-grid.innerHTML=""
+const products = await response.json()
 
-list.forEach(wine=>{
+const catalog = document.getElementById("catalog")
 
-const card = document.createElement("div")
+catalog.innerHTML=""
 
-card.className="wine-card"
+products.forEach(product=>{
+
+const card=document.createElement("div")
+
+card.className="card"
 
 card.innerHTML=`
 
-<div class="wine-image">
-<img src="${wine.image}">
+<div class="photo">
+<img src="${product.image}">
 </div>
 
-<div class="wine-type">${wine.country}</div>
-
-<div class="wine-title">
-${wine.name}
+<div class="category">
+${product.category}
 </div>
 
-<div class="wine-price">
-${wine.price} ₽
+<div class="title">
+${product.name}
 </div>
 
-<button class="wine-btn">
-Открыть
-</button>
+<div class="props">
+${product.type}
+</div>
+
+<div class="price">
+${product.price} ₽
+</div>
+
+<button class="open">Открыть</button>
 
 `
 
-grid.appendChild(card)
+catalog.appendChild(card)
 
 })
 
 }
 
-renderWines(wines)
-
-
-
-/* ФИЛЬТР */
-
-document.getElementById("countryFilter")
-.addEventListener("change",filter)
-
-document.getElementById("typeFilter")
-.addEventListener("change",filter)
-
-function filter(){
-
-let country=document.getElementById("countryFilter").value
-let type=document.getElementById("typeFilter").value
-
-let filtered=wines.filter(w=>{
-
-return (!country||w.country===country)
-&& (!type||w.type===type)
-
-})
-
-renderWines(filtered)
-
-}
+loadCatalog()
