@@ -3,7 +3,6 @@ let products = [];
 async function initCatalog(){
 
 const response = await fetch("/data/products.json");
-
 products = await response.json();
 
 render(products);
@@ -13,13 +12,11 @@ render(products);
 function render(list){
 
 const grid = document.getElementById("catalogGrid");
-
 grid.innerHTML = "";
 
 list.forEach(p => {
 
 const card = document.createElement("div");
-
 card.className = "card";
 
 card.innerHTML = `
@@ -33,7 +30,7 @@ card.innerHTML = `
 <div class="title">${p.name}</div>
 <div class="type">${p.type || ""}</div>
 <div class="price">${p.price} ₽</div>
-<button onclick="openProduct(${p.id})">Открыть</button>
+<button class="open-btn" data-id="${p.id}">Открыть</button>
 </div>
 
 `;
@@ -42,10 +39,18 @@ grid.appendChild(card);
 
 });
 
-}
+document.querySelectorAll(".open-btn").forEach(btn => {
 
-function openProduct(id){
+btn.addEventListener("click", function(){
+
+const id = this.dataset.id;
+
 window.location.href = "/product.html?id=" + id;
+
+});
+
+});
+
 }
 
 document.addEventListener("DOMContentLoaded", () => {
