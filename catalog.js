@@ -1,98 +1,82 @@
-let products = []
+let products = [];
 
 async function initCatalog(){
 
-const response = await fetch("data/products.json")
+const response = await fetch("/data/products.json");
 
-products = await response.json()
+products = await response.json();
 
-render(products)
+render(products);
 
 }
 
 function render(list){
 
-const grid = document.getElementById("catalogGrid")
+const grid = document.getElementById("catalogGrid");
 
-grid.innerHTML = ""
+grid.innerHTML = "";
 
-list.forEach(product => {
+list.forEach(p => {
 
-const card = document.createElement("div")
+const card = document.createElement("div");
 
-card.className = "card"
+card.className = "card";
 
 card.innerHTML = `
 
 <div class="photo">
-<img src="${product.image}" onerror="this.src='assets/wine.jpg'">
+<img src="${p.image}" onerror="this.src='/assets/wine.jpg'">
 </div>
 
 <div class="info">
-
-<div class="category">${product.category}</div>
-
-<div class="title">${product.name}</div>
-
-<div class="type">${product.type || ""}</div>
-
-<div class="price">${product.price} ₽</div>
-
-<button onclick="openProduct(${product.id})">Открыть</button>
-
+<div class="category">${p.category}</div>
+<div class="title">${p.name}</div>
+<div class="type">${p.type || ""}</div>
+<div class="price">${p.price} ₽</div>
+<button onclick="openProduct(${p.id})">Открыть</button>
 </div>
 
-`
+`;
 
-grid.appendChild(card)
+grid.appendChild(card);
 
-})
+});
 
 }
-
 
 function openProduct(id){
-
-window.location = "product.html?id=" + id
-
+window.location.href = "/product.html?id=" + id;
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
-initCatalog()
+initCatalog();
 
 document.getElementById("search").addEventListener("input", e => {
 
-const value = e.target.value.toLowerCase()
+const value = e.target.value.toLowerCase();
 
 const filtered = products.filter(p =>
-
 p.name.toLowerCase().includes(value)
+);
 
-)
+render(filtered);
 
-render(filtered)
-
-})
-
+});
 
 document.getElementById("category").addEventListener("change", e => {
 
-const value = e.target.value
+const value = e.target.value;
 
 if(value === "all"){
-
-render(products)
-
-return
-
+render(products);
+return;
 }
 
-const filtered = products.filter(p => p.category === value)
+const filtered = products.filter(p => p.category === value);
 
-render(filtered)
+render(filtered);
 
-})
+});
 
-})
+});
