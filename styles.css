@@ -1,311 +1,93 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:Arial, Helvetica, sans-serif;
-background:#05090f;
+margin:0;
+font-family:Arial;
+background:#0b0f14;
 color:white;
 }
 
-.container{
-width:1200px;
-margin:auto;
-}
-
-
-
 .header{
-border-bottom:1px solid #16202c;
-padding:20px 0;
-}
 
-.header-inner{
 display:flex;
-justify-content:space-between;
+
 align-items:center;
+
+padding:20px 40px;
+
+border-bottom:1px solid #222;
+
 }
 
 .logo{
+
+font-size:24px;
+
 font-weight:700;
-font-size:22px;
-}
 
-.nav{
-display:flex;
-gap:28px;
-}
-
-.nav a{
 text-decoration:none;
-color:#c6d0de;
-font-size:14px;
-}
 
-.contacts{
-text-align:right;
-}
-
-.phone{
-font-size:14px;
-}
-
-.telegram{
-color:#6ea8ff;
-font-size:13px;
-}
-
-
-
-.hero{
-padding:70px 0 40px 0;
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 600px;
-gap:80px;
-align-items:center;
-}
-
-.hero-meta{
-font-size:13px;
-color:#9aa7b6;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:44px;
-margin-bottom:20px;
-}
-
-.hero p{
-color:#9aa7b6;
-margin-bottom:30px;
-line-height:1.6;
-}
-
-
-
-.hero-buttons{
-display:flex;
-gap:14px;
-margin-bottom:20px;
-}
-
-.btn{
-background:white;
-color:black;
-padding:12px 22px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-}
-
-.btn-outline{
-border:1px solid #2a3746;
-padding:12px 22px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-}
-
-
-
-.categories{
-
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-
-max-width:520px;
-margin-top:10px;
-
-}
-
-.cat{
-
-padding:8px 16px;
-
-border:1px solid #243040;
-border-radius:20px;
-
-font-size:13px;
-color:#b8c4d6;
-
-background:#0b1118;
-
-transition:0.2s;
-
-}
-
-.cat:hover{
-
-border-color:#3b4f68;
-background:#111a24;
 color:white;
 
 }
-.cat{
-padding:8px 14px;
-border:1px solid #243040;
-border-radius:20px;
-font-size:13px;
-color:#b8c4d6;
-}
 
+.catalog-tools{
 
+margin-left:40px;
 
-/* ВИДЕО */
-
-.hero-video{
-width:600px;
-height:360px;
-overflow:hidden;
-border-radius:16px;
-}
-
-.hero-video video{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-
-
-/* ПОПУЛЯРНЫЕ ВИНА */
-
-.popular{
-padding:40px 0 80px 0;
-}
-
-.section-title{
-font-size:28px;
-margin-bottom:30px;
-}
-
-
-
-/* СЕТКА 2 РЯДА */
-
-.wine-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:24px;
-}
-
-
-
-/* КАРТОЧКА */
-
-.wine-card{
-
-background:#0d131b;
-padding:16px;
-border-radius:14px;
-border:1px solid #1c2735;
-transition:0.2s;
-
-}
-
-.wine-card:hover{
-transform:translateY(-4px);
-border-color:#2e3e55;
-}
-
-
-
-/* ФОТО БУТЫЛКИ */
-
-.wine-image{
-
-width:100%;
-height:180px;
-margin-bottom:12px;
 display:flex;
-align-items:center;
-justify-content:center;
+
+gap:10px;
 
 }
 
-.wine-image img{
+.catalog-tools input{
 
-max-height:180px;
-object-fit:contain;
+padding:8px 10px;
 
-}
-
-
-
-.wine-type{
-font-size:12px;
-color:#9aa7b6;
-margin-bottom:6px;
-}
-
-.wine-title{
-font-size:17px;
-margin-bottom:8px;
-}
-
-.wine-price{
-font-size:16px;
-margin-bottom:12px;
-}
-
-
-
-.wine-btn{
-background:white;
-border:none;
-padding:8px 14px;
 border-radius:6px;
-cursor:pointer;
+
+border:none;
+
 }
 
+.catalog-tools select{
 
+padding:8px 10px;
 
-/* TG */
+border-radius:6px;
 
-.tg-fab{
-position:fixed;
-right:30px;
-bottom:30px;
-background:#2d6bff;
-color:white;
-padding:12px 16px;
-border-radius:10px;
-text-decoration:none;
+border:none;
+
 }
-.catalog-grid{
 
-display:grid;
-
-grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-
-gap:20px;
-
-padding:30px;
+.catalog{
 
 max-width:1400px;
 
 margin:auto;
 
+padding:40px;
+
+}
+
+#catalogGrid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+
+gap:24px;
+
 }
 
 .card{
 
-background:#1a1a1a;
+background:#141414;
 
-border-radius:10px;
+border-radius:12px;
 
-padding:16px;
+overflow:hidden;
 
-display:flex;
-
-flex-direction:column;
+border:1px solid #222;
 
 transition:0.2s;
 
@@ -313,7 +95,9 @@ transition:0.2s;
 
 .card:hover{
 
-transform:translateY(-4px);
+transform:translateY(-5px);
+
+border-color:#333;
 
 }
 
@@ -327,6 +111,8 @@ align-items:center;
 
 justify-content:center;
 
+background:#0f0f0f;
+
 }
 
 .photo img{
@@ -335,13 +121,19 @@ max-height:200px;
 
 }
 
+.info{
+
+padding:16px;
+
+}
+
 .category{
 
 font-size:12px;
 
-color:#aaa;
+color:#999;
 
-margin-top:8px;
+margin-bottom:4px;
 
 }
 
@@ -351,17 +143,17 @@ font-size:16px;
 
 font-weight:600;
 
-margin-top:6px;
+margin-bottom:4px;
 
 }
 
-.props{
+.type{
 
 font-size:13px;
 
-color:#bbb;
+color:#aaa;
 
-margin-top:6px;
+margin-bottom:10px;
 
 }
 
@@ -371,26 +163,30 @@ font-size:18px;
 
 font-weight:700;
 
-margin-top:10px;
+margin-bottom:10px;
 
 }
 
-.open{
+button{
 
-margin-top:10px;
+width:100%;
 
 padding:10px;
 
 border:none;
 
-background:#b59b6a;
+background:#b89b6d;
 
-color:#000;
+border-radius:6px;
 
 font-weight:600;
 
 cursor:pointer;
 
-border-radius:6px;
+}
+
+button:hover{
+
+opacity:0.9;
 
 }

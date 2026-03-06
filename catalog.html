@@ -4,24 +4,43 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Каталог — Vinoteka34</title>
+<title>Каталог — Винотека</title>
 
 <link rel="stylesheet" href="styles.css">
 
 </head>
 
+
 <body>
 
 <header class="header">
 
-<a href="index.html" class="logo">ВИНОТЕКА</a>
+<a href="/" class="logo">ВИНОТЕКА</a>
+
+<div class="catalog-tools">
+
+<input id="search" placeholder="Поиск вина...">
+
+<select id="category">
+
+<option value="all">Все категории</option>
+<option value="Вино">Вино</option>
+<option value="Игристое">Игристое</option>
+<option value="Шампанское">Шампанское</option>
+<option value="Виски">Виски</option>
+<option value="Водка">Водка</option>
+<option value="Джин">Джин</option>
+
+</select>
+
+</div>
 
 </header>
 
 
-<section class="catalog-container">
+<section class="catalog">
 
-<div id="catalog" class="catalog-grid"></div>
+<div id="catalogGrid"></div>
 
 </section>
 

@@ -1,49 +1,98 @@
-async function loadCatalog(){
+let products = []
+
+async function initCatalog(){
 
 const response = await fetch("data/products.json")
 
-const products = await response.json()
+products = await response.json()
 
-const catalog = document.getElementById("catalog")
+render(products)
 
-catalog.innerHTML=""
+}
 
-products.forEach(product=>{
+function render(list){
 
-const card=document.createElement("div")
+const grid = document.getElementById("catalogGrid")
 
-card.className="card"
+grid.innerHTML = ""
 
-card.innerHTML=`
+list.forEach(product => {
+
+const card = document.createElement("div")
+
+card.className = "card"
+
+card.innerHTML = `
 
 <div class="photo">
-<img src="${product.image}">
+<img src="${product.image}" onerror="this.src='assets/wine.jpg'">
 </div>
 
-<div class="category">
-${product.category}
-</div>
+<div class="info">
 
-<div class="title">
-${product.name}
-</div>
+<div class="category">${product.category}</div>
 
-<div class="props">
-${product.type}
-</div>
+<div class="title">${product.name}</div>
 
-<div class="price">
-${product.price} ₽
-</div>
+<div class="type">${product.type || ""}</div>
 
-<button class="open">Открыть</button>
+<div class="price">${product.price} ₽</div>
+
+<button onclick="openProduct(${product.id})">Открыть</button>
+
+</div>
 
 `
 
-catalog.appendChild(card)
+grid.appendChild(card)
 
 })
 
 }
 
-loadCatalog()
+
+function openProduct(id){
+
+window.location = "product.html?id=" + id
+
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+initCatalog()
+
+document.getElementById("search").addEventListener("input", e => {
+
+const value = e.target.value.toLowerCase()
+
+const filtered = products.filter(p =>
+
+p.name.toLowerCase().includes(value)
+
+)
+
+render(filtered)
+
+})
+
+
+document.getElementById("category").addEventListener("change", e => {
+
+const value = e.target.value
+
+if(value === "all"){
+
+render(products)
+
+return
+
+}
+
+const filtered = products.filter(p => p.category === value)
+
+render(filtered)
+
+})
+
+})
