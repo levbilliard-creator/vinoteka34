@@ -1,6 +1,6 @@
 let products = [];
 
-async function initCatalog(){
+async function initCatalog() {
 
 const response = await fetch("/data/products.json");
 products = await response.json();
@@ -9,7 +9,7 @@ render(products);
 
 }
 
-function render(list){
+function render(list) {
 
 const grid = document.getElementById("catalogGrid");
 grid.innerHTML = "";
@@ -30,16 +30,27 @@ card.innerHTML = `
 <div class="title">${p.name}</div>
 <div class="type">${p.type || ""}</div>
 <div class="price">${p.price} ₽</div>
-<button class="open-btn" data-id="${p.id}">Открыть</button>
-</div>
 
+<button class="openBtn" data-id="${p.id}">
+Открыть
+</button>
+
+</div>
 `;
 
 grid.appendChild(card);
 
 });
 
-document.querySelectorAll(".open-btn").forEach(btn => {
+activateButtons();
+
+}
+
+function activateButtons(){
+
+const buttons = document.querySelectorAll(".openBtn");
+
+buttons.forEach(btn => {
 
 btn.addEventListener("click", function(){
 
@@ -57,9 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 initCatalog();
 
-document.getElementById("search").addEventListener("input", e => {
+const searchInput = document.getElementById("search");
 
-const value = e.target.value.toLowerCase();
+searchInput.addEventListener("input", function(){
+
+const value = this.value.toLowerCase();
 
 const filtered = products.filter(p =>
 p.name.toLowerCase().includes(value)
@@ -69,16 +82,22 @@ render(filtered);
 
 });
 
-document.getElementById("category").addEventListener("change", e => {
+const categorySelect = document.getElementById("category");
 
-const value = e.target.value;
+categorySelect.addEventListener("change", function(){
+
+const value = this.value;
 
 if(value === "all"){
+
 render(products);
 return;
+
 }
 
-const filtered = products.filter(p => p.category === value);
+const filtered = products.filter(p =>
+p.category === value
+);
 
 render(filtered);
 
