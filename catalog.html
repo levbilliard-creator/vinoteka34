@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Каталог — Винотека</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Каталог</title>
 
 <link rel="stylesheet" href="styles.css">
 
@@ -15,18 +16,18 @@
 <header class="header">
 <div class="container header-inner">
 
-<a class="logo" href="/">ВИНОТЕКА</a>
+<a class="logo" href="index.html">ВИНОТЕКА</a>
 
 <nav class="nav">
-<a href="/">Бутик</a>
-<a href="/">Клуб</a>
-<a href="/">Сомелье</a>
-<a href="/catalog">Каталог</a>
-<a href="/">Дегустации</a>
-<a href="/">Контакты</a>
+<a href="#">Бутик</a>
+<a href="#">Клуб</a>
+<a href="#">Сомелье</a>
+<a href="catalog.html">Каталог</a>
+<a href="#">Дегустации</a>
+<a href="#">Контакты</a>
 </nav>
 
-<div class="header-phone">
+<div class="phone">
 +7 495 947-10-10
 </div>
 
@@ -36,20 +37,17 @@
 
 <section class="catalog-controls">
 
-<div class="container">
+<div class="container controls">
 
-<input
-type="text"
-placeholder="Поиск вина..."
-class="catalog-search"
-id="search-input"
-/>
+<input id="search" placeholder="Поиск вина">
 
-<select id="category-select" class="catalog-select">
+<select id="category">
+
 <option value="all">Все категории</option>
 <option value="wine">Вино</option>
 <option value="sparkling">Игристое</option>
 <option value="strong">Крепкий алкоголь</option>
+
 </select>
 
 </div>

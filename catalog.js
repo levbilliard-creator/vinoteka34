@@ -1,57 +1,49 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",()=>{
 
-const grid = document.getElementById("catalog-grid")
+const grid=document.getElementById("catalog-grid")
+const search=document.getElementById("search")
+const select=document.getElementById("category")
 
-if (!grid) return
+let all=[]
 
 fetch("data/products.json")
-.then(res => res.json())
-.then(products => {
+.then(r=>r.json())
+.then(data=>{
 
-render(products)
+all=data
 
-const filters = document.querySelectorAll(".drink-filter")
-
-filters.forEach(btn => {
-
-btn.addEventListener("click", () => {
-
-filters.forEach(b => b.classList.remove("active"))
-btn.classList.add("active")
-
-const type = btn.dataset.filter
-
-if (type === "all") {
-render(products)
-return
-}
-
-const filtered = products.filter(p => p.category === type)
-
-render(filtered)
+render(all)
 
 })
 
-})
+function render(items){
 
-})
+grid.innerHTML=""
 
-function render(products){
+items.forEach(p=>{
 
-grid.innerHTML = ""
+const card=document.createElement("div")
 
-products.forEach(p => {
+card.className="wine-card"
 
-const card = document.createElement("div")
-card.className = "wine-card"
+card.innerHTML=`
 
-card.innerHTML = `
-<img src="${p.image}" alt="${p.name}">
+<img src="${p.image}">
+
 <div class="wine-category">${p.category}</div>
-<div class="wine-title">${p.name}</div>
+
+<div class="wine-title-en">${p.name_en}</div>
+
+<div class="wine-title-ru">${p.name_ru}</div>
+
 <div class="wine-type">${p.type}</div>
+
 <div class="wine-price">${p.price} ₽</div>
-<a class="wine-btn" href="#">Открыть</a>
+
+<a class="wine-btn" href="product.html?id=${p.id}">
+Открыть
+</a>
+
 `
 
 grid.appendChild(card)
@@ -59,5 +51,33 @@ grid.appendChild(card)
 })
 
 }
+
+function filter(){
+
+let items=[...all]
+
+const q=search.value.toLowerCase()
+
+if(q){
+
+items=items.filter(p=>
+p.name_en.toLowerCase().includes(q)||
+p.name_ru.toLowerCase().includes(q)
+)
+
+}
+
+const cat=select.value
+
+if(cat!=="all"){
+items=items.filter(p=>p.category===cat)
+}
+
+render(items)
+
+}
+
+search.addEventListener("input",filter)
+select.addEventListener("change",filter)
 
 })
