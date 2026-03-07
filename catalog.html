@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Каталог — Винотека</title>
+
 <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
 
 <header class="header">
+<div class="container header-inner">
 
-<a href="/" class="logo">ВИНОТЕКА</a>
+<a class="logo" href="/">ВИНОТЕКА</a>
 
-<div class="catalog-tools">
+<nav class="nav">
+<a href="/">Бутик</a>
+<a href="/">Клуб</a>
+<a href="/">Сомелье</a>
+<a href="/catalog">Каталог</a>
+<a href="/">Дегустации</a>
+<a href="/">Контакты</a>
+</nav>
 
-<input id="search" placeholder="Поиск вина...">
+<div class="header-phone">
++7 495 947-10-10
+</div>
 
-<select id="category">
+</div>
+</header>
+
+
+<section class="catalog-controls">
+
+<div class="container">
+
+<input
+type="text"
+placeholder="Поиск вина..."
+class="catalog-search"
+id="search-input"
+/>
+
+<select id="category-select" class="catalog-select">
 <option value="all">Все категории</option>
-<option value="Вино">Вино</option>
-<option value="Игристое">Игристое</option>
-<option value="Шампанское">Шампанское</option>
-<option value="Виски">Виски</option>
-<option value="Водка">Водка</option>
-<option value="Джин">Джин</option>
+<option value="wine">Вино</option>
+<option value="sparkling">Игристое</option>
+<option value="strong">Крепкий алкоголь</option>
 </select>
 
 </div>
 
-</header>
+</section>
 
 
 <section class="catalog">
 
-<div id="catalogGrid"></div>
+<div class="container">
+
+<div id="catalog-grid" class="catalog-grid"></div>
+
+</div>
 
 </section>
+
 
 <script src="catalog.js"></script>
 
