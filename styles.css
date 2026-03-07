@@ -12,8 +12,8 @@ padding:0 20px;
 }
 
 .header{
-background:#0b0f14;
 border-bottom:1px solid #1a232d;
+background:#0b0f14;
 }
 
 .header-inner{
@@ -42,12 +42,12 @@ color:white;
 }
 
 .phone{
-color:#cbd5e1;
 font-size:14px;
+color:#cbd5e1;
 }
 
 .hero{
-padding:60px 0;
+padding:70px 0;
 }
 
 .hero-grid{
@@ -109,114 +109,7 @@ font-size:14px;
 color:white;
 }
 
-.hero-video video{
+.hero-image img{
 width:100%;
 border-radius:12px;
-}
-
-.catalog-controls{
-padding:30px 0;
-border-bottom:1px solid #1a232d;
-}
-
-.controls{
-display:flex;
-gap:20px;
-}
-
-.controls input{
-padding:10px;
-border-radius:6px;
-border:none;
-width:220px;
-}
-
-.controls select{
-padding:10px;
-border-radius:6px;
-border:none;
-}
-
-.catalog-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-margin-top:40px;
-}
-
-.wine-card{
-background:#0f2235;
-border-radius:14px;
-padding:15px;
-transition:0.2s;
-}
-
-.wine-card:hover{
-transform:translateY(-4px);
-}
-
-.wine-card img{
-width:100%;
-border-radius:10px;
-height:220px;
-object-fit:cover;
-}
-
-.wine-title{
-margin-top:10px;
-font-size:15px;
-min-height:40px;
-}
-
-.wine-type{
-color:#9aa6b2;
-font-size:13px;
-margin-top:4px;
-}
-
-.wine-price{
-margin-top:10px;
-font-weight:bold;
-}
-
-.wine-btn{
-display:block;
-margin-top:15px;
-background:#caa46a;
-color:black;
-text-align:center;
-padding:10px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-}
-
-.product{
-padding:60px 0;
-}
-
-.product-grid{
-display:grid;
-grid-template-columns:400px 1fr;
-gap:60px;
-align-items:start;
-}
-
-.product-img{
-width:100%;
-border-radius:12px;
-}
-
-.product-type{
-color:#9aa6b2;
-margin-top:10px;
-}
-
-.product-desc{
-margin-top:20px;
-line-height:1.5;
-}
-
-.related{
-padding:40px 0 60px 0;
 }
