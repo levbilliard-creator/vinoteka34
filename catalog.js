@@ -16,10 +16,15 @@ fetch("data/products.json")
 products = data
 
 if(urlCategory){
+
 select.value = urlCategory
-render(filterCategory(products, urlCategory))
+
+render(filterCategory(products,urlCategory))
+
 }else{
+
 render(products)
+
 }
 
 })
@@ -31,6 +36,7 @@ grid.innerHTML = ""
 list.forEach(p => {
 
 const card = document.createElement("div")
+
 card.className = "wine-card"
 
 card.innerHTML = `
@@ -45,7 +51,7 @@ card.innerHTML = `
 
 <div class="wine-price">${p.price} ₽</div>
 
-<a class="wine-btn" href="product.html?id=${p.id}">
+<a class="wine-btn" href="/product?id=${p.id}">
 Открыть
 </a>
 
@@ -59,33 +65,36 @@ grid.appendChild(card)
 
 function filterCategory(list,cat){
 
-if(cat === "all") return list
+if(cat==="all") return list
 
-return list.filter(p => p.category === cat)
+return list.filter(p => p.category===cat)
 
 }
 
 function filter(){
 
-let filtered = [...products]
+let filtered=[...products]
 
-const q = search.value.toLowerCase()
+const q=search.value.toLowerCase()
 
 if(q){
-filtered = filtered.filter(p =>
+
+filtered=filtered.filter(p =>
 p.name.toLowerCase().includes(q)
 )
+
 }
 
-const cat = select.value
+const cat=select.value
 
-filtered = filterCategory(filtered,cat)
+filtered=filterCategory(filtered,cat)
 
 render(filtered)
 
 }
 
-search.addEventListener("input", filter)
-select.addEventListener("change", filter)
+search.addEventListener("input",filter)
+
+select.addEventListener("change",filter)
 
 })

@@ -9,7 +9,6 @@ fetch("data/products.json")
 const product=data.find(p=>p.id==id)
 
 const image=document.getElementById("product-image")
-
 const info=document.getElementById("product-info")
 
 image.innerHTML=`
@@ -20,9 +19,7 @@ image.innerHTML=`
 
 info.innerHTML=`
 
-<h1>${product.name_en}</h1>
-
-<h2>${product.name_ru}</h2>
+<h1>${product.name}</h1>
 
 <p>${product.type}</p>
 
@@ -46,13 +43,11 @@ card.innerHTML=`
 
 <img src="${p.image}">
 
-<div class="wine-title-en">${p.name_en}</div>
-
-<div class="wine-title-ru">${p.name_ru}</div>
+<div class="wine-title">${p.name}</div>
 
 <div class="wine-price">${p.price} ₽</div>
 
-<a class="wine-btn" href="product.html?id=${p.id}">
+<a class="wine-btn" href="/product?id=${p.id}">
 Открыть
 </a>
 
