@@ -5,9 +5,25 @@ background:#0b0f14;
 color:white;
 }
 
+/* ОБЩИЙ КОНТЕЙНЕР */
+
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 20px;
+}
+
+/* HEADER */
+
 .header{
-padding:20px 40px;
 border-bottom:1px solid #1e1e1e;
+}
+
+.header-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 0;
 }
 
 .logo{
@@ -17,10 +33,47 @@ color:white;
 text-decoration:none;
 }
 
+.nav{
+display:flex;
+gap:20px;
+}
+
+.nav a{
+color:#9aa4af;
+text-decoration:none;
+font-size:14px;
+}
+
+.nav a:hover{
+color:white;
+}
+
+/* HERO */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+padding:60px 0;
+}
+
+.hero img,
+.hero video{
+width:100%;
+border-radius:12px;
+}
+
+/* КАТАЛОГ */
+
+.catalog{
+padding:40px 0;
+}
+
 .catalog-tools{
-margin-top:15px;
 display:flex;
 gap:10px;
+margin-bottom:30px;
 }
 
 .catalog-tools input{
@@ -33,12 +86,6 @@ border:none;
 padding:8px 10px;
 border-radius:6px;
 border:none;
-}
-
-.catalog{
-max-width:1400px;
-margin:auto;
-padding:40px;
 }
 
 #catalogGrid{
@@ -118,25 +165,4 @@ color:#000;
 
 button:hover{
 opacity:0.9;
-}
-.container{
-max-width:1200px;
-margin:0 auto;
-padding:0 20px;
-}
-
-.hero{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-max-width:1200px;
-margin:0 auto;
-padding:60px 20px;
-}
-
-.hero video,
-.hero img{
-width:100%;
-border-radius:12px;
 }
