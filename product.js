@@ -1,45 +1,59 @@
-const params=new URLSearchParams(location.search)
-
-const id=params.get("id")
+const params = new URLSearchParams(location.search)
+const id = params.get("id")
 
 fetch("data/products.json")
-.then(r=>r.json())
-.then(data=>{
+.then(r => r.json())
+.then(data => {
 
-const product=data.find(p=>p.id==id)
+const wine = data.find(p => p.id == id)
 
-const image=document.getElementById("product-image")
-const info=document.getElementById("product-info")
+const image = document.getElementById("product-image")
+const info = document.getElementById("product-info")
 
-image.innerHTML=`
-
-<img src="${product.image}">
-
+image.innerHTML = `
+<img class="product-img" src="${wine.image}">
 `
 
-info.innerHTML=`
+info.innerHTML = `
 
-<h1>${product.name}</h1>
+<h1>${wine.name}</h1>
 
-<p>${product.type}</p>
+<div class="product-type">${wine.type}</div>
 
-<div class="wine-price">${product.price} ₽</div>
+<div class="wine-price">${wine.price} ₽</div>
 
+<div class="product-desc">
+
+<p>
+Гармоничное вино с фруктовым ароматом и
+хорошим балансом кислотности.
+</p>
+
+<h3>Гастрономия</h3>
+
+<ul>
+<li>рыба</li>
+<li>морепродукты</li>
+<li>белое мясо</li>
+<li>сыры</li>
+</ul>
+
+</div>
 `
 
-const related=data
-.filter(p=>p.category===product.category && p.id!=product.id)
+const related = data
+.filter(p => p.category === wine.category && p.id != wine.id)
 .slice(0,4)
 
-const grid=document.getElementById("related-grid")
+const grid = document.getElementById("related-grid")
 
-related.forEach(p=>{
+related.forEach(p => {
 
-const card=document.createElement("div")
+const card = document.createElement("div")
 
-card.className="wine-card"
+card.className = "wine-card"
 
-card.innerHTML=`
+card.innerHTML = `
 
 <img src="${p.image}">
 
@@ -47,7 +61,7 @@ card.innerHTML=`
 
 <div class="wine-price">${p.price} ₽</div>
 
-<a class="wine-btn" href="/product?id=${p.id}">
+<a class="wine-btn" href="product.html?id=${p.id}">
 Открыть
 </a>
 
