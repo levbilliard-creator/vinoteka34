@@ -1,118 +1,63 @@
-let products = [];
-
-async function initCatalog() {
-
-const response = await fetch("/data/products.json");
-products = await response.json();
-
-render(products);
-
-}
-
-function render(list) {
-
-const grid = document.getElementById("catalogGrid");
-if(!grid) return;
-
-grid.innerHTML = "";
-
-list.forEach(p => {
-
-const card = document.createElement("div");
-card.className = "card";
-
-card.innerHTML = `
-
-<div class="photo">
-<img src="${p.image || '/assets/wine.jpg'}">
-</div>
-
-<div class="info">
-
-<div class="category">${p.category || ""}</div>
-
-<div class="title">${p.name}</div>
-
-<div class="type">${p.type || ""}</div>
-
-<div class="price">${p.price} ₽</div>
-
-<button class="openBtn" data-id="${p.id}">
-Открыть
-</button>
-
-</div>
-`;
-
-grid.appendChild(card);
-
-});
-
-activateButtons();
-
-}
-
-function activateButtons(){
-
-const buttons = document.querySelectorAll(".openBtn");
-
-buttons.forEach(btn => {
-
-btn.addEventListener("click", function(){
-
-const id = this.dataset.id;
-
-window.location.href = "/product.html?id=" + id;
-
-});
-
-});
-
-}
-
 document.addEventListener("DOMContentLoaded", () => {
 
-initCatalog();
+const grid = document.getElementById("catalog-grid")
 
-const searchInput = document.getElementById("search");
-if(searchInput){
+if (!grid) return
 
-searchInput.addEventListener("input", function(){
+fetch("data/products.json")
+.then(res => res.json())
+.then(products => {
 
-const value = this.value.toLowerCase();
+render(products)
 
-const filtered = products.filter(p =>
-p.name.toLowerCase().includes(value)
-);
+const filters = document.querySelectorAll(".drink-filter")
 
-render(filtered);
+filters.forEach(btn => {
 
-});
+btn.addEventListener("click", () => {
+
+filters.forEach(b => b.classList.remove("active"))
+btn.classList.add("active")
+
+const type = btn.dataset.filter
+
+if (type === "all") {
+render(products)
+return
+}
+
+const filtered = products.filter(p => p.category === type)
+
+render(filtered)
+
+})
+
+})
+
+})
+
+function render(products){
+
+grid.innerHTML = ""
+
+products.forEach(p => {
+
+const card = document.createElement("div")
+card.className = "wine-card"
+
+card.innerHTML = `
+<img src="${p.image}" alt="${p.name}">
+<div class="wine-category">${p.category}</div>
+<div class="wine-title">${p.name}</div>
+<div class="wine-type">${p.type}</div>
+<div class="wine-price">${p.price} ₽</div>
+<a class="wine-btn" href="#">Открыть</a>
+`
+
+grid.appendChild(card)
+
+})
 
 }
 
-const categorySelect = document.getElementById("category");
-if(categorySelect){
-
-categorySelect.addEventListener("change", function(){
-
-const value = this.value;
-
-if(value === "all"){
-
-render(products);
-return;
-
-}
-
-const filtered = products.filter(p =>
-p.category === value
-);
-
-render(filtered);
-
-});
-
-}
-
-});
+})
