@@ -12,6 +12,8 @@ render(products);
 function render(list) {
 
 const grid = document.getElementById("catalogGrid");
+if(!grid) return;
+
 grid.innerHTML = "";
 
 list.forEach(p => {
@@ -22,13 +24,17 @@ card.className = "card";
 card.innerHTML = `
 
 <div class="photo">
-<img src="${p.image}" onerror="this.src='/assets/wine.jpg'">
+<img src="${p.image || '/assets/wine.jpg'}">
 </div>
 
 <div class="info">
-<div class="category">${p.category}</div>
+
+<div class="category">${p.category || ""}</div>
+
 <div class="title">${p.name}</div>
+
 <div class="type">${p.type || ""}</div>
+
 <div class="price">${p.price} ₽</div>
 
 <button class="openBtn" data-id="${p.id}">
@@ -69,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 initCatalog();
 
 const searchInput = document.getElementById("search");
+if(searchInput){
 
 searchInput.addEventListener("input", function(){
 
@@ -82,7 +89,10 @@ render(filtered);
 
 });
 
+}
+
 const categorySelect = document.getElementById("category");
+if(categorySelect){
 
 categorySelect.addEventListener("change", function(){
 
@@ -102,5 +112,7 @@ p.category === value
 render(filtered);
 
 });
+
+}
 
 });
