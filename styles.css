@@ -119,3 +119,24 @@ color:#000;
 button:hover{
 opacity:0.9;
 }
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 20px;
+}
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+max-width:1200px;
+margin:0 auto;
+padding:60px 20px;
+}
+
+.hero video,
+.hero img{
+width:100%;
+border-radius:12px;
+}
