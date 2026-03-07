@@ -193,7 +193,7 @@ font-size:28px;
 
 
 
-.featured-grid{
+.wine-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:30px;
@@ -201,7 +201,7 @@ gap:30px;
 
 
 
-.featured-card{
+.wine-card{
 background:#111827;
 padding:20px;
 border-radius:12px;
@@ -209,21 +209,48 @@ border-radius:12px;
 
 
 
-.featured-card img{
+.wine-card img{
 width:100%;
 border-radius:8px;
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 
 
-.wine-name{
-font-size:16px;
-margin-bottom:6px;
+.wine-category{
+font-size:13px;
+color:#94a3b8;
 }
 
 
 
-.price{
-color:#eab308;
+.wine-title{
+font-size:18px;
+margin:6px 0;
+}
+
+
+
+.wine-type{
+font-size:14px;
+color:#cbd5e1;
+}
+
+
+
+.wine-price{
+margin:10px 0;
+font-weight:bold;
+}
+
+
+
+.wine-btn{
+display:block;
+text-align:center;
+background:#b89b6b;
+padding:10px;
+border-radius:8px;
+text-decoration:none;
+color:black;
 }
