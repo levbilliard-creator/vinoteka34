@@ -1,70 +1,123 @@
 async function loadProduct(){
 
-const params = new URLSearchParams(window.location.search)
-const id = Number(params.get("id"))
+const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get("id"));
 
-const res = await fetch("data/products.json")
-const products = await res.json()
+const response = await fetch('/data/products.json');
+const products = await response.json();
 
-const wine = products.find(p => p.id === id)
+const product = products.find(p => p.id === id);
 
-if(!wine) return
+const page = document.getElementById("product");
 
-const name = wine.name || wine.name_ru || wine.title || ""
-const price = wine.price || ""
-const image = wine.image || wine.img || ""
-const color = wine.color || ""
-const taste = wine.taste || ""
+const name = cleanName(product.name);
 
-document.querySelector(".product-title").innerText = name
-document.querySelector(".product-price").innerText = price + " ₽"
-document.querySelector(".product-img").src = image
-document.querySelector(".product-char").innerText = color + " " + taste
+page.innerHTML = `
 
-loadSimilar(products, wine)
+<div class="product-wrapper">
 
-}
+<div class="product-image">
+<img src="${product.image || '/assets/wine.jpg'}">
+</div>
 
+<div class="product-info">
 
+<div class="product-category">
+${detectType(product.name)}
+</div>
 
-function loadSimilar(products, wine){
+<h1 class="product-title">
+${name}
+</h1>
 
-const grid = document.querySelector(".similar-grid")
-
-if(!grid) return
-
-const similar = products
-.filter(p => p.category === wine.category && p.id !== wine.id)
-.slice(0,4)
-
-grid.innerHTML = ""
-
-similar.forEach(p=>{
-
-const name = p.name || p.title || ""
-const image = p.image || ""
-const price = p.price || ""
-
-grid.innerHTML += `
-
-<a href="product.html?id=${p.id}" class="card">
-
-<img src="${image}" class="card-img">
-
-<div class="card-body">
-
-<div class="card-name">${name}</div>
-
-<div class="card-price">${price} ₽</div>
+<div class="product-price">
+${product.price ? product.price + " ₽" : ""}
+</div>
 
 </div>
 
-</a>
+</div>
 
-`
+<div class="similar-block">
 
-})
+<h2>Похожие позиции</h2>
+
+<div class="similar-grid" id="similar"></div>
+
+</div>
+
+`;
+
+renderSimilar(products, product);
 
 }
 
-loadProduct()
+function renderSimilar(products, product){
+
+const similar = document.getElementById("similar");
+
+const same = products
+.filter(p => detectType(p.name) === detectType(product.name) && p.id !== product.id)
+.slice(0,4);
+
+same.forEach(p=>{
+
+const card = document.createElement("div");
+
+card.className = "card";
+
+card.innerHTML = `
+
+<img src="${p.image || '/assets/wine.jpg'}">
+
+<h3>${cleanName(p.name)}</h3>
+
+`;
+
+card.onclick = ()=>{
+
+window.location.href = `/product.html?id=${p.id}`;
+
+};
+
+similar.appendChild(card);
+
+});
+
+}
+
+function cleanName(name){
+
+return name
+.replace(/^Вино\s*/i,"")
+.replace(/^Вино\s(красное|белое|розовое)\s*/i,"")
+.replace(/красное|белое|розовое/gi,"")
+.replace(/сухое|полусухое|полусладкое|сладкое/gi,"")
+.replace(/столовое/gi,"")
+.replace(/\s+/g," ")
+.replace(/\"/g,"")
+.trim()
+
+}
+
+function detectType(name){
+
+name = name.toLowerCase();
+
+if(name.includes("игрист")) return "Игристое";
+
+if(
+name.includes("виски") ||
+name.includes("джин") ||
+name.includes("водка") ||
+name.includes("коньяк") ||
+name.includes("ром")
+){
+return "Крепкий алкоголь";
+}
+
+return "Вино";
+
+}
+
+loadProduct();

@@ -1,110 +1,81 @@
-let products=[]
+async function loadCatalog() {
 
-async function init(){
+const response = await fetch('/data/products.json');
+const products = await response.json();
 
-const res=await fetch('/data/products.json')
+const catalog = document.getElementById("catalog");
 
-products=await res.json()
+catalog.innerHTML = "";
 
-render(products)
+products.forEach(product => {
 
-}
+const card = document.createElement("div");
+card.className = "card";
 
-function render(list){
+const name = cleanName(product.name);
 
-const grid=document.getElementById('catalog-grid')
-
-grid.innerHTML=""
-
-list.forEach(p=>{
-
-const card=document.createElement('div')
-
-card.className="card"
-
-card.innerHTML=`
-
-<div class="card-img">
-
-<img src="${p.image}">
-
-<div class="wine-badge">
-${p.type} • ${p.sweet}
-</div>
-
-</div>
+card.innerHTML = `
+<img src="${product.image || '/assets/wine.jpg'}" class="card-img">
 
 <div class="card-body">
 
-<div class="card-category">
-${p.country} • ${p.region}
+<div class="card-type">
+${detectType(product.name)}
 </div>
 
-<div class="card-title">
-${p.name}
-</div>
+<h3 class="card-title">
+${name}
+</h3>
 
 <div class="card-price">
-${p.price} ₽
+${product.price ? product.price + " ₽" : ""}
 </div>
 
-<a href="/product.html?id=${p.id}" class="card-btn">
-Открыть
-</a>
-
 </div>
-`
+`;
 
-grid.appendChild(card)
+card.onclick = () => {
+window.location.href = `/product.html?id=${product.id}`;
+};
 
-})
+catalog.appendChild(card);
 
-}
-
-function filter(){
-
-let list=[...products]
-
-const search=document.getElementById('search').value.toLowerCase()
-
-const type=document.getElementById('typeFilter').value
-
-const sort=document.getElementById('sort').value
-
-
-
-if(search){
-
-list=list.filter(p=>p.name.toLowerCase().includes(search))
+});
 
 }
 
-if(type){
+function cleanName(name){
 
-list=list.filter(p=>p.type===type)
-
-}
-
-if(sort==="price-asc"){
-
-list.sort((a,b)=>a.price-b.price)
-
-}
-
-if(sort==="price-desc"){
-
-list.sort((a,b)=>b.price-a.price)
+return name
+.replace(/^Вино\s*/i,"")
+.replace(/^Вино\s(красное|белое|розовое)\s*/i,"")
+.replace(/красное|белое|розовое/gi,"")
+.replace(/сухое|полусухое|полусладкое|сладкое/gi,"")
+.replace(/столовое/gi,"")
+.replace(/\s+/g," ")
+.replace(/\"/g,"")
+.trim()
 
 }
 
-render(list)
+function detectType(name){
+
+name = name.toLowerCase();
+
+if(name.includes("игрист")) return "Игристое";
+
+if(
+name.includes("виски") ||
+name.includes("джин") ||
+name.includes("водка") ||
+name.includes("коньяк") ||
+name.includes("ром")
+){
+return "Крепкий алкоголь";
+}
+
+return "Вино";
 
 }
 
-document.querySelectorAll("input,select").forEach(el=>{
-
-el.addEventListener("input",filter)
-
-})
-
-init()
+loadCatalog();
