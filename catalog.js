@@ -1,49 +1,52 @@
-async function loadCatalog(){
+async function loadCatalog() {
 
-const res = await fetch("/data/products.json")
+const res = await fetch("data/products.json")
 const products = await res.json()
 
-const grid = document.getElementById("catalog-grid")
+const grid = document.querySelector(".catalog-grid")
 
 const params = new URLSearchParams(window.location.search)
 const cat = params.get("cat")
 
-let list = products
+let filtered = products
 
 if(cat){
-list = products.filter(p => p.category === cat)
+filtered = products.filter(p => p.category === cat)
 }
+
+render(filtered)
+
+function render(list){
 
 grid.innerHTML = ""
 
 list.forEach(p => {
 
-const card = document.createElement("div")
-card.className = "card"
+grid.innerHTML += `
+<div class="card">
 
-card.innerHTML = `
-<img src="/assets/wine.jpg">
+<img src="${p.image}" class="card-img">
 
 <div class="card-body">
 
 <div class="card-type">${p.category}</div>
 
-<div class="card-title">${p.name_ru}</div>
+<div class="card-name">${p.name}</div>
 
-<div class="card-sub">${p.color} ${p.sugar}</div>
+<div class="card-sub">${p.country} ${p.year || ""}</div>
 
 <div class="card-price">${p.price} ₽</div>
 
-<a class="card-btn" href="/product.html?id=${p.id}">
+<a class="btn-open" href="product.html?id=${p.id}">
 Открыть
 </a>
 
 </div>
+</div>
 `
-
-grid.appendChild(card)
-
 })
+
+}
 
 }
 
