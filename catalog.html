@@ -2,186 +2,49 @@
 <html lang="ru">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Каталог</title>
-<link rel="stylesheet" href="../styles.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Каталог — Винотека</title>
+
+<link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
 
 <header class="header">
-<div class="container header-inner">
 
-<a href="/" class="logo">ВИНОТЕКА</a>
+<div class="logo">
+<a href="/">ВИНОТЕКА</a>
+</div>
 
-<nav class="nav">
-<a href="#">Бутик</a>
-<a href="#">Клуб</a>
-<a href="#">Сомелье</a>
+<nav class="menu">
+<a href="/">Бутик</a>
+<a href="/">Клуб</a>
+<a href="/">Сомелье</a>
 <a href="/catalog">Каталог</a>
-<a href="#">Дегустации</a>
-<a href="#">Контакты</a>
+<a href="/">Дегустации</a>
+<a href="/">Контакты</a>
 </nav>
 
 <div class="phone">
 +7 495 947-10-10
 </div>
 
-</div>
 </header>
 
 
-<section class="catalog">
+<main class="container">
 
-<div class="container catalog-grid">
+<h1 class="page-title">Каталог вина</h1>
 
+<div id="catalogGrid" class="catalog-grid"></div>
 
-<div class="card">
+</main>
 
-<div class="card-img">
-
-<img src="../assets/wine.jpg">
-
-<div class="wine-badge">
-Белое • Сухое
-</div>
-
-</div>
-
-<div class="card-body">
-
-<div class="card-category">
-Франция • Луара
-</div>
-
-<div class="card-title">
-Шато-Тебо Мюскаде Севр э Мен
-</div>
-
-<div class="card-price">
-2640 ₽
-</div>
-
-<a href="/product?id=1" class="card-btn">
-Открыть
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="card">
-
-<div class="card-img">
-
-<img src="../assets/wine.jpg">
-
-<div class="wine-badge">
-Красное • Сухое
-</div>
-
-</div>
-
-<div class="card-body">
-
-<div class="card-category">
-Австралия • Тасмания
-</div>
-
-<div class="card-title">
-Пино Нуар Глейцер-Диксон
-</div>
-
-<div class="card-price">
-7960 ₽
-</div>
-
-<a href="#" class="card-btn">
-Открыть
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="card">
-
-<div class="card-img">
-
-<img src="../assets/wine.jpg">
-
-<div class="wine-badge">
-Белое • Полусухое
-</div>
-
-</div>
-
-<div class="card-body">
-
-<div class="card-category">
-Франция • Сансер
-</div>
-
-<div class="card-title">
-Сансер Силекс Галино
-</div>
-
-<div class="card-price">
-2640 ₽
-</div>
-
-<a href="#" class="card-btn">
-Открыть
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="card">
-
-<div class="card-img">
-
-<img src="../assets/wine.jpg">
-
-<div class="wine-badge">
-Красное • Сухое
-</div>
-
-</div>
-
-<div class="card-body">
-
-<div class="card-category">
-Россия • Краснодар
-</div>
-
-<div class="card-title">
-Марселан Дивноморское
-</div>
-
-<div class="card-price">
-2640 ₽
-</div>
-
-<a href="#" class="card-btn">
-Открыть
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-</section>
+<script src="catalog.js"></script>
 
 </body>
 </html>

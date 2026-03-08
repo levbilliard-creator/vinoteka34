@@ -4,11 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Вино</title>
+<title>Вино — Винотека</title>
 
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -16,114 +16,43 @@
 
 <header class="header">
 
-<div class="container header-inner">
+<div class="logo">
+<a href="/">ВИНОТЕКА</a>
+</div>
 
-<a href="/" class="logo">ВИНОТЕКА</a>
-
-<nav class="nav">
-
-<a href="#">Бутик</a>
-<a href="#">Клуб</a>
-<a href="#">Сомелье</a>
+<nav class="menu">
+<a href="/">Бутик</a>
+<a href="/">Клуб</a>
+<a href="/">Сомелье</a>
 <a href="/catalog">Каталог</a>
-<a href="#">Дегустации</a>
-<a href="#">Контакты</a>
-
+<a href="/">Дегустации</a>
+<a href="/">Контакты</a>
 </nav>
 
 <div class="phone">
 +7 495 947-10-10
 </div>
 
-</div>
-
 </header>
 
 
+<main class="container">
 
-<section class="product">
+<h1 id="productTitle"></h1>
 
-<div class="container product-grid">
+<div id="productMeta"></div>
 
-<img src="/images/wine.jpg" class="product-img">
+<div id="productPrice"></div>
 
-<div>
+<p id="productDesc"></p>
 
-<h1 class="product-title">
-Шато-Тебо Мюскаде Севр э Мен
-</h1>
+<h2>Похожие вина</h2>
 
-<div class="product-meta">
+<div id="similarGrid" class="catalog-grid"></div>
 
-Белое • Сухое • Франция • Луара
+</main>
 
-</div>
-
-<div class="product-price">
-2640 ₽
-</div>
-
-<div class="product-info">
-
-Минеральное и свежее вино из долины Луары.
-Отлично сочетается с морепродуктами,
-устрицами и легкими закусками.
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section class="similar">
-
-<div class="container">
-
-<div class="similar-title">
-Похожие вина
-</div>
-
-<div class="similar-grid">
-
-<div class="card">
-
-<img src="/images/wine.jpg">
-
-<div class="card-body">
-
-<div class="card-category">
-Вино
-</div>
-
-<div class="card-title">
-Силекс Галино Сансер
-</div>
-
-<div class="card-type">
-Белое • Сухое
-</div>
-
-<div class="card-price">
-2640 ₽
-</div>
-
-<a href="#" class="card-btn">
-Открыть
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+<script src="product.js"></script>
 
 </body>
 </html>
