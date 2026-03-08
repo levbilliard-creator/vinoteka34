@@ -108,4 +108,26 @@ display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:30px;
 margin-top:40px;
+}.hero-categories a{
+color:#8ea2b5;
+text-decoration:none;
+margin-right:15px;
+font-size:15px;
+}
+
+.hero-categories a:hover{
+color:#c8a46a;
+}
+
+.card-btn{
+margin-top:15px;
+display:inline-block;
+text-align:center;
+}
+
+.similar-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+margin-top:40px;
 }
