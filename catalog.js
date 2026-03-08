@@ -6,24 +6,26 @@ const products = await res.json();
 
 const grid = document.getElementById("catalogGrid");
 
-grid.innerHTML = "";
+grid.innerHTML="";
 
-products.forEach(product => {
+products.forEach(p=>{
 
-const card = document.createElement("div");
+const card=document.createElement("div");
 
-card.className = "catalog-card";
+card.className="catalog-card";
 
-card.innerHTML = `
+card.innerHTML=`
 
-<div class="catalog-type">${product.type || ""}</div>
+<div class="catalog-type">
+${p.type || ""}
+</div>
 
 <div class="catalog-title">
-${cleanName(product.name)}
+${cleanName(p.name)}
 </div>
 
 <div class="catalog-price">
-${product.price ? product.price + " ₽" : ""}
+${p.price ? p.price+" ₽":""}
 </div>
 
 <button class="catalog-btn">
@@ -32,9 +34,9 @@ ${product.price ? product.price + " ₽" : ""}
 
 `;
 
-card.querySelector("button").onclick = () => {
+card.querySelector("button").onclick=()=>{
 
-window.location.href = "/product.html?id=" + product.id;
+window.location.href="/product.html?id="+p.id;
 
 };
 
@@ -47,10 +49,19 @@ grid.appendChild(card);
 function cleanName(name){
 
 return name
+
 .replace(/Вино\s*/i,"")
+
+.replace(/сортовое\s*/gi,"")
+.replace(/марочное\s*/gi,"")
+.replace(/столовое\s*/gi,"")
+
 .replace(/красное|белое|розовое/gi,"")
+
 .replace(/сухое|полусухое|полусладкое|сладкое/gi,"")
+
 .replace(/\s+/g," ")
+
 .trim();
 
 }

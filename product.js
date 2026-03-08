@@ -1,46 +1,46 @@
 async function loadProduct(){
 
-const params = new URLSearchParams(window.location.search);
+const params=new URLSearchParams(window.location.search);
 
-const id = parseInt(params.get("id"));
+const id=parseInt(params.get("id"));
 
-const res = await fetch("data/products.json");
+const res=await fetch("data/products.json");
 
-const products = await res.json();
+const products=await res.json();
 
-const product = products.find(p => p.id === id);
+const product=products.find(p=>p.id===id);
 
-document.getElementById("productTitle").innerText =
+document.getElementById("productTitle").innerText=
 cleanName(product.name);
 
-document.getElementById("productMeta").innerText =
+document.getElementById("productMeta").innerText=
 product.type || "";
 
-document.getElementById("productPrice").innerText =
-product.price + " ₽";
+document.getElementById("productPrice").innerText=
+product.price+" ₽";
 
-document.getElementById("productDesc").innerText =
+document.getElementById("productDesc").innerText=
 product.description || "";
 
-renderSimilar(products, product);
+renderSimilar(products,product);
 
 }
 
-function renderSimilar(products, product){
+function renderSimilar(products,product){
 
-const grid = document.getElementById("similarGrid");
+const grid=document.getElementById("similarGrid");
 
-const similar = products
-.filter(p => p.type === product.type && p.id !== product.id)
+const similar=products
+.filter(p=>p.type===product.type && p.id!==product.id)
 .slice(0,4);
 
-similar.forEach(p => {
+similar.forEach(p=>{
 
-const card = document.createElement("div");
+const card=document.createElement("div");
 
-card.className = "catalog-card";
+card.className="catalog-card";
 
-card.innerHTML = `
+card.innerHTML=`
 
 <div class="catalog-title">
 ${cleanName(p.name)}
@@ -56,9 +56,9 @@ ${p.price} ₽
 
 `;
 
-card.querySelector("button").onclick = () => {
+card.querySelector("button").onclick=()=>{
 
-window.location.href = "/product.html?id=" + p.id;
+window.location.href="/product.html?id="+p.id;
 
 };
 
@@ -71,10 +71,19 @@ grid.appendChild(card);
 function cleanName(name){
 
 return name
+
 .replace(/Вино\s*/i,"")
+
+.replace(/сортовое\s*/gi,"")
+.replace(/марочное\s*/gi,"")
+.replace(/столовое\s*/gi,"")
+
 .replace(/красное|белое|розовое/gi,"")
+
 .replace(/сухое|полусухое|полусладкое|сладкое/gi,"")
+
 .replace(/\s+/g," ")
+
 .trim();
 
 }
