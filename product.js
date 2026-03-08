@@ -1,70 +1,92 @@
-const params = new URLSearchParams(location.search)
-const id = params.get("id")
+async function loadProduct(){
 
-fetch("data/products.json")
-.then(r => r.json())
-.then(data => {
+const res = await fetch("/data/products.json")
+const products = await res.json()
 
-const wine = data.find(p => p.id == id)
+const params = new URLSearchParams(window.location.search)
+const id = parseInt(params.get("id"))
 
-const image = document.getElementById("product-image")
-const info = document.getElementById("product-info")
+const wine = products.find(p => p.id === id)
 
-image.innerHTML = `
-<img class="product-img" src="${wine.image}">
-`
+document.getElementById("title").innerText = wine.name_ru
+document.getElementById("type").innerText = wine.color + " " + wine.sugar
+document.getElementById("price").innerText = wine.price + " ₽"
+document.getElementById("desc").innerText = wine.description
 
-info.innerHTML = `
+renderFood(wine)
+renderSimilar(wine)
 
-<h1>${wine.name}</h1>
+}
 
-<div class="product-type">${wine.type}</div>
+function renderFood(wine){
 
-<div class="wine-price">${wine.price} ₽</div>
+const box = document.getElementById("food")
 
-<div class="product-desc">
+let food = []
 
-<p>
-Гармоничное вино с фруктовым ароматом и
-хорошим балансом кислотности.
-</p>
+if(wine.color === "белое"){
 
-<h3>Гастрономия</h3>
+food = ["рыба","морепродукты","белое мясо","сыры"]
 
-<ul>
-<li>рыба</li>
-<li>морепродукты</li>
-<li>белое мясо</li>
-<li>сыры</li>
-</ul>
+}
 
-</div>
-`
+if(wine.color === "красное"){
 
-const related = data
-.filter(p => p.category === wine.category && p.id != wine.id)
+food = ["стейк","мясо","дичь","твёрдые сыры"]
+
+}
+
+if(wine.category === "sparkling"){
+
+food = ["устрицы","икра","морепродукты","десерты"]
+
+}
+
+box.innerHTML = ""
+
+food.forEach(f => {
+
+const li = document.createElement("li")
+li.innerText = f
+box.appendChild(li)
+
+})
+
+}
+
+function renderSimilar(wine){
+
+fetch("/data/products.json")
+.then(r=>r.json())
+.then(products=>{
+
+const grid = document.getElementById("similar")
+
+const similar = products
+.filter(p=>p.category===wine.category && p.id!==wine.id)
 .slice(0,4)
 
-const grid = document.getElementById("related-grid")
+grid.innerHTML = ""
 
-related.forEach(p => {
+similar.forEach(p=>{
 
 const card = document.createElement("div")
-
-card.className = "wine-card"
+card.className = "card"
 
 card.innerHTML = `
+<img src="/assets/img/wine.jpg">
 
-<img src="${p.image}">
+<div class="card-body">
 
-<div class="wine-title">${p.name}</div>
+<div class="card-title">${p.name_ru}</div>
 
-<div class="wine-price">${p.price} ₽</div>
+<div class="card-price">${p.price} ₽</div>
 
-<a class="wine-btn" href="product.html?id=${p.id}">
+<a class="card-btn" href="/product.html?id=${p.id}">
 Открыть
 </a>
 
+</div>
 `
 
 grid.appendChild(card)
@@ -72,3 +94,7 @@ grid.appendChild(card)
 })
 
 })
+
+}
+
+loadProduct()

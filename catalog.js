@@ -1,32 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
+async function loadCatalog(){
+
+const res = await fetch("/data/products.json")
+const products = await res.json()
 
 const grid = document.getElementById("catalog-grid")
-const search = document.getElementById("search")
-const select = document.getElementById("category")
 
-let products = []
+const params = new URLSearchParams(window.location.search)
+const cat = params.get("cat")
 
-const params = new URLSearchParams(location.search)
-const urlCat = params.get("cat")
+let filtered = products
 
-fetch("data/products.json")
-.then(r => r.json())
-.then(data => {
-
-products = data
-
-if(urlCat){
-
-select.value = urlCat
-render(products.filter(p => p.category === urlCat))
-
-}else{
-
-render(products)
-
+if(cat){
+filtered = products.filter(p => p.category === cat)
 }
 
-})
+render(filtered)
 
 function render(list){
 
@@ -35,22 +23,26 @@ grid.innerHTML = ""
 list.forEach(p => {
 
 const card = document.createElement("div")
-card.className = "wine-card"
+card.className = "card"
 
 card.innerHTML = `
+<img src="/assets/img/wine.jpg">
 
-<img src="${p.image}">
+<div class="card-body">
 
-<div class="wine-title">${p.name}</div>
+<div class="card-type">${p.category}</div>
 
-<div class="wine-type">${p.type}</div>
+<div class="card-title">${p.name_ru}</div>
 
-<div class="wine-price">${p.price} ₽</div>
+<div class="card-sub">${p.color} ${p.sugar}</div>
 
-<a class="wine-btn" href="product.html?id=${p.id}">
+<div class="card-price">${p.price} ₽</div>
+
+<a class="card-btn" href="/product.html?id=${p.id}">
 Открыть
 </a>
 
+</div>
 `
 
 grid.appendChild(card)
@@ -59,29 +51,6 @@ grid.appendChild(card)
 
 }
 
-function filter(){
-
-let filtered = [...products]
-
-const q = search.value.toLowerCase()
-
-if(q){
-filtered = filtered.filter(p =>
-p.name.toLowerCase().includes(q)
-)
 }
 
-const cat = select.value
-
-if(cat !== "all"){
-filtered = filtered.filter(p => p.category === cat)
-}
-
-render(filtered)
-
-}
-
-search.addEventListener("input", filter)
-select.addEventListener("change", filter)
-
-})
+loadCatalog()
