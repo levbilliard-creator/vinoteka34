@@ -5,22 +5,7 @@ const products = await res.json()
 
 const grid = document.querySelector(".catalog-grid")
 
-const params = new URLSearchParams(window.location.search)
-const cat = params.get("cat")
-
-let list = products
-
-if(cat){
-list = products.filter(p => p.category === cat)
-}
-
-render(list)
-
-function render(items){
-
-grid.innerHTML = ""
-
-items.forEach(p=>{
+products.forEach(p=>{
 
 grid.innerHTML += `
 
@@ -34,7 +19,7 @@ grid.innerHTML += `
 
 <div class="card-name">${p.name}</div>
 
-<div class="card-sub">${p.region || ""}</div>
+<div class="card-sub">${p.region}</div>
 
 <div class="card-price">${p.price} ₽</div>
 
@@ -49,8 +34,6 @@ grid.innerHTML += `
 `
 
 })
-
-}
 
 }
 
