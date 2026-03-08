@@ -8,15 +8,11 @@ const grid = document.getElementById("catalog-grid")
 const params = new URLSearchParams(window.location.search)
 const cat = params.get("cat")
 
-let filtered = products
+let list = products
 
 if(cat){
-filtered = products.filter(p => p.category === cat)
+list = products.filter(p => p.category === cat)
 }
-
-render(filtered)
-
-function render(list){
 
 grid.innerHTML = ""
 
@@ -26,7 +22,7 @@ const card = document.createElement("div")
 card.className = "card"
 
 card.innerHTML = `
-<img src="/assets/img/wine.jpg">
+<img src="/assets/wine.jpg">
 
 <div class="card-body">
 
@@ -48,8 +44,6 @@ card.innerHTML = `
 grid.appendChild(card)
 
 })
-
-}
 
 }
 

@@ -14,7 +14,7 @@ document.getElementById("price").innerText = wine.price + " ₽"
 document.getElementById("desc").innerText = wine.description
 
 renderFood(wine)
-renderSimilar(wine)
+renderSimilar(products,wine)
 
 }
 
@@ -25,56 +25,44 @@ const box = document.getElementById("food")
 let food = []
 
 if(wine.color === "белое"){
-
 food = ["рыба","морепродукты","белое мясо","сыры"]
-
 }
 
 if(wine.color === "красное"){
-
 food = ["стейк","мясо","дичь","твёрдые сыры"]
-
 }
 
 if(wine.category === "sparkling"){
-
 food = ["устрицы","икра","морепродукты","десерты"]
-
 }
 
 box.innerHTML = ""
 
-food.forEach(f => {
-
-const li = document.createElement("li")
-li.innerText = f
+food.forEach(f=>{
+const li=document.createElement("li")
+li.innerText=f
 box.appendChild(li)
-
 })
 
 }
 
-function renderSimilar(wine){
-
-fetch("/data/products.json")
-.then(r=>r.json())
-.then(products=>{
+function renderSimilar(products,wine){
 
 const grid = document.getElementById("similar")
 
 const similar = products
-.filter(p=>p.category===wine.category && p.id!==wine.id)
+.filter(p => p.category === wine.category && p.id !== wine.id)
 .slice(0,4)
 
-grid.innerHTML = ""
+grid.innerHTML=""
 
 similar.forEach(p=>{
 
-const card = document.createElement("div")
-card.className = "card"
+const card=document.createElement("div")
+card.className="card"
 
-card.innerHTML = `
-<img src="/assets/img/wine.jpg">
+card.innerHTML=`
+<img src="/assets/wine.jpg">
 
 <div class="card-body">
 
@@ -90,8 +78,6 @@ card.innerHTML = `
 `
 
 grid.appendChild(card)
-
-})
 
 })
 
