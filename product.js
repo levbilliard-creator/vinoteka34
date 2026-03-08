@@ -6,31 +6,36 @@ const id = Number(params.get("id"))
 const res = await fetch("data/products.json")
 const products = await res.json()
 
-const product = products.find(p => p.id === id)
+const wine = products.find(p => p.id === id)
 
-if(!product) return
+if(!wine) return
 
-document.querySelector(".product-title").innerText = product.name
-document.querySelector(".product-price").innerText = product.price + " ₽"
-document.querySelector(".product-img").src = product.image
-document.querySelector(".product-desc").innerText = product.description || ""
+document.querySelector(".product-title").innerText = wine.name
+document.querySelector(".product-price").innerText = wine.price + " ₽"
+document.querySelector(".product-img").src = wine.image
+document.querySelector(".product-desc").innerText = wine.description || ""
 
-loadSimilar(products, product)
+loadSimilar(products,wine)
 
 }
 
-function loadSimilar(products, product){
+function loadSimilar(products,wine){
 
-const block = document.querySelector(".similar-grid")
+const grid = document.querySelector(".similar-grid")
+
+if(!grid) return
 
 const similar = products
-.filter(p => p.category === product.category && p.id !== product.id)
+.filter(p => p.category === wine.category && p.id !== wine.id)
 .slice(0,4)
 
-similar.forEach(p => {
+grid.innerHTML = ""
 
-block.innerHTML += `
-<a class="card" href="product.html?id=${p.id}">
+similar.forEach(p=>{
+
+grid.innerHTML += `
+
+<a href="product.html?id=${p.id}" class="card">
 
 <img src="${p.image}" class="card-img">
 
@@ -43,7 +48,9 @@ block.innerHTML += `
 </div>
 
 </a>
+
 `
+
 })
 
 }

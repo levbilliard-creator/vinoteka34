@@ -329,4 +329,15 @@ grid-template-columns:1fr;
 font-size:34px;
 }
 
+}.similar-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+margin-top:40px;
+}
+
+.card-btn{
+margin-top:15px;
+display:block;
+text-align:center;
 }

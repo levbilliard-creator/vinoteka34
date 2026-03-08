@@ -1,4 +1,4 @@
-async function loadCatalog() {
+async function loadCatalog(){
 
 const res = await fetch("data/products.json")
 const products = await res.json()
@@ -8,21 +8,22 @@ const grid = document.querySelector(".catalog-grid")
 const params = new URLSearchParams(window.location.search)
 const cat = params.get("cat")
 
-let filtered = products
+let list = products
 
 if(cat){
-filtered = products.filter(p => p.category === cat)
+list = products.filter(p => p.category === cat)
 }
 
-render(filtered)
+render(list)
 
-function render(list){
+function render(items){
 
 grid.innerHTML = ""
 
-list.forEach(p => {
+items.forEach(p=>{
 
 grid.innerHTML += `
+
 <div class="card">
 
 <img src="${p.image}" class="card-img">
@@ -33,17 +34,20 @@ grid.innerHTML += `
 
 <div class="card-name">${p.name}</div>
 
-<div class="card-sub">${p.country} ${p.year || ""}</div>
+<div class="card-sub">${p.region || ""}</div>
 
 <div class="card-price">${p.price} ₽</div>
 
-<a class="btn-open" href="product.html?id=${p.id}">
+<a href="product.html?id=${p.id}" class="btn-main card-btn">
 Открыть
 </a>
 
 </div>
+
 </div>
+
 `
+
 })
 
 }
