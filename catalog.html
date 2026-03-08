@@ -4,9 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Каталог вина</title>
+<title>Каталог</title>
 
 <link rel="stylesheet" href="styles.css">
 
@@ -41,13 +41,26 @@
 <main class="container">
 
 <h1 class="page-title">
-Каталог вина
+Каталог
 </h1>
+
+
+<div class="catalog-filters">
+
+<button data-type="all" class="filter active">Все</button>
+<button data-type="wine" class="filter">Вино</button>
+<button data-type="sparkling" class="filter">Игристое</button>
+<button data-type="spirit" class="filter">Крепкий алкоголь</button>
+<button data-type="tea" class="filter">Чай</button>
+<button data-type="grocery" class="filter">Бакалея</button>
+<button data-type="accessory" class="filter">Аксессуары</button>
+
+</div>
+
 
 <div id="catalogGrid" class="catalog-grid"></div>
 
 </main>
-
 
 <script src="catalog.js"></script>
 
