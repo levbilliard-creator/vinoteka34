@@ -7,37 +7,45 @@ const grid = document.querySelector(".catalog-grid")
 
 if(!grid) return
 
-const params = new URLSearchParams(window.location.search)
-const cat = params.get("cat")
-
-let list = products
-
-if(cat){
-list = products.filter(p => p.category === cat)
-}
-
-render(list)
-
-function render(items){
-
 grid.innerHTML = ""
 
-items.forEach(p => {
+products.forEach(p => {
+
+const name =
+p.name ||
+p.name_ru ||
+p.title ||
+p.product ||
+""
+
+const price =
+p.price ||
+p.cost ||
+""
+
+const image =
+p.image ||
+p.img ||
+"img/wine.jpg"
+
+const category =
+p.category ||
+p.type ||
+""
 
 grid.innerHTML += `
+
 <div class="card">
 
-<img src="${p.image}" class="card-img">
+<img src="${image}" class="card-img">
 
 <div class="card-body">
 
-<div class="card-type">${p.category || ""}</div>
+<div class="card-type">${category}</div>
 
-<div class="card-name">${p.name_ru || ""}</div>
+<div class="card-name">${name}</div>
 
-<div class="card-sub">${p.name_en || ""}</div>
-
-<div class="card-price">${p.price} ₽</div>
+<div class="card-price">${price} ₽</div>
 
 <a href="product.html?id=${p.id}" class="btn-main card-btn">
 Открыть
@@ -46,11 +54,10 @@ grid.innerHTML += `
 </div>
 
 </div>
+
 `
 
 })
-
-}
 
 }
 

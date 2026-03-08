@@ -10,51 +10,30 @@ const wine = products.find(p => p.id === id)
 
 if(!wine) return
 
+const name =
+wine.name ||
+wine.name_ru ||
+wine.title ||
+wine.product ||
+""
+
+const price =
+wine.price ||
+wine.cost ||
+""
+
+const image =
+wine.image ||
+wine.img ||
+"img/wine.jpg"
+
 const title = document.querySelector(".product-title")
-const sub = document.querySelector(".product-sub")
-const price = document.querySelector(".product-price")
+const priceBox = document.querySelector(".product-price")
 const img = document.querySelector(".product-img")
 
-if(title) title.innerText = wine.name_ru || ""
-if(sub) sub.innerText = wine.name_en || ""
-if(price) price.innerText = wine.price + " ₽"
-if(img) img.src = wine.image
-
-loadSimilar(products, wine)
-
-}
-
-function loadSimilar(products, wine){
-
-const grid = document.querySelector(".similar-grid")
-
-if(!grid) return
-
-const similar = products
-.filter(p => p.category === wine.category && p.id !== wine.id)
-.slice(0,4)
-
-grid.innerHTML = ""
-
-similar.forEach(p => {
-
-grid.innerHTML += `
-<a href="product.html?id=${p.id}" class="card">
-
-<img src="${p.image}" class="card-img">
-
-<div class="card-body">
-
-<div class="card-name">${p.name_ru}</div>
-
-<div class="card-price">${p.price} ₽</div>
-
-</div>
-
-</a>
-`
-
-})
+if(title) title.innerText = name
+if(priceBox) priceBox.innerText = price + " ₽"
+if(img) img.src = image
 
 }
 
