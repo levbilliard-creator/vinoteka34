@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Vinoteka</title>
+<title>Вино</title>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles.css">
 
 </head>
 
@@ -18,20 +18,22 @@
 
 <div class="container header-inner">
 
-<a href="index.html" class="logo">
-ВИНОТЕКА
-</a>
+<a href="/" class="logo">ВИНОТЕКА</a>
 
 <nav class="nav">
 
 <a href="#">Бутик</a>
 <a href="#">Клуб</a>
 <a href="#">Сомелье</a>
-<a href="catalog.html">Каталог</a>
+<a href="/catalog">Каталог</a>
 <a href="#">Дегустации</a>
 <a href="#">Контакты</a>
 
 </nav>
+
+<div class="phone">
++7 495 947-10-10
+</div>
 
 </div>
 
@@ -43,15 +45,31 @@
 
 <div class="container product-grid">
 
-<img class="product-img">
+<img src="/images/wine.jpg" class="product-img">
+
+<div>
+
+<h1 class="product-title">
+Шато-Тебо Мюскаде Севр э Мен
+</h1>
+
+<div class="product-meta">
+
+Белое • Сухое • Франция • Луара
+
+</div>
+
+<div class="product-price">
+2640 ₽
+</div>
 
 <div class="product-info">
 
-<h1 class="product-title"></h1>
+Минеральное и свежее вино из долины Луары.
+Отлично сочетается с морепродуктами,
+устрицами и легкими закусками.
 
-<div class="product-char"></div>
-
-<div class="product-price"></div>
+</div>
 
 </div>
 
@@ -65,17 +83,47 @@
 
 <div class="container">
 
-<h2>Похожие вина</h2>
+<div class="similar-title">
+Похожие вина
+</div>
 
-<div class="similar-grid"></div>
+<div class="similar-grid">
+
+<div class="card">
+
+<img src="/images/wine.jpg">
+
+<div class="card-body">
+
+<div class="card-category">
+Вино
+</div>
+
+<div class="card-title">
+Силекс Галино Сансер
+</div>
+
+<div class="card-type">
+Белое • Сухое
+</div>
+
+<div class="card-price">
+2640 ₽
+</div>
+
+<a href="#" class="card-btn">
+Открыть
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-
-<script src="product.js"></script>
-
 </body>
-
 </html>
