@@ -73,7 +73,6 @@ margin-bottom:20px;
 
 .hero h1{
 font-size:42px;
-line-height:1.2;
 margin-bottom:20px;
 }
 
@@ -113,10 +112,6 @@ text-decoration:none;
 font-size:14px;
 }
 
-.hero-categories a:hover{
-color:#c8a46a;
-}
-
 
 /* VIDEO */
 
@@ -149,10 +144,30 @@ border-radius:14px;
 overflow:hidden;
 }
 
-.card img{
+.card-img{
+position:relative;
+}
+
+.card-img img{
 width:100%;
 height:220px;
 object-fit:cover;
+}
+
+/* характеристика вина */
+
+.wine-badge{
+
+position:absolute;
+bottom:10px;
+left:10px;
+
+background:rgba(0,0,0,0.75);
+padding:6px 10px;
+
+font-size:12px;
+border-radius:6px;
+
 }
 
 .card-body{
@@ -169,12 +184,7 @@ margin-bottom:6px;
 font-size:15px;
 font-weight:600;
 margin-bottom:6px;
-}
-
-.card-type{
-font-size:13px;
-color:#8ea2b5;
-margin-bottom:10px;
+line-height:1.3;
 }
 
 .card-price{
@@ -188,62 +198,4 @@ color:black;
 padding:8px 18px;
 border-radius:6px;
 text-decoration:none;
-}
-
-
-/* PRODUCT */
-
-.product{
-padding:80px 0;
-}
-
-.product-grid{
-display:flex;
-gap:60px;
-}
-
-.product-img{
-width:420px;
-height:520px;
-object-fit:cover;
-border-radius:14px;
-}
-
-.product-title{
-font-size:34px;
-margin-bottom:15px;
-}
-
-.product-meta{
-color:#8ea2b5;
-margin-bottom:20px;
-}
-
-.product-price{
-font-size:26px;
-color:#c8a46a;
-margin-bottom:30px;
-}
-
-.product-info{
-line-height:1.6;
-color:#c5cdd6;
-}
-
-
-/* SIMILAR */
-
-.similar{
-padding:70px 0;
-}
-
-.similar-title{
-font-size:24px;
-margin-bottom:30px;
-}
-
-.similar-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
 }

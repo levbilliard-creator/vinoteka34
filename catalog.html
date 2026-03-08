@@ -8,7 +8,7 @@
 
 <title>Каталог</title>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 
 </head>
 
@@ -18,16 +18,14 @@
 
 <div class="container header-inner">
 
-<a class="logo" href="index.html">
-ВИНОТЕКА
-</a>
+<a href="/" class="logo">ВИНОТЕКА</a>
 
 <nav class="nav">
 
 <a href="#">Бутик</a>
 <a href="#">Клуб</a>
 <a href="#">Сомелье</a>
-<a href="catalog.html">Каталог</a>
+<a href="/catalog">Каталог</a>
 <a href="#">Дегустации</a>
 <a href="#">Контакты</a>
 
@@ -42,31 +40,160 @@
 </header>
 
 
+
 <section class="catalog">
 
-<div class="container">
+<div class="container catalog-grid">
 
-<div class="catalog-top">
+<!-- карточка -->
 
-<input class="search" placeholder="Поиск вина">
+<div class="card">
 
-<select class="category">
-<option value="">Все категории</option>
-<option value="wine">Вино</option>
-<option value="sparkling">Игристое</option>
-<option value="strong">Крепкий алкоголь</option>
-</select>
+<div class="card-img">
+
+<img src="../assets/wine.jpg">
+
+<div class="wine-badge">
+Белое • Сухое
+</div>
 
 </div>
 
-<div class="catalog-grid"></div>
+<div class="card-body">
+
+<div class="card-category">
+wine
+</div>
+
+<div class="card-title">
+Шато-Тебо Мюскаде Севр э Мен
+</div>
+
+<div class="card-price">
+2640 ₽
+</div>
+
+<a href="/product?id=1" class="card-btn">
+Открыть
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-img">
+
+<img src="../assets/wine.jpg">
+
+<div class="wine-badge">
+Красное • Сухое
+</div>
+
+</div>
+
+<div class="card-body">
+
+<div class="card-category">
+wine
+</div>
+
+<div class="card-title">
+Пино Нуар Тасмания
+</div>
+
+<div class="card-price">
+7960 ₽
+</div>
+
+<a href="#" class="card-btn">
+Открыть
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-img">
+
+<img src="../assets/wine.jpg">
+
+<div class="wine-badge">
+Белое • Полусухое
+</div>
+
+</div>
+
+<div class="card-body">
+
+<div class="card-category">
+wine
+</div>
+
+<div class="card-title">
+Сансер Силекс Галино
+</div>
+
+<div class="card-price">
+2640 ₽
+</div>
+
+<a href="#" class="card-btn">
+Открыть
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-img">
+
+<img src="../assets/wine.jpg">
+
+<div class="wine-badge">
+Красное • Сухое
+</div>
+
+</div>
+
+<div class="card-body">
+
+<div class="card-category">
+wine
+</div>
+
+<div class="card-title">
+Марселан Дивноморское
+</div>
+
+<div class="card-price">
+2640 ₽
+</div>
+
+<a href="#" class="card-btn">
+Открыть
+</a>
+
+</div>
+
+</div>
+
+
 
 </div>
 
 </section>
-
-
-<script src="catalog.js"></script>
 
 </body>
 </html>
