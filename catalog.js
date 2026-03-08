@@ -11,27 +11,12 @@ grid.innerHTML = ""
 
 products.forEach(p => {
 
-const name =
-p.name ||
-p.name_ru ||
-p.title ||
-p.product ||
-""
-
-const price =
-p.price ||
-p.cost ||
-""
-
-const image =
-p.image ||
-p.img ||
-"img/wine.jpg"
-
-const category =
-p.category ||
-p.type ||
-""
+const name = p.name || p.name_ru || p.title || ""
+const price = p.price || ""
+const image = p.image || p.img || ""
+const category = p.category || ""
+const color = p.color || ""
+const taste = p.taste || ""
 
 grid.innerHTML += `
 
@@ -44,6 +29,8 @@ grid.innerHTML += `
 <div class="card-type">${category}</div>
 
 <div class="card-name">${name}</div>
+
+<div class="card-char">${color} ${taste}</div>
 
 <div class="card-price">${price} ₽</div>
 
