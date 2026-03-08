@@ -1,86 +1,61 @@
 async function loadProduct(){
 
-const params = new URLSearchParams(window.location.search);
-const id = parseInt(params.get("id"));
+const params=new URLSearchParams(window.location.search);
+const id=parseInt(params.get("id"));
 
-const response = await fetch('/data/products.json');
-const products = await response.json();
+const response=await fetch("/data/products.json");
+const products=await response.json();
 
-const product = products.find(p => p.id === id);
+const product=products.find(p=>p.id===id);
 
-const page = document.getElementById("product");
+document.querySelector(".product-title").innerText=
+cleanName(product.name);
 
-const name = cleanName(product.name);
+document.querySelector(".product-meta").innerText=
+buildMeta(product.name);
 
-page.innerHTML = `
+document.querySelector(".product-price").innerText=
+product.price ? product.price+" ₽":"";
 
-<div class="product-wrapper">
+document.querySelector(".product-description").innerText=
+product.description || "";
 
-<div class="product-image">
-<img src="${product.image || '/assets/wine.jpg'}">
-</div>
-
-<div class="product-info">
-
-<div class="product-category">
-${detectType(product.name)}
-</div>
-
-<h1 class="product-title">
-${name}
-</h1>
-
-<div class="product-price">
-${product.price ? product.price + " ₽" : ""}
-</div>
-
-</div>
-
-</div>
-
-<div class="similar-block">
-
-<h2>Похожие позиции</h2>
-
-<div class="similar-grid" id="similar"></div>
-
-</div>
-
-`;
-
-renderSimilar(products, product);
+renderSimilar(products,product);
 
 }
 
-function renderSimilar(products, product){
+function renderSimilar(products,product){
 
-const similar = document.getElementById("similar");
+const grid=document.querySelector(".similar-grid");
 
-const same = products
-.filter(p => detectType(p.name) === detectType(product.name) && p.id !== product.id)
+grid.innerHTML="";
+
+const similar=products
+.filter(p=>detectType(p.name)===detectType(product.name) && p.id!==product.id)
 .slice(0,4);
 
-same.forEach(p=>{
+similar.forEach(p=>{
 
-const card = document.createElement("div");
+const card=document.createElement("div");
+card.className="catalog-card";
 
-card.className = "card";
+card.innerHTML=`
 
-card.innerHTML = `
+<div class="catalog-title">${cleanName(p.name)}</div>
 
-<img src="${p.image || '/assets/wine.jpg'}">
+<div class="catalog-price">${p.price ? p.price+" ₽":""}</div>
 
-<h3>${cleanName(p.name)}</h3>
+<button class="catalog-btn">Открыть</button>
 
 `;
 
-card.onclick = ()=>{
+card.querySelector("button").onclick=()=>{
 
-window.location.href = `/product.html?id=${p.id}`;
+window.location.href="/product.html?id="+p.id;
 
 };
 
-similar.appendChild(card);
+grid.appendChild(card);
 
 });
 
@@ -90,26 +65,44 @@ function cleanName(name){
 
 return name
 .replace(/^Вино\s*/i,"")
-.replace(/^Вино\s(красное|белое|розовое)\s*/i,"")
 .replace(/красное|белое|розовое/gi,"")
 .replace(/сухое|полусухое|полусладкое|сладкое/gi,"")
 .replace(/столовое/gi,"")
 .replace(/\s+/g," ")
 .replace(/\"/g,"")
-.trim()
+.trim();
+
+}
+
+function buildMeta(name){
+
+let color="";
+let sugar="";
+
+name=name.toLowerCase();
+
+if(name.includes("крас")) color="Красное";
+if(name.includes("бел")) color="Белое";
+if(name.includes("роз")) color="Розовое";
+
+if(name.includes("сух")) sugar="Сухое";
+if(name.includes("полусух")) sugar="Полусухое";
+if(name.includes("полуслад")) sugar="Полусладкое";
+
+return `${color} • ${sugar}`;
 
 }
 
 function detectType(name){
 
-name = name.toLowerCase();
+name=name.toLowerCase();
 
 if(name.includes("игрист")) return "Игристое";
 
 if(
 name.includes("виски") ||
-name.includes("джин") ||
 name.includes("водка") ||
+name.includes("джин") ||
 name.includes("коньяк") ||
 name.includes("ром")
 ){
