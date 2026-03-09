@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Каталог</title>
+<title>Каталог — Винотека</title>
 
 <link rel="stylesheet" href="styles.css">
 
@@ -21,12 +21,14 @@
 </div>
 
 <nav class="menu">
-<a href="#">Бутик</a>
+
+<a href="/">Бутик</a>
 <a href="#">Клуб</a>
 <a href="#">Сомелье</a>
 <a href="/catalog">Каталог</a>
 <a href="#">Дегустации</a>
 <a href="#">Контакты</a>
+
 </nav>
 
 <div class="phone">
@@ -35,11 +37,25 @@
 
 </header>
 
+
+
 <main class="container">
 
-<h1>Каталог</h1>
+<h1>Каталог напитков</h1>
 
 <input id="searchInput" placeholder="Поиск вина...">
+
+<div class="catalog-filters">
+
+<button class="filter active" data-type="all">Все</button>
+<button class="filter" data-type="wine">Вино</button>
+<button class="filter" data-type="sparkling">Игристое</button>
+<button class="filter" data-type="spirit">Крепкий алкоголь</button>
+<button class="filter" data-type="tea">Чай</button>
+<button class="filter" data-type="grocery">Бакалея</button>
+<button class="filter" data-type="accessory">Аксессуары</button>
+
+</div>
 
 <div id="catalogGrid" class="catalog-grid"></div>
 
