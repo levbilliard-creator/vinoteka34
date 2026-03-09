@@ -4,11 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вино</title>
 
-<title>Вино — Винотека</title>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles.css">
 
 </head>
 
@@ -16,58 +14,34 @@
 
 <header class="header">
 
-<div class="logo">
-<a href="/">ВИНОТЕКА</a>
-</div>
+<a href="/" class="logo">ВИНОТЕКА</a>
 
 <nav class="menu">
-
 <a href="/">Бутик</a>
 <a href="#">Клуб</a>
 <a href="#">Сомелье</a>
 <a href="/catalog">Каталог</a>
 <a href="#">Дегустации</a>
 <a href="#">Контакты</a>
-
 </nav>
 
-<div class="phone">
-+7 495 947-10-10
-</div>
+<div class="phone">+7 495 947-10-10</div>
 
 </header>
 
+<section class="product-page">
 
-<main class="container">
+<div id="product-info"></div>
 
-<div class="product-layout">
+<h2 class="similar-title">
+Похожие вина
+</h2>
 
-<div class="product-image">
-<img id="productImage" src="assets/wine-placeholder.jpg">
-</div>
+<div id="similar-products" class="catalog-grid"></div>
 
-<div>
+</section>
 
-<h1 id="productTitle" class="product-title"></h1>
-
-<div id="productType" class="product-type"></div>
-
-<div id="productPrice" class="product-price"></div>
-
-<p id="productDesc" class="product-desc"></p>
-
-</div>
-
-</div>
-
-
-<h2>Похожие вина</h2>
-
-<div id="similarGrid" class="catalog-grid"></div>
-
-</main>
-
-<script src="product.js"></script>
+<script src="/product.js"></script>
 
 </body>
 </html>

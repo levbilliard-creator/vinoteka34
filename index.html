@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Винотека</title>
 
-<title>Vinoteka</title>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles.css">
 
 </head>
 
@@ -16,162 +12,49 @@
 
 <header class="header">
 
-<div class="logo">
-<a href="/">ВИНОТЕКА</a>
-</div>
+<a href="/" class="logo">ВИНОТЕКА</a>
 
 <nav class="menu">
-
-<a href="#">Бутик</a>
+<a href="/">Бутик</a>
 <a href="#">Клуб</a>
 <a href="#">Сомелье</a>
 <a href="/catalog">Каталог</a>
 <a href="#">Дегустации</a>
 <a href="#">Контакты</a>
-
 </nav>
 
-<div class="phone">
-+7 495 947-10-10
-</div>
+<div class="phone">+7 495 947-10-10</div>
 
 </header>
 
-
-
-<main class="container">
-
-
 <section class="hero">
 
-<div class="hero-left">
+<video autoplay muted loop playsinline class="hero-video">
+<source src="/hero.mp4" type="video/mp4">
+</video>
+
+<div class="hero-content">
 
 <div class="hero-address">
 Москва • Карамышевская набережная 34
 </div>
 
-<h1>
+<h1 class="hero-title">
 Винный бутик<br>
 и клуб сомелье
 </h1>
 
-<p class="hero-sub">
-
-Более 500 вин со всего мира.  
-Подбор вина и дегустации.
-
+<p class="hero-text">
+Более 500 вин со всего мира. Подбор вина и дегустации.
 </p>
 
-<div class="hero-buttons">
-
-<a href="/catalog" class="btn-main">
-Каталог вина
-</a>
-
-<a href="#" class="btn-outline">
-Сомелье онлайн
+<a href="/catalog" class="hero-btn">
+Каталог вина Сомелье онлайн
 </a>
 
 </div>
 
-</div>
-
-
-
-<div class="hero-video">
-
-<video autoplay muted loop playsinline>
-
-<source src="hero.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-
 </section>
-
-
-
-<section class="features">
-
-<div class="feature">
-
-<div class="feature-title">
-500+ вин
-</div>
-
-<div class="feature-text">
-Коллекция со всего мира
-</div>
-
-</div>
-
-<div class="feature">
-
-<div class="feature-title">
-Сомелье
-</div>
-
-<div class="feature-text">
-Индивидуальный подбор вина
-</div>
-
-</div>
-
-<div class="feature">
-
-<div class="feature-title">
-Дегустации
-</div>
-
-<div class="feature-text">
-Закрытые винные вечера
-</div>
-
-</div>
-
-</section>
-
-
-
-<section class="categories">
-
-<h2>Каталог напитков</h2>
-
-<div class="category-grid">
-
-<a href="/catalog?type=wine" class="category-card">Вино</a>
-
-<a href="/catalog?type=sparkling" class="category-card">Игристое</a>
-
-<a href="/catalog?type=spirit" class="category-card">Крепкий алкоголь</a>
-
-<a href="/catalog?type=tea" class="category-card">Чай</a>
-
-<a href="/catalog?type=grocery" class="category-card">Бакалея</a>
-
-<a href="/catalog?type=accessory" class="category-card">Аксессуары</a>
-
-</div>
-
-</section>
-
-
-
-<section class="featured">
-
-<h2>Лучшие вина</h2>
-
-<div id="featuredGrid" class="catalog-grid"></div>
-
-</section>
-
-
-</main>
-
-
-<script src="app.js"></script>
 
 </body>
 </html>
