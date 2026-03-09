@@ -4,11 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Каталог — Винотека</title>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles.css">
 
 </head>
 
@@ -16,9 +14,7 @@
 
 <header class="header">
 
-<div class="logo">
-<a href="/">ВИНОТЕКА</a>
-</div>
+<div class="logo">ВИНОТЕКА</div>
 
 <nav class="menu">
 
@@ -38,38 +34,60 @@
 </header>
 
 
+<section class="catalog">
 
-<main class="container">
-
-<h1>Каталог напитков</h1>
-
-<input id="searchInput" placeholder="Поиск вина...">
+<h1 class="catalog-title">
+Каталог напитков
+</h1>
 
 
-<div class="catalog-filters">
+<input
+class="search"
+placeholder="Поиск вина..."
+id="search"
+/>
 
-<button class="filter active" data-type="all">Все</button>
 
-<button class="filter" data-type="wine">Вино</button>
+<div class="filters">
 
-<button class="filter" data-type="sparkling">Игристое</button>
+<button class="filter-btn active" data-filter="all">
+Все
+</button>
 
-<button class="filter" data-type="spirit">Крепкий алкоголь</button>
+<button class="filter-btn" data-filter="wine">
+Вино
+</button>
 
-<button class="filter" data-type="tea">Чай</button>
+<button class="filter-btn" data-filter="sparkling">
+Игристое
+</button>
 
-<button class="filter" data-type="grocery">Бакалея</button>
+<button class="filter-btn" data-filter="spirits">
+Крепкий алкоголь
+</button>
 
-<button class="filter" data-type="accessory">Аксессуары</button>
+<button class="filter-btn" data-filter="tea">
+Чай
+</button>
+
+<button class="filter-btn" data-filter="grocery">
+Бакалея
+</button>
+
+<button class="filter-btn" data-filter="accessories">
+Аксессуары
+</button>
 
 </div>
 
 
-<div id="catalogGrid" class="catalog-grid"></div>
+<div class="catalog-grid" id="catalog-grid">
+</div>
 
-</main>
 
-<script src="catalog.js"></script>
+</section>
+
+<script src="/catalog.js"></script>
 
 </body>
 </html>
