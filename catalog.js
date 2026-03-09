@@ -1,76 +1,70 @@
 const grid = document.getElementById("catalog-grid");
-const search = document.getElementById("search");
-const buttons = document.querySelectorAll(".filter-btn");
+const searchInput = document.getElementById("search");
+const filterButtons = document.querySelectorAll(".filter-btn");
 
 let products = [];
-let filter = "all";
+let currentFilter = "all";
 
-async function loadProducts(){
-
-const res = await fetch("./data/products.json");
-products = await res.json();
-
-render();
-
+async function loadProducts() {
+  const response = await fetch("/data/products.json");
+  products = await response.json();
+  renderProducts();
 }
 
-function render(){
+function renderProducts() {
+  if (!grid) return;
 
-let list = products;
+  let list = products;
 
-if(filter !== "all"){
-list = list.filter(p => p.category === filter);
+  if (currentFilter !== "all") {
+    list = list.filter(p => p.category === currentFilter);
+  }
+
+  const query = searchInput ? searchInput.value.toLowerCase() : "";
+
+  if (query) {
+    list = list.filter(p =>
+      p.name.toLowerCase().includes(query)
+    );
+  }
+
+  grid.innerHTML = list.map(p => `
+    <div class="product-card">
+
+      <div class="product-type">
+        ${p.type}
+      </div>
+
+      <div class="product-name">
+        ${p.name}
+      </div>
+
+      <div class="product-price">
+        ${p.price} ₽
+      </div>
+
+      <a class="product-btn" href="/product?id=${p.id}">
+        Открыть
+      </a>
+
+    </div>
+  `).join("");
 }
 
-const query = search.value?.toLowerCase() || "";
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
 
-if(query){
-list = list.filter(p =>
-p.name.toLowerCase().includes(query)
-);
-}
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
 
-grid.innerHTML = list.map(p => `
+    currentFilter = btn.dataset.filter;
 
-<div class="product-card">
-
-<div class="product-type">
-${p.type}
-</div>
-
-<div class="product-name">
-${p.name}
-</div>
-
-<div class="product-price">
-${p.price} ₽
-</div>
-
-<a class="product-btn" href="/product?id=${p.id}">
-Открыть
-</a>
-
-</div>
-
-`).join("");
-
-}
-
-buttons.forEach(btn => {
-
-btn.onclick = () => {
-
-buttons.forEach(b=>b.classList.remove("active"));
-btn.classList.add("active");
-
-filter = btn.dataset.filter;
-
-render();
-
-};
-
+    renderProducts();
+  });
 });
 
-search.oninput = render;
+if (searchInput) {
+  searchInput.addEventListener("input", renderProducts);
+}
 
 loadProducts();
