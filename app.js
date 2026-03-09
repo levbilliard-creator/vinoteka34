@@ -6,7 +6,7 @@ const products = await res.json()
 
 const grid = document.getElementById("featuredGrid")
 
-const featured = products.slice(0,6)
+const featured = products.slice(0,8)
 
 featured.forEach(p=>{
 
@@ -16,26 +16,20 @@ card.className="catalog-card"
 
 card.innerHTML=`
 
-<div class="catalog-type">
-${p.type}
-</div>
+<div class="catalog-type">${p.type || ""}</div>
 
-<div class="catalog-title">
-${p.name}
-</div>
+<div class="catalog-title">${p.name}</div>
 
-<div class="catalog-price">
-${p.price} ₽
-</div>
+<div class="catalog-price">${p.price} ₽</div>
 
-<button class="catalog-btn">
-Открыть
-</button>
+<button class="catalog-btn">Открыть</button>
 
 `
 
 card.querySelector("button").onclick=()=>{
+
 window.location.href="/product.html?id="+p.id
+
 }
 
 grid.appendChild(card)
