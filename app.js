@@ -1,41 +1,61 @@
-fetch('/data/products.json')
-.then(res => res.json())
-.then(products => {
+async function loadFeatured(){
 
-const featured = products.filter(p => p.featured === true).slice(0,6)
+const res = await fetch("data/products.json")
 
-const container = document.querySelector('#featured-wines')
+const products = await res.json()
 
-if(!container) return
+const featured = products.slice(0,6)
 
-container.innerHTML = featured.map(p => `
+const grid = document.getElementById("featuredGrid")
 
-<div class="wine-card">
+featured.forEach(p=>{
 
-<img src="${p.image}">
+const card = document.createElement("div")
 
-<div class="wine-category">
-${p.category}
+card.className="catalog-card"
+
+card.innerHTML=`
+
+<div class="catalog-type">
+${p.type || ""}
 </div>
 
-<div class="wine-title">
-${p.name}
+<div class="catalog-title">
+${cleanName(p.name)}
 </div>
 
-<div class="wine-type">
-${p.type}
-</div>
-
-<div class="wine-price">
+<div class="catalog-price">
 ${p.price} ₽
 </div>
 
-<a href="/product.html?id=${p.id}" class="wine-btn">
+<button class="catalog-btn">
 Открыть
-</a>
+</button>
 
-</div>
+`
 
-`).join('')
+card.querySelector("button").onclick=()=>{
+
+window.location.href="/product.html?id="+p.id
+
+}
+
+grid.appendChild(card)
 
 })
+
+}
+
+function cleanName(name){
+
+return name
+.replace(/Вино/i,"")
+.replace(/сортовое|марочное|столовое/gi,"")
+.replace(/красное|белое|розовое/gi,"")
+.replace(/сухое|полусухое|полусладкое|сладкое/gi,"")
+.replace(/\s+/g," ")
+.trim()
+
+}
+
+loadFeatured()

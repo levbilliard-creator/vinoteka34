@@ -22,12 +22,12 @@
 
 <nav class="menu">
 
-<a href="/">Бутик</a>
-<a href="/">Клуб</a>
-<a href="/">Сомелье</a>
+<a href="#">Бутик</a>
+<a href="#">Клуб</a>
+<a href="#">Сомелье</a>
 <a href="/catalog">Каталог</a>
-<a href="/">Дегустации</a>
-<a href="/">Контакты</a>
+<a href="#">Дегустации</a>
+<a href="#">Контакты</a>
 
 </nav>
 
@@ -56,7 +56,7 @@
 
 <p>
 Бутик, клуб и сомелье-сервис.
-Индивидуальный подход к каждому гостю.
+Индивидуальный подбор вина.
 </p>
 
 <div class="hero-buttons">
@@ -71,26 +71,13 @@
 
 </div>
 
-<div class="hero-categories">
-
-<a href="/catalog">Вино</a>
-<a href="/catalog">Игристое</a>
-<a href="/catalog">Крепкий алкоголь</a>
-<a href="/catalog">Чай</a>
-<a href="/catalog">Бакалея</a>
-<a href="/catalog">Аксессуары</a>
-
-</div>
-
 </div>
 
 
 <div class="hero-video">
 
 <video autoplay muted loop playsinline>
-
 <source src="hero.mp4" type="video/mp4">
-
 </video>
 
 </div>
@@ -98,7 +85,55 @@
 </section>
 
 
+
+<section class="categories">
+
+<h2>Каталог напитков</h2>
+
+<div class="category-grid">
+
+<a href="/catalog?type=wine" class="category-card">
+Вино
+</a>
+
+<a href="/catalog?type=sparkling" class="category-card">
+Игристое
+</a>
+
+<a href="/catalog?type=spirit" class="category-card">
+Крепкий алкоголь
+</a>
+
+<a href="/catalog?type=tea" class="category-card">
+Чай
+</a>
+
+<a href="/catalog?type=grocery" class="category-card">
+Бакалея
+</a>
+
+<a href="/catalog?type=accessory" class="category-card">
+Аксессуары
+</a>
+
+</div>
+
+</section>
+
+
+
+<section class="featured">
+
+<h2>Популярные вина</h2>
+
+<div id="featuredGrid" class="catalog-grid"></div>
+
+</section>
+
+
 </main>
+
+<script src="app.js"></script>
 
 </body>
 </html>
