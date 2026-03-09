@@ -282,8 +282,8 @@ font-weight:600;
 
 .product-layout{
 display:grid;
-grid-template-columns:380px 1fr;
-gap:50px;
+grid-template-columns:420px 1fr;
+gap:60px;
 margin-top:40px;
 }
 
@@ -293,7 +293,7 @@ border-radius:12px;
 }
 
 .product-title{
-font-size:34px;
+font-size:36px;
 margin-bottom:10px;
 }
 
@@ -303,14 +303,20 @@ margin-bottom:10px;
 }
 
 .product-price{
-font-size:22px;
+font-size:24px;
 margin-bottom:20px;
 }
 
 .product-desc{
 color:#9aa6b2;
-max-width:560px;
 line-height:1.6;
+max-width:600px;
+}
+
+/* SIMILAR WINES */
+
+.similar-grid{
+margin-top:20px;
 }
 
 /* MOBILE */
