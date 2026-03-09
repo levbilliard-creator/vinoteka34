@@ -1,92 +1,76 @@
-let products=[]
-let currentType="all"
+const grid = document.getElementById("catalog-grid");
+const search = document.getElementById("search");
+const buttons = document.querySelectorAll(".filter-btn");
 
-async function loadCatalog(){
+let products = [];
+let filter = "all";
 
-const res=await fetch("data/products.json")
+async function loadProducts(){
 
-products=await res.json()
+const res = await fetch("./data/products.json");
+products = await res.json();
 
-renderCatalog()
-
-}
-
-function renderCatalog(){
-
-const grid=document.getElementById("catalogGrid")
-
-grid.innerHTML=""
-
-const search=document
-.getElementById("searchInput")
-.value
-.toLowerCase()
-
-let filtered=products
-
-if(currentType!=="all"){
-
-filtered=filtered.filter(p=>
-(p.category||"wine")===currentType
-)
+render();
 
 }
 
-if(search){
+function render(){
 
-filtered=filtered.filter(p=>
-p.name.toLowerCase().includes(search)
-)
+let list = products;
+
+if(filter !== "all"){
+list = list.filter(p => p.category === filter);
+}
+
+const query = search.value?.toLowerCase() || "";
+
+if(query){
+list = list.filter(p =>
+p.name.toLowerCase().includes(query)
+);
+}
+
+grid.innerHTML = list.map(p => `
+
+<div class="product-card">
+
+<div class="product-type">
+${p.type}
+</div>
+
+<div class="product-name">
+${p.name}
+</div>
+
+<div class="product-price">
+${p.price} ₽
+</div>
+
+<a class="product-btn" href="/product?id=${p.id}">
+Открыть
+</a>
+
+</div>
+
+`).join("");
 
 }
 
-filtered.forEach(p=>{
+buttons.forEach(btn => {
 
-const card=document.createElement("div")
+btn.onclick = () => {
 
-card.className="catalog-card"
+buttons.forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
 
-card.innerHTML=`
+filter = btn.dataset.filter;
 
-<div class="catalog-type">${p.type||""}</div>
+render();
 
-<div class="catalog-title">${p.name}</div>
+};
 
-<div class="catalog-price">${p.price} ₽</div>
+});
 
-<button class="catalog-btn">Открыть</button>
+search.oninput = render;
 
-`
-
-card.querySelector("button").onclick=()=>{
-
-window.location.href="/product.html?id="+p.id
-
-}
-
-grid.appendChild(card)
-
-})
-
-}
-
-document.querySelectorAll(".filter").forEach(btn=>{
-
-btn.onclick=()=>{
-
-document.querySelectorAll(".filter")
-.forEach(b=>b.classList.remove("active"))
-
-btn.classList.add("active")
-
-currentType=btn.dataset.type
-
-renderCatalog()
-
-}
-
-})
-
-document.getElementById("searchInput").oninput=renderCatalog
-
-loadCatalog()
+loadProducts();
