@@ -4,6 +4,7 @@ let currentType = "all"
 async function loadCatalog(){
 
 const res = await fetch("data/products.json")
+
 products = await res.json()
 
 renderCatalog()
@@ -20,7 +21,20 @@ let filtered = products
 
 if(currentType !== "all"){
 
-filtered = products.filter(p => p.category === currentType)
+filtered = filtered.filter(p => p.category === currentType)
+
+}
+
+const search = document
+.getElementById("searchInput")
+.value
+.toLowerCase()
+
+if(search){
+
+filtered = filtered.filter(p =>
+p.name.toLowerCase().includes(search)
+)
 
 }
 
@@ -28,7 +42,7 @@ filtered.forEach(p=>{
 
 const card = document.createElement("div")
 
-card.className = "catalog-card"
+card.className="catalog-card"
 
 card.innerHTML = `
 
@@ -48,11 +62,21 @@ ${p.price} ₽
 Открыть
 </button>
 
+<button class="catalog-btn">
+Быстрый просмотр
+</button>
+
 `
 
-card.querySelector("button").onclick = () => {
+card.children[3].onclick = () => {
 
 window.location.href="/product.html?id="+p.id
+
+}
+
+card.children[4].onclick = () => {
+
+quickView(p)
 
 }
 
@@ -77,6 +101,26 @@ renderCatalog()
 }
 
 })
+
+document.getElementById("searchInput").oninput = renderCatalog
+
+function quickView(p){
+
+document.getElementById("quickTitle").innerText = cleanName(p.name)
+
+document.getElementById("quickType").innerText = p.type
+
+document.getElementById("quickPrice").innerText = p.price+" ₽"
+
+document.getElementById("quickView").style.display="flex"
+
+}
+
+function closeQuick(){
+
+document.getElementById("quickView").style.display="none"
+
+}
 
 function cleanName(name){
 

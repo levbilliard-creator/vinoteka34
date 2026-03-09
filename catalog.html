@@ -21,14 +21,12 @@
 </div>
 
 <nav class="menu">
-
 <a href="/">Бутик</a>
 <a href="/">Клуб</a>
 <a href="/">Сомелье</a>
 <a href="/catalog">Каталог</a>
 <a href="/">Дегустации</a>
 <a href="/">Контакты</a>
-
 </nav>
 
 <div class="phone">
@@ -37,13 +35,15 @@
 
 </header>
 
-
 <main class="container">
 
-<h1 class="page-title">
-Каталог
-</h1>
+<h1 class="page-title">Каталог</h1>
 
+<div class="catalog-search">
+
+<input id="searchInput" placeholder="Поиск вина...">
+
+</div>
 
 <div class="catalog-filters">
 
@@ -57,10 +57,29 @@
 
 </div>
 
-
 <div id="catalogGrid" class="catalog-grid"></div>
 
 </main>
+
+
+<div id="quickView" class="quick-view">
+
+<div class="quick-content">
+
+<h2 id="quickTitle"></h2>
+
+<div id="quickType"></div>
+
+<div id="quickPrice"></div>
+
+<div class="quick-close" onclick="closeQuick()">
+Закрыть
+</div>
+
+</div>
+
+</div>
+
 
 <script src="catalog.js"></script>
 
