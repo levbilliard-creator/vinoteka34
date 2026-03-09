@@ -1,67 +1,72 @@
 async function loadProduct(){
 
-const params=new URLSearchParams(window.location.search)
+const params = new URLSearchParams(window.location.search);
 
-const id=parseInt(params.get("id"))
+const id = params.get("id");
 
-const res=await fetch("data/products.json")
+const response = await fetch("/data/products.json");
 
-const products=await res.json()
+const products = await response.json();
 
-const product=products.find(p=>p.id===id)
+const product = products.find(p => p.id == id);
 
-if(!product)return
+const container = document.getElementById("product-info");
 
-document.getElementById("productTitle").innerText=product.name
+if(!product){
+container.innerHTML = "Вино не найдено";
+return;
+}
 
-document.getElementById("productType").innerText=product.type || ""
+container.innerHTML = `
 
-document.getElementById("productPrice").innerText=product.price+" ₽"
+<h1 class="product-title">
+${product.name}
+</h1>
 
-document.getElementById("productDesc").innerText=
-product.description ||
-"Описание вина будет добавлено сомелье."
+<div class="product-type">
+${product.type}
+</div>
 
-renderSimilar(products,product)
+<div class="product-price">
+${product.price} ₽
+</div>
+
+<p class="product-description">
+Описание вина будет добавлено сомелье.
+</p>
+
+`;
+
+const similar = products
+.filter(p => p.type === product.type && p.id != product.id)
+.slice(0,4);
+
+const similarContainer = document.getElementById("similar-products");
+
+similarContainer.innerHTML = similar.map(p => `
+
+<div class="product-card">
+
+<div class="product-type">
+${p.type}
+</div>
+
+<div class="product-name">
+${p.name}
+</div>
+
+<div class="product-price">
+${p.price} ₽
+</div>
+
+<a class="product-btn" href="/product?id=${p.id}">
+Открыть
+</a>
+
+</div>
+
+`).join("");
 
 }
 
-function renderSimilar(products,product){
-
-const grid=document.getElementById("similarGrid")
-
-const similar=products
-.filter(p=>p.type===product.type && p.id!==product.id)
-.slice(0,4)
-
-similar.forEach(p=>{
-
-const card=document.createElement("div")
-
-card.className="catalog-card"
-
-card.innerHTML=`
-
-<div class="catalog-type">${p.type||""}</div>
-
-<div class="catalog-title">${p.name}</div>
-
-<div class="catalog-price">${p.price} ₽</div>
-
-<button class="catalog-btn">Открыть</button>
-
-`
-
-card.querySelector("button").onclick=()=>{
-
-window.location.href="/product.html?id="+p.id
-
-}
-
-grid.appendChild(card)
-
-})
-
-}
-
-loadProduct()
+loadProduct();
