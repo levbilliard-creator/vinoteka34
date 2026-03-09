@@ -21,12 +21,12 @@
 </div>
 
 <nav class="menu">
-<a href="/">Бутик</a>
-<a href="/">Клуб</a>
-<a href="/">Сомелье</a>
+<a href="#">Бутик</a>
+<a href="#">Клуб</a>
+<a href="#">Сомелье</a>
 <a href="/catalog">Каталог</a>
-<a href="/">Дегустации</a>
-<a href="/">Контакты</a>
+<a href="#">Дегустации</a>
+<a href="#">Контакты</a>
 </nav>
 
 <div class="phone">
@@ -37,49 +37,13 @@
 
 <main class="container">
 
-<h1 class="page-title">Каталог</h1>
-
-<div class="catalog-search">
+<h1>Каталог</h1>
 
 <input id="searchInput" placeholder="Поиск вина...">
-
-</div>
-
-<div class="catalog-filters">
-
-<button data-type="all" class="filter active">Все</button>
-<button data-type="wine" class="filter">Вино</button>
-<button data-type="sparkling" class="filter">Игристое</button>
-<button data-type="spirit" class="filter">Крепкий алкоголь</button>
-<button data-type="tea" class="filter">Чай</button>
-<button data-type="grocery" class="filter">Бакалея</button>
-<button data-type="accessory" class="filter">Аксессуары</button>
-
-</div>
 
 <div id="catalogGrid" class="catalog-grid"></div>
 
 </main>
-
-
-<div id="quickView" class="quick-view">
-
-<div class="quick-content">
-
-<h2 id="quickTitle"></h2>
-
-<div id="quickType"></div>
-
-<div id="quickPrice"></div>
-
-<div class="quick-close" onclick="closeQuick()">
-Закрыть
-</div>
-
-</div>
-
-</div>
-
 
 <script src="catalog.js"></script>
 

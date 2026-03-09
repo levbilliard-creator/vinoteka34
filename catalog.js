@@ -1,5 +1,4 @@
-let products = []
-let currentType = "all"
+let products=[]
 
 async function loadCatalog(){
 
@@ -13,26 +12,17 @@ renderCatalog()
 
 function renderCatalog(){
 
-const grid = document.getElementById("catalogGrid")
+const grid=document.getElementById("catalogGrid")
 
 grid.innerHTML=""
 
-let filtered = products
+const search=document.getElementById("searchInput").value.toLowerCase()
 
-if(currentType !== "all"){
-
-filtered = filtered.filter(p => p.category === currentType)
-
-}
-
-const search = document
-.getElementById("searchInput")
-.value
-.toLowerCase()
+let filtered=products
 
 if(search){
 
-filtered = filtered.filter(p =>
+filtered=products.filter(p =>
 p.name.toLowerCase().includes(search)
 )
 
@@ -40,44 +30,24 @@ p.name.toLowerCase().includes(search)
 
 filtered.forEach(p=>{
 
-const card = document.createElement("div")
+const card=document.createElement("div")
 
 card.className="catalog-card"
 
-card.innerHTML = `
+card.innerHTML=`
 
-<div class="catalog-type">
-${p.type || ""}
-</div>
+<div class="catalog-type">${p.type}</div>
 
-<div class="catalog-title">
-${cleanName(p.name)}
-</div>
+<div class="catalog-title">${p.name}</div>
 
-<div class="catalog-price">
-${p.price} ₽
-</div>
+<div class="catalog-price">${p.price} ₽</div>
 
-<button class="catalog-btn">
-Открыть
-</button>
-
-<button class="catalog-btn">
-Быстрый просмотр
-</button>
+<button class="catalog-btn">Открыть</button>
 
 `
 
-card.children[3].onclick = () => {
-
+card.querySelector("button").onclick=()=>{
 window.location.href="/product.html?id="+p.id
-
-}
-
-card.children[4].onclick = () => {
-
-quickView(p)
-
 }
 
 grid.appendChild(card)
@@ -86,52 +56,6 @@ grid.appendChild(card)
 
 }
 
-document.querySelectorAll(".filter").forEach(btn=>{
-
-btn.onclick = ()=>{
-
-document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"))
-
-btn.classList.add("active")
-
-currentType = btn.dataset.type
-
-renderCatalog()
-
-}
-
-})
-
-document.getElementById("searchInput").oninput = renderCatalog
-
-function quickView(p){
-
-document.getElementById("quickTitle").innerText = cleanName(p.name)
-
-document.getElementById("quickType").innerText = p.type
-
-document.getElementById("quickPrice").innerText = p.price+" ₽"
-
-document.getElementById("quickView").style.display="flex"
-
-}
-
-function closeQuick(){
-
-document.getElementById("quickView").style.display="none"
-
-}
-
-function cleanName(name){
-
-return name
-.replace(/Вино/i,"")
-.replace(/сортовое|марочное|столовое/gi,"")
-.replace(/красное|белое|розовое/gi,"")
-.replace(/сухое|полусухое|полусладкое|сладкое/gi,"")
-.replace(/\s+/g," ")
-.trim()
-
-}
+document.getElementById("searchInput").oninput=renderCatalog
 
 loadCatalog()
