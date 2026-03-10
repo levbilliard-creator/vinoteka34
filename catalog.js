@@ -3,7 +3,6 @@ let products = []
 async function loadCatalog(){
 
 const response = await fetch("data/products.json")
-
 products = await response.json()
 
 renderCatalog(products)
@@ -40,6 +39,17 @@ return cleaned
 
 }
 
+function detectEnglish(name){
+
+const latin =
+name.match(/[A-Za-z].*/)
+
+if(latin) return latin[0]
+
+return ""
+
+}
+
 function renderCatalog(list){
 
 const container =
@@ -51,8 +61,11 @@ list.forEach(product => {
 
 const id = product.id
 
-const name =
+const ruName =
 cleanWineName(product.name)
+
+const enName =
+product.name_en || ""
 
 const type =
 product.type || ""
@@ -72,8 +85,12 @@ card.innerHTML = `
 ${type}
 </div>
 
+<div class="product-name-en">
+${enName}
+</div>
+
 <div class="product-name">
-${name}
+${ruName}
 </div>
 
 <div class="product-price">
@@ -92,47 +109,28 @@ container.appendChild(card)
 
 }
 
-function searchProducts(){
+function addEnglishNames(){
 
-const text =
-document.getElementById("search")
-.value
-.toLowerCase()
-
-const filtered =
-products.filter(p =>
-
-(p.name || "")
-.toLowerCase()
-.includes(text)
-
-)
-
-renderCatalog(filtered)
-
-}
-
-document
-.getElementById("search")
-.addEventListener("input", searchProducts)
-
-
-
-function cleanCatalog(){
+const updated =
+products.map(p => {
 
 const cleaned =
-products.map(p => {
+cleanWineName(p.name)
+
+const en =
+detectEnglish(cleaned)
 
 return {
 ...p,
-name: cleanWineName(p.name)
+name: cleaned,
+name_en: en
 }
 
 })
 
 const blob =
 new Blob(
-[JSON.stringify(cleaned,null,2)],
+[JSON.stringify(updated,null,2)],
 {type:"application/json"}
 )
 
@@ -143,15 +141,14 @@ a.href =
 URL.createObjectURL(blob)
 
 a.download =
-"products_clean.json"
+"products_with_en.json"
 
 a.click()
 
 }
 
 document
-.getElementById("cleanBtn")
-.addEventListener("click", cleanCatalog)
-
+.getElementById("addEnglishBtn")
+.addEventListener("click", addEnglishNames)
 
 loadCatalog()
