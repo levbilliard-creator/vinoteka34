@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Вино</title>
 
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -14,34 +14,58 @@
 
 <header class="header">
 
-<a href="/" class="logo">ВИНОТЕКА</a>
+<a href="index.html" class="logo">
+VINOTEKA34
+</a>
 
 <nav class="menu">
-<a href="/">Бутик</a>
-<a href="#">Клуб</a>
-<a href="#">Сомелье</a>
-<a href="/catalog">Каталог</a>
-<a href="#">Дегустации</a>
-<a href="#">Контакты</a>
-</nav>
 
-<div class="phone">+7 495 947-10-10</div>
+<a href="index.html">Главная</a>
+<a href="catalog.html">Каталог</a>
+
+</nav>
 
 </header>
 
 <section class="product-page">
 
-<div id="product-info"></div>
+<div class="product-type" id="type"></div>
+
+<h1 class="product-title" id="title"></h1>
+
+<div class="product-price" id="price"></div>
+
+<div class="product-description">
+
+<p>
+Рекомендуем подавать при температуре 10-12°C.
+Отлично сочетается с рыбой, морепродуктами и мягкими сырами.
+</p>
+
+</div>
+
+<br>
+
+<a
+id="telegramBtn"
+class="product-btn"
+target="_blank"
+>
+Связаться с винотекой
+</a>
 
 <h2 class="similar-title">
 Похожие вина
 </h2>
 
-<div id="similar-products" class="catalog-grid"></div>
+<div
+class="catalog-grid"
+id="similar"
+></div>
 
 </section>
 
-<script src="/product.js"></script>
+<script src="product.js"></script>
 
 </body>
 </html>

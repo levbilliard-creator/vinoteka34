@@ -1,92 +1,90 @@
-let products = [];
-
-function cleanWineName(name){
-
-if(!name) return "";
-
-let cleaned = name.toLowerCase();
-
-cleaned = cleaned
-.replace(/вино/g,"")
-.replace(/столовое/g,"")
-.replace(/сортовое/g,"")
-.replace(/марочное/g,"")
-.replace(/натуральное/g,"")
-.replace(/ординарное/g,"")
-.replace(/сухое/g,"")
-.replace(/полусухое/g,"")
-.replace(/полусладкое/g,"")
-.replace(/сладкое/g,"")
-.replace(/красное/g,"")
-.replace(/белое/g,"")
-.replace(/розовое/g,"")
-.replace(/игристое/g,"");
-
-cleaned = cleaned.replace(/\s+/g," ").trim();
-
-cleaned =
-cleaned.charAt(0).toUpperCase() +
-cleaned.slice(1);
-
-return cleaned;
-
-}
+let products = []
 
 function getId(){
 
 const params =
-new URLSearchParams(window.location.search);
+new URLSearchParams(window.location.search)
 
-return parseInt(params.get("id"));
+return parseInt(params.get("id"))
+
+}
+
+function cleanWineName(name){
+
+if(!name) return ""
+
+let cleaned = name
+
+cleaned = cleaned
+.replace(/вино/gi,"")
+.replace(/столовое/gi,"")
+.replace(/сортовое/gi,"")
+.replace(/марочное/gi,"")
+.replace(/натуральное/gi,"")
+.replace(/ординарное/gi,"")
+
+.replace(/сухое/gi,"")
+.replace(/полусухое/gi,"")
+.replace(/полусладкое/gi,"")
+.replace(/сладкое/gi,"")
+
+.replace(/белое/gi,"")
+.replace(/красное/gi,"")
+.replace(/розовое/gi,"")
+.replace(/игристое/gi,"")
+
+cleaned = cleaned.replace(/\s+/g," ").trim()
+
+return cleaned
 
 }
 
 async function loadProduct(){
 
 const response =
-await fetch("data/products.json");
+await fetch("data/products.json")
 
-products = await response.json();
+products =
+await response.json()
 
-const id = getId();
+const id =
+getId()
 
 const product =
-products.find(p => p.id === id);
+products.find(p => p.id === id)
 
-renderProduct(product);
+renderProduct(product)
 
-renderSimilar(product);
+renderSimilar(product)
 
 }
 
 function renderProduct(product){
 
-const title =
-document.querySelector(".product-title");
+document.getElementById("title")
+.innerText =
+cleanWineName(product.name)
 
-const type =
-document.querySelector(".product-type");
+document.getElementById("type")
+.innerText =
+product.type
 
-const price =
-document.querySelector(".product-price");
+document.getElementById("price")
+.innerText =
+product.price + " ₽"
 
-title.textContent =
-cleanWineName(product.name);
+const telegram =
+document.getElementById("telegramBtn")
 
-type.textContent =
-product.type;
-
-price.textContent =
-product.price + " ₽";
+telegram.href =
+"https://t.me/vinotekakaram"
 
 }
 
 function renderSimilar(product){
 
 const container =
-document.querySelector(".similar-grid");
-
-if(!container) return;
+document.getElementById("similar")
 
 const similar =
 products
@@ -94,17 +92,15 @@ products
 p.category === product.category &&
 p.id !== product.id
 )
-.slice(0,4);
-
-container.innerHTML = "";
+.slice(0,4)
 
 similar.forEach(wine => {
 
 const card =
-document.createElement("div");
+document.createElement("div")
 
 card.className =
-"product-card";
+"product-card"
 
 card.innerHTML = `
 
@@ -124,12 +120,12 @@ ${wine.price} ₽
 Открыть
 </a>
 
-`;
+`
 
-container.appendChild(card);
+container.appendChild(card)
 
-});
+})
 
 }
 
-loadProduct();
+loadProduct()
