@@ -1,48 +1,41 @@
-let allProducts = [];
+let products = [];
 
-async function loadCatalog(){
+async function loadCatalog() {
 
 const response = await fetch("data/products.json");
-
-const products = await response.json();
-
-allProducts = products;
+products = await response.json();
 
 renderCatalog(products);
 
 }
 
-function renderCatalog(products){
+function renderCatalog(list) {
 
 const container = document.getElementById("catalog");
 
 container.innerHTML = "";
 
-products.forEach(product => {
+list.forEach(product => {
 
-const nameEn = product.name_en || "";
+const id = product.id || "";
 const nameRu = product.name_ru || product.name || "";
-
+const nameEn = product.name_en || "";
+const image = product.image || "";
 const category = product.category || "";
-
 const color = product.color || "";
-
 const sugar = product.sugar || "";
-
-const price = product.price || "";
-
-const telegramText = encodeURIComponent(
-`Здравствуйте! Хочу заказать ${nameRu}`
-);
-
-const telegramLink =
-`https://t.me/vinotekakaram?text=${telegramText}`;
 
 const card = document.createElement("div");
 
 card.className = "wine-card";
 
 card.innerHTML = `
+
+<a href="product.html?id=${id}" class="card-link">
+
+<div class="wine-img-wrap">
+<img src="${image}" alt="${nameRu}">
+</div>
 
 <div class="wine-name-en">
 ${nameEn}
@@ -60,16 +53,6 @@ ${category}
 ${color} ${sugar}
 </div>
 
-<div class="wine-price">
-${price} ₽
-</div>
-
-<a
-class="wine-open"
-href="${telegramLink}"
-target="_blank"
->
-Заказать
 </a>
 
 `;
@@ -79,30 +62,5 @@ container.appendChild(card);
 });
 
 }
-
-function searchProducts(){
-
-const input =
-document.getElementById("searchInput")
-.value
-.toLowerCase();
-
-const filtered = allProducts.filter(product => {
-
-const name =
-(product.name_ru || product.name || "")
-.toLowerCase();
-
-return name.includes(input);
-
-});
-
-renderCatalog(filtered);
-
-}
-
-document
-.getElementById("searchInput")
-.addEventListener("keyup", searchProducts);
 
 loadCatalog();
