@@ -13,12 +13,29 @@ function cleanWineName(name){
 
 if(!name) return "";
 
-return name
-.replace(/\b(вино|столовое|сортовое|марочное|натуральное|ординарное)\b/gi,"")
-.replace(/\b(сухое|полусухое|полусладкое|сладкое)\b/gi,"")
-.replace(/\b(красное|белое|розовое|игристое)\b/gi,"")
-.replace(/\s+/g," ")
-.trim();
+let cleaned = name.toLowerCase();
+
+cleaned = cleaned
+.replace(/вино/g,"")
+.replace(/столовое/g,"")
+.replace(/сортовое/g,"")
+.replace(/марочное/g,"")
+.replace(/натуральное/g,"")
+.replace(/ординарное/g,"")
+.replace(/сухое/g,"")
+.replace(/полусухое/g,"")
+.replace(/полусладкое/g,"")
+.replace(/сладкое/g,"")
+.replace(/красное/g,"")
+.replace(/белое/g,"")
+.replace(/розовое/g,"")
+.replace(/игристое/g,"");
+
+cleaned = cleaned.replace(/\s+/g," ").trim();
+
+cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+
+return cleaned;
 
 }
 
@@ -30,15 +47,11 @@ container.innerHTML = "";
 list.forEach(product => {
 
 const id = product.id;
-
-const rawName = product.name || "";
-const name = cleanWineName(rawName);
-
+const name = cleanWineName(product.name);
 const type = product.type || "";
 const price = product.price || "";
 
 const card = document.createElement("div");
-
 card.className = "product-card";
 
 card.innerHTML = `
