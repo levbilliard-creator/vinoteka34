@@ -1,70 +1,108 @@
-const grid = document.getElementById("catalog-grid");
-const searchInput = document.getElementById("search");
-const filterButtons = document.querySelectorAll(".filter-btn");
+let allProducts = [];
 
-let products = [];
-let currentFilter = "all";
+async function loadCatalog(){
 
-async function loadProducts() {
-  const response = await fetch("/data/products.json");
-  products = await response.json();
-  renderProducts();
+const response = await fetch("data/products.json");
+
+const products = await response.json();
+
+allProducts = products;
+
+renderCatalog(products);
+
 }
 
-function renderProducts() {
-  if (!grid) return;
+function renderCatalog(products){
 
-  let list = products;
+const container = document.getElementById("catalog");
 
-  if (currentFilter !== "all") {
-    list = list.filter(p => p.category === currentFilter);
-  }
+container.innerHTML = "";
 
-  const query = searchInput ? searchInput.value.toLowerCase() : "";
+products.forEach(product => {
 
-  if (query) {
-    list = list.filter(p =>
-      p.name.toLowerCase().includes(query)
-    );
-  }
+const nameEn = product.name_en || "";
+const nameRu = product.name_ru || product.name || "";
 
-  grid.innerHTML = list.map(p => `
-    <div class="product-card">
+const category = product.category || "";
 
-      <div class="product-type">
-        ${p.type}
-      </div>
+const color = product.color || "";
 
-      <div class="product-name">
-        ${p.name}
-      </div>
+const sugar = product.sugar || "";
 
-      <div class="product-price">
-        ${p.price} ₽
-      </div>
+const price = product.price || "";
 
-      <a class="product-btn" href="/product?id=${p.id}">
-        Открыть
-      </a>
+const telegramText = encodeURIComponent(
+`Здравствуйте! Хочу заказать ${nameRu}`
+);
 
-    </div>
-  `).join("");
-}
+const telegramLink =
+`https://t.me/vinotekakaram?text=${telegramText}`;
 
-filterButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
+const card = document.createElement("div");
 
-    filterButtons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
+card.className = "wine-card";
 
-    currentFilter = btn.dataset.filter;
+card.innerHTML = `
 
-    renderProducts();
-  });
+<div class="wine-name-en">
+${nameEn}
+</div>
+
+<div class="wine-name-ru">
+${nameRu}
+</div>
+
+<div class="wine-type">
+${category}
+</div>
+
+<div class="wine-char">
+${color} ${sugar}
+</div>
+
+<div class="wine-price">
+${price} ₽
+</div>
+
+<a
+class="wine-open"
+href="${telegramLink}"
+target="_blank"
+>
+Заказать
+</a>
+
+`;
+
+container.appendChild(card);
+
 });
 
-if (searchInput) {
-  searchInput.addEventListener("input", renderProducts);
 }
 
-loadProducts();
+function searchProducts(){
+
+const input =
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+const filtered = allProducts.filter(product => {
+
+const name =
+(product.name_ru || product.name || "")
+.toLowerCase();
+
+return name.includes(input);
+
+});
+
+renderCatalog(filtered);
+
+}
+
+document
+.getElementById("searchInput")
+.addEventListener("keyup", searchProducts);
+
+loadCatalog();
