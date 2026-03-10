@@ -13,27 +13,25 @@ function cleanWineName(name){
 
 if(!name) return "";
 
-let cleaned = name.toLowerCase();
+let cleaned = name;
 
 cleaned = cleaned
-.replace(/вино/g,"")
-.replace(/столовое/g,"")
-.replace(/сортовое/g,"")
-.replace(/марочное/g,"")
-.replace(/натуральное/g,"")
-.replace(/ординарное/g,"")
-.replace(/сухое/g,"")
-.replace(/полусухое/g,"")
-.replace(/полусладкое/g,"")
-.replace(/сладкое/g,"")
-.replace(/красное/g,"")
-.replace(/белое/g,"")
-.replace(/розовое/g,"")
-.replace(/игристое/g,"");
+.replace(/вино/gi,"")
+.replace(/столовое/gi,"")
+.replace(/сортовое/gi,"")
+.replace(/марочное/gi,"")
+.replace(/натуральное/gi,"")
+.replace(/ординарное/gi,"")
+.replace(/сухое/gi,"")
+.replace(/полусухое/gi,"")
+.replace(/полусладкое/gi,"")
+.replace(/сладкое/gi,"")
+.replace(/красное/gi,"")
+.replace(/белое/gi,"")
+.replace(/розовое/gi,"")
+.replace(/игристое/gi,"");
 
 cleaned = cleaned.replace(/\s+/g," ").trim();
-
-cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
 
 return cleaned;
 
@@ -41,17 +39,30 @@ return cleaned;
 
 function renderCatalog(list){
 
-const container = document.getElementById("catalog-grid");
+const container =
+document.getElementById("catalog-grid");
+
 container.innerHTML = "";
 
 list.forEach(product => {
 
 const id = product.id;
-const name = cleanWineName(product.name);
-const type = product.type || "";
-const price = product.price || "";
 
-const card = document.createElement("div");
+const ruName =
+cleanWineName(product.name);
+
+const enName =
+product.name_en || "";
+
+const type =
+product.type || "";
+
+const price =
+product.price || "";
+
+const card =
+document.createElement("div");
+
 card.className = "product-card";
 
 card.innerHTML = `
@@ -60,8 +71,12 @@ card.innerHTML = `
 ${type}
 </div>
 
+<div class="product-name-en">
+${enName}
+</div>
+
 <div class="product-name">
-${name}
+${ruName}
 </div>
 
 <div class="product-price">
@@ -87,7 +102,8 @@ document.getElementById("search")
 .value
 .toLowerCase();
 
-const filtered = products.filter(p =>
+const filtered =
+products.filter(p =>
 
 (p.name || "")
 .toLowerCase()
