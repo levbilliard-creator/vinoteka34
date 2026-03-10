@@ -1,71 +1,134 @@
-async function loadProduct(){
+let products = [];
 
-const params = new URLSearchParams(window.location.search);
+function cleanWineName(name){
 
-const id = params.get("id");
+if(!name) return "";
 
-const response = await fetch("/data/products.json");
+let cleaned = name.toLowerCase();
 
-const products = await response.json();
+cleaned = cleaned
+.replace(/вино/g,"")
+.replace(/столовое/g,"")
+.replace(/сортовое/g,"")
+.replace(/марочное/g,"")
+.replace(/натуральное/g,"")
+.replace(/ординарное/g,"")
+.replace(/сухое/g,"")
+.replace(/полусухое/g,"")
+.replace(/полусладкое/g,"")
+.replace(/сладкое/g,"")
+.replace(/красное/g,"")
+.replace(/белое/g,"")
+.replace(/розовое/g,"")
+.replace(/игристое/g,"");
 
-const product = products.find(p => p.id == id);
+cleaned = cleaned.replace(/\s+/g," ").trim();
 
-const container = document.getElementById("product-info");
+cleaned =
+cleaned.charAt(0).toUpperCase() +
+cleaned.slice(1);
 
-if(!product){
-container.innerHTML="Вино не найдено";
-return;
+return cleaned;
+
 }
 
-container.innerHTML=`
+function getId(){
 
-<h1 class="product-title">
-${product.name}
-</h1>
+const params =
+new URLSearchParams(window.location.search);
 
-<div class="product-type">
-${product.type}
-</div>
+return parseInt(params.get("id"));
 
-<div class="product-price">
-${product.price} ₽
-</div>
+}
 
-<p class="product-description">
-Описание вина будет добавлено сомелье.
-</p>
+async function loadProduct(){
 
-`;
+const response =
+await fetch("data/products.json");
 
-const similar=products
-.filter(p=>p.type===product.type && p.id!=product.id)
+products = await response.json();
+
+const id = getId();
+
+const product =
+products.find(p => p.id === id);
+
+renderProduct(product);
+
+renderSimilar(product);
+
+}
+
+function renderProduct(product){
+
+const title =
+document.querySelector(".product-title");
+
+const type =
+document.querySelector(".product-type");
+
+const price =
+document.querySelector(".product-price");
+
+title.textContent =
+cleanWineName(product.name);
+
+type.textContent =
+product.type;
+
+price.textContent =
+product.price + " ₽";
+
+}
+
+function renderSimilar(product){
+
+const container =
+document.querySelector(".similar-grid");
+
+if(!container) return;
+
+const similar =
+products
+.filter(p =>
+p.category === product.category &&
+p.id !== product.id
+)
 .slice(0,4);
 
-const similarContainer=document.getElementById("similar-products");
+container.innerHTML = "";
 
-similarContainer.innerHTML=similar.map(p=>`
+similar.forEach(wine => {
 
-<div class="product-card">
+const card =
+document.createElement("div");
+
+card.className =
+"product-card";
+
+card.innerHTML = `
 
 <div class="product-type">
-${p.type}
+${wine.type}
 </div>
 
 <div class="product-name">
-${p.name}
+${cleanWineName(wine.name)}
 </div>
 
 <div class="product-price">
-${p.price} ₽
+${wine.price} ₽
 </div>
 
-<a class="product-btn" href="/product?id=${p.id}">
+<a href="product.html?id=${wine.id}" class="product-btn">
 Открыть
 </a>
 
-</div>
+`;
 
-`).join("");
+container.appendChild(card);
+
+});
 
 }
 
