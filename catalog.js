@@ -2,65 +2,66 @@ let products = [];
 
 async function loadCatalog() {
 
-const response = await fetch("data/products.json");
-products = await response.json();
+    const response = await fetch("data/products.json");
+    products = await response.json();
 
-renderCatalog(products);
+    renderCatalog(products);
+}
 
+function cleanWineName(name) {
+
+    if (!name) return "";
+
+    return name
+        .replace(/\b(вино|столовое|сортовое|марочное|натуральное|ординарное)\b/gi, "")
+        .replace(/\b(сухое|полусухое|полусладкое|сладкое)\b/gi, "")
+        .replace(/\b(красное|белое|розовое|игристое)\b/gi, "")
+        .replace(/\s+/g, " ")
+        .trim();
 }
 
 function renderCatalog(list) {
 
-const container = document.getElementById("catalog");
+    const container = document.getElementById("catalog");
+    container.innerHTML = "";
 
-container.innerHTML = "";
+    list.forEach(product => {
 
-list.forEach(product => {
+        const id = product.id;
+        const rawName = product.name || "";
+        const name = cleanWineName(rawName);
 
-const id = product.id || "";
-const nameRu = product.name_ru || product.name || "";
-const nameEn = product.name_en || "";
-const image = product.image || "";
-const category = product.category || "";
-const color = product.color || "";
-const sugar = product.sugar || "";
+        const type = product.type || "";
+        const price = product.price || "";
+        const image = product.image || "";
 
-const card = document.createElement("div");
+        const card = document.createElement("div");
+        card.className = "wine-card";
 
-card.className = "wine-card";
+        card.innerHTML = `
+        <a href="product.html?id=${id}" class="card-link">
 
-card.innerHTML = `
+            <div class="wine-img-wrap">
+                <img src="${image}" alt="${name}">
+            </div>
 
-<a href="product.html?id=${id}" class="card-link">
+            <div class="wine-name">
+                ${name}
+            </div>
 
-<div class="wine-img-wrap">
-<img src="${image}" alt="${nameRu}">
-</div>
+            <div class="wine-type">
+                ${type}
+            </div>
 
-<div class="wine-name-en">
-${nameEn}
-</div>
+            <div class="wine-price">
+                ${price} ₽
+            </div>
 
-<div class="wine-name-ru">
-${nameRu}
-</div>
+        </a>
+        `;
 
-<div class="wine-type">
-${category}
-</div>
-
-<div class="wine-char">
-${color} ${sugar}
-</div>
-
-</a>
-
-`;
-
-container.appendChild(card);
-
-});
-
+        container.appendChild(card);
+    });
 }
 
 loadCatalog();
