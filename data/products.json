@@ -1,4753 +1,4691 @@
 [
-{
-"id":1,
-"name":"Вино сортовое марочное сухое белое Шато-Тебо Мюскаде Севр э Мен",
-"category":"wine",
-"type":"белое сухое",
-"price":2640,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":2,
-"name":"Ля Жюдит Пино Нуар Тасмания Глейцер-Диксон",
-"category":"wine",
-"type":"красное сухое",
-"price":7960,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":3,
-"name":"Силекс Галино Сансер",
-"category":"wine",
-"type":"белое сухое",
-"price":2640,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":4,
-"name":"Марселан Дивноморское",
-"category":"wine",
-"type":"красное сухое",
-"price":2640,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":5,
-"name":"Вальдо Аквариус Блан де Блан Экстра Драй",
-"category":"sparkling",
-"type":"игристое",
-"price":2640,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":6,
-"name":"Barolo DOCG",
-"category":"wine",
-"type":"красное сухое",
-"price":9600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":7,
-"name":"Chablis Premier Cru",
-"category":"wine",
-"type":"белое сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":8,
-"name":"Chianti Classico Riserva",
-"category":"wine",
-"type":"красное сухое",
-"price":4100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":9,
-"name":"Rioja Reserva",
-"category":"wine",
-"type":"красное сухое",
-"price":3500,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":10,
-"name":"Prosecco DOC",
-"category":"sparkling",
-"type":"игристое",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":11,
-"name":"Champagne Brut Premier",
-"category":"sparkling",
-"type":"игристое",
-"price":8900,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":12,
-"name":"Pinot Grigio Veneto",
-"category":"wine",
-"type":"белое сухое",
-"price":1900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":13,
-"name":"Sauvignon Blanc Marlborough",
-"category":"wine",
-"type":"белое сухое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":14,
-"name":"Malbec Mendoza",
-"category":"wine",
-"type":"красное сухое",
-"price":2100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":15,
-"name":"Cabernet Sauvignon Napa",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":16,
-"name":"Merlot Bordeaux",
-"category":"wine",
-"type":"красное сухое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":17,
-"name":"Syrah Rhone",
-"category":"wine",
-"type":"красное сухое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":18,
-"name":"Gewurztraminer Alsace",
-"category":"wine",
-"type":"белое полусухое",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":19,
-"name":"Riesling Mosel",
-"category":"wine",
-"type":"белое полусухое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":20,
-"name":"Tempranillo Crianza",
-"category":"wine",
-"type":"красное сухое",
-"price":2500,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":21,
-"name":"Zinfandel California",
-"category":"wine",
-"type":"красное сухое",
-"price":3100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":22,
-"name":"Rose Provence",
-"category":"wine",
-"type":"розовое сухое",
-"price":2700,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":23,
-"name":"Cava Brut",
-"category":"sparkling",
-"type":"игристое",
-"price":2200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":24,
-"name":"Lambrusco",
-"category":"sparkling",
-"type":"игристое",
-"price":1800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":25,
-"name":"Brunello di Montalcino",
-"category":"wine",
-"type":"красное сухое",
-"price":11000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":26,
-"name":"Amarone della Valpolicella",
-"category":"wine",
-"type":"красное сухое",
-"price":9500,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":27,
-"name":"Soave Classico",
-"category":"wine",
-"type":"белое сухое",
-"price":2100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":28,
-"name":"Vermentino Sardegna",
-"category":"wine",
-"type":"белое сухое",
-"price":2300,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":29,
-"name":"Gruner Veltliner",
-"category":"wine",
-"type":"белое сухое",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":30,
-"name":"Sancerre Blanc",
-"category":"wine",
-"type":"белое сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":31,
-"name":"Chardonnay Burgundy",
-"category":"wine",
-"type":"белое сухое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":32,
-"name":"Pinot Noir Burgundy",
-"category":"wine",
-"type":"красное сухое",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":33,
-"name":"Saint-Emilion Grand Cru",
-"category":"wine",
-"type":"красное сухое",
-"price":5900,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":34,
-"name":"Medoc Bordeaux",
-"category":"wine",
-"type":"красное сухое",
-"price":3900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":35,
-"name":"Cotes du Rhone",
-"category":"wine",
-"type":"красное сухое",
-"price":2100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":36,
-"name":"Gigondas",
-"category":"wine",
-"type":"красное сухое",
-"price":4500,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":37,
-"name":"Vacqueyras",
-"category":"wine",
-"type":"красное сухое",
-"price":3900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":38,
-"name":"Bandol Rouge",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":39,
-"name":"Bandol Rose",
-"category":"wine",
-"type":"розовое сухое",
-"price":3100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":40,
-"name":"Chateau Margaux",
-"category":"wine",
-"type":"красное сухое",
-"price":32000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":41,
-"name":"Chateau Lafite Rothschild",
-"category":"wine",
-"type":"красное сухое",
-"price":41000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":42,
-"name":"Chateau Latour",
-"category":"wine",
-"type":"красное сухое",
-"price":38000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":43,
-"name":"Chateau Haut-Brion",
-"category":"wine",
-"type":"красное сухое",
-"price":29000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":44,
-"name":"Chateau Mouton Rothschild",
-"category":"wine",
-"type":"красное сухое",
-"price":35000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":45,
-"name":"Barbera d'Asti",
-"category":"wine",
-"type":"красное сухое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":46,
-"name":"Dolcetto d'Alba",
-"category":"wine",
-"type":"красное сухое",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":47,
-"name":"Montefalco Rosso",
-"category":"wine",
-"type":"красное сухое",
-"price":3100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":48,
-"name":"Nero d'Avola Sicilia",
-"category":"wine",
-"type":"красное сухое",
-"price":2100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":49,
-"name":"Etna Rosso",
-"category":"wine",
-"type":"красное сухое",
-"price":3900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":50,
-"name":"Etna Bianco",
-"category":"wine",
-"type":"белое сухое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":51,
-"name":"Falanghina Campania",
-"category":"wine",
-"type":"белое сухое",
-"price":2200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":52,
-"name":"Greco di Tufo",
-"category":"wine",
-"type":"белое сухое",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":53,
-"name":"Verdicchio dei Castelli",
-"category":"wine",
-"type":"белое сухое",
-"price":2300,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":54,
-"name":"Trebbiano d'Abruzzo",
-"category":"wine",
-"type":"белое сухое",
-"price":1900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":55,
-"name":"Primitivo di Manduria",
-"category":"wine",
-"type":"красное сухое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":56,
-"name":"Aglianico del Vulture",
-"category":"wine",
-"type":"красное сухое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":57,
-"name":"Valpolicella Classico",
-"category":"wine",
-"type":"красное сухое",
-"price":2100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":58,
-"name":"Valpolicella Ripasso",
-"category":"wine",
-"type":"красное сухое",
-"price":3300,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":59,
-"name":"Franciacorta Brut",
-"category":"sparkling",
-"type":"игристое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":60,
-"name":"Franciacorta Rose",
-"category":"sparkling",
-"type":"игристое",
-"price":5600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":61,
-"name":"Champagne Moet & Chandon",
-"category":"sparkling",
-"type":"игристое",
-"price":8900,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":62,
-"name":"Champagne Veuve Clicquot",
-"category":"sparkling",
-"type":"игристое",
-"price":9400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":63,
-"name":"Champagne Dom Perignon",
-"category":"sparkling",
-"type":"игристое",
-"price":42000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":64,
-"name":"Champagne Cristal",
-"category":"sparkling",
-"type":"игристое",
-"price":48000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":65,
-"name":"Champagne Bollinger",
-"category":"sparkling",
-"type":"игристое",
-"price":9800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":66,
-"name":"Champagne Ruinart Blanc de Blancs",
-"category":"sparkling",
-"type":"игристое",
-"price":10500,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":67,
-"name":"Champagne Taittinger",
-"category":"sparkling",
-"type":"игристое",
-"price":8700,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":68,
-"name":"Champagne Piper Heidsieck",
-"category":"sparkling",
-"type":"игристое",
-"price":7600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":69,
-"name":"Champagne Laurent Perrier",
-"category":"sparkling",
-"type":"игристое",
-"price":8800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":70,
-"name":"Champagne Krug Grande Cuvee",
-"category":"sparkling",
-"type":"игристое",
-"price":39000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":71,
-"name":"Cremant d'Alsace",
-"category":"sparkling",
-"type":"игристое",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":72,
-"name":"Cremant de Bourgogne",
-"category":"sparkling",
-"type":"игристое",
-"price":3100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":73,
-"name":"Cremant de Loire",
-"category":"sparkling",
-"type":"игристое",
-"price":2700,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":74,
-"name":"Pet Nat Natural Sparkling",
-"category":"sparkling",
-"type":"игристое",
-"price":2900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":75,
-"name":"Orange Wine Georgia",
-"category":"wine",
-"type":"оранжевое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":76,
-"name":"Qvevri Wine Kakheti",
-"category":"wine",
-"type":"оранжевое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":77,
-"name":"Kindzmarauli Georgia",
-"category":"wine",
-"type":"красное полусладкое",
-"price":2500,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":78,
-"name":"Saperavi Georgia",
-"category":"wine",
-"type":"красное сухое",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":79,
-"name":"Tsinandali Georgia",
-"category":"wine",
-"type":"белое сухое",
-"price":2200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":80,
-"name":"Mukuzani Georgia",
-"category":"wine",
-"type":"красное сухое",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":81,
-"name":"Tokaji Aszu",
-"category":"wine",
-"type":"десертное",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":82,
-"name":"Porto Ruby",
-"category":"wine",
-"type":"крепленое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":83,
-"name":"Porto Tawny",
-"category":"wine",
-"type":"крепленое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":84,
-"name":"Porto Vintage",
-"category":"wine",
-"type":"крепленое",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":85,
-"name":"Sherry Fino",
-"category":"wine",
-"type":"крепленое",
-"price":2300,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":86,
-"name":"Sherry Oloroso",
-"category":"wine",
-"type":"крепленое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":87,
-"name":"Madeira Malmsey",
-"category":"wine",
-"type":"крепленое",
-"price":3100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":88,
-"name":"Madeira Bual",
-"category":"wine",
-"type":"крепленое",
-"price":3000,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":89,
-"name":"Marsala Superiore",
-"category":"wine",
-"type":"крепленое",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":90,
-"name":"Vermouth Rosso",
-"category":"strong",
-"type":"вермут",
-"price":1900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":91,
-"name":"Vermouth Bianco",
-"category":"strong",
-"type":"вермут",
-"price":1900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":92,
-"name":"Aperol Aperitivo",
-"category":"strong",
-"type":"аперитив",
-"price":2300,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":93,
-"name":"Campari Bitter",
-"category":"strong",
-"type":"аперитив",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":94,
-"name":"Limoncello",
-"category":"strong",
-"type":"ликер",
-"price":2100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":95,
-"name":"Baileys Irish Cream",
-"category":"strong",
-"type":"ликер",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":96,
-"name":"Cointreau",
-"category":"strong",
-"type":"ликер",
-"price":2900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":97,
-"name":"Grand Marnier",
-"category":"strong",
-"type":"ликер",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":98,
-"name":"Jagermeister",
-"category":"strong",
-"type":"ликер",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":99,
-"name":"Amaretto",
-"category":"strong",
-"type":"ликер",
-"price":2200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":100,
-"name":"Sambuca",
-"category":"strong",
-"type":"ликер",
-"price":2100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":101,
-"name":"Hennessy VS",
-"category":"strong",
-"type":"коньяк",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":102,
-"name":"Hennessy VSOP",
-"category":"strong",
-"type":"коньяк",
-"price":9600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":103,
-"name":"Remy Martin VSOP",
-"category":"strong",
-"type":"коньяк",
-"price":8800,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":104,
-"name":"Courvoisier VSOP",
-"category":"strong",
-"type":"коньяк",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":105,
-"name":"Martell VS",
-"category":"strong",
-"type":"коньяк",
-"price":6100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":106,
-"name":"Martell XO",
-"category":"strong",
-"type":"коньяк",
-"price":21000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":107,
-"name":"Camus VSOP",
-"category":"strong",
-"type":"коньяк",
-"price":7400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":108,
-"name":"Ararat 5 Years",
-"category":"strong",
-"type":"коньяк",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":109,
-"name":"Ararat Akhtamar",
-"category":"strong",
-"type":"коньяк",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":110,
-"name":"Tesseron XO",
-"category":"strong",
-"type":"коньяк",
-"price":24000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":111,
-"name":"Chivas Regal 12",
-"category":"strong",
-"type":"виски",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":112,
-"name":"Chivas Regal 18",
-"category":"strong",
-"type":"виски",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":113,
-"name":"Johnnie Walker Black",
-"category":"strong",
-"type":"виски",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":114,
-"name":"Johnnie Walker Blue",
-"category":"strong",
-"type":"виски",
-"price":24000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":115,
-"name":"Macallan 12",
-"category":"strong",
-"type":"виски",
-"price":9800,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":116,
-"name":"Macallan 18",
-"category":"strong",
-"type":"виски",
-"price":26000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":117,
-"name":"Glenfiddich 12",
-"category":"strong",
-"type":"виски",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":118,
-"name":"Glenfiddich 18",
-"category":"strong",
-"type":"виски",
-"price":11000,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":119,
-"name":"Lagavulin 16",
-"category":"strong",
-"type":"виски",
-"price":12000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":120,
-"name":"Talisker 10",
-"category":"strong",
-"type":"виски",
-"price":6400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":121,
-"name":"Jameson",
-"category":"strong",
-"type":"виски",
-"price":3100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":122,
-"name":"Bushmills 10",
-"category":"strong",
-"type":"виски",
-"price":3500,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":123,
-"name":"Jack Daniels",
-"category":"strong",
-"type":"виски",
-"price":3300,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":124,
-"name":"Woodford Reserve",
-"category":"strong",
-"type":"бурбон",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":125,
-"name":"Maker's Mark",
-"category":"strong",
-"type":"бурбон",
-"price":3900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":126,
-"name":"Bulleit Bourbon",
-"category":"strong",
-"type":"бурбон",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":127,
-"name":"Jim Beam",
-"category":"strong",
-"type":"бурбон",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":128,
-"name":"Wild Turkey 101",
-"category":"strong",
-"type":"бурбон",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":129,
-"name":"Don Julio Blanco",
-"category":"strong",
-"type":"текила",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":130,
-"name":"Don Julio Anejo",
-"category":"strong",
-"type":"текила",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":131,
-"name":"Patron Silver",
-"category":"strong",
-"type":"текила",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":132,
-"name":"Patron Anejo",
-"category":"strong",
-"type":"текила",
-"price":6800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":133,
-"name":"Olmeca Blanco",
-"category":"strong",
-"type":"текила",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":134,
-"name":"Jose Cuervo Gold",
-"category":"strong",
-"type":"текила",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":135,
-"name":"Grey Goose",
-"category":"strong",
-"type":"водка",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":136,
-"name":"Beluga Noble",
-"category":"strong",
-"type":"водка",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":137,
-"name":"Belvedere",
-"category":"strong",
-"type":"водка",
-"price":3800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":138,
-"name":"Absolut",
-"category":"strong",
-"type":"водка",
-"price":2200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":139,
-"name":"Finlandia",
-"category":"strong",
-"type":"водка",
-"price":2100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":140,
-"name":"Russian Standard",
-"category":"strong",
-"type":"водка",
-"price":1900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":141,
-"name":"Bombay Sapphire",
-"category":"strong",
-"type":"джин",
-"price":3100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":142,
-"name":"Hendrick's Gin",
-"category":"strong",
-"type":"джин",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":143,
-"name":"Tanqueray",
-"category":"strong",
-"type":"джин",
-"price":3000,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":144,
-"name":"Beefeater",
-"category":"strong",
-"type":"джин",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":145,
-"name":"Monkey 47",
-"category":"strong",
-"type":"джин",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":146,
-"name":"Bacardi Carta Blanca",
-"category":"strong",
-"type":"ром",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":147,
-"name":"Bacardi Reserva",
-"category":"strong",
-"type":"ром",
-"price":3100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":148,
-"name":"Havana Club 7",
-"category":"strong",
-"type":"ром",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":149,
-"name":"Diplomatico Reserva",
-"category":"strong",
-"type":"ром",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":150,
-"name":"Zacapa 23",
-"category":"strong",
-"type":"ром",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":151,
-"name":"Plantation XO",
-"category":"strong",
-"type":"ром",
-"price":4800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":152,
-"name":"Captain Morgan",
-"category":"strong",
-"type":"ром",
-"price":2300,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":153,
-"name":"Kraken Black Spiced",
-"category":"strong",
-"type":"ром",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":154,
-"name":"Mount Gay XO",
-"category":"strong",
-"type":"ром",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":155,
-"name":"Appleton Estate",
-"category":"strong",
-"type":"ром",
-"price":3800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":156,
-"name":"Ron Zacapa XO",
-"category":"strong",
-"type":"ром",
-"price":9600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":157,
-"name":"Flor de Cana 12",
-"category":"strong",
-"type":"ром",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":158,
-"name":"Flor de Cana 18",
-"category":"strong",
-"type":"ром",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":159,
-"name":"Dictador 12",
-"category":"strong",
-"type":"ром",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":160,
-"name":"Dictador 20",
-"category":"strong",
-"type":"ром",
-"price":7600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":161,
-"name":"Santa Teresa 1796",
-"category":"strong",
-"type":"ром",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":162,
-"name":"Mount Gay Black Barrel",
-"category":"strong",
-"type":"ром",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":163,
-"name":"Havana Club Seleccion",
-"category":"strong",
-"type":"ром",
-"price":5800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":164,
-"name":"Barcelo Imperial",
-"category":"strong",
-"type":"ром",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":165,
-"name":"Doorly's XO",
-"category":"strong",
-"type":"ром",
-"price":3900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":166,
-"name":"Diplomatico Planas",
-"category":"strong",
-"type":"ром",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":167,
-"name":"Bacardi 8",
-"category":"strong",
-"type":"ром",
-"price":3800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":168,
-"name":"Captain Morgan Dark",
-"category":"strong",
-"type":"ром",
-"price":2500,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":169,
-"name":"El Dorado 12",
-"category":"strong",
-"type":"ром",
-"price":4400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":170,
-"name":"El Dorado 15",
-"category":"strong",
-"type":"ром",
-"price":5600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":171,
-"name":"Brugal 1888",
-"category":"strong",
-"type":"ром",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":172,
-"name":"Angostura 1919",
-"category":"strong",
-"type":"ром",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":173,
-"name":"Angostura 1824",
-"category":"strong",
-"type":"ром",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":174,
-"name":"Plantation Barbados",
-"category":"strong",
-"type":"ром",
-"price":3800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":175,
-"name":"Plantation Jamaica",
-"category":"strong",
-"type":"ром",
-"price":4100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":176,
-"name":"Beluga Gold Line",
-"category":"strong",
-"type":"водка",
-"price":7600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":177,
-"name":"Beluga Transatlantic",
-"category":"strong",
-"type":"водка",
-"price":4800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":178,
-"name":"Mamont Vodka",
-"category":"strong",
-"type":"водка",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":179,
-"name":"Kauffman Vodka",
-"category":"strong",
-"type":"водка",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":180,
-"name":"Stolichnaya Elit",
-"category":"strong",
-"type":"водка",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":181,
-"name":"Absolut Elyx",
-"category":"strong",
-"type":"водка",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":182,
-"name":"Grey Goose VX",
-"category":"strong",
-"type":"водка",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":183,
-"name":"Ciroc",
-"category":"strong",
-"type":"водка",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":184,
-"name":"Crystal Head",
-"category":"strong",
-"type":"водка",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":185,
-"name":"Russian Standard Gold",
-"category":"strong",
-"type":"водка",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":186,
-"name":"Tanqueray No.10",
-"category":"strong",
-"type":"джин",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":187,
-"name":"Bombay Premier Cru",
-"category":"strong",
-"type":"джин",
-"price":3900,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":188,
-"name":"Hendrick's Lunar",
-"category":"strong",
-"type":"джин",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":189,
-"name":"Gin Mare",
-"category":"strong",
-"type":"джин",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":190,
-"name":"The Botanist Gin",
-"category":"strong",
-"type":"джин",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":191,
-"name":"Roku Gin",
-"category":"strong",
-"type":"джин",
-"price":3800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":192,
-"name":"Sipsmith Gin",
-"category":"strong",
-"type":"джин",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":193,
-"name":"Monkey 47 Sloe",
-"category":"strong",
-"type":"джин",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":194,
-"name":"Nordes Gin",
-"category":"strong",
-"type":"джин",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":195,
-"name":"Gin Raw",
-"category":"strong",
-"type":"джин",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":196,
-"name":"Jose Cuervo Reserva",
-"category":"strong",
-"type":"текила",
-"price":5600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":197,
-"name":"Clase Azul Reposado",
-"category":"strong",
-"type":"текила",
-"price":24000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":198,
-"name":"Herradura Anejo",
-"category":"strong",
-"type":"текила",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":199,
-"name":"Espolon Reposado",
-"category":"strong",
-"type":"текила",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":200,
-"name":"Casamigos Reposado",
-"category":"strong",
-"type":"текила",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":201,
-"name":"Casamigos Blanco",
-"category":"strong",
-"type":"текила",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":202,
-"name":"Casamigos Anejo",
-"category":"strong",
-"type":"текила",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":203,
-"name":"Patron Reposado",
-"category":"strong",
-"type":"текила",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":204,
-"name":"Don Julio Reposado",
-"category":"strong",
-"type":"текила",
-"price":6400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":205,
-"name":"1800 Silver",
-"category":"strong",
-"type":"текила",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":206,
-"name":"1800 Anejo",
-"category":"strong",
-"type":"текила",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":207,
-"name":"El Jimador Blanco",
-"category":"strong",
-"type":"текила",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":208,
-"name":"El Jimador Reposado",
-"category":"strong",
-"type":"текила",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":209,
-"name":"Sauza Gold",
-"category":"strong",
-"type":"текила",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":210,
-"name":"Sauza Silver",
-"category":"strong",
-"type":"текила",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":211,
-"name":"Baileys Salted Caramel",
-"category":"strong",
-"type":"ликер",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":212,
-"name":"Baileys Chocolate",
-"category":"strong",
-"type":"ликер",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":213,
-"name":"Kahlua",
-"category":"strong",
-"type":"ликер",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":214,
-"name":"Malibu",
-"category":"strong",
-"type":"ликер",
-"price":2200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":215,
-"name":"Disaronno",
-"category":"strong",
-"type":"ликер",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":216,
-"name":"Frangelico",
-"category":"strong",
-"type":"ликер",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":217,
-"name":"Chartreuse Green",
-"category":"strong",
-"type":"ликер",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":218,
-"name":"Chartreuse Yellow",
-"category":"strong",
-"type":"ликер",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":219,
-"name":"Drambuie",
-"category":"strong",
-"type":"ликер",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":220,
-"name":"Benedictine",
-"category":"strong",
-"type":"ликер",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":221,
-"name":"Jagermeister Manifest",
-"category":"strong",
-"type":"ликер",
-"price":3800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":222,
-"name":"Fernet Branca",
-"category":"strong",
-"type":"ликер",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":223,
-"name":"Averna Amaro",
-"category":"strong",
-"type":"ликер",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":224,
-"name":"Montenegro Amaro",
-"category":"strong",
-"type":"ликер",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":225,
-"name":"Ramazzotti Amaro",
-"category":"strong",
-"type":"ликер",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":226,
-"name":"Luxardo Maraschino",
-"category":"strong",
-"type":"ликер",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":227,
-"name":"St Germain",
-"category":"strong",
-"type":"ликер",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":228,
-"name":"Cynar",
-"category":"strong",
-"type":"ликер",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":229,
-"name":"Galliano",
-"category":"strong",
-"type":"ликер",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":230,
-"name":"Suze",
-"category":"strong",
-"type":"ликер",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":231,
-"name":"Ricard Pastis",
-"category":"strong",
-"type":"ликер",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":232,
-"name":"Pernod",
-"category":"strong",
-"type":"ликер",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":233,
-"name":"Absinthe La Fee",
-"category":"strong",
-"type":"абсент",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":234,
-"name":"Absinthe Xenta",
-"category":"strong",
-"type":"абсент",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":235,
-"name":"Grappa Nonino",
-"category":"strong",
-"type":"граппа",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":236,
-"name":"Grappa Bocchino",
-"category":"strong",
-"type":"граппа",
-"price":3800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":237,
-"name":"Calvados Pere Magloire",
-"category":"strong",
-"type":"кальвадос",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":238,
-"name":"Calvados Boulard",
-"category":"strong",
-"type":"кальвадос",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":239,
-"name":"Armagnac Delord",
-"category":"strong",
-"type":"арманьяк",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":240,
-"name":"Armagnac Castarede",
-"category":"strong",
-"type":"арманьяк",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":241,
-"name":"Metaxa 7",
-"category":"strong",
-"type":"бренди",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":242,
-"name":"Metaxa 12",
-"category":"strong",
-"type":"бренди",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":243,
-"name":"Torres 10",
-"category":"strong",
-"type":"бренди",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":244,
-"name":"Torres 20",
-"category":"strong",
-"type":"бренди",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":245,
-"name":"Carlos I",
-"category":"strong",
-"type":"бренди",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":246,
-"name":"Cardenal Mendoza",
-"category":"strong",
-"type":"бренди",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":247,
-"name":"Osborne 103",
-"category":"strong",
-"type":"бренди",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":248,
-"name":"Gran Duque Alba",
-"category":"strong",
-"type":"бренди",
-"price":5600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":249,
-"name":"Lepanto Brandy",
-"category":"strong",
-"type":"бренди",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":250,
-"name":"Brandy de Jerez XO",
-"category":"strong",
-"type":"бренди",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":251,
-"name":"Barolo Riserva",
-"category":"wine",
-"type":"красное сухое",
-"price":12400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":252,
-"name":"Barbaresco DOCG",
-"category":"wine",
-"type":"красное сухое",
-"price":9800,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":253,
-"name":"Nebbiolo Langhe",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":254,
-"name":"Dolcetto Piemonte",
-"category":"wine",
-"type":"красное сухое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":255,
-"name":"Barbera Superiore",
-"category":"wine",
-"type":"красное сухое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":256,
-"name":"Valpolicella Superiore",
-"category":"wine",
-"type":"красное сухое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":257,
-"name":"Chianti Classico",
-"category":"wine",
-"type":"красное сухое",
-"price":3100,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":258,
-"name":"Rosso di Montalcino",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":259,
-"name":"Super Tuscan",
-"category":"wine",
-"type":"красное сухое",
-"price":8800,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":260,
-"name":"Sassicaia",
-"category":"wine",
-"type":"красное сухое",
-"price":42000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":261,
-"name":"Ornellaia",
-"category":"wine",
-"type":"красное сухое",
-"price":36000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":262,
-"name":"Tignanello",
-"category":"wine",
-"type":"красное сухое",
-"price":21000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":263,
-"name":"Le Volte",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":264,
-"name":"Guidalberto",
-"category":"wine",
-"type":"красное сухое",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":265,
-"name":"Bolgheri Rosso",
-"category":"wine",
-"type":"красное сухое",
-"price":6400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":266,
-"name":"Bolgheri Superiore",
-"category":"wine",
-"type":"красное сухое",
-"price":9800,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":267,
-"name":"Primitivo Puglia",
-"category":"wine",
-"type":"красное сухое",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":268,
-"name":"Negroamaro Salento",
-"category":"wine",
-"type":"красное сухое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":269,
-"name":"Aglianico Campania",
-"category":"wine",
-"type":"красное сухое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":270,
-"name":"Etna Rosso Riserva",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":271,
-"name":"Verdicchio Classico",
-"category":"wine",
-"type":"белое сухое",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":272,
-"name":"Gavi di Gavi",
-"category":"wine",
-"type":"белое сухое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":273,
-"name":"Soave DOC",
-"category":"wine",
-"type":"белое сухое",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":274,
-"name":"Pinot Grigio Alto Adige",
-"category":"wine",
-"type":"белое сухое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":275,
-"name":"Trebbiano Toscana",
-"category":"wine",
-"type":"белое сухое",
-"price":2200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":276,
-"name":"Vermentino Toscana",
-"category":"wine",
-"type":"белое сухое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":277,
-"name":"Falanghina DOC",
-"category":"wine",
-"type":"белое сухое",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":278,
-"name":"Greco di Tufo Riserva",
-"category":"wine",
-"type":"белое сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":279,
-"name":"Pecorino Abruzzo",
-"category":"wine",
-"type":"белое сухое",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":280,
-"name":"Fiano Avellino",
-"category":"wine",
-"type":"белое сухое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":281,
-"name":"Prosecco Superiore",
-"category":"sparkling",
-"type":"игристое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":282,
-"name":"Prosecco Valdobbiadene",
-"category":"sparkling",
-"type":"игристое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":283,
-"name":"Prosecco Brut",
-"category":"sparkling",
-"type":"игристое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":284,
-"name":"Prosecco Extra Dry",
-"category":"sparkling",
-"type":"игристое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":285,
-"name":"Lambrusco Emilia",
-"category":"sparkling",
-"type":"игристое",
-"price":2400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":286,
-"name":"Franciacorta Millesimato",
-"category":"sparkling",
-"type":"игристое",
-"price":7600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":287,
-"name":"Franciacorta Satèn",
-"category":"sparkling",
-"type":"игристое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":288,
-"name":"Trento DOC",
-"category":"sparkling",
-"type":"игристое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":289,
-"name":"Cava Reserva",
-"category":"sparkling",
-"type":"игристое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":290,
-"name":"Cava Gran Reserva",
-"category":"sparkling",
-"type":"игристое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":291,
-"name":"Champagne Brut Classic",
-"category":"sparkling",
-"type":"игристое",
-"price":7800,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":292,
-"name":"Champagne Blanc de Blancs",
-"category":"sparkling",
-"type":"игристое",
-"price":9400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":293,
-"name":"Champagne Rose",
-"category":"sparkling",
-"type":"игристое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":294,
-"name":"Champagne Vintage",
-"category":"sparkling",
-"type":"игристое",
-"price":14000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":295,
-"name":"Champagne Grand Cru",
-"category":"sparkling",
-"type":"игристое",
-"price":18000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":296,
-"name":"Champagne Extra Brut",
-"category":"sparkling",
-"type":"игристое",
-"price":8800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":297,
-"name":"Champagne Demi Sec",
-"category":"sparkling",
-"type":"игристое",
-"price":8400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":298,
-"name":"Champagne Prestige Cuvee",
-"category":"sparkling",
-"type":"игристое",
-"price":26000,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":299,
-"name":"Champagne Blanc de Noirs",
-"category":"sparkling",
-"type":"игристое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":300,
-"name":"Champagne Brut Nature",
-"category":"sparkling",
-"type":"игристое",
-"price":9600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":301,
-"name":"Chardonnay California",
-"category":"wine",
-"type":"белое сухое",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":302,
-"name":"Chardonnay Reserve Napa",
-"category":"wine",
-"type":"белое сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":303,
-"name":"Pinot Noir Oregon",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":304,
-"name":"Zinfandel Old Vine",
-"category":"wine",
-"type":"красное сухое",
-"price":3800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":305,
-"name":"Cabernet Sauvignon Napa Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":12600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":306,
-"name":"Merlot Washington",
-"category":"wine",
-"type":"красное сухое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":307,
-"name":"Syrah California",
-"category":"wine",
-"type":"красное сухое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":308,
-"name":"Grenache Spain",
-"category":"wine",
-"type":"красное сухое",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":309,
-"name":"Tempranillo Reserva",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":310,
-"name":"Rioja Gran Reserva",
-"category":"wine",
-"type":"красное сухое",
-"price":6400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":311,
-"name":"Albarino Galicia",
-"category":"wine",
-"type":"белое сухое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":312,
-"name":"Godello Valdeorras",
-"category":"wine",
-"type":"белое сухое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":313,
-"name":"Verdejo Rueda",
-"category":"wine",
-"type":"белое сухое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":314,
-"name":"Txakoli Basque",
-"category":"wine",
-"type":"белое сухое",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":315,
-"name":"Riesling Kabinett",
-"category":"wine",
-"type":"белое полусухое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":316,
-"name":"Riesling Spatlese",
-"category":"wine",
-"type":"белое полусладкое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":317,
-"name":"Riesling Auslese",
-"category":"wine",
-"type":"десертное",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":318,
-"name":"Ice Wine Canada",
-"category":"wine",
-"type":"десертное",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":319,
-"name":"Sauternes Premier Cru",
-"category":"wine",
-"type":"десертное",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":320,
-"name":"Tokaji 5 Puttonyos",
-"category":"wine",
-"type":"десертное",
-"price":7600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":321,
-"name":"Porto 10 Years",
-"category":"wine",
-"type":"крепленое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":322,
-"name":"Porto 20 Years",
-"category":"wine",
-"type":"крепленое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":323,
-"name":"Madeira 10 Years",
-"category":"wine",
-"type":"крепленое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":324,
-"name":"Marsala Fine",
-"category":"wine",
-"type":"крепленое",
-"price":2200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":325,
-"name":"Sherry Amontillado",
-"category":"wine",
-"type":"крепленое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":326,
-"name":"Sherry Pedro Ximenez",
-"category":"wine",
-"type":"крепленое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":327,
-"name":"Gruner Veltliner Reserve",
-"category":"wine",
-"type":"белое сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":328,
-"name":"Sauvignon Blanc Loire",
-"category":"wine",
-"type":"белое сухое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":329,
-"name":"Pouilly Fume",
-"category":"wine",
-"type":"белое сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":330,
-"name":"Muscadet Sur Lie",
-"category":"wine",
-"type":"белое сухое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":331,
-"name":"Chablis Grand Cru",
-"category":"wine",
-"type":"белое сухое",
-"price":12600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":332,
-"name":"Bourgogne Rouge",
-"category":"wine",
-"type":"красное сухое",
-"price":3800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":333,
-"name":"Cote Rotie",
-"category":"wine",
-"type":"красное сухое",
-"price":12400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":334,
-"name":"Hermitage Rouge",
-"category":"wine",
-"type":"красное сухое",
-"price":13200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":335,
-"name":"Crozes Hermitage",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":336,
-"name":"Saint Joseph",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":337,
-"name":"Chateauneuf du Pape",
-"category":"wine",
-"type":"красное сухое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":338,
-"name":"Gigondas Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":339,
-"name":"Vacqueyras Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":340,
-"name":"Bandol Rouge Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":6400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":341,
-"name":"Rose Provence Premium",
-"category":"wine",
-"type":"розовое сухое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":342,
-"name":"Rose Tavel",
-"category":"wine",
-"type":"розовое сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":343,
-"name":"Cremant Rose",
-"category":"sparkling",
-"type":"игристое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":344,
-"name":"Cava Rose",
-"category":"sparkling",
-"type":"игристое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":345,
-"name":"Prosecco Rose",
-"category":"sparkling",
-"type":"игристое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":346,
-"name":"Champagne Brut Reserve",
-"category":"sparkling",
-"type":"игристое",
-"price":8600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":347,
-"name":"Champagne Prestige",
-"category":"sparkling",
-"type":"игристое",
-"price":18600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":348,
-"name":"Champagne Cuvee Speciale",
-"category":"sparkling",
-"type":"игристое",
-"price":12400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":349,
-"name":"Champagne Blanc Prestige",
-"category":"sparkling",
-"type":"игристое",
-"price":10400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":350,
-"name":"Champagne Rare",
-"category":"sparkling",
-"type":"игристое",
-"price":24000,
-"image":"assets/wine.jpg",
-"featured":true
-}
-,
-{
-"id":351,
-"name":"Champagne Grand Cuvee",
-"category":"sparkling",
-"type":"игристое",
-"price":16400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":352,
-"name":"Champagne Brut Classic Reserve",
-"category":"sparkling",
-"type":"игристое",
-"price":8600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":353,
-"name":"Champagne Blanc Elegance",
-"category":"sparkling",
-"type":"игристое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":354,
-"name":"Champagne Cuvee Prestige",
-"category":"sparkling",
-"type":"игристое",
-"price":14800,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":355,
-"name":"Champagne Brut Imperial",
-"category":"sparkling",
-"type":"игристое",
-"price":9400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":356,
-"name":"Champagne Rose Prestige",
-"category":"sparkling",
-"type":"игристое",
-"price":11200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":357,
-"name":"Champagne Vintage Grand",
-"category":"sparkling",
-"type":"игристое",
-"price":18600,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":358,
-"name":"Champagne Brut Nature Prestige",
-"category":"sparkling",
-"type":"игристое",
-"price":9800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":359,
-"name":"Champagne Blanc Tradition",
-"category":"sparkling",
-"type":"игристое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":360,
-"name":"Champagne Cuvee Royale",
-"category":"sparkling",
-"type":"игристое",
-"price":12400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":361,
-"name":"Cabernet Sauvignon Premium",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":362,
-"name":"Cabernet Sauvignon Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":6400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":363,
-"name":"Merlot Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":364,
-"name":"Syrah Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":365,
-"name":"Pinot Noir Premium",
-"category":"wine",
-"type":"красное сухое",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":366,
-"name":"Pinot Noir Grand Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":367,
-"name":"Malbec Gran Reserva",
-"category":"wine",
-"type":"красное сухое",
-"price":5600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":368,
-"name":"Malbec Single Vineyard",
-"category":"wine",
-"type":"красное сухое",
-"price":6400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":369,
-"name":"Tempranillo Reserva Especial",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":370,
-"name":"Tempranillo Gran Reserva Especial",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":371,
-"name":"Sauvignon Blanc Reserve",
-"category":"wine",
-"type":"белое сухое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":372,
-"name":"Sauvignon Blanc Premium",
-"category":"wine",
-"type":"белое сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":373,
-"name":"Chardonnay Reserve Premium",
-"category":"wine",
-"type":"белое сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":374,
-"name":"Chardonnay Grand Selection",
-"category":"wine",
-"type":"белое сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":375,
-"name":"Riesling Classic",
-"category":"wine",
-"type":"белое сухое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":376,
-"name":"Riesling Reserve Classic",
-"category":"wine",
-"type":"белое сухое",
-"price":4600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":377,
-"name":"Riesling Grand Cru Selection",
-"category":"wine",
-"type":"белое сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":378,
-"name":"Gewurztraminer Reserve",
-"category":"wine",
-"type":"белое полусухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":379,
-"name":"Gewurztraminer Grand Selection",
-"category":"wine",
-"type":"белое полусухое",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":380,
-"name":"Pinot Gris Grand Reserve",
-"category":"wine",
-"type":"белое сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-
-{
-"id":381,
-"name":"Rose Provence Classic",
-"category":"wine",
-"type":"розовое сухое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":382,
-"name":"Rose Provence Reserve",
-"category":"wine",
-"type":"розовое сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":383,
-"name":"Rose Provence Prestige",
-"category":"wine",
-"type":"розовое сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":384,
-"name":"Rose Mediterranee",
-"category":"wine",
-"type":"розовое сухое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":385,
-"name":"Rose Mediterranee Reserve",
-"category":"wine",
-"type":"розовое сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":386,
-"name":"Rose Premium Cuvee",
-"category":"wine",
-"type":"розовое сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":387,
-"name":"Rose Cuvee Prestige",
-"category":"wine",
-"type":"розовое сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":388,
-"name":"Rose Summer Edition",
-"category":"wine",
-"type":"розовое сухое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":389,
-"name":"Rose Premium Selection",
-"category":"wine",
-"type":"розовое сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":390,
-"name":"Rose Grand Cuvee",
-"category":"wine",
-"type":"розовое сухое",
-"price":5400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":391,
-"name":"Sparkling Cuvee Classic",
-"category":"sparkling",
-"type":"игристое",
-"price":2600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":392,
-"name":"Sparkling Cuvee Premium",
-"category":"sparkling",
-"type":"игристое",
-"price":3400,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":393,
-"name":"Sparkling Cuvee Prestige",
-"category":"sparkling",
-"type":"игристое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":394,
-"name":"Sparkling Cuvee Reserve",
-"category":"sparkling",
-"type":"игристое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":395,
-"name":"Sparkling Cuvee Grand",
-"category":"sparkling",
-"type":"игристое",
-"price":6400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":396,
-"name":"Sparkling Blanc Selection",
-"category":"sparkling",
-"type":"игристое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":397,
-"name":"Sparkling Blanc Prestige",
-"category":"sparkling",
-"type":"игристое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":398,
-"name":"Sparkling Rose Selection",
-"category":"sparkling",
-"type":"игристое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":399,
-"name":"Sparkling Rose Prestige",
-"category":"sparkling",
-"type":"игристое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":400,
-"name":"Sparkling Grand Prestige",
-"category":"sparkling",
-"type":"игристое",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":401,
-"name":"Wine Reserve Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":402,
-"name":"Wine Grand Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":403,
-"name":"Wine Premium Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":404,
-"name":"Wine Prestige Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":405,
-"name":"Wine Grand Reserve Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":406,
-"name":"Wine Classic Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":2800,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":407,
-"name":"Wine Classic Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":3200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":408,
-"name":"Wine Premium Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":409,
-"name":"Wine Grand Premium",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":410,
-"name":"Wine Prestige Premium",
-"category":"wine",
-"type":"красное сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":411,
-"name":"Wine Cuvee Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":412,
-"name":"Wine Cuvee Classic",
-"category":"wine",
-"type":"красное сухое",
-"price":3600,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":413,
-"name":"Wine Cuvee Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":414,
-"name":"Wine Cuvee Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":415,
-"name":"Wine Cuvee Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":416,
-"name":"Wine Estate Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":417,
-"name":"Wine Estate Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":418,
-"name":"Wine Estate Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":419,
-"name":"Wine Estate Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":420,
-"name":"Wine Estate Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":11200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":421,
-"name":"Wine Signature Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":422,
-"name":"Wine Signature Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":423,
-"name":"Wine Signature Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":424,
-"name":"Wine Signature Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":425,
-"name":"Wine Signature Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":10200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":426,
-"name":"Wine Limited Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":427,
-"name":"Wine Limited Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":428,
-"name":"Wine Limited Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":429,
-"name":"Wine Limited Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":430,
-"name":"Wine Limited Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":12400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":431,
-"name":"Wine Master Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":432,
-"name":"Wine Master Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":433,
-"name":"Wine Master Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":434,
-"name":"Wine Master Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":435,
-"name":"Wine Master Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":12400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":436,
-"name":"Wine Heritage Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":4200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":437,
-"name":"Wine Heritage Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":438,
-"name":"Wine Heritage Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":439,
-"name":"Wine Heritage Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":440,
-"name":"Wine Heritage Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":12400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":441,
-"name":"Wine Collector Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":5200,
-"image":"assets/wine.jpg",
-"featured":false
-},
-{
-"id":442,
-"name":"Wine Collector Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":443,
-"name":"Wine Collector Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":444,
-"name":"Wine Collector Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":12400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":445,
-"name":"Wine Collector Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":16400,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":446,
-"name":"Wine Imperial Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":447,
-"name":"Wine Imperial Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":448,
-"name":"Wine Imperial Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":10200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":449,
-"name":"Wine Imperial Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":14200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":450,
-"name":"Wine Imperial Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":18200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":451,
-"name":"Wine Royal Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":452,
-"name":"Wine Royal Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":453,
-"name":"Wine Royal Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":10200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":454,
-"name":"Wine Royal Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":14200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":455,
-"name":"Wine Royal Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":18200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":456,
-"name":"Wine Crown Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":6200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":457,
-"name":"Wine Crown Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":458,
-"name":"Wine Crown Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":10200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":459,
-"name":"Wine Crown Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":14200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":460,
-"name":"Wine Crown Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":18200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":461,
-"name":"Wine Noble Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":462,
-"name":"Wine Noble Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":463,
-"name":"Wine Noble Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":11200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":464,
-"name":"Wine Noble Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":15200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":465,
-"name":"Wine Noble Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":19200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":466,
-"name":"Wine Heritage Crown",
-"category":"wine",
-"type":"красное сухое",
-"price":7200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":467,
-"name":"Wine Heritage Royal",
-"category":"wine",
-"type":"красное сухое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":468,
-"name":"Wine Heritage Imperial",
-"category":"wine",
-"type":"красное сухое",
-"price":11200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":469,
-"name":"Wine Heritage Noble",
-"category":"wine",
-"type":"красное сухое",
-"price":15200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":470,
-"name":"Wine Heritage Supreme",
-"category":"wine",
-"type":"красное сухое",
-"price":19200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":471,
-"name":"Wine Supreme Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":8200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":472,
-"name":"Wine Supreme Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":10200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":473,
-"name":"Wine Supreme Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":13200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":474,
-"name":"Wine Supreme Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":16200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":475,
-"name":"Wine Supreme Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":20200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":476,
-"name":"Wine Elite Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":477,
-"name":"Wine Elite Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":11200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":478,
-"name":"Wine Elite Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":14200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":479,
-"name":"Wine Elite Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":17200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":480,
-"name":"Wine Elite Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":21200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":481,
-"name":"Wine Prestige Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":9200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":482,
-"name":"Wine Prestige Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":11200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":483,
-"name":"Wine Prestige Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":14200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":484,
-"name":"Wine Prestige Grand Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":17200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":485,
-"name":"Wine Prestige Grand Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":21200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":486,
-"name":"Wine Noble Reserve Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":11200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":487,
-"name":"Wine Noble Grand Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":14200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":488,
-"name":"Wine Noble Imperial Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":17200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":489,
-"name":"Wine Noble Crown Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":20200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":490,
-"name":"Wine Noble Royal Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":23200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":491,
-"name":"Wine Royal Prestige Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":14200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":492,
-"name":"Wine Royal Grand Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":17200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":493,
-"name":"Wine Royal Imperial Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":20200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":494,
-"name":"Wine Royal Crown Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":23200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":495,
-"name":"Wine Royal Ultimate Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":26200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":496,
-"name":"Wine Imperial Reserve Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":16200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":497,
-"name":"Wine Imperial Prestige Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":19200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":498,
-"name":"Wine Imperial Grand Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":22200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":499,
-"name":"Wine Imperial Crown Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":25200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":500,
-"name":"Wine Imperial Ultimate Edition",
-"category":"wine",
-"type":"красное сухое",
-"price":28200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":501,
-"name":"Wine Platinum Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":18200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":502,
-"name":"Wine Platinum Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":21200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":503,
-"name":"Wine Platinum Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":24200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":504,
-"name":"Wine Platinum Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":27200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":505,
-"name":"Wine Platinum Ultimate",
-"category":"wine",
-"type":"красное сухое",
-"price":30200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":506,
-"name":"Wine Diamond Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":20200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":507,
-"name":"Wine Diamond Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":23200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":508,
-"name":"Wine Diamond Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":26200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":509,
-"name":"Wine Diamond Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":29200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":510,
-"name":"Wine Diamond Ultimate",
-"category":"wine",
-"type":"красное сухое",
-"price":32200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":511,
-"name":"Wine Ultimate Selection",
-"category":"wine",
-"type":"красное сухое",
-"price":22200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":512,
-"name":"Wine Ultimate Reserve",
-"category":"wine",
-"type":"красное сухое",
-"price":25200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":513,
-"name":"Wine Ultimate Prestige",
-"category":"wine",
-"type":"красное сухое",
-"price":28200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":514,
-"name":"Wine Ultimate Grand",
-"category":"wine",
-"type":"красное сухое",
-"price":31200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":515,
-"name":"Wine Ultimate Crown",
-"category":"wine",
-"type":"красное сухое",
-"price":34200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-
-{
-"id":516,
-"name":"Wine Ultimate Royal",
-"category":"wine",
-"type":"красное сухое",
-"price":37200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":517,
-"name":"Wine Ultimate Imperial",
-"category":"wine",
-"type":"красное сухое",
-"price":40200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":518,
-"name":"Wine Ultimate Supreme",
-"category":"wine",
-"type":"красное сухое",
-"price":43200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":519,
-"name":"Wine Ultimate Elite",
-"category":"wine",
-"type":"красное сухое",
-"price":46200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":520,
-"name":"Wine Ultimate Infinity",
-"category":"wine",
-"type":"красное сухое",
-"price":49200,
-"image":"assets/wine.jpg",
-"featured":true
-},
-{
-"id":521,
-"name":"Wine Ultimate Legendary",
-"category":"wine",
-"type":"красное сухое",
-"price":52200,
-"image":"assets/wine.jpg",
-"featured":true
-}
+  {
+    "id": 1,
+    "name": "Шато-Тебо Мюскаде Севр э Мен",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2640,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Ля Жюдит Пино Нуар Тасмания Глейцер-Диксон",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7960,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "name": "Силекс Галино Сансер",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2640,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "name": "Марселан Дивноморское",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2640,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "name": "Вальдо Аквариус Блан де Блан Экстра Драй",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 2640,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "name": "Barolo DOCG",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 7,
+    "name": "Chablis Premier Cru",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 8,
+    "name": "Chianti Classico Riserva",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "name": "Rioja Reserva",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3500,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 10,
+    "name": "Prosecco DOC",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 11,
+    "name": "Champagne Brut Premier",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 8900,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 12,
+    "name": "Pinot Grigio Veneto",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 1900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 13,
+    "name": "Sauvignon Blanc Marlborough",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 14,
+    "name": "Malbec Mendoza",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 15,
+    "name": "Cabernet Sauvignon Napa",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 16,
+    "name": "Merlot Bordeaux",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 17,
+    "name": "Syrah Rhone",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 18,
+    "name": "Gewurztraminer Alsace",
+    "category": "wine",
+    "type": "белое полусухое",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 19,
+    "name": "Riesling Mosel",
+    "category": "wine",
+    "type": "белое полусухое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 20,
+    "name": "Tempranillo Crianza",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2500,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 21,
+    "name": "Zinfandel California",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 22,
+    "name": "Rose Provence",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 2700,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 23,
+    "name": "Cava Brut",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 2200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 24,
+    "name": "Lambrusco",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 1800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 25,
+    "name": "Brunello di Montalcino",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 11000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 26,
+    "name": "Amarone della Valpolicella",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9500,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 27,
+    "name": "Soave Classico",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 28,
+    "name": "Vermentino Sardegna",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2300,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 29,
+    "name": "Gruner Veltliner",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 30,
+    "name": "Sancerre Blanc",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 31,
+    "name": "Chardonnay Burgundy",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 32,
+    "name": "Pinot Noir Burgundy",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 33,
+    "name": "Saint-Emilion Grand Cru",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5900,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 34,
+    "name": "Medoc Bordeaux",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 35,
+    "name": "Cotes du Rhone",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 36,
+    "name": "Gigondas",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4500,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 37,
+    "name": "Vacqueyras",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 38,
+    "name": "Bandol Rouge",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 39,
+    "name": "Bandol Rose",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 3100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 40,
+    "name": "Chateau Margaux",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 32000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 41,
+    "name": "Chateau Lafite Rothschild",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 41000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 42,
+    "name": "Chateau Latour",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 38000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 43,
+    "name": "Chateau Haut-Brion",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 29000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 44,
+    "name": "Chateau Mouton Rothschild",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 35000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 45,
+    "name": "Barbera d'Asti",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 46,
+    "name": "Dolcetto d'Alba",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 47,
+    "name": "Montefalco Rosso",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 48,
+    "name": "Nero d'Avola Sicilia",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 49,
+    "name": "Etna Rosso",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 50,
+    "name": "Etna Bianco",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 51,
+    "name": "Falanghina Campania",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 52,
+    "name": "Greco di Tufo",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 53,
+    "name": "Verdicchio dei Castelli",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2300,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 54,
+    "name": "Trebbiano d'Abruzzo",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 1900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 55,
+    "name": "Primitivo di Manduria",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 56,
+    "name": "Aglianico del Vulture",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 57,
+    "name": "Valpolicella Classico",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 58,
+    "name": "Valpolicella Ripasso",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3300,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 59,
+    "name": "Franciacorta Brut",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 60,
+    "name": "Franciacorta Rose",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 5600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 61,
+    "name": "Champagne Moet & Chandon",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 8900,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 62,
+    "name": "Champagne Veuve Clicquot",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 9400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 63,
+    "name": "Champagne Dom Perignon",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 42000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 64,
+    "name": "Champagne Cristal",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 48000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 65,
+    "name": "Champagne Bollinger",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 9800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 66,
+    "name": "Champagne Ruinart Blanc de Blancs",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 10500,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 67,
+    "name": "Champagne Taittinger",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 8700,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 68,
+    "name": "Champagne Piper Heidsieck",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 7600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 69,
+    "name": "Champagne Laurent Perrier",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 8800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 70,
+    "name": "Champagne Krug Grande Cuvee",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 39000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 71,
+    "name": "Cremant d'Alsace",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 72,
+    "name": "Cremant de Bourgogne",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 3100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 73,
+    "name": "Cremant de Loire",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 2700,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 74,
+    "name": "Pet Nat Natural Sparkling",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 2900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 75,
+    "name": "Orange Wine Georgia",
+    "category": "wine",
+    "type": "оранжевое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 76,
+    "name": "Qvevri Wine Kakheti",
+    "category": "wine",
+    "type": "оранжевое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 77,
+    "name": "Kindzmarauli Georgia",
+    "category": "wine",
+    "type": "красное полусладкое",
+    "price": 2500,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 78,
+    "name": "Saperavi Georgia",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 79,
+    "name": "Tsinandali Georgia",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 80,
+    "name": "Mukuzani Georgia",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 81,
+    "name": "Tokaji Aszu",
+    "category": "wine",
+    "type": "десертное",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 82,
+    "name": "Porto Ruby",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 83,
+    "name": "Porto Tawny",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 84,
+    "name": "Porto Vintage",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 85,
+    "name": "Sherry Fino",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 2300,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 86,
+    "name": "Sherry Oloroso",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 87,
+    "name": "Madeira Malmsey",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 3100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 88,
+    "name": "Madeira Bual",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 3000,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 89,
+    "name": "Marsala Superiore",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 90,
+    "name": "Vermouth Rosso",
+    "category": "strong",
+    "type": "вермут",
+    "price": 1900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 91,
+    "name": "Vermouth Bianco",
+    "category": "strong",
+    "type": "вермут",
+    "price": 1900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 92,
+    "name": "Aperol Aperitivo",
+    "category": "strong",
+    "type": "аперитив",
+    "price": 2300,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 93,
+    "name": "Campari Bitter",
+    "category": "strong",
+    "type": "аперитив",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 94,
+    "name": "Limoncello",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 95,
+    "name": "Baileys Irish Cream",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 96,
+    "name": "Cointreau",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 97,
+    "name": "Grand Marnier",
+    "category": "strong",
+    "type": "ликер",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 98,
+    "name": "Jagermeister",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 99,
+    "name": "Amaretto",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 100,
+    "name": "Sambuca",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 101,
+    "name": "Hennessy VS",
+    "category": "strong",
+    "type": "коньяк",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 102,
+    "name": "Hennessy VSOP",
+    "category": "strong",
+    "type": "коньяк",
+    "price": 9600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 103,
+    "name": "Remy Martin VSOP",
+    "category": "strong",
+    "type": "коньяк",
+    "price": 8800,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 104,
+    "name": "Courvoisier VSOP",
+    "category": "strong",
+    "type": "коньяк",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 105,
+    "name": "Martell VS",
+    "category": "strong",
+    "type": "коньяк",
+    "price": 6100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 106,
+    "name": "Martell XO",
+    "category": "strong",
+    "type": "коньяк",
+    "price": 21000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 107,
+    "name": "Camus VSOP",
+    "category": "strong",
+    "type": "коньяк",
+    "price": 7400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 108,
+    "name": "Ararat 5 Years",
+    "category": "strong",
+    "type": "коньяк",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 109,
+    "name": "Ararat Akhtamar",
+    "category": "strong",
+    "type": "коньяк",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 110,
+    "name": "Tesseron XO",
+    "category": "strong",
+    "type": "коньяк",
+    "price": 24000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 111,
+    "name": "Chivas Regal 12",
+    "category": "strong",
+    "type": "виски",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 112,
+    "name": "Chivas Regal 18",
+    "category": "strong",
+    "type": "виски",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 113,
+    "name": "Johnnie Walker Black",
+    "category": "strong",
+    "type": "виски",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 114,
+    "name": "Johnnie Walker Blue",
+    "category": "strong",
+    "type": "виски",
+    "price": 24000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 115,
+    "name": "Macallan 12",
+    "category": "strong",
+    "type": "виски",
+    "price": 9800,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 116,
+    "name": "Macallan 18",
+    "category": "strong",
+    "type": "виски",
+    "price": 26000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 117,
+    "name": "Glenfiddich 12",
+    "category": "strong",
+    "type": "виски",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 118,
+    "name": "Glenfiddich 18",
+    "category": "strong",
+    "type": "виски",
+    "price": 11000,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 119,
+    "name": "Lagavulin 16",
+    "category": "strong",
+    "type": "виски",
+    "price": 12000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 120,
+    "name": "Talisker 10",
+    "category": "strong",
+    "type": "виски",
+    "price": 6400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 121,
+    "name": "Jameson",
+    "category": "strong",
+    "type": "виски",
+    "price": 3100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 122,
+    "name": "Bushmills 10",
+    "category": "strong",
+    "type": "виски",
+    "price": 3500,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 123,
+    "name": "Jack Daniels",
+    "category": "strong",
+    "type": "виски",
+    "price": 3300,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 124,
+    "name": "Woodford Reserve",
+    "category": "strong",
+    "type": "бурбон",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 125,
+    "name": "Maker's Mark",
+    "category": "strong",
+    "type": "бурбон",
+    "price": 3900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 126,
+    "name": "Bulleit Bourbon",
+    "category": "strong",
+    "type": "бурбон",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 127,
+    "name": "Jim Beam",
+    "category": "strong",
+    "type": "бурбон",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 128,
+    "name": "Wild Turkey 101",
+    "category": "strong",
+    "type": "бурбон",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 129,
+    "name": "Don Julio Blanco",
+    "category": "strong",
+    "type": "текила",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 130,
+    "name": "Don Julio Anejo",
+    "category": "strong",
+    "type": "текила",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 131,
+    "name": "Patron Silver",
+    "category": "strong",
+    "type": "текила",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 132,
+    "name": "Patron Anejo",
+    "category": "strong",
+    "type": "текила",
+    "price": 6800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 133,
+    "name": "Olmeca Blanco",
+    "category": "strong",
+    "type": "текила",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 134,
+    "name": "Jose Cuervo Gold",
+    "category": "strong",
+    "type": "текила",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 135,
+    "name": "Grey Goose",
+    "category": "strong",
+    "type": "водка",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 136,
+    "name": "Beluga Noble",
+    "category": "strong",
+    "type": "водка",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 137,
+    "name": "Belvedere",
+    "category": "strong",
+    "type": "водка",
+    "price": 3800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 138,
+    "name": "Absolut",
+    "category": "strong",
+    "type": "водка",
+    "price": 2200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 139,
+    "name": "Finlandia",
+    "category": "strong",
+    "type": "водка",
+    "price": 2100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 140,
+    "name": "Russian Standard",
+    "category": "strong",
+    "type": "водка",
+    "price": 1900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 141,
+    "name": "Bombay Sapphire",
+    "category": "strong",
+    "type": "джин",
+    "price": 3100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 142,
+    "name": "Hendrick's Gin",
+    "category": "strong",
+    "type": "джин",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 143,
+    "name": "Tanqueray",
+    "category": "strong",
+    "type": "джин",
+    "price": 3000,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 144,
+    "name": "Beefeater",
+    "category": "strong",
+    "type": "джин",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 145,
+    "name": "Monkey 47",
+    "category": "strong",
+    "type": "джин",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 146,
+    "name": "Bacardi Carta Blanca",
+    "category": "strong",
+    "type": "ром",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 147,
+    "name": "Bacardi Reserva",
+    "category": "strong",
+    "type": "ром",
+    "price": 3100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 148,
+    "name": "Havana Club 7",
+    "category": "strong",
+    "type": "ром",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 149,
+    "name": "Diplomatico Reserva",
+    "category": "strong",
+    "type": "ром",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 150,
+    "name": "Zacapa 23",
+    "category": "strong",
+    "type": "ром",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 151,
+    "name": "Plantation XO",
+    "category": "strong",
+    "type": "ром",
+    "price": 4800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 152,
+    "name": "Captain Morgan",
+    "category": "strong",
+    "type": "ром",
+    "price": 2300,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 153,
+    "name": "Kraken Black Spiced",
+    "category": "strong",
+    "type": "ром",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 154,
+    "name": "Mount Gay XO",
+    "category": "strong",
+    "type": "ром",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 155,
+    "name": "Appleton Estate",
+    "category": "strong",
+    "type": "ром",
+    "price": 3800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 156,
+    "name": "Ron Zacapa XO",
+    "category": "strong",
+    "type": "ром",
+    "price": 9600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 157,
+    "name": "Flor de Cana 12",
+    "category": "strong",
+    "type": "ром",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 158,
+    "name": "Flor de Cana 18",
+    "category": "strong",
+    "type": "ром",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 159,
+    "name": "Dictador 12",
+    "category": "strong",
+    "type": "ром",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 160,
+    "name": "Dictador 20",
+    "category": "strong",
+    "type": "ром",
+    "price": 7600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 161,
+    "name": "Santa Teresa 1796",
+    "category": "strong",
+    "type": "ром",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 162,
+    "name": "Mount Gay Black Barrel",
+    "category": "strong",
+    "type": "ром",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 163,
+    "name": "Havana Club Seleccion",
+    "category": "strong",
+    "type": "ром",
+    "price": 5800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 164,
+    "name": "Barcelo Imperial",
+    "category": "strong",
+    "type": "ром",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 165,
+    "name": "Doorly's XO",
+    "category": "strong",
+    "type": "ром",
+    "price": 3900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 166,
+    "name": "Diplomatico Planas",
+    "category": "strong",
+    "type": "ром",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 167,
+    "name": "Bacardi 8",
+    "category": "strong",
+    "type": "ром",
+    "price": 3800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 168,
+    "name": "Captain Morgan Dark",
+    "category": "strong",
+    "type": "ром",
+    "price": 2500,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 169,
+    "name": "El Dorado 12",
+    "category": "strong",
+    "type": "ром",
+    "price": 4400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 170,
+    "name": "El Dorado 15",
+    "category": "strong",
+    "type": "ром",
+    "price": 5600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 171,
+    "name": "Brugal 1888",
+    "category": "strong",
+    "type": "ром",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 172,
+    "name": "Angostura 1919",
+    "category": "strong",
+    "type": "ром",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 173,
+    "name": "Angostura 1824",
+    "category": "strong",
+    "type": "ром",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 174,
+    "name": "Plantation Barbados",
+    "category": "strong",
+    "type": "ром",
+    "price": 3800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 175,
+    "name": "Plantation Jamaica",
+    "category": "strong",
+    "type": "ром",
+    "price": 4100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 176,
+    "name": "Beluga Gold Line",
+    "category": "strong",
+    "type": "водка",
+    "price": 7600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 177,
+    "name": "Beluga Transatlantic",
+    "category": "strong",
+    "type": "водка",
+    "price": 4800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 178,
+    "name": "Mamont Vodka",
+    "category": "strong",
+    "type": "водка",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 179,
+    "name": "Kauffman Vodka",
+    "category": "strong",
+    "type": "водка",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 180,
+    "name": "Stolichnaya Elit",
+    "category": "strong",
+    "type": "водка",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 181,
+    "name": "Absolut Elyx",
+    "category": "strong",
+    "type": "водка",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 182,
+    "name": "Grey Goose VX",
+    "category": "strong",
+    "type": "водка",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 183,
+    "name": "Ciroc",
+    "category": "strong",
+    "type": "водка",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 184,
+    "name": "Crystal Head",
+    "category": "strong",
+    "type": "водка",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 185,
+    "name": "Russian Standard Gold",
+    "category": "strong",
+    "type": "водка",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 186,
+    "name": "Tanqueray No.10",
+    "category": "strong",
+    "type": "джин",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 187,
+    "name": "Bombay Premier Cru",
+    "category": "strong",
+    "type": "джин",
+    "price": 3900,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 188,
+    "name": "Hendrick's Lunar",
+    "category": "strong",
+    "type": "джин",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 189,
+    "name": "Gin Mare",
+    "category": "strong",
+    "type": "джин",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 190,
+    "name": "The Botanist Gin",
+    "category": "strong",
+    "type": "джин",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 191,
+    "name": "Roku Gin",
+    "category": "strong",
+    "type": "джин",
+    "price": 3800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 192,
+    "name": "Sipsmith Gin",
+    "category": "strong",
+    "type": "джин",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 193,
+    "name": "Monkey 47 Sloe",
+    "category": "strong",
+    "type": "джин",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 194,
+    "name": "Nordes Gin",
+    "category": "strong",
+    "type": "джин",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 195,
+    "name": "Gin Raw",
+    "category": "strong",
+    "type": "джин",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 196,
+    "name": "Jose Cuervo Reserva",
+    "category": "strong",
+    "type": "текила",
+    "price": 5600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 197,
+    "name": "Clase Azul Reposado",
+    "category": "strong",
+    "type": "текила",
+    "price": 24000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 198,
+    "name": "Herradura Anejo",
+    "category": "strong",
+    "type": "текила",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 199,
+    "name": "Espolon Reposado",
+    "category": "strong",
+    "type": "текила",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 200,
+    "name": "Casamigos Reposado",
+    "category": "strong",
+    "type": "текила",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 201,
+    "name": "Casamigos Blanco",
+    "category": "strong",
+    "type": "текила",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 202,
+    "name": "Casamigos Anejo",
+    "category": "strong",
+    "type": "текила",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 203,
+    "name": "Patron Reposado",
+    "category": "strong",
+    "type": "текила",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 204,
+    "name": "Don Julio Reposado",
+    "category": "strong",
+    "type": "текила",
+    "price": 6400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 205,
+    "name": "1800 Silver",
+    "category": "strong",
+    "type": "текила",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 206,
+    "name": "1800 Anejo",
+    "category": "strong",
+    "type": "текила",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 207,
+    "name": "El Jimador Blanco",
+    "category": "strong",
+    "type": "текила",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 208,
+    "name": "El Jimador Reposado",
+    "category": "strong",
+    "type": "текила",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 209,
+    "name": "Sauza Gold",
+    "category": "strong",
+    "type": "текила",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 210,
+    "name": "Sauza Silver",
+    "category": "strong",
+    "type": "текила",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 211,
+    "name": "Baileys Salted Caramel",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 212,
+    "name": "Baileys Chocolate",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 213,
+    "name": "Kahlua",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 214,
+    "name": "Malibu",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 215,
+    "name": "Disaronno",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 216,
+    "name": "Frangelico",
+    "category": "strong",
+    "type": "ликер",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 217,
+    "name": "Chartreuse Green",
+    "category": "strong",
+    "type": "ликер",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 218,
+    "name": "Chartreuse Yellow",
+    "category": "strong",
+    "type": "ликер",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 219,
+    "name": "Drambuie",
+    "category": "strong",
+    "type": "ликер",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 220,
+    "name": "Benedictine",
+    "category": "strong",
+    "type": "ликер",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 221,
+    "name": "Jagermeister Manifest",
+    "category": "strong",
+    "type": "ликер",
+    "price": 3800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 222,
+    "name": "Fernet Branca",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 223,
+    "name": "Averna Amaro",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 224,
+    "name": "Montenegro Amaro",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 225,
+    "name": "Ramazzotti Amaro",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 226,
+    "name": "Luxardo Maraschino",
+    "category": "strong",
+    "type": "ликер",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 227,
+    "name": "St Germain",
+    "category": "strong",
+    "type": "ликер",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 228,
+    "name": "Cynar",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 229,
+    "name": "Galliano",
+    "category": "strong",
+    "type": "ликер",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 230,
+    "name": "Suze",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 231,
+    "name": "Ricard Pastis",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 232,
+    "name": "Pernod",
+    "category": "strong",
+    "type": "ликер",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 233,
+    "name": "Absinthe La Fee",
+    "category": "strong",
+    "type": "абсент",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 234,
+    "name": "Absinthe Xenta",
+    "category": "strong",
+    "type": "абсент",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 235,
+    "name": "Grappa Nonino",
+    "category": "strong",
+    "type": "граппа",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 236,
+    "name": "Grappa Bocchino",
+    "category": "strong",
+    "type": "граппа",
+    "price": 3800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 237,
+    "name": "Calvados Pere Magloire",
+    "category": "strong",
+    "type": "кальвадос",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 238,
+    "name": "Calvados Boulard",
+    "category": "strong",
+    "type": "кальвадос",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 239,
+    "name": "Armagnac Delord",
+    "category": "strong",
+    "type": "арманьяк",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 240,
+    "name": "Armagnac Castarede",
+    "category": "strong",
+    "type": "арманьяк",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 241,
+    "name": "Metaxa 7",
+    "category": "strong",
+    "type": "бренди",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 242,
+    "name": "Metaxa 12",
+    "category": "strong",
+    "type": "бренди",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 243,
+    "name": "Torres 10",
+    "category": "strong",
+    "type": "бренди",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 244,
+    "name": "Torres 20",
+    "category": "strong",
+    "type": "бренди",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 245,
+    "name": "Carlos I",
+    "category": "strong",
+    "type": "бренди",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 246,
+    "name": "Cardenal Mendoza",
+    "category": "strong",
+    "type": "бренди",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 247,
+    "name": "Osborne 103",
+    "category": "strong",
+    "type": "бренди",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 248,
+    "name": "Gran Duque Alba",
+    "category": "strong",
+    "type": "бренди",
+    "price": 5600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 249,
+    "name": "Lepanto Brandy",
+    "category": "strong",
+    "type": "бренди",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 250,
+    "name": "Brandy de Jerez XO",
+    "category": "strong",
+    "type": "бренди",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 251,
+    "name": "Barolo Riserva",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 12400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 252,
+    "name": "Barbaresco DOCG",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9800,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 253,
+    "name": "Nebbiolo Langhe",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 254,
+    "name": "Dolcetto Piemonte",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 255,
+    "name": "Barbera Superiore",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 256,
+    "name": "Valpolicella Superiore",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 257,
+    "name": "Chianti Classico",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3100,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 258,
+    "name": "Rosso di Montalcino",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 259,
+    "name": "Super Tuscan",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 8800,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 260,
+    "name": "Sassicaia",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 42000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 261,
+    "name": "Ornellaia",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 36000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 262,
+    "name": "Tignanello",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 21000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 263,
+    "name": "Le Volte",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 264,
+    "name": "Guidalberto",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 265,
+    "name": "Bolgheri Rosso",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 266,
+    "name": "Bolgheri Superiore",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9800,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 267,
+    "name": "Primitivo Puglia",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 268,
+    "name": "Negroamaro Salento",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 269,
+    "name": "Aglianico Campania",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 270,
+    "name": "Etna Rosso Riserva",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 271,
+    "name": "Verdicchio Classico",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 272,
+    "name": "Gavi di Gavi",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 273,
+    "name": "Soave DOC",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 274,
+    "name": "Pinot Grigio Alto Adige",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 275,
+    "name": "Trebbiano Toscana",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 276,
+    "name": "Vermentino Toscana",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 277,
+    "name": "Falanghina DOC",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 278,
+    "name": "Greco di Tufo Riserva",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 279,
+    "name": "Pecorino Abruzzo",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 280,
+    "name": "Fiano Avellino",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 281,
+    "name": "Prosecco Superiore",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 282,
+    "name": "Prosecco Valdobbiadene",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 283,
+    "name": "Prosecco Brut",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 284,
+    "name": "Prosecco Extra Dry",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 285,
+    "name": "Lambrusco Emilia",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 2400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 286,
+    "name": "Franciacorta Millesimato",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 7600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 287,
+    "name": "Franciacorta Satèn",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 288,
+    "name": "Trento DOC",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 289,
+    "name": "Cava Reserva",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 290,
+    "name": "Cava Gran Reserva",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 291,
+    "name": "Champagne Brut Classic",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 7800,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 292,
+    "name": "Champagne Blanc de Blancs",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 9400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 293,
+    "name": "Champagne Rose",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 294,
+    "name": "Champagne Vintage",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 14000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 295,
+    "name": "Champagne Grand Cru",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 18000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 296,
+    "name": "Champagne Extra Brut",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 8800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 297,
+    "name": "Champagne Demi Sec",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 8400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 298,
+    "name": "Champagne Prestige Cuvee",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 26000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 299,
+    "name": "Champagne Blanc de Noirs",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 300,
+    "name": "Champagne Brut Nature",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 9600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 301,
+    "name": "Chardonnay California",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 302,
+    "name": "Chardonnay Reserve Napa",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 303,
+    "name": "Pinot Noir Oregon",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 304,
+    "name": "Zinfandel Old Vine",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 305,
+    "name": "Cabernet Sauvignon Napa Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 12600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 306,
+    "name": "Merlot Washington",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 307,
+    "name": "Syrah California",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 308,
+    "name": "Grenache Spain",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 309,
+    "name": "Tempranillo Reserva",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 310,
+    "name": "Rioja Gran Reserva",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 311,
+    "name": "Albarino Galicia",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 312,
+    "name": "Godello Valdeorras",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 313,
+    "name": "Verdejo Rueda",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 314,
+    "name": "Txakoli Basque",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 315,
+    "name": "Riesling Kabinett",
+    "category": "wine",
+    "type": "белое полусухое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 316,
+    "name": "Riesling Spatlese",
+    "category": "wine",
+    "type": "белое полусладкое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 317,
+    "name": "Riesling Auslese",
+    "category": "wine",
+    "type": "десертное",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 318,
+    "name": "Ice Wine Canada",
+    "category": "wine",
+    "type": "десертное",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 319,
+    "name": "Sauternes Premier Cru",
+    "category": "wine",
+    "type": "десертное",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 320,
+    "name": "Tokaji 5 Puttonyos",
+    "category": "wine",
+    "type": "десертное",
+    "price": 7600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 321,
+    "name": "Porto 10 Years",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 322,
+    "name": "Porto 20 Years",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 323,
+    "name": "Madeira 10 Years",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 324,
+    "name": "Marsala Fine",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 2200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 325,
+    "name": "Sherry Amontillado",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 326,
+    "name": "Sherry Pedro Ximenez",
+    "category": "wine",
+    "type": "крепленое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 327,
+    "name": "Gruner Veltliner Reserve",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 328,
+    "name": "Sauvignon Blanc Loire",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 329,
+    "name": "Pouilly Fume",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 330,
+    "name": "Muscadet Sur Lie",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 331,
+    "name": "Chablis Grand Cru",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 12600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 332,
+    "name": "Bourgogne Rouge",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 333,
+    "name": "Cote Rotie",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 12400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 334,
+    "name": "Hermitage Rouge",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 13200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 335,
+    "name": "Crozes Hermitage",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 336,
+    "name": "Saint Joseph",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 337,
+    "name": "Chateauneuf du Pape",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 338,
+    "name": "Gigondas Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 339,
+    "name": "Vacqueyras Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 340,
+    "name": "Bandol Rouge Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 341,
+    "name": "Rose Provence Premium",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 342,
+    "name": "Rose Tavel",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 343,
+    "name": "Cremant Rose",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 344,
+    "name": "Cava Rose",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 345,
+    "name": "Prosecco Rose",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 346,
+    "name": "Champagne Brut Reserve",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 8600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 347,
+    "name": "Champagne Prestige",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 18600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 348,
+    "name": "Champagne Cuvee Speciale",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 12400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 349,
+    "name": "Champagne Blanc Prestige",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 10400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 350,
+    "name": "Champagne Rare",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 24000,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 351,
+    "name": "Champagne Grand Cuvee",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 16400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 352,
+    "name": "Champagne Brut Classic Reserve",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 8600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 353,
+    "name": "Champagne Blanc Elegance",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 354,
+    "name": "Champagne Cuvee Prestige",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 14800,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 355,
+    "name": "Champagne Brut Imperial",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 9400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 356,
+    "name": "Champagne Rose Prestige",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 11200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 357,
+    "name": "Champagne Vintage Grand",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 18600,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 358,
+    "name": "Champagne Brut Nature Prestige",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 9800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 359,
+    "name": "Champagne Blanc Tradition",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 360,
+    "name": "Champagne Cuvee Royale",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 12400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 361,
+    "name": "Cabernet Sauvignon Premium",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 362,
+    "name": "Cabernet Sauvignon Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 363,
+    "name": "Merlot Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 364,
+    "name": "Syrah Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 365,
+    "name": "Pinot Noir Premium",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 366,
+    "name": "Pinot Noir Grand Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 367,
+    "name": "Malbec Gran Reserva",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 368,
+    "name": "Malbec Single Vineyard",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 369,
+    "name": "Tempranillo Reserva Especial",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 370,
+    "name": "Tempranillo Gran Reserva Especial",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 371,
+    "name": "Sauvignon Blanc Reserve",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 372,
+    "name": "Sauvignon Blanc Premium",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 373,
+    "name": "Chardonnay Reserve Premium",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 374,
+    "name": "Chardonnay Grand Selection",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 375,
+    "name": "Riesling Classic",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 376,
+    "name": "Riesling Reserve Classic",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 4600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 377,
+    "name": "Riesling Grand Cru Selection",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 378,
+    "name": "Gewurztraminer Reserve",
+    "category": "wine",
+    "type": "белое полусухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 379,
+    "name": "Gewurztraminer Grand Selection",
+    "category": "wine",
+    "type": "белое полусухое",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 380,
+    "name": "Pinot Gris Grand Reserve",
+    "category": "wine",
+    "type": "белое сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 381,
+    "name": "Rose Provence Classic",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 382,
+    "name": "Rose Provence Reserve",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 383,
+    "name": "Rose Provence Prestige",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 384,
+    "name": "Rose Mediterranee",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 385,
+    "name": "Rose Mediterranee Reserve",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 386,
+    "name": "Rose Premium Cuvee",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 387,
+    "name": "Rose Cuvee Prestige",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 388,
+    "name": "Rose Summer Edition",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 389,
+    "name": "Rose Premium Selection",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 390,
+    "name": "Rose Grand Cuvee",
+    "category": "wine",
+    "type": "розовое сухое",
+    "price": 5400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 391,
+    "name": "Sparkling Cuvee Classic",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 2600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 392,
+    "name": "Sparkling Cuvee Premium",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 3400,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 393,
+    "name": "Sparkling Cuvee Prestige",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 394,
+    "name": "Sparkling Cuvee Reserve",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 395,
+    "name": "Sparkling Cuvee Grand",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 6400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 396,
+    "name": "Sparkling Blanc Selection",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 397,
+    "name": "Sparkling Blanc Prestige",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 398,
+    "name": "Sparkling Rose Selection",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 399,
+    "name": "Sparkling Rose Prestige",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 400,
+    "name": "Sparkling Grand Prestige",
+    "category": "sparkling",
+    "type": "игристое",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 401,
+    "name": "Wine Reserve Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 402,
+    "name": "Wine Grand Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 403,
+    "name": "Wine Premium Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 404,
+    "name": "Wine Prestige Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 405,
+    "name": "Wine Grand Reserve Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 406,
+    "name": "Wine Classic Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 2800,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 407,
+    "name": "Wine Classic Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 408,
+    "name": "Wine Premium Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 409,
+    "name": "Wine Grand Premium",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 410,
+    "name": "Wine Prestige Premium",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 411,
+    "name": "Wine Cuvee Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 412,
+    "name": "Wine Cuvee Classic",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 3600,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 413,
+    "name": "Wine Cuvee Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 414,
+    "name": "Wine Cuvee Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 415,
+    "name": "Wine Cuvee Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 416,
+    "name": "Wine Estate Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 417,
+    "name": "Wine Estate Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 418,
+    "name": "Wine Estate Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 419,
+    "name": "Wine Estate Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 420,
+    "name": "Wine Estate Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 11200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 421,
+    "name": "Wine Signature Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 422,
+    "name": "Wine Signature Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 423,
+    "name": "Wine Signature Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 424,
+    "name": "Wine Signature Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 425,
+    "name": "Wine Signature Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 10200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 426,
+    "name": "Wine Limited Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 427,
+    "name": "Wine Limited Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 428,
+    "name": "Wine Limited Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 429,
+    "name": "Wine Limited Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 430,
+    "name": "Wine Limited Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 12400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 431,
+    "name": "Wine Master Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 432,
+    "name": "Wine Master Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 433,
+    "name": "Wine Master Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 434,
+    "name": "Wine Master Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 435,
+    "name": "Wine Master Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 12400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 436,
+    "name": "Wine Heritage Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 4200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 437,
+    "name": "Wine Heritage Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 438,
+    "name": "Wine Heritage Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 439,
+    "name": "Wine Heritage Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 440,
+    "name": "Wine Heritage Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 12400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 441,
+    "name": "Wine Collector Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 5200,
+    "image": "assets/wine.jpg",
+    "featured": false
+  },
+  {
+    "id": 442,
+    "name": "Wine Collector Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 443,
+    "name": "Wine Collector Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 444,
+    "name": "Wine Collector Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 12400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 445,
+    "name": "Wine Collector Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 16400,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 446,
+    "name": "Wine Imperial Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 447,
+    "name": "Wine Imperial Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 448,
+    "name": "Wine Imperial Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 10200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 449,
+    "name": "Wine Imperial Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 14200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 450,
+    "name": "Wine Imperial Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 18200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 451,
+    "name": "Wine Royal Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 452,
+    "name": "Wine Royal Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 453,
+    "name": "Wine Royal Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 10200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 454,
+    "name": "Wine Royal Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 14200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 455,
+    "name": "Wine Royal Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 18200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 456,
+    "name": "Wine Crown Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 6200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 457,
+    "name": "Wine Crown Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 458,
+    "name": "Wine Crown Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 10200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 459,
+    "name": "Wine Crown Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 14200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 460,
+    "name": "Wine Crown Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 18200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 461,
+    "name": "Wine Noble Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 462,
+    "name": "Wine Noble Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 463,
+    "name": "Wine Noble Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 11200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 464,
+    "name": "Wine Noble Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 15200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 465,
+    "name": "Wine Noble Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 19200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 466,
+    "name": "Wine Heritage Crown",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 7200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 467,
+    "name": "Wine Heritage Royal",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 468,
+    "name": "Wine Heritage Imperial",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 11200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 469,
+    "name": "Wine Heritage Noble",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 15200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 470,
+    "name": "Wine Heritage Supreme",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 19200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 471,
+    "name": "Wine Supreme Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 8200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 472,
+    "name": "Wine Supreme Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 10200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 473,
+    "name": "Wine Supreme Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 13200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 474,
+    "name": "Wine Supreme Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 16200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 475,
+    "name": "Wine Supreme Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 20200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 476,
+    "name": "Wine Elite Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 477,
+    "name": "Wine Elite Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 11200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 478,
+    "name": "Wine Elite Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 14200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 479,
+    "name": "Wine Elite Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 17200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 480,
+    "name": "Wine Elite Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 21200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 481,
+    "name": "Wine Prestige Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 9200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 482,
+    "name": "Wine Prestige Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 11200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 483,
+    "name": "Wine Prestige Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 14200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 484,
+    "name": "Wine Prestige Grand Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 17200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 485,
+    "name": "Wine Prestige Grand Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 21200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 486,
+    "name": "Wine Noble Reserve Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 11200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 487,
+    "name": "Wine Noble Grand Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 14200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 488,
+    "name": "Wine Noble Imperial Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 17200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 489,
+    "name": "Wine Noble Crown Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 20200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 490,
+    "name": "Wine Noble Royal Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 23200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 491,
+    "name": "Wine Royal Prestige Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 14200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 492,
+    "name": "Wine Royal Grand Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 17200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 493,
+    "name": "Wine Royal Imperial Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 20200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 494,
+    "name": "Wine Royal Crown Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 23200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 495,
+    "name": "Wine Royal Ultimate Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 26200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 496,
+    "name": "Wine Imperial Reserve Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 16200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 497,
+    "name": "Wine Imperial Prestige Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 19200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 498,
+    "name": "Wine Imperial Grand Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 22200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 499,
+    "name": "Wine Imperial Crown Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 25200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 500,
+    "name": "Wine Imperial Ultimate Edition",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 28200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 501,
+    "name": "Wine Platinum Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 18200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 502,
+    "name": "Wine Platinum Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 21200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 503,
+    "name": "Wine Platinum Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 24200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 504,
+    "name": "Wine Platinum Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 27200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 505,
+    "name": "Wine Platinum Ultimate",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 30200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 506,
+    "name": "Wine Diamond Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 20200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 507,
+    "name": "Wine Diamond Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 23200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 508,
+    "name": "Wine Diamond Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 26200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 509,
+    "name": "Wine Diamond Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 29200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 510,
+    "name": "Wine Diamond Ultimate",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 32200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 511,
+    "name": "Wine Ultimate Selection",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 22200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 512,
+    "name": "Wine Ultimate Reserve",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 25200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 513,
+    "name": "Wine Ultimate Prestige",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 28200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 514,
+    "name": "Wine Ultimate Grand",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 31200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 515,
+    "name": "Wine Ultimate Crown",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 34200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 516,
+    "name": "Wine Ultimate Royal",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 37200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 517,
+    "name": "Wine Ultimate Imperial",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 40200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 518,
+    "name": "Wine Ultimate Supreme",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 43200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 519,
+    "name": "Wine Ultimate Elite",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 46200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 520,
+    "name": "Wine Ultimate Infinity",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 49200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  },
+  {
+    "id": 521,
+    "name": "Wine Ultimate Legendary",
+    "category": "wine",
+    "type": "красное сухое",
+    "price": 52200,
+    "image": "assets/wine.jpg",
+    "featured": true
+  }
 ]
