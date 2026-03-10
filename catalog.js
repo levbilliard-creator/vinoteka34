@@ -1,67 +1,89 @@
 let products = [];
 
-async function loadCatalog() {
+async function loadCatalog(){
 
-    const response = await fetch("data/products.json");
-    products = await response.json();
+const response = await fetch("data/products.json");
+products = await response.json();
 
-    renderCatalog(products);
+renderCatalog(products);
+
 }
 
-function cleanWineName(name) {
+function cleanWineName(name){
 
-    if (!name) return "";
+if(!name) return "";
 
-    return name
-        .replace(/\b(вино|столовое|сортовое|марочное|натуральное|ординарное)\b/gi, "")
-        .replace(/\b(сухое|полусухое|полусладкое|сладкое)\b/gi, "")
-        .replace(/\b(красное|белое|розовое|игристое)\b/gi, "")
-        .replace(/\s+/g, " ")
-        .trim();
+return name
+.replace(/\b(вино|столовое|сортовое|марочное|натуральное|ординарное)\b/gi,"")
+.replace(/\s+/g," ")
+.trim();
+
 }
 
-function renderCatalog(list) {
+function renderCatalog(list){
 
-    const container = document.getElementById("catalog");
-    container.innerHTML = "";
+const container = document.getElementById("catalog-grid");
 
-    list.forEach(product => {
+container.innerHTML = "";
 
-        const id = product.id;
-        const rawName = product.name || "";
-        const name = cleanWineName(rawName);
+list.forEach(product => {
 
-        const type = product.type || "";
-        const price = product.price || "";
-        const image = product.image || "";
+const id = product.id;
+const name = cleanWineName(product.name || "");
+const type = product.type || "";
+const price = product.price || "";
 
-        const card = document.createElement("div");
-        card.className = "wine-card";
+const card = document.createElement("div");
 
-        card.innerHTML = `
-        <a href="product.html?id=${id}" class="card-link">
+card.className = "product-card";
 
-            <div class="wine-img-wrap">
-                <img src="${image}" alt="${name}">
-            </div>
+card.innerHTML = `
 
-            <div class="wine-name">
-                ${name}
-            </div>
+<div class="product-type">
+${type}
+</div>
 
-            <div class="wine-type">
-                ${type}
-            </div>
+<div class="product-name">
+${name}
+</div>
 
-            <div class="wine-price">
-                ${price} ₽
-            </div>
+<div class="product-price">
+${price} ₽
+</div>
 
-        </a>
-        `;
+<a href="product.html?id=${id}" class="product-btn">
+Подробнее
+</a>
 
-        container.appendChild(card);
-    });
+`;
+
+container.appendChild(card);
+
+});
+
 }
+
+function searchProducts(){
+
+const text =
+document.getElementById("search")
+.value
+.toLowerCase();
+
+const filtered = products.filter(p =>
+
+(p.name || "")
+.toLowerCase()
+.includes(text)
+
+);
+
+renderCatalog(filtered);
+
+}
+
+document
+.getElementById("search")
+.addEventListener("input", searchProducts);
 
 loadCatalog();

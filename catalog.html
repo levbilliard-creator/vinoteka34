@@ -4,7 +4,6 @@
 <head>
 <meta charset="UTF-8">
 <title>VINOTEKA34 — Каталог</title>
-
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,21 +11,38 @@
 
 <header class="header">
 
-<div class="logo">
-<a href="index.html">VINOTEKA34</a>
-</div>
+<a href="index.html" class="logo">VINOTEKA34</a>
 
-<div class="telegram">
-<a href="https://t.me/vinotekakaram" target="_blank">
-Написать в Telegram
-</a>
+<nav class="menu">
+<a href="index.html">Главная</a>
+<a href="catalog.html">Каталог</a>
+<a href="#">Дегустации</a>
+<a href="#">Контакты</a>
+</nav>
+
+<div class="phone">
++7 495 947-10-10
 </div>
 
 </header>
 
-<div class="catalog-container">
-<div id="catalog" class="catalog-grid"></div>
-</div>
+
+<section class="catalog">
+
+<h1 class="catalog-title">
+Каталог вин
+</h1>
+
+<input
+type="text"
+id="search"
+class="search"
+placeholder="Поиск вина..."
+>
+
+<div class="catalog-grid" id="catalog-grid"></div>
+
+</section>
 
 <script src="catalog.js"></script>
 
