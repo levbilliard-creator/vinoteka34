@@ -1,19 +1,20 @@
-let products = [];
+let products = []
 
 async function loadCatalog(){
 
-const response = await fetch("data/products.json");
-products = await response.json();
+const response = await fetch("data/products.json")
 
-renderCatalog(products);
+products = await response.json()
+
+renderCatalog(products)
 
 }
 
 function cleanWineName(name){
 
-if(!name) return "";
+if(!name) return ""
 
-let cleaned = name;
+let cleaned = name
 
 cleaned = cleaned
 .replace(/вино/gi,"")
@@ -22,48 +23,48 @@ cleaned = cleaned
 .replace(/марочное/gi,"")
 .replace(/натуральное/gi,"")
 .replace(/ординарное/gi,"")
+
 .replace(/сухое/gi,"")
 .replace(/полусухое/gi,"")
 .replace(/полусладкое/gi,"")
 .replace(/сладкое/gi,"")
-.replace(/красное/gi,"")
+
 .replace(/белое/gi,"")
+.replace(/красное/gi,"")
 .replace(/розовое/gi,"")
-.replace(/игристое/gi,"");
+.replace(/игристое/gi,"")
 
-cleaned = cleaned.replace(/\s+/g," ").trim();
+cleaned = cleaned.replace(/\s+/g," ").trim()
 
-return cleaned;
+return cleaned
 
 }
 
 function renderCatalog(list){
 
 const container =
-document.getElementById("catalog-grid");
+document.getElementById("catalog-grid")
 
-container.innerHTML = "";
+container.innerHTML = ""
 
 list.forEach(product => {
 
-const id = product.id;
+const id = product.id
 
-const ruName =
-cleanWineName(product.name);
-
-const enName =
-product.name_en || "";
+const name =
+cleanWineName(product.name)
 
 const type =
-product.type || "";
+product.type || ""
 
 const price =
-product.price || "";
+product.price || ""
 
 const card =
-document.createElement("div");
+document.createElement("div")
 
-card.className = "product-card";
+card.className =
+"product-card"
 
 card.innerHTML = `
 
@@ -71,12 +72,8 @@ card.innerHTML = `
 ${type}
 </div>
 
-<div class="product-name-en">
-${enName}
-</div>
-
 <div class="product-name">
-${ruName}
+${name}
 </div>
 
 <div class="product-price">
@@ -87,11 +84,11 @@ ${price} ₽
 Подробнее
 </a>
 
-`;
+`
 
-container.appendChild(card);
+container.appendChild(card)
 
-});
+})
 
 }
 
@@ -100,7 +97,7 @@ function searchProducts(){
 const text =
 document.getElementById("search")
 .value
-.toLowerCase();
+.toLowerCase()
 
 const filtered =
 products.filter(p =>
@@ -109,14 +106,52 @@ products.filter(p =>
 .toLowerCase()
 .includes(text)
 
-);
+)
 
-renderCatalog(filtered);
+renderCatalog(filtered)
 
 }
 
 document
 .getElementById("search")
-.addEventListener("input", searchProducts);
+.addEventListener("input", searchProducts)
 
-loadCatalog();
+
+
+function cleanCatalog(){
+
+const cleaned =
+products.map(p => {
+
+return {
+...p,
+name: cleanWineName(p.name)
+}
+
+})
+
+const blob =
+new Blob(
+[JSON.stringify(cleaned,null,2)],
+{type:"application/json"}
+)
+
+const a =
+document.createElement("a")
+
+a.href =
+URL.createObjectURL(blob)
+
+a.download =
+"products_clean.json"
+
+a.click()
+
+}
+
+document
+.getElementById("cleanBtn")
+.addEventListener("click", cleanCatalog)
+
+
+loadCatalog()
