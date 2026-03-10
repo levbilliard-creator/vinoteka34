@@ -3,37 +3,10 @@ let products = []
 async function loadCatalog(){
 
 const response = await fetch("data/products.json")
+
 products = await response.json()
 
 renderCatalog(products)
-
-}
-
-function cleanWineName(name){
-
-if(!name) return ""
-
-let cleaned = name
-
-cleaned = cleaned
-.replace(/вино/gi,"")
-.replace(/столовое/gi,"")
-.replace(/сортовое/gi,"")
-.replace(/марочное/gi,"")
-
-.replace(/сухое/gi,"")
-.replace(/полусухое/gi,"")
-.replace(/полусладкое/gi,"")
-.replace(/сладкое/gi,"")
-
-.replace(/белое/gi,"")
-.replace(/красное/gi,"")
-.replace(/розовое/gi,"")
-.replace(/игристое/gi,"")
-
-cleaned = cleaned.replace(/\s+/g," ").trim()
-
-return cleaned
 
 }
 
@@ -64,7 +37,7 @@ function detectGrape(name){
 
 name = name.toLowerCase()
 
-if(name.includes("pinot noir")) return "Pinot Noir"
+if(name.includes("pinot")) return "Pinot Noir"
 if(name.includes("chardonnay")) return "Chardonnay"
 if(name.includes("sauvignon")) return "Sauvignon Blanc"
 if(name.includes("merlot")) return "Merlot"
@@ -78,42 +51,11 @@ return ""
 
 }
 
-function detectEnglish(name){
-
-const map = {
-
-"мюскаде":"Muscadet",
-"шабли":"Chablis",
-"сансер":"Sancerre",
-"пино":"Pinot",
-"совиньон":"Sauvignon",
-"шардоне":"Chardonnay",
-"рислинг":"Riesling",
-"бароло":"Barolo",
-"кианти":"Chianti"
-
-}
-
-let en = name
-
-Object.keys(map).forEach(word => {
-
-const reg = new RegExp(word,"gi")
-en = en.replace(reg,map[word])
-
-})
-
-return en
-
-}
-
 function processCatalog(){
 
 const updated = products.map(p => {
 
-const cleaned = cleanWineName(p.name)
-
-const en = detectEnglish(cleaned)
+const en = p.name_en || ""
 
 const country = detectCountry(en)
 const grape = detectGrape(en)
@@ -122,8 +64,6 @@ return {
 
 ...p,
 
-name: cleaned,
-name_en: en,
 country: country,
 grape: grape
 
@@ -139,7 +79,8 @@ const blob = new Blob(
 const a = document.createElement("a")
 
 a.href = URL.createObjectURL(blob)
-a.download = "products_new.json"
+
+a.download = "products_ready.json"
 
 a.click()
 
@@ -169,7 +110,7 @@ ${product.name_en || ""}
 </div>
 
 <div class="product-name">
-${cleanWineName(product.name)}
+${product.name}
 </div>
 
 <div class="product-price">
