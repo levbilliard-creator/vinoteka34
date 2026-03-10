@@ -15,6 +15,8 @@ if(!name) return "";
 
 return name
 .replace(/\b(вино|столовое|сортовое|марочное|натуральное|ординарное)\b/gi,"")
+.replace(/\b(сухое|полусухое|полусладкое|сладкое)\b/gi,"")
+.replace(/\b(красное|белое|розовое|игристое)\b/gi,"")
 .replace(/\s+/g," ")
 .trim();
 
@@ -23,13 +25,15 @@ return name
 function renderCatalog(list){
 
 const container = document.getElementById("catalog-grid");
-
 container.innerHTML = "";
 
 list.forEach(product => {
 
 const id = product.id;
-const name = cleanWineName(product.name || "");
+
+const rawName = product.name || "";
+const name = cleanWineName(rawName);
+
 const type = product.type || "";
 const price = product.price || "";
 
