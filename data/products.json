@@ -21,7 +21,7 @@
     "featured": true,
     "name_en": "Ля Жюдит Pinot Нуар Тасмания Глейцер-Диксон",
     "country": "",
-    "grape": ""
+    "grape": "Pinot Noir"
   },
   {
     "id": 3,
@@ -141,7 +141,7 @@
     "featured": false,
     "name_en": "Pinot Grigio Veneto",
     "country": "",
-    "grape": ""
+    "grape": "Pinot Noir"
   },
   {
     "id": 13,
@@ -3285,7 +3285,7 @@
     "featured": false,
     "name_en": "Pinot Grigio Alto Adige",
     "country": "",
-    "grape": ""
+    "grape": "Pinot Noir"
   },
   {
     "id": 275,
@@ -4557,7 +4557,7 @@
     "featured": false,
     "name_en": "Pinot Gris Grand Reserve",
     "country": "",
-    "grape": ""
+    "grape": "Pinot Noir"
   },
   {
     "id": 381,
