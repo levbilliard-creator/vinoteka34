@@ -1,104 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-
-<meta charset="UTF-8">
-<title>Импорт каталога</title>
-
-<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
-
-<style>
-
-body{
-font-family:Arial;
-padding:40px;
-}
-
-button{
-padding:12px 20px;
-font-size:16px;
-cursor:pointer;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<h2>Импорт каталога из Excel</h2>
-
-<input type="file" id="file">
-
-<br><br>
-
-<button onclick="processFile()">
-Создать products.json
-</button>
-
-
 <script>
-
-function cleanName(name){
-
-if(!name) return ""
-
-let cleaned = name
-
-cleaned = cleaned
-.replace(/вино/gi,"")
-.replace(/сортовое/gi,"")
-.replace(/марочное/gi,"")
-.replace(/столовое/gi,"")
-
-.replace(/белое/gi,"")
-.replace(/красное/gi,"")
-.replace(/розовое/gi,"")
-
-.replace(/сухое/gi,"")
-.replace(/полусухое/gi,"")
-.replace(/полусладкое/gi,"")
-.replace(/сладкое/gi,"")
-
-cleaned = cleaned.replace(/\s+/g," ").trim()
-
-return cleaned
-
-}
-
-function detectCategory(name){
-
-name = name.toLowerCase()
-
-if(name.includes("вино")) return "wine"
-if(name.includes("игрист")) return "sparkling"
-if(name.includes("шамп")) return "champagne"
-
-if(name.includes("виски")) return "whisky"
-if(name.includes("коньяк")) return "cognac"
-if(name.includes("бренди")) return "brandy"
-if(name.includes("джин")) return "gin"
-if(name.includes("ром")) return "rum"
-if(name.includes("ликер")) return "liqueur"
-if(name.includes("водка")) return "vodka"
-
-return "other"
-
-}
 
 function processFile(){
 
 const file =
 document.getElementById("file").files[0]
 
-const reader =
-new FileReader()
+const reader = new FileReader()
 
 reader.onload = function(e){
 
-const data =
-new Uint8Array(e.target.result)
+const data = new Uint8Array(e.target.result)
 
 const workbook =
 XLSX.read(data,{type:"array"})
@@ -116,21 +27,19 @@ let id = 1
 rows.forEach(row => {
 
 const name = row["Товар"]
-const qty = row["Количество"]
-const price = row["Цена"]
+const price = row["Цена за единицу"]
 
 if(!name) return
-if(qty <= 0) return
 
 products.push({
 
-id: id++,
+id:id++,
 
-category: detectCategory(name),
+name:name,
 
-name: cleanName(name),
+price:price,
 
-price: price
+category:""
 
 })
 
@@ -160,6 +69,3 @@ reader.readAsArrayBuffer(file)
 }
 
 </script>
-
-</body>
-</html>
