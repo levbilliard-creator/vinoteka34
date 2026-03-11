@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Импорт каталога</title>
+<title>Импорт каталога из Excel</title>
 
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
@@ -24,11 +24,12 @@ cursor:pointer;
 background:#c9a86a;
 border:none;
 border-radius:6px;
+margin-top:20px;
 }
 
 input{
 margin-top:20px;
-margin-bottom:20px;
+margin-bottom:10px;
 }
 
 </style>
@@ -43,26 +44,28 @@ margin-bottom:20px;
 
 <br>
 
-<button id="btn">Создать products.json</button>
-
+<button onclick="processFile()">Создать products.json</button>
 
 <script>
 
-document.getElementById("btn").onclick = function(){
+function processFile(){
 
 const file =
 document.getElementById("fileInput").files[0]
 
 if(!file){
+
 alert("Выберите Excel файл")
 return
+
 }
 
 const reader = new FileReader()
 
 reader.onload = function(e){
 
-const data = new Uint8Array(e.target.result)
+const data =
+new Uint8Array(e.target.result)
 
 const workbook =
 XLSX.read(data,{type:"array"})
@@ -71,18 +74,23 @@ const sheet =
 workbook.Sheets[workbook.SheetNames[0]]
 
 const rows =
-XLSX.utils.sheet_to_json(sheet)
+XLSX.utils.sheet_to_json(sheet,{
+range:9,
+defval:""
+})
+
+console.log("Найдено строк:",rows.length)
 
 const products = []
 
 let id = 1
 
-for(let row of rows){
+rows.forEach(row => {
 
 const name = row["Товар"]
-const price = row["Цена за единицу"]
+const price = row["Цена"]
 
-if(!name) continue
+if(!name) return
 
 products.push({
 
@@ -92,7 +100,9 @@ price:price
 
 })
 
-}
+})
+
+console.log("Товаров:",products.length)
 
 const json =
 JSON.stringify(products,null,2)
