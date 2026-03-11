@@ -1,9 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Импорт каталога</title>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+<style>
+
+body{
+font-family:Arial;
+padding:40px;
+background:#0b0f14;
+color:white;
+}
+
+button{
+padding:14px 22px;
+font-size:16px;
+cursor:pointer;
+background:#c9a86a;
+border:none;
+border-radius:6px;
+}
+
+input{
+margin-top:20px;
+margin-bottom:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Импорт каталога из Excel</h2>
+
+<input type="file" id="fileInput">
+
+<br>
+
+<button id="btn">Создать products.json</button>
+
+
 <script>
 
-function processFile(){
+document.getElementById("btn").onclick = function(){
 
 const file =
-document.getElementById("file").files[0]
+document.getElementById("fileInput").files[0]
+
+if(!file){
+alert("Выберите Excel файл")
+return
+}
 
 const reader = new FileReader()
 
@@ -24,43 +77,39 @@ const products = []
 
 let id = 1
 
-rows.forEach(row => {
+for(let row of rows){
 
 const name = row["Товар"]
 const price = row["Цена за единицу"]
 
-if(!name) return
+if(!name) continue
 
 products.push({
 
 id:id++,
-
 name:name,
-
-price:price,
-
-category:""
+price:price
 
 })
 
-})
+}
+
+const json =
+JSON.stringify(products,null,2)
 
 const blob =
-new Blob(
-[JSON.stringify(products,null,2)],
-{type:"application/json"}
-)
+new Blob([json],{type:"application/json"})
 
-const a =
+const link =
 document.createElement("a")
 
-a.href =
+link.href =
 URL.createObjectURL(blob)
 
-a.download =
+link.download =
 "products.json"
 
-a.click()
+link.click()
 
 }
 
@@ -69,3 +118,6 @@ reader.readAsArrayBuffer(file)
 }
 
 </script>
+
+</body>
+</html>
