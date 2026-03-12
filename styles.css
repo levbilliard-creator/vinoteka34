@@ -24,6 +24,7 @@ border-bottom:1px solid rgba(255,255,255,0.05);
 font-size:24px;
 font-weight:700;
 letter-spacing:2px;
+color:#a855f7;
 }
 
 .menu{
@@ -36,7 +37,6 @@ color:#ffffff;
 text-decoration:none;
 font-size:15px;
 opacity:0.8;
-transition:0.2s;
 }
 
 .menu a:hover{
@@ -48,25 +48,42 @@ font-size:14px;
 opacity:0.8;
 }
 
-/* CATALOG */
+/* HERO */
+
+.hero{
+padding:80px 40px;
+max-width:1200px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.8;
+}
+
+/* CATALOG PAGE */
 
 .catalog{
 padding:60px 40px;
-max-width:1400px;
+max-width:1300px;
 margin:auto;
 }
 
 .catalog h1{
-font-size:48px;
+font-size:42px;
 margin-bottom:30px;
 }
 
 /* SEARCH */
 
 .search{
-width:420px;
-padding:14px 18px;
-border-radius:10px;
+width:400px;
+padding:14px 16px;
+border-radius:8px;
 border:none;
 background:#111a24;
 color:white;
@@ -78,7 +95,7 @@ margin-bottom:40px;
 
 .catalog-grid{
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
 gap:30px;
 }
 
@@ -89,12 +106,6 @@ background:#0f1a24;
 border-radius:12px;
 padding:22px;
 border:1px solid rgba(255,255,255,0.05);
-transition:0.3s;
-}
-
-.wine-card:hover{
-transform:translateY(-4px);
-border-color:#c9a86a;
 }
 
 /* TYPE */
@@ -102,8 +113,7 @@ border-color:#c9a86a;
 .wine-type{
 color:#c9a86a;
 font-size:12px;
-letter-spacing:1px;
-margin-bottom:8px;
+margin-bottom:6px;
 text-transform:uppercase;
 }
 
@@ -149,9 +159,4 @@ padding:8px 14px;
 border-radius:6px;
 text-decoration:none;
 font-size:14px;
-transition:0.2s;
-}
-
-.wine-btn:hover{
-background:#d9b97d;
 }
