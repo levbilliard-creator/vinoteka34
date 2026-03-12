@@ -1,13 +1,10 @@
 async function loadCatalog(){
 
 const response = await fetch("/data/products.json")
+
 const products = await response.json()
 
-window.catalogProducts = products
-
 renderCatalog(products)
-
-initFilters(products)
 
 }
 
@@ -26,17 +23,11 @@ const color = product.color || ""
 const style = product.style || ""
 const price = product.price || 0
 
-const image = product.image || "/images/bottle.png"
-
 const card = document.createElement("div")
 
 card.className = "wine-card"
 
 card.innerHTML = `
-
-<div class="wine-image">
-<img src="${image}" alt="">
-</div>
 
 <div class="wine-type">${type}</div>
 
@@ -48,37 +39,11 @@ card.innerHTML = `
 
 <div class="wine-price">${price} ₽</div>
 
-<a href="product.html?id=${product.id}" class="wine-btn">
-Подробнее
-</a>
+<a href="#" class="wine-btn">Подробнее</a>
 
 `
 
 grid.appendChild(card)
-
-})
-
-}
-
-function initFilters(products){
-
-const search = document.querySelector(".search")
-
-search.addEventListener("input", e => {
-
-const value = e.target.value.toLowerCase()
-
-const filtered = products.filter(p => {
-
-const name =
-(p.name_ru || "") +
-(p.name_en || "")
-
-return name.toLowerCase().includes(value)
-
-})
-
-renderCatalog(filtered)
 
 })
 
