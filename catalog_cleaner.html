@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Очистка каталога</title>
+
+<style>
+
+body{
+background:#0b0f14;
+color:white;
+font-family:Arial;
+padding:40px;
+}
+
+button{
+padding:12px 20px;
+font-size:16px;
+background:#c9a86a;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Очистка каталога</h2>
+
+<button onclick="cleanCatalog()">Очистить каталог</button>
+
+<script>
+
+async function cleanCatalog(){
+
+const res = await fetch("data/products.json")
+
+const products = await res.json()
+
+function detectCategory(name){
+
+const text = name.toLowerCase()
+
+if(text.includes("сыр")) return "бакалея"
+if(text.includes("приправа")) return "бакалея"
+if(text.includes("соус")) return "бакалея"
+
+if(text.includes("чай")) return "чай"
+
+if(text.includes("виски")) return "крепкий алкоголь"
+if(text.includes("коньяк")) return "крепкий алкоголь"
+if(text.includes("ром")) return "крепкий алкоголь"
+if(text.includes("бренди")) return "крепкий алкоголь"
+
+if(text.includes("шампан")) return "игристое"
+
+return "вино"
+
+}
+
+function cleanName(name){
+
+return name
+.replace(/с защищенным наименованием места происхождения/gi,"")
+.replace(/вино сортовое марочное/gi,"")
+.replace(/,/g,"")
+.trim()
+
+}
+
+const cleaned = products.map(p=>{
+
+const name = cleanName(p.name_ru)
+
+return{
+
+id:p.id,
+
+category:detectCategory(name),
+
+name_ru:name,
+
+name_en:p.name_en || "",
+
+color:p.color || "",
+
+style:p.style || "",
+
+price:p.price
+
+}
+
+})
+
+downloadJSON(cleaned)
+
+}
+
+function downloadJSON(data){
+
+const blob = new Blob(
+[JSON.stringify(data,null,2)],
+{type:"application/json"}
+)
+
+const url = URL.createObjectURL(blob)
+
+const a = document.createElement("a")
+
+a.href = url
+a.download = "products_clean.json"
+
+a.click()
+
+}
+
+</script>
+
+</body>
+</html>
