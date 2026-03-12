@@ -21,10 +21,10 @@ border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .logo{
-font-size:24px;
+font-size:26px;
 font-weight:700;
-letter-spacing:2px;
 color:#a855f7;
+letter-spacing:2px;
 }
 
 .menu{
@@ -51,112 +51,17 @@ opacity:0.8;
 /* HERO */
 
 .hero{
-padding:80px 40px;
-max-width:1200px;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-opacity:0.8;
-}
-
-/* CATALOG PAGE */
-
-.catalog{
 padding:60px 40px;
-max-width:1300px;
-margin:auto;
+display:flex;
+justify-content:center;
 }
 
-.catalog h1{
-font-size:42px;
-margin-bottom:30px;
-}
+/* VIDEO */
 
-/* SEARCH */
-
-.search{
-width:400px;
-padding:14px 16px;
-border-radius:8px;
-border:none;
-background:#111a24;
-color:white;
-font-size:15px;
-margin-bottom:40px;
-}
-
-/* GRID */
-
-.catalog-grid{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-gap:30px;
-}
-
-/* CARD */
-
-.wine-card{
-background:#0f1a24;
-border-radius:12px;
-padding:22px;
-border:1px solid rgba(255,255,255,0.05);
-}
-
-/* TYPE */
-
-.wine-type{
-color:#c9a86a;
-font-size:12px;
-margin-bottom:6px;
-text-transform:uppercase;
-}
-
-/* ENGLISH NAME */
-
-.wine-name-en{
-font-size:18px;
-font-weight:600;
-margin-bottom:6px;
-}
-
-/* RUSSIAN NAME */
-
-.wine-name-ru{
-color:#9fb3c8;
-font-size:14px;
-margin-bottom:12px;
-}
-
-/* STYLE */
-
-.wine-style{
-color:#6f8aa3;
-font-size:13px;
-margin-bottom:12px;
-}
-
-/* PRICE */
-
-.wine-price{
-font-size:18px;
-font-weight:600;
-margin-bottom:14px;
-}
-
-/* BUTTON */
-
-.wine-btn{
-display:inline-block;
-background:#c9a86a;
-color:black;
-padding:8px 14px;
-border-radius:6px;
-text-decoration:none;
-font-size:14px;
+.hero-video{
+width:100%;
+max-width:1200px;
+height:auto;
+border-radius:10px;
+display:block;
 }
