@@ -16,33 +16,33 @@ grid.innerHTML = ""
 
 products.forEach(product => {
 
-const name =
-product.name_ru ||
-product.name ||
-product.name_en ||
-"Без названия"
+const nameRu = product.name_ru || product.name || ""
+const nameEn = product.name_en || ""
 
-const type =
-product.type ||
-""
+const type = product.type || ""
+const color = product.color || ""
+const style = product.style || ""
 
-const price =
-product.price ||
-0
+const price = product.price || 0
 
 const card = document.createElement("div")
-
-card.className = "card"
+card.className = "wine-card"
 
 card.innerHTML = `
 
-<div class="type">${type}</div>
+<div class="wine-type">${type}</div>
 
-<div class="title">${name}</div>
+<div class="wine-name-en">${nameEn}</div>
 
-<div class="price">${price} ₽</div>
+<div class="wine-name-ru">${nameRu}</div>
 
-<a href="product.html?id=${product.id}" class="btn">Подробнее</a>
+<div class="wine-style">${color} ${style}</div>
+
+<div class="wine-price">${price} ₽</div>
+
+<a href="product.html?id=${product.id}" class="wine-btn">
+Подробнее
+</a>
 
 `
 
