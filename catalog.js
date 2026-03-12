@@ -1,18 +1,10 @@
 async function loadCatalog(){
 
-try{
-
-const response = await fetch("products.json")
+const response = await fetch("/data/products.json")
 
 const products = await response.json()
 
 renderCatalog(products)
-
-}catch(e){
-
-console.error("Ошибка загрузки каталога", e)
-
-}
 
 }
 
@@ -25,8 +17,8 @@ grid.innerHTML = ""
 products.forEach(product => {
 
 const name =
-product.name ||
 product.name_ru ||
+product.name ||
 product.name_en ||
 "Без названия"
 
@@ -44,21 +36,13 @@ card.className = "card"
 
 card.innerHTML = `
 
-<div class="type">
-${type}
-</div>
+<div class="type">${type}</div>
 
-<div class="title">
-${name}
-</div>
+<div class="title">${name}</div>
 
-<div class="price">
-${price} ₽
-</div>
+<div class="price">${price} ₽</div>
 
-<button class="btn">
-Подробнее
-</button>
+<a href="product.html?id=${product.id}" class="btn">Подробнее</a>
 
 `
 
