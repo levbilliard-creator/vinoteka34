@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-<title>VINOTEKA34 — Каталог вин</title>
+<title>Каталог вин</title>
 
 <link rel="stylesheet" href="styles.css">
 
@@ -12,12 +12,11 @@
 
 <body>
 
-
 <header class="header">
 
-<a href="index.html" class="logo">
+<div class="logo">
 VINOTEKA34
-</a>
+</div>
 
 <nav class="menu">
 
@@ -34,46 +33,21 @@ VINOTEKA34
 
 </header>
 
-
 <section class="catalog">
 
-<h1 class="catalog-title">
-Каталог вин
-</h1>
-
+<h1>Каталог вин</h1>
 
 <input
 type="text"
-id="search"
-class="search"
 placeholder="Поиск вина..."
->
+class="search"
+/>
 
-
-<br><br>
-
-
-<button
-id="processBtn"
-class="product-btn">
-Обработать каталог
-</button>
-
-
-<br><br>
-
-
-<div
-id="catalog-grid"
-class="catalog-grid">
-</div>
-
+<div id="catalog-grid" class="catalog-grid"></div>
 
 </section>
 
-
 <script src="catalog.js"></script>
-
 
 </body>
 </html>

@@ -1,9 +1,18 @@
-async function loadCatalog() {
+async function loadCatalog(){
+
+try{
 
 const response = await fetch("products.json")
+
 const products = await response.json()
 
 renderCatalog(products)
+
+}catch(e){
+
+console.error("Ошибка загрузки каталога", e)
+
+}
 
 }
 
@@ -15,10 +24,10 @@ grid.innerHTML = ""
 
 products.forEach(product => {
 
-const title =
-product.name_en ||
-product.name_ru ||
+const name =
 product.name ||
+product.name_ru ||
+product.name_en ||
 "Без названия"
 
 const type =
@@ -30,6 +39,7 @@ product.price ||
 0
 
 const card = document.createElement("div")
+
 card.className = "card"
 
 card.innerHTML = `
@@ -39,16 +49,16 @@ ${type}
 </div>
 
 <div class="title">
-${title}
+${name}
 </div>
 
 <div class="price">
 ${price} ₽
 </div>
 
-<a href="product.html?id=${product.id}" class="btn">
+<button class="btn">
 Подробнее
-</a>
+</button>
 
 `
 
