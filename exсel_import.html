@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<title>Импорт каталога</title>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0b0f14;
+color:white;
+padding:40px;
+}
+
+button{
+padding:14px 22px;
+font-size:16px;
+background:#c9a86a;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Импорт каталога из Excel</h2>
+
+<input type="file" id="fileInput">
+
+<br><br>
+
+<button onclick="importExcel()">
+Создать products.json
+</button>
+
+<script>
+
+function importExcel(){
+
+const file = document.getElementById("fileInput").files[0]
+
+if(!file){
+
+alert("Выберите Excel файл")
+return
+
+}
+
+const reader = new FileReader()
+
+reader.onload = function(e){
+
+const data = new Uint8Array(e.target.result)
+
+const workbook = XLSX.read(data,{type:"array"})
+
+const sheet = workbook.Sheets[workbook.SheetNames[0]]
+
+const rows = XLSX.utils.sheet_to_json(sheet,{header:1})
+
+const products = []
+
+let id = 1
+
+for(let i=10;i<rows.length;i++){
+
+const row = rows[i]
+
+const name = row[1]
+const price = row[6]
+
+if(!name) continue
+if(!price) continue
+
+products.push({
+
+id:id++,
+name:name,
+price:price
+
+})
+
+}
+
+const json = JSON.stringify(products,null,2)
+
+const blob = new Blob([json],{type:"application/json"})
+
+const link = document.createElement("a")
+
+link.href = URL.createObjectURL(blob)
+
+link.download = "products.json"
+
+link.click()
+
+}
+
+reader.readAsArrayBuffer(file)
+
+}
+
+</script>
+
+</body>
+</html>
