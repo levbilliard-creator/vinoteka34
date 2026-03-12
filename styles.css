@@ -64,4 +64,33 @@ max-width:1200px;
 height:auto;
 border-radius:10px;
 display:block;
+}.hero{
+padding:120px 40px;
+max-width:1200px;
+margin:auto;
+}
+
+.hero-content{
+max-width:600px;
+}
+
+.hero h1{
+font-size:56px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#9fb3c8;
+margin-bottom:30px;
+}
+
+.hero-btn{
+display:inline-block;
+background:#c9a86a;
+color:black;
+padding:14px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
 }
