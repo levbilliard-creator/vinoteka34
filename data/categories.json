@@ -1,0 +1,26 @@
+[
+{
+"id":"wine",
+"name":"Вино"
+},
+{
+"id":"sparkling",
+"name":"Игристое"
+},
+{
+"id":"strong",
+"name":"Крепкий алкоголь"
+},
+{
+"id":"grocery",
+"name":"Бакалея"
+},
+{
+"id":"tea",
+"name":"Чай"
+},
+{
+"id":"accessory",
+"name":"Аксессуары"
+}
+]
