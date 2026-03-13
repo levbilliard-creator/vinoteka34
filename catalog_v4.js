@@ -21,35 +21,34 @@ renderProducts(products);
 
 function renderCategories(){
 
-const categories = ["all"];
-
-products.forEach(p => {
-
-if(!categories.includes(p.type)){
-categories.push(p.type);
-}
-
-});
-
 categoryList.innerHTML = "";
 
-categories.forEach(cat => {
+const cats = [
+"all",
+"вино",
+"игристое",
+"коньяк",
+"виски",
+"ром",
+"бакалея",
+"чай"
+];
 
-const btn = document.createElement("div");
-btn.className = "category-item";
+cats.forEach(cat => {
 
-btn.textContent = cat === "all"
-? "Все"
-: cat;
+const el = document.createElement("div");
+el.className = "category-item";
 
-btn.onclick = () => {
+el.textContent = cat === "all" ? "Все" : cat;
+
+el.onclick = () => {
 
 currentCategory = cat;
 filterProducts();
 
 };
 
-categoryList.appendChild(btn);
+categoryList.appendChild(el);
 
 });
 
@@ -97,7 +96,7 @@ card.className = "product-card";
 card.innerHTML = `
 
 <div class="card-image">
-<img src="/assets/bottle.png">
+<img src="/assets/wine.jpg">
 </div>
 
 <div class="product-type">${p.type}</div>
@@ -116,9 +115,7 @@ ${p.price} ₽
 </div>
 
 <a href="/product.html?id=${p.id}">
-<button class="btn">
-Подробнее
-</button>
+<button class="btn">Подробнее</button>
 </a>
 
 `;
