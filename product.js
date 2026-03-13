@@ -11,10 +11,11 @@ const products = await res.json()
 const product = products.find(p => p.id === id)
 
 
-document.getElementById("product-type").innerText = product.type
-
 document.getElementById("product-name").innerText =
 product.name_en || product.name_ru
+
+document.getElementById("product-type").innerText =
+product.type || ""
 
 document.getElementById("product-style").innerText =
 (product.color || "") + " " + (product.style || "")
@@ -22,6 +23,15 @@ document.getElementById("product-style").innerText =
 document.getElementById("product-price").innerText =
 product.price + " ₽"
 
+
+document.getElementById("spec-type").innerText =
+product.type || ""
+
+document.getElementById("spec-color").innerText =
+product.color || ""
+
+document.getElementById("spec-style").innerText =
+product.style || ""
 
 
 renderSimilar(products, product)
@@ -49,11 +59,11 @@ card.innerHTML = `
 
 <img src="/assets/photo_1_2026-02-15_15-47-16.jpg">
 
-<div class="product-name-ru">
+<div class="card-name">
 ${p.name_ru}
 </div>
 
-<div class="product-price">
+<div class="card-price">
 ${p.price} ₽
 </div>
 
