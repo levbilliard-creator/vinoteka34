@@ -45,9 +45,13 @@ ${p.color || ""} ${p.style || ""}
 ${p.price} ₽
 </div>
 
-<button class="btn-buy">
-Добавить в корзину
+<a href="https://t.me/vinotekakaram" target="_blank">
+
+<button class="btn-sommelier">
+Связь с сомелье
 </button>
+
+</a>
 
 </div>
 
@@ -66,6 +70,8 @@ const similar = products
 
 const grid = document.getElementById("similar-products");
 
+grid.innerHTML = "";
+
 similar.forEach(item => {
 
 const card = document.createElement("div");
@@ -73,10 +79,11 @@ card.className = "product-card";
 
 card.innerHTML = `
 
-<div class="product-type">${item.type}</div>
+<div class="card-image">
+<img src="/assets/bottle.png">
+</div>
 
 <div class="product-title">
-${item.name_en || ""}
 ${item.name_ru}
 </div>
 
@@ -85,9 +92,7 @@ ${item.price} ₽
 </div>
 
 <a href="/product.html?id=${item.id}">
-<button class="btn">
-Подробнее
-</button>
+<button class="btn">Подробнее</button>
 </a>
 
 `;

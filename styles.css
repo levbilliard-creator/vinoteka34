@@ -227,4 +227,45 @@ font-size:14px;
 
 .wine-btn:hover{
 opacity:0.9;
+}.card-image{
+
+height:160px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:10px;
+
+}
+
+.card-image img{
+
+height:150px;
+
+}
+
+.product-layout{
+
+display:flex;
+gap:40px;
+max-width:1000px;
+margin:auto;
+
+}
+
+.product-image img{
+
+height:420px;
+
+}
+
+.btn-sommelier{
+
+background:#caa96b;
+color:black;
+border:none;
+padding:14px 22px;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
+
 }

@@ -96,26 +96,23 @@ card.className = "product-card";
 
 card.innerHTML = `
 
-<div class="product-type">${p.type || ""}</div>
+<div class="card-image">
+<img src="/assets/bottle.png">
+</div>
+
+<div class="product-type">${p.type}</div>
 
 <div class="product-title">
-
 ${p.name_en ? `<b>${p.name_en}</b><br>` : ""}
-
 ${p.name_ru}
-
 </div>
 
 <div class="product-params">
-
 ${p.color || ""} ${p.style || ""}
-
 </div>
 
 <div class="product-price">
-
 ${p.price} ₽
-
 </div>
 
 <a href="/product.html?id=${p.id}">
