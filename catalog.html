@@ -38,37 +38,61 @@ VINOTEKA34
 </header>
 
 
-<section class="catalog">
+
+<section class="catalog-page">
 
 <h1 class="catalog-title">
 Каталог
 </h1>
 
+
 <input
-type="text"
+class="search-input"
 placeholder="Поиск вина..."
-class="search"
+id="search"
 />
 
 
 <div class="catalog-layout">
 
 
-<div class="categories" id="categories">
+<div class="filters">
 
 <h3>Категории</h3>
 
-<div data-category="all">Все</div>
+<div class="filter-group">
 
-<div data-category="вино">Вино</div>
-<div data-category="игристое">Игристое</div>
+<button data-filter="all">Все</button>
+<button data-filter="wine">Вино</button>
+<button data-filter="sparkling">Игристое</button>
+<button data-filter="strong">Крепкий алкоголь</button>
+<button data-filter="food">Бакалея</button>
+<button data-filter="tea">Чай</button>
 
-<div data-category="коньяк">Коньяк</div>
-<div data-category="виски">Виски</div>
-<div data-category="ром">Ром</div>
+</div>
 
-<div data-category="бакалея">Бакалея</div>
-<div data-category="чай">Чай</div>
+
+<h3>Цвет</h3>
+
+<div class="filter-group">
+
+<button data-color="red">Красное</button>
+<button data-color="white">Белое</button>
+<button data-color="rose">Розовое</button>
+
+</div>
+
+
+<h3>Цена</h3>
+
+<div class="filter-group">
+
+<button data-price="3000">до 3000</button>
+<button data-price="6000">до 6000</button>
+<button data-price="10000">до 10000</button>
+
+</div>
+
 
 </div>
 
@@ -81,7 +105,8 @@ class="search"
 
 </section>
 
-<script src="catalog_v4.js"></script>
+
+<script src="catalog_v5.js"></script>
 
 </body>
 </html>
