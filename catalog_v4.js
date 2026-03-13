@@ -7,7 +7,6 @@ const searchInput = document.querySelector(".search");
 let products = [];
 let currentCategory = "all";
 
-
 fetch("/data/products.json")
 .then(res => res.json())
 .then(data => {
@@ -100,21 +99,30 @@ card.innerHTML = `
 <div class="product-type">${p.type || ""}</div>
 
 <div class="product-title">
+
 ${p.name_en ? `<b>${p.name_en}</b><br>` : ""}
+
 ${p.name_ru}
+
 </div>
 
 <div class="product-params">
+
 ${p.color || ""} ${p.style || ""}
+
 </div>
 
 <div class="product-price">
+
 ${p.price} ₽
+
 </div>
 
+<a href="/product.html?id=${p.id}">
 <button class="btn">
 Подробнее
 </button>
+</a>
 
 `;
 
