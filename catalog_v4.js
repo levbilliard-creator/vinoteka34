@@ -1,129 +1,85 @@
-document.addEventListener("DOMContentLoaded", () => {
+const grid = document.getElementById("catalog-grid")
+const categories = document.getElementById("categories")
 
-const grid = document.getElementById("catalog-grid");
-const categoryList = document.getElementById("category-list");
-const searchInput = document.querySelector(".search");
+let products = []
+let currentCategory = "all"
 
-let products = [];
-let currentCategory = "all";
+async function loadProducts(){
 
-fetch("/data/products.json")
-.then(res => res.json())
-.then(data => {
+const res = await fetch("/data/products.json")
 
-products = data;
+products = await res.json()
 
-renderCategories();
-renderProducts(products);
-
-});
-
-
-function renderCategories(){
-
-categoryList.innerHTML = "";
-
-const cats = [
-"all",
-"вино",
-"игристое",
-"коньяк",
-"виски",
-"ром",
-"бакалея",
-"чай"
-];
-
-cats.forEach(cat => {
-
-const el = document.createElement("div");
-el.className = "category-item";
-
-el.textContent = cat === "all" ? "Все" : cat;
-
-el.onclick = () => {
-
-currentCategory = cat;
-filterProducts();
-
-};
-
-categoryList.appendChild(el);
-
-});
+renderProducts()
 
 }
 
+function renderProducts(){
 
-function filterProducts(){
+grid.innerHTML = ""
 
-let filtered = products;
+let filtered = products
 
 if(currentCategory !== "all"){
 
-filtered = filtered.filter(p => p.type === currentCategory);
+filtered = products.filter(p => p.type === currentCategory)
 
 }
 
-const q = searchInput.value.toLowerCase();
+filtered.forEach(product=>{
 
-if(q){
+const card = document.createElement("div")
 
-filtered = filtered.filter(p =>
-(p.name_ru || "").toLowerCase().includes(q) ||
-(p.name_en || "").toLowerCase().includes(q)
-);
-
-}
-
-renderProducts(filtered);
-
-}
-
-
-searchInput.addEventListener("input", filterProducts);
-
-
-function renderProducts(items){
-
-grid.innerHTML = "";
-
-items.forEach(p => {
-
-const card = document.createElement("div");
-card.className = "product-card";
+card.className = "product-card"
 
 card.innerHTML = `
 
-<div class="card-image">
-<img src="/assets/wine.jpg">
+<img src="/assets/photo_1_2026-02-15_15-47-16.jpg" class="product-img">
+
+<div class="product-type">
+${product.type || ""}
 </div>
 
-<div class="product-type">${p.type}</div>
-
-<div class="product-title">
-${p.name_en ? `<b>${p.name_en}</b><br>` : ""}
-${p.name_ru}
+<div class="product-name">
+${product.name_en || ""}
 </div>
 
-<div class="product-params">
-${p.color || ""} ${p.style || ""}
+<div class="product-name-ru">
+${product.name_ru}
+</div>
+
+<div class="product-style">
+${product.color || ""} ${product.style || ""}
 </div>
 
 <div class="product-price">
-${p.price} ₽
+${product.price} ₽
 </div>
 
-<a href="/product.html?id=${p.id}">
-<button class="btn">Подробнее</button>
+<a href="/product?id=${product.id}">
+<button class="btn-card">
+Подробнее
+</button>
 </a>
 
-`;
+`
 
-grid.appendChild(card);
+grid.appendChild(card)
 
-});
+})
 
 }
 
-});
+categories.addEventListener("click",e=>{
+
+if(e.target.dataset.category){
+
+currentCategory = e.target.dataset.category
+
+renderProducts()
+
+}
+
+})
+
+loadProducts()
