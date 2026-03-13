@@ -14,6 +14,7 @@
 
 </head>
 
+
 <body>
 
 <header class="header">
@@ -38,18 +39,22 @@ VINOTEKA34
 </header>
 
 
+
 <section class="catalog-page">
 
-<h1 class="catalog-title">
-Каталог
-</h1>
+<div class="catalog-header">
 
+<h1>Каталог</h1>
 
 <input
-class="search-input"
+type="text"
 placeholder="Поиск вина..."
 id="search"
+class="search-input"
 />
+
+</div>
+
 
 
 <div class="catalog-layout">
@@ -57,36 +62,37 @@ id="search"
 
 <div class="filters">
 
+
 <h3>Категории</h3>
 
-<div class="filter-group">
+<div class="categories">
 
-<label>
-<input type="checkbox" value="wine" class="category">
+<button class="cat-btn active" data-category="all">
+Все
+</button>
+
+<button class="cat-btn" data-category="wine">
 Вино
-</label>
+</button>
 
-<label>
-<input type="checkbox" value="sparkling" class="category">
+<button class="cat-btn" data-category="sparkling">
 Игристое
-</label>
+</button>
 
-<label>
-<input type="checkbox" value="strong" class="category">
+<button class="cat-btn" data-category="strong">
 Крепкий алкоголь
-</label>
+</button>
 
-<label>
-<input type="checkbox" value="food" class="category">
+<button class="cat-btn" data-category="food">
 Бакалея
-</label>
+</button>
 
-<label>
-<input type="checkbox" value="tea" class="category">
+<button class="cat-btn" data-category="tea">
 Чай
-</label>
+</button>
 
 </div>
+
 
 
 <h3>Цвет вина</h3>
@@ -94,21 +100,22 @@ id="search"
 <div class="filter-group">
 
 <label>
-<input type="checkbox" value="red" class="color">
+<input type="checkbox" class="color" value="red">
 Красное
 </label>
 
 <label>
-<input type="checkbox" value="white" class="color">
+<input type="checkbox" class="color" value="white">
 Белое
 </label>
 
 <label>
-<input type="checkbox" value="rose" class="color">
+<input type="checkbox" class="color" value="rose">
 Розовое
 </label>
 
 </div>
+
 
 
 <h3>Страна</h3>
@@ -116,56 +123,35 @@ id="search"
 <div class="filter-group">
 
 <label>
-<input type="checkbox" value="france" class="country">
+<input type="checkbox" class="country" value="france">
 Франция
 </label>
 
 <label>
-<input type="checkbox" value="italy" class="country">
+<input type="checkbox" class="country" value="italy">
 Италия
 </label>
 
 <label>
-<input type="checkbox" value="spain" class="country">
+<input type="checkbox" class="country" value="spain">
 Испания
 </label>
 
 <label>
-<input type="checkbox" value="russia" class="country">
+<input type="checkbox" class="country" value="russia">
 Россия
 </label>
 
 </div>
 
 
-<h3>Цена</h3>
-
-<div class="filter-group">
-
-<label>
-<input type="radio" name="price" value="3000">
-до 3000 ₽
-</label>
-
-<label>
-<input type="radio" name="price" value="6000">
-до 6000 ₽
-</label>
-
-<label>
-<input type="radio" name="price" value="10000">
-до 10000 ₽
-</label>
-
 </div>
 
-
-</div>
 
 
 <div class="catalog-grid" id="catalog-grid">
 
-<!-- карточки товаров появляются здесь -->
+<!-- сюда загружаются карточки товаров -->
 
 </div>
 
@@ -175,7 +161,7 @@ id="search"
 </section>
 
 
-<script src="catalog_v6.js"></script>
+<script src="catalog_v7.js"></script>
 
 </body>
 

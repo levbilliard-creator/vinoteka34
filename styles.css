@@ -854,4 +854,36 @@ font-size:18px;
 
 margin-bottom:10px;
 
+}.categories{
+
+display:flex;
+flex-direction:column;
+gap:8px;
+
+}
+
+.cat-btn{
+
+background:none;
+border:1px solid #1f3e50;
+padding:8px 10px;
+border-radius:6px;
+color:#cfd9df;
+cursor:pointer;
+text-align:left;
+
+}
+
+.cat-btn:hover{
+
+background:#163447;
+
+}
+
+.cat-btn.active{
+
+background:#caa96b;
+color:#000;
+border:none;
+
 }
