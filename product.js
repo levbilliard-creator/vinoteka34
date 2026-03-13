@@ -1,104 +1,75 @@
-const params = new URLSearchParams(window.location.search);
-const productId = Number(params.get("id"));
+async function loadProduct(){
 
-let products = [];
+const params = new URLSearchParams(window.location.search)
 
-fetch("/data/products.json")
-.then(r => r.json())
-.then(data => {
+const id = parseInt(params.get("id"))
 
-products = data;
+const res = await fetch("/data/products.json")
 
-const product = products.find(p => p.id === productId);
+const products = await res.json()
 
-renderProduct(product);
-renderSimilar(product);
-
-});
+const product = products.find(p => p.id === id)
 
 
-function renderProduct(p){
+document.getElementById("product-type").innerText = product.type
 
-const container = document.getElementById("product-container");
+document.getElementById("product-name").innerText =
+product.name_en || product.name_ru
 
-container.innerHTML = `
+document.getElementById("product-style").innerText =
+(product.color || "") + " " + (product.style || "")
 
-<div class="product-layout">
+document.getElementById("product-price").innerText =
+product.price + " ₽"
 
-<div class="product-image">
-<img src="/assets/bottle.png">
-</div>
 
-<div class="product-info">
 
-<div class="product-type">${p.type}</div>
+renderSimilar(products, product)
 
-<h1>${p.name_en || ""}</h1>
+}
 
-<h2>${p.name_ru}</h2>
 
-<div class="product-params">
-${p.color || ""} ${p.style || ""}
+
+function renderSimilar(products, current){
+
+const grid = document.getElementById("similar-grid")
+
+const similar = products
+.filter(p => p.type === current.type && p.id !== current.id)
+.slice(0,4)
+
+
+similar.forEach(p=>{
+
+const card = document.createElement("div")
+
+card.className = "similar-card"
+
+card.innerHTML = `
+
+<img src="/assets/photo_1_2026-02-15_15-47-16.jpg">
+
+<div class="product-name-ru">
+${p.name_ru}
 </div>
 
 <div class="product-price">
 ${p.price} ₽
 </div>
 
-<a href="https://t.me/vinotekakaram" target="_blank">
-
-<button class="btn-sommelier">
-Связь с сомелье
+<a href="/product?id=${p.id}">
+<button class="btn-card">
+Подробнее
 </button>
-
 </a>
 
-</div>
+`
 
-</div>
+grid.appendChild(card)
 
-`;
+})
 
 }
 
 
-function renderSimilar(p){
-
-const similar = products
-.filter(x => x.type === p.type && x.id !== p.id)
-.slice(0,4);
-
-const grid = document.getElementById("similar-products");
-
-grid.innerHTML = "";
-
-similar.forEach(item => {
-
-const card = document.createElement("div");
-card.className = "product-card";
-
-card.innerHTML = `
-
-<div class="card-image">
-<img src="/assets/bottle.png">
-</div>
-
-<div class="product-title">
-${item.name_ru}
-</div>
-
-<div class="product-price">
-${item.price} ₽
-</div>
-
-<a href="/product.html?id=${item.id}">
-<button class="btn">Подробнее</button>
-</a>
-
-`;
-
-grid.appendChild(card);
-
-});
-
-}
+loadProduct()
