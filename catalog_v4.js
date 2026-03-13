@@ -1,162 +1,127 @@
-let products = []
-let filteredProducts = []
-let currentCategory = "all"
+document.addEventListener("DOMContentLoaded", () => {
 
-async function initCatalog(){
+const grid = document.getElementById("catalog-grid");
+const categoryList = document.getElementById("category-list");
+const searchInput = document.querySelector(".search");
 
-const response = await fetch("/data/products.json")
+let products = [];
+let currentCategory = "all";
 
-products = await response.json()
 
-filteredProducts = products
+fetch("/data/products.json")
+.then(res => res.json())
+.then(data => {
 
-buildCategories()
+products = data;
 
-renderCatalog(filteredProducts)
+renderCategories();
+renderProducts(products);
 
-initSearch()
+});
 
-}
 
-function buildCategories(){
+function renderCategories(){
 
-const categories = new Set()
+const categories = ["all"];
 
 products.forEach(p => {
 
-if(p.category){
-categories.add(p.category)
+if(!categories.includes(p.type)){
+categories.push(p.type);
 }
 
-})
+});
 
-const list = document.getElementById("category-list")
-
-if(!list) return
-
-list.innerHTML = ""
-
-const all = document.createElement("div")
-
-all.className = "category active"
-
-all.innerText = "Все"
-
-all.onclick = () => {
-
-currentCategory = "all"
-
-updateCategoryUI(all)
-
-renderCatalog(products)
-
-}
-
-list.appendChild(all)
+categoryList.innerHTML = "";
 
 categories.forEach(cat => {
 
-const el = document.createElement("div")
+const btn = document.createElement("div");
+btn.className = "category-item";
 
-el.className = "category"
+btn.textContent = cat === "all"
+? "Все"
+: cat;
 
-el.innerText = cat
+btn.onclick = () => {
 
-el.onclick = () => {
+currentCategory = cat;
+filterProducts();
 
-currentCategory = cat
+};
 
-updateCategoryUI(el)
+categoryList.appendChild(btn);
 
-const filtered = products.filter(p => p.category === cat)
-
-renderCatalog(filtered)
-
-}
-
-list.appendChild(el)
-
-})
+});
 
 }
 
-function updateCategoryUI(active){
 
-document.querySelectorAll(".category").forEach(c=>{
-c.classList.remove("active")
-})
+function filterProducts(){
 
-active.classList.add("active")
-
-}
-
-function initSearch(){
-
-const search = document.querySelector(".search")
-
-if(!search) return
-
-search.addEventListener("input", () => {
-
-const text = search.value.toLowerCase()
-
-let data = products
+let filtered = products;
 
 if(currentCategory !== "all"){
 
-data = products.filter(p => p.category === currentCategory)
+filtered = filtered.filter(p => p.type === currentCategory);
 
 }
 
-data = data.filter(p => {
+const q = searchInput.value.toLowerCase();
 
-const ru = (p.name_ru || "").toLowerCase()
-const en = (p.name_en || "").toLowerCase()
+if(q){
 
-return ru.includes(text) || en.includes(text)
-
-})
-
-renderCatalog(data)
-
-})
+filtered = filtered.filter(p =>
+(p.name_ru || "").toLowerCase().includes(q) ||
+(p.name_en || "").toLowerCase().includes(q)
+);
 
 }
 
-function renderCatalog(data){
+renderProducts(filtered);
 
-const grid = document.getElementById("catalog-grid")
+}
 
-if(!grid) return
 
-grid.innerHTML = ""
+searchInput.addEventListener("input", filterProducts);
 
-data.forEach(p => {
 
-const card = document.createElement("div")
+function renderProducts(items){
 
-card.className = "wine-card"
+grid.innerHTML = "";
+
+items.forEach(p => {
+
+const card = document.createElement("div");
+card.className = "product-card";
 
 card.innerHTML = `
 
-<div class="wine-type">${p.category || ""}</div>
+<div class="product-type">${p.type || ""}</div>
 
-<div class="wine-name-en">${p.name_en || ""}</div>
+<div class="product-title">
+${p.name_en ? `<b>${p.name_en}</b><br>` : ""}
+${p.name_ru}
+</div>
 
-<div class="wine-name-ru">${p.name_ru}</div>
+<div class="product-params">
+${p.color || ""} ${p.style || ""}
+</div>
 
-<div class="wine-style">${p.color || ""} ${p.style || ""}</div>
+<div class="product-price">
+${p.price} ₽
+</div>
 
-<div class="wine-price">${p.price} ₽</div>
+<button class="btn">
+Подробнее
+</button>
 
-<a class="wine-btn">Подробнее</a>
+`;
 
-`
+grid.appendChild(card);
 
-grid.appendChild(card)
-
-})
+});
 
 }
 
-initCatalog()
+});
