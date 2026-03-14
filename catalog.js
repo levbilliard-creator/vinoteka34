@@ -78,16 +78,63 @@ renderCatalog()
 
 }
 
-function matchKeywords(product, keywords){
+
+/* универсальная проверка */
+
+function detectCategory(product){
 
 const name = (product.name_ru || "").toLowerCase()
 const type = (product.type || "").toLowerCase()
 
-return keywords.some(word =>
-name.includes(word) || type.includes(word)
-)
+const text = name + " " + type
+
+
+if(text.includes("игрист") || text.includes("шампан")) return "sparkling"
+
+if(text.includes("вино")) return "wine"
+
+if(
+text.includes("коньяк") ||
+text.includes("виски") ||
+text.includes("ром") ||
+text.includes("водка") ||
+text.includes("текила") ||
+text.includes("джин") ||
+text.includes("бренди") ||
+text.includes("ликер") ||
+text.includes("настойка") ||
+text.includes("граппа") ||
+text.includes("арманьяк") ||
+text.includes("кальвадос")
+) return "strong"
+
+if(text.includes("пиво")) return "beer"
+
+if(
+text.includes("вода") ||
+text.includes("сок") ||
+text.includes("лимонад") ||
+text.includes("cola") ||
+text.includes("кола") ||
+text.includes("тоник") ||
+text.includes("напиток")
+) return "soft"
+
+if(
+text.includes("сыр") ||
+text.includes("оливки") ||
+text.includes("чипсы") ||
+text.includes("сорбиодетокс") ||
+text.includes("ветчина") ||
+text.includes("мясная")
+) return "grocery"
+
+if(text.includes("чай")) return "tea"
+
+return "other"
 
 }
+
 
 function filterCategory(category){
 
@@ -95,103 +142,16 @@ if(category === "all"){
 
 filteredProducts = products
 
-}
+}else{
 
-/* ВИНО */
-
-else if(category === "wine"){
-
-filteredProducts = products.filter(p =>
-matchKeywords(p, ["вино"])
-)
-
-}
-
-/* ИГРИСТОЕ */
-
-else if(category === "sparkling"){
-
-filteredProducts = products.filter(p =>
-matchKeywords(p, ["игрист", "шампан"])
-)
-
-}
-
-/* КРЕПКИЙ АЛКОГОЛЬ */
-
-else if(category === "strong"){
-
-filteredProducts = products.filter(p =>
-matchKeywords(p, [
-"коньяк","виски","ром","водка",
-"текила","джин","бренди","ликер",
-"настойка","граппа","арманьяк","кальвадос"
-])
-)
-
-}
-
-/* ПИВО */
-
-else if(category === "beer"){
-
-filteredProducts = products.filter(p =>
-matchKeywords(p, [
-"пиво"
-])
-)
-
-}
-
-/* БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ */
-
-else if(category === "soft"){
-
-filteredProducts = products.filter(p =>
-matchKeywords(p, [
-"вода",
-"сок",
-"лимонад",
-"кола",
-"cola",
-"тоник",
-"напиток",
-"безалкоголь"
-])
-)
-
-}
-
-/* БАКАЛЕЯ */
-
-else if(category === "grocery"){
-
-filteredProducts = products.filter(p =>
-matchKeywords(p, [
-"сыр",
-"оливки",
-"чипсы",
-"сорбиодетокс",
-"мясная",
-"ветчина"
-])
-)
-
-}
-
-/* ЧАЙ */
-
-else if(category === "tea"){
-
-filteredProducts = products.filter(p =>
-matchKeywords(p, ["чай"])
-)
+filteredProducts = products.filter(p => detectCategory(p) === category)
 
 }
 
 renderCatalog()
 
 }
+
 
 function initCategoryButtons(){
 
@@ -212,6 +172,7 @@ filterCategory(filter)
 })
 
 }
+
 
 if(searchInput){
 searchInput.addEventListener("input", searchProducts)
