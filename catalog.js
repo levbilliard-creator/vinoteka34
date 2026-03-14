@@ -35,31 +35,19 @@ if(!grid) return
 
 grid.innerHTML = filtered.map(p => `
 
-<div class="product-card">
+<div class="catalog-card">
 
-<div class="product-image">
-<img src="${p.image || "/assets/no-photo.png"}" alt="">
-</div>
-
-<div class="product-body">
-
-<div class="product-title">
+<div class="catalog-card-title">
 ${p.name_ru || ""}
 </div>
 
-<div class="product-subtitle">
-${p.name_en || ""}
-</div>
-
-<div class="product-price">
+<div class="catalog-card-price">
 ${p.price ? p.price + " ₽" : ""}
 </div>
 
-<a class="product-button" href="product.html?id=${p.id}">
+<a class="catalog-card-link" href="product.html?id=${p.id}">
 Подробнее
 </a>
-
-</div>
 
 </div>
 
@@ -93,36 +81,20 @@ renderCatalog()
 function categoryFilter(category){
 
 if(category === "all"){
+
 filtered = products
+
 }else{
-filtered = products.filter(p => 
-(p.category || "").toLowerCase().includes(category)
-)
-}
-
-renderCatalog()
-
-}
-
-
-
-function applyFilters(){
-
-const color = document.getElementById("filter-color")?.value
-const style = document.getElementById("filter-style")?.value
-const country = document.getElementById("filter-country")?.value
 
 filtered = products.filter(p => {
 
-return (
+const cat = (p.category || "").toLowerCase()
 
-(!color || p.color === color) &&
-(!style || p.style === style) &&
-(!country || p.country === country)
-
-)
+return cat.includes(category)
 
 })
+
+}
 
 renderCatalog()
 
@@ -136,15 +108,18 @@ document.querySelectorAll("[data-filter]").forEach(btn => {
 
 btn.addEventListener("click", () => {
 
-categoryFilter(btn.dataset.filter)
+const cat = btn.dataset.filter
+
+if(cat === "wine") categoryFilter("вино")
+else if(cat === "sparkling") categoryFilter("игрист")
+else if(cat === "strong") categoryFilter("креп")
+else if(cat === "grocery") categoryFilter("бакале")
+else if(cat === "tea") categoryFilter("чай")
+else categoryFilter("all")
 
 })
 
 })
-
-document.getElementById("filter-color")?.addEventListener("change", applyFilters)
-document.getElementById("filter-style")?.addEventListener("change", applyFilters)
-document.getElementById("filter-country")?.addEventListener("change", applyFilters)
 
 if(searchInput){
 searchInput.addEventListener("input", searchProducts)
