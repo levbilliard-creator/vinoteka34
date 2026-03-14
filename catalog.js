@@ -1,138 +1,155 @@
 let products = []
-let filtered = []
+let filteredProducts = []
 
-async function loadProducts() {
+const grid = document.getElementById("catalog-grid")
+const searchInput = document.getElementById("search")
 
-const response = await fetch("/data/products.json")
+async function loadProducts(){
+
+const response = await fetch("products.json")
 
 products = await response.json()
 
-filtered = products
+filteredProducts = products
 
-renderCatalog(filtered)
+renderCatalog()
 
 }
 
-function renderCatalog(list) {
+function renderCatalog(){
 
-const grid = document.getElementById("catalog-grid")
+if(!grid) return
 
-grid.innerHTML = ""
+grid.innerHTML = filteredProducts.map(product => {
 
-list.forEach(product => {
+return `
 
-const card = document.createElement("div")
+<div class="wine-card">
 
-card.className = "product-card"
+<img
+class="wine-img"
+src="${product.image || "img/no-photo.png"}"
+>
 
-card.innerHTML = `
-
-<img src="/assets/photo_1_2026-02-15_15-47-16.jpg">
-
-<div class="product-type">
-${product.type || ""}
+<div class="wine-type">
+${product.category || ""}
 </div>
 
-<div class="product-name">
-${product.name_ru}
+<div class="wine-name">
+${product.name_ru || ""}
 </div>
 
-<div class="product-price">
-${product.price} ₽
+<div class="wine-sub">
+${product.name_en || ""}
 </div>
 
-<button class="btn-card">
+<div class="wine-price">
+${product.price || ""} ₽
+</div>
+
+<button class="wine-btn">
 Подробнее
 </button>
 
+</div>
+
 `
 
-grid.appendChild(card)
-
-})
+}).join("")
 
 }
 
-function filterCategory(category){
 
-let result = []
+function applyFilters(){
+
+const color = document.getElementById("filter-color").value
+const style = document.getElementById("filter-style").value
+const country = document.getElementById("filter-country").value
+
+filteredProducts = products.filter(product => {
+
+return (
+
+(!color || product.color === color) &&
+(!style || product.style === style) &&
+(!country || product.country === country)
+
+)
+
+})
+
+renderCatalog()
+
+}
+
+
+function searchProducts(){
+
+const value = searchInput.value.toLowerCase()
+
+filteredProducts = products.filter(product => {
+
+return (
+
+product.name_ru?.toLowerCase().includes(value) ||
+product.name_en?.toLowerCase().includes(value)
+
+)
+
+})
+
+renderCatalog()
+
+}
+
+
+function categoryFilter(category){
 
 if(category === "all"){
 
-result = products
+filteredProducts = products
+
+}else{
+
+filteredProducts = products.filter(p => p.category === category)
 
 }
 
-else if(category === "wine"){
-
-result = products.filter(p => p.type === "вино")
+renderCatalog()
 
 }
 
-else if(category === "sparkling"){
 
-result = products.filter(p =>
-p.type.toLowerCase().includes("игрист")
-)
+function initFilters(){
 
-}
+const buttons = document.querySelectorAll("[data-filter]")
 
-else if(category === "strong"){
+buttons.forEach(btn => {
 
-result = products.filter(p =>
-p.type !== "вино" &&
-!p.type.toLowerCase().includes("игрист")
-)
+btn.addEventListener("click", () => {
 
-}
-
-else if(category === "food"){
-
-result = products.filter(p =>
-p.type === "бакалея"
-)
-
-}
-
-else if(category === "tea"){
-
-result = products.filter(p =>
-p.type === "чай"
-)
-
-}
-
-filtered = result
-
-renderCatalog(filtered)
-
-}
-
-document.querySelectorAll(".filter-btn").forEach(button => {
-
-button.addEventListener("click", () => {
-
-document.querySelectorAll(".filter-btn")
-.forEach(b => b.classList.remove("active"))
-
-button.classList.add("active")
-
-filterCategory(button.dataset.cat)
+categoryFilter(btn.dataset.filter)
 
 })
 
 })
 
-document.getElementById("search").addEventListener("input", e => {
+document
+.getElementById("filter-color")
+.addEventListener("change", applyFilters)
 
-const query = e.target.value.toLowerCase()
+document
+.getElementById("filter-style")
+.addEventListener("change", applyFilters)
 
-const result = filtered.filter(product =>
-product.name_ru.toLowerCase().includes(query)
-)
+document
+.getElementById("filter-country")
+.addEventListener("change", applyFilters)
 
-renderCatalog(result)
+searchInput.addEventListener("input", searchProducts)
 
-})
+}
+
 
 loadProducts()
+initFilters()

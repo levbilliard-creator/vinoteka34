@@ -2,34 +2,27 @@
 <html lang="ru">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Каталог — VINOTEKA34</title>
+<title>Каталог — Vinoteka34</title>
 
 <link rel="stylesheet" href="styles.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
-
 
 <body>
 
 <header class="header">
 
 <div class="logo">
-VINOTEKA34
+<a href="index.html">VINOTEKA34</a>
 </div>
 
-<nav class="menu">
-
-<a href="/">Главная</a>
-<a href="/catalog">Каталог</a>
+<nav class="nav">
+<a href="index.html">Главная</a>
+<a href="catalog.html">Каталог</a>
 <a href="#">Дегустации</a>
 <a href="#">Контакты</a>
-
 </nav>
 
 <div class="phone">
@@ -39,51 +32,88 @@ VINOTEKA34
 </header>
 
 
-<section class="catalog-page">
-
-<div class="catalog-header">
+<main class="catalog-page">
 
 <h1>Каталог</h1>
 
 <input
 type="text"
-placeholder="Поиск вина..."
 id="search"
-class="search"
+placeholder="Поиск вина..."
+class="search-input"
 />
+
+
+<section class="catalog-layout">
+
+<aside class="catalog-filters">
+
+<h3>Категории</h3>
+
+<div class="filters">
+
+<button data-filter="all">Все</button>
+<button data-filter="wine">Вино</button>
+<button data-filter="sparkling">Игристое</button>
+<button data-filter="strong">Крепкий алкоголь</button>
+<button data-filter="grocery">Бакалея</button>
+<button data-filter="tea">Чай</button>
 
 </div>
 
 
-<div class="catalog-layout">
+<h3>Цвет</h3>
+
+<select id="filter-color">
+
+<option value="">Все</option>
+<option value="red">Красное</option>
+<option value="white">Белое</option>
+<option value="rose">Розовое</option>
+
+</select>
 
 
-<aside class="filters">
+<h3>Стиль</h3>
 
-<h3>Категории</h3>
+<select id="filter-style">
 
-<button class="filter-btn active" data-cat="all">Все</button>
-<button class="filter-btn" data-cat="wine">Вино</button>
-<button class="filter-btn" data-cat="sparkling">Игристое</button>
-<button class="filter-btn" data-cat="strong">Крепкий алкоголь</button>
-<button class="filter-btn" data-cat="food">Бакалея</button>
-<button class="filter-btn" data-cat="tea">Чай</button>
+<option value="">Все</option>
+<option value="dry">Сухое</option>
+<option value="semi-dry">Полусухое</option>
+<option value="semi-sweet">Полусладкое</option>
+<option value="sweet">Сладкое</option>
+
+</select>
+
+
+<h3>Страна</h3>
+
+<select id="filter-country">
+
+<option value="">Все</option>
+<option value="france">Франция</option>
+<option value="italy">Италия</option>
+<option value="spain">Испания</option>
+<option value="russia">Россия</option>
+
+</select>
 
 </aside>
 
 
-<div id="catalog-grid" class="catalog-grid">
+<section class="catalog-content">
 
-</div>
-
-
-</div>
+<div id="catalog-grid" class="catalog-grid"></div>
 
 </section>
 
+</section>
 
-<script src="/catalog.js"></script>
+</main>
+
+
+<script src="catalog.js"></script>
 
 </body>
-
 </html>
