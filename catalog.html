@@ -34,6 +34,7 @@
 </header>
 
 
+
 <main class="catalog-page">
 
 <div class="catalog-layout">
@@ -46,7 +47,6 @@
 
 <input id="search" type="text" placeholder="Поиск вина...">
 
-
 <div class="filter-box">
 
 <h3>Категории</h3>
@@ -57,10 +57,13 @@
 <button data-filter="wine">Вино</button>
 <button data-filter="sparkling">Игристое</button>
 <button data-filter="strong">Крепкий алкоголь</button>
+<button data-filter="beer">Пиво</button>
+<button data-filter="soft">Безалкогольные</button>
 <button data-filter="grocery">Бакалея</button>
 <button data-filter="tea">Чай</button>
 
 </div>
+
 
 <h3>Цвет</h3>
 
@@ -71,6 +74,7 @@
 <option>Розовое</option>
 </select>
 
+
 <h3>Стиль</h3>
 
 <select>
@@ -80,6 +84,7 @@
 <option>Полусладкое</option>
 <option>Сладкое</option>
 </select>
+
 
 <h3>Страна</h3>
 
@@ -96,11 +101,12 @@
 </aside>
 
 
+
 <!-- GRID -->
 
 <section id="catalog-grid" class="catalog-grid">
 
-<!-- карточки сюда вставляет JS -->
+<!-- Карточки товара вставляются через catalog.js -->
 
 </section>
 
@@ -108,6 +114,7 @@
 </div>
 
 </main>
+
 
 
 <script src="/catalog.js"></script>

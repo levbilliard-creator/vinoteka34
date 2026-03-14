@@ -6,8 +6,6 @@ let filteredProducts = []
 const grid = document.getElementById("catalog-grid")
 const searchInput = document.getElementById("search")
 
-/* загрузка каталога */
-
 async function loadCatalog(){
 
     try{
@@ -29,151 +27,227 @@ async function loadCatalog(){
 }
 
 
-/* отрисовка карточек */
-
 function renderCatalog(){
 
-    if(!grid) return
+if(!grid) return
 
-    grid.innerHTML = filteredProducts.map(product => `
+grid.innerHTML = filteredProducts.map(p => `
 
-        <div class="catalog-card">
+<div class="catalog-card">
 
-            <div class="catalog-card-title">
-                ${product.name_ru || ""}
-            </div>
+<div class="card-header">
+<div class="card-type">${p.type || ""}</div>
+</div>
 
-            <div class="catalog-card-price">
-                ${product.price ? product.price + " ₽" : ""}
-            </div>
+<div class="card-title">
+${p.name_ru || ""}
+</div>
 
-            <a class="catalog-card-link" href="product.html?id=${product.id}">
-                Подробнее
-            </a>
+<div class="card-meta">
 
-        </div>
+<span class="card-color">${p.color || ""}</span>
+<span class="card-style">${p.style || ""}</span>
 
-    `).join("")
+</div>
+
+<div class="card-bottom">
+
+<div class="card-price">
+${p.price ? p.price + " ₽" : ""}
+</div>
+
+<a class="card-button" href="product.html?id=${p.id}">
+Подробнее
+</a>
+
+</div>
+
+</div>
+
+`).join("")
 
 }
 
-
-/* поиск */
 
 function searchProducts(){
 
-    const value = searchInput.value.toLowerCase()
+const value = searchInput.value.toLowerCase()
 
-    filteredProducts = products.filter(product =>
+filteredProducts = products.filter(product =>
 
-        (product.name_ru || "").toLowerCase().includes(value) ||
-        (product.name_en || "").toLowerCase().includes(value)
+(product.name_ru || "").toLowerCase().includes(value) ||
+(product.name_en || "").toLowerCase().includes(value)
 
-    )
+)
 
-    renderCatalog()
+renderCatalog()
 
 }
 
-
-/* фильтр категорий */
 
 function filterCategory(category){
 
-    if(category === "all"){
+if(category === "all"){
 
-        filteredProducts = products
+filteredProducts = products
 
-    }
+}
 
-    else if(category === "wine"){
+/* ВИНО */
 
-        filteredProducts = products.filter(p =>
-            (p.type || "").toLowerCase().includes("вино")
-        )
+else if(category === "wine"){
 
-    }
+filteredProducts = products.filter(p =>
+(p.type || "").toLowerCase().includes("вино")
+)
 
-    else if(category === "sparkling"){
+}
 
-        filteredProducts = products.filter(p =>
-            (p.type || "").toLowerCase().includes("игрист")
-        )
+/* ИГРИСТОЕ */
 
-    }
+else if(category === "sparkling"){
 
-    else if(category === "strong"){
+filteredProducts = products.filter(p =>
+(p.type || "").toLowerCase().includes("игрист")
+)
 
-        const strongTypes = [
-            "коньяк",
-            "виски",
-            "ром",
-            "водка",
-            "текила",
-            "джин",
-            "бренди",
-            "ликер",
-            "настойка",
-            "граппа",
-            "арманьяк",
-            "кальвадос"
-        ]
+}
 
-        filteredProducts = products.filter(p => {
+/* КРЕПКИЙ АЛКОГОЛЬ */
 
-            const t = (p.type || "").toLowerCase()
+else if(category === "strong"){
 
-            return strongTypes.some(type => t.includes(type))
+const strongTypes = [
+"коньяк",
+"виски",
+"ром",
+"водка",
+"текила",
+"джин",
+"бренди",
+"ликер",
+"настойка",
+"граппа",
+"арманьяк",
+"кальвадос"
+]
 
-        })
+filteredProducts = products.filter(p => {
 
-    }
+const t = (p.type || "").toLowerCase()
 
-    else if(category === "grocery"){
+return strongTypes.some(type => t.includes(type))
 
-        filteredProducts = products.filter(p =>
-            (p.type || "").toLowerCase().includes("бакале")
-        )
+})
 
-    }
+}
 
-    else if(category === "tea"){
+/* ПИВО */
 
-        filteredProducts = products.filter(p =>
-            (p.type || "").toLowerCase().includes("чай")
-        )
+else if(category === "beer"){
 
-    }
+const beerTypes = [
+"пиво",
+"lager",
+"ale",
+"stout",
+"porter"
+]
 
-    renderCatalog()
+filteredProducts = products.filter(p => {
+
+const t = (p.type || "").toLowerCase()
+
+return beerTypes.some(type => t.includes(type))
+
+})
+
+}
+
+/* БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ */
+
+else if(category === "soft"){
+
+const softTypes = [
+"вода",
+"сок",
+"лимонад",
+"тоник",
+"cola",
+"напиток"
+]
+
+filteredProducts = products.filter(p => {
+
+const t = (p.type || "").toLowerCase()
+
+return softTypes.some(type => t.includes(type))
+
+})
+
+}
+
+/* БАКАЛЕЯ */
+
+else if(category === "grocery"){
+
+const groceryTypes = [
+"сыр",
+"оливки",
+"чипсы",
+"сорбиодетокс",
+"мясная",
+"ветчина",
+"бакалея"
+]
+
+filteredProducts = products.filter(p => {
+
+const t = (p.type || "").toLowerCase()
+
+return groceryTypes.some(type => t.includes(type))
+
+})
+
+}
+
+/* ЧАЙ */
+
+else if(category === "tea"){
+
+filteredProducts = products.filter(p =>
+(p.type || "").toLowerCase().includes("чай")
+)
+
+}
+
+renderCatalog()
 
 }
 
 
-/* обработчики кнопок */
+/* КНОПКИ */
 
 function initCategoryButtons(){
 
-    const buttons = document.querySelectorAll("[data-filter]")
+const buttons = document.querySelectorAll("[data-filter]")
 
-    buttons.forEach(button => {
+buttons.forEach(button => {
 
-        button.addEventListener("click", () => {
+button.addEventListener("click", () => {
 
-            const filter = button.dataset.filter
-            filterCategory(filter)
+const filter = button.dataset.filter
+filterCategory(filter)
 
-        })
+})
 
-    })
+})
 
 }
 
 
-/* запуск */
-
 if(searchInput){
-    searchInput.addEventListener("input", searchProducts)
+searchInput.addEventListener("input", searchProducts)
 }
 
 initCategoryButtons()
