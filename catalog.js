@@ -78,6 +78,17 @@ renderCatalog()
 
 }
 
+function matchKeywords(product, keywords){
+
+const name = (product.name_ru || "").toLowerCase()
+const type = (product.type || "").toLowerCase()
+
+return keywords.some(word =>
+name.includes(word) || type.includes(word)
+)
+
+}
+
 function filterCategory(category){
 
 if(category === "all"){
@@ -91,7 +102,7 @@ filteredProducts = products
 else if(category === "wine"){
 
 filteredProducts = products.filter(p =>
-(p.type || "").toLowerCase().includes("вино")
+matchKeywords(p, ["вино"])
 )
 
 }
@@ -101,7 +112,7 @@ filteredProducts = products.filter(p =>
 else if(category === "sparkling"){
 
 filteredProducts = products.filter(p =>
-(p.type || "").toLowerCase().includes("игрист")
+matchKeywords(p, ["игрист", "шампан"])
 )
 
 }
@@ -110,18 +121,13 @@ filteredProducts = products.filter(p =>
 
 else if(category === "strong"){
 
-const strongTypes = [
-"коньяк","виски","ром","водка","текила",
-"джин","бренди","ликер","настойка",
-"граппа","арманьяк","кальвадос"
-]
-
-filteredProducts = products.filter(p => {
-
-const t = (p.type || "").toLowerCase()
-return strongTypes.some(type => t.includes(type))
-
-})
+filteredProducts = products.filter(p =>
+matchKeywords(p, [
+"коньяк","виски","ром","водка",
+"текила","джин","бренди","ликер",
+"настойка","граппа","арманьяк","кальвадос"
+])
+)
 
 }
 
@@ -129,38 +135,30 @@ return strongTypes.some(type => t.includes(type))
 
 else if(category === "beer"){
 
-const beerTypes = [
-"пиво","beer","lager","ale","ipa","stout","porter"
-]
-
-filteredProducts = products.filter(p => {
-
-const t = (p.type || "").toLowerCase()
-return beerTypes.some(type => t.includes(type))
-
-})
+filteredProducts = products.filter(p =>
+matchKeywords(p, [
+"пиво"
+])
+)
 
 }
 
-/* БЕЗАЛКОГОЛЬНЫЕ */
+/* БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ */
 
 else if(category === "soft"){
 
-const softTypes = [
-"вода","минеральная",
-"сок","juice",
-"лимонад","lemonade",
-"cola","кока","пепси",
-"тоник","tonic",
-"напиток"
-]
-
-filteredProducts = products.filter(p => {
-
-const t = (p.type || "").toLowerCase()
-return softTypes.some(type => t.includes(type))
-
-})
+filteredProducts = products.filter(p =>
+matchKeywords(p, [
+"вода",
+"сок",
+"лимонад",
+"кола",
+"cola",
+"тоник",
+"напиток",
+"безалкоголь"
+])
+)
 
 }
 
@@ -168,17 +166,16 @@ return softTypes.some(type => t.includes(type))
 
 else if(category === "grocery"){
 
-const groceryTypes = [
-"сыр","оливки","чипсы",
-"сорбиодетокс","мясная","ветчина","бакалея"
-]
-
-filteredProducts = products.filter(p => {
-
-const t = (p.type || "").toLowerCase()
-return groceryTypes.some(type => t.includes(type))
-
-})
+filteredProducts = products.filter(p =>
+matchKeywords(p, [
+"сыр",
+"оливки",
+"чипсы",
+"сорбиодетокс",
+"мясная",
+"ветчина"
+])
+)
 
 }
 
@@ -187,7 +184,7 @@ return groceryTypes.some(type => t.includes(type))
 else if(category === "tea"){
 
 filteredProducts = products.filter(p =>
-(p.type || "").toLowerCase().includes("чай")
+matchKeywords(p, ["чай"])
 )
 
 }
