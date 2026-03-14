@@ -6,123 +6,93 @@ let filtered = []
 const grid = document.getElementById("catalog-grid")
 const searchInput = document.getElementById("search")
 
+// соответствие кнопок и категорий из JSON
+const CATEGORY_MAP = {
+  wine: "вино",
+  sparkling: "игрист",
+  strong: "креп",
+  grocery: "бакале",
+  tea: "чай"
+}
+
 async function loadCatalog(){
+  try{
+    const res = await fetch("/data/products.json")
+    const data = await res.json()
 
-try{
+    products = Array.isArray(data) ? data : data.products || []
+    filtered = products
 
-const res = await fetch("/data/products.json")
-const data = await res.json()
-
-products = Array.isArray(data) ? data : data.products || []
-
-filtered = products
-
-renderCatalog()
-
-}catch(e){
-
-console.error("Ошибка загрузки каталога", e)
-
+    renderCatalog()
+  }catch(e){
+    console.error("Ошибка загрузки каталога", e)
+  }
 }
-
-}
-
 
 function renderCatalog(){
+  if(!grid) return
 
-grid.innerHTML = filtered.map(p => `
+  grid.innerHTML = filtered.map(p => `
+    <div class="catalog-card">
+      <div class="catalog-card-title">
+        ${p.name_ru || ""}
+      </div>
 
-<div class="catalog-card">
+      <div class="catalog-card-price">
+        ${p.price ? p.price + " ₽" : ""}
+      </div>
 
-<div class="catalog-card-title">
-${p.name_ru || ""}
-</div>
-
-<div class="catalog-card-price">
-${p.price ? p.price + " ₽" : ""}
-</div>
-
-<a class="catalog-card-link" href="product.html?id=${p.id}">
-Подробнее
-</a>
-
-</div>
-
-`).join("")
-
+      <a class="catalog-card-link" href="product.html?id=${p.id}">
+        Подробнее
+      </a>
+    </div>
+  `).join("")
 }
-
-
 
 function searchProducts(){
+  const value = searchInput.value.toLowerCase()
 
-const value = searchInput.value.toLowerCase()
+  filtered = products.filter(p =>
+    (p.name_ru || "").toLowerCase().includes(value) ||
+    (p.name_en || "").toLowerCase().includes(value)
+  )
 
-filtered = products.filter(p => {
-
-return (
-
-p.name_ru?.toLowerCase().includes(value) ||
-p.name_en?.toLowerCase().includes(value)
-
-)
-
-})
-
-renderCatalog()
-
+  renderCatalog()
 }
 
+function categoryFilter(key){
 
+  if(key === "all"){
+    filtered = products
+  }else{
 
-function categoryFilter(cat){
+    const target = CATEGORY_MAP[key]
 
-if(cat === "all"){
+    filtered = products.filter(p =>
+      (p.category || "").toLowerCase().includes(target)
+    )
+  }
 
-filtered = products
-
-}else{
-
-filtered = products.filter(p => {
-
-const category = (p.category || "").toLowerCase()
-
-return category.includes(cat)
-
-})
-
+  renderCatalog()
 }
-
-renderCatalog()
-
-}
-
-
 
 function initFilters(){
 
-document.querySelectorAll("[data-filter]").forEach(btn => {
+  document.querySelectorAll("[data-filter]").forEach(btn => {
 
-btn.addEventListener("click", () => {
+    btn.addEventListener("click", () => {
 
-const f = btn.dataset.filter
+      const key = btn.dataset.filter
+      categoryFilter(key)
 
-if(f === "wine") categoryFilter("вино")
-else if(f === "sparkling") categoryFilter("игрист")
-else if(f === "strong") categoryFilter("креп")
-else if(f === "grocery") categoryFilter("бакале")
-else if(f === "tea") categoryFilter("чай")
-else categoryFilter("all")
+    })
 
-})
+  })
 
-})
-
-searchInput?.addEventListener("input", searchProducts)
-
+  if(searchInput){
+    searchInput.addEventListener("input", searchProducts)
+  }
 }
-
-
 
 initFilters()
 loadCatalog()
