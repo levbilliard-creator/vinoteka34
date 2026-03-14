@@ -6,6 +6,7 @@ let filteredProducts = []
 const grid = document.getElementById("catalog-grid")
 const searchInput = document.getElementById("search")
 
+
 /* загрузка каталога */
 
 async function loadCatalog(){
@@ -29,7 +30,7 @@ console.error("Ошибка загрузки каталога", error)
 }
 
 
-/* отрисовка карточек */
+/* карточки */
 
 function renderCatalog(){
 
@@ -69,7 +70,7 @@ ${p.price ? p.price + " ₽" : ""}
 }
 
 
-/* определение типа */
+/* определение типа для карточки */
 
 function getTypeLabel(product){
 
@@ -85,8 +86,7 @@ name.includes("вода") ||
 name.includes("сок") ||
 name.includes("лимонад") ||
 name.includes("cola") ||
-name.includes("кола") ||
-name.includes("напит")
+name.includes("кола")
 ) return "безалкогольный напиток"
 
 return ""
@@ -122,6 +122,9 @@ filteredProducts = products
 
 }
 
+
+/* ВИНО */
+
 else if(category === "wine"){
 
 filteredProducts = products.filter(p =>
@@ -129,6 +132,9 @@ filteredProducts = products.filter(p =>
 )
 
 }
+
+
+/* ИГРИСТОЕ */
 
 else if(category === "sparkling"){
 
@@ -138,11 +144,15 @@ filteredProducts = products.filter(p =>
 
 }
 
+
+/* КРЕПКИЙ АЛКОГОЛЬ */
+
 else if(category === "strong"){
 
 filteredProducts = products.filter(p =>{
 
 const t = (p.type || "").toLowerCase()
+const name = (p.name_ru || "").toLowerCase()
 
 return (
 t.includes("коньяк") ||
@@ -150,12 +160,16 @@ t.includes("виски") ||
 t.includes("ром") ||
 t.includes("водка") ||
 t.includes("текила") ||
-t.includes("джин")
+t.includes("джин") ||
+name.includes("спирт")
 )
 
 })
 
 }
+
+
+/* ПИВО */
 
 else if(category === "beer"){
 
@@ -164,6 +178,9 @@ filteredProducts = products.filter(p =>
 )
 
 }
+
+
+/* БЕЗАЛКОГОЛЬНЫЕ */
 
 else if(category === "soft"){
 
@@ -176,13 +193,15 @@ name.includes("вода") ||
 name.includes("сок") ||
 name.includes("лимонад") ||
 name.includes("cola") ||
-name.includes("кола") ||
-name.includes("напит")
+name.includes("кола")
 )
 
 })
 
 }
+
+
+/* БАКАЛЕЯ */
 
 else if(category === "grocery"){
 
@@ -202,6 +221,9 @@ name.includes("нарезка")
 })
 
 }
+
+
+/* ЧАЙ */
 
 else if(category === "tea"){
 
