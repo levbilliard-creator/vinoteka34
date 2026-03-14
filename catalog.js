@@ -32,50 +32,43 @@ function renderCatalog(){
 
 if(!grid) return
 
-grid.innerHTML = filtered.map(p => {
+grid.innerHTML = filtered.map(p => `
 
-return `
+<div class="wine-card">
 
-<a href="product.html?id=${p.id}" class="catalog-card">
-
-<div class="catalog-card-image">
-
-<img src="${p.image || "/assets/no-photo.png"}">
-
+<div class="wine-card-image">
+<img src="${p.image || "/assets/no-photo.png"}" alt="">
 </div>
 
-<div class="catalog-card-body">
+<div class="wine-card-content">
 
-<div class="catalog-card-category">
+<div class="wine-card-category">
 ${p.category || ""}
 </div>
 
-<div class="catalog-card-title">
+<div class="wine-card-title">
 ${p.name_ru || ""}
 </div>
 
-<div class="catalog-card-sub">
+<div class="wine-card-subtitle">
 ${p.name_en || ""}
 </div>
 
-<div class="catalog-card-price">
+<div class="wine-card-price">
 ${p.price ? p.price + " ₽" : ""}
 </div>
 
-<div class="catalog-card-button">
+<a class="wine-card-button" href="product.html?id=${p.id}">
 Подробнее
-</div>
-
-</div>
-
 </a>
 
-`
+</div>
 
-}).join("")
+</div>
+
+`).join("")
 
 }
-
 
 
 function searchProducts(){
@@ -98,7 +91,6 @@ renderCatalog()
 }
 
 
-
 function categoryFilter(category){
 
 if(category === "all"){
@@ -110,7 +102,6 @@ filtered = products.filter(p => p.category === category)
 renderCatalog()
 
 }
-
 
 
 function applyFilters(){
@@ -136,7 +127,6 @@ renderCatalog()
 }
 
 
-
 function initFilters(){
 
 document.querySelectorAll("[data-filter]").forEach(btn => {
@@ -158,7 +148,6 @@ searchInput.addEventListener("input", searchProducts)
 }
 
 }
-
 
 
 initFilters()
