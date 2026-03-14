@@ -26,10 +26,7 @@ console.error("Ошибка загрузки каталога", error)
 
 }
 
-
 function renderCatalog(){
-
-if(!grid) return
 
 grid.innerHTML = filteredProducts.map(p => `
 
@@ -44,10 +41,8 @@ ${p.name_ru || ""}
 </div>
 
 <div class="card-meta">
-
-<span class="card-color">${p.color || ""}</span>
-<span class="card-style">${p.style || ""}</span>
-
+<span>${p.color || ""}</span>
+<span>${p.style || ""}</span>
 </div>
 
 <div class="card-bottom">
@@ -68,7 +63,6 @@ ${p.price ? p.price + " ₽" : ""}
 
 }
 
-
 function searchProducts(){
 
 const value = searchInput.value.toLowerCase()
@@ -83,7 +77,6 @@ filteredProducts = products.filter(product =>
 renderCatalog()
 
 }
-
 
 function filterCategory(category){
 
@@ -118,24 +111,14 @@ filteredProducts = products.filter(p =>
 else if(category === "strong"){
 
 const strongTypes = [
-"коньяк",
-"виски",
-"ром",
-"водка",
-"текила",
-"джин",
-"бренди",
-"ликер",
-"настойка",
-"граппа",
-"арманьяк",
-"кальвадос"
+"коньяк","виски","ром","водка","текила",
+"джин","бренди","ликер","настойка",
+"граппа","арманьяк","кальвадос"
 ]
 
 filteredProducts = products.filter(p => {
 
 const t = (p.type || "").toLowerCase()
-
 return strongTypes.some(type => t.includes(type))
 
 })
@@ -147,17 +130,12 @@ return strongTypes.some(type => t.includes(type))
 else if(category === "beer"){
 
 const beerTypes = [
-"пиво",
-"lager",
-"ale",
-"stout",
-"porter"
+"пиво","beer","lager","ale","ipa","stout","porter"
 ]
 
 filteredProducts = products.filter(p => {
 
 const t = (p.type || "").toLowerCase()
-
 return beerTypes.some(type => t.includes(type))
 
 })
@@ -169,18 +147,17 @@ return beerTypes.some(type => t.includes(type))
 else if(category === "soft"){
 
 const softTypes = [
-"вода",
-"сок",
-"лимонад",
-"тоник",
-"cola",
+"вода","минеральная",
+"сок","juice",
+"лимонад","lemonade",
+"cola","кока","пепси",
+"тоник","tonic",
 "напиток"
 ]
 
 filteredProducts = products.filter(p => {
 
 const t = (p.type || "").toLowerCase()
-
 return softTypes.some(type => t.includes(type))
 
 })
@@ -192,19 +169,13 @@ return softTypes.some(type => t.includes(type))
 else if(category === "grocery"){
 
 const groceryTypes = [
-"сыр",
-"оливки",
-"чипсы",
-"сорбиодетокс",
-"мясная",
-"ветчина",
-"бакалея"
+"сыр","оливки","чипсы",
+"сорбиодетокс","мясная","ветчина","бакалея"
 ]
 
 filteredProducts = products.filter(p => {
 
 const t = (p.type || "").toLowerCase()
-
 return groceryTypes.some(type => t.includes(type))
 
 })
@@ -225,9 +196,6 @@ renderCatalog()
 
 }
 
-
-/* КНОПКИ КАТЕГОРИЙ */
-
 function initCategoryButtons(){
 
 const buttons = document.querySelectorAll("[data-filter]")
@@ -237,7 +205,6 @@ buttons.forEach(button => {
 button.addEventListener("click", () => {
 
 buttons.forEach(b => b.classList.remove("active"))
-
 button.classList.add("active")
 
 const filter = button.dataset.filter
@@ -248,7 +215,6 @@ filterCategory(filter)
 })
 
 }
-
 
 if(searchInput){
 searchInput.addEventListener("input", searchProducts)
