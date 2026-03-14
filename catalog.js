@@ -8,21 +8,21 @@ const searchInput = document.getElementById("search")
 
 async function loadCatalog(){
 
-    try{
+try{
 
-        const response = await fetch("/data/products.json")
-        const data = await response.json()
+const response = await fetch("/data/products.json")
+const data = await response.json()
 
-        products = data
-        filteredProducts = products
+products = data
+filteredProducts = products
 
-        renderCatalog()
+renderCatalog()
 
-    }catch(error){
+}catch(error){
 
-        console.error("Ошибка загрузки каталога", error)
+console.error("Ошибка загрузки каталога", error)
 
-    }
+}
 
 }
 
@@ -164,7 +164,7 @@ return beerTypes.some(type => t.includes(type))
 
 }
 
-/* БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ */
+/* БЕЗАЛКОГОЛЬНЫЕ */
 
 else if(category === "soft"){
 
@@ -226,7 +226,7 @@ renderCatalog()
 }
 
 
-/* КНОПКИ */
+/* КНОПКИ КАТЕГОРИЙ */
 
 function initCategoryButtons(){
 
@@ -235,6 +235,10 @@ const buttons = document.querySelectorAll("[data-filter]")
 buttons.forEach(button => {
 
 button.addEventListener("click", () => {
+
+buttons.forEach(b => b.classList.remove("active"))
+
+button.classList.add("active")
 
 const filter = button.dataset.filter
 filterCategory(filter)
