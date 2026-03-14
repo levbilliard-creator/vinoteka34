@@ -2,13 +2,16 @@
 <html lang="ru">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Каталог — Vinoteka34</title>
 
 <link rel="stylesheet" href="styles.css">
 
 </head>
+
 
 <body>
 
@@ -19,10 +22,12 @@
 </div>
 
 <nav class="nav">
+
 <a href="index.html">Главная</a>
 <a href="catalog.html">Каталог</a>
 <a href="#">Дегустации</a>
 <a href="#">Контакты</a>
+
 </nav>
 
 <div class="phone">
@@ -32,25 +37,32 @@
 </header>
 
 
+
 <main class="catalog-page">
+
+<div class="catalog-container">
 
 <h1>Каталог</h1>
 
 <input
-type="text"
 id="search"
+class="catalog-search"
+type="text"
 placeholder="Поиск вина..."
-class="search-input"
-/>
+>
 
 
-<section class="catalog-layout">
 
-<aside class="catalog-filters">
+<div class="catalog-layout">
+
+
+<!-- SIDEBAR -->
+
+<aside class="catalog-sidebar">
 
 <h3>Категории</h3>
 
-<div class="filters">
+<div class="catalog-categories">
 
 <button data-filter="all">Все</button>
 <button data-filter="wine">Вино</button>
@@ -102,13 +114,17 @@ class="search-input"
 </aside>
 
 
+<!-- CATALOG -->
+
 <section class="catalog-content">
 
 <div id="catalog-grid" class="catalog-grid"></div>
 
 </section>
 
-</section>
+
+</div>
+</div>
 
 </main>
 

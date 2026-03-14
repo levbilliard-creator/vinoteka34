@@ -32,6 +32,7 @@ console.error("Ошибка загрузки каталога", e)
 
 }
 
+
 function renderCatalog(){
 
 if(!grid) return
@@ -41,7 +42,7 @@ grid.innerHTML = filtered.map(p => `
 <div class="product-card">
 
 <div class="product-image">
-<img src="${p.image || "/assets/no-photo.png"}" alt="">
+<img src="${p.image || '/assets/no-photo.png'}" alt="">
 </div>
 
 <div class="product-info">
@@ -62,9 +63,9 @@ ${p.name_en || ""}
 ${p.price ? p.price + " ₽" : ""}
 </div>
 
-<button class="product-button">
+<a class="product-button" href="product.html?id=${p.id}">
 Подробнее
-</button>
+</a>
 
 </div>
 
@@ -73,6 +74,7 @@ ${p.price ? p.price + " ₽" : ""}
 `).join("")
 
 }
+
 
 function searchProducts(){
 
@@ -93,6 +95,7 @@ renderCatalog()
 
 }
 
+
 function categoryFilter(category){
 
 if(category === "all"){
@@ -104,6 +107,7 @@ filtered = products.filter(p => p.category === category)
 renderCatalog()
 
 }
+
 
 function applyFilters(){
 
@@ -127,6 +131,7 @@ renderCatalog()
 
 }
 
+
 function initFilters(){
 
 document.querySelectorAll("[data-filter]").forEach(btn => {
@@ -148,6 +153,7 @@ searchInput.addEventListener("input", searchProducts)
 }
 
 }
+
 
 initFilters()
 loadCatalog()
