@@ -3,8 +3,9 @@ let filtered = []
 
 async function loadProducts() {
 
-const res = await fetch("/data/products.json")
-products = await res.json()
+const response = await fetch("/data/products.json")
+
+products = await response.json()
 
 filtered = products
 
@@ -18,9 +19,10 @@ const grid = document.getElementById("catalog-grid")
 
 grid.innerHTML = ""
 
-list.forEach(p => {
+list.forEach(product => {
 
 const card = document.createElement("div")
+
 card.className = "product-card"
 
 card.innerHTML = `
@@ -28,15 +30,15 @@ card.innerHTML = `
 <img src="/assets/photo_1_2026-02-15_15-47-16.jpg">
 
 <div class="product-type">
-${p.type || ""}
+${product.type || ""}
 </div>
 
 <div class="product-name">
-${p.name_ru}
+${product.name_ru}
 </div>
 
 <div class="product-price">
-${p.price} ₽
+${product.price} ₽
 </div>
 
 <button class="btn-card">
@@ -51,71 +53,71 @@ grid.appendChild(card)
 
 }
 
-function filterCategory(cat){
+function filterCategory(category){
 
-let list = []
+let result = []
 
-if(cat === "all"){
+if(category === "all"){
 
-list = products
-
-}
-
-else if(cat === "wine"){
-
-list = products.filter(p => p.type === "вино")
+result = products
 
 }
 
-else if(cat === "sparkling"){
+else if(category === "wine"){
 
-list = products.filter(p =>
-p.type.includes("игрист")
+result = products.filter(p => p.type === "вино")
+
+}
+
+else if(category === "sparkling"){
+
+result = products.filter(p =>
+p.type.toLowerCase().includes("игрист")
 )
 
 }
 
-else if(cat === "strong"){
+else if(category === "strong"){
 
-list = products.filter(p =>
+result = products.filter(p =>
 p.type !== "вино" &&
-p.type !== "игристое"
+!p.type.toLowerCase().includes("игрист")
 )
 
 }
 
-else if(cat === "food"){
+else if(category === "food"){
 
-list = products.filter(p =>
+result = products.filter(p =>
 p.type === "бакалея"
 )
 
 }
 
-else if(cat === "tea"){
+else if(category === "tea"){
 
-list = products.filter(p =>
+result = products.filter(p =>
 p.type === "чай"
 )
 
 }
 
-filtered = list
+filtered = result
 
 renderCatalog(filtered)
 
 }
 
-document.querySelectorAll(".filter-btn").forEach(btn => {
+document.querySelectorAll(".filter-btn").forEach(button => {
 
-btn.addEventListener("click", () => {
+button.addEventListener("click", () => {
 
 document.querySelectorAll(".filter-btn")
 .forEach(b => b.classList.remove("active"))
 
-btn.classList.add("active")
+button.classList.add("active")
 
-filterCategory(btn.dataset.cat)
+filterCategory(button.dataset.cat)
 
 })
 
@@ -123,13 +125,13 @@ filterCategory(btn.dataset.cat)
 
 document.getElementById("search").addEventListener("input", e => {
 
-const q = e.target.value.toLowerCase()
+const query = e.target.value.toLowerCase()
 
-const list = filtered.filter(p =>
-p.name_ru.toLowerCase().includes(q)
+const result = filtered.filter(product =>
+product.name_ru.toLowerCase().includes(query)
 )
 
-renderCatalog(list)
+renderCatalog(result)
 
 })
 
