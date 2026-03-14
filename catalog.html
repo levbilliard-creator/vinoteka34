@@ -8,7 +8,7 @@
 
 <title>Каталог — Vinoteka34</title>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles.css">
 
 </head>
 
@@ -16,18 +16,18 @@
 
 <header class="header">
 
-<div class="logo">
-<a href="index.html">VINOTEKA34</a>
+<div class="header-logo">
+<a href="/index.html">VINOTEKA34</a>
 </div>
 
-<nav class="nav">
-<a href="index.html">Главная</a>
-<a href="catalog.html">Каталог</a>
+<nav class="header-menu">
+<a href="/index.html">Главная</a>
+<a href="/catalog.html">Каталог</a>
 <a href="#">Дегустации</a>
 <a href="#">Контакты</a>
 </nav>
 
-<div class="phone">
+<div class="header-phone">
 +7 495 947-10-10
 </div>
 
@@ -36,28 +36,22 @@
 
 <main class="catalog-page">
 
-<div class="catalog-wrapper">
-
-<h1>Каталог</h1>
-
-<input
-id="search"
-class="catalog-search"
-type="text"
-placeholder="Поиск вина..."
->
-
-
 <div class="catalog-layout">
 
-
-<!-- ЛЕВЫЙ ФИЛЬТР -->
+<!-- SIDEBAR -->
 
 <aside class="catalog-sidebar">
 
+<h1>Каталог</h1>
+
+<input id="search" type="text" placeholder="Поиск вина...">
+
+
+<div class="filter-box">
+
 <h3>Категории</h3>
 
-<div class="catalog-categories">
+<div class="category-buttons">
 
 <button data-filter="all">Все</button>
 <button data-filter="wine">Вино</button>
@@ -68,57 +62,56 @@ placeholder="Поиск вина..."
 
 </div>
 
-
 <h3>Цвет</h3>
 
-<select id="filter-color">
-<option value="">Все</option>
-<option value="red">Красное</option>
-<option value="white">Белое</option>
-<option value="rose">Розовое</option>
+<select>
+<option>Все</option>
+<option>Красное</option>
+<option>Белое</option>
+<option>Розовое</option>
 </select>
-
 
 <h3>Стиль</h3>
 
-<select id="filter-style">
-<option value="">Все</option>
-<option value="dry">Сухое</option>
-<option value="semi-dry">Полусухое</option>
-<option value="semi-sweet">Полусладкое</option>
-<option value="sweet">Сладкое</option>
+<select>
+<option>Все</option>
+<option>Сухое</option>
+<option>Полусухое</option>
+<option>Полусладкое</option>
+<option>Сладкое</option>
 </select>
-
 
 <h3>Страна</h3>
 
-<select id="filter-country">
-<option value="">Все</option>
-<option value="france">Франция</option>
-<option value="italy">Италия</option>
-<option value="spain">Испания</option>
-<option value="russia">Россия</option>
+<select>
+<option>Все</option>
+<option>Франция</option>
+<option>Италия</option>
+<option>Испания</option>
+<option>Россия</option>
 </select>
+
+</div>
 
 </aside>
 
 
-<!-- СЕТКА ТОВАРОВ -->
+<!-- GRID -->
 
-<section class="catalog-content">
+<section id="catalog-grid" class="catalog-grid">
 
-<div id="catalog-grid" class="catalog-grid"></div>
+<!-- карточки сюда вставляет JS -->
 
 </section>
 
 
 </div>
-</div>
 
 </main>
 
 
-<script src="catalog.js"></script>
+<script src="/catalog.js"></script>
 
 </body>
+
 </html>
