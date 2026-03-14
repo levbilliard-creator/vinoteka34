@@ -11,35 +11,40 @@ const searchInput = document.getElementById("search")
 
 async function loadCatalog(){
 
+try{
+
 const response = await fetch("/data/products.json")
 const data = await response.json()
 
 products = data
-filteredProducts = products
+filteredProducts = data
 
 renderCatalog()
+
+}catch(e){
+console.error("Ошибка загрузки каталога", e)
+}
 
 }
 
 
-/* очистка мусора в названии */
+/* очистка названия */
 
 function cleanName(name){
 
 if(!name) return ""
 
 return name
-.replace("Спиртной напиток прочий -","")
-.replace("Спиртной напиток","")
-.replace("Напиток","")
+.replace("Спиртной напиток прочий -", "")
+.replace("Спиртной напиток", "")
 .trim()
 
 }
 
 
-/* определение типа */
+/* определение категории */
 
-function detectType(product){
+function detectCategory(product){
 
 const name = (product.name_ru || "").toLowerCase()
 const type = (product.type || "").toLowerCase()
@@ -53,13 +58,13 @@ name.includes("cola") ||
 name.includes("кола") ||
 name.includes("лимонад")
 ){
-return "безалкогольные"
+return "soft"
 }
 
 /* пиво */
 
 if(name.includes("пиво")){
-return "пиво"
+return "beer"
 }
 
 /* бакалея */
@@ -69,22 +74,21 @@ name.includes("печенье") ||
 name.includes("сыр") ||
 name.includes("оливки") ||
 name.includes("чипсы") ||
-name.includes("ветчина") ||
-name.includes("нарезка")
+name.includes("ветчина")
 ){
-return "бакалея"
+return "grocery"
 }
 
 /* чай */
 
 if(name.includes("чай")){
-return "чай"
+return "tea"
 }
 
 /* игристое */
 
 if(name.includes("игрист") || name.includes("шампан")){
-return "игристое"
+return "sparkling"
 }
 
 /* крепкий алкоголь */
@@ -99,37 +103,37 @@ type.includes("джин") ||
 name.includes("текила") ||
 name.includes("ром") ||
 name.includes("виски") ||
-name.includes("водка")
+name.includes("водка") ||
+name.includes("спирт")
 ){
-return "крепкий алкоголь"
+return "strong"
 }
 
 /* вино */
 
 if(type.includes("вино")){
-return "вино"
+return "wine"
 }
 
-return ""
+return "other"
 
 }
 
 
-/* карточки */
+/* отрисовка */
 
 function renderCatalog(){
 
 grid.innerHTML = filteredProducts.map(p => {
 
-const type = detectType(p)
+const category = detectCategory(p)
 const name = cleanName(p.name_ru)
 
 return `
-
 <div class="catalog-card">
 
 <div class="card-type">
-${type}
+${category}
 </div>
 
 <div class="card-title">
@@ -154,7 +158,6 @@ ${p.price ? p.price + " ₽" : ""}
 </div>
 
 </div>
-
 `
 
 }).join("")
@@ -168,10 +171,10 @@ function searchProducts(){
 
 const value = searchInput.value.toLowerCase()
 
-filteredProducts = products.filter(product =>
+filteredProducts = products.filter(p =>
 
-(product.name_ru || "").toLowerCase().includes(value) ||
-(product.name_en || "").toLowerCase().includes(value)
+(p.name_ru || "").toLowerCase().includes(value) ||
+(p.name_en || "").toLowerCase().includes(value)
 
 )
 
@@ -180,18 +183,15 @@ renderCatalog()
 }
 
 
-/* фильтр */
+/* фильтр категорий */
 
 function filterCategory(category){
 
 if(category === "all"){
 filteredProducts = products
 }
-
 else{
-
-filteredProducts = products.filter(p => detectType(p) === category)
-
+filteredProducts = products.filter(p => detectCategory(p) === category)
 }
 
 renderCatalog()
@@ -205,15 +205,14 @@ function initCategoryButtons(){
 
 const buttons = document.querySelectorAll("[data-filter]")
 
-buttons.forEach(button => {
+buttons.forEach(btn => {
 
-button.addEventListener("click", () => {
+btn.addEventListener("click", () => {
 
 buttons.forEach(b => b.classList.remove("active"))
+btn.classList.add("active")
 
-button.classList.add("active")
-
-filterCategory(button.dataset.filter)
+filterCategory(btn.dataset.filter)
 
 })
 
