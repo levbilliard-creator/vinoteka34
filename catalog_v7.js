@@ -1,34 +1,32 @@
-let products=[]
-let filtered=[]
-let currentCategory="all"
+let products = []
+
+let currentCategory = "all"
 
 
 async function loadCatalog(){
 
-const res=await fetch("/data/products.json")
+const res = await fetch("/data/products.json")
 
-products=await res.json()
+products = await res.json()
 
-filtered=[...products]
-
-renderCatalog()
+renderCatalog(products)
 
 }
 
 
-function renderCatalog(){
+function renderCatalog(list){
 
-const grid=document.getElementById("catalog-grid")
+const grid = document.getElementById("catalog-grid")
 
-grid.innerHTML=""
+grid.innerHTML = ""
 
-filtered.forEach(p=>{
+list.forEach(p=>{
 
-const card=document.createElement("div")
+const card = document.createElement("div")
 
-card.className="product-card"
+card.className = "product-card"
 
-card.innerHTML=`
+card.innerHTML = `
 
 <img src="/assets/photo_1_2026-02-15_15-47-16.jpg">
 
@@ -51,48 +49,34 @@ grid.appendChild(card)
 }
 
 
-function applyFilters(){
 
-let result=[...products]
+function filterProducts(){
 
+if(currentCategory==="all"){
 
-if(currentCategory!=="all"){
+renderCatalog(products)
 
-result=result.filter(p=>p.category===currentCategory)
-
-}
-
-
-const colors=[...document.querySelectorAll(".color:checked")].map(e=>e.value)
-
-if(colors.length){
-
-result=result.filter(p=>colors.includes(p.color))
+return
 
 }
 
 
-const countries=[...document.querySelectorAll(".country:checked")].map(e=>e.value)
+const filtered = products.filter(p=>{
 
-if(countries.length){
+if(currentCategory==="wine") return p.type==="вино"
 
-result=result.filter(p=>countries.includes(p.country))
+if(currentCategory==="sparkling") return p.type==="игристое"
 
-}
+if(currentCategory==="strong") return p.type==="коньяк" || p.type==="виски" || p.type==="ром"
 
+if(currentCategory==="food") return p.type==="бакалея"
 
-const price=document.querySelector("input[name=price]:checked")
+if(currentCategory==="tea") return p.type==="чай"
 
-if(price){
-
-result=result.filter(p=>p.price<=price.value)
-
-}
+})
 
 
-filtered=result
-
-renderCatalog()
+renderCatalog(filtered)
 
 }
 
@@ -106,35 +90,26 @@ document.querySelectorAll(".cat-btn").forEach(b=>b.classList.remove("active"))
 
 btn.classList.add("active")
 
-currentCategory=btn.dataset.category
+currentCategory = btn.dataset.category
 
-applyFilters()
-
-})
+filterProducts()
 
 })
 
-
-
-document.addEventListener("change",(e)=>{
-
-if(e.target.matches("input")) applyFilters()
-
 })
-
 
 
 document.getElementById("search").addEventListener("input",(e)=>{
 
-const q=e.target.value.toLowerCase()
+const q = e.target.value.toLowerCase()
 
-filtered=products.filter(p=>
+const filtered = products.filter(p=>
 
 p.name_ru.toLowerCase().includes(q)
 
 )
 
-renderCatalog()
+renderCatalog(filtered)
 
 })
 
