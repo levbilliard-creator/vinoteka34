@@ -39,7 +39,6 @@ VINOTEKA34
 </header>
 
 
-
 <section class="catalog-page">
 
 <div class="catalog-header">
@@ -50,51 +49,30 @@ VINOTEKA34
 type="text"
 placeholder="Поиск вина..."
 id="search"
-class="search-input"
+class="search"
 />
 
 </div>
 
 
-
 <div class="catalog-layout">
 
 
-<div class="filters">
+<aside class="filters">
 
 <h3>Категории</h3>
 
-<div class="categories">
+<button class="filter-btn active" data-cat="all">Все</button>
+<button class="filter-btn" data-cat="wine">Вино</button>
+<button class="filter-btn" data-cat="sparkling">Игристое</button>
+<button class="filter-btn" data-cat="strong">Крепкий алкоголь</button>
+<button class="filter-btn" data-cat="food">Бакалея</button>
+<button class="filter-btn" data-cat="tea">Чай</button>
 
-<button class="cat-btn active" data-category="all">Все</button>
-
-<button class="cat-btn" data-category="wine">
-Вино
-</button>
-
-<button class="cat-btn" data-category="sparkling">
-Игристое
-</button>
-
-<button class="cat-btn" data-category="strong">
-Крепкий алкоголь
-</button>
-
-<button class="cat-btn" data-category="food">
-Бакалея
-</button>
-
-<button class="cat-btn" data-category="tea">
-Чай
-</button>
-
-</div>
-
-</div>
+</aside>
 
 
-
-<div class="catalog-grid" id="catalog-grid">
+<div id="catalog-grid" class="catalog-grid">
 
 </div>
 
@@ -104,7 +82,7 @@ class="search-input"
 </section>
 
 
-<script src="catalog_v9.js"></script>
+<script src="/catalog.js"></script>
 
 </body>
 
