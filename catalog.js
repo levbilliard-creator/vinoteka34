@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 let products = []
-let filteredProducts = []
+let filtered = []
 
 const grid = document.getElementById("catalog-grid")
 const searchInput = document.getElementById("search")
 
-async function loadProducts(){
+async function loadCatalog(){
 
 try{
 
@@ -20,12 +20,11 @@ const data = await response.json()
 
 products = Array.isArray(data) ? data : data.products || []
 
-filteredProducts = products
+filtered = products
 
 renderCatalog()
 
-}
-catch(e){
+}catch(e){
 
 console.error("Ошибка загрузки каталога", e)
 
@@ -33,50 +32,78 @@ console.error("Ошибка загрузки каталога", e)
 
 }
 
-
 function renderCatalog(){
 
 if(!grid) return
 
-grid.innerHTML = filteredProducts.map(product => {
+grid.innerHTML = filtered.map(p => `
 
-return `
+<div class="product-card">
 
-<div class="wine-card">
-
-<img
-class="wine-img"
-src="${product.image || "assets/no-photo.png"}"
->
-
-<div class="wine-type">
-${product.category || ""}
+<div class="product-image">
+<img src="${p.image || "/assets/no-photo.png"}" alt="">
 </div>
 
-<div class="wine-name">
-${product.name_ru || ""}
+<div class="product-info">
+
+<div class="product-category">
+${p.category || ""}
 </div>
 
-<div class="wine-sub">
-${product.name_en || ""}
+<div class="product-title">
+${p.name_ru || ""}
 </div>
 
-<div class="wine-price">
-${product.price ? product.price + " ₽" : ""}
+<div class="product-subtitle">
+${p.name_en || ""}
 </div>
 
-<button class="wine-btn">
+<div class="product-price">
+${p.price ? p.price + " ₽" : ""}
+</div>
+
+<button class="product-button">
 Подробнее
 </button>
 
 </div>
 
-`
+</div>
 
-}).join("")
+`).join("")
 
 }
 
+function searchProducts(){
+
+const value = searchInput.value.toLowerCase()
+
+filtered = products.filter(p => {
+
+return (
+
+p.name_ru?.toLowerCase().includes(value) ||
+p.name_en?.toLowerCase().includes(value)
+
+)
+
+})
+
+renderCatalog()
+
+}
+
+function categoryFilter(category){
+
+if(category === "all"){
+filtered = products
+}else{
+filtered = products.filter(p => p.category === category)
+}
+
+renderCatalog()
+
+}
 
 function applyFilters(){
 
@@ -84,13 +111,13 @@ const color = document.getElementById("filter-color")?.value
 const style = document.getElementById("filter-style")?.value
 const country = document.getElementById("filter-country")?.value
 
-filteredProducts = products.filter(product => {
+filtered = products.filter(p => {
 
 return (
 
-(!color || product.color === color) &&
-(!style || product.style === style) &&
-(!country || product.country === country)
+(!color || p.color === color) &&
+(!style || p.style === style) &&
+(!country || p.country === country)
 
 )
 
@@ -99,44 +126,6 @@ return (
 renderCatalog()
 
 }
-
-
-function searchProducts(){
-
-const value = searchInput.value.toLowerCase()
-
-filteredProducts = products.filter(product => {
-
-return (
-
-product.name_ru?.toLowerCase().includes(value) ||
-product.name_en?.toLowerCase().includes(value)
-
-)
-
-})
-
-renderCatalog()
-
-}
-
-
-function categoryFilter(category){
-
-if(category === "all"){
-
-filteredProducts = products
-
-}else{
-
-filteredProducts = products.filter(p => p.category === category)
-
-}
-
-renderCatalog()
-
-}
-
 
 function initFilters(){
 
@@ -150,17 +139,9 @@ categoryFilter(btn.dataset.filter)
 
 })
 
-document
-.getElementById("filter-color")
-?.addEventListener("change", applyFilters)
-
-document
-.getElementById("filter-style")
-?.addEventListener("change", applyFilters)
-
-document
-.getElementById("filter-country")
-?.addEventListener("change", applyFilters)
+document.getElementById("filter-color")?.addEventListener("change", applyFilters)
+document.getElementById("filter-style")?.addEventListener("change", applyFilters)
+document.getElementById("filter-country")?.addEventListener("change", applyFilters)
 
 if(searchInput){
 searchInput.addEventListener("input", searchProducts)
@@ -168,8 +149,7 @@ searchInput.addEventListener("input", searchProducts)
 
 }
 
-
 initFilters()
-loadProducts()
+loadCatalog()
 
 })
