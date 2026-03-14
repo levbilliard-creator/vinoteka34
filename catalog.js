@@ -1,100 +1,182 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
 let products = []
-let filtered = []
+let filteredProducts = []
 
 const grid = document.getElementById("catalog-grid")
 const searchInput = document.getElementById("search")
 
-// соответствие кнопок и категорий из JSON
-const CATEGORY_MAP = {
-  wine: "вино",
-  sparkling: "игрист",
-  strong: "креп",
-  grocery: "бакале",
-  tea: "чай"
-}
+/* загрузка каталога */
 
 async function loadCatalog(){
-  try{
-    const res = await fetch("/data/products.json")
-    const data = await res.json()
 
-    products = Array.isArray(data) ? data : data.products || []
-    filtered = products
+    try{
 
-    renderCatalog()
-  }catch(e){
-    console.error("Ошибка загрузки каталога", e)
-  }
+        const response = await fetch("/data/products.json")
+        const data = await response.json()
+
+        products = data
+        filteredProducts = products
+
+        renderCatalog()
+
+    }catch(error){
+
+        console.error("Ошибка загрузки каталога", error)
+
+    }
+
 }
+
+
+/* отрисовка карточек */
 
 function renderCatalog(){
-  if(!grid) return
 
-  grid.innerHTML = filtered.map(p => `
-    <div class="catalog-card">
-      <div class="catalog-card-title">
-        ${p.name_ru || ""}
-      </div>
+    if(!grid) return
 
-      <div class="catalog-card-price">
-        ${p.price ? p.price + " ₽" : ""}
-      </div>
+    grid.innerHTML = filteredProducts.map(product => `
 
-      <a class="catalog-card-link" href="product.html?id=${p.id}">
-        Подробнее
-      </a>
-    </div>
-  `).join("")
+        <div class="catalog-card">
+
+            <div class="catalog-card-title">
+                ${product.name_ru || ""}
+            </div>
+
+            <div class="catalog-card-price">
+                ${product.price ? product.price + " ₽" : ""}
+            </div>
+
+            <a class="catalog-card-link" href="product.html?id=${product.id}">
+                Подробнее
+            </a>
+
+        </div>
+
+    `).join("")
+
 }
+
+
+/* поиск */
 
 function searchProducts(){
-  const value = searchInput.value.toLowerCase()
 
-  filtered = products.filter(p =>
-    (p.name_ru || "").toLowerCase().includes(value) ||
-    (p.name_en || "").toLowerCase().includes(value)
-  )
+    const value = searchInput.value.toLowerCase()
 
-  renderCatalog()
-}
+    filteredProducts = products.filter(product =>
 
-function categoryFilter(key){
+        (product.name_ru || "").toLowerCase().includes(value) ||
+        (product.name_en || "").toLowerCase().includes(value)
 
-  if(key === "all"){
-    filtered = products
-  }else{
-
-    const target = CATEGORY_MAP[key]
-
-    filtered = products.filter(p =>
-      (p.category || "").toLowerCase().includes(target)
     )
-  }
 
-  renderCatalog()
+    renderCatalog()
+
 }
 
-function initFilters(){
 
-  document.querySelectorAll("[data-filter]").forEach(btn => {
+/* фильтр категорий */
 
-    btn.addEventListener("click", () => {
+function filterCategory(category){
 
-      const key = btn.dataset.filter
-      categoryFilter(key)
+    if(category === "all"){
+
+        filteredProducts = products
+
+    }
+
+    else if(category === "wine"){
+
+        filteredProducts = products.filter(p =>
+            (p.type || "").toLowerCase().includes("вино")
+        )
+
+    }
+
+    else if(category === "sparkling"){
+
+        filteredProducts = products.filter(p =>
+            (p.type || "").toLowerCase().includes("игрист")
+        )
+
+    }
+
+    else if(category === "strong"){
+
+        const strongTypes = [
+            "коньяк",
+            "виски",
+            "ром",
+            "водка",
+            "текила",
+            "джин",
+            "бренди",
+            "ликер",
+            "настойка",
+            "граппа",
+            "арманьяк",
+            "кальвадос"
+        ]
+
+        filteredProducts = products.filter(p => {
+
+            const t = (p.type || "").toLowerCase()
+
+            return strongTypes.some(type => t.includes(type))
+
+        })
+
+    }
+
+    else if(category === "grocery"){
+
+        filteredProducts = products.filter(p =>
+            (p.type || "").toLowerCase().includes("бакале")
+        )
+
+    }
+
+    else if(category === "tea"){
+
+        filteredProducts = products.filter(p =>
+            (p.type || "").toLowerCase().includes("чай")
+        )
+
+    }
+
+    renderCatalog()
+
+}
+
+
+/* обработчики кнопок */
+
+function initCategoryButtons(){
+
+    const buttons = document.querySelectorAll("[data-filter]")
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const filter = button.dataset.filter
+            filterCategory(filter)
+
+        })
 
     })
 
-  })
-
-  if(searchInput){
-    searchInput.addEventListener("input", searchProducts)
-  }
 }
 
-initFilters()
+
+/* запуск */
+
+if(searchInput){
+    searchInput.addEventListener("input", searchProducts)
+}
+
+initCategoryButtons()
 loadCatalog()
 
 })
