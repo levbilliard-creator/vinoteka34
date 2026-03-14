@@ -10,13 +10,8 @@ async function loadCatalog(){
 
 try{
 
-const response = await fetch("/data/products.json")
-
-if(!response.ok){
-throw new Error("products.json не найден")
-}
-
-const data = await response.json()
+const res = await fetch("/data/products.json")
+const data = await res.json()
 
 products = Array.isArray(data) ? data : data.products || []
 
@@ -37,43 +32,50 @@ function renderCatalog(){
 
 if(!grid) return
 
-grid.innerHTML = filtered.map(p => `
+grid.innerHTML = filtered.map(p => {
 
-<div class="product-card">
+return `
 
-<div class="product-image">
-<img src="${p.image || '/assets/no-photo.png'}" alt="">
+<a href="product.html?id=${p.id}" class="catalog-card">
+
+<div class="catalog-card-image">
+
+<img src="${p.image || "/assets/no-photo.png"}">
+
 </div>
 
-<div class="product-info">
+<div class="catalog-card-body">
 
-<div class="product-category">
+<div class="catalog-card-category">
 ${p.category || ""}
 </div>
 
-<div class="product-title">
+<div class="catalog-card-title">
 ${p.name_ru || ""}
 </div>
 
-<div class="product-subtitle">
+<div class="catalog-card-sub">
 ${p.name_en || ""}
 </div>
 
-<div class="product-price">
+<div class="catalog-card-price">
 ${p.price ? p.price + " ₽" : ""}
 </div>
 
-<a class="product-button" href="product.html?id=${p.id}">
+<div class="catalog-card-button">
 Подробнее
+</div>
+
+</div>
+
 </a>
 
-</div>
+`
 
-</div>
-
-`).join("")
+}).join("")
 
 }
+
 
 
 function searchProducts(){
@@ -96,6 +98,7 @@ renderCatalog()
 }
 
 
+
 function categoryFilter(category){
 
 if(category === "all"){
@@ -107,6 +110,7 @@ filtered = products.filter(p => p.category === category)
 renderCatalog()
 
 }
+
 
 
 function applyFilters(){
@@ -132,6 +136,7 @@ renderCatalog()
 }
 
 
+
 function initFilters(){
 
 document.querySelectorAll("[data-filter]").forEach(btn => {
@@ -153,6 +158,7 @@ searchInput.addEventListener("input", searchProducts)
 }
 
 }
+
 
 
 initFilters()
