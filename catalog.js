@@ -1,107 +1,47 @@
 let products = []
-let currentCategory = "all"
+let filtered = []
 
-async function loadCatalog(){
+async function loadProducts() {
 
-const response = await fetch("/data/products.json")
+const res = await fetch("/data/products.json")
+products = await res.json()
 
-products = await response.json()
-
-buildCategories()
-
-renderCatalog(products)
-
-}
-
-function buildCategories(){
-
-const types = new Set()
-
-products.forEach(p => {
-
-if(p.type) types.add(p.type)
-
-})
-
-const list = document.getElementById("category-list")
-
-list.innerHTML = `<div class="category active" data-type="all">Все</div>`
-
-types.forEach(type => {
-
-list.innerHTML += `
-<div class="category" data-type="${type}">
-${type}
-</div>
-`
-
-})
-
-document.querySelectorAll(".category").forEach(btn=>{
-
-btn.addEventListener("click",()=>{
-
-document.querySelectorAll(".category").forEach(c=>c.classList.remove("active"))
-
-btn.classList.add("active")
-
-currentCategory = btn.dataset.type
-
-filterCatalog()
-
-})
-
-})
-
-}
-
-function filterCatalog(){
-
-let filtered = products
-
-if(currentCategory !== "all"){
-
-filtered = products.filter(p => p.type === currentCategory)
-
-}
+filtered = products
 
 renderCatalog(filtered)
 
 }
 
-function renderCatalog(data){
+function renderCatalog(list) {
 
 const grid = document.getElementById("catalog-grid")
 
 grid.innerHTML = ""
 
-data.forEach(product=>{
-
-const nameRu = product.name_ru || ""
-const nameEn = product.name_en || ""
-
-const color = product.color || ""
-const style = product.style || ""
-
-const price = product.price || ""
+list.forEach(p => {
 
 const card = document.createElement("div")
-
-card.className = "wine-card"
+card.className = "product-card"
 
 card.innerHTML = `
 
-<div class="wine-type">${product.type}</div>
+<img src="/assets/photo_1_2026-02-15_15-47-16.jpg">
 
-<div class="wine-name-en">${nameEn}</div>
+<div class="product-type">
+${p.type || ""}
+</div>
 
-<div class="wine-name-ru">${nameRu}</div>
+<div class="product-name">
+${p.name_ru}
+</div>
 
-<div class="wine-style">${color} ${style}</div>
+<div class="product-price">
+${p.price} ₽
+</div>
 
-<div class="wine-price">${price} ₽</div>
-
-<a href="#" class="wine-btn">Подробнее</a>
+<button class="btn-card">
+Подробнее
+</button>
 
 `
 
@@ -111,20 +51,86 @@ grid.appendChild(card)
 
 }
 
-document.querySelector(".search").addEventListener("input", e=>{
+function filterCategory(cat){
 
-const value = e.target.value.toLowerCase()
+let list = []
 
-const filtered = products.filter(p => {
+if(cat === "all"){
 
-const text = (p.name_ru || "") + (p.name_en || "")
+list = products
 
-return text.toLowerCase().includes(value)
+}
 
-})
+else if(cat === "wine"){
+
+list = products.filter(p => p.type === "вино")
+
+}
+
+else if(cat === "sparkling"){
+
+list = products.filter(p =>
+p.type.includes("игрист")
+)
+
+}
+
+else if(cat === "strong"){
+
+list = products.filter(p =>
+p.type !== "вино" &&
+p.type !== "игристое"
+)
+
+}
+
+else if(cat === "food"){
+
+list = products.filter(p =>
+p.type === "бакалея"
+)
+
+}
+
+else if(cat === "tea"){
+
+list = products.filter(p =>
+p.type === "чай"
+)
+
+}
+
+filtered = list
 
 renderCatalog(filtered)
 
+}
+
+document.querySelectorAll(".filter-btn").forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+document.querySelectorAll(".filter-btn")
+.forEach(b => b.classList.remove("active"))
+
+btn.classList.add("active")
+
+filterCategory(btn.dataset.cat)
+
 })
 
-loadCatalog()
+})
+
+document.getElementById("search").addEventListener("input", e => {
+
+const q = e.target.value.toLowerCase()
+
+const list = filtered.filter(p =>
+p.name_ru.toLowerCase().includes(q)
+)
+
+renderCatalog(list)
+
+})
+
+loadProducts()
