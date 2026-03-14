@@ -28,10 +28,7 @@ console.error("Ошибка загрузки каталога", e)
 }
 
 
-
 function renderCatalog(){
-
-if(!grid) return
 
 grid.innerHTML = filtered.map(p => `
 
@@ -78,9 +75,9 @@ renderCatalog()
 
 
 
-function categoryFilter(category){
+function categoryFilter(cat){
 
-if(category === "all"){
+if(cat === "all"){
 
 filtered = products
 
@@ -88,9 +85,9 @@ filtered = products
 
 filtered = products.filter(p => {
 
-const cat = (p.category || "").toLowerCase()
+const category = (p.category || "").toLowerCase()
 
-return cat.includes(category)
+return category.includes(cat)
 
 })
 
@@ -108,22 +105,20 @@ document.querySelectorAll("[data-filter]").forEach(btn => {
 
 btn.addEventListener("click", () => {
 
-const cat = btn.dataset.filter
+const f = btn.dataset.filter
 
-if(cat === "wine") categoryFilter("вино")
-else if(cat === "sparkling") categoryFilter("игрист")
-else if(cat === "strong") categoryFilter("креп")
-else if(cat === "grocery") categoryFilter("бакале")
-else if(cat === "tea") categoryFilter("чай")
+if(f === "wine") categoryFilter("вино")
+else if(f === "sparkling") categoryFilter("игрист")
+else if(f === "strong") categoryFilter("креп")
+else if(f === "grocery") categoryFilter("бакале")
+else if(f === "tea") categoryFilter("чай")
 else categoryFilter("all")
 
 })
 
 })
 
-if(searchInput){
-searchInput.addEventListener("input", searchProducts)
-}
+searchInput?.addEventListener("input", searchProducts)
 
 }
 
