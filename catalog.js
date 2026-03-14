@@ -28,37 +28,34 @@ console.error("Ошибка загрузки каталога", e)
 }
 
 
+
 function renderCatalog(){
 
 if(!grid) return
 
 grid.innerHTML = filtered.map(p => `
 
-<div class="wine-card">
+<div class="product-card">
 
-<div class="wine-card-image">
+<div class="product-image">
 <img src="${p.image || "/assets/no-photo.png"}" alt="">
 </div>
 
-<div class="wine-card-content">
+<div class="product-body">
 
-<div class="wine-card-category">
-${p.category || ""}
-</div>
-
-<div class="wine-card-title">
+<div class="product-title">
 ${p.name_ru || ""}
 </div>
 
-<div class="wine-card-subtitle">
+<div class="product-subtitle">
 ${p.name_en || ""}
 </div>
 
-<div class="wine-card-price">
+<div class="product-price">
 ${p.price ? p.price + " ₽" : ""}
 </div>
 
-<a class="wine-card-button" href="product.html?id=${p.id}">
+<a class="product-button" href="product.html?id=${p.id}">
 Подробнее
 </a>
 
@@ -69,6 +66,7 @@ ${p.price ? p.price + " ₽" : ""}
 `).join("")
 
 }
+
 
 
 function searchProducts(){
@@ -91,17 +89,21 @@ renderCatalog()
 }
 
 
+
 function categoryFilter(category){
 
 if(category === "all"){
 filtered = products
 }else{
-filtered = products.filter(p => p.category === category)
+filtered = products.filter(p => 
+(p.category || "").toLowerCase().includes(category)
+)
 }
 
 renderCatalog()
 
 }
+
 
 
 function applyFilters(){
@@ -127,6 +129,7 @@ renderCatalog()
 }
 
 
+
 function initFilters(){
 
 document.querySelectorAll("[data-filter]").forEach(btn => {
@@ -148,6 +151,7 @@ searchInput.addEventListener("input", searchProducts)
 }
 
 }
+
 
 
 initFilters()
