@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 let products = []
 let filteredProducts = []
 
@@ -6,23 +8,33 @@ const searchInput = document.getElementById("search")
 
 async function loadProducts(){
 
+try{
+
 const response = await fetch("products.json")
 
-products = await response.json()
+const data = await response.json()
+
+products = data.products ? data.products : data
 
 filteredProducts = products
 
 renderCatalog()
 
 }
+catch(e){
+
+console.error("Ошибка загрузки каталога", e)
+
+}
+
+}
+
 
 function renderCatalog(){
 
 if(!grid) return
 
-grid.innerHTML = filteredProducts.map(product => {
-
-return `
+grid.innerHTML = filteredProducts.map(product => `
 
 <div class="wine-card">
 
@@ -53,9 +65,7 @@ ${product.price || ""} ₽
 
 </div>
 
-`
-
-}).join("")
+`).join("")
 
 }
 
@@ -69,11 +79,9 @@ const country = document.getElementById("filter-country").value
 filteredProducts = products.filter(product => {
 
 return (
-
 (!color || product.color === color) &&
 (!style || product.style === style) &&
 (!country || product.country === country)
-
 )
 
 })
@@ -90,10 +98,8 @@ const value = searchInput.value.toLowerCase()
 filteredProducts = products.filter(product => {
 
 return (
-
 product.name_ru?.toLowerCase().includes(value) ||
 product.name_en?.toLowerCase().includes(value)
-
 )
 
 })
@@ -106,13 +112,10 @@ renderCatalog()
 function categoryFilter(category){
 
 if(category === "all"){
-
 filteredProducts = products
-
-}else{
-
+}
+else{
 filteredProducts = products.filter(p => p.category === category)
-
 }
 
 renderCatalog()
@@ -122,34 +125,26 @@ renderCatalog()
 
 function initFilters(){
 
-const buttons = document.querySelectorAll("[data-filter]")
-
-buttons.forEach(btn => {
+document.querySelectorAll("[data-filter]").forEach(btn => {
 
 btn.addEventListener("click", () => {
-
 categoryFilter(btn.dataset.filter)
-
 })
 
 })
 
-document
-.getElementById("filter-color")
-.addEventListener("change", applyFilters)
+document.getElementById("filter-color").addEventListener("change", applyFilters)
+document.getElementById("filter-style").addEventListener("change", applyFilters)
+document.getElementById("filter-country").addEventListener("change", applyFilters)
 
-document
-.getElementById("filter-style")
-.addEventListener("change", applyFilters)
-
-document
-.getElementById("filter-country")
-.addEventListener("change", applyFilters)
-
+if(searchInput){
 searchInput.addEventListener("input", searchProducts)
+}
 
 }
 
 
-loadProducts()
 initFilters()
+loadProducts()
+
+})
