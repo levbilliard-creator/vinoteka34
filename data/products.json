@@ -83,11 +83,11 @@
     "id": 9,
     "name_ru": "Шампань луи арман премье крю блан де блан ,",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 6835,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 10,
@@ -503,11 +503,11 @@
     "id": 51,
     "name_ru": "Шампань ле курб де маргерит. г.ришом",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 9925,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 52,
@@ -533,11 +533,11 @@
     "id": 54,
     "name_ru": "Шампань ле шевроне. г.ришом",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 9379,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 55,
@@ -563,11 +563,11 @@
     "id": 57,
     "name_ru": "Шампань ля терр форже. г.ришом экстра",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 16114,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 58,
@@ -583,11 +583,11 @@
     "id": 59,
     "name_ru": "Шампань ля фюзьонель. г.ришом",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 4742,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 60,
@@ -633,11 +633,11 @@
     "id": 64,
     "name_ru": "Шампань ля фюзьонель. г.ришом",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 7704,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 65,
@@ -653,11 +653,11 @@
     "id": 66,
     "name_ru": "Шампань ля фюзьонель. г.ришом",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 17261,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 67,
@@ -683,21 +683,21 @@
     "id": 69,
     "name_ru": "Просекко . астрале",
     "name_en": "Prosecco",
-    "type": "wine",
+    "type": "sparkling",
     "color": "розе",
     "style": "сухое",
     "price": 2003,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 70,
     "name_ru": "Просекко спуманте фиорино д'оро 0,2л",
     "name_en": "Prosecco",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "сухое",
     "price": 640,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 71,
@@ -713,11 +713,11 @@
     "id": 72,
     "name_ru": "Фантинель просекко экстра драй",
     "name_en": "Prosecco",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "сухое",
     "price": 740,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 73,
@@ -743,31 +743,31 @@
     "id": 75,
     "name_ru": "Шампанское ален байи роз де серзи",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "розе",
     "style": "брют",
     "price": 6326,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 76,
     "name_ru": "Шампанское натали фальме кюве ле валь корне",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 11912,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 77,
     "name_ru": "Шампань ален байи петроний",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 6400,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 78,
@@ -1073,11 +1073,11 @@
     "id": 108,
     "name_ru": "Шампань канар-дюшен шарль 7 блан де блан в подарочной упаковке",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 9790,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 109,
@@ -1103,11 +1103,11 @@
     "id": 111,
     "name_ru": "Шампань канар-дюшен шарль 7",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "розе",
     "style": "брют",
     "price": 9790,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 112,
@@ -1433,11 +1433,11 @@
     "id": 144,
     "name_ru": "Экстра а венето фри ран азоло просекко супериоре докг суи льевити натюр,",
     "name_en": "Prosecco",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 2960,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 145,
@@ -1593,11 +1593,11 @@
     "id": 160,
     "name_ru": ", тревизо, категория док санмартино просекко миллезимато экстра драй",
     "name_en": "Prosecco",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "сухое",
     "price": 2390,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 161,
@@ -2463,11 +2463,11 @@
     "id": 247,
     "name_ru": "А шампань шампань дело блан де нуар резерв ,",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 8016,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 248,
@@ -2573,11 +2573,11 @@
     "id": 258,
     "name_ru": "Экстра а шампань шампань ле мюржье натюр,",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 16224,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 259,
@@ -2713,11 +2713,11 @@
     "id": 272,
     "name_ru": "Экстра а шампань шампань казаль ля шапэль дю кло блан де блан гран крю ,",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 23184,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 273,
@@ -2833,11 +2833,11 @@
     "id": 284,
     "name_ru": "Сан джованни перини просекко тревизо миллезимато",
     "name_en": "Prosecco",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 2290,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 285,
@@ -3403,11 +3403,11 @@
     "id": 341,
     "name_ru": "Шампань пайпер-хайдсик ,",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "розе",
     "style": "брют",
     "price": 11075,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 342,
@@ -3843,11 +3843,11 @@
     "id": 385,
     "name_ru": "Лово просекко миллезимато док 10% 0,75л.",
     "name_en": "Prosecco",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 1590,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 386,
@@ -4063,11 +4063,11 @@
     "id": 407,
     "name_ru": ", венето вальдо марка оро вальдоббьядене просекко супериоре докг",
     "name_en": "Prosecco",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 2690,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 408,
@@ -4523,11 +4523,11 @@
     "id": 453,
     "name_ru": "Просекко миллезимато лово 1,5 л",
     "name_en": "Prosecco",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 3290,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 454,
@@ -4963,11 +4963,11 @@
     "id": 497,
     "name_ru": "Сидр традиционный игристый нефильтрованный осветленный полусухой сидр де бретань традисионнэль",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "",
     "style": "брют",
     "price": 840,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 498,
@@ -4983,11 +4983,11 @@
     "id": 499,
     "name_ru": "Сидр традиционный игристый фильтрованный полусухой 'сидр де бретань '",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "",
     "style": "брют",
     "price": 390,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 500,
@@ -5013,11 +5013,11 @@
     "id": 502,
     "name_ru": "Шампань моэт и шандон империаль",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "брют",
     "price": 7290,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 503,
@@ -5123,11 +5123,11 @@
     "id": 513,
     "name_ru": "Просекко миллезимато лово категории док",
     "name_en": "Prosecco",
-    "type": "wine",
+    "type": "sparkling",
     "color": "розе",
     "style": "брют",
     "price": 1790,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 514,
@@ -5213,11 +5213,11 @@
     "id": 522,
     "name_ru": "Полу шампань коллар-грефье категории а.о.р.",
     "name_en": "",
-    "type": "wine",
+    "type": "sparkling",
     "color": "белое",
     "style": "полусухое",
     "price": 4890,
-    "category": "wine"
+    "category": "sparkling"
   },
   {
     "id": 523,
