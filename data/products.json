@@ -3,101 +3,101 @@
     "id": 1,
     "name_ru": "Бренди арманьяк сент обен 4 года",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 6890,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 2,
     "name_ru": "Луары шато-тебо мюскаде севр э мен кото де л'эбопен,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 3,
     "name_ru": "Ля жюдит пино нуар тасмания глейцер-диксон,",
     "name_en": "Pinot Noir",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 33437,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 4,
     "name_ru": "Луары силекс галино сансер,",
     "name_en": "Sancerre",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 9504,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 5,
     "name_ru": "Дивноморское марселан",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 4472,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 6,
     "name_ru": "Бургундия лез астрель бургонь от кот де нюи ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 9168,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 7,
     "name_ru": "Виски ирландский бэготс трипл батч",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 5722,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 8,
     "name_ru": "Ниттнаус блауфранкиш селекшн,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1987,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 9,
     "name_ru": "Шампань луи арман премье крю блан де блан ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 6835,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 10,
     "name_ru": "Тоскана монтегуэлфо ле лепри игт,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2064,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 11,
@@ -113,21 +113,21 @@
     "id": 12,
     "name_ru": "Бургундия пернан-вержелес премье крю ле вержелес ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 15840,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 13,
     "name_ru": "Виски ирландский хинч айриш виски смол батч",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3744,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 14,
@@ -143,131 +143,131 @@
     "id": 15,
     "name_ru": "Виски шотландский солодовый бенриах ориджинал тэн",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 6224,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 16,
     "name_ru": "Луары ги альон ле катре пьер каберне фран аоп турень,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2832,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 17,
     "name_ru": "Пьемонт ка' дель байо барбера д'альба док паолина,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3216,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 18,
     "name_ru": "Виски шотландский солодовый бенриах твэлв",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 7392,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 19,
     "name_ru": "А луары життон ле помро сансер,",
     "name_en": "Sancerre",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 4656,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 20,
     "name_ru": "Виски шотландский солодовый далмор 12 лет выдержки",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 11984,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 21,
     "name_ru": "Киндзмараули",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусладкое",
     "price": 1390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 22,
     "name_ru": "Виски шотландский солодовый далмор порт вуд резерв",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 12464,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 23,
     "name_ru": "Полу оушн буффе виньо верде ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "полусухое",
     "price": 1282,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 24,
     "name_ru": "Виски шотландский солодовый лагавулин выдержка 8 лет",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 8957,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 25,
     "name_ru": "Оушн эйт пино нуар,",
     "name_en": "Pinot Noir",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 9587,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 26,
     "name_ru": "Бургундия бургонь от кот де нюи о валлон ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 8832,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 27,
     "name_ru": "Виски шотландский солодовый маклеодс айлэнд сингл молт",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4704,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 28,
@@ -283,11 +283,11 @@
     "id": 29,
     "name_ru": "Рамон бильбао лаломба финка вальонта,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 9899,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 30,
@@ -303,41 +303,41 @@
     "id": 31,
     "name_ru": "Виски японский шинобу даймё",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3678,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 32,
     "name_ru": "Сансер клеман и флориан бертье,",
     "name_en": "Sancerre",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 5126,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 33,
     "name_ru": "Бургундия шабли ,",
     "name_en": "Chablis",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 5664,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 34,
     "name_ru": "Виски японский шинобу мизунара финиш",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 5994,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 35,
@@ -353,11 +353,11 @@
     "id": 36,
     "name_ru": "Сансер поль томас силекс,",
     "name_en": "Sancerre",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 5870,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 37,
@@ -373,711 +373,711 @@
     "id": 38,
     "name_ru": "Ликер лимончелло маркати",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 1990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 39,
     "name_ru": "Ликер эмульсионный бэйлис сливочный оригинальный",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 2990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 40,
     "name_ru": "Ром дипломатико резерва эксклюзива",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 6590,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 41,
     "name_ru": "- текила дон хулио бланко",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 7824,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 42,
     "name_ru": "Мендоса вейнерт мальбек,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 16224,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 43,
     "name_ru": "- текила дон хулио репосадо",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 8784,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 44,
     "name_ru": "Текила хосе куэрво 1800 репосадо",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3984,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 45,
     "name_ru": "Текила хосе куэрво 1800 бланко",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3824,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 46,
     "name_ru": "Фантини сэнсуале",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 2774,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 47,
     "name_ru": "Кава натюр. джаз натюр",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2538,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 48,
     "name_ru": "Калифорния филд бленд р коллекшен лот №5 полу",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 3590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 49,
     "name_ru": "Кава . резерва. джаз натюр",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 2693,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 50,
     "name_ru": "Рислинг монтигл произрастания града - альто адидже, италия, полу",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 4771,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 51,
     "name_ru": "Шампань ле курб де маргерит. г.ришом",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 9925,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 52,
     "name_ru": "Терредираи миллесимато проссеко 11% 0,75",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 2000,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 53,
     "name_ru": "Шардоне произрастания града - альто адидже, италия,",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3840,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 54,
     "name_ru": "Шампань ле шевроне. г.ришом",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 9379,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 55,
     "name_ru": "Асти спуманте фиорино д'оро сладкое",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сладкое",
     "price": 1840,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 56,
     "name_ru": "Ром аутентико нативо овер пруф",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 7485,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 57,
     "name_ru": "Шампань ля терр форже. г.ришом экстра",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 16114,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 58,
     "name_ru": "Фиорино д'оро",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 1490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 59,
     "name_ru": "Шампань ля фюзьонель. г.ришом",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 4742,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 60,
     "name_ru": "Медея . кастель саллег",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 3250,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 61,
     "name_ru": "Ром аутентико нативо спешл резерв 15 лет",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 8246,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 62,
     "name_ru": "Жозеп вентоса кава натюр экстра",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 63,
     "name_ru": "Дер катер",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2240,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 64,
     "name_ru": "Шампань ля фюзьонель. г.ришом",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 7704,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 65,
     "name_ru": "Жозеп вентоса кава",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 2590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 66,
     "name_ru": "Шампань ля фюзьонель. г.ришом",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 17261,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 67,
     "name_ru": "Жозеп вентоса кава",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 68,
     "name_ru": "Креман де бургонь гран резерв",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 3390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 69,
     "name_ru": "Просекко . астрале",
     "name_en": "Prosecco",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 2003,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 70,
     "name_ru": "Просекко спуманте фиорино д'оро 0,2л",
     "name_en": "Prosecco",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 640,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 71,
     "name_ru": "Полу паололео примитиво игп",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 2190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 72,
     "name_ru": "Фантинель просекко экстра драй",
     "name_en": "Prosecco",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 740,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 73,
     "name_ru": "Полу де мальбек торнео 0.75 л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "полусухое",
     "price": 1390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 74,
     "name_ru": "Гави. спуманте методо классико. ла смилла",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 4197,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 75,
     "name_ru": "Шампанское ален байи роз де серзи",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 6326,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 76,
     "name_ru": "Шампанское натали фальме кюве ле валь корне",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 11912,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 77,
     "name_ru": "Шампань ален байи петроний",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 6400,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 78,
     "name_ru": "Брецца умбрия бьянко полу",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 1890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 79,
     "name_ru": "Муншайн оле смоуки теннесси чаррд",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 5590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 80,
     "name_ru": "Рома твин фин пайнэпл и пинк грейпфрут",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 81,
     "name_ru": "Амароне делла вальполичелла",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 7990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 82,
     "name_ru": "Гави дель комуне ди гави карло",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2381,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 83,
     "name_ru": "Рома твин фин спайсд голден",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 84,
     "name_ru": "Гевюрцтраминер полу",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 4570,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 85,
     "name_ru": "Калинверно веронезе",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 4990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 86,
     "name_ru": "Гран резерва мерло",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2650,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 87,
     "name_ru": "Др. л рислинг драй полу",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 2237,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 88,
     "name_ru": "Валь ди суга россо ди монтальчино категории док",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 89,
     "name_ru": "Риоха. бланко. барон ладрон де гевара",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 90,
     "name_ru": "Мюллер-тургау",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3802,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 91,
     "name_ru": "Салли . кастель саллег",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 2717,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 92,
     "name_ru": "Совиньон блан. кастель саллег",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3277,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 93,
     "name_ru": "Пино гриджо фолвинд",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4762,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 94,
     "name_ru": "Валиано. тоскана. ин мюзика",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 5568,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 95,
     "name_ru": "Элиза. кастель саллег",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2461,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 96,
     "name_ru": "Рислинг фолвинд",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 5136,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 97,
     "name_ru": "Барбера д'асти. ла смилла",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2011,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 98,
     "name_ru": "Фамий декомб вионье",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1862,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 99,
     "name_ru": "Каберне совиньон ризерва. кастель саллег",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 5619,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 100,
     "name_ru": "Черетто ланге арнеис бланже",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4144,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 101,
     "name_ru": "Дольчетто ди овада. ла смилла",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1979,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 102,
     "name_ru": "Каликанто барбера д'асти. ла смилла",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2427,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 103,
     "name_ru": "Кьянти классико валлепиччола",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2150,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 104,
     "name_ru": "Полу док венето вальполичелла рипассо классико суперьоре ачинатико",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 4240,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 105,
     "name_ru": "Жюль мерлино бургонь шардоне категории а.о.с.",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3240,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 106,
     "name_ru": "Лагрейн",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3917,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 107,
     "name_ru": "Пино неро. кастель саллегг",
     "name_en": "Nero d'Avola",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3562,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 108,
     "name_ru": "Шампань канар-дюшен шарль 7 блан де блан в подарочной упаковке",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 9790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 109,
@@ -1093,41 +1093,41 @@
     "id": 110,
     "name_ru": "Менету-салон ля кле дю реси",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3464,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 111,
     "name_ru": "Шампань канар-дюшен шарль 7",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 9790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 112,
     "name_ru": "Карменер резерва",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 113,
     "name_ru": "Пино неро",
     "name_en": "Nero d'Avola",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3968,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 114,
@@ -1143,51 +1143,51 @@
     "id": 115,
     "name_ru": "Гевюрцтраминер",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4982,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 116,
     "name_ru": "Нед совиньон блан",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2038,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 117,
     "name_ru": "Крис пино гриджио 0,75 л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 118,
     "name_ru": "Во паарл беллингем хоумстед шираз",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 119,
     "name_ru": "Шираз сингл виньярд. баросса. вудс крэмптон майкл джон",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 12034,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 120,
@@ -1203,161 +1203,161 @@
     "id": 121,
     "name_ru": "Квв каберне совиньон",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 122,
     "name_ru": "Пино гриджио",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2659,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 123,
     "name_ru": "Шираз. баросса. вудс крэмптон",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3678,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 124,
     "name_ru": "Кубань. новороссийск раевское парфюм",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1238,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 125,
     "name_ru": "Ка ди мат валаутин альбильо реаль,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3226,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 126,
     "name_ru": "Бургундия лез астрель бургонь алиготе ля муй,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 5568,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 127,
     "name_ru": "Кубань раевское парфюм",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1238,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 128,
     "name_ru": "Геленджик-криница-бетта риваж",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3555,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 129,
     "name_ru": "Полу лонг барн пино нуар,",
     "name_en": "Pinot Noir",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 2170,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 130,
     "name_ru": "Бургундия шабли премье крю вайон,",
     "name_en": "Chablis",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 9984,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 131,
     "name_ru": "Креман де бордо ламот дюка",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 132,
     "name_ru": "Рауль клерже бургонь шардоне",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2888,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 133,
     "name_ru": "Дивноморское шардоне",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3826,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 134,
     "name_ru": "Трентино-альто адидже нальс маргрейд пино гриджо игт виньети делле доломити,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1904,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 135,
     "name_ru": "Роки галли шираз,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2686,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 136,
     "name_ru": "Кубань экстра шато пино.петнат.рислинг",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 1490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 137,
@@ -1403,131 +1403,131 @@
     "id": 141,
     "name_ru": "А каталония ла вида эс до кава ресерва росэ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 2704,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 142,
     "name_ru": "А рейнгессен раумланд традицион ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 6240,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 143,
     "name_ru": "А рейнгессен раумланд розэ резерв ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 7200,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 144,
     "name_ru": "Экстра а венето фри ран азоло просекко супериоре докг суи льевити натюр,",
     "name_en": "Prosecco",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2960,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 145,
     "name_ru": "Южная австралия пакстон ааа шираз гренаш макларен вейл,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3184,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 146,
     "name_ru": "Абруццо терравива монтепульчано д'абруццо коллине терамане докг,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2224,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 147,
     "name_ru": "Портвейн кинта да тровишка тони порт",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "",
     "price": 2390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 148,
     "name_ru": "Словенская штирия домен циринга резерв совиньон блан,",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4784,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 149,
     "name_ru": "Портвейн кинта да тровишка тони порт 10-летний",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "",
     "price": 4090,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 150,
     "name_ru": "Полу а мозель-саар-рувер рислинг вв,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 2544,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 151,
     "name_ru": "- текила коа де хима репосадо",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4290,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 152,
     "name_ru": "Пфальц бон драй рислинг,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2224,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 153,
     "name_ru": "- текила коа де хима силвер",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4290,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 154,
@@ -1543,271 +1543,271 @@
     "id": 155,
     "name_ru": "Пфальц рислинг фом кальк,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3040,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 156,
     "name_ru": "Рейнгессен мушелькальк шардонне,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3184,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 157,
     "name_ru": "Трентино-альто адидже нальс маргрейд пино гриджо игт виньети делле доломити,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1904,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 158,
     "name_ru": "Санмартино блан де блан миллезимато",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 159,
     "name_ru": "Тоскана пуро кьянти докг,",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2544,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 160,
     "name_ru": ", тревизо, категория док санмартино просекко миллезимато экстра драй",
     "name_en": "Prosecco",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 161,
     "name_ru": "Кастилья-ла манча биодиверсо до манчуэла,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2080,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 162,
     "name_ru": "Нижняя австрия лоймер мускателлер мит ахтунг,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4000,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 163,
     "name_ru": "А эльзас луи сипп креман д'эльзас ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 8800,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 164,
     "name_ru": "Сансер кюве женез",
     "name_en": "Sancerre",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 7294,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 165,
     "name_ru": "Коллекционное а тоскана пуро кьянти ризерва докг 2015",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3040,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 166,
     "name_ru": "Коллекционное а тоскана пуро кьянти ризерва докг 2015",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3040,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 167,
     "name_ru": "Крепкий ракия од гроздья",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "",
     "price": 1390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 168,
     "name_ru": "Каталония сейер кредо ратпенат до пенедес,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4480,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 169,
     "name_ru": "Кастилья-ла манча син фильтрос до манчуэла,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2400,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 170,
     "name_ru": "Бургенланд хайнрих вайсце фрайхайт,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4000,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 171,
     "name_ru": "Коль ди сассо тоскана",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2090,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 172,
     "name_ru": "Бургенланд хайнрих вайсце фрайхайт,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4000,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 173,
     "name_ru": "Коллекционное географического наименования а бордо шато лафит ротшильд пойак 2009 г.",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 217280,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 174,
     "name_ru": "Коллекционное географического наименования а бордо шато латур пойак 2002г.",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 190368,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 175,
     "name_ru": "Коллекционное а бордо шато калон-сегюр гран крю классе сент-эстеф,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 29568,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 176,
     "name_ru": "Эльзас блан гевюрцтраминер жозеф каттэн аоп",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусладкое",
     "price": 3013,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 177,
     "name_ru": "Коллекционное а бордо шато канон премье гран крю классе сент-эмильон гран крю,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 37872,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 178,
     "name_ru": "Коллекционное а бордо шато монроз гран крю классе сент-эстеф,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 45888,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 179,
     "name_ru": "Коллекционное а бургундия шато де бофор эшезо гран крю ан орво ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 79200,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 180,
     "name_ru": "Коллекционное а бургундия шато де бофор эшезо гран крю ан орво ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 114240,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 181,
     "name_ru": "Коньяк трехлетний селлар бленд вс",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4590,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 182,
@@ -1823,81 +1823,81 @@
     "id": 183,
     "name_ru": "Дискавери сира",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 184,
     "name_ru": "Шираз сингл виньярд. иден. вудс крэмптон фрэнсес & николь",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 8352,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 185,
     "name_ru": "Портвейн порто седро руби",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "",
     "price": 2496,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 186,
     "name_ru": "Домен де ля шезат. сансер",
     "name_en": "Sancerre",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 4299,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 187,
     "name_ru": "Портвейн порто седро вайт",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "",
     "price": 2496,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 188,
     "name_ru": "Пьер соннен креман д’эльзас рислинг",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 3931,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 189,
     "name_ru": "Рауль клерже креман де бургонь",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 4790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 190,
     "name_ru": "Рауль клерже креман де бургонь",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 4790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 191,
@@ -1913,381 +1913,381 @@
     "id": 192,
     "name_ru": "Домен де ла шартрез крю дю рон шатонеф-дю-пап",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 8674,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 193,
     "name_ru": "Полу пассороне аппассименто",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 2990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 194,
     "name_ru": "Молодое ле риме тоскана",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2090,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 195,
     "name_ru": "Сансер ла кот де бюэ",
     "name_en": "Sancerre",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 10942,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 196,
     "name_ru": "Подере монтепульчано д'абруццо",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2090,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 197,
     "name_ru": "Вольмут совиньон блан,",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2998,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 198,
     "name_ru": "Бароло",
     "name_en": "Barolo",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 6110,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 199,
     "name_ru": "Рипароссо монтепульчано д'абруццо",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 4990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 200,
     "name_ru": "Блэк форест шпэтбургундер",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2280,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 201,
     "name_ru": "Трапиче совиньон блан мендоса",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 202,
     "name_ru": "Ферал рутс вайт зинфандель",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "полусладкое",
     "price": 1584,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 203,
     "name_ru": "Полу домен вайнбах пино гри кло де капусен,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 6982,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 204,
     "name_ru": "Полу георг штайнмец рислинг",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 2096,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 205,
     "name_ru": "Николаев и сыновья полет шмеля",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2208,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 206,
     "name_ru": "Полу ле вин де л’онкл ханси пино гри",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 2552,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 207,
     "name_ru": "Полу пьер соннен рислинг гран крю шлоссберг",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 4558,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 208,
     "name_ru": "Балье сикано верментино",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 209,
     "name_ru": "Блэк форест вайссбургундер",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2280,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 210,
     "name_ru": "Ле вин де л’онкл ханси рислинг",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2280,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 211,
     "name_ru": "Рауль клерже шабли премьер крю",
     "name_en": "Chablis",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 6621,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 212,
     "name_ru": "Франклэнд эстейт шираз,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 213,
     "name_ru": "Монте тесса негроамаро",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2005,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 214,
     "name_ru": "Брунелло ди монтальчино ла казачча каналиккьо ди сопра,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 28867,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 215,
     "name_ru": "Монте тесса примитиво ди мандурия",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3282,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 216,
     "name_ru": "Медуса",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 1690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 217,
     "name_ru": "Ноу булл каберне совиньон",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 218,
     "name_ru": "Сансер кюве ла гранж димьер",
     "name_en": "Sancerre",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 5755,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 219,
     "name_ru": "Полу николаев и сыновья рислинг",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 2976,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 220,
     "name_ru": "Домен вайнбах мускат,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 7064,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 221,
     "name_ru": "Золотой ключ 22",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2208,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 222,
     "name_ru": "Домен вайнбах рислинг альтенбург,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 10770,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 223,
     "name_ru": "Домен вайнбах рислинг колетт,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 9573,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 224,
     "name_ru": "Николаев и сыновья совиньон блан 22",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2640,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 225,
     "name_ru": "Сладкое конти валли спуманте москато",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сладкое",
     "price": 1590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 226,
     "name_ru": "Дурт №1 бордо ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 2520,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 227,
     "name_ru": "Фламинго",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 1536,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 228,
     "name_ru": "Пузырьки 21",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 2208,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 229,
     "name_ru": "Дурт гран терруар бордо,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусладкое",
     "price": 1762,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 230,
@@ -2313,241 +2313,241 @@
     "id": 232,
     "name_ru": "Сладкое николаев и сыновья пти мансан",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сладкое",
     "price": 2640,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 233,
     "name_ru": "Роны шато л'ермит д'озан сант сесиль руж аоп костьер де ним,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3984,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 234,
     "name_ru": "Клотильд давэн шабли,",
     "name_en": "Chablis",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 5646,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 235,
     "name_ru": "Бургундия филипп шави бургонь шардоне,",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 10176,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 236,
     "name_ru": "Лафин мэгпай,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3885,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 237,
     "name_ru": "Мезон александр шабли премье крю фуршом,",
     "name_en": "Chablis",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 7483,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 238,
     "name_ru": "Луары от феври мюскаде севр э мен сюр ли,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2496,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 239,
     "name_ru": "Луары кло де ля феври мюскаде севр э мен сюр ли,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 240,
     "name_ru": "Венето вальдо аквариус блан де блан экстра драй",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2440,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 241,
     "name_ru": "Мон пэр шираз тасмания глейцер-диксон,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 10458,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 242,
     "name_ru": "Пьемонт бароло докг,",
     "name_en": "Barolo",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 10512,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 243,
     "name_ru": "Роки галли каберне,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2507,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 244,
     "name_ru": "Сантес,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1800,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 245,
     "name_ru": "Луары ги альон ле пердриетт гамэ аоп турэн,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2448,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 246,
     "name_ru": "Стелленруст шенен блан,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1670,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 247,
     "name_ru": "А шампань шампань дело блан де нуар резерв ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 8016,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 248,
     "name_ru": ", ижп валь-де-луар луары домэн де ля раготьер совиньон кюве престиж",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 249,
     "name_ru": ", ижп пэи д ок лангедок ле жамель сира",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 250,
     "name_ru": "Экстра а венето миллезимато,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 4032,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 251,
     "name_ru": "А каталония ла вида эс до кава ресерва ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 3456,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 252,
     "name_ru": "Умберто канале эстейт совиньон блан,",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2232,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 253,
     "name_ru": "А лангедок-руссийон пассьон креман де лиму ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 3456,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 254,
     "name_ru": "Калифорния федералист лоди зинфандель",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 4490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 255,
     "name_ru": "Экстра а каталония лд ансестраль массис дель гарраф до пенедес,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 4704,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 256,
@@ -2563,41 +2563,41 @@
     "id": 257,
     "name_ru": "Луары домен дю о перрон ги альон совиньон вьей винь аоп турень,",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 258,
     "name_ru": "Экстра а шампань шампань ле мюржье натюр,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 16224,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 259,
     "name_ru": "Бренди де херес солера резерва ромате",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3090,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 260,
     "name_ru": "А бордо бэд гёл креман де бордо ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 4176,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 261,
@@ -2623,121 +2623,121 @@
     "id": 263,
     "name_ru": "А луары ги альон креман де луар аоп ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 3312,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 264,
     "name_ru": "А каталония вибрасионс до кава ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 2256,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 265,
     "name_ru": "Луары ле ромен сансер,",
     "name_en": "Sancerre",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "белое",
     "style": "сухое",
     "price": 3504,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 266,
     "name_ru": "Коллекционное а рейнгессен мушелькальк шпетбургундер,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 8832,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 267,
     "name_ru": "Нижняя австрия лоймер пино нуар нидеростеррайх,",
     "name_en": "Pinot Noir",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2784,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 268,
     "name_ru": "Ром матусалем солера 7",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2790,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 269,
     "name_ru": "Пфальц бон драй рислинг,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2112,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 270,
     "name_ru": "Коллекционное а бордо шато дю тертр гран крю классе марго,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 12672,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 271,
     "name_ru": "Дюлонг престиж медок 13,5% 0,75 л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 272,
     "name_ru": "Экстра а шампань шампань казаль ля шапэль дю кло блан де блан гран крю ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 23184,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 273,
     "name_ru": "Бургундия шабли гран крю водезир,",
     "name_en": "Chablis",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 21024,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 274,
     "name_ru": "Бургундия шассань монраше премье крю кло сен жан,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 22944,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 275,
@@ -2753,251 +2753,251 @@
     "id": 276,
     "name_ru": "Рейнгессен ингельхаймер шпетбургундер альте ребен,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 19104,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 277,
     "name_ru": "Коллекционное а ломбардия грумелло буон консильо рисерва вальтеллина супериоре докг,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 19104,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 278,
     "name_ru": "Бургундия нюи сен жорж ле шальо ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 17712,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 279,
     "name_ru": "Пьемонт бароло докг аккливи,",
     "name_en": "Barolo",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 23808,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 280,
     "name_ru": "Коллекционное а бордо шато бран-кантенак гран крю классе марго,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 21312,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 281,
     "name_ru": "Берджи монферрато. ла смилла",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2509,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 282,
     "name_ru": "Шато клерк милон гран крю классе. пойяк ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 42573,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 283,
     "name_ru": "Совиньон блан торнео 0.75 л",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 284,
     "name_ru": "Сан джованни перини просекко тревизо миллезимато",
     "name_en": "Prosecco",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2290,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 285,
     "name_ru": "Валиано. 6.38 кьянти классико гран селеционе",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3936,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 286,
     "name_ru": "Консеито легитимо красно 13% 0,75",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1800,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 287,
     "name_ru": "Риоха.крианса. де аутор.барон ладрон де гевара , риоха",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3307,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 288,
     "name_ru": "Шардоне авес дель сур 0.75 л",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 289,
     "name_ru": "Кьянти классико ризерва. монтеккьо",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3176,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 290,
     "name_ru": "Кьянти классико ризерва. фаттория монтеккьо",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 4283,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 291,
     "name_ru": "Рома твин фин коконат и личи 075",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 292,
     "name_ru": "Каберне совиньон. кастель саллег",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2907,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 293,
     "name_ru": "Москато джалло. кастель саллег",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3090,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 294,
     "name_ru": "Лугана ле чивае терральбе ризерва",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 5739,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 295,
     "name_ru": "Мерло ризерва. кастель саллег",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 5333,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 296,
     "name_ru": "Вилла аль кортиле. брунелло ди монтальчино",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 6750,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 297,
     "name_ru": "Гави. ла смилла",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2110,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 298,
     "name_ru": "Гевюрцтраминер. кастель саллег",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3306,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 299,
     "name_ru": "Ино дао, категория док тештура вайнс энкоберта",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3100,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 300,
     "name_ru": "Пти шабли",
     "name_en": "Chablis",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3350,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 301,
@@ -3013,51 +3013,51 @@
     "id": 302,
     "name_ru": "Рислинг. иден. вудс крэмптон",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3331,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 303,
     "name_ru": "Совиньон",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3531,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 304,
     "name_ru": "Дискавери каберне совиньон",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 305,
     "name_ru": "Туччи. роэро арнеис. пеласса",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3914,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 306,
     "name_ru": "Пуйи-фюме. ле лож. калькер",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4565,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 307,
@@ -3073,71 +3073,71 @@
     "id": 308,
     "name_ru": "Пуйи-фюме. ле лож",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4035,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 309,
     "name_ru": "Цвайгельт. альпенхоф",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1291,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 310,
     "name_ru": "Верментино. тенута морайя",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1778,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 311,
     "name_ru": "Пино гриджио. кастель саллег",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2576,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 312,
     "name_ru": "Альта виста мальбек ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 313,
     "name_ru": "Альта виста мальбек терруар селексьон,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3566,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 314,
     "name_ru": "Коньяк гийон пэнтюро хо вьей резерв. премьер крю де коньяк",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 17442,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 315,
@@ -3153,31 +3153,31 @@
     "id": 316,
     "name_ru": "Коньяк трехлетний селлар бленд вс 40% 0,7 л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4290,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 317,
     "name_ru": "Кот-дю-рон",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 318,
     "name_ru": "Крым локо чимбали куприн",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 319,
@@ -3193,21 +3193,21 @@
     "id": 320,
     "name_ru": "Джин сухой року",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "сухое",
     "price": 4890,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 321,
     "name_ru": "Коньяк трехлетний монне вс",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 322,
@@ -3223,31 +3223,31 @@
     "id": 323,
     "name_ru": "Джин бобби'с схидам",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 5589,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 324,
     "name_ru": "Джин сухой дорагросса лондон драй",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "сухое",
     "price": 4693,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 325,
     "name_ru": "Виски поугс стримс оф виски",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3202,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 326,
@@ -3263,101 +3263,101 @@
     "id": 327,
     "name_ru": "Ла габача до руэда совиньон блан",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2565,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 328,
     "name_ru": "Ирландского односолодового виски поугс медовый",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3522,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 329,
     "name_ru": "Виски британский односолодовый бэнкхолл",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3690,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 330,
     "name_ru": "Джин сэр эдмонд",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 6373,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 331,
     "name_ru": "Пакет крафтовый под одну бутылку",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 40,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 332,
     "name_ru": "Полу орфео негроамаро игп",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 3490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 333,
     "name_ru": "Ги альон креман де луар аоп 0,75 12,5 %",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 3685,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 334,
     "name_ru": "Ред бленд спесиал а мендоса",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 335,
     "name_ru": "Полу венте виньярдс ривербэнк рислинг,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 2856,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 336,
     "name_ru": "Вольмут гевюрцтраминер,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3440,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 337,
@@ -3373,11 +3373,11 @@
     "id": 338,
     "name_ru": "Джулиан рейнольдс резерва,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3718,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 339,
@@ -3393,21 +3393,21 @@
     "id": 340,
     "name_ru": "Нидеройстеррайх грюнер вельтлинер штифт готвайг",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 341,
     "name_ru": "Шампань пайпер-хайдсик ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 11075,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 342,
@@ -3423,11 +3423,11 @@
     "id": 343,
     "name_ru": "Рамон бильбао лаломба финка вальонта,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 9899,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 344,
@@ -3443,11 +3443,11 @@
     "id": 345,
     "name_ru": "Вальполичелла классико",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 346,
@@ -3523,11 +3523,11 @@
     "id": 353,
     "name_ru": "Тенута ди ноццоле ле брунике тоскана игт шардоне",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3630,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 354,
@@ -3543,11 +3543,11 @@
     "id": 355,
     "name_ru": "Айзекталь валле изарко мюллер тургау альто адидже",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2870,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 356,
@@ -3573,181 +3573,181 @@
     "id": 358,
     "name_ru": "Настойка горькая лаб №38 ваниль, бобы тонка",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 1440,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 359,
     "name_ru": "Виски киркер шэмрок",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 5544,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 360,
     "name_ru": "Гро план сюр ли юто буланже",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1894,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 361,
     "name_ru": "Кото де имас гран резерва риоха док",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 5565,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 362,
     "name_ru": "Кот-дю-рон",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 363,
     "name_ru": "Бахус",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2197,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 364,
     "name_ru": "Гольдек цвайгельд трокен",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 2190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 365,
     "name_ru": "Полу клиффхэнгер рислинг",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 2131,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 366,
     "name_ru": "Мега спилео 3 кюве",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2140,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 367,
     "name_ru": "Виски ирландский джемесон",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 368,
     "name_ru": "Гроттайа тоскана игт верментино",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 3685,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 369,
     "name_ru": "Бургонь алиготе домен эдмонд корню э фис",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4112,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 370,
     "name_ru": "- текила херенсия де плата репосадо",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4490,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 371,
     "name_ru": "Полу кюве 16",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 2790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 372,
     "name_ru": "Зуккарди торронтес серия а",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2325,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 373,
     "name_ru": "Тито зуккарди",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 5525,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 374,
     "name_ru": "Мачомэн игп мурсия",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 4480,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 375,
     "name_ru": "Стаканчик 0,2 л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 10,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 376,
@@ -3763,51 +3763,51 @@
     "id": 377,
     "name_ru": "Проссеко тревизо 0,2 11%",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 640,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 378,
     "name_ru": "Темпранильо. ла манча. кастилло де кованегра",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1613,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 379,
     "name_ru": "Тоскана. прима феста полу",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 1414,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 380,
     "name_ru": "Ром ботукал мантуано",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 6290,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 381,
     "name_ru": "Ром дипломатико планас",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 5210,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 382,
@@ -3833,141 +3833,141 @@
     "id": 384,
     "name_ru": "Уан ла долорес виньярд мальбек",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 8990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 385,
     "name_ru": "Лово просекко миллезимато док 10% 0,75л.",
     "name_en": "Prosecco",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 1590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 386,
     "name_ru": "Уайт семи свит уайлд лайф 0.75 л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусладкое",
     "price": 1390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 387,
     "name_ru": "Сладкое блан ду гайак гранд резерв де лабастид 0.75 л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сладкое",
     "price": 2590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 388,
     "name_ru": "Креман д'эльзас резерв категории а.о.с.",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 389,
     "name_ru": "Коньяк четырехлетний селлар бленд всоп 40 % 0,7л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 5290,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 390,
     "name_ru": "Бренди марсо гран крю хо 0.7 л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2690,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 391,
     "name_ru": "Категория вдт нео космо анфраруж",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 2100,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 392,
     "name_ru": "Виски шотландский баллантайнс файнест",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2890,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 393,
     "name_ru": "Бренди марсо гран крю хо 0.5 л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 1890,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 394,
     "name_ru": "Виски шотландский солодовый ардбег ви бисти 5 лет",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 6690,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 395,
     "name_ru": "- вермут атха оранж",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2790,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 396,
     "name_ru": "Виски шотландский односолодовый олд пултени выдержка 15 лет",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 15990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 397,
     "name_ru": "Товара ирпинья альянико а кампания категории doс",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 398,
@@ -3983,121 +3983,121 @@
     "id": 399,
     "name_ru": "Виски шотландский односолодовый ан нок выдержка 12 лет",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 7690,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 400,
     "name_ru": "Пино нуар серия 360 категории д.о.",
     "name_en": "Pinot Noir",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 401,
     "name_ru": "Сансер ля виллодьер,",
     "name_en": "Sancerre",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2290,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 402,
     "name_ru": "Кубань мерло",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 403,
     "name_ru": "Голубицкая стрелка рислинг рейнский",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 404,
     "name_ru": "Водка белуга нобл",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "белое",
     "style": "",
     "price": 2290,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 405,
     "name_ru": "Водка белуга трансатлантик рейсинг",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "белое",
     "style": "",
     "price": 2440,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 406,
     "name_ru": "Виски шотландский солодовый гленфиддик 21 год выдержки",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 44990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 407,
     "name_ru": ", венето вальдо марка оро вальдоббьядене просекко супериоре докг",
     "name_en": "Prosecco",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 408,
     "name_ru": "Гуарда кюве нуар кава монт марсаль",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2090,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 409,
     "name_ru": "Абруццо монтепульчано д'абруццо дученто",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 410,
     "name_ru": "Вальдо аквариус",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 2440,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 411,
@@ -4113,121 +4113,121 @@
     "id": 412,
     "name_ru": "Наварра гарнача ля секия вивантис",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 413,
     "name_ru": "Портвейн крепкий марочный дору роял опорту лбв лейт боттелд винтаж",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 4690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 414,
     "name_ru": "Пулия полу примитиво дученто",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 1690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 415,
     "name_ru": "Портвейн порто резерва эспесиаль кинта до инфантадо",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 4490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 416,
     "name_ru": "Калифорния федералист шардоне",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 417,
     "name_ru": "Ноу булл зинфандель 13,5% 0,75",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 418,
     "name_ru": "Ле турель де сен-робер грав 13 % 0,75 л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 419,
     "name_ru": "Кава кастель де рибес натюр юрют 11.5% 0.75",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2340,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 420,
     "name_ru": "Кастеллани кьянти докг",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 421,
     "name_ru": "Водка лаб №40",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 1440,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 422,
     "name_ru": "Палочки хлебные гриссини кроккини миньон с розмарином roberto 150 г",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "",
     "price": 290,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 423,
     "name_ru": "Палочки хлебные гриссини кроккини миньон с томатами и орегано roberto 150 г",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 290,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 424,
@@ -4283,21 +4283,21 @@
     "id": 429,
     "name_ru": "Полу тонно сира",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 1590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 430,
     "name_ru": "Занотелли мюллер тургау",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 431,
@@ -4313,51 +4313,51 @@
     "id": 432,
     "name_ru": "Каса саулита каберне совиньон",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 440,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 433,
     "name_ru": "Дюрнберг блан де нуар цвайгельт",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 1490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 434,
     "name_ru": "Эм де монгере креман де луара",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 3190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 435,
     "name_ru": "Дюлонг креман де бордо",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 436,
     "name_ru": "Креман дю жюра шардоне марсель кабелье",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 3490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 437,
@@ -4383,51 +4383,51 @@
     "id": 439,
     "name_ru": "А каталония вибрасионс кава ,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 2690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 440,
     "name_ru": "Херес мерито амонтильядо",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 1990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 441,
     "name_ru": "Херес мерито олоросо",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 1990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 442,
     "name_ru": "Херес мерито педро хименес",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 2090,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 443,
     "name_ru": "Во стелленбош беллингем хоумстед пинотаж",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 444,
@@ -4443,11 +4443,11 @@
     "id": 445,
     "name_ru": "Докг тоскана фамилия сантуччи кьянти",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 446,
@@ -4463,91 +4463,91 @@
     "id": 447,
     "name_ru": "Док венето вальполичелла суперьоре стефано",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3290,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 448,
     "name_ru": ", сицилия, док фолио неро д'авола",
     "name_en": "Nero d'Avola",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 449,
     "name_ru": ", квалитетсвайн нижняя австрия австрийская роза",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "сухое",
     "price": 1990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 450,
     "name_ru": ", до кампо де борха дон рамон",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 451,
     "name_ru": "Ижт тоскана поджио ай джинепри",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "красное",
     "style": "сухое",
     "price": 3290,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 452,
     "name_ru": "Тоскана док вилла доноратико",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 5490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 453,
     "name_ru": "Просекко миллезимато лово 1,5 л",
     "name_en": "Prosecco",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 3290,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 454,
     "name_ru": "Док тоскана арджентьера",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 14990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 455,
     "name_ru": "Кальвадос роллон всоп 40% 0,7л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 3890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 456,
@@ -4573,101 +4573,101 @@
     "id": 458,
     "name_ru": "Шато ситран",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 6290,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 459,
     "name_ru": "Кальвадос роллон вс 40 % 0,7л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 3690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 460,
     "name_ru": "Коньяк трехлетний курвуазье вс",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4890,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 461,
     "name_ru": "Водка суммум 40% 0,7л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2320,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 462,
     "name_ru": "Коньяк четырехлетний курвуазье всоп",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 7990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 463,
     "name_ru": "Водка суммум 40% 0,5л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 1840,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 464,
     "name_ru": "Колле массари ризерва",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 3790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 465,
     "name_ru": "Нед совиньон блан",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 466,
     "name_ru": "Виски зерновой джек дэниел’с теннесси виски",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 467,
     "name_ru": "Виски шотландский чивас ригал 12 лет",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4390,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 468,
@@ -4683,21 +4683,21 @@
     "id": 469,
     "name_ru": "Виски шотландский солодовый макаллан дабл каск 12 лет",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 11940,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 470,
     "name_ru": "Виски шотландский солодовый гленфиддик 12 лет выдержки",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 5790,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 471,
@@ -4763,51 +4763,51 @@
     "id": 477,
     "name_ru": "Кьянти классико",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 14990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 478,
     "name_ru": "Протос робле",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 479,
     "name_ru": "Мега спилео 3 кюве полу",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "полусухое",
     "price": 2140,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 480,
     "name_ru": "Совиньон блан тарапака",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 481,
     "name_ru": "Пино гриджио сант орсола",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 482,
@@ -4823,31 +4823,31 @@
     "id": 483,
     "name_ru": "Крис пино нуар",
     "name_en": "Pinot Noir",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 484,
     "name_ru": "Петер мертес рислинг полу",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 1590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 485,
     "name_ru": "Водка онегин 1 л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2090,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 486,
@@ -4873,41 +4873,41 @@
     "id": 488,
     "name_ru": "Бургундия, категория шаллер камилль эт лоран бургонь шардоне",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4300,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 489,
     "name_ru": "Риоха, категория дока эль инкилино",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1900,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 490,
     "name_ru": "Мерло",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 491,
     "name_ru": "Ликер вана таллин крем 16% 0,5 л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 2240,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 492,
@@ -4923,111 +4923,111 @@
     "id": 493,
     "name_ru": "Фёрн ридж совиньон блан",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2740,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 494,
     "name_ru": ", категория аок, бургундия мезон эужен буржуа шабли,",
     "name_en": "Chablis",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 4490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 495,
     "name_ru": "Лизард рислинг категории квалитэтсвайн",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусладкое",
     "price": 1190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 496,
     "name_ru": ", пфальц, категория квалитетсвайн мюллер-катуар м-к рислинг",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 497,
     "name_ru": "Сидр традиционный игристый нефильтрованный осветленный полусухой сидр де бретань традисионнэль",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "брют",
     "price": 840,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 498,
     "name_ru": "Шираз резерв фут оф африка",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 499,
     "name_ru": "Сидр традиционный игристый фильтрованный полусухой 'сидр де бретань '",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "брют",
     "price": 390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 500,
     "name_ru": "Виейра ду мар док полу 8,5 % 0,75л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "полусухое",
     "price": 1190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 501,
     "name_ru": "Сидр газированный полусухой 'шевр дэ валонь сидр артизанал '",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "брют",
     "price": 890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 502,
     "name_ru": "Шампань моэт и шандон империаль",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 7290,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 503,
     "name_ru": "Виски ирландский хинч айриш виски дистиллерс кат",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3490,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 504,
@@ -5043,11 +5043,11 @@
     "id": 505,
     "name_ru": "Масло оливковое tartufi jimmy с белым трюфелем 250 мл",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "",
     "price": 790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 506,
@@ -5073,400 +5073,400 @@
     "id": 508,
     "name_ru": "Терредираи тревизо миллесимато проссеко спуманте 11% 0,75",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 1940,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 509,
     "name_ru": "Коньяк трехлетний жюль готре вс 40 % 0,5 л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3090,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 510,
     "name_ru": "Виски односолодовый спейберн выдержка 10 лет 40% 0,7л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 5790,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 511,
     "name_ru": "Виски хэнки бэннистер выдержка 12 лет 40% 0,7л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4190,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 512,
     "name_ru": "Виски хэнки бэннистер выдержка 3 года 40% 0,7л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 1990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 513,
     "name_ru": "Просекко миллезимато лово категории док",
     "name_en": "Prosecco",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 1790,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 514,
     "name_ru": "Джин лондон драй этика органик 40% 0,7л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3690,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 515,
     "name_ru": "Ром лаверс 43% 0,7л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4090,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 516,
     "name_ru": "- текила херенсия де плата аньехо",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 517,
     "name_ru": "Шираз фэмили селекшн / гран резерва категории д.о.",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 518,
     "name_ru": "Винья луис фелипп шардоне резерв 12% 0,75л",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 519,
     "name_ru": "Ред кар шардоне 12% 0,75л",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1090,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 520,
     "name_ru": "Файв тэйлз шардоне 10 % 0,75л",
     "name_en": "Chardonnay",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 521,
     "name_ru": "Виейра ду мар док полу 8,5 % 0,75л",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 1190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 522,
     "name_ru": "Полу шампань коллар-грефье категории а.о.р.",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "полусухое",
     "price": 4890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 523,
     "name_ru": "Креман д'эльзас категории а.о.с.",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "розе",
     "style": "брют",
     "price": 2990,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 524,
     "name_ru": "Портвейн барруш руби",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 2490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 525,
     "name_ru": "Крым локо чимбали рислинг",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 1590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 526,
     "name_ru": "Водка онегин 0.7 л",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 1690,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 527,
     "name_ru": "Виски солодовый глен сильверс",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4490,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 528,
     "name_ru": "Водка онегин 0.7 л + 2 рюмки",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2490,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 529,
     "name_ru": "Ром матусалем платино",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2590,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 530,
     "name_ru": "Киви кюве шираз",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 531,
     "name_ru": "Портвейн кинта да тровишка руби порт",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "",
     "price": 2390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 532,
     "name_ru": "Десксиадо сира",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2890,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 533,
     "name_ru": "Фриулано фриули граве",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 534,
     "name_ru": "Каберне совиньон авес дель сур 0.75 л",
     "name_en": "Sauvignon Blanc",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1390,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 535,
     "name_ru": "Виски шотландский односолодовый гленморанджи ориджинал 12 лет",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 4990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 536,
     "name_ru": "Шираз-мурведр-вионье кляйне зальзе",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1590,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 537,
     "name_ru": "Авес дель сур",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "брют",
     "price": 1490,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 538,
     "name_ru": "Тоскана кьянти веспуччи",
     "name_en": "Chianti",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 539,
     "name_ru": "Портвейн порто тони инфантадо",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "",
     "style": "",
     "price": 3190,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 540,
     "name_ru": "Виски бурбон манхэттен",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3375,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 541,
     "name_ru": "Коньяк пятилетний всоп до",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 7990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 542,
     "name_ru": "Коньяк трехлетний вс до",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 6990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 543,
     "name_ru": "Виски ирландский поугс",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 544,
     "name_ru": "Ром эль либертад пряный",
     "name_en": "",
-    "type": "крепкий алкоголь",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 7310,
-    "category": "крепкий алкоголь"
+    "category": "strong"
   },
   {
     "id": 545,
     "name_ru": "Окра,",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 6707,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 546,
     "name_ru": "Сицилия ла траверсата неро д'авола сичилия док,",
     "name_en": "Nero d'Avola",
-    "type": "вино",
+    "type": "wine",
     "color": "красное",
     "style": "сухое",
     "price": 2160,
-    "category": "вино"
+    "category": "wine"
   },
   {
     "id": 547,
     "name_ru": "Берджи. ла смилла",
     "name_en": "",
-    "type": "вино",
+    "type": "wine",
     "color": "белое",
     "style": "сухое",
     "price": 2509,
-    "category": "вино"
+    "category": "wine"
   }
 ]
