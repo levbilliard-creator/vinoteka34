@@ -373,21 +373,21 @@
     "id": 38,
     "name_ru": "Ликер лимончелло маркати",
     "name_en": "",
-    "type": "wine",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 1990,
-    "category": "wine"
+    "category": "strong"
   },
   {
     "id": 39,
     "name_ru": "Ликер эмульсионный бэйлис сливочный оригинальный",
     "name_en": "",
-    "type": "wine",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2990,
-    "category": "wine"
+    "category": "strong"
   },
   {
     "id": 40,
@@ -3363,11 +3363,11 @@
     "id": 337,
     "name_ru": "Оливки зеленые с сыром фета nefeli",
     "name_en": "",
-    "type": "grocery",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 540,
-    "category": "grocery"
+    "category": "strong"
   },
   {
     "id": 338,
@@ -3383,11 +3383,11 @@
     "id": 339,
     "name_ru": "Оливки халкидики с голубым сыром nefeli 300гр",
     "name_en": "",
-    "type": "grocery",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 540,
-    "category": "grocery"
+    "category": "strong"
   },
   {
     "id": 340,
@@ -3553,21 +3553,21 @@
     "id": 356,
     "name_ru": "Изированный градосодержащий напиток из градного сырья нордес вермут бланко сладкий белый",
     "name_en": "",
-    "type": "grocery",
+    "type": "strong",
     "color": "белое",
     "style": "сладкое",
     "price": 4018,
-    "category": "grocery"
+    "category": "strong"
   },
   {
     "id": 357,
     "name_ru": "Изированный градосодержащий напиток из градного сырья нордес вермут рохо сладкий красный",
     "name_en": "",
-    "type": "grocery",
+    "type": "strong",
     "color": "красное",
     "style": "сладкое",
     "price": 4018,
-    "category": "grocery"
+    "category": "strong"
   },
   {
     "id": 358,
@@ -3973,11 +3973,11 @@
     "id": 398,
     "name_ru": "Изированный градосодержащий напиток из градного сырья вермут гарроне антика ричетта драй",
     "name_en": "",
-    "type": "grocery",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 1940,
-    "category": "grocery"
+    "category": "strong"
   },
   {
     "id": 399,
@@ -4363,21 +4363,21 @@
     "id": 437,
     "name_ru": "- рома со вкусом карамели каракас клаб нектар",
     "name_en": "",
-    "type": "soft",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "soft"
+    "category": "strong"
   },
   {
     "id": 438,
     "name_ru": "Чай классический зеленый 75 гр",
     "name_en": "",
-    "type": "grocery",
+    "type": "tea",
     "color": "",
     "style": "",
     "price": 890,
-    "category": "grocery"
+    "category": "tea"
   },
   {
     "id": 439,
@@ -4563,11 +4563,11 @@
     "id": 457,
     "name_ru": "Чай индиго травяной 75гр",
     "name_en": "",
-    "type": "grocery",
+    "type": "tea",
     "color": "",
     "style": "",
     "price": 1440,
-    "category": "grocery"
+    "category": "tea"
   },
   {
     "id": 458,
@@ -4703,41 +4703,41 @@
     "id": 471,
     "name_ru": "Чай энергия зеленый 75гр",
     "name_en": "",
-    "type": "grocery",
+    "type": "tea",
     "color": "",
     "style": "",
     "price": 1140,
-    "category": "grocery"
+    "category": "tea"
   },
   {
     "id": 472,
     "name_ru": "Чай пищеварение травяной 75 гр",
     "name_en": "",
-    "type": "grocery",
+    "type": "tea",
     "color": "",
     "style": "",
     "price": 1140,
-    "category": "grocery"
+    "category": "tea"
   },
   {
     "id": 473,
     "name_ru": "Чай энергия черный 75 гр",
     "name_en": "",
-    "type": "grocery",
+    "type": "tea",
     "color": "",
     "style": "",
     "price": 1140,
-    "category": "grocery"
+    "category": "tea"
   },
   {
     "id": 474,
     "name_ru": "Чай черный классический 75 гр",
     "name_en": "",
-    "type": "grocery",
+    "type": "tea",
     "color": "",
     "style": "",
     "price": 890,
-    "category": "grocery"
+    "category": "tea"
   },
   {
     "id": 475,
@@ -4903,11 +4903,11 @@
     "id": 491,
     "name_ru": "Ликер вана таллин крем 16% 0,5 л",
     "name_en": "",
-    "type": "wine",
+    "type": "strong",
     "color": "",
     "style": "",
     "price": 2240,
-    "category": "wine"
+    "category": "strong"
   },
   {
     "id": 492,
