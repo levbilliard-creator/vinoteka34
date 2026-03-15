@@ -15,8 +15,6 @@ accessories: "Аксессуары"
 
 async function loadProducts(){
 
-try{
-
 const response = await fetch("/data/products.json")
 
 products = await response.json()
@@ -25,12 +23,6 @@ filteredProducts = products
 
 renderProducts(filteredProducts)
 
-}catch(error){
-
-console.error("Ошибка загрузки товаров:", error)
-
-}
-
 }
 
 
@@ -38,8 +30,6 @@ console.error("Ошибка загрузки товаров:", error)
 function renderProducts(list){
 
 const grid = document.getElementById("catalogGrid")
-
-if(!grid) return
 
 grid.innerHTML = ""
 
@@ -56,7 +46,7 @@ ${categoryNames[product.category] || ""}
 </div>
 
 <div class="productTitle">
-${product.name_ru || ""}
+${product.name_ru}
 </div>
 
 <div class="productInfo">
@@ -66,7 +56,7 @@ ${product.color || ""} ${product.style || ""}
 <div class="productBottom">
 
 <div class="productPrice">
-${product.price || ""} ₽
+${product.price} ₽
 </div>
 
 <a href="/product.html?id=${product.id}" class="productMore">
@@ -88,13 +78,9 @@ grid.appendChild(card)
 function filterCategory(category){
 
 if(category === "all"){
-
 filteredProducts = products
-
 }else{
-
 filteredProducts = products.filter(p => p.category === category)
-
 }
 
 renderProducts(filteredProducts)
@@ -111,7 +97,7 @@ const input = document
 .toLowerCase()
 
 filteredProducts = products.filter(product =>
-(product.name_ru || "").toLowerCase().includes(input)
+product.name_ru.toLowerCase().includes(input)
 )
 
 renderProducts(filteredProducts)
