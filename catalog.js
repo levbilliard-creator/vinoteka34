@@ -1,5 +1,5 @@
 let products = []
-let filtered = []
+let filteredProducts = []
 let activeCategory = "all"
 
 async function loadProducts(){
@@ -7,41 +7,24 @@ async function loadProducts(){
 const res = await fetch("/data/products.json")
 products = await res.json()
 
-filtered = products
+filteredProducts = products
 
-renderProducts(filtered)
+renderProducts(filteredProducts)
 
 }
 
 function normalizeCategory(p){
 
-let cat = p.category || p.type || ""
+let cat = (p.category || p.type || "").toLowerCase()
 
-cat = cat.toLowerCase()
-
-if(cat.includes("вино")) return "wine"
-if(cat.includes("wine")) return "wine"
-
-if(cat.includes("игрист")) return "sparkling"
-if(cat.includes("sparkling")) return "sparkling"
-
-if(cat.includes("креп")) return "strong"
-if(cat.includes("strong")) return "strong"
-
-if(cat.includes("пиво")) return "beer"
-if(cat.includes("beer")) return "beer"
-
-if(cat.includes("soft")) return "soft"
-if(cat.includes("безал")) return "soft"
-
-if(cat.includes("бакале")) return "grocery"
-if(cat.includes("grocery")) return "grocery"
-
-if(cat.includes("чай")) return "tea"
-if(cat.includes("tea")) return "tea"
-
-if(cat.includes("аксесс")) return "accessories"
-if(cat.includes("accessories")) return "accessories"
+if(cat.includes("wine") || cat.includes("вино")) return "wine"
+if(cat.includes("sparkling") || cat.includes("игрист")) return "sparkling"
+if(cat.includes("strong") || cat.includes("креп")) return "strong"
+if(cat.includes("beer") || cat.includes("пиво")) return "beer"
+if(cat.includes("soft") || cat.includes("безал")) return "soft"
+if(cat.includes("grocery") || cat.includes("бакале")) return "grocery"
+if(cat.includes("tea") || cat.includes("чай")) return "tea"
+if(cat.includes("accessories") || cat.includes("аксесс")) return "accessories"
 
 return "other"
 
@@ -52,21 +35,23 @@ function filterCategory(category){
 activeCategory = category
 
 if(category === "all"){
-filtered = products
+filteredProducts = products
 }
 else{
 
-filtered = products.filter(p => normalizeCategory(p) === category)
+filteredProducts = products.filter(p => normalizeCategory(p) === category)
 
 }
 
-renderProducts(filtered)
+renderProducts(filteredProducts)
 
 }
 
 function renderProducts(list){
 
-const grid = document.getElementById("catalog-grid")
+const grid = document.getElementById("catalogGrid")
+
+if(!grid) return
 
 grid.innerHTML = ""
 
@@ -76,12 +61,24 @@ const card = document.createElement("div")
 card.className = "product-card"
 
 card.innerHTML = `
-<div class="product-type">${p.category || ""}</div>
-<h3>${p.name_ru}</h3>
-<div class="product-style">${p.color || ""} ${p.style || ""}</div>
-<div class="product-bottom">
-<span class="price">${p.price} ₽</span>
-<a href="/product?id=${p.id}">Подробнее</a>
+<div class="wine-type">${p.category || ""}</div>
+
+<h3 class="wine-title">${p.name_ru}</h3>
+
+<div class="wine-style">
+${p.color || ""} ${p.style || ""}
+</div>
+
+<div class="wine-footer">
+
+<span class="wine-price">
+${p.price} ₽
+</span>
+
+<a href="/product?id=${p.id}">
+Подробнее
+</a>
+
 </div>
 `
 
