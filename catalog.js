@@ -1,46 +1,48 @@
-let products = []
+let products = [];
+let filteredProducts = [];
 
 const categoryNames = {
-wine:"WINE",
-sparkling:"SPARKLING",
-strong:"STRONG",
-beer:"BEER",
-soft:"SOFT",
-grocery:"GROCERY",
-tea:"TEA",
-accessories:"ACCESSORY"
-}
+wine: "Вино",
+sparkling: "Игристое",
+strong: "Крепкий алкоголь",
+beer: "Пиво",
+soft: "Безалкогольные",
+grocery: "Бакалея",
+tea: "Чай",
+accessories: "Аксессуары"
+};
+
 
 
 async function loadProducts(){
 
-const res = await fetch("/data/products.json")
+const response = await fetch("/products.json");
+products = await response.json();
 
-products = await res.json()
+filteredProducts = products;
 
-render(products)
+renderProducts(filteredProducts);
 
 }
 
 
 
-function render(list){
+function renderProducts(list){
 
-const grid = document.getElementById("catalogGrid")
+const grid = document.getElementById("catalogGrid");
 
-grid.innerHTML = ""
+grid.innerHTML = "";
 
 list.forEach(product=>{
 
-const card = document.createElement("div")
-card.className = "productCard"
+const card = document.createElement("div");
+card.className = "productCard";
 
-const label = categoryNames[product.category] || ""
 
 card.innerHTML = `
 
 <div class="productType">
-${label}
+${categoryNames[product.category] || ""}
 </div>
 
 <div class="productTitle">
@@ -57,16 +59,17 @@ ${product.color || ""} ${product.style || ""}
 ${product.price} ₽
 </div>
 
-<a class="productMore" href="/product.html?id=${product.id}">
+<a href="/product.html?id=${product.id}" class="productMore">
 Подробнее
 </a>
 
 </div>
-`
 
-grid.appendChild(card)
+`;
 
-})
+grid.appendChild(card);
+
+});
 
 }
 
@@ -74,35 +77,33 @@ grid.appendChild(card)
 
 function filterCategory(category){
 
-if(category==="all"){
-render(products)
-return
+if(category === "all"){
+filteredProducts = products;
+}else{
+filteredProducts = products.filter(p=>p.category === category);
 }
 
-const filtered = products.filter(p=>p.category===category)
-
-render(filtered)
+renderProducts(filteredProducts);
 
 }
 
 
 
-function search(){
+function searchProducts(){
 
-const value =
-document
+const input = document
 .getElementById("searchInput")
 .value
-.toLowerCase()
+.toLowerCase();
 
-const filtered = products.filter(p=>
-p.name_ru.toLowerCase().includes(value)
-)
+filteredProducts = products.filter(product=>
+product.name_ru.toLowerCase().includes(input)
+);
 
-render(filtered)
+renderProducts(filteredProducts);
 
 }
 
 
 
-window.onload = loadProducts
+loadProducts();
