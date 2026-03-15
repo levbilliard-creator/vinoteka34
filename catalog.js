@@ -30,6 +30,21 @@ return "other"
 
 }
 
+function translateCategory(cat){
+
+if(cat === "wine") return "Вино"
+if(cat === "sparkling") return "Игристое"
+if(cat === "strong") return "Крепкий алкоголь"
+if(cat === "beer") return "Пиво"
+if(cat === "soft") return "Безалкогольные"
+if(cat === "grocery") return "Бакалея"
+if(cat === "tea") return "Чай"
+if(cat === "accessories") return "Аксессуары"
+
+return ""
+
+}
+
 function filterCategory(category){
 
 activeCategory = category
@@ -57,13 +72,21 @@ grid.innerHTML = ""
 
 list.forEach(p => {
 
+const category = normalizeCategory(p)
+const categoryLabel = translateCategory(category)
+
 const card = document.createElement("div")
 card.className = "product-card"
 
 card.innerHTML = `
-<div class="wine-type">${p.category || ""}</div>
 
-<h3 class="wine-title">${p.name_ru}</h3>
+<div class="wine-type">
+${categoryLabel}
+</div>
+
+<h3 class="wine-title">
+${p.name_ru}
+</h3>
 
 <div class="wine-style">
 ${p.color || ""} ${p.style || ""}
@@ -80,6 +103,7 @@ ${p.price} ₽
 </a>
 
 </div>
+
 `
 
 grid.appendChild(card)
