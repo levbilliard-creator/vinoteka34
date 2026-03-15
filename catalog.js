@@ -12,7 +12,6 @@ accessories:"ACCESSORY"
 }
 
 
-
 async function loadProducts(){
 
 const res = await fetch("/data/products.json")
@@ -33,53 +32,41 @@ grid.innerHTML = ""
 
 list.forEach(product=>{
 
-grid.appendChild(createCard(product))
-
-})
-
-}
-
-
-
-function createCard(product){
-
 const card = document.createElement("div")
-
-card.className = "card"
-
-
+card.className = "productCard"
 
 const label = categoryNames[product.category] || ""
 
-
-
 card.innerHTML = `
 
-<div class="cardType">${label}</div>
+<div class="productType">
+${label}
+</div>
 
-<div class="cardTitle">
+<div class="productTitle">
 ${product.name_ru}
 </div>
 
-<div class="cardInfo">
+<div class="productInfo">
 ${product.color || ""} ${product.style || ""}
 </div>
 
-<div class="cardBottom">
+<div class="productBottom">
 
-<div class="price">
+<div class="productPrice">
 ${product.price} ₽
 </div>
 
-<a class="more" href="/product.html?id=${product.id}">
+<a class="productMore" href="/product.html?id=${product.id}">
 Подробнее
 </a>
 
 </div>
-
 `
 
-return card
+grid.appendChild(card)
+
+})
 
 }
 
@@ -88,14 +75,9 @@ return card
 function filterCategory(category){
 
 if(category==="all"){
-
 render(products)
-
 return
-
 }
-
-
 
 const filtered = products.filter(p=>p.category===category)
 
@@ -107,18 +89,15 @@ render(filtered)
 
 function search(){
 
-const value = document
+const value =
+document
 .getElementById("searchInput")
 .value
 .toLowerCase()
 
-
-
 const filtered = products.filter(p=>
 p.name_ru.toLowerCase().includes(value)
 )
-
-
 
 render(filtered)
 
