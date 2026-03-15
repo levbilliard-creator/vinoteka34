@@ -7,7 +7,7 @@
     "color": "",
     "style": "",
     "price": 6890,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 33437,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 9504,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 4472,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 9168,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "color": "",
     "style": "",
     "price": 5722,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1987,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "color": "белое",
     "style": "брют",
     "price": 6835,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2064,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "color": "",
     "style": "",
     "price": 440,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 15840,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "color": "",
     "style": "",
     "price": 3744,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 14,
@@ -137,7 +137,7 @@
     "color": "",
     "style": "",
     "price": 440,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 15,
@@ -147,7 +147,7 @@
     "color": "",
     "style": "",
     "price": 6224,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 16,
@@ -157,7 +157,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2832,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 17,
@@ -167,7 +167,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3216,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 18,
@@ -177,7 +177,7 @@
     "color": "",
     "style": "",
     "price": 7392,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 19,
@@ -187,7 +187,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 4656,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 20,
@@ -197,7 +197,7 @@
     "color": "",
     "style": "",
     "price": 11984,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 21,
@@ -207,7 +207,7 @@
     "color": "красное",
     "style": "полусладкое",
     "price": 1390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 22,
@@ -217,7 +217,7 @@
     "color": "",
     "style": "",
     "price": 12464,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 23,
@@ -227,7 +227,7 @@
     "color": "розе",
     "style": "полусухое",
     "price": 1282,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 24,
@@ -237,7 +237,7 @@
     "color": "",
     "style": "",
     "price": 8957,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 25,
@@ -247,7 +247,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 9587,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 26,
@@ -257,7 +257,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 8832,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 27,
@@ -267,7 +267,7 @@
     "color": "",
     "style": "",
     "price": 4704,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 28,
@@ -287,7 +287,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 9899,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 30,
@@ -307,7 +307,7 @@
     "color": "",
     "style": "",
     "price": 3678,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 32,
@@ -317,7 +317,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 5126,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 33,
@@ -327,7 +327,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 5664,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 34,
@@ -337,7 +337,7 @@
     "color": "",
     "style": "",
     "price": 5994,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 35,
@@ -357,7 +357,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 5870,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 37,
@@ -367,7 +367,7 @@
     "color": "",
     "style": "",
     "price": 240,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 38,
@@ -377,7 +377,7 @@
     "color": "",
     "style": "",
     "price": 1990,
-    "category": "strong"
+    "category": "вино"
   },
   {
     "id": 39,
@@ -387,7 +387,7 @@
     "color": "",
     "style": "",
     "price": 2990,
-    "category": "strong"
+    "category": "вино"
   },
   {
     "id": 40,
@@ -397,7 +397,7 @@
     "color": "",
     "style": "",
     "price": 6590,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 41,
@@ -407,7 +407,7 @@
     "color": "",
     "style": "",
     "price": 7824,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 42,
@@ -417,7 +417,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 16224,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 43,
@@ -427,7 +427,7 @@
     "color": "",
     "style": "",
     "price": 8784,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 44,
@@ -437,7 +437,7 @@
     "color": "",
     "style": "",
     "price": 3984,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 45,
@@ -447,7 +447,7 @@
     "color": "",
     "style": "",
     "price": 3824,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 46,
@@ -457,7 +457,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 2774,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 47,
@@ -467,7 +467,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2538,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 48,
@@ -477,7 +477,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 3590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 49,
@@ -487,7 +487,7 @@
     "color": "розе",
     "style": "брют",
     "price": 2693,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 50,
@@ -497,7 +497,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 4771,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 51,
@@ -507,7 +507,7 @@
     "color": "белое",
     "style": "брют",
     "price": 9925,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 52,
@@ -517,7 +517,7 @@
     "color": "розе",
     "style": "брют",
     "price": 2000,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 53,
@@ -527,7 +527,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3840,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 54,
@@ -537,7 +537,7 @@
     "color": "белое",
     "style": "брют",
     "price": 9379,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 55,
@@ -547,7 +547,7 @@
     "color": "белое",
     "style": "сладкое",
     "price": 1840,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 56,
@@ -557,7 +557,7 @@
     "color": "",
     "style": "",
     "price": 7485,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 57,
@@ -567,7 +567,7 @@
     "color": "белое",
     "style": "брют",
     "price": 16114,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 58,
@@ -577,7 +577,7 @@
     "color": "белое",
     "style": "брют",
     "price": 1490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 59,
@@ -587,7 +587,7 @@
     "color": "белое",
     "style": "брют",
     "price": 4742,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 60,
@@ -597,7 +597,7 @@
     "color": "розе",
     "style": "брют",
     "price": 3250,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 61,
@@ -607,7 +607,7 @@
     "color": "",
     "style": "",
     "price": 8246,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 62,
@@ -617,7 +617,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 63,
@@ -627,7 +627,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2240,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 64,
@@ -637,7 +637,7 @@
     "color": "белое",
     "style": "брют",
     "price": 7704,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 65,
@@ -647,7 +647,7 @@
     "color": "розе",
     "style": "брют",
     "price": 2590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 66,
@@ -657,7 +657,7 @@
     "color": "белое",
     "style": "брют",
     "price": 17261,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 67,
@@ -667,7 +667,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 68,
@@ -677,7 +677,7 @@
     "color": "белое",
     "style": "брют",
     "price": 3390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 69,
@@ -687,7 +687,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 2003,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 70,
@@ -697,7 +697,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 640,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 71,
@@ -707,7 +707,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 2190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 72,
@@ -717,7 +717,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 740,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 73,
@@ -727,7 +727,7 @@
     "color": "розе",
     "style": "полусухое",
     "price": 1390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 74,
@@ -737,7 +737,7 @@
     "color": "белое",
     "style": "брют",
     "price": 4197,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 75,
@@ -747,7 +747,7 @@
     "color": "розе",
     "style": "брют",
     "price": 6326,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 76,
@@ -757,7 +757,7 @@
     "color": "белое",
     "style": "брют",
     "price": 11912,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 77,
@@ -767,7 +767,7 @@
     "color": "белое",
     "style": "брют",
     "price": 6400,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 78,
@@ -777,7 +777,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 1890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 79,
@@ -787,7 +787,7 @@
     "color": "",
     "style": "",
     "price": 5590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 80,
@@ -797,7 +797,7 @@
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 81,
@@ -807,7 +807,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 7990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 82,
@@ -817,7 +817,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2381,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 83,
@@ -827,7 +827,7 @@
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 84,
@@ -837,7 +837,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 4570,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 85,
@@ -847,7 +847,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 4990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 86,
@@ -857,7 +857,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2650,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 87,
@@ -867,7 +867,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 2237,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 88,
@@ -877,7 +877,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 89,
@@ -887,7 +887,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 90,
@@ -897,7 +897,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3802,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 91,
@@ -907,7 +907,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 2717,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 92,
@@ -917,7 +917,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3277,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 93,
@@ -927,7 +927,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4762,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 94,
@@ -937,7 +937,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 5568,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 95,
@@ -947,7 +947,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2461,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 96,
@@ -957,7 +957,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 5136,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 97,
@@ -967,7 +967,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2011,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 98,
@@ -977,7 +977,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1862,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 99,
@@ -987,7 +987,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 5619,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 100,
@@ -997,7 +997,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4144,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 101,
@@ -1007,7 +1007,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1979,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 102,
@@ -1017,7 +1017,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2427,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 103,
@@ -1027,7 +1027,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2150,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 104,
@@ -1037,7 +1037,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 4240,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 105,
@@ -1047,7 +1047,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3240,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 106,
@@ -1057,7 +1057,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3917,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 107,
@@ -1067,7 +1067,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3562,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 108,
@@ -1077,7 +1077,7 @@
     "color": "белое",
     "style": "брют",
     "price": 9790,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 109,
@@ -1097,7 +1097,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3464,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 111,
@@ -1107,7 +1107,7 @@
     "color": "розе",
     "style": "брют",
     "price": 9790,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 112,
@@ -1117,7 +1117,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 113,
@@ -1127,7 +1127,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3968,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 114,
@@ -1137,7 +1137,7 @@
     "color": "",
     "style": "",
     "price": 150,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 115,
@@ -1147,7 +1147,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4982,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 116,
@@ -1157,7 +1157,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2038,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 117,
@@ -1167,7 +1167,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 118,
@@ -1177,7 +1177,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 119,
@@ -1187,7 +1187,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 12034,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 120,
@@ -1197,7 +1197,7 @@
     "color": "",
     "style": "",
     "price": 95,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 121,
@@ -1207,7 +1207,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 122,
@@ -1217,7 +1217,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2659,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 123,
@@ -1227,7 +1227,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3678,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 124,
@@ -1237,7 +1237,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1238,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 125,
@@ -1247,7 +1247,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3226,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 126,
@@ -1257,7 +1257,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 5568,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 127,
@@ -1267,7 +1267,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1238,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 128,
@@ -1277,7 +1277,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3555,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 129,
@@ -1287,7 +1287,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 2170,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 130,
@@ -1297,7 +1297,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 9984,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 131,
@@ -1307,7 +1307,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2790,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 132,
@@ -1317,7 +1317,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2888,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 133,
@@ -1327,7 +1327,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3826,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 134,
@@ -1337,7 +1337,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1904,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 135,
@@ -1347,7 +1347,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2686,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 136,
@@ -1357,7 +1357,7 @@
     "color": "белое",
     "style": "брют",
     "price": 1490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 137,
@@ -1367,7 +1367,7 @@
     "color": "",
     "style": "",
     "price": 157,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 138,
@@ -1377,7 +1377,7 @@
     "color": "",
     "style": "",
     "price": 190,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 139,
@@ -1387,7 +1387,7 @@
     "color": "",
     "style": "",
     "price": 157,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 140,
@@ -1397,7 +1397,7 @@
     "color": "",
     "style": "",
     "price": 190,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 141,
@@ -1407,7 +1407,7 @@
     "color": "розе",
     "style": "брют",
     "price": 2704,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 142,
@@ -1417,7 +1417,7 @@
     "color": "белое",
     "style": "брют",
     "price": 6240,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 143,
@@ -1427,7 +1427,7 @@
     "color": "розе",
     "style": "брют",
     "price": 7200,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 144,
@@ -1437,7 +1437,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2960,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 145,
@@ -1447,7 +1447,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3184,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 146,
@@ -1457,7 +1457,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2224,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 147,
@@ -1467,7 +1467,7 @@
     "color": "красное",
     "style": "",
     "price": 2390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 148,
@@ -1477,7 +1477,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4784,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 149,
@@ -1487,7 +1487,7 @@
     "color": "красное",
     "style": "",
     "price": 4090,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 150,
@@ -1497,7 +1497,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 2544,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 151,
@@ -1507,7 +1507,7 @@
     "color": "",
     "style": "",
     "price": 4290,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 152,
@@ -1517,7 +1517,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2224,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 153,
@@ -1527,7 +1527,7 @@
     "color": "",
     "style": "",
     "price": 4290,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 154,
@@ -1537,7 +1537,7 @@
     "color": "",
     "style": "",
     "price": 390,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 155,
@@ -1547,7 +1547,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3040,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 156,
@@ -1557,7 +1557,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3184,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 157,
@@ -1567,7 +1567,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1904,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 158,
@@ -1577,7 +1577,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 159,
@@ -1587,7 +1587,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2544,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 160,
@@ -1597,7 +1597,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2390,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 161,
@@ -1607,7 +1607,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2080,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 162,
@@ -1617,7 +1617,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4000,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 163,
@@ -1627,7 +1627,7 @@
     "color": "белое",
     "style": "брют",
     "price": 8800,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 164,
@@ -1637,7 +1637,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 7294,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 165,
@@ -1647,7 +1647,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3040,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 166,
@@ -1657,7 +1657,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3040,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 167,
@@ -1667,7 +1667,7 @@
     "color": "розе",
     "style": "",
     "price": 1390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 168,
@@ -1677,7 +1677,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4480,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 169,
@@ -1687,7 +1687,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2400,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 170,
@@ -1697,7 +1697,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4000,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 171,
@@ -1707,7 +1707,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2090,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 172,
@@ -1717,7 +1717,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4000,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 173,
@@ -1727,7 +1727,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 217280,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 174,
@@ -1737,7 +1737,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 190368,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 175,
@@ -1747,7 +1747,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 29568,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 176,
@@ -1757,7 +1757,7 @@
     "color": "белое",
     "style": "полусладкое",
     "price": 3013,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 177,
@@ -1767,7 +1767,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 37872,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 178,
@@ -1777,7 +1777,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 45888,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 179,
@@ -1787,7 +1787,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 79200,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 180,
@@ -1797,7 +1797,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 114240,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 181,
@@ -1807,7 +1807,7 @@
     "color": "",
     "style": "",
     "price": 4590,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 182,
@@ -1827,7 +1827,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 184,
@@ -1837,7 +1837,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 8352,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 185,
@@ -1847,7 +1847,7 @@
     "color": "красное",
     "style": "",
     "price": 2496,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 186,
@@ -1857,7 +1857,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 4299,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 187,
@@ -1867,7 +1867,7 @@
     "color": "белое",
     "style": "",
     "price": 2496,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 188,
@@ -1877,7 +1877,7 @@
     "color": "белое",
     "style": "брют",
     "price": 3931,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 189,
@@ -1887,7 +1887,7 @@
     "color": "белое",
     "style": "брют",
     "price": 4790,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 190,
@@ -1897,7 +1897,7 @@
     "color": "розе",
     "style": "брют",
     "price": 4790,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 191,
@@ -1907,7 +1907,7 @@
     "color": "",
     "style": "",
     "price": 95,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 192,
@@ -1917,7 +1917,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 8674,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 193,
@@ -1927,7 +1927,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 2990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 194,
@@ -1937,7 +1937,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2090,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 195,
@@ -1947,7 +1947,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 10942,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 196,
@@ -1957,7 +1957,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2090,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 197,
@@ -1967,7 +1967,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2998,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 198,
@@ -1977,7 +1977,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 6110,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 199,
@@ -1987,7 +1987,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 4990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 200,
@@ -1997,7 +1997,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2280,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 201,
@@ -2007,7 +2007,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 202,
@@ -2017,7 +2017,7 @@
     "color": "розе",
     "style": "полусладкое",
     "price": 1584,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 203,
@@ -2027,7 +2027,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 6982,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 204,
@@ -2037,7 +2037,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 2096,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 205,
@@ -2047,7 +2047,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2208,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 206,
@@ -2057,7 +2057,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 2552,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 207,
@@ -2067,7 +2067,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 4558,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 208,
@@ -2077,7 +2077,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 209,
@@ -2087,7 +2087,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2280,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 210,
@@ -2097,7 +2097,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2280,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 211,
@@ -2107,7 +2107,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 6621,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 212,
@@ -2117,7 +2117,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 213,
@@ -2127,7 +2127,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2005,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 214,
@@ -2137,7 +2137,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 28867,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 215,
@@ -2147,7 +2147,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3282,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 216,
@@ -2157,7 +2157,7 @@
     "color": "белое",
     "style": "брют",
     "price": 1690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 217,
@@ -2167,7 +2167,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 218,
@@ -2177,7 +2177,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 5755,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 219,
@@ -2187,7 +2187,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 2976,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 220,
@@ -2197,7 +2197,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 7064,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 221,
@@ -2207,7 +2207,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2208,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 222,
@@ -2217,7 +2217,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 10770,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 223,
@@ -2227,7 +2227,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 9573,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 224,
@@ -2237,7 +2237,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2640,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 225,
@@ -2247,7 +2247,7 @@
     "color": "белое",
     "style": "сладкое",
     "price": 1590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 226,
@@ -2257,7 +2257,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 2520,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 227,
@@ -2267,7 +2267,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 1536,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 228,
@@ -2277,7 +2277,7 @@
     "color": "розе",
     "style": "брют",
     "price": 2208,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 229,
@@ -2287,7 +2287,7 @@
     "color": "белое",
     "style": "полусладкое",
     "price": 1762,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 230,
@@ -2307,7 +2307,7 @@
     "color": "",
     "style": "",
     "price": 280,
-    "category": "wine"
+    "category": "beer"
   },
   {
     "id": 232,
@@ -2317,7 +2317,7 @@
     "color": "белое",
     "style": "сладкое",
     "price": 2640,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 233,
@@ -2327,7 +2327,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3984,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 234,
@@ -2337,7 +2337,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 5646,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 235,
@@ -2347,7 +2347,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 10176,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 236,
@@ -2357,7 +2357,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3885,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 237,
@@ -2367,7 +2367,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 7483,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 238,
@@ -2377,7 +2377,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2496,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 239,
@@ -2387,7 +2387,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 240,
@@ -2397,7 +2397,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2440,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 241,
@@ -2407,7 +2407,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 10458,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 242,
@@ -2417,7 +2417,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 10512,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 243,
@@ -2427,7 +2427,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2507,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 244,
@@ -2437,7 +2437,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1800,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 245,
@@ -2447,7 +2447,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2448,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 246,
@@ -2457,7 +2457,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1670,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 247,
@@ -2467,7 +2467,7 @@
     "color": "белое",
     "style": "брют",
     "price": 8016,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 248,
@@ -2477,7 +2477,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3790,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 249,
@@ -2487,7 +2487,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 250,
@@ -2497,7 +2497,7 @@
     "color": "белое",
     "style": "брют",
     "price": 4032,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 251,
@@ -2507,7 +2507,7 @@
     "color": "белое",
     "style": "брют",
     "price": 3456,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 252,
@@ -2517,7 +2517,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2232,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 253,
@@ -2527,7 +2527,7 @@
     "color": "белое",
     "style": "брют",
     "price": 3456,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 254,
@@ -2537,7 +2537,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 4490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 255,
@@ -2547,7 +2547,7 @@
     "color": "белое",
     "style": "брют",
     "price": 4704,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 256,
@@ -2557,7 +2557,7 @@
     "color": "",
     "style": "",
     "price": 9792,
-    "category": "wine"
+    "category": "accessories"
   },
   {
     "id": 257,
@@ -2567,7 +2567,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 258,
@@ -2577,7 +2577,7 @@
     "color": "белое",
     "style": "брют",
     "price": 16224,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 259,
@@ -2587,7 +2587,7 @@
     "color": "",
     "style": "",
     "price": 3090,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 260,
@@ -2597,7 +2597,7 @@
     "color": "белое",
     "style": "брют",
     "price": 4176,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 261,
@@ -2607,7 +2607,7 @@
     "color": "",
     "style": "",
     "price": 6240,
-    "category": "wine"
+    "category": "accessories"
   },
   {
     "id": 262,
@@ -2627,7 +2627,7 @@
     "color": "розе",
     "style": "брют",
     "price": 3312,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 264,
@@ -2637,7 +2637,7 @@
     "color": "розе",
     "style": "брют",
     "price": 2256,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 265,
@@ -2647,7 +2647,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3504,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 266,
@@ -2657,7 +2657,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 8832,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 267,
@@ -2667,7 +2667,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2784,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 268,
@@ -2677,7 +2677,7 @@
     "color": "",
     "style": "",
     "price": 2790,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 269,
@@ -2687,7 +2687,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2112,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 270,
@@ -2697,7 +2697,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 12672,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 271,
@@ -2707,7 +2707,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 272,
@@ -2717,7 +2717,7 @@
     "color": "белое",
     "style": "брют",
     "price": 23184,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 273,
@@ -2727,7 +2727,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 21024,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 274,
@@ -2737,7 +2737,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 22944,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 275,
@@ -2747,7 +2747,7 @@
     "color": "",
     "style": "",
     "price": 240,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 276,
@@ -2757,7 +2757,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 19104,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 277,
@@ -2767,7 +2767,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 19104,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 278,
@@ -2777,7 +2777,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 17712,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 279,
@@ -2787,7 +2787,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 23808,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 280,
@@ -2797,7 +2797,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 21312,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 281,
@@ -2807,7 +2807,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2509,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 282,
@@ -2817,7 +2817,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 42573,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 283,
@@ -2827,7 +2827,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 284,
@@ -2837,7 +2837,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2290,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 285,
@@ -2847,7 +2847,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3936,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 286,
@@ -2857,7 +2857,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1800,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 287,
@@ -2867,7 +2867,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3307,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 288,
@@ -2877,7 +2877,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 289,
@@ -2887,7 +2887,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3176,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 290,
@@ -2897,7 +2897,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 4283,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 291,
@@ -2907,7 +2907,7 @@
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 292,
@@ -2917,7 +2917,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2907,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 293,
@@ -2927,7 +2927,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3090,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 294,
@@ -2937,7 +2937,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 5739,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 295,
@@ -2947,7 +2947,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 5333,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 296,
@@ -2957,7 +2957,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 6750,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 297,
@@ -2967,7 +2967,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2110,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 298,
@@ -2977,7 +2977,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3306,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 299,
@@ -2987,7 +2987,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3100,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 300,
@@ -2997,7 +2997,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3350,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 301,
@@ -3017,7 +3017,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3331,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 303,
@@ -3027,7 +3027,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3531,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 304,
@@ -3037,7 +3037,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 305,
@@ -3047,7 +3047,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3914,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 306,
@@ -3057,7 +3057,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4565,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 307,
@@ -3067,7 +3067,7 @@
     "color": "",
     "style": "",
     "price": 95,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 308,
@@ -3077,7 +3077,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4035,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 309,
@@ -3087,7 +3087,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1291,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 310,
@@ -3097,7 +3097,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1778,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 311,
@@ -3107,7 +3107,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2576,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 312,
@@ -3117,7 +3117,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 313,
@@ -3127,7 +3127,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3566,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 314,
@@ -3137,7 +3137,7 @@
     "color": "",
     "style": "",
     "price": 17442,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 315,
@@ -3147,7 +3147,7 @@
     "color": "",
     "style": "",
     "price": 1990,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 316,
@@ -3157,7 +3157,7 @@
     "color": "",
     "style": "",
     "price": 4290,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 317,
@@ -3167,7 +3167,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 318,
@@ -3177,7 +3177,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 319,
@@ -3187,7 +3187,7 @@
     "color": "",
     "style": "",
     "price": 7990,
-    "category": "wine"
+    "category": "accessories"
   },
   {
     "id": 320,
@@ -3197,7 +3197,7 @@
     "color": "",
     "style": "сухое",
     "price": 4890,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 321,
@@ -3207,7 +3207,7 @@
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 322,
@@ -3217,7 +3217,7 @@
     "color": "",
     "style": "",
     "price": 5280,
-    "category": "wine"
+    "category": "accessories"
   },
   {
     "id": 323,
@@ -3227,7 +3227,7 @@
     "color": "",
     "style": "",
     "price": 5589,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 324,
@@ -3237,7 +3237,7 @@
     "color": "",
     "style": "сухое",
     "price": 4693,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 325,
@@ -3247,7 +3247,7 @@
     "color": "",
     "style": "",
     "price": 3202,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 326,
@@ -3257,7 +3257,7 @@
     "color": "",
     "style": "",
     "price": 131,
-    "category": "strong"
+    "category": "soft"
   },
   {
     "id": 327,
@@ -3267,7 +3267,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2565,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 328,
@@ -3277,7 +3277,7 @@
     "color": "",
     "style": "",
     "price": 3522,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 329,
@@ -3287,7 +3287,7 @@
     "color": "",
     "style": "",
     "price": 3690,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 330,
@@ -3297,7 +3297,7 @@
     "color": "",
     "style": "",
     "price": 6373,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 331,
@@ -3307,7 +3307,7 @@
     "color": "",
     "style": "",
     "price": 40,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 332,
@@ -3317,7 +3317,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 3490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 333,
@@ -3327,7 +3327,7 @@
     "color": "белое",
     "style": "брют",
     "price": 3685,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 334,
@@ -3337,7 +3337,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 335,
@@ -3347,7 +3347,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 2856,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 336,
@@ -3357,7 +3357,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3440,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 337,
@@ -3367,7 +3367,7 @@
     "color": "",
     "style": "",
     "price": 540,
-    "category": "strong"
+    "category": "grocery"
   },
   {
     "id": 338,
@@ -3377,7 +3377,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3718,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 339,
@@ -3387,7 +3387,7 @@
     "color": "",
     "style": "",
     "price": 540,
-    "category": "strong"
+    "category": "grocery"
   },
   {
     "id": 340,
@@ -3397,7 +3397,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 341,
@@ -3407,7 +3407,7 @@
     "color": "розе",
     "style": "брют",
     "price": 11075,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 342,
@@ -3427,7 +3427,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 9899,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 344,
@@ -3437,7 +3437,7 @@
     "color": "",
     "style": "",
     "price": 160,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 345,
@@ -3447,7 +3447,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 346,
@@ -3457,7 +3457,7 @@
     "color": "",
     "style": "",
     "price": 131,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 347,
@@ -3467,7 +3467,7 @@
     "color": "",
     "style": "",
     "price": 131,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 348,
@@ -3477,7 +3477,7 @@
     "color": "",
     "style": "",
     "price": 131,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 349,
@@ -3487,7 +3487,7 @@
     "color": "",
     "style": "",
     "price": 131,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 350,
@@ -3497,7 +3497,7 @@
     "color": "",
     "style": "",
     "price": 250,
-    "category": "wine"
+    "category": "beer"
   },
   {
     "id": 351,
@@ -3527,7 +3527,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3630,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 354,
@@ -3537,7 +3537,7 @@
     "color": "",
     "style": "",
     "price": 95,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 355,
@@ -3547,7 +3547,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2870,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 356,
@@ -3557,7 +3557,7 @@
     "color": "белое",
     "style": "сладкое",
     "price": 4018,
-    "category": "strong"
+    "category": "grocery"
   },
   {
     "id": 357,
@@ -3567,7 +3567,7 @@
     "color": "красное",
     "style": "сладкое",
     "price": 4018,
-    "category": "strong"
+    "category": "grocery"
   },
   {
     "id": 358,
@@ -3577,7 +3577,7 @@
     "color": "",
     "style": "",
     "price": 1440,
-    "category": "wine"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 359,
@@ -3587,7 +3587,7 @@
     "color": "",
     "style": "",
     "price": 5544,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 360,
@@ -3597,7 +3597,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1894,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 361,
@@ -3607,7 +3607,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 5565,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 362,
@@ -3617,7 +3617,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1790,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 363,
@@ -3627,7 +3627,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2197,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 364,
@@ -3637,7 +3637,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 2190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 365,
@@ -3647,7 +3647,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 2131,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 366,
@@ -3657,7 +3657,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2140,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 367,
@@ -3667,7 +3667,7 @@
     "color": "",
     "style": "",
     "price": 2990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 368,
@@ -3677,7 +3677,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 3685,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 369,
@@ -3687,7 +3687,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4112,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 370,
@@ -3697,7 +3697,7 @@
     "color": "",
     "style": "",
     "price": 4490,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 371,
@@ -3707,7 +3707,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 2790,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 372,
@@ -3717,7 +3717,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2325,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 373,
@@ -3727,7 +3727,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 5525,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 374,
@@ -3737,7 +3737,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 4480,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 375,
@@ -3747,7 +3747,7 @@
     "color": "",
     "style": "",
     "price": 10,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 376,
@@ -3767,7 +3767,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 640,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 378,
@@ -3777,7 +3777,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1613,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 379,
@@ -3787,7 +3787,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 1414,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 380,
@@ -3797,7 +3797,7 @@
     "color": "",
     "style": "",
     "price": 6290,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 381,
@@ -3807,7 +3807,7 @@
     "color": "",
     "style": "",
     "price": 5210,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 382,
@@ -3837,7 +3837,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 8990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 385,
@@ -3847,7 +3847,7 @@
     "color": "белое",
     "style": "брют",
     "price": 1590,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 386,
@@ -3857,7 +3857,7 @@
     "color": "белое",
     "style": "полусладкое",
     "price": 1390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 387,
@@ -3867,7 +3867,7 @@
     "color": "белое",
     "style": "сладкое",
     "price": 2590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 388,
@@ -3877,7 +3877,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 389,
@@ -3887,7 +3887,7 @@
     "color": "",
     "style": "",
     "price": 5290,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 390,
@@ -3897,7 +3897,7 @@
     "color": "",
     "style": "",
     "price": 2690,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 391,
@@ -3907,7 +3907,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 2100,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 392,
@@ -3917,7 +3917,7 @@
     "color": "",
     "style": "",
     "price": 2890,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 393,
@@ -3927,7 +3927,7 @@
     "color": "",
     "style": "",
     "price": 1890,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 394,
@@ -3937,7 +3937,7 @@
     "color": "",
     "style": "",
     "price": 6690,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 395,
@@ -3947,7 +3947,7 @@
     "color": "",
     "style": "",
     "price": 2790,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 396,
@@ -3957,7 +3957,7 @@
     "color": "",
     "style": "",
     "price": 15990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 397,
@@ -3967,7 +3967,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 398,
@@ -3977,7 +3977,7 @@
     "color": "",
     "style": "",
     "price": 1940,
-    "category": "strong"
+    "category": "grocery"
   },
   {
     "id": 399,
@@ -3987,7 +3987,7 @@
     "color": "",
     "style": "",
     "price": 7690,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 400,
@@ -3997,7 +3997,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 401,
@@ -4007,7 +4007,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2290,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 402,
@@ -4017,7 +4017,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 403,
@@ -4027,7 +4027,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 404,
@@ -4037,7 +4037,7 @@
     "color": "белое",
     "style": "",
     "price": 2290,
-    "category": "wine"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 405,
@@ -4047,7 +4047,7 @@
     "color": "белое",
     "style": "",
     "price": 2440,
-    "category": "wine"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 406,
@@ -4057,7 +4057,7 @@
     "color": "",
     "style": "",
     "price": 44990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 407,
@@ -4067,7 +4067,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2690,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 408,
@@ -4077,7 +4077,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2090,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 409,
@@ -4087,7 +4087,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 410,
@@ -4097,7 +4097,7 @@
     "color": "розе",
     "style": "брют",
     "price": 2440,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 411,
@@ -4117,7 +4117,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 413,
@@ -4127,7 +4127,7 @@
     "color": "",
     "style": "",
     "price": 4690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 414,
@@ -4137,7 +4137,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 1690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 415,
@@ -4147,7 +4147,7 @@
     "color": "",
     "style": "",
     "price": 4490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 416,
@@ -4157,7 +4157,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 417,
@@ -4167,7 +4167,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 418,
@@ -4177,7 +4177,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 419,
@@ -4187,7 +4187,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2340,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 420,
@@ -4197,7 +4197,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1790,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 421,
@@ -4207,7 +4207,7 @@
     "color": "",
     "style": "",
     "price": 1440,
-    "category": "wine"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 422,
@@ -4217,7 +4217,7 @@
     "color": "розе",
     "style": "",
     "price": 290,
-    "category": "grocery"
+    "category": "вино"
   },
   {
     "id": 423,
@@ -4227,7 +4227,7 @@
     "color": "",
     "style": "",
     "price": 290,
-    "category": "grocery"
+    "category": "вино"
   },
   {
     "id": 424,
@@ -4257,7 +4257,7 @@
     "color": "",
     "style": "",
     "price": 95,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 427,
@@ -4267,7 +4267,7 @@
     "color": "",
     "style": "",
     "price": 95,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 428,
@@ -4287,7 +4287,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 1590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 430,
@@ -4297,7 +4297,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 431,
@@ -4317,7 +4317,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 440,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 433,
@@ -4327,7 +4327,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 1490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 434,
@@ -4337,7 +4337,7 @@
     "color": "белое",
     "style": "брют",
     "price": 3190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 435,
@@ -4347,7 +4347,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 436,
@@ -4357,7 +4357,7 @@
     "color": "белое",
     "style": "брют",
     "price": 3490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 437,
@@ -4367,7 +4367,7 @@
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "strong"
+    "category": "soft"
   },
   {
     "id": 438,
@@ -4377,7 +4377,7 @@
     "color": "",
     "style": "",
     "price": 890,
-    "category": "tea"
+    "category": "grocery"
   },
   {
     "id": 439,
@@ -4387,7 +4387,7 @@
     "color": "белое",
     "style": "брют",
     "price": 2690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 440,
@@ -4397,7 +4397,7 @@
     "color": "",
     "style": "",
     "price": 1990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 441,
@@ -4407,7 +4407,7 @@
     "color": "",
     "style": "",
     "price": 1990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 442,
@@ -4417,7 +4417,7 @@
     "color": "",
     "style": "",
     "price": 2090,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 443,
@@ -4427,7 +4427,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 444,
@@ -4447,7 +4447,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 446,
@@ -4467,7 +4467,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3290,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 448,
@@ -4477,7 +4477,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 449,
@@ -4487,7 +4487,7 @@
     "color": "розе",
     "style": "сухое",
     "price": 1990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 450,
@@ -4497,7 +4497,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 451,
@@ -4507,7 +4507,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3290,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 452,
@@ -4517,7 +4517,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 5490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 453,
@@ -4527,7 +4527,7 @@
     "color": "белое",
     "style": "брют",
     "price": 3290,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 454,
@@ -4537,7 +4537,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 14990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 455,
@@ -4547,7 +4547,7 @@
     "color": "",
     "style": "",
     "price": 3890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 456,
@@ -4557,7 +4557,7 @@
     "color": "",
     "style": "",
     "price": 310,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 457,
@@ -4567,7 +4567,7 @@
     "color": "",
     "style": "",
     "price": 1440,
-    "category": "tea"
+    "category": "grocery"
   },
   {
     "id": 458,
@@ -4577,7 +4577,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 6290,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 459,
@@ -4587,7 +4587,7 @@
     "color": "",
     "style": "",
     "price": 3690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 460,
@@ -4597,7 +4597,7 @@
     "color": "",
     "style": "",
     "price": 4890,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 461,
@@ -4607,7 +4607,7 @@
     "color": "",
     "style": "",
     "price": 2320,
-    "category": "wine"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 462,
@@ -4617,7 +4617,7 @@
     "color": "",
     "style": "",
     "price": 7990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 463,
@@ -4627,7 +4627,7 @@
     "color": "",
     "style": "",
     "price": 1840,
-    "category": "wine"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 464,
@@ -4637,7 +4637,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 3790,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 465,
@@ -4647,7 +4647,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 466,
@@ -4657,7 +4657,7 @@
     "color": "",
     "style": "",
     "price": 2990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 467,
@@ -4667,7 +4667,7 @@
     "color": "",
     "style": "",
     "price": 4390,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 468,
@@ -4677,7 +4677,7 @@
     "color": "",
     "style": "",
     "price": 560,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 469,
@@ -4687,7 +4687,7 @@
     "color": "",
     "style": "",
     "price": 11940,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 470,
@@ -4697,7 +4697,7 @@
     "color": "",
     "style": "",
     "price": 5790,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 471,
@@ -4707,7 +4707,7 @@
     "color": "",
     "style": "",
     "price": 1140,
-    "category": "tea"
+    "category": "grocery"
   },
   {
     "id": 472,
@@ -4717,7 +4717,7 @@
     "color": "",
     "style": "",
     "price": 1140,
-    "category": "tea"
+    "category": "grocery"
   },
   {
     "id": 473,
@@ -4727,7 +4727,7 @@
     "color": "",
     "style": "",
     "price": 1140,
-    "category": "tea"
+    "category": "grocery"
   },
   {
     "id": 474,
@@ -4737,7 +4737,7 @@
     "color": "",
     "style": "",
     "price": 890,
-    "category": "tea"
+    "category": "grocery"
   },
   {
     "id": 475,
@@ -4747,7 +4747,7 @@
     "color": "",
     "style": "",
     "price": 440,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 476,
@@ -4757,7 +4757,7 @@
     "color": "",
     "style": "",
     "price": 440,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 477,
@@ -4767,7 +4767,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 14990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 478,
@@ -4777,7 +4777,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 479,
@@ -4787,7 +4787,7 @@
     "color": "красное",
     "style": "полусухое",
     "price": 2140,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 480,
@@ -4797,7 +4797,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 481,
@@ -4807,7 +4807,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 482,
@@ -4817,7 +4817,7 @@
     "color": "",
     "style": "",
     "price": 90,
-    "category": "wine"
+    "category": "soft"
   },
   {
     "id": 483,
@@ -4827,7 +4827,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 484,
@@ -4837,7 +4837,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 1590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 485,
@@ -4847,7 +4847,7 @@
     "color": "",
     "style": "",
     "price": 2090,
-    "category": "wine"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 486,
@@ -4857,7 +4857,7 @@
     "color": "",
     "style": "",
     "price": 460,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 487,
@@ -4867,7 +4867,7 @@
     "color": "",
     "style": "",
     "price": 490,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 488,
@@ -4877,7 +4877,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4300,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 489,
@@ -4887,7 +4887,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1900,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 490,
@@ -4897,7 +4897,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 491,
@@ -4907,7 +4907,7 @@
     "color": "",
     "style": "",
     "price": 2240,
-    "category": "strong"
+    "category": "вино"
   },
   {
     "id": 492,
@@ -4917,7 +4917,7 @@
     "color": "",
     "style": "",
     "price": 310,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 493,
@@ -4927,7 +4927,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2740,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 494,
@@ -4937,7 +4937,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 4490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 495,
@@ -4947,7 +4947,7 @@
     "color": "белое",
     "style": "полусладкое",
     "price": 1190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 496,
@@ -4957,7 +4957,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 497,
@@ -4967,7 +4967,7 @@
     "color": "",
     "style": "брют",
     "price": 840,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 498,
@@ -4977,7 +4977,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 499,
@@ -4987,7 +4987,7 @@
     "color": "",
     "style": "брют",
     "price": 390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 500,
@@ -4997,7 +4997,7 @@
     "color": "розе",
     "style": "полусухое",
     "price": 1190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 501,
@@ -5007,7 +5007,7 @@
     "color": "",
     "style": "брют",
     "price": 890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 502,
@@ -5017,7 +5017,7 @@
     "color": "белое",
     "style": "брют",
     "price": 7290,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 503,
@@ -5027,7 +5027,7 @@
     "color": "",
     "style": "",
     "price": 3490,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 504,
@@ -5037,7 +5037,7 @@
     "color": "",
     "style": "",
     "price": 390,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 505,
@@ -5047,7 +5047,7 @@
     "color": "белое",
     "style": "",
     "price": 790,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 506,
@@ -5057,7 +5057,7 @@
     "color": "",
     "style": "",
     "price": 590,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 507,
@@ -5067,7 +5067,7 @@
     "color": "",
     "style": "",
     "price": 310,
-    "category": "wine"
+    "category": "grocery"
   },
   {
     "id": 508,
@@ -5077,7 +5077,7 @@
     "color": "белое",
     "style": "брют",
     "price": 1940,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 509,
@@ -5087,7 +5087,7 @@
     "color": "",
     "style": "",
     "price": 3090,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 510,
@@ -5097,7 +5097,7 @@
     "color": "",
     "style": "",
     "price": 5790,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 511,
@@ -5107,7 +5107,7 @@
     "color": "",
     "style": "",
     "price": 4190,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 512,
@@ -5117,7 +5117,7 @@
     "color": "",
     "style": "",
     "price": 1990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 513,
@@ -5127,7 +5127,7 @@
     "color": "розе",
     "style": "брют",
     "price": 1790,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 514,
@@ -5137,7 +5137,7 @@
     "color": "",
     "style": "",
     "price": 3690,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 515,
@@ -5147,7 +5147,7 @@
     "color": "",
     "style": "",
     "price": 4090,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 516,
@@ -5157,7 +5157,7 @@
     "color": "",
     "style": "",
     "price": 4990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 517,
@@ -5167,7 +5167,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 518,
@@ -5177,7 +5177,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 519,
@@ -5187,7 +5187,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1090,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 520,
@@ -5197,7 +5197,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 521,
@@ -5207,7 +5207,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 1190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 522,
@@ -5217,7 +5217,7 @@
     "color": "белое",
     "style": "полусухое",
     "price": 4890,
-    "category": "sparkling"
+    "category": "вино"
   },
   {
     "id": 523,
@@ -5227,7 +5227,7 @@
     "color": "розе",
     "style": "брют",
     "price": 2990,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 524,
@@ -5237,7 +5237,7 @@
     "color": "",
     "style": "",
     "price": 2490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 525,
@@ -5247,7 +5247,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 1590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 526,
@@ -5257,7 +5257,7 @@
     "color": "",
     "style": "",
     "price": 1690,
-    "category": "wine"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 527,
@@ -5267,7 +5267,7 @@
     "color": "",
     "style": "",
     "price": 4490,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 528,
@@ -5277,7 +5277,7 @@
     "color": "",
     "style": "",
     "price": 2490,
-    "category": "wine"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 529,
@@ -5287,7 +5287,7 @@
     "color": "",
     "style": "",
     "price": 2590,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 530,
@@ -5297,7 +5297,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 531,
@@ -5307,7 +5307,7 @@
     "color": "красное",
     "style": "",
     "price": 2390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 532,
@@ -5317,7 +5317,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2890,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 533,
@@ -5327,7 +5327,7 @@
     "color": "белое",
     "style": "сухое",
     "price": 2690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 534,
@@ -5337,7 +5337,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1390,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 535,
@@ -5347,7 +5347,7 @@
     "color": "",
     "style": "",
     "price": 4990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 536,
@@ -5357,7 +5357,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1590,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 537,
@@ -5367,7 +5367,7 @@
     "color": "белое",
     "style": "брют",
     "price": 1490,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 538,
@@ -5377,7 +5377,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 1690,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 539,
@@ -5387,7 +5387,7 @@
     "color": "",
     "style": "",
     "price": 3190,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 540,
@@ -5397,7 +5397,7 @@
     "color": "",
     "style": "",
     "price": 3375,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 541,
@@ -5407,7 +5407,7 @@
     "color": "",
     "style": "",
     "price": 7990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 542,
@@ -5417,7 +5417,7 @@
     "color": "",
     "style": "",
     "price": 6990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 543,
@@ -5427,7 +5427,7 @@
     "color": "",
     "style": "",
     "price": 3990,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 544,
@@ -5437,7 +5437,7 @@
     "color": "",
     "style": "",
     "price": 7310,
-    "category": "strong"
+    "category": "крепкий алкоголь"
   },
   {
     "id": 545,
@@ -5447,7 +5447,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 6707,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 546,
@@ -5457,7 +5457,7 @@
     "color": "красное",
     "style": "сухое",
     "price": 2160,
-    "category": "wine"
+    "category": "вино"
   },
   {
     "id": 547,
@@ -5467,6 +5467,6 @@
     "color": "белое",
     "style": "сухое",
     "price": 2509,
-    "category": "wine"
+    "category": "вино"
   }
 ]
