@@ -222,4 +222,208 @@ object-fit:cover;
 position:relative;
 z-index:2;
 text-align:center;
+}/* СЕТКА КАТАЛОГА */
+
+.catalogGrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:28px;
+margin-left:280px;
+padding:40px;
+}
+
+
+/* КАРТОЧКА */
+
+.product-card{
+background:#1c3a48;
+border-radius:14px;
+padding:20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+min-height:180px;
+transition:0.2s;
+}
+
+.product-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+
+/* ПЛАШКА КАТЕГОРИИ */
+
+.wine-type{
+display:inline-block;
+font-size:12px;
+padding:4px 10px;
+border-radius:6px;
+margin-bottom:10px;
+background:#2b5566;
+color:#cde7f1;
+width:fit-content;
+}
+
+
+/* НАЗВАНИЕ */
+
+.wine-title{
+font-size:18px;
+font-weight:600;
+margin-bottom:8px;
+line-height:1.3;
+}
+
+
+/* ХАРАКТЕРИСТИКИ */
+
+.wine-style{
+font-size:14px;
+color:#9bb7c4;
+margin-bottom:18px;
+}
+
+
+/* НИЖНЯЯ ЧАСТЬ */
+
+.wine-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.wine-price{
+font-size:18px;
+font-weight:700;
+}
+
+.wine-footer a{
+color:#c07cff;
+text-decoration:none;
+font-weight:500;
+}
+
+
+/* АДАПТИВ */
+
+@media (max-width:1400px){
+.catalogGrid{
+grid-template-columns:repeat(3,1fr);
+}
+}
+
+@media (max-width:1000px){
+.catalogGrid{
+grid-template-columns:repeat(2,1fr);
+margin-left:0;
+}
+}
+
+@media (max-width:600px){
+.catalogGrid{
+grid-template-columns:1fr;
+}
+/* СЕТКА КАТАЛОГА */
+
+.catalogGrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:28px;
+margin-left:280px;
+padding:40px;
+}
+
+
+/* КАРТОЧКА */
+
+.product-card{
+background:#1c3a48;
+border-radius:14px;
+padding:20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+min-height:180px;
+transition:0.2s;
+}
+
+.product-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+
+/* ПЛАШКА КАТЕГОРИИ */
+
+.wine-type{
+display:inline-block;
+font-size:12px;
+padding:4px 10px;
+border-radius:6px;
+margin-bottom:10px;
+background:#2b5566;
+color:#cde7f1;
+width:fit-content;
+}
+
+
+/* НАЗВАНИЕ */
+
+.wine-title{
+font-size:18px;
+font-weight:600;
+margin-bottom:8px;
+line-height:1.3;
+}
+
+
+/* ХАРАКТЕРИСТИКИ */
+
+.wine-style{
+font-size:14px;
+color:#9bb7c4;
+margin-bottom:18px;
+}
+
+
+/* НИЖНЯЯ ЧАСТЬ */
+
+.wine-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.wine-price{
+font-size:18px;
+font-weight:700;
+}
+
+.wine-footer a{
+color:#c07cff;
+text-decoration:none;
+font-weight:500;
+}
+
+
+/* АДАПТИВ */
+
+@media (max-width:1400px){
+.catalogGrid{
+grid-template-columns:repeat(3,1fr);
+}
+}
+
+@media (max-width:1000px){
+.catalogGrid{
+grid-template-columns:repeat(2,1fr);
+margin-left:0;
+}
+}
+
+@media (max-width:600px){
+.catalogGrid{
+grid-template-columns:1fr;
+}
 }
