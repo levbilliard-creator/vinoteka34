@@ -1,70 +1,88 @@
 let products = []
-let filteredProducts = []
-
-const categoryNames = {
-wine: "Вино",
-sparkling: "Игристое",
-strong: "Крепкий алкоголь",
-beer: "Пиво",
-soft: "Безалкогольные",
-grocery: "Бакалея",
-tea: "Чай",
-accessories: "Аксессуары"
-}
-
+let filtered = []
+let activeCategory = "all"
 
 async function loadProducts(){
 
-const response = await fetch("/data/products.json")
+const res = await fetch("/data/products.json")
+products = await res.json()
 
-products = await response.json()
+filtered = products
 
-filteredProducts = products
-
-renderProducts(filteredProducts)
+renderProducts(filtered)
 
 }
 
+function normalizeCategory(p){
 
+let cat = p.category || p.type || ""
+
+cat = cat.toLowerCase()
+
+if(cat.includes("вино")) return "wine"
+if(cat.includes("wine")) return "wine"
+
+if(cat.includes("игрист")) return "sparkling"
+if(cat.includes("sparkling")) return "sparkling"
+
+if(cat.includes("креп")) return "strong"
+if(cat.includes("strong")) return "strong"
+
+if(cat.includes("пиво")) return "beer"
+if(cat.includes("beer")) return "beer"
+
+if(cat.includes("soft")) return "soft"
+if(cat.includes("безал")) return "soft"
+
+if(cat.includes("бакале")) return "grocery"
+if(cat.includes("grocery")) return "grocery"
+
+if(cat.includes("чай")) return "tea"
+if(cat.includes("tea")) return "tea"
+
+if(cat.includes("аксесс")) return "accessories"
+if(cat.includes("accessories")) return "accessories"
+
+return "other"
+
+}
+
+function filterCategory(category){
+
+activeCategory = category
+
+if(category === "all"){
+filtered = products
+}
+else{
+
+filtered = products.filter(p => normalizeCategory(p) === category)
+
+}
+
+renderProducts(filtered)
+
+}
 
 function renderProducts(list){
 
-const grid = document.getElementById("catalogGrid")
+const grid = document.getElementById("catalog-grid")
 
 grid.innerHTML = ""
 
-list.forEach(product=>{
+list.forEach(p => {
 
 const card = document.createElement("div")
-
-card.className = "productCard"
+card.className = "product-card"
 
 card.innerHTML = `
-
-<div class="productType">
-${categoryNames[product.category] || ""}
+<div class="product-type">${p.category || ""}</div>
+<h3>${p.name_ru}</h3>
+<div class="product-style">${p.color || ""} ${p.style || ""}</div>
+<div class="product-bottom">
+<span class="price">${p.price} ₽</span>
+<a href="/product?id=${p.id}">Подробнее</a>
 </div>
-
-<div class="productTitle">
-${product.name_ru}
-</div>
-
-<div class="productInfo">
-${product.color || ""} ${product.style || ""}
-</div>
-
-<div class="productBottom">
-
-<div class="productPrice">
-${product.price} ₽
-</div>
-
-<a href="/product.html?id=${product.id}" class="productMore">
-Подробнее
-</a>
-
-</div>
-
 `
 
 grid.appendChild(card)
@@ -73,37 +91,14 @@ grid.appendChild(card)
 
 }
 
+document.querySelectorAll(".cat-btn").forEach(btn => {
 
+btn.addEventListener("click", () => {
 
-function filterCategory(category){
+filterCategory(btn.dataset.cat)
 
-if(category === "all"){
-filteredProducts = products
-}else{
-filteredProducts = products.filter(p => p.category === category)
-}
+})
 
-renderProducts(filteredProducts)
+})
 
-}
-
-
-
-function searchProducts(){
-
-const input = document
-.getElementById("searchInput")
-.value
-.toLowerCase()
-
-filteredProducts = products.filter(product =>
-product.name_ru.toLowerCase().includes(input)
-)
-
-renderProducts(filteredProducts)
-
-}
-
-
-
-document.addEventListener("DOMContentLoaded", loadProducts)
+loadProducts()
