@@ -11,8 +11,6 @@ const searchInput = document.getElementById("search")
 
 async function loadCatalog(){
 
-try{
-
 const response = await fetch("/data/products.json")
 const data = await response.json()
 
@@ -20,10 +18,6 @@ products = data
 filteredProducts = data
 
 renderCatalog()
-
-}catch(e){
-console.error("Ошибка загрузки каталога", e)
-}
 
 }
 
@@ -37,6 +31,7 @@ if(!name) return ""
 return name
 .replace("Спиртной напиток прочий -", "")
 .replace("Спиртной напиток", "")
+.replace("Ароматизированный градосодержащий напиток из градного сырья", "")
 .trim()
 
 }
@@ -48,8 +43,10 @@ function detectCategory(product){
 
 const name = (product.name_ru || "").toLowerCase()
 const type = (product.type || "").toLowerCase()
+const color = (product.color || "").toLowerCase()
+const style = (product.style || "").toLowerCase()
 
-/* безалкогольные */
+/* БЕЗАЛКОГОЛЬНЫЕ */
 
 if(
 name.includes("вода") ||
@@ -61,13 +58,19 @@ name.includes("лимонад")
 return "soft"
 }
 
-/* пиво */
 
-if(name.includes("пиво")){
+/* ПИВО */
+
+if(
+name.includes("пиво") ||
+name.includes("пивной напиток") ||
+name.includes("на основе пива")
+){
 return "beer"
 }
 
-/* бакалея */
+
+/* БАКАЛЕЯ */
 
 if(
 name.includes("печенье") ||
@@ -79,19 +82,22 @@ name.includes("ветчина")
 return "grocery"
 }
 
-/* чай */
+
+/* ЧАЙ */
 
 if(name.includes("чай")){
 return "tea"
 }
 
-/* игристое */
+
+/* ИГРИСТОЕ */
 
 if(name.includes("игрист") || name.includes("шампан")){
 return "sparkling"
 }
 
-/* крепкий алкоголь */
+
+/* КРЕПКИЙ АЛКОГОЛЬ */
 
 if(
 type.includes("коньяк") ||
@@ -100,18 +106,28 @@ type.includes("ром") ||
 type.includes("водка") ||
 type.includes("текила") ||
 type.includes("джин") ||
-name.includes("текила") ||
+name.includes("вермут") ||
 name.includes("ром") ||
 name.includes("виски") ||
 name.includes("водка") ||
-name.includes("спирт")
+name.includes("текила")
 ){
 return "strong"
 }
 
-/* вино */
 
-if(type.includes("вино")){
+/* ВИНО (даже если слово "вино" не написано) */
+
+if(
+type.includes("вино") ||
+color !== "" ||
+style !== "" ||
+name.includes("рислинг") ||
+name.includes("совиньон") ||
+name.includes("шардоне") ||
+name.includes("пино") ||
+name.includes("мерло")
+){
 return "wine"
 }
 
@@ -120,7 +136,7 @@ return "other"
 }
 
 
-/* отрисовка */
+/* карточки */
 
 function renderCatalog(){
 
@@ -130,10 +146,11 @@ const category = detectCategory(p)
 const name = cleanName(p.name_ru)
 
 return `
+
 <div class="catalog-card">
 
 <div class="card-type">
-${category}
+${category.toUpperCase()}
 </div>
 
 <div class="card-title">
@@ -158,6 +175,7 @@ ${p.price ? p.price + " ₽" : ""}
 </div>
 
 </div>
+
 `
 
 }).join("")
@@ -183,7 +201,7 @@ renderCatalog()
 }
 
 
-/* фильтр категорий */
+/* фильтр */
 
 function filterCategory(category){
 
@@ -210,6 +228,7 @@ buttons.forEach(btn => {
 btn.addEventListener("click", () => {
 
 buttons.forEach(b => b.classList.remove("active"))
+
 btn.classList.add("active")
 
 filterCategory(btn.dataset.filter)
