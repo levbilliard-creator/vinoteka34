@@ -10,7 +10,6 @@
 
 </head>
 
-
 <body>
 
 <header class="header">
@@ -34,8 +33,7 @@ VINOTEKA34
 <div class="catalogPage">
 
 
-
-<!-- ЛЕВАЯ ПАНЕЛЬ -->
+<!-- SIDEBAR -->
 
 <aside class="sidebar">
 
@@ -49,92 +47,51 @@ onkeyup="search()"
 >
 
 
-
 <h3>Категории</h3>
 
 <div class="categories">
 
-<button onclick="filterCategory('all')">
-Все
-</button>
-
-<button onclick="filterCategory('wine')">
-Вино
-</button>
-
-<button onclick="filterCategory('sparkling')">
-Игристое
-</button>
-
-<button onclick="filterCategory('strong')">
-Крепкий алкоголь
-</button>
-
-<button onclick="filterCategory('beer')">
-Пиво
-</button>
-
-<button onclick="filterCategory('soft')">
-Безалкогольные
-</button>
-
-<button onclick="filterCategory('grocery')">
-Бакалея
-</button>
-
-<button onclick="filterCategory('tea')">
-Чай
-</button>
-
-<button onclick="filterCategory('accessories')">
-Аксессуары
-</button>
+<button onclick="filterCategory('all')">Все</button>
+<button onclick="filterCategory('wine')">Вино</button>
+<button onclick="filterCategory('sparkling')">Игристое</button>
+<button onclick="filterCategory('strong')">Крепкий алкоголь</button>
+<button onclick="filterCategory('beer')">Пиво</button>
+<button onclick="filterCategory('soft')">Безалкогольные</button>
+<button onclick="filterCategory('grocery')">Бакалея</button>
+<button onclick="filterCategory('tea')">Чай</button>
+<button onclick="filterCategory('accessories')">Аксессуары</button>
 
 </div>
 
 
-
 <h3>Цвет</h3>
-
 <select>
-
 <option>Все</option>
 <option>Красное</option>
 <option>Белое</option>
 <option>Розовое</option>
-
 </select>
 
 
-
 <h3>Стиль</h3>
-
 <select>
-
 <option>Все</option>
 <option>Сухое</option>
 <option>Полусухое</option>
 <option>Сладкое</option>
-
 </select>
 
 
-
 <h3>Страна</h3>
-
 <select>
-
 <option>Все</option>
-
 </select>
 
 </aside>
 
 
 
-
-
-<!-- КАТАЛОГ -->
+<!-- CATALOG -->
 
 <main class="catalog">
 
@@ -143,9 +100,7 @@ onkeyup="search()"
 </main>
 
 
-
 </div>
-
 
 
 <script src="/catalog.js"></script>

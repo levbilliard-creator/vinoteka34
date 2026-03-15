@@ -1111,4 +1111,18 @@ background:#2a556d;
 .category-buttons button.active{
 background:#c86bff;
 color:#fff;
+}.catalogPage{
+display:flex;
+gap:40px;
+padding:40px;
+}
+
+.catalog{
+flex:1;
+}
+
+.catalogGrid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
 }
