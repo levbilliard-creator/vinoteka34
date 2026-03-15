@@ -6,6 +6,7 @@ let filteredProducts = []
 const grid = document.getElementById("catalog-grid")
 const searchInput = document.getElementById("search")
 
+
 async function loadCatalog(){
 
 const response = await fetch("/data/products.json")
@@ -27,6 +28,7 @@ if(!name) return ""
 
 return name
 .replace(/игристое/gi,"")
+.replace(/брют/gi,"")
 .replace(/напиток, изготавливаемый на основе пива/gi,"")
 .replace(/напиток на основе пива/gi,"")
 .replace(/ароматизированный градосодержащий напиток из градного сырья/gi,"")
@@ -47,6 +49,7 @@ const type = (product.type || "").toLowerCase()
 const color = (product.color || "").toLowerCase()
 const style = (product.style || "").toLowerCase()
 
+
 /* бакалея */
 
 if(
@@ -58,6 +61,7 @@ name.includes("ветчина")
 ){
 return "grocery"
 }
+
 
 /* безалкогольные */
 
@@ -71,6 +75,7 @@ name.includes("лимонад")
 return "soft"
 }
 
+
 /* пиво */
 
 if(
@@ -80,17 +85,24 @@ name.includes("пивной")
 return "beer"
 }
 
+
 /* чай */
 
 if(name.includes("чай")){
 return "tea"
 }
 
+
 /* игристое */
 
-if(name.includes("шампан") || name.includes("кава") || name.includes("просекко")){
+if(
+name.includes("шампан") ||
+name.includes("кава") ||
+name.includes("просекко")
+){
 return "sparkling"
 }
+
 
 /* крепкий алкоголь */
 
@@ -105,6 +117,7 @@ type.includes("коньяк")
 ){
 return "strong"
 }
+
 
 /* вино */
 
@@ -126,30 +139,7 @@ return "other"
 }
 
 
-/* рекомендации для вина */
-
-function winePairing(product){
-
-const color = (product.color || "").toLowerCase()
-
-if(color === "красное"){
-return "к мясу и сырам"
-}
-
-if(color === "белое"){
-return "к рыбе и морепродуктам"
-}
-
-if(color === "розе"){
-return "к салатам и закускам"
-}
-
-return ""
-
-}
-
-
-/* карточки */
+/* карточки каталога */
 
 function renderCatalog(){
 
@@ -158,20 +148,12 @@ grid.innerHTML = filteredProducts.map(p => {
 const category = detectCategory(p)
 const name = cleanName(p.name_ru)
 
-const pairing = category === "wine"
-? `<div class="wine-pair">подают: ${winePairing(p)}</div>`
-: ""
-
 return `
 
 <div class="catalog-card">
 
 <div class="card-type">
 ${category.toUpperCase()}
-</div>
-
-<div class="card-image">
-<img src="/img/product-placeholder.png">
 </div>
 
 <div class="card-title">
@@ -182,8 +164,6 @@ ${name}
 <span>${p.color || ""}</span>
 <span>${p.style || ""}</span>
 </div>
-
-${pairing}
 
 <div class="card-bottom">
 
@@ -237,7 +217,7 @@ renderCatalog()
 }
 
 
-/* кнопки */
+/* кнопки категорий */
 
 function initCategoryButtons(){
 
