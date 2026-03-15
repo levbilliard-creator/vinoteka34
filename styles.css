@@ -202,4 +202,24 @@ font-size:14px;
 
 .productMore:hover{
 text-decoration:underline;
+}.hero{
+position:relative;
+height:80vh;
+overflow:hidden;
+}
+
+.hero video{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+min-width:100%;
+min-height:100%;
+object-fit:cover;
+}
+
+.heroContent{
+position:relative;
+z-index:2;
+text-align:center;
 }
