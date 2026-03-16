@@ -6,16 +6,82 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Вино — VINOTEKA34</title>
+<title>VINOTEKA34</title>
 
 <link rel="stylesheet" href="/styles.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+.productPage{
+max-width:1200px;
+margin:60px auto;
+padding:40px;
+display:grid;
+grid-template-columns:420px 1fr;
+gap:60px;
+}
+
+.productImage{
+background:#132933;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px;
+}
+
+.productImage img{
+max-height:420px;
+object-fit:contain;
+}
+
+.productInfo h1{
+font-size:28px;
+margin-bottom:16px;
+}
+
+.productStyle{
+color:#9bb7c4;
+margin-bottom:20px;
+font-size:16px;
+}
+
+.productPrice{
+font-size:28px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.productButton{
+display:inline-block;
+background:#b879ff;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+}
+
+.similarTitle{
+max-width:1200px;
+margin:40px auto 20px;
+font-size:22px;
+padding-left:40px;
+}
+
+.similarGrid{
+max-width:1200px;
+margin:0 auto 80px;
+padding:0 40px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:28px;
+}
+
+</style>
 
 </head>
 
 <body>
-
 
 <header class="header">
 
@@ -24,95 +90,110 @@ VINOTEKA34
 </div>
 
 <nav class="menu">
-
 <a href="/">Главная</a>
 <a href="/catalog">Каталог</a>
 <a href="#">Дегустации</a>
 <a href="#">Контакты</a>
-
 </nav>
-
-<div class="phone">
-+7 495 947-10-10
-</div>
 
 </header>
 
+<main class="productPage">
 
-
-<section class="product-page">
-
-<div class="product-container">
-
-
-<div class="product-image">
-
-<img id="product-img" src="/assets/photo_1_2026-02-15_15-47-16.jpg">
-
+<div class="productImage">
+<img id="productImage">
 </div>
 
+<div class="productInfo">
 
+<div id="productCategory" class="wine-type"></div>
 
-<div class="product-info">
+<h1 id="productName"></h1>
 
-<div class="wine-type" id="product-type"></div>
+<div id="productStyle" class="productStyle"></div>
 
-<h1 id="product-name"></h1>
+<div id="productPrice" class="productPrice"></div>
 
-<div class="wine-style" id="product-style"></div>
-
-
-
-<div class="wine-specs">
-
-<div>
-<span>Категория</span>
-<p id="spec-type"></p>
-</div>
-
-<div>
-<span>Цвет</span>
-<p id="spec-color"></p>
-</div>
-
-<div>
-<span>Стиль</span>
-<p id="spec-style"></p>
-</div>
-
-</div>
-
-
-
-<div class="product-price" id="product-price"></div>
-
-
-<a href="https://t.me/vinotekakaram" target="_blank">
-
-<button class="btn-sommelier">
+<a href="https://t.me/vinotekakaram" class="productButton">
 Спросить сомелье
-</button>
-
 </a>
 
 </div>
 
-</div>
+</main>
 
-
-
-<h2 class="similar-title">
-Похожие вина
+<h2 class="similarTitle">
+Похожие товары
 </h2>
 
-<div class="similar-grid" id="similar-grid"></div>
+<div id="similarGrid" class="similarGrid"></div>
+
+<script>
+
+async function loadProduct(){
+
+const params = new URLSearchParams(window.location.search)
+const id = parseInt(params.get("id"))
+
+const res = await fetch("/data/products.json")
+const products = await res.json()
+
+const product = products.find(p => p.id === id)
+
+if(!product) return
+
+document.getElementById("productName").innerText = product.name_ru
+
+document.getElementById("productStyle").innerText =
+(product.color || "") + " " + (product.style || "")
+
+document.getElementById("productPrice").innerText =
+product.price + " ₽"
+
+document.getElementById("productCategory").innerText =
+product.category || ""
+
+document.getElementById("productImage").src =
+product.image || "/assets/wine-placeholder.png"
 
 
-</section>
+renderSimilar(products, product)
+
+}
 
 
-<script src="/product.js"></script>
+function renderSimilar(products, product){
+
+const grid = document.getElementById("similarGrid")
+
+const similar = products
+.filter(p => p.category === product.category && p.id !== product.id)
+.slice(0,4)
+
+similar.forEach(p => {
+
+const card = document.createElement("div")
+card.className = "product-card"
+
+card.innerHTML = `
+<div class="wine-type">${p.category}</div>
+<h3 class="wine-title">${p.name_ru}</h3>
+<div class="wine-style">${p.color || ""} ${p.style || ""}</div>
+<div class="wine-footer">
+<span class="wine-price">${p.price} ₽</span>
+<a href="/product?id=${p.id}">Подробнее</a>
+</div>
+`
+
+grid.appendChild(card)
+
+})
+
+}
+
+loadProduct()
+
+</script>
 
 </body>
-
 </html>
