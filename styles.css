@@ -595,3 +595,16 @@ color:#b879ff;
 text-decoration:none;
 font-weight:600;
 }
+
+.catalogPage{
+max-width:1200px;
+margin:40px auto;
+display:grid;
+grid-template-columns:260px 1fr;
+gap:40px;
+}
+.catalogGrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:28px;
+}
