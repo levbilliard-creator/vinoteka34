@@ -84,18 +84,26 @@ card.innerHTML = `
 ${categoryLabel}
 </div>
 
-<h3 class="wine-title">
-${p.name_ru}
-</h3>
+<div class="wine-names">
+
+<div class="wine-en">
+${p.name_en || ""}
+</div>
+
+<div class="wine-ru">
+${p.name_ru || ""}
+</div>
+
+</div>
 
 <div class="wine-style">
-${p.color || ""} ${p.style || ""}
+${(p.color || "") + " " + (p.style || "")}
 </div>
 
 <div class="wine-footer">
 
 <span class="wine-price">
-${p.price} ₽
+${p.price ? p.price + " ₽" : ""}
 </span>
 
 <a href="/product?id=${p.id}">
