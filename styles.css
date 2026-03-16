@@ -5,7 +5,7 @@ box-sizing:border-box;
 }
 
 body{
-font-family: Inter, Arial, sans-serif;
+font-family:Inter, Arial, sans-serif;
 background:#0b0f14;
 color:#ffffff;
 }
@@ -22,9 +22,9 @@ border-bottom:1px solid #1b2630;
 }
 
 .logo{
-font-size:26px;
+font-size:24px;
 font-weight:700;
-text-decoration:none;
+letter-spacing:2px;
 background:linear-gradient(90deg,#7b5cff,#ff6ec7);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -43,12 +43,17 @@ text-decoration:underline;
 
 
 
-/* PAGE */
+/* CATALOG PAGE */
 
 .catalogPage{
-display:flex;
+max-width:1200px;
+margin:40px auto;
+padding:0 20px;
+
+display:grid;
+grid-template-columns:260px 1fr;
 gap:40px;
-padding:40px;
+align-items:start;
 }
 
 
@@ -56,27 +61,25 @@ padding:40px;
 /* SIDEBAR */
 
 .sidebar{
-width:240px;
+width:260px;
 }
 
 .sidebar h2{
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 .sidebar input{
 width:100%;
-padding:8px;
-margin-bottom:15px;
-border-radius:6px;
+padding:10px;
+border-radius:8px;
 border:none;
+margin-bottom:16px;
 }
-
 
 .categories{
 background:#173040;
 padding:15px;
 border-radius:14px;
-margin-bottom:20px;
 }
 
 .categories button{
@@ -84,7 +87,7 @@ width:100%;
 padding:10px;
 margin:6px 0;
 border:none;
-border-radius:6px;
+border-radius:8px;
 background:#e4e4e4;
 cursor:pointer;
 }
@@ -93,199 +96,98 @@ cursor:pointer;
 background:#cfd6dc;
 }
 
-.sidebar select{
-width:100%;
-padding:8px;
-margin-bottom:15px;
-border-radius:6px;
-border:none;
-}
 
 
-
-/* CATALOG */
-
-.catalog{
-flex:1;
-}
-
-
-
-/* GRID */
+/* CATALOG GRID */
 
 .catalogGrid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
+grid-template-columns:repeat(4,1fr);
+gap:28px;
 }
 
 
 
-/* CARD */
+/* PRODUCT CARD */
 
-.productCard{
-background:#163343;
-border-radius:16px;
-padding:22px;
-min-height:200px;
+.product-card{
+background:#1c3a48;
+border-radius:14px;
+padding:20px;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
+min-height:220px;
 transition:0.2s;
 }
 
-.productCard:hover{
+.product-card:hover{
 transform:translateY(-4px);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+
+
+/* IMAGE */
+
+.wine-img{
+width:100%;
+height:140px;
+object-fit:contain;
+margin-bottom:10px;
 }
 
 
 
 /* CATEGORY */
 
-.productType{
+.wine-type{
+display:inline-block;
 font-size:12px;
-color:#9fb8c5;
+padding:4px 10px;
+border-radius:6px;
 margin-bottom:10px;
-letter-spacing:1px;
+background:#2b5566;
+color:#cde7f1;
+width:fit-content;
 }
 
 
 
-/* TITLE */
+/* WINE NAME */
 
-.productTitle{
-font-size:18px;
+.wine-en{
+font-size:13px;
+letter-spacing:1px;
+color:#9bb7c4;
+text-transform:uppercase;
+margin-bottom:4px;
+}
+
+.wine-ru{
+font-size:16px;
 font-weight:600;
 line-height:1.3;
-margin-bottom:10px;
+
+display:-webkit-box;
+-webkit-line-clamp:2;
+-webkit-box-orient:vertical;
+overflow:hidden;
 }
 
 
 
-/* INFO */
+/* STYLE */
 
-.productInfo{
+.wine-style{
 font-size:14px;
-color:#a6c2cf;
+color:#9bb7c4;
 margin-bottom:12px;
 }
 
 
 
-/* BOTTOM */
-
-.productBottom{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-
-
-/* PRICE */
-
-.productPrice{
-font-size:20px;
-font-weight:700;
-}
-
-
-
-/* LINK */
-
-.productMore{
-color:#c97cff;
-text-decoration:none;
-font-size:14px;
-}
-
-.productMore:hover{
-text-decoration:underline;
-}.hero{
-position:relative;
-height:80vh;
-overflow:hidden;
-}
-
-.hero video{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-min-width:100%;
-min-height:100%;
-object-fit:cover;
-}
-
-.heroContent{
-position:relative;
-z-index:2;
-text-align:center;
-}/* СЕТКА КАТАЛОГА */
-
-.catalogGrid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:28px;
-margin-left:280px;
-padding:40px;
-}
-
-
-/* КАРТОЧКА */
-
-.product-card{
-background:#1c3a48;
-border-radius:14px;
-padding:20px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-min-height:180px;
-transition:0.2s;
-}
-
-.product-card:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 30px rgba(0,0,0,0.35);
-}
-
-
-/* ПЛАШКА КАТЕГОРИИ */
-
-.wine-type{
-display:inline-block;
-font-size:12px;
-padding:4px 10px;
-border-radius:6px;
-margin-bottom:10px;
-background:#2b5566;
-color:#cde7f1;
-width:fit-content;
-}
-
-
-/* НАЗВАНИЕ */
-
-.wine-title{
-font-size:18px;
-font-weight:600;
-margin-bottom:8px;
-line-height:1.3;
-}
-
-
-/* ХАРАКТЕРИСТИКИ */
-
-.wine-style{
-font-size:14px;
-color:#9bb7c4;
-margin-bottom:18px;
-}
-
-
-/* НИЖНЯЯ ЧАСТЬ */
+/* FOOTER */
 
 .wine-footer{
 display:flex;
@@ -305,145 +207,10 @@ font-weight:500;
 }
 
 
-/* АДАПТИВ */
 
-@media (max-width:1400px){
-.catalogGrid{
-grid-template-columns:repeat(3,1fr);
-}
-}
+/* HERO (главная) */
 
-@media (max-width:1000px){
-.catalogGrid{
-grid-template-columns:repeat(2,1fr);
-margin-left:0;
-}
-}
-
-@media (max-width:600px){
-.catalogGrid{
-grid-template-columns:1fr;
-}
-/* СЕТКА КАТАЛОГА */
-
-.catalogGrid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:28px;
-margin-left:280px;
-padding:40px;
-}
-
-
-/* КАРТОЧКА */
-
-.product-card{
-background:#1c3a48;
-border-radius:14px;
-padding:20px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-min-height:180px;
-transition:0.2s;
-}
-
-.product-card:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 30px rgba(0,0,0,0.35);
-}
-
-
-/* ПЛАШКА КАТЕГОРИИ */
-
-.wine-type{
-display:inline-block;
-font-size:12px;
-padding:4px 10px;
-border-radius:6px;
-margin-bottom:10px;
-background:#2b5566;
-color:#cde7f1;
-width:fit-content;
-}
-
-
-/* НАЗВАНИЕ */
-
-.wine-title{
-font-size:18px;
-font-weight:600;
-margin-bottom:8px;
-line-height:1.3;
-}
-
-
-/* ХАРАКТЕРИСТИКИ */
-
-.wine-style{
-font-size:14px;
-color:#9bb7c4;
-margin-bottom:18px;
-}
-
-
-/* НИЖНЯЯ ЧАСТЬ */
-
-.wine-footer{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.wine-price{
-font-size:18px;
-font-weight:700;
-}
-
-.wine-footer a{
-color:#c07cff;
-text-decoration:none;
-font-weight:500;
-}
-
-
-/* АДАПТИВ */
-
-@media (max-width:1400px){
-.catalogGrid{
-grid-template-columns:repeat(3,1fr);
-}
-}
-
-@media (max-width:1000px){
-.catalogGrid{
-grid-template-columns:repeat(2,1fr);
-margin-left:0;
-}
-}
-
-@media (max-width:600px){
-.catalogGrid{
-grid-template-columns:1fr;
-}
-}.product-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 220px;
-}
-
-.wine-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}.wine-en{
-font-size:14px;
-letter-spacing:1px;
-color:#9bb7c4;
-margin-bottom:6px;
-text-transform:uppercase;
-}.hero{
+.hero{
 position:relative;
 height:70vh;
 display:flex;
@@ -477,134 +244,37 @@ z-index:2;
 .heroContent{
 position:relative;
 z-index:3;
-color:white;
 max-width:700px;
-}.logo{
-font-size:22px;
-font-weight:700;
-letter-spacing:2px;
-}.wine-names{
-margin:10px 0;
 }
 
-.wine-en{
-font-size:13px;
-letter-spacing:1px;
-color:#9bb7c4;
-text-transform:uppercase;
-margin-bottom:4px;
+
+
+/* ADAPTIVE */
+
+@media (max-width:1200px){
+
+.catalogGrid{
+grid-template-columns:repeat(3,1fr);
 }
 
-.wine-ru{
-font-size:16px;
-font-weight:600;
-line-height:1.3;
 }
 
-.wine-style{
-color:#9bb7c4;
-font-size:14px;
-margin-bottom:12px;
-}.wine-ru{
-font-size:16px;
-font-weight:600;
-line-height:1.3;
-
-display:-webkit-box;
--webkit-line-clamp:2;
--webkit-box-orient:vertical;
-overflow:hidden;
-}.product-card{
-height:220px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-}.wine-img{
-width:100%;
-height:140px;
-object-fit:contain;
-margin-bottom:10px;
-}.wine-img{
-width:100%;
-height:160px;
-object-fit:contain;
-margin-bottom:12px;
-}
-
-.wine-en{
-font-size:13px;
-color:#8fb6c8;
-text-transform:uppercase;
-letter-spacing:1px;
-margin-bottom:4px;
-}
-
-.wine-ru{
-font-size:16px;
-font-weight:600;
-line-height:1.3;
-margin-bottom:6px;
-}.catalogGrid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:28px;
-}.product-card{
-background:#213c47;
-border-radius:16px;
-padding:22px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-min-height:200px;
-transition:0.2s;
-}
-
-.product-card:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 20px rgba(0,0,0,0.4);
-}.wine-en{
-font-size:13px;
-letter-spacing:1px;
-color:#9fc0d0;
-text-transform:uppercase;
-margin-bottom:4px;
-}
-
-.wine-ru{
-font-size:16px;
-font-weight:600;
-line-height:1.3;
-margin-bottom:6px;
-}.wine-style{
-font-size:14px;
-color:#8aa8b6;
-margin-bottom:10px;
-}.wine-footer{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.wine-price{
-font-size:18px;
-font-weight:700;
-}
-
-.product-card a{
-color:#b879ff;
-text-decoration:none;
-font-weight:600;
-}
+@media (max-width:900px){
 
 .catalogPage{
-max-width:1200px;
-margin:40px auto;
-display:grid;
-grid-template-columns:260px 1fr;
-gap:40px;
+grid-template-columns:1fr;
 }
+
 .catalogGrid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:28px;
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:600px){
+
+.catalogGrid{
+grid-template-columns:1fr;
+}
+
 }

@@ -6,41 +6,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Каталог — Винотека</title>
+<title>ВИНОТЕКА — Каталог</title>
 
 <link rel="stylesheet" href="/styles.css">
 
 <style>
 
 .catalogPage{
-max-width:1400px;
+max-width:1200px;
 margin:40px auto;
-padding:0 40px;
+padding:0 20px;
+
 display:grid;
 grid-template-columns:260px 1fr;
 gap:40px;
 }
 
-.catalogSidebar input{
+.catalogSidebar h2{
+margin-bottom:16px;
+}
+
+.searchInput{
 width:100%;
-padding:10px;
-border-radius:8px;
+padding:10px 12px;
+border-radius:10px;
 border:none;
 margin-bottom:20px;
 }
 
-.catalogSidebar h3{
-margin-bottom:10px;
+.categories{
+display:flex;
+flex-direction:column;
+gap:12px;
 }
 
 .cat-btn{
-display:block;
-width:100%;
-padding:12px;
-margin-bottom:10px;
+background:#e6e6e6;
 border:none;
-border-radius:10px;
-background:#e5e5e5;
+padding:12px;
+border-radius:12px;
 cursor:pointer;
 }
 
@@ -48,6 +52,62 @@ cursor:pointer;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:28px;
+}
+
+.product-card{
+background:#213c47;
+border-radius:16px;
+padding:20px;
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+min-height:200px;
+}
+
+.wine-type{
+background:#2f5967;
+padding:4px 10px;
+border-radius:10px;
+font-size:12px;
+width:max-content;
+margin-bottom:10px;
+}
+
+.wine-en{
+font-size:13px;
+color:#9fc0d0;
+text-transform:uppercase;
+margin-bottom:4px;
+}
+
+.wine-ru{
+font-size:16px;
+font-weight:600;
+margin-bottom:6px;
+}
+
+.wine-style{
+font-size:14px;
+color:#8aa8b6;
+margin-bottom:12px;
+}
+
+.wine-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.wine-price{
+font-weight:700;
+}
+
+.product-card a{
+color:#b879ff;
+text-decoration:none;
+font-weight:600;
 }
 
 </style>
@@ -73,13 +133,16 @@ gap:28px;
 
 <div class="catalogPage">
 
-<aside class="catalogSidebar">
+<div class="catalogSidebar">
 
 <h2>Каталог</h2>
 
-<input placeholder="Поиск вина...">
+<input
+class="searchInput"
+placeholder="Поиск вина..."
+>
 
-<h3>Категории</h3>
+<div class="categories">
 
 <button class="cat-btn" data-cat="all">Все</button>
 <button class="cat-btn" data-cat="wine">Вино</button>
@@ -91,13 +154,14 @@ gap:28px;
 <button class="cat-btn" data-cat="tea">Чай</button>
 <button class="cat-btn" data-cat="accessories">Аксессуары</button>
 
-</aside>
+</div>
 
-<main>
+</div>
 
-<div id="catalogGrid" class="catalogGrid"></div>
-
-</main>
+<div
+id="catalogGrid"
+class="catalogGrid"
+></div>
 
 </div>
 
