@@ -2,6 +2,8 @@ let products = []
 let filteredProducts = []
 let activeCategory = "all"
 
+
+
 async function loadProducts(){
 
 const res = await fetch("/data/products.json")
@@ -12,6 +14,8 @@ filteredProducts = products
 renderProducts(filteredProducts)
 
 }
+
+
 
 function normalizeCategory(p){
 
@@ -30,6 +34,8 @@ return "other"
 
 }
 
+
+
 function translateCategory(cat){
 
 if(cat === "wine") return "Вино"
@@ -45,20 +51,35 @@ return ""
 
 }
 
+
+
 function filterCategory(category){
 
 activeCategory = category
 
 if(category === "all"){
 filteredProducts = products
-}
-else{
-filteredProducts = products.filter(p => normalizeCategory(p) === category)
+}else{
+filteredProducts = products.filter(
+p => normalizeCategory(p) === category
+)
 }
 
 renderProducts(filteredProducts)
 
 }
+
+
+
+function getWineImage(name){
+
+const query = encodeURIComponent(name + " wine label")
+
+return `https://source.unsplash.com/400x600/?${query}`
+
+}
+
+
 
 function renderProducts(list){
 
@@ -73,17 +94,21 @@ list.forEach(p => {
 const category = normalizeCategory(p)
 const categoryLabel = translateCategory(category)
 
-const wineName = encodeURIComponent(p.name_en || p.name_ru)
+const wineName = p.name_en || p.name_ru
 
-const imageUrl =
-`https://images.weserv.nl/?url=images.vivino.com/thumbs/${wineName}.jpg`
+const imageUrl = getWineImage(wineName)
+
+
 
 const card = document.createElement("div")
 card.className = "product-card"
 
+
+
 card.innerHTML = `
 
-<img class="wine-img"
+<img
+class="wine-img"
 src="${imageUrl}"
 onerror="this.src='https://dummyimage.com/300x200/163343/ffffff&text=Wine'"
 >
@@ -124,6 +149,8 @@ grid.appendChild(card)
 
 }
 
+
+
 document.querySelectorAll(".cat-btn").forEach(btn => {
 
 btn.addEventListener("click", () => {
@@ -133,5 +160,7 @@ filterCategory(btn.dataset.cat)
 })
 
 })
+
+
 
 loadProducts()
