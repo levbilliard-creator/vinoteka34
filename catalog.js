@@ -1,32 +1,39 @@
-let products=[]
-
 async function loadProducts(){
 
-const res=await fetch("/data/products.json")
-products=await res.json()
+const res = await fetch("/data/products.json")
+const products = await res.json()
 
 render(products)
 
 }
 
+function wineImage(name){
+
+const q = encodeURIComponent(name)
+
+return "https://source.unsplash.com/400x600/?wine," + q
+
+}
+
 function render(list){
 
-const grid=document.getElementById("catalogGrid")
+const grid = document.getElementById("catalogGrid")
+grid.innerHTML = ""
 
-grid.innerHTML=""
+list.forEach(p => {
 
-list.forEach(p=>{
+const name = p.name_en || p.name_ru
+const image = wineImage(name)
 
-const card=document.createElement("div")
-card.className="product-card"
+const card = document.createElement("div")
+card.className = "product-card"
 
-card.innerHTML=`
+card.innerHTML = `
 
 <img class="wine-img"
-src="${p.image || "/assets/wine.jpg"}"
+src="${image}"
 loading="lazy"
-onerror="this.src='/assets/wine.jpg'"
->
+onerror="this.src='/assets/wine.jpg'">
 
 <div class="wine-type">
 ${p.category || "Вино"}
@@ -47,7 +54,7 @@ ${p.color || ""} ${p.style || ""}
 <div class="wine-footer">
 
 <span class="wine-price">
-${p.price ? p.price+" ₽" : ""}
+${p.price ? p.price + " ₽" : ""}
 </span>
 
 <a href="/product?id=${p.id}">
