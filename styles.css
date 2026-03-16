@@ -426,4 +426,15 @@ margin-left:0;
 .catalogGrid{
 grid-template-columns:1fr;
 }
+}.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+}
+
+.wine-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
