@@ -73,13 +73,20 @@ list.forEach(p => {
 const category = normalizeCategory(p)
 const categoryLabel = translateCategory(category)
 
+const wineName = encodeURIComponent(p.name_en || p.name_ru)
+
+const imageUrl =
+`https://images.weserv.nl/?url=images.vivino.com/thumbs/${wineName}.jpg`
+
 const card = document.createElement("div")
 card.className = "product-card"
 
 card.innerHTML = `
 
 <img class="wine-img"
-src="https://source.unsplash.com/400x600/?wine,label,${encodeURIComponent(p.name_en || p.name_ru)}">
+src="${imageUrl}"
+onerror="this.src='https://dummyimage.com/300x200/163343/ffffff&text=Wine'"
+>
 
 <div class="wine-type">
 ${categoryLabel}
@@ -89,9 +96,9 @@ ${categoryLabel}
 ${p.name_en || ""}
 </div>
 
-<h3 class="wine-ru">
+<div class="wine-ru">
 ${p.name_ru}
-</h3>
+</div>
 
 <div class="wine-style">
 ${p.color || ""} ${p.style || ""}
@@ -100,7 +107,7 @@ ${p.color || ""} ${p.style || ""}
 <div class="wine-footer">
 
 <span class="wine-price">
-${p.price} ₽
+${p.price ? p.price + " ₽" : ""}
 </span>
 
 <a href="/product?id=${p.id}">
