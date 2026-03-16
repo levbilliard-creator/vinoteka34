@@ -53,9 +53,7 @@ if(category === "all"){
 filteredProducts = products
 }
 else{
-
 filteredProducts = products.filter(p => normalizeCategory(p) === category)
-
 }
 
 renderProducts(filteredProducts)
@@ -80,30 +78,29 @@ card.className = "product-card"
 
 card.innerHTML = `
 
+<img class="wine-img"
+src="${p.image || '/assets/wine-placeholder.png'}">
+
 <div class="wine-type">
 ${categoryLabel}
 </div>
-
-<div class="wine-names">
 
 <div class="wine-en">
 ${p.name_en || ""}
 </div>
 
-<div class="wine-ru">
-${p.name_ru || ""}
-</div>
-
-</div>
+<h3 class="wine-ru">
+${p.name_ru}
+</h3>
 
 <div class="wine-style">
-${(p.color || "") + " " + (p.style || "")}
+${p.color || ""} ${p.style || ""}
 </div>
 
 <div class="wine-footer">
 
 <span class="wine-price">
-${p.price ? p.price + " ₽" : ""}
+${p.price} ₽
 </span>
 
 <a href="/product?id=${p.id}">
