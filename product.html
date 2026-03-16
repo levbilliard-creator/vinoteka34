@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -6,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VINOTEKA34</title>
+<title>Вино — Винотека</title>
 
 <link rel="stylesheet" href="/styles.css">
 
@@ -35,17 +36,17 @@ max-height:420px;
 object-fit:contain;
 }
 
-.productInfo h1{
-font-size:28px;
-margin-bottom:16px;
-}
-
 .wine-en{
 font-size:14px;
 letter-spacing:1px;
 color:#9bb7c4;
 margin-bottom:6px;
 text-transform:uppercase;
+}
+
+.productInfo h1{
+font-size:28px;
+margin-bottom:16px;
 }
 
 .productStyle{
@@ -94,7 +95,7 @@ gap:28px;
 <header class="header">
 
 <div class="logo">
-VINOTEKA34
+ВИНОТЕКА
 </div>
 
 <nav class="menu">
@@ -167,60 +168,5 @@ const product = products.find(p => p.id === id)
 
 if(!product) return
 
-document.getElementById("productName").innerText =
-product.name_ru
-
-document.getElementById("productNameEn").innerText =
-product.name_en || ""
-
-document.getElementById("productStyle").innerText =
-(product.color || "") + " " + (product.style || "")
-
-document.getElementById("productPrice").innerText =
-product.price ? product.price + " ₽" : ""
-
-document.getElementById("productCategory").innerText =
-translateCategory(product.category)
-
-document.getElementById("productImage").src =
-product.image || "/assets/wine-placeholder.png"
-
-renderSimilar(products, product)
-
-}
-
-function renderSimilar(products, product){
-
-const grid = document.getElementById("similarGrid")
-
-const similar = products
-.filter(p => p.category === product.category && p.id !== product.id)
-.slice(0,4)
-
-similar.forEach(p => {
-
-const card = document.createElement("div")
-card.className = "product-card"
-
-card.innerHTML = `
-<div class="wine-type">${translateCategory(p.category)}</div>
-<h3 class="wine-title">${p.name_ru}</h3>
-<div class="wine-style">${p.color || ""} ${p.style || ""}</div>
-<div class="wine-footer">
-<span class="wine-price">${p.price ? p.price + " ₽" : ""}</span>
-<a href="/product?id=${p.id}">Подробнее</a>
-</div>
-`
-
-grid.appendChild(card)
-
-})
-
-}
-
-loadProduct()
-
-</script>
-
-</body>
-</html>
+document.getElementById("productName").
+```

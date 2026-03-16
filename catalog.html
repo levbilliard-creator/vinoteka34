@@ -1,12 +1,57 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
 
 <meta charset="UTF-8">
-<title>Каталог — VINOTEKA34</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Каталог — Винотека</title>
 
 <link rel="stylesheet" href="/styles.css">
+
+<style>
+
+.catalogPage{
+max-width:1400px;
+margin:40px auto;
+padding:0 40px;
+display:grid;
+grid-template-columns:260px 1fr;
+gap:40px;
+}
+
+.catalogSidebar input{
+width:100%;
+padding:10px;
+border-radius:8px;
+border:none;
+margin-bottom:20px;
+}
+
+.catalogSidebar h3{
+margin-bottom:10px;
+}
+
+.cat-btn{
+display:block;
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border:none;
+border-radius:10px;
+background:#e5e5e5;
+cursor:pointer;
+}
+
+.catalogGrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:28px;
+}
+
+</style>
 
 </head>
 
@@ -14,149 +59,51 @@
 
 <header class="header">
 
-<a class="logo" href="/index.html">
-VINOTEKA34
-</a>
+<div class="logo">
+ВИНОТЕКА
+</div>
 
-<nav>
-
-<a href="/index.html">Главная</a>
-<a href="/catalog.html">Каталог</a>
+<nav class="menu">
+<a href="/">Главная</a>
+<a href="/catalog">Каталог</a>
 <a href="#">Дегустации</a>
 <a href="#">Контакты</a>
-
 </nav>
 
 </header>
 
-
 <div class="catalogPage">
 
-
-
-
-<!-- SIDEBAR -->
-
-<aside class="sidebar">
+<aside class="catalogSidebar">
 
 <h2>Каталог</h2>
 
-<input
-id="searchInput"
-type="text"
-placeholder="Поиск вина..."
-onkeyup="searchProducts()"
->
-
-
-
+<input placeholder="Поиск вина...">
 
 <h3>Категории</h3>
 
-<div class="categories">
-
-<button onclick="filterCategory('all')">Все</button>
-
-<button onclick="filterCategory('wine')">
-Вино
-</button>
-
-<button onclick="filterCategory('sparkling')">
-Игристое
-</button>
-
-<button onclick="filterCategory('strong')">
-Крепкий алкоголь
-</button>
-
-<button onclick="filterCategory('beer')">
-Пиво
-</button>
-
-<button onclick="filterCategory('soft')">
-Безалкогольные
-</button>
-
-<button onclick="filterCategory('grocery')">
-Бакалея
-</button>
-
-<button onclick="filterCategory('tea')">
-Чай
-</button>
-
-<button onclick="filterCategory('accessories')">
-Аксессуары
-</button>
-
-</div>
-
-
-
-<h3>Цвет</h3>
-
-<select id="colorFilter">
-
-<option value="all">Все</option>
-<option value="красное">Красное</option>
-<option value="белое">Белое</option>
-<option value="розовое">Розовое</option>
-
-</select>
-
-
-
-
-<h3>Стиль</h3>
-
-<select id="styleFilter">
-
-<option value="all">Все</option>
-<option value="сухое">Сухое</option>
-<option value="полусухое">Полусухое</option>
-<option value="полусладкое">Полусладкое</option>
-<option value="сладкое">Сладкое</option>
-
-</select>
-
-
-
-
-<h3>Страна</h3>
-
-<select id="countryFilter">
-
-<option value="all">Все</option>
-
-</select>
-
+<button class="cat-btn" data-cat="all">Все</button>
+<button class="cat-btn" data-cat="wine">Вино</button>
+<button class="cat-btn" data-cat="sparkling">Игристое</button>
+<button class="cat-btn" data-cat="strong">Крепкий алкоголь</button>
+<button class="cat-btn" data-cat="beer">Пиво</button>
+<button class="cat-btn" data-cat="soft">Безалкогольные</button>
+<button class="cat-btn" data-cat="grocery">Бакалея</button>
+<button class="cat-btn" data-cat="tea">Чай</button>
+<button class="cat-btn" data-cat="accessories">Аксессуары</button>
 
 </aside>
 
+<main>
 
-
-
-
-<!-- CATALOG -->
-
-<main class="catalog">
-
-<div id="catalogGrid" class="catalogGrid">
-
-</div>
+<div id="catalogGrid" class="catalogGrid"></div>
 
 </main>
 
-
-
-
 </div>
-
-
-
 
 <script src="/catalog.js"></script>
 
 </body>
-
 </html>
+```
