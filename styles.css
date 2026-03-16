@@ -437,4 +437,10 @@ grid-template-columns:1fr;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}.wine-en{
+font-size:14px;
+letter-spacing:1px;
+color:#9bb7c4;
+margin-bottom:6px;
+text-transform:uppercase;
 }

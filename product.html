@@ -40,6 +40,14 @@ font-size:28px;
 margin-bottom:16px;
 }
 
+.wine-en{
+font-size:14px;
+letter-spacing:1px;
+color:#9bb7c4;
+margin-bottom:6px;
+text-transform:uppercase;
+}
+
 .productStyle{
 color:#9bb7c4;
 margin-bottom:20px;
@@ -108,6 +116,8 @@ VINOTEKA34
 
 <div id="productCategory" class="wine-type"></div>
 
+<div id="productNameEn" class="wine-en"></div>
+
 <h1 id="productName"></h1>
 
 <div id="productStyle" class="productStyle"></div>
@@ -130,6 +140,21 @@ VINOTEKA34
 
 <script>
 
+function translateCategory(cat){
+
+if(cat === "wine") return "Вино"
+if(cat === "sparkling") return "Игристое"
+if(cat === "strong") return "Крепкий алкоголь"
+if(cat === "beer") return "Пиво"
+if(cat === "soft") return "Безалкогольные"
+if(cat === "grocery") return "Бакалея"
+if(cat === "tea") return "Чай"
+if(cat === "accessories") return "Аксессуары"
+
+return cat
+
+}
+
 async function loadProduct(){
 
 const params = new URLSearchParams(window.location.search)
@@ -142,25 +167,27 @@ const product = products.find(p => p.id === id)
 
 if(!product) return
 
-document.getElementById("productName").innerText = product.name_ru
+document.getElementById("productName").innerText =
+product.name_ru
+
+document.getElementById("productNameEn").innerText =
+product.name_en || ""
 
 document.getElementById("productStyle").innerText =
 (product.color || "") + " " + (product.style || "")
 
 document.getElementById("productPrice").innerText =
-product.price + " ₽"
+product.price ? product.price + " ₽" : ""
 
 document.getElementById("productCategory").innerText =
-product.category || ""
+translateCategory(product.category)
 
 document.getElementById("productImage").src =
 product.image || "/assets/wine-placeholder.png"
 
-
 renderSimilar(products, product)
 
 }
-
 
 function renderSimilar(products, product){
 
@@ -176,11 +203,11 @@ const card = document.createElement("div")
 card.className = "product-card"
 
 card.innerHTML = `
-<div class="wine-type">${p.category}</div>
+<div class="wine-type">${translateCategory(p.category)}</div>
 <h3 class="wine-title">${p.name_ru}</h3>
 <div class="wine-style">${p.color || ""} ${p.style || ""}</div>
 <div class="wine-footer">
-<span class="wine-price">${p.price} ₽</span>
+<span class="wine-price">${p.price ? p.price + " ₽" : ""}</span>
 <a href="/product?id=${p.id}">Подробнее</a>
 </div>
 `
