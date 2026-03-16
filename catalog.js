@@ -79,7 +79,7 @@ card.className = "product-card"
 card.innerHTML = `
 
 <img class="wine-img"
-src="${p.image || 'https://source.unsplash.com/400x600/?wine,label'}">
+src="https://source.unsplash.com/400x600/?wine,label,${encodeURIComponent(p.name_en || p.name_ru)}">
 
 <div class="wine-type">
 ${categoryLabel}
