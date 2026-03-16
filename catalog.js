@@ -1,38 +1,29 @@
-let products = []
-let filtered = []
+let products=[]
 
-async function loadProducts() {
+async function loadProducts(){
 
-const res = await fetch("/data/products.json")
-products = await res.json()
+const res=await fetch("/data/products.json")
+products=await res.json()
 
-filtered = products
-
-renderProducts(filtered)
+render(products)
 
 }
 
-function renderProducts(list){
+function render(list){
 
-const grid = document.getElementById("catalogGrid")
+const grid=document.getElementById("catalogGrid")
 
-if(!grid) return
-
-grid.innerHTML = ""
+grid.innerHTML=""
 
 list.forEach(p=>{
 
-const card = document.createElement("div")
+const card=document.createElement("div")
 card.className="product-card"
-
-const image = p.image
-? p.image
-: "/assets/wine.jpg"
 
 card.innerHTML=`
 
 <img class="wine-img"
-src="${image}"
+src="${p.image || "/assets/wine.jpg"}"
 loading="lazy"
 onerror="this.src='/assets/wine.jpg'"
 >
