@@ -1,16 +1,14 @@
-let products = []
-
-
+let products=[]
 
 async function loadProduct(){
 
-const params = new URLSearchParams(window.location.search)
-const id = params.get("id")
+const params=new URLSearchParams(location.search)
+const id=params.get("id")
 
-const res = await fetch("/data/products.json")
-products = await res.json()
+const res=await fetch("/data/products.json")
+products=await res.json()
 
-const product = products.find(p => String(p.id) === String(id))
+const product=products.find(p=>String(p.id)===String(id))
 
 if(!product) return
 
@@ -19,33 +17,23 @@ renderSimilar(product)
 
 }
 
-
-
-function getWineImage(name){
-
-const query = encodeURIComponent(name + " wine label")
-
-return `https://source.unsplash.com/400x600/?${query}`
-
-}
-
-
-
 function renderProduct(p){
 
-const container = document.getElementById("productPage")
+const container=document.getElementById("productPage")
 
-const imageUrl = getWineImage(p.name_en || p.name_ru)
+const image=p.image
+? p.image
+: "/assets/wine.jpg"
 
-container.innerHTML = `
+container.innerHTML=`
 
 <div class="productWrapper">
 
 <div class="productImage">
 <img
-src="${imageUrl}"
+src="${image}"
 class="wine-img-big"
-onerror="this.src='https://dummyimage.com/600x600/163343/ffffff&text=Wine'"
+onerror="this.src='/assets/wine.jpg'"
 >
 </div>
 
@@ -68,7 +56,7 @@ ${p.color || ""} ${p.style || ""}
 </div>
 
 <div class="wine-price-big">
-${p.price ? p.price + " ₽" : ""}
+${p.price ? p.price+" ₽" : ""}
 </div>
 
 <button class="wine-btn">
@@ -83,34 +71,32 @@ ${p.price ? p.price + " ₽" : ""}
 
 }
 
-
-
 function renderSimilar(product){
 
-const grid = document.getElementById("similarGrid")
+const grid=document.getElementById("similarGrid")
 
 if(!grid) return
 
-const similar = products
-.filter(p => p.category === product.category && p.id !== product.id)
+const similar=products
+.filter(p=>p.category===product.category && p.id!==product.id)
 .slice(0,4)
 
-grid.innerHTML = ""
+grid.innerHTML=""
 
-similar.forEach(p => {
+similar.forEach(p=>{
 
-const imageUrl = getWineImage(p.name_en || p.name_ru)
+const card=document.createElement("div")
+card.className="product-card"
 
-const card = document.createElement("div")
+const image=p.image
+? p.image
+: "/assets/wine.jpg"
 
-card.className = "product-card"
+card.innerHTML=`
 
-card.innerHTML = `
-
-<img
-class="wine-img"
-src="${imageUrl}"
-onerror="this.src='https://dummyimage.com/300x200/163343/ffffff&text=Wine'"
+<img class="wine-img"
+src="${image}"
+onerror="this.src='/assets/wine.jpg'"
 >
 
 <div class="wine-type">
@@ -132,7 +118,7 @@ ${p.color || ""} ${p.style || ""}
 <div class="wine-footer">
 
 <span class="wine-price">
-${p.price ? p.price + " ₽" : ""}
+${p.price ? p.price+" ₽" : ""}
 </span>
 
 <a href="/product?id=${p.id}">
@@ -140,7 +126,6 @@ ${p.price ? p.price + " ₽" : ""}
 </a>
 
 </div>
-
 `
 
 grid.appendChild(card)
@@ -148,7 +133,5 @@ grid.appendChild(card)
 })
 
 }
-
-
 
 loadProduct()

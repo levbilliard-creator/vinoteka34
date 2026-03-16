@@ -1,85 +1,16 @@
 let products = []
-let filteredProducts = []
-let activeCategory = "all"
+let filtered = []
 
-
-
-async function loadProducts(){
+async function loadProducts() {
 
 const res = await fetch("/data/products.json")
 products = await res.json()
 
-filteredProducts = products
+filtered = products
 
-renderProducts(filteredProducts)
-
-}
-
-
-
-function normalizeCategory(p){
-
-let cat = (p.category || p.type || "").toLowerCase()
-
-if(cat.includes("wine") || cat.includes("вино")) return "wine"
-if(cat.includes("sparkling") || cat.includes("игрист")) return "sparkling"
-if(cat.includes("strong") || cat.includes("креп")) return "strong"
-if(cat.includes("beer") || cat.includes("пиво")) return "beer"
-if(cat.includes("soft") || cat.includes("безал")) return "soft"
-if(cat.includes("grocery") || cat.includes("бакале")) return "grocery"
-if(cat.includes("tea") || cat.includes("чай")) return "tea"
-if(cat.includes("accessories") || cat.includes("аксесс")) return "accessories"
-
-return "other"
+renderProducts(filtered)
 
 }
-
-
-
-function translateCategory(cat){
-
-if(cat === "wine") return "Вино"
-if(cat === "sparkling") return "Игристое"
-if(cat === "strong") return "Крепкий алкоголь"
-if(cat === "beer") return "Пиво"
-if(cat === "soft") return "Безалкогольные"
-if(cat === "grocery") return "Бакалея"
-if(cat === "tea") return "Чай"
-if(cat === "accessories") return "Аксессуары"
-
-return ""
-
-}
-
-
-
-function filterCategory(category){
-
-activeCategory = category
-
-if(category === "all"){
-filteredProducts = products
-}else{
-filteredProducts = products.filter(
-p => normalizeCategory(p) === category
-)
-}
-
-renderProducts(filteredProducts)
-
-}
-
-
-
-function getWineImage(name){
-
-const query = encodeURIComponent(name + " wine label")
-
-return `https://source.unsplash.com/400x600/?${query}`
-
-}
-
-
 
 function renderProducts(list){
 
@@ -89,32 +20,25 @@ if(!grid) return
 
 grid.innerHTML = ""
 
-list.forEach(p => {
-
-const category = normalizeCategory(p)
-const categoryLabel = translateCategory(category)
-
-const wineName = p.name_en || p.name_ru
-
-const imageUrl = getWineImage(wineName)
-
-
+list.forEach(p=>{
 
 const card = document.createElement("div")
-card.className = "product-card"
+card.className="product-card"
 
+const image = p.image
+? p.image
+: "/assets/wine.jpg"
 
+card.innerHTML=`
 
-card.innerHTML = `
-
-<img
-class="wine-img"
-src="${imageUrl}"
-onerror="this.src='https://dummyimage.com/300x200/163343/ffffff&text=Wine'"
+<img class="wine-img"
+src="${image}"
+loading="lazy"
+onerror="this.src='/assets/wine.jpg'"
 >
 
 <div class="wine-type">
-${categoryLabel}
+${p.category || "Вино"}
 </div>
 
 <div class="wine-en">
@@ -132,7 +56,7 @@ ${p.color || ""} ${p.style || ""}
 <div class="wine-footer">
 
 <span class="wine-price">
-${p.price ? p.price + " ₽" : ""}
+${p.price ? p.price+" ₽" : ""}
 </span>
 
 <a href="/product?id=${p.id}">
@@ -140,7 +64,6 @@ ${p.price ? p.price + " ₽" : ""}
 </a>
 
 </div>
-
 `
 
 grid.appendChild(card)
@@ -148,19 +71,5 @@ grid.appendChild(card)
 })
 
 }
-
-
-
-document.querySelectorAll(".cat-btn").forEach(btn => {
-
-btn.addEventListener("click", () => {
-
-filterCategory(btn.dataset.cat)
-
-})
-
-})
-
-
 
 loadProducts()
