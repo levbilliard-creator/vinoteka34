@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -44,8 +45,8 @@ text-transform:uppercase;
 }
 
 .productInfo h1{
-font-size:28px;
-margin-bottom:16px;
+font-size:30px;
+margin-bottom:14px;
 }
 
 .productStyle{
@@ -63,10 +64,32 @@ margin-bottom:20px;
 .productButton{
 display:inline-block;
 background:#b879ff;
-padding:12px 20px;
+padding:12px 22px;
 border-radius:10px;
 text-decoration:none;
 color:white;
+font-weight:600;
+}
+
+.productSpecs{
+margin-top:30px;
+border-top:1px solid #2b4654;
+padding-top:20px;
+}
+
+.specRow{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+font-size:15px;
+}
+
+.specName{
+color:#9bb7c4;
+}
+
+.specValue{
+font-weight:500;
 }
 
 .similarTitle{
@@ -128,6 +151,8 @@ gap:28px;
 Спросить сомелье
 </a>
 
+<div id="productSpecs" class="productSpecs"></div>
+
 </div>
 
 </main>
@@ -167,4 +192,114 @@ const product = products.find(p => p.id === id)
 
 if(!product) return
 
-document.getElementById("productName").
+document.getElementById("productName").innerText = product.name_ru
+document.getElementById("productNameEn").innerText = product.name_en || ""
+
+document.getElementById("productStyle").innerText =
+(product.color || "") + " " + (product.style || "")
+
+document.getElementById("productPrice").innerText =
+product.price ? product.price + " ₽" : ""
+
+document.getElementById("productCategory").innerText =
+translateCategory(product.category)
+
+document.getElementById("productImage").src =
+product.image || "/assets/wine-placeholder.png"
+
+renderSpecs(product)
+
+renderSimilar(products, product)
+
+}
+
+function renderSpecs(product){
+
+const box = document.getElementById("productSpecs")
+
+let html = ""
+
+if(product.country){
+
+html += `
+<div class="specRow">
+<div class="specName">Страна</div>
+<div class="specValue">${product.country}</div>
+</div>
+`
+
+}
+
+if(product.region){
+
+html += `
+<div class="specRow">
+<div class="specName">Регион</div>
+<div class="specValue">${product.region}</div>
+</div>
+`
+
+}
+
+if(product.grape){
+
+html += `
+<div class="specRow">
+<div class="specName">Сорт винограда</div>
+<div class="specValue">${product.grape}</div>
+</div>
+`
+
+}
+
+if(product.alcohol){
+
+html += `
+<div class="specRow">
+<div class="specName">Крепость</div>
+<div class="specValue">${product.alcohol}%</div>
+</div>
+`
+
+}
+
+box.innerHTML = html
+
+}
+
+function renderSimilar(products, product){
+
+const grid = document.getElementById("similarGrid")
+
+const similar = products
+.filter(p => p.category === product.category && p.id !== product.id)
+.slice(0,4)
+
+similar.forEach(p => {
+
+const card = document.createElement("div")
+card.className = "product-card"
+
+card.innerHTML = `
+<div class="wine-type">${translateCategory(p.category)}</div>
+<h3 class="wine-title">${p.name_ru}</h3>
+<div class="wine-style">${p.color || ""} ${p.style || ""}</div>
+<div class="wine-footer">
+<span class="wine-price">${p.price ? p.price + " ₽" : ""}</span>
+<a href="/product?id=${p.id}">Подробнее</a>
+</div>
+`
+
+grid.appendChild(card)
+
+})
+
+}
+
+loadProduct()
+
+</script>
+
+</body>
+</html>
+```
