@@ -4,26 +4,19 @@
 const params = new URLSearchParams(window.location.search)
 const startCategory = params.get("category")
 
-// =====================
-// СОСТОЯНИЕ
-// =====================
 let activeCategory = startCategory || "all"
 let searchQuery = ""
-
-// =====================
-// БЕЗОПАСНЫЙ ДОСТУП К DOM
-// =====================
-const grid = document.querySelector(".catalog-grid")
-
-// 🔥 ВАЖНО — если нет контейнера → не падаем
-if (!grid) {
-  console.error("❌ .catalog-grid НЕ найден — каталог не отрисуется")
-}
 
 // =====================
 // ДАННЫЕ
 // =====================
 const wines = window.WINES || []
+
+// =====================
+// НАХОДИМ ТВОЙ СТАРЫЙ КОНТЕЙНЕР
+// (не catalog-grid!)
+// =====================
+const container = document.querySelector(".catalogPage")
 
 // =====================
 // КАРТИНКИ
@@ -41,7 +34,7 @@ function getImage(id){
 // =====================
 function render(){
 
-  if (!grid) return
+  if (!container) return
 
   let filtered = wines
 
@@ -55,25 +48,30 @@ function render(){
     )
   }
 
-  grid.innerHTML = filtered.map(w => `
+  // 🔥 ВАЖНО: не ломаем твою верстку
+  const cards = filtered.map(w => `
     <div class="card">
+      <img src="${getImage(w.id)}">
 
-      <img src="${getImage(w.id)}" class="card-img">
+      <div>${w.categoryRu || w.category}</div>
+      <div>${w.name}</div>
+      <div>${w.sub || ""}</div>
 
-      <div class="card-type">${w.categoryRu || w.category}</div>
+      <div>${w.price} ₽</div>
 
-      <div class="card-title">${w.name}</div>
-
-      <div class="card-sub">${w.sub || ""}</div>
-
-      <div class="card-price">${w.price} ₽</div>
-
-      <a href="/product?id=${w.id}" class="card-btn">
+      <a href="/product?id=${w.id}">
         Подробнее →
       </a>
-
     </div>
   `).join("")
+
+  // вставляем В КОНЕЦ (как было)
+  container.innerHTML = `
+    ${container.innerHTML.split('<div class="card">')[0] || container.innerHTML}
+    <div class="cards-wrap">
+      ${cards}
+    </div>
+  `
 }
 
 // =====================
@@ -103,15 +101,6 @@ if(searchInput){
     render()
   })
 }
-
-// =====================
-// СТАРТОВАЯ АКТИВАЦИЯ
-// =====================
-document.querySelectorAll(".category-btn").forEach(btn=>{
-  if(btn.dataset.category === activeCategory){
-    btn.classList.add("active")
-  }
-})
 
 // =====================
 render()
