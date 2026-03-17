@@ -1,17 +1,21 @@
 // =====================
-// ПАРАМЕТРЫ URL
+// СОСТОЯНИЕ
 // =====================
 const params = new URLSearchParams(window.location.search)
+
 let activeCategory = params.get("category") || "all"
 let searchQuery = ""
 
-// =====================
 let wines = []
 
+// =====================
+// DOM
+// =====================
 const container = document.querySelector(".catalogPage")
+const searchInput = document.querySelector(".search-input")
 
 // =====================
-// ЗАГРУЗКА ДАННЫХ
+// ЗАГРУЗКА JSON
 // =====================
 async function loadData(){
   try {
@@ -21,18 +25,19 @@ async function loadData(){
     render()
 
   } catch(e){
-    console.error("Ошибка загрузки данных", e)
+    console.error("Ошибка загрузки products.json", e)
   }
 }
 
 // =====================
-// КАРТИНКИ
+// КАРТИНКИ (оставляем как есть)
 // =====================
 function getImage(id){
   const map = {
     1: "./assets/wines/арманьяк сент обен.png",
     5: "./assets/wines/марселан дивноморское.jpg"
   }
+
   return map[id] || "./assets/no-wine.png"
 }
 
@@ -45,29 +50,44 @@ function render(){
 
   let filtered = wines
 
+  // фильтр категории
   if(activeCategory !== "all"){
     filtered = filtered.filter(w => w.category === activeCategory)
   }
 
+  // поиск
   if(searchQuery){
     filtered = filtered.filter(w =>
-      w.name?.toLowerCase().includes(searchQuery)
+      w.name_ru?.toLowerCase().includes(searchQuery)
     )
   }
 
   const cards = filtered.map(w => `
     <div class="card">
-      <img src="${getImage(w.id)}">
 
-      <div>${w.category}</div>
-      <div>${w.name}</div>
-      <div>${w.type || ""}</div>
+      <img src="${getImage(w.id)}" alt="${w.name_ru}">
 
-      <div>${w.price} ₽</div>
+      <div class="card-type">
+        ${w.category}
+      </div>
 
-      <a href="/product?id=${w.id}">
+      <div class="card-title">
+        ${w.name_en ? `<div class="en">${w.name_en}</div>` : ""}
+        <div class="ru">${w.name_ru}</div>
+      </div>
+
+      <div class="card-meta">
+        ${w.color || ""} ${w.style || ""}
+      </div>
+
+      <div class="card-price">
+        ${w.price} ₽
+      </div>
+
+      <a class="card-btn" href="/product?id=${w.id}">
         Подробнее →
       </a>
+
     </div>
   `).join("")
 
@@ -79,7 +99,7 @@ function render(){
 }
 
 // =====================
-// КНОПКИ
+// КАТЕГОРИИ
 // =====================
 document.querySelectorAll(".category-btn").forEach(btn=>{
   btn.addEventListener("click", ()=>{
@@ -97,8 +117,6 @@ document.querySelectorAll(".category-btn").forEach(btn=>{
 // =====================
 // ПОИСК
 // =====================
-const searchInput = document.querySelector(".search-input")
-
 if(searchInput){
   searchInput.addEventListener("input", e=>{
     searchQuery = e.target.value.toLowerCase()
