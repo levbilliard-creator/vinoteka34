@@ -1,55 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Вино — ВИНОТЕКА</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Товар</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
-  <div class="logo">
-    <a href="./index.html">ВИНОТЕКА</a>
-  </div>
-
-  <nav class="nav">
-    <a href="./index.html">Главная</a>
-    <a href="./catalog.html">Каталог</a>
-    <a href="./index.html#degustation">Дегустации</a>
-    <a href="./index.html#contacts">Контакты</a>
+  <div class="logo">ВИНОТЕКА</div>
+  <nav>
+    <a href="/">Главная</a>
+    <a href="/catalog">Каталог</a>
+    <a href="#">Дегустации</a>
+    <a href="#">Контакты</a>
   </nav>
 </header>
 
+<div class="productPage">
 
-<!-- PRODUCT -->
-<div class="productWrapper">
-  <!-- сюда JS вставляет товар -->
+  <div class="product-left">
+    <img id="productImage" class="product-img">
+  </div>
+
+  <div class="product-right">
+
+    <div id="productType" class="wine-type"></div>
+
+    <h1 id="productName"></h1>
+
+    <div id="productStyle" class="wine-style"></div>
+
+    <div id="productPrice" class="price"></div>
+
+    <button class="btn-main">Спросить сомелье</button>
+
+  </div>
+
 </div>
-
-
-<!-- РЕКОМЕНДАЦИИ -->
-<h2 class="section-title">Похожие товары</h2>
-
-<div class="recommendGrid">
-  <!-- сюда JS вставляет похожие -->
-</div>
-
-
-<!-- FOOTER INFO (чтобы страницы не были пустыми) -->
-<section class="info-section">
-  <h2>Дегустации</h2>
-  <p>Каждую пятницу в 20:00</p>
-</section>
-
-<section class="info-section">
-  <h2>Контакты</h2>
-  <p>г. Москва</p>
-  <p>Карамышевская набережная, д. 34</p>
-</section>
-
 
 <script src="./product.js"></script>
 

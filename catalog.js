@@ -11,8 +11,6 @@ async function init(){
   const res = await fetch("./data/products.json")
   ALL = await res.json()
 
-  console.log("ВСЕ ТОВАРЫ:", ALL) // для проверки
-
   render(ALL)
   bindButtons()
   bindSearch()
@@ -32,16 +30,12 @@ function bindButtons(){
 
       const type = btn.dataset.type
 
-      console.log("ФИЛЬТР:", type)
-
       if(type === "all"){
         render(ALL)
         return
       }
 
       const filtered = ALL.filter(w => w.type === type)
-
-      console.log("НАЙДЕНО:", filtered.length)
 
       render(filtered)
 
@@ -72,6 +66,19 @@ function bindSearch(){
 }
 
 
+/* ===== КАРТИНКИ ===== */
+
+function getImage(id){
+
+  const map = {
+    1: "./assets/wines/арманьяк сент обен.png",
+    5: "./assets/wines/марселан дивноморское.jpg"
+  }
+
+  return map[id] || "./assets/no-wine.png"
+}
+
+
 /* ===== РЕНДЕР ===== */
 
 function render(items){
@@ -88,7 +95,7 @@ function render(items){
     grid.innerHTML += `
       <div class="product-card">
 
-        <img src="${w.image || './assets/no-wine.png'}" class="wine-img">
+        <img src="${getImage(w.id)}" class="wine-img">
 
         <div class="wine-type">${translate(w.type)}</div>
 

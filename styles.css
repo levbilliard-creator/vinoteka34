@@ -289,4 +289,45 @@ flex-direction:column;
 .catalogGrid{
 grid-template-columns:1fr;
 }
+}.hero {
+  height: 90vh;
+  background: url('./assets/bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-info {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+  white-space: nowrap;
+}.productPage {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  align-items: center;
+  height: calc(100vh - 80px);
+}
+
+.product-img {
+  width: 300px;
+  height: 400px;
+  object-fit: contain;
+  background: #163242;
+  border-radius: 20px;
+}
+
+.product-right {
+  max-width: 500px;
+}
+
+.price {
+  font-size: 28px;
+  margin: 15px 0;
 }

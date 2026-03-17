@@ -1,65 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Винотека</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Винотека</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
 
 <header class="header">
-  <div class="logo">
-    <a href="./index.html">ВИНОТЕКА</a>
-  </div>
-
-  <nav class="nav">
-    <a href="./index.html">Главная</a>
-    <a href="./catalog.html">Каталог</a>
-    <a href="#degustation">Дегустации</a>
-    <a href="#contacts">Контакты</a>
+  <div class="logo">ВИНОТЕКА</div>
+  <nav>
+    <a href="/">Главная</a>
+    <a href="/catalog">Каталог</a>
+    <a href="#">Дегустации</a>
+    <a href="#">Контакты</a>
   </nav>
 </header>
 
-
 <section class="hero">
 
-  <video autoplay muted loop playsinline class="heroVideo">
-    <source src="./assets/hero.mp4" type="video/mp4">
-  </video>
+  <div class="hero-content">
 
-  <div class="heroOverlay"></div>
-
-  <div class="heroContent">
     <h1>ВИНОТЕКА</h1>
-    <div class="subtitle">Винный бутик и клуб сомелье</div>
-    <div class="desc">
-      Более 500 вин со всего мира.<br>
-      Подбор вина и дегустации.
-    </div>
+
+    <p class="hero-sub">
+      Винный бутик и клуб сомелье<br>
+      Более 500 вин со всего мира
+    </p>
 
     <div class="hero-buttons">
-      <a href="./catalog.html" class="btn-main">Смотреть каталог</a>
-      <a href="./catalog.html" class="btn-ghost">Подобрать вино</a>
+      <a href="/catalog" class="btn-main">Смотреть каталог</a>
+      <a href="#" class="btn-outline">Подобрать вино</a>
     </div>
+
+    <!-- НОВАЯ СТРОКА -->
+    <div class="hero-info">
+      Дегустации каждую пятницу в 20:00 • г. Москва, Карамышевская набережная, д. 34
+    </div>
+
   </div>
 
 </section>
-
-
-<section id="degustation" class="info-section">
-  <h2>Дегустации</h2>
-  <p>Каждую пятницу в 20:00</p>
-</section>
-
-
-<section id="contacts" class="info-section">
-  <h2>Контакты</h2>
-  <p>г. Москва</p>
-  <p>Карамышевская набережная, д. 34</p>
-</section>
-
 
 </body>
 </html>
