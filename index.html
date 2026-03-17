@@ -3,57 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Винотека</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header class="header">
-  <div class="logo">ВИНОТЕКА</div>
+  <a href="/" class="logo">ВИНОТЕКА</a>
+
+  <div class="header-right">
+    <nav class="nav">
+      <a href="/">Главная</a>
+      <a href="/catalog.html">Каталог</a>
+      <a href="#">Дегустации</a>
+      <a href="#">Контакты</a>
+    </nav>
+
+    <div class="phone">
+      +7 (999) 123-45-67
+    </div>
+  </div>
 </header>
 
 
 <section class="hero">
 
-  <!-- ВАЖНО: видео -->
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="./assets/hero.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline>
+    <source src="./hero.mp4" type="video/mp4">
   </video>
 
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-
     <h1>ВИНОТЕКА</h1>
 
-    <p class="hero-sub">
+    <p>
       Винный бутик и клуб сомелье<br>
       Более 500 вин со всего мира
     </p>
 
     <div class="hero-buttons">
-      <a href="/catalog" class="btn-main">Смотреть каталог</a>
-
-      <!-- ВАЖНО: ведет сразу в ВИНО -->
-      <a href="/catalog?category=wine" class="btn-outline">
-        Подобрать вино
-      </a>
+      <a href="/catalog.html" class="btn-main">Смотреть каталог</a>
+      <a href="#" class="btn-secondary">Подобрать вино</a>
     </div>
 
-    <div class="hero-info">
-      Дегустации каждую пятницу в 20:00 • г. Москва, Карамышевская набережная, д. 34
+    <div class="hero-note">
+      Дегустации каждую пятницу • Москва, Карамышевская набережная, 34
     </div>
-
   </div>
 
 </section>
-
-
-<!-- КНОПКА ТЕЛЕФОНА -->
-<a href="tel:+74959471010" class="call-btn">
-  ☎
-</a>
 
 </body>
 </html>
