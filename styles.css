@@ -1,269 +1,97 @@
-/* ================= RESET ================= */
-* {
+/* ===== RESET ===== */
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+
+/* ===== BODY ===== */
+
+body{
   font-family: Inter, Arial, sans-serif;
   background: #0b0f14;
-  color: #fff;
+  color: #ffffff;
 }
 
-/* ================= HEADER ================= */
-.header {
-  height: 80px;
+
+/* ===== HEADER ===== */
+
+.header{
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 600;
-  color: #b66cff;
-}
-
-.header-phone {
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-/* ================= HERO ================= */
-.hero {
-  position: relative;
-  height: calc(100vh - 80px);
-  overflow: hidden;
-
-  display: flex;
-  align-items: flex-start;
-
-  padding-top: 120px;
-}
-
-/* видео */
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-/* затемнение */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-
-/* контент */
-.hero-content {
-  position: relative;
-  z-index: 2;
-
-  max-width: 600px;
-  margin-left: 8%;
-
-  text-align: left;
-}
-
-.hero h1 {
-  font-size: 72px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-
-.hero-sub {
-  color: #ccc;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.btn-main {
-  padding: 14px 28px;
-  background: linear-gradient(135deg, #7c5cff, #ff5ca8);
-  border-radius: 12px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.btn-outline {
-  padding: 14px 28px;
-  border: 1px solid #7c5cff;
-  border-radius: 12px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.hero-info {
-  color: #aaa;
-  font-size: 14px;
-}
-
-/* ================= КНОПКА ЗВОНКА ================= */
-.call-btn {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-
-  width: 65px;
-  height: 65px;
-
-  background: linear-gradient(135deg, #7c5cff, #ff5ca8);
-  border-radius: 50%;
-
-  display: flex;
   align-items: center;
-  justify-content: center;
-
-  color: #fff;
-  font-size: 26px;
-
-  text-decoration: none;
-
-  box-shadow: 0 0 25px rgba(255, 92, 168, 0.7);
-
-  z-index: 9999;
+  padding: 20px 40px;
 }
 
-/* ================= CATALOG ================= */
-
-/* ВАЖНО: поддержка ОБОИХ вариантов */
-.catalog,
-.catalogPage {
-  display: flex;
-  gap: 30px;
-  padding: 40px;
-}
-
-/* sidebar */
-.sidebar {
-  width: 260px;
-}
-
-/* кнопки категорий */
-.category-btn {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  background: #ddd;
-  cursor: pointer;
-}
-
-.category-btn.active {
-  background: linear-gradient(135deg, #7c5cff, #ff5ca8);
-  color: #fff;
-}
-
-/* сетка */
-.catalog-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  flex: 1;
-}
-
-/* карточка */
-.card {
-  background: #173240;
-  padding: 15px;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* картинка */
-.card img,
-.card-img {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-/* тип */
-.card-type {
-  font-size: 12px;
-  color: #8cc;
-}
-
-/* название */
-.card-title {
-  font-weight: 600;
-  margin: 5px 0;
-}
-
-/* подтип */
-.card-sub {
-  font-size: 13px;
-  color: #aaa;
-}
-
-/* цена */
-.card-price {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-/* кнопка */
-.card-btn {
-  margin-top: auto;
-  display: inline-block;
-  padding: 10px 16px;
-  background: linear-gradient(135deg, #7c5cff, #ff5ca8);
-  border-radius: 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* ================= PRODUCT ================= */
-
-.product-page {
-  display: flex;
-  gap: 40px;
-  padding: 40px;
-}
-
-.product-img {
-  width: 300px;
-  height: 500px;
-  object-fit: contain;
-}
-
-.product-info h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.product-price {
+.logo{
   font-size: 24px;
-  margin: 20px 0;
-}/* ===== СЕТКА КАТАЛОГА ===== */
+  font-weight: bold;
+  color: #9b5cff;
+  text-decoration: none;
+}
+
+.nav a{
+  margin-left: 20px;
+  text-decoration: none;
+  color: #9b5cff;
+}
+
+
+/* ===== PAGE TITLE ===== */
+
+h1{
+  font-size: 28px;
+  margin: 20px 40px;
+}
+
+
+/* ===== FILTERS ===== */
+
+.catalog-controls{
+  padding: 0 40px 20px;
+}
+
+#searchInput{
+  padding: 8px;
+  width: 240px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.categories{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.categories button{
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #1a2a33;
+  color: white;
+}
+
+.categories button.active{
+  background: #9b5cff;
+}
+
+
+/* ===== GRID ===== */
 
 .catalogGrid{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 20px 40px 40px;
 }
 
 
-/* ===== КАРТОЧКА ===== */
+/* ===== CARD ===== */
 
 .product-card{
   background: #11222c;
@@ -271,31 +99,35 @@ body {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  transition: 0.2s;
+}
+
+.product-card:hover{
+  transform: translateY(-4px);
 }
 
 
-/* ===== КАРТИНКА ===== */
+/* ===== IMAGE ===== */
 
 .wine-img{
   width: 100%;
   height: 220px;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 
-/* ===== ТЕКСТ ===== */
+/* ===== TEXT ===== */
 
 .wine-type{
-  font-size: 12px;
-  opacity: 0.6;
-  margin-bottom: 6px;
+  font-size: 11px;
+  color: #8fa3ad;
+  margin-bottom: 4px;
 }
 
 .wine-en{
-  font-size: 13px;
-  opacity: 0.7;
+  font-size: 12px;
+  opacity: 0.5;
 }
 
 .wine-ru{
@@ -313,11 +145,11 @@ body {
 .wine-price{
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 
-/* ===== КНОПКА ===== */
+/* ===== BUTTON ===== */
 
 .btn-link{
   display: block;
@@ -327,4 +159,70 @@ body {
   background: linear-gradient(90deg,#7b5cff,#ff4fa3);
   color: white;
   text-decoration: none;
+  margin-top: auto;
+}
+
+
+/* ===== HERO (главная страница) ===== */
+
+.hero{
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-content h1{
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero-content p{
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.hero-content a{
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#7b5cff,#ff4fa3);
+  color: white;
+  text-decoration: none;
+}
+
+
+/* ===== PRODUCT PAGE (на будущее) ===== */
+
+.product-page{
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.product-page img{
+  width: 300px;
+  object-fit: contain;
+}
+
+.product-info h2{
+  margin-bottom: 10px;
+}
+
+.product-info p{
+  opacity: 0.7;
+  margin-bottom: 10px;
 }

@@ -7,13 +7,16 @@ const searchInput = document.getElementById("searchInput")
 init()
 
 async function init(){
+  try{
+    const res = await fetch("./data/products.json")
+    ALL = await res.json()
 
-  const res = await fetch("./data/products.json")
-  ALL = await res.json()
-
-  render(ALL)
-  bindButtons()
-  bindSearch()
+    render(ALL)
+    bindButtons()
+    bindSearch()
+  }catch(e){
+    console.error("Ошибка загрузки данных", e)
+  }
 }
 
 
@@ -83,6 +86,11 @@ function getImage(id){
 
 function render(items){
 
+  if(!grid){
+    console.error("catalogGrid не найден")
+    return
+  }
+
   grid.innerHTML = ""
 
   if(items.length === 0){
@@ -99,12 +107,15 @@ function render(items){
 
         <div class="wine-type">${translate(w.type)}</div>
 
-        <div class="wine-en">${w.name_en || ""}</div>
+        ${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
+
         <div class="wine-ru">${w.name_ru}</div>
 
-        <div class="wine-style">
-          ${w.color || ""} ${w.style || ""}
-        </div>
+        ${(w.color || w.style) ? `
+          <div class="wine-style">
+            ${w.color || ""} ${w.style || ""}
+          </div>
+        ` : ""}
 
         <div class="wine-price">${w.price} ₽</div>
 
