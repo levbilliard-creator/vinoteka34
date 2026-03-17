@@ -1,333 +1,287 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-font-family:Inter, Arial, sans-serif;
-background:#0b0f14;
-color:#fff;
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #0b0f14;
+  color: #fff;
+  line-height: 1.4;
 }
 
-/* HEADER */
-
-.header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-border-bottom:1px solid #1b2630;
-position:sticky;
-top:0;
-background:#0b0f14;
-z-index:100;
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.logo a{
-font-size:24px;
-font-weight:700;
-letter-spacing:2px;
-text-decoration:none;
-background:linear-gradient(90deg,#7b5cff,#ff6ec7);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg,#7c3aed,#ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* КНОПКИ ВМЕСТО ССЫЛОК */
-
-.nav a{
-margin-left:10px;
-padding:10px 18px;
-border-radius:12px;
-border:1px solid rgba(185,124,255,0.25);
-text-decoration:none;
-color:#c97cff;
-transition:0.25s;
+.header nav {
+  display: flex;
+  gap: 12px;
 }
 
-.nav a:hover{
-background:linear-gradient(90deg,#7b5cff,#ff6ec7);
-color:#fff;
-border:none;
+.header nav a {
+  padding: 8px 16px;
+  border: 1px solid #7c3aed;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
-/* HERO */
-
-.hero{
-min-height:70vh;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
+.header nav a:hover {
+  background: linear-gradient(90deg,#7c3aed,#ec4899);
 }
 
-.heroVideo{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-filter:brightness(0.4);
-}
-
-.heroContent{
-position:relative;
-text-align:center;
-}
-
-.hero h1{
-font-size:64px;
-}
-
-.btn-main{
-background:linear-gradient(90deg,#7b5cff,#ff6ec7);
-padding:14px 28px;
-border-radius:10px;
-color:#fff;
-text-decoration:none;
-margin-right:10px;
-}
-
-.btn-ghost{
-border:1px solid #b97cff;
-padding:14px 28px;
-border-radius:10px;
-color:#b97cff;
-text-decoration:none;
-}
-
-/* CATALOG FIX (ГЛАВНОЕ) */
-
-.catalogPage{
-max-width:1400px;
-margin:40px auto;
-padding:0 20px;
-
-display:grid;
-grid-template-columns:260px 1fr;
-gap:40px;
-
-align-items:start;
-}
-
-/* УБИРАЕМ ОБРЕЗАНИЕ */
-html, body{
-height:auto;
-overflow-x:hidden;
-}
-
-/* SIDEBAR */
-
-.sidebar input{
-width:100%;
-padding:12px;
-border-radius:10px;
-border:none;
-margin-bottom:16px;
-}
-
-.categories{
-background:#173040;
-padding:15px;
-border-radius:14px;
-}
-
-.categories button{
-width:100%;
-padding:12px;
-margin:6px 0;
-border:none;
-border-radius:10px;
-background:#e4e4e4;
-cursor:pointer;
-}
-
-.categories button.active{
-background:linear-gradient(90deg,#7b5cff,#ff6ec7);
-color:#fff;
-}
-
-/* GRID */
-
-.catalogGrid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:24px;
-}
-
-/* CARD */
-
-.product-card{
-background:#163343;
-border-radius:16px;
-padding:16px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-min-height:320px;
-transition:0.3s;
-}
-
-.product-card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
-.wine-img{
-width:100%;
-height:180px;
-object-fit:contain;
-margin-bottom:10px;
-}
-
-.wine-type{
-font-size:12px;
-background:#2b5566;
-padding:4px 10px;
-border-radius:8px;
-margin-bottom:6px;
-width:fit-content;
-}
-
-.wine-en{
-font-size:11px;
-opacity:0.6;
-}
-
-.wine-ru{
-font-size:15px;
-font-weight:600;
-margin:6px 0;
-}
-
-.wine-price{
-font-size:18px;
-font-weight:bold;
-margin:10px 0;
-}
-
-.btn-link{
-background:linear-gradient(90deg,#7b5cff,#ff6ec7);
-padding:10px;
-border-radius:10px;
-color:#fff;
-text-align:center;
-text-decoration:none;
-}
-
-/* PRODUCT PAGE */
-
-.productWrapper{
-display:flex;
-gap:40px;
-max-width:1200px;
-margin:60px auto;
-padding:0 20px;
-}
-
-.productImage{
-width:420px;
-background:#163343;
-border-radius:20px;
-padding:20px;
-}
-
-.wine-img-big{
-width:100%;
-height:400px;
-object-fit:contain;
-}
-
-.productInfo{
-max-width:500px;
-}
-
-.wine-price-big{
-font-size:32px;
-margin:20px 0;
-}
-
-.wine-btn{
-background:linear-gradient(90deg,#7b5cff,#ff6ec7);
-padding:14px 24px;
-border-radius:10px;
-border:none;
-color:#fff;
-cursor:pointer;
-}
-
-/* РЕКОМЕНДАЦИИ */
-
-.recommendGrid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-max-width:1200px;
-margin:20px auto 60px;
-padding:0 20px;
-}
-
-/* FIX MOBILE */
-
-@media(max-width:900px){
-
-.catalogPage{
-grid-template-columns:1fr;
-}
-
-.catalogGrid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.productWrapper{
-flex-direction:column;
-}
-
-}
-
-@media(max-width:600px){
-.catalogGrid{
-grid-template-columns:1fr;
-}
-}.hero {
-  height: 90vh;
-  background: url('./assets/bg.jpg') center/cover no-repeat;
+/* ===== HERO ===== */
+.hero {
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 40px 20px;
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .hero-info {
-  margin-top: 20px;
   font-size: 14px;
+  opacity: 0.6;
+}
+
+/* ===== BUTTONS ===== */
+.btn-main {
+  padding: 12px 24px;
+  border-radius: 12px;
+  background: linear-gradient(90deg,#7c3aed,#ec4899);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-outline {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid #7c3aed;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== CATALOG PAGE ===== */
+.catalogPage {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 30px;
+  padding: 30px 40px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.categories {
+  background: #173140;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.categories button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #d9d9d9;
+}
+
+.categories button.active {
+  background: linear-gradient(90deg,#7c3aed,#ec4899);
+  color: #fff;
+}
+
+/* ===== GRID ===== */
+.catalogGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.product-card {
+  background: #173140;
+  padding: 15px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wine-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #1e3a4a;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.wine-type {
+  font-size: 12px;
   opacity: 0.7;
-  white-space: nowrap;
-}.productPage {
+  margin-bottom: 5px;
+}
+
+.wine-en {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.wine-ru {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.wine-style {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.wine-price {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.btn-link {
+  margin-top: auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#7c3aed,#ec4899);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== PRODUCT PAGE ===== */
+.productPage {
   display: flex;
   gap: 40px;
   padding: 40px;
-  align-items: center;
-  height: calc(100vh - 80px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-left {
+  flex: 0 0 320px;
 }
 
 .product-img {
-  width: 300px;
-  height: 400px;
+  width: 100%;
+  height: 420px;
   object-fit: contain;
   background: #163242;
   border-radius: 20px;
+  padding: 20px;
 }
 
 .product-right {
-  max-width: 500px;
+  flex: 1;
+}
+
+.product-right h1 {
+  font-size: 32px;
+  margin: 10px 0;
 }
 
 .price {
   font-size: 28px;
   margin: 15px 0;
+}
+
+/* ===== SIMILAR ===== */
+.similarGrid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  padding: 20px 40px;
+}
+
+/* ===== FOOTER (запас) ===== */
+.footer {
+  padding: 40px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+  .catalogGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .productPage {
+    flex-direction: column;
+  }
+
+  .similarGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .catalogPage {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogGrid {
+    grid-template-columns: 1fr;
+  }
 }
