@@ -26,16 +26,12 @@ body {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-}
-
-.phone-number {
   color: white;
-  font-size: 16px;
 }
 
 .phone-icon {
-  font-size: 18px;
   animation: pulse 1.5s infinite;
+  cursor: pointer;
 }
 
 @keyframes pulse {
@@ -45,7 +41,77 @@ body {
 }
 
 
-/* ===== СТРАНИЦА ===== */
+/* =========================
+   ГЛАВНАЯ (НЕ ЛОМАЕМ)
+========================= */
+
+.hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./assets/hero.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  text-align: left;
+  margin-left: -120px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.btn-main {
+  padding: 14px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: linear-gradient(90deg, #7b61ff, #ff4fa3);
+  color: white;
+}
+
+.btn-secondary {
+  padding: 14px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.hero-info {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+/* =========================
+   КАТАЛОГ (НЕ ТРОГАЕМ)
+========================= */
 
 .catalog-page {
   display: flex;
@@ -53,15 +119,8 @@ body {
   padding: 30px 40px;
 }
 
-
-/* ===== SIDEBAR ===== */
-
 .sidebar {
   width: 260px;
-}
-
-.sidebar h2 {
-  margin-bottom: 15px;
 }
 
 .sidebar input {
@@ -71,9 +130,6 @@ body {
   border: none;
   margin-bottom: 20px;
 }
-
-
-/* ===== КНОПКИ ===== */
 
 .categories {
   display: flex;
@@ -87,23 +143,17 @@ body {
   border: none;
   background: #2a2a2a;
   color: white;
-  cursor: pointer;
   text-align: left;
+  cursor: pointer;
 }
 
 .categories button.active {
   background: linear-gradient(90deg, #7b61ff, #ff4fa3);
 }
 
-
-/* ===== КОНТЕНТ ===== */
-
 .catalog-content {
   flex: 1;
 }
-
-
-/* ===== СЕТКА ===== */
 
 .catalogGrid {
   display: grid;
@@ -112,7 +162,7 @@ body {
 }
 
 
-/* ===== КАРТОЧКА ===== */
+/* ===== КАРТОЧКИ ===== */
 
 .product-card {
   background: #132733;
@@ -122,9 +172,6 @@ body {
   flex-direction: column;
 }
 
-
-/* ===== КАРТИНКА ===== */
-
 .wine-img {
   width: 100%;
   height: 180px;
@@ -133,9 +180,6 @@ body {
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
-
-/* ===== ТЕКСТ ===== */
 
 .wine-type {
   font-size: 12px;
@@ -162,17 +206,14 @@ body {
   margin: 10px 0;
 }
 
-
-/* ===== КНОПКА ===== */
-
 .btn-link {
   margin-top: auto;
-  text-decoration: none;
   text-align: center;
   padding: 12px;
   border-radius: 12px;
   background: linear-gradient(90deg, #7b61ff, #ff4fa3);
   color: white;
+  text-decoration: none;
 }
 
 
@@ -182,10 +223,6 @@ body {
 
   .catalog-page {
     flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
   }
 
   .catalogGrid {
