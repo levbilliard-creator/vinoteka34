@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Винотека</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
 
+<!-- HEADER (без меню) -->
 <header class="header">
   <div class="logo">ВИНОТЕКА</div>
-  <nav>
-    <a href="/">Главная</a>
-    <a href="/catalog">Каталог</a>
-    <a href="#">Дегустации</a>
-    <a href="#">Контакты</a>
-  </nav>
 </header>
 
+
+<!-- HERO С ВИДЕО -->
 <section class="hero">
+
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="./assets/hero.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
 
   <div class="hero-content">
 
@@ -31,10 +35,9 @@
 
     <div class="hero-buttons">
       <a href="/catalog" class="btn-main">Смотреть каталог</a>
-      <a href="#" class="btn-outline">Подобрать вино</a>
+      <a href="/catalog" class="btn-outline">Подобрать вино</a>
     </div>
 
-    <!-- НОВАЯ СТРОКА -->
     <div class="hero-info">
       Дегустации каждую пятницу в 20:00 • г. Москва, Карамышевская набережная, д. 34
     </div>
@@ -42,6 +45,12 @@
   </div>
 
 </section>
+
+
+<!-- КНОПКА ЗВОНКА -->
+<a href="tel:+74959471010" class="call-btn">
+  ☎ +7 495 947-10-10
+</a>
 
 </body>
 </html>
