@@ -9,15 +9,14 @@
 
 <body>
 
-<!-- HEADER (без меню) -->
 <header class="header">
   <div class="logo">ВИНОТЕКА</div>
 </header>
 
 
-<!-- HERO С ВИДЕО -->
 <section class="hero">
 
+  <!-- ВАЖНО: видео -->
   <video autoplay muted loop playsinline class="hero-video">
     <source src="./assets/hero.mp4" type="video/mp4">
   </video>
@@ -35,7 +34,11 @@
 
     <div class="hero-buttons">
       <a href="/catalog" class="btn-main">Смотреть каталог</a>
-      <a href="/catalog" class="btn-outline">Подобрать вино</a>
+
+      <!-- ВАЖНО: ведет сразу в ВИНО -->
+      <a href="/catalog?category=wine" class="btn-outline">
+        Подобрать вино
+      </a>
     </div>
 
     <div class="hero-info">
@@ -47,9 +50,9 @@
 </section>
 
 
-<!-- КНОПКА ЗВОНКА -->
+<!-- КНОПКА ТЕЛЕФОНА -->
 <a href="tel:+74959471010" class="call-btn">
-  ☎ +7 495 947-10-10
+  ☎
 </a>
 
 </body>
