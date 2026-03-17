@@ -17,7 +17,7 @@ async function init(){
 }
 
 
-/* ===== НОРМАЛИЗАЦИЯ ===== */
+/* ===== НОРМАЛИЗАЦИЯ ВСЕХ КАТЕГОРИЙ ===== */
 
 function normalize(type){
 
@@ -29,6 +29,11 @@ function normalize(type){
   if(t.includes("игрист")) return "sparkling"
   if(t.includes("пиво")) return "beer"
   if(t.includes("креп")) return "strong"
+
+  if(t.includes("безалког")) return "soft"
+  if(t.includes("бакале")) return "grocery"
+  if(t.includes("чай")) return "tea"
+  if(t.includes("аксесс")) return "accessories"
 
   return "other"
 }
@@ -90,7 +95,7 @@ function render(items){
   grid.innerHTML = ""
 
   if(items.length === 0){
-    grid.innerHTML = "<p>Ничего не найдено</p>"
+    grid.innerHTML = "<p>Нет товаров</p>"
     return
   }
 
