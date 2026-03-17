@@ -280,6 +280,168 @@ cursor:pointer;
   border-radius:10px;
   color:#fff;
   cursor:pointer;
+}.hero{
+  position:relative;
+  height:80vh;
+  background:url('/assets/hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+  position:relative;
+  text-align:center;
+  color:#fff;
+}
+
+.hero h1{
+  font-size:64px;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.desc{
+  opacity:0.8;
+  margin-bottom:20px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+}
+
+.btn-main{
+  background:#b97cff;
+  padding:12px 24px;
+  border-radius:10px;
+  color:#fff;
+  text-decoration:none;
+}
+
+.btn-ghost{
+  border:1px solid #b97cff;
+  padding:12px 24px;
+  border-radius:10px;
+  color:#b97cff;
+  text-decoration:none;
+}/* HERO */
+.hero{
+  position:relative;
+  height:80vh;
+  background:url('/assets/hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+  position:relative;
+  text-align:center;
+  color:#fff;
+}
+
+.hero h1{
+  font-size:64px;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.desc{
+  opacity:0.8;
+  margin-bottom:20px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+}
+
+.btn-main{
+  background:#b97cff;
+  padding:12px 24px;
+  border-radius:10px;
+  color:#fff;
+  text-decoration:none;
+}
+
+.btn-ghost{
+  border:1px solid #b97cff;
+  padding:12px 24px;
+  border-radius:10px;
+  color:#b97cff;
+  text-decoration:none;
+}
+
+/* PRODUCT PAGE */
+.productWrapper{
+  display:flex;
+  gap:40px;
+  margin-top:40px;
+}
+
+.productImage{
+  width:400px;
+  background:#163343;
+  border-radius:20px;
+  padding:20px;
+}
+
+.wine-img-big{
+  width:100%;
+  height:400px;
+  object-fit:contain;
+}
+
+.productInfo{
+  max-width:500px;
+}
+
+.wine-price-big{
+  font-size:28px;
+  font-weight:bold;
+  margin:20px 0;
+}
+
+.wine-btn{
+  background:#b97cff;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  color:#fff;
+  cursor:pointer;
+}
+
+.wine-description{
+  margin-top:20px;
+  opacity:0.8;
+  line-height:1.5;
+}
+
+.section-title{
+  margin:40px 0 20px;
 }
 
 
