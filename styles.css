@@ -11,8 +11,8 @@
 
 body{
   font-family: Inter, Arial, sans-serif;
-  background: #0b0f14;
-  color: #ffffff;
+  background: #070b10;
+  color: #fff;
 }
 
 
@@ -32,151 +32,31 @@ body{
   text-decoration: none;
 }
 
-.nav a{
-  margin-left: 20px;
+
+/* ===== PHONE ===== */
+
+.phone-block{
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
-  color: #9b5cff;
-}
-
-
-/* ===== LAYOUT КАТАЛОГА (ВАЖНО) ===== */
-
-.catalog-page{
-  display: flex;
-  align-items: flex-start;
-}
-
-
-/* ===== ЛЕВАЯ КОЛОНКА ===== */
-
-.sidebar{
-  width: 260px;
-  padding: 20px;
-}
-
-.sidebar h1{
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-#searchInput{
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  margin-bottom: 20px;
-}
-
-
-/* ===== КАТЕГОРИИ (ВЕРТИКАЛЬНО) ===== */
-
-.categories{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.categories button{
-  padding: 12px;
-  border-radius: 12px;
-  border: none;
-  background: #2a2a2a;
   color: white;
-  cursor: pointer;
-  text-align: left;
 }
 
-.categories button.active{
-  background: linear-gradient(90deg,#7b5cff,#ff4fa3);
-}
-
-
-/* ===== ПРАВАЯ ЧАСТЬ ===== */
-
-.catalog-content{
-  flex: 1;
-}
-
-
-/* ===== GRID ===== */
-
-.catalogGrid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
-
-/* ===== CARD ===== */
-
-.product-card{
-  background: #11222c;
-  border-radius: 16px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.2s;
-}
-
-.product-card:hover{
-  transform: translateY(-4px);
-}
-
-
-/* ===== IMAGE ===== */
-
-.wine-img{
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-
-/* ===== TEXT ===== */
-
-.wine-type{
-  font-size: 11px;
-  color: #8fa3ad;
-  margin-bottom: 4px;
-}
-
-.wine-en{
-  font-size: 12px;
-  opacity: 0.5;
-}
-
-.wine-ru{
-  font-size: 16px;
+.phone-number{
   font-weight: 600;
-  margin: 6px 0;
+  font-size: 16px;
 }
 
-.wine-style{
-  font-size: 13px;
-  opacity: 0.7;
-  margin-bottom: 8px;
-}
-
-.wine-price{
+.phone-icon{
   font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 12px;
+  animation: phonePulse 1.5s infinite;
 }
 
-
-/* ===== BUTTON ===== */
-
-.btn-link{
-  display: block;
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  background: linear-gradient(90deg,#7b5cff,#ff4fa3);
-  color: white;
-  text-decoration: none;
-  margin-top: auto;
+@keyframes phonePulse{
+  0%{ transform: scale(1); opacity: 1; }
+  50%{ transform: scale(1.25); opacity: 0.6; }
+  100%{ transform: scale(1); opacity: 1; }
 }
 
 
@@ -184,7 +64,7 @@ body{
 
 .hero{
   position: relative;
-  height: 80vh;
+  height: 85vh;
   overflow: hidden;
 }
 
@@ -194,52 +74,92 @@ body{
   object-fit: cover;
 }
 
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+
+/* ===== HERO CONTENT (ФИКС) ===== */
+
 .hero-content{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  width: 100%;
+  max-width: 520px; /* ВАЖНО — ограничение */
+  padding: 0 20px;
 }
+
+
+/* ===== ТЕКСТ ===== */
 
 .hero-content h1{
-  font-size: 42px;
-  margin-bottom: 10px;
+  font-size: 60px;
+  margin-bottom: 16px;
 }
 
-.hero-content p{
-  font-size: 18px;
-  opacity: 0.8;
-  margin-bottom: 20px;
+.hero-sub{
+  font-size: 20px;
+  line-height: 1.5;  /* ВАЖНО */
+  margin-bottom: 24px;
+  opacity: 0.85;
 }
 
-.hero-content a{
-  padding: 12px 20px;
-  border-radius: 10px;
+
+/* ===== КНОПКИ ===== */
+
+.hero-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.btn-main{
+  padding: 14px 24px;
+  border-radius: 12px;
   background: linear-gradient(90deg,#7b5cff,#ff4fa3);
   color: white;
   text-decoration: none;
 }
 
-
-/* ===== PRODUCT PAGE ===== */
-
-.product-page{
-  padding: 40px;
-  display: flex;
-  gap: 40px;
+.btn-secondary{
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  text-decoration: none;
 }
 
-.product-page img{
-  width: 300px;
-  object-fit: contain;
-}
 
-.product-info h2{
-  margin-bottom: 10px;
-}
+/* ===== NOTE ===== */
 
-.product-info p{
+.hero-note{
+  font-size: 14px;
   opacity: 0.7;
-  margin-bottom: 10px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px){
+
+  .hero-content{
+    max-width: 90%;
+  }
+
+  .phone-number{
+    display: none;
+  }
+
+  .phone-icon{
+    font-size: 22px;
+  }
+
 }
