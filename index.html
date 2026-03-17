@@ -11,23 +11,28 @@
 
 <header class="header">
   <div class="logo"><a href="./index.html">ВИНОТЕКА</a></div>
+
   <nav class="nav">
     <a href="./index.html">Главная</a>
     <a href="./catalog.html">Каталог</a>
-    <a href="#">Дегустации</a>
-    <a href="#">Контакты</a>
+    <a href="#degustation">Дегустации</a>
+    <a href="#contacts">Контакты</a>
   </nav>
 </header>
 
 
 <section class="hero">
 
+  <video autoplay muted loop playsinline class="heroVideo">
+    <source src="./assets/hero.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
   <div class="hero-content">
     <h1>ВИНОТЕКА</h1>
 
-    <p class="subtitle">
-      Винный бутик и клуб сомелье
-    </p>
+    <p class="subtitle">Винный бутик и клуб сомелье</p>
 
     <p class="desc">
       Более 500 вин со всего мира.<br>
@@ -36,30 +41,36 @@
 
     <div class="hero-buttons">
       <a href="./catalog.html" class="btn-main">Смотреть каталог</a>
-      <a href="#" class="btn-ghost">Подобрать вино</a>
+      <a href="./catalog.html?filter=smart" class="btn-ghost">Подобрать вино</a>
     </div>
   </div>
 
 </section>
 
 
-<section class="features">
+<section id="degustation" class="features">
+  <div class="feature">
+    <h3>Дегустации</h3>
+    <p>Регулярные винные мероприятия</p>
+  </div>
+
+  <div class="feature">
+    <h3>Сомелье</h3>
+    <p>Поможем подобрать идеальное вино</p>
+  </div>
 
   <div class="feature">
     <h3>500+ вин</h3>
     <p>Со всего мира</p>
   </div>
+</section>
 
+
+<section id="contacts" class="features">
   <div class="feature">
-    <h3>Сомелье</h3>
-    <p>Поможем с выбором</p>
+    <h3>Контакты</h3>
+    <p>г. Волгоград<br>vinoteka34.ru</p>
   </div>
-
-  <div class="feature">
-    <h3>Дегустации</h3>
-    <p>Регулярные мероприятия</p>
-  </div>
-
 </section>
 
 
