@@ -14,7 +14,23 @@ async function init(){
   render(ALL)
   bindButtons()
   bindSearch()
+}
 
+
+/* ===== НОРМАЛИЗАЦИЯ ===== */
+
+function normalize(type){
+
+  if(!type) return ""
+
+  const t = type.toLowerCase()
+
+  if(t.includes("вино")) return "wine"
+  if(t.includes("игрист")) return "sparkling"
+  if(t.includes("пиво")) return "beer"
+  if(t.includes("креп")) return "strong"
+
+  return "other"
 }
 
 
@@ -36,7 +52,8 @@ function bindButtons(){
         return
       }
 
-      const filtered = ALL.filter(w => w.type === type)
+      const filtered = ALL.filter(w => normalize(w.type) === type)
+
       render(filtered)
 
     })
@@ -72,16 +89,19 @@ function render(items){
 
   grid.innerHTML = ""
 
+  if(items.length === 0){
+    grid.innerHTML = "<p>Ничего не найдено</p>"
+    return
+  }
+
   items.forEach(w => {
 
     grid.innerHTML += `
       <div class="product-card">
 
-        <div class="image-wrap">
-          <img src="${w.image || './assets/no-wine.png'}" class="wine-img">
-        </div>
+        <img src="${w.image || './assets/no-wine.png'}" class="wine-img">
 
-        <div class="wine-type">${translate(w.type)}</div>
+        <div class="wine-type">${w.type}</div>
 
         <div class="wine-en">${w.name_en || ""}</div>
         <div class="wine-ru">${w.name_ru}</div>
@@ -100,17 +120,4 @@ function render(items){
     `
   })
 
-}
-
-
-/* ===== ПЕРЕВОД ===== */
-
-function translate(type){
-
-  if(type === "wine") return "Вино"
-  if(type === "sparkling") return "Игристое"
-  if(type === "strong") return "Крепкий алкоголь"
-  if(type === "beer") return "Пиво"
-
-  return "Напиток"
 }
