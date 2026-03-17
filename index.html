@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>ВИНОТЕКА</title>
+<title>Винотека</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,76 +23,43 @@
 </header>
 
 
-<!-- HERO -->
 <section class="hero">
 
-  <video class="heroVideo" autoplay muted loop playsinline>
+  <video autoplay muted loop playsinline class="heroVideo">
     <source src="./assets/hero.mp4" type="video/mp4">
   </video>
 
-  <div class="hero-overlay"></div>
+  <div class="heroOverlay"></div>
 
-  <div class="hero-content">
-
+  <div class="heroContent">
     <h1>ВИНОТЕКА</h1>
-
-    <p class="subtitle">
-      Винный бутик и клуб сомелье
-    </p>
-
-    <p class="desc">
+    <div class="subtitle">Винный бутик и клуб сомелье</div>
+    <div class="desc">
       Более 500 вин со всего мира.<br>
       Подбор вина и дегустации.
-    </p>
+    </div>
 
     <div class="hero-buttons">
       <a href="./catalog.html" class="btn-main">Смотреть каталог</a>
-      <a href="./catalog.html?filter=wine" class="btn-ghost">Подобрать вино</a>
+      <a href="./catalog.html" class="btn-ghost">Подобрать вино</a>
     </div>
-
   </div>
 
 </section>
 
 
-<!-- ДЕГУСТАЦИИ -->
-<section id="degustation" class="features">
-
-  <div class="feature">
-    <h3>Дегустации</h3>
-    <p>Регулярные винные вечера и события</p>
-  </div>
-
-  <div class="feature">
-    <h3>Сомелье</h3>
-    <p>Поможем подобрать идеальное вино</p>
-  </div>
-
-  <div class="feature">
-    <h3>500+ вин</h3>
-    <p>Со всего мира</p>
-  </div>
-
+<section id="degustation" class="info-section">
+  <h2>Дегустации</h2>
+  <p>Каждую пятницу в 20:00</p>
 </section>
 
 
-<!-- КОНТАКТЫ -->
-<section id="contacts" class="features">
-
-  <div class="feature">
-    <h3>Контакты</h3>
-    <p>
-      г. Волгоград<br>
-      vinoteka34.ru
-    </p>
-  </div>
-
+<section id="contacts" class="info-section">
+  <h2>Контакты</h2>
+  <p>г. Москва</p>
+  <p>Карамышевская набережная, д. 34</p>
 </section>
 
-
-<footer class="footer">
-  © ВИНОТЕКА
-</footer>
 
 </body>
 </html>
