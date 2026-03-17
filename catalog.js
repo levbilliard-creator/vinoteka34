@@ -2,21 +2,28 @@
 // ПАРАМЕТРЫ URL
 // =====================
 const params = new URLSearchParams(window.location.search)
-const startCategory = params.get("category")
-
-let activeCategory = startCategory || "all"
+let activeCategory = params.get("category") || "all"
 let searchQuery = ""
 
 // =====================
-// ДАННЫЕ
-// =====================
-const wines = window.WINES || []
+let wines = []
+
+const container = document.querySelector(".catalogPage")
 
 // =====================
-// НАХОДИМ ТВОЙ СТАРЫЙ КОНТЕЙНЕР
-// (не catalog-grid!)
+// ЗАГРУЗКА ДАННЫХ
 // =====================
-const container = document.querySelector(".catalogPage")
+async function loadData(){
+  try {
+    const res = await fetch("./data/products.json")
+    wines = await res.json()
+
+    render()
+
+  } catch(e){
+    console.error("Ошибка загрузки данных", e)
+  }
+}
 
 // =====================
 // КАРТИНКИ
@@ -44,18 +51,17 @@ function render(){
 
   if(searchQuery){
     filtered = filtered.filter(w =>
-      w.name.toLowerCase().includes(searchQuery)
+      w.name?.toLowerCase().includes(searchQuery)
     )
   }
 
-  // 🔥 ВАЖНО: не ломаем твою верстку
   const cards = filtered.map(w => `
     <div class="card">
       <img src="${getImage(w.id)}">
 
-      <div>${w.categoryRu || w.category}</div>
+      <div>${w.category}</div>
       <div>${w.name}</div>
-      <div>${w.sub || ""}</div>
+      <div>${w.type || ""}</div>
 
       <div>${w.price} ₽</div>
 
@@ -65,9 +71,7 @@ function render(){
     </div>
   `).join("")
 
-  // вставляем В КОНЕЦ (как было)
   container.innerHTML = `
-    ${container.innerHTML.split('<div class="card">')[0] || container.innerHTML}
     <div class="cards-wrap">
       ${cards}
     </div>
@@ -103,4 +107,4 @@ if(searchInput){
 }
 
 // =====================
-render()
+loadData()
