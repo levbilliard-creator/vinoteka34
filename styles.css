@@ -164,6 +164,122 @@ border-radius:10px;
 color:white;
 font-weight:600;
 cursor:pointer;
+}/* Сетка каталога */
+.catalogGrid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+}
+
+/* Карточка */
+.product-card{
+  background:#163343;
+  border-radius:16px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:0.3s;
+}
+
+.product-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Картинка */
+.wine-img{
+  width:100%;
+  height:220px;
+  object-fit:contain;
+  margin-bottom:12px;
+}
+
+/* Тип */
+.wine-type{
+  display:inline-block;
+  font-size:12px;
+  background:#2a4d5f;
+  padding:4px 10px;
+  border-radius:10px;
+  margin-bottom:8px;
+}
+
+/* EN название */
+.wine-en{
+  font-size:12px;
+  opacity:0.6;
+  margin-bottom:4px;
+}
+
+/* RU название */
+.wine-ru{
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+/* характеристики */
+.wine-style{
+  font-size:13px;
+  opacity:0.7;
+  margin-bottom:10px;
+}
+
+/* футер */
+.wine-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* цена */
+.wine-price{
+  font-size:16px;
+  font-weight:bold;
+}
+
+/* кнопка */
+.product-card a{
+  color:#b97cff;
+  text-decoration:none;
+  font-size:14px;
+}.productWrapper{
+  display:flex;
+  gap:40px;
+  margin-top:40px;
+}
+
+.productImage{
+  width:400px;
+  background:#163343;
+  border-radius:20px;
+  padding:20px;
+}
+
+.wine-img-big{
+  width:100%;
+  height:400px;
+  object-fit:contain;
+}
+
+.productInfo{
+  max-width:500px;
+}
+
+.wine-price-big{
+  font-size:28px;
+  font-weight:bold;
+  margin:20px 0;
+}
+
+.wine-btn{
+  background:#b97cff;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  color:#fff;
+  cursor:pointer;
 }
 
 
