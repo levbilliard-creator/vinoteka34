@@ -1,6 +1,8 @@
 let ALL = []
+
 const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
+const searchInput = document.getElementById("searchInput")
 
 init()
 
@@ -9,29 +11,14 @@ async function init(){
   const res = await fetch("./data/products.json")
   ALL = await res.json()
 
-  applyUrlFilter()
-  bindButtons()
   render(ALL)
+  bindButtons()
+  bindSearch()
 
 }
 
 
-/* ===== ФИЛЬТР ИЗ URL (кнопка "подобрать") ===== */
-
-function applyUrlFilter(){
-
-  const params = new URLSearchParams(location.search)
-  const filter = params.get("filter")
-
-  if(filter === "wine"){
-    const filtered = ALL.filter(w => w.type === "wine")
-    render(filtered)
-  }
-
-}
-
-
-/* ===== КНОПКИ КАТЕГОРИЙ ===== */
+/* ===== КНОПКИ ===== */
 
 function bindButtons(){
 
@@ -53,6 +40,26 @@ function bindButtons(){
       render(filtered)
 
     })
+
+  })
+
+}
+
+
+/* ===== ПОИСК ===== */
+
+function bindSearch(){
+
+  searchInput.addEventListener("input", () => {
+
+    const value = searchInput.value.toLowerCase()
+
+    const filtered = ALL.filter(w =>
+      (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
+      (w.name_en && w.name_en.toLowerCase().includes(value))
+    )
+
+    render(filtered)
 
   })
 
@@ -96,7 +103,7 @@ function render(items){
 }
 
 
-/* ===== ПЕРЕВОД КАТЕГОРИЙ ===== */
+/* ===== ПЕРЕВОД ===== */
 
 function translate(type){
 
@@ -104,7 +111,6 @@ function translate(type){
   if(type === "sparkling") return "Игристое"
   if(type === "strong") return "Крепкий алкоголь"
   if(type === "beer") return "Пиво"
-  if(type === "soft") return "Безалкогольные"
 
   return "Напиток"
 }

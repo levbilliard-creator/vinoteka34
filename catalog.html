@@ -1,171 +1,55 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-
 <meta charset="UTF-8">
+<title>Каталог — ВИНОТЕКА</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ВИНОТЕКА — Каталог</title>
-
-<link rel="stylesheet" href="/styles.css">
-
-<style>
-
-.catalogPage{
-max-width:1200px;
-margin:40px auto;
-padding:0 20px;
-
-display:grid;
-grid-template-columns:260px 1fr;
-gap:40px;
-}
-
-.catalogSidebar h2{
-margin-bottom:16px;
-}
-
-.searchInput{
-width:100%;
-padding:10px 12px;
-border-radius:10px;
-border:none;
-margin-bottom:20px;
-}
-
-.categories{
-display:flex;
-flex-direction:column;
-gap:12px;
-}
-
-.cat-btn{
-background:#e6e6e6;
-border:none;
-padding:12px;
-border-radius:12px;
-cursor:pointer;
-}
-
-.catalogGrid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:28px;
-}
-
-.product-card{
-background:#213c47;
-border-radius:16px;
-padding:20px;
-
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-
-min-height:200px;
-}
-
-.wine-type{
-background:#2f5967;
-padding:4px 10px;
-border-radius:10px;
-font-size:12px;
-width:max-content;
-margin-bottom:10px;
-}
-
-.wine-en{
-font-size:13px;
-color:#9fc0d0;
-text-transform:uppercase;
-margin-bottom:4px;
-}
-
-.wine-ru{
-font-size:16px;
-font-weight:600;
-margin-bottom:6px;
-}
-
-.wine-style{
-font-size:14px;
-color:#8aa8b6;
-margin-bottom:12px;
-}
-
-.wine-footer{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.wine-price{
-font-weight:700;
-}
-
-.product-card a{
-color:#b879ff;
-text-decoration:none;
-font-weight:600;
-}
-
-</style>
-
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header class="header">
+  <div class="logo">
+    <a href="./index.html">ВИНОТЕКА</a>
+  </div>
 
-<div class="logo">
-ВИНОТЕКА
-</div>
-
-<nav class="menu">
-<a href="/">Главная</a>
-<a href="/catalog">Каталог</a>
-<a href="#">Дегустации</a>
-<a href="#">Контакты</a>
-</nav>
-
+  <nav class="nav">
+    <a href="./index.html">Главная</a>
+    <a href="./catalog.html">Каталог</a>
+    <a href="./index.html#degustation">Дегустации</a>
+    <a href="./index.html#contacts">Контакты</a>
+  </nav>
 </header>
+
 
 <div class="catalogPage">
 
-<div class="catalogSidebar">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
 
-<h2>Каталог</h2>
+    <h2>Каталог</h2>
 
-<input
-class="searchInput"
-placeholder="Поиск вина..."
->
+    <input type="text" id="searchInput" placeholder="Поиск вина...">
 
-<div class="categories">
+    <div class="categories">
+      <button data-type="all" class="active">Все</button>
+      <button data-type="wine">Вино</button>
+      <button data-type="sparkling">Игристое</button>
+      <button data-type="strong">Крепкий алкоголь</button>
+      <button data-type="beer">Пиво</button>
+    </div>
 
-<button class="cat-btn" data-cat="all">Все</button>
-<button class="cat-btn" data-cat="wine">Вино</button>
-<button class="cat-btn" data-cat="sparkling">Игристое</button>
-<button class="cat-btn" data-cat="strong">Крепкий алкоголь</button>
-<button class="cat-btn" data-cat="beer">Пиво</button>
-<button class="cat-btn" data-cat="soft">Безалкогольные</button>
-<button class="cat-btn" data-cat="grocery">Бакалея</button>
-<button class="cat-btn" data-cat="tea">Чай</button>
-<button class="cat-btn" data-cat="accessories">Аксессуары</button>
+  </div>
 
-</div>
+
+  <!-- GRID -->
+  <div class="catalogGrid"></div>
 
 </div>
 
-<div
-id="catalogGrid"
-class="catalogGrid"
-></div>
 
-</div>
-
-<script src="/catalog.js"></script>
+<script src="./catalog.js"></script>
 
 </body>
 </html>
