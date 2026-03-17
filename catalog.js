@@ -1,22 +1,36 @@
 async function loadProducts(){
 
-  const res = await fetch("./data/products.json")
-  const products = await res.json()
+  try{
 
-  window.ALL_PRODUCTS = products
+    const res = await fetch("./data/products.json")
+    const products = await res.json()
 
-  initFilters(products)
-  render(products)
+    window.ALL_PRODUCTS = products
+
+    initFilters(products)
+    render(products)
+
+  }catch(e){
+    console.error("Ошибка загрузки товаров", e)
+  }
 
 }
+
+
+/* ---------- КАРТИНКА ---------- */
 
 function wineImage(id){
   return `/assets/labels/${(id % 30) + 1}.jpg`
 }
 
+
+/* ---------- РЕНДЕР ---------- */
+
 function render(list){
 
   const grid = document.getElementById("catalogGrid")
+  if(!grid) return
+
   grid.innerHTML = ""
 
   list.forEach(p => {
@@ -28,9 +42,12 @@ function render(list){
 
     card.innerHTML = `
 
-      <img class="wine-img"
-      src="${image}"
-      onerror="this.src='/assets/wine.jpg'">
+      <div class="image-wrap">
+        <img class="wine-img"
+        src="${image}"
+        loading="lazy"
+        onerror="this.src='/assets/wine.jpg'">
+      </div>
 
       <div class="wine-type">
         ${p.category || "Вино"}
@@ -48,17 +65,14 @@ function render(list){
         ${p.color || ""} ${p.style || ""}
       </div>
 
-      <div class="wine-footer">
-
-        <span class="wine-price">
-          ${p.price ? p.price + " ₽" : ""}
-        </span>
-
-        <a href="./product.html?id=${p.id}">
-          Подробнее →
-        </a>
-
+      <div class="wine-price">
+        ${p.price ? p.price + " ₽" : ""}
       </div>
+
+      <a href="./product.html?id=${p.id}" class="btn-link">
+        Подробнее →
+      </a>
+
     `
 
     grid.appendChild(card)
@@ -66,6 +80,9 @@ function render(list){
   })
 
 }
+
+
+/* ---------- ФИЛЬТРЫ ---------- */
 
 function initFilters(products){
 
@@ -86,6 +103,7 @@ function initFilters(products){
     })
   })
 
+
   const search = document.getElementById("searchInput")
 
   if(search){
@@ -104,5 +122,8 @@ function initFilters(products){
   }
 
 }
+
+
+/* ---------- СТАРТ ---------- */
 
 loadProducts()
