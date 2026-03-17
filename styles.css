@@ -1,3 +1,5 @@
+/* ===== БАЗА ===== */
+
 body {
   margin: 0;
   font-family: Inter, Arial, sans-serif;
@@ -42,23 +44,34 @@ body {
 
 
 /* =========================
-   ГЛАВНАЯ (НЕ ЛОМАЕМ)
+   ГЛАВНАЯ (С ВИДЕО)
 ========================= */
 
 .hero {
+  position: relative;
   height: 85vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("./assets/hero.jpg") center/cover no-repeat;
-  position: relative;
 }
 
-.hero::after {
-  content: "";
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.55);
+  z-index: 1;
 }
 
 .hero-content {
@@ -110,7 +123,7 @@ body {
 
 
 /* =========================
-   КАТАЛОГ (НЕ ТРОГАЕМ)
+   КАТАЛОГ
 ========================= */
 
 .catalog-page {
@@ -123,6 +136,10 @@ body {
   width: 260px;
 }
 
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
 .sidebar input {
   width: 100%;
   padding: 10px;
@@ -130,6 +147,9 @@ body {
   border: none;
   margin-bottom: 20px;
 }
+
+
+/* ===== КНОПКИ ===== */
 
 .categories {
   display: flex;
@@ -151,6 +171,9 @@ body {
   background: linear-gradient(90deg, #7b61ff, #ff4fa3);
 }
 
+
+/* ===== СЕТКА ===== */
+
 .catalog-content {
   flex: 1;
 }
@@ -162,7 +185,7 @@ body {
 }
 
 
-/* ===== КАРТОЧКИ ===== */
+/* ===== КАРТОЧКА ===== */
 
 .product-card {
   background: #132733;
@@ -172,6 +195,9 @@ body {
   flex-direction: column;
 }
 
+
+/* ===== КАРТИНКА ===== */
+
 .wine-img {
   width: 100%;
   height: 180px;
@@ -180,6 +206,9 @@ body {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
+
+/* ===== ТЕКСТ ===== */
 
 .wine-type {
   font-size: 12px;
@@ -206,6 +235,9 @@ body {
   margin: 10px 0;
 }
 
+
+/* ===== КНОПКА ===== */
+
 .btn-link {
   margin-top: auto;
   text-align: center;
@@ -217,7 +249,9 @@ body {
 }
 
 
-/* ===== MOBILE ===== */
+/* =========================
+   МОБИЛКА
+========================= */
 
 @media (max-width: 900px) {
 
@@ -225,8 +259,17 @@ body {
     flex-direction: column;
   }
 
+  .sidebar {
+    width: 100%;
+  }
+
   .catalogGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content {
+    margin-left: 0;
+    text-align: center;
   }
 
 }
