@@ -1,303 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-
 <meta charset="UTF-8">
+<title>Вино — ВИНОТЕКА</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Вино — Винотека</title>
-
-<link rel="stylesheet" href="/styles.css">
-
-<style>
-
-.productPage{
-max-width:1200px;
-margin:60px auto;
-padding:40px;
-display:grid;
-grid-template-columns:420px 1fr;
-gap:60px;
-}
-
-.productImage{
-background:#132933;
-border-radius:16px;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:40px;
-}
-
-.productImage img{
-max-height:420px;
-object-fit:contain;
-}
-
-.wine-en{
-font-size:14px;
-letter-spacing:1px;
-color:#9bb7c4;
-margin-bottom:6px;
-text-transform:uppercase;
-}
-
-.productInfo h1{
-font-size:30px;
-margin-bottom:14px;
-}
-
-.productStyle{
-color:#9bb7c4;
-margin-bottom:20px;
-font-size:16px;
-}
-
-.productPrice{
-font-size:28px;
-font-weight:700;
-margin-bottom:20px;
-}
-
-.productButton{
-display:inline-block;
-background:#b879ff;
-padding:12px 22px;
-border-radius:10px;
-text-decoration:none;
-color:white;
-font-weight:600;
-}
-
-.productSpecs{
-margin-top:30px;
-border-top:1px solid #2b4654;
-padding-top:20px;
-}
-
-.specRow{
-display:flex;
-justify-content:space-between;
-margin-bottom:10px;
-font-size:15px;
-}
-
-.specName{
-color:#9bb7c4;
-}
-
-.specValue{
-font-weight:500;
-}
-
-.similarTitle{
-max-width:1200px;
-margin:40px auto 20px;
-font-size:22px;
-padding-left:40px;
-}
-
-.similarGrid{
-max-width:1200px;
-margin:0 auto 80px;
-padding:0 40px;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:28px;
-}
-
-</style>
-
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
+  <div class="logo">
+    <a href="./index.html">ВИНОТЕКА</a>
+  </div>
 
-<div class="logo">
-ВИНОТЕКА
-</div>
-
-<nav class="menu">
-<a href="/">Главная</a>
-<a href="/catalog">Каталог</a>
-<a href="#">Дегустации</a>
-<a href="#">Контакты</a>
-</nav>
-
+  <nav class="nav">
+    <a href="./index.html">Главная</a>
+    <a href="./catalog.html">Каталог</a>
+    <a href="./index.html#degustation">Дегустации</a>
+    <a href="./index.html#contacts">Контакты</a>
+  </nav>
 </header>
 
-<main class="productPage">
 
-<div class="productImage">
-<img id="productImage">
+<!-- PRODUCT -->
+<div class="productWrapper">
+  <!-- сюда JS вставляет товар -->
 </div>
 
-<div class="productInfo">
 
-<div id="productCategory" class="wine-type"></div>
+<!-- РЕКОМЕНДАЦИИ -->
+<h2 class="section-title">Похожие товары</h2>
 
-<div id="productNameEn" class="wine-en"></div>
-
-<h1 id="productName"></h1>
-
-<div id="productStyle" class="productStyle"></div>
-
-<div id="productPrice" class="productPrice"></div>
-
-<a href="https://t.me/vinotekakaram" class="productButton">
-Спросить сомелье
-</a>
-
-<div id="productSpecs" class="productSpecs"></div>
-
+<div class="recommendGrid">
+  <!-- сюда JS вставляет похожие -->
 </div>
 
-</main>
 
-<h2 class="similarTitle">
-Похожие товары
-</h2>
+<!-- FOOTER INFO (чтобы страницы не были пустыми) -->
+<section class="info-section">
+  <h2>Дегустации</h2>
+  <p>Каждую пятницу в 20:00</p>
+</section>
 
-<div id="similarGrid" class="similarGrid"></div>
+<section class="info-section">
+  <h2>Контакты</h2>
+  <p>г. Москва</p>
+  <p>Карамышевская набережная, д. 34</p>
+</section>
 
-<script>
 
-function translateCategory(cat){
-
-if(cat === "wine") return "Вино"
-if(cat === "sparkling") return "Игристое"
-if(cat === "strong") return "Крепкий алкоголь"
-if(cat === "beer") return "Пиво"
-if(cat === "soft") return "Безалкогольные"
-if(cat === "grocery") return "Бакалея"
-if(cat === "tea") return "Чай"
-if(cat === "accessories") return "Аксессуары"
-
-return cat
-
-}
-
-async function loadProduct(){
-
-const params = new URLSearchParams(window.location.search)
-const id = parseInt(params.get("id"))
-
-const res = await fetch("/data/products.json")
-const products = await res.json()
-
-const product = products.find(p => p.id === id)
-
-if(!product) return
-
-document.getElementById("productName").innerText = product.name_ru
-document.getElementById("productNameEn").innerText = product.name_en || ""
-
-document.getElementById("productStyle").innerText =
-(product.color || "") + " " + (product.style || "")
-
-document.getElementById("productPrice").innerText =
-product.price ? product.price + " ₽" : ""
-
-document.getElementById("productCategory").innerText =
-translateCategory(product.category)
-
-document.getElementById("productImage").src =
-product.image || "/assets/wine-placeholder.png"
-
-renderSpecs(product)
-
-renderSimilar(products, product)
-
-}
-
-function renderSpecs(product){
-
-const box = document.getElementById("productSpecs")
-
-let html = ""
-
-if(product.country){
-
-html += `
-<div class="specRow">
-<div class="specName">Страна</div>
-<div class="specValue">${product.country}</div>
-</div>
-`
-
-}
-
-if(product.region){
-
-html += `
-<div class="specRow">
-<div class="specName">Регион</div>
-<div class="specValue">${product.region}</div>
-</div>
-`
-
-}
-
-if(product.grape){
-
-html += `
-<div class="specRow">
-<div class="specName">Сорт винограда</div>
-<div class="specValue">${product.grape}</div>
-</div>
-`
-
-}
-
-if(product.alcohol){
-
-html += `
-<div class="specRow">
-<div class="specName">Крепость</div>
-<div class="specValue">${product.alcohol}%</div>
-</div>
-`
-
-}
-
-box.innerHTML = html
-
-}
-
-function renderSimilar(products, product){
-
-const grid = document.getElementById("similarGrid")
-
-const similar = products
-.filter(p => p.category === product.category && p.id !== product.id)
-.slice(0,4)
-
-similar.forEach(p => {
-
-const card = document.createElement("div")
-card.className = "product-card"
-
-card.innerHTML = `
-<div class="wine-type">${translateCategory(p.category)}</div>
-<h3 class="wine-title">${p.name_ru}</h3>
-<div class="wine-style">${p.color || ""} ${p.style || ""}</div>
-<div class="wine-footer">
-<span class="wine-price">${p.price ? p.price + " ₽" : ""}</span>
-<a href="/product?id=${p.id}">Подробнее</a>
-</div>
-`
-
-grid.appendChild(card)
-
-})
-
-}
-
-loadProduct()
-
-</script>
+<script src="./product.js"></script>
 
 </body>
 </html>
