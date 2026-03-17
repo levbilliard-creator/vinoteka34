@@ -39,45 +39,62 @@ body{
 }
 
 
-/* ===== PAGE TITLE ===== */
+/* ===== LAYOUT КАТАЛОГА (ВАЖНО) ===== */
 
-h1{
-  font-size: 28px;
-  margin: 20px 40px;
+.catalog-page{
+  display: flex;
+  align-items: flex-start;
 }
 
 
-/* ===== FILTERS ===== */
+/* ===== ЛЕВАЯ КОЛОНКА ===== */
 
-.catalog-controls{
-  padding: 0 40px 20px;
+.sidebar{
+  width: 260px;
+  padding: 20px;
+}
+
+.sidebar h1{
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
 #searchInput{
-  padding: 8px;
-  width: 240px;
-  margin-bottom: 10px;
-  border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
   border: none;
+  margin-bottom: 20px;
 }
+
+
+/* ===== КАТЕГОРИИ (ВЕРТИКАЛЬНО) ===== */
 
 .categories{
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .categories button{
-  padding: 6px 10px;
+  padding: 12px;
+  border-radius: 12px;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  background: #1a2a33;
+  background: #2a2a2a;
   color: white;
+  cursor: pointer;
+  text-align: left;
 }
 
 .categories button.active{
-  background: #9b5cff;
+  background: linear-gradient(90deg,#7b5cff,#ff4fa3);
+}
+
+
+/* ===== ПРАВАЯ ЧАСТЬ ===== */
+
+.catalog-content{
+  flex: 1;
 }
 
 
@@ -87,7 +104,7 @@ h1{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding: 20px 40px 40px;
+  padding: 20px;
 }
 
 
@@ -163,7 +180,7 @@ h1{
 }
 
 
-/* ===== HERO (главная страница) ===== */
+/* ===== HERO ===== */
 
 .hero{
   position: relative;
@@ -205,7 +222,7 @@ h1{
 }
 
 
-/* ===== PRODUCT PAGE (на будущее) ===== */
+/* ===== PRODUCT PAGE ===== */
 
 .product-page{
   padding: 40px;
