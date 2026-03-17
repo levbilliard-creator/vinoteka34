@@ -1,38 +1,75 @@
-// =====================
-// СОСТОЯНИЕ
-// =====================
-const params = new URLSearchParams(window.location.search)
+let ALL = []
 
-let activeCategory = params.get("category") || "all"
-let searchQuery = ""
+const grid = document.querySelector(".catalogGrid")
+const buttons = document.querySelectorAll(".categories button")
+const searchInput = document.getElementById("searchInput")
 
-let wines = []
+init()
 
-// =====================
-// DOM
-// =====================
-const container = document.querySelector(".catalogPage")
-const searchInput = document.querySelector(".search-input")
+async function init(){
 
-// =====================
-// ЗАГРУЗКА JSON
-// =====================
-async function loadData(){
-  try {
-    const res = await fetch("./data/products.json")
-    wines = await res.json()
+  const res = await fetch("./data/products.json")
+  ALL = await res.json()
 
-    render()
-
-  } catch(e){
-    console.error("Ошибка загрузки products.json", e)
-  }
+  render(ALL)
+  bindButtons()
+  bindSearch()
 }
 
-// =====================
-// КАРТИНКИ (оставляем как есть)
-// =====================
+
+/* ===== КНОПКИ ===== */
+
+function bindButtons(){
+
+  buttons.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      buttons.forEach(b => b.classList.remove("active"))
+      btn.classList.add("active")
+
+      const type = btn.dataset.type
+
+      if(type === "all"){
+        render(ALL)
+        return
+      }
+
+      const filtered = ALL.filter(w => w.type === type)
+
+      render(filtered)
+
+    })
+
+  })
+
+}
+
+
+/* ===== ПОИСК ===== */
+
+function bindSearch(){
+
+  searchInput.addEventListener("input", () => {
+
+    const value = searchInput.value.toLowerCase()
+
+    const filtered = ALL.filter(w =>
+      (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
+      (w.name_en && w.name_en.toLowerCase().includes(value))
+    )
+
+    render(filtered)
+
+  })
+
+}
+
+
+/* ===== КАРТИНКИ ===== */
+
 function getImage(id){
+
   const map = {
     1: "./assets/wines/арманьяк сент обен.png",
     5: "./assets/wines/марселан дивноморское.jpg"
@@ -41,88 +78,59 @@ function getImage(id){
   return map[id] || "./assets/no-wine.png"
 }
 
-// =====================
-// РЕНДЕР
-// =====================
-function render(){
 
-  if (!container) return
+/* ===== РЕНДЕР ===== */
 
-  let filtered = wines
+function render(items){
 
-  // фильтр категории
-  if(activeCategory !== "all"){
-    filtered = filtered.filter(w => w.category === activeCategory)
+  grid.innerHTML = ""
+
+  if(items.length === 0){
+    grid.innerHTML = "<p style='opacity:0.6'>Нет товаров</p>"
+    return
   }
 
-  // поиск
-  if(searchQuery){
-    filtered = filtered.filter(w =>
-      w.name_ru?.toLowerCase().includes(searchQuery)
-    )
-  }
+  items.forEach(w => {
 
-  const cards = filtered.map(w => `
-    <div class="card">
+    grid.innerHTML += `
+      <div class="product-card">
 
-      <img src="${getImage(w.id)}" alt="${w.name_ru}">
+        <img src="${getImage(w.id)}" class="wine-img">
 
-      <div class="card-type">
-        ${w.category}
+        <div class="wine-type">${translate(w.type)}</div>
+
+        <div class="wine-en">${w.name_en || ""}</div>
+        <div class="wine-ru">${w.name_ru}</div>
+
+        <div class="wine-style">
+          ${w.color || ""} ${w.style || ""}
+        </div>
+
+        <div class="wine-price">${w.price} ₽</div>
+
+        <a href="./product.html?id=${w.id}" class="btn-link">
+          Подробнее →
+        </a>
+
       </div>
+    `
+  })
 
-      <div class="card-title">
-        ${w.name_en ? `<div class="en">${w.name_en}</div>` : ""}
-        <div class="ru">${w.name_ru}</div>
-      </div>
-
-      <div class="card-meta">
-        ${w.color || ""} ${w.style || ""}
-      </div>
-
-      <div class="card-price">
-        ${w.price} ₽
-      </div>
-
-      <a class="card-btn" href="/product?id=${w.id}">
-        Подробнее →
-      </a>
-
-    </div>
-  `).join("")
-
-  container.innerHTML = `
-    <div class="cards-wrap">
-      ${cards}
-    </div>
-  `
 }
 
-// =====================
-// КАТЕГОРИИ
-// =====================
-document.querySelectorAll(".category-btn").forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    activeCategory = btn.dataset.category
 
-    document.querySelectorAll(".category-btn")
-      .forEach(b=>b.classList.remove("active"))
+/* ===== ПЕРЕВОД ===== */
 
-    btn.classList.add("active")
+function translate(type){
 
-    render()
-  })
-})
+  if(type === "wine") return "Вино"
+  if(type === "sparkling") return "Игристое"
+  if(type === "beer") return "Пиво"
+  if(type === "strong") return "Крепкий алкоголь"
+  if(type === "grocery") return "Бакалея"
+  if(type === "soft") return "Безалкогольные"
+  if(type === "tea") return "Чай"
+  if(type === "accessories") return "Аксессуары"
 
-// =====================
-// ПОИСК
-// =====================
-if(searchInput){
-  searchInput.addEventListener("input", e=>{
-    searchQuery = e.target.value.toLowerCase()
-    render()
-  })
+  return type
 }
-
-// =====================
-loadData()
