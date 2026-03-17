@@ -11,17 +11,23 @@ async function init(){
   const res = await fetch("./data/products.json")
   ALL = await res.json()
 
+  /* 🔥 КЛЮЧЕВОЕ — ПРИВОДИМ ВСЕ ТИПЫ К НОРМАЛЬНЫМ */
+  ALL = ALL.map(w => ({
+    ...w,
+    type: fixType(w.type)
+  }))
+
   render(ALL)
   bindButtons()
   bindSearch()
 }
 
 
-/* ===== НОРМАЛИЗАЦИЯ ВСЕХ КАТЕГОРИЙ ===== */
+/* ===== ЖЁСТКОЕ ПРИВЕДЕНИЕ ТИПОВ ===== */
 
-function normalize(type){
+function fixType(type){
 
-  if(!type) return ""
+  if(!type) return "other"
 
   const t = type.toLowerCase()
 
@@ -57,7 +63,7 @@ function bindButtons(){
         return
       }
 
-      const filtered = ALL.filter(w => normalize(w.type) === type)
+      const filtered = ALL.filter(w => w.type === type)
 
       render(filtered)
 
@@ -95,7 +101,7 @@ function render(items){
   grid.innerHTML = ""
 
   if(items.length === 0){
-    grid.innerHTML = "<p>Нет товаров</p>"
+    grid.innerHTML = "<p style='opacity:0.6'>Нет товаров</p>"
     return
   }
 
@@ -106,7 +112,7 @@ function render(items){
 
         <img src="${w.image || './assets/no-wine.png'}" class="wine-img">
 
-        <div class="wine-type">${w.type}</div>
+        <div class="wine-type">${translate(w.type)}</div>
 
         <div class="wine-en">${w.name_en || ""}</div>
         <div class="wine-ru">${w.name_ru}</div>
@@ -125,4 +131,22 @@ function render(items){
     `
   })
 
+}
+
+
+/* ===== НОРМАЛЬНЫЙ ВЫВОД ТИПА ===== */
+
+function translate(type){
+
+  if(type === "wine") return "Вино"
+  if(type === "sparkling") return "Игристое"
+  if(type === "beer") return "Пиво"
+  if(type === "strong") return "Крепкий алкоголь"
+
+  if(type === "soft") return "Безалкогольные"
+  if(type === "grocery") return "Бакалея"
+  if(type === "tea") return "Чай"
+  if(type === "accessories") return "Аксессуары"
+
+  return "Товар"
 }
