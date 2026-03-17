@@ -11,37 +11,11 @@ async function init(){
   const res = await fetch("./data/products.json")
   ALL = await res.json()
 
-  /* 🔥 КЛЮЧЕВОЕ — ПРИВОДИМ ВСЕ ТИПЫ К НОРМАЛЬНЫМ */
-  ALL = ALL.map(w => ({
-    ...w,
-    type: fixType(w.type)
-  }))
+  console.log("ВСЕ ТОВАРЫ:", ALL) // для проверки
 
   render(ALL)
   bindButtons()
   bindSearch()
-}
-
-
-/* ===== ЖЁСТКОЕ ПРИВЕДЕНИЕ ТИПОВ ===== */
-
-function fixType(type){
-
-  if(!type) return "other"
-
-  const t = type.toLowerCase()
-
-  if(t.includes("вино")) return "wine"
-  if(t.includes("игрист")) return "sparkling"
-  if(t.includes("пиво")) return "beer"
-  if(t.includes("креп")) return "strong"
-
-  if(t.includes("безалког")) return "soft"
-  if(t.includes("бакале")) return "grocery"
-  if(t.includes("чай")) return "tea"
-  if(t.includes("аксесс")) return "accessories"
-
-  return "other"
 }
 
 
@@ -58,12 +32,16 @@ function bindButtons(){
 
       const type = btn.dataset.type
 
+      console.log("ФИЛЬТР:", type)
+
       if(type === "all"){
         render(ALL)
         return
       }
 
       const filtered = ALL.filter(w => w.type === type)
+
+      console.log("НАЙДЕНО:", filtered.length)
 
       render(filtered)
 
@@ -118,7 +96,7 @@ function render(items){
         <div class="wine-ru">${w.name_ru}</div>
 
         <div class="wine-style">
-          ${w.color || ""} ${w.sweetness || ""}
+          ${w.color || ""} ${w.style || ""}
         </div>
 
         <div class="wine-price">${w.price} ₽</div>
@@ -134,7 +112,7 @@ function render(items){
 }
 
 
-/* ===== НОРМАЛЬНЫЙ ВЫВОД ТИПА ===== */
+/* ===== ПЕРЕВОД ===== */
 
 function translate(type){
 
@@ -142,11 +120,10 @@ function translate(type){
   if(type === "sparkling") return "Игристое"
   if(type === "beer") return "Пиво"
   if(type === "strong") return "Крепкий алкоголь"
-
-  if(type === "soft") return "Безалкогольные"
   if(type === "grocery") return "Бакалея"
+  if(type === "soft") return "Безалкогольные"
   if(type === "tea") return "Чай"
   if(type === "accessories") return "Аксессуары"
 
-  return "Товар"
+  return type
 }
