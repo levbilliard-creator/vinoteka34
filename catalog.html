@@ -1,62 +1,55 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Каталог — ВИНОТЕКА</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Каталог — Винотека</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header class="header">
-  <div class="logo">
-    <a href="./index.html">ВИНОТЕКА</a>
-  </div>
+  <div class="logo">ВИНОТЕКА</div>
 
-  <nav class="nav">
-    <a href="./index.html">Главная</a>
-    <a href="./catalog.html">Каталог</a>
-    <a href="./index.html#degustation">Дегустации</a>
-    <a href="./index.html#contacts">Контакты</a>
-  </nav>
+  <a href="tel:+74959471010" class="phone-block">
+    <span class="phone-number">+7 (495) 947-10-10</span>
+    <span class="phone-icon">📞</span>
+  </a>
 </header>
 
 
-<div class="catalogPage">
+<section class="catalog-page">
 
-  <!-- SIDEBAR -->
-  <div class="sidebar">
+  <!-- ЛЕВАЯ КОЛОНКА -->
+  <aside class="sidebar">
 
     <h2>Каталог</h2>
 
-    <input type="text" id="searchInput" placeholder="Поиск вина...">
+    <input id="searchInput" placeholder="Поиск вина..." />
 
     <div class="categories">
-
       <button data-type="all" class="active">Все</button>
-
       <button data-type="wine">Вино</button>
       <button data-type="sparkling">Игристое</button>
       <button data-type="strong">Крепкий алкоголь</button>
       <button data-type="beer">Пиво</button>
-
       <button data-type="soft">Безалкогольные</button>
       <button data-type="grocery">Бакалея</button>
       <button data-type="tea">Чай</button>
       <button data-type="accessories">Аксессуары</button>
-
     </div>
 
-  </div>
+  </aside>
 
 
-  <!-- GRID -->
-  <div class="catalogGrid"></div>
+  <!-- СЕТКА -->
+  <main class="catalog-content">
+    <div class="catalogGrid"></div>
+  </main>
 
-</div>
+</section>
 
-<script src="./catalog.js"></script>
+<script src="catalog.js"></script>
 
 </body>
 </html>
