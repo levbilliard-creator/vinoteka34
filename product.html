@@ -2,46 +2,74 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Товар — Винотека</title>
+  <title>Вино</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
-  <div class="logo">ВИНОТЕКА</div>
+  <a href="/" class="logo">ВИНОТЕКА</a>
 
   <a href="tel:+74959471010" class="phone-block">
-    <span class="phone-number">+7 (495) 947-10-10</span>
+    <span>+7 (495) 947-10-10</span>
     <span class="phone-icon">📞</span>
   </a>
 </header>
 
 
+<!-- PRODUCT -->
 <section class="product-page">
 
   <div class="product-container">
 
-    <!-- ЛЕВО -->
+    <!-- ФОТО -->
     <div class="product-image">
-      <img id="productImage" src="" alt="">
+      <img src="images/wine5.jpg" alt="">
     </div>
 
-    <!-- ПРАВО -->
+    <!-- ИНФО -->
     <div class="product-info">
 
-      <div class="product-type" id="productType"></div>
+      <div class="product-type">Вино</div>
 
-      <div class="product-en" id="productEn"></div>
-      <h1 class="product-title" id="productRu"></h1>
+      <h1 class="product-title">Дивноморское марселан</h1>
 
-      <div class="product-style" id="productStyle"></div>
+      <div class="product-style">красное сухое</div>
 
-      <div class="product-price" id="productPrice"></div>
+      <div class="product-price">4472 ₽</div>
 
       <div class="product-actions">
-        <a href="#" class="btn-main">Спросить сомелье</a>
-        <a href="/catalog" class="btn-secondary">← В каталог</a>
+        <a href="https://t.me/vinotekakaram" target="_blank" class="btn-main">
+          Спросить сомелье
+        </a>
+
+        <a href="/catalog.html" class="btn-secondary">
+          ← В каталог
+        </a>
+      </div>
+
+
+      <!-- ОПИСАНИЕ -->
+      <div class="product-description">
+
+        <h3>Описание</h3>
+
+        <p>
+          Элегантное красное вино из сорта Марселан с насыщенным ароматом
+          темных ягод, черной смородины и легкими пряными оттенками.
+          Вкус мягкий, сбалансированный, с долгим послевкусием.
+        </p>
+
+        <div class="product-specs">
+          <div><span>Страна:</span> Россия</div>
+          <div><span>Регион:</span> Краснодарский край</div>
+          <div><span>Сорт:</span> Марселан</div>
+          <div><span>Крепость:</span> 13%</div>
+          <div><span>Температура подачи:</span> 16–18°C</div>
+        </div>
+
       </div>
 
     </div>
@@ -49,67 +77,6 @@
   </div>
 
 </section>
-
-
-<script>
-
-const params = new URLSearchParams(window.location.search)
-const id = Number(params.get("id"))
-
-let ALL = []
-
-init()
-
-async function init(){
-  const res = await fetch("./data/products.json")
-  ALL = await res.json()
-
-  const product = ALL.find(p => p.id === id)
-
-  if(!product){
-    document.body.innerHTML = "<h2 style='padding:40px'>Товар не найден</h2>"
-    return
-  }
-
-  render(product)
-}
-
-function getImage(id){
-  const map = {
-    1: "./assets/wines/арманьяк сент обен.png",
-    5: "./assets/wines/марселан дивноморское.jpg"
-  }
-  return map[id] || "./assets/no-wine.png"
-}
-
-function render(p){
-
-  document.getElementById("productImage").src = getImage(p.id)
-
-  document.getElementById("productType").innerText = translate(p.type)
-
-  document.getElementById("productEn").innerText = p.name_en || ""
-  document.getElementById("productRu").innerText = p.name_ru
-
-  document.getElementById("productStyle").innerText =
-    (p.color || "") + " " + (p.style || "")
-
-  document.getElementById("productPrice").innerText = p.price + " ₽"
-}
-
-function translate(type){
-  if(type === "wine") return "Вино"
-  if(type === "sparkling") return "Игристое"
-  if(type === "beer") return "Пиво"
-  if(type === "strong") return "Крепкий алкоголь"
-  if(type === "grocery") return "Бакалея"
-  if(type === "soft") return "Безалкогольные"
-  if(type === "tea") return "Чай"
-  if(type === "accessories") return "Аксессуары"
-  return type
-}
-
-</script>
 
 </body>
 </html>
