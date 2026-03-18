@@ -2,45 +2,114 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Товар</title>
-  <link rel="stylesheet" href="./styles.css">
+  <title>Товар — Винотека</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header class="header">
   <div class="logo">ВИНОТЕКА</div>
-  <nav>
-    <a href="/">Главная</a>
-    <a href="/catalog">Каталог</a>
-    <a href="#">Дегустации</a>
-    <a href="#">Контакты</a>
-  </nav>
+
+  <a href="tel:+74959471010" class="phone-block">
+    <span class="phone-number">+7 (495) 947-10-10</span>
+    <span class="phone-icon">📞</span>
+  </a>
 </header>
 
-<div class="productPage">
 
-  <div class="product-left">
-    <img id="productImage" class="product-img">
+<section class="product-page">
+
+  <div class="product-container">
+
+    <!-- ЛЕВО -->
+    <div class="product-image">
+      <img id="productImage" src="" alt="">
+    </div>
+
+    <!-- ПРАВО -->
+    <div class="product-info">
+
+      <div class="product-type" id="productType"></div>
+
+      <div class="product-en" id="productEn"></div>
+      <h1 class="product-title" id="productRu"></h1>
+
+      <div class="product-style" id="productStyle"></div>
+
+      <div class="product-price" id="productPrice"></div>
+
+      <div class="product-actions">
+        <a href="#" class="btn-main">Спросить сомелье</a>
+        <a href="/catalog" class="btn-secondary">← В каталог</a>
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="product-right">
+</section>
 
-    <div id="productType" class="wine-type"></div>
 
-    <h1 id="productName"></h1>
+<script>
 
-    <div id="productStyle" class="wine-style"></div>
+const params = new URLSearchParams(window.location.search)
+const id = Number(params.get("id"))
 
-    <div id="productPrice" class="price"></div>
+let ALL = []
 
-    <button class="btn-main">Спросить сомелье</button>
+init()
 
-  </div>
+async function init(){
+  const res = await fetch("./data/products.json")
+  ALL = await res.json()
 
-</div>
+  const product = ALL.find(p => p.id === id)
 
-<script src="./product.js"></script>
+  if(!product){
+    document.body.innerHTML = "<h2 style='padding:40px'>Товар не найден</h2>"
+    return
+  }
+
+  render(product)
+}
+
+function getImage(id){
+  const map = {
+    1: "./assets/wines/арманьяк сент обен.png",
+    5: "./assets/wines/марселан дивноморское.jpg"
+  }
+  return map[id] || "./assets/no-wine.png"
+}
+
+function render(p){
+
+  document.getElementById("productImage").src = getImage(p.id)
+
+  document.getElementById("productType").innerText = translate(p.type)
+
+  document.getElementById("productEn").innerText = p.name_en || ""
+  document.getElementById("productRu").innerText = p.name_ru
+
+  document.getElementById("productStyle").innerText =
+    (p.color || "") + " " + (p.style || "")
+
+  document.getElementById("productPrice").innerText = p.price + " ₽"
+}
+
+function translate(type){
+  if(type === "wine") return "Вино"
+  if(type === "sparkling") return "Игристое"
+  if(type === "beer") return "Пиво"
+  if(type === "strong") return "Крепкий алкоголь"
+  if(type === "grocery") return "Бакалея"
+  if(type === "soft") return "Безалкогольные"
+  if(type === "tea") return "Чай"
+  if(type === "accessories") return "Аксессуары"
+  return type
+}
+
+</script>
 
 </body>
 </html>

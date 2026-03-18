@@ -345,4 +345,91 @@ body {
     width: 100%;
   }
 
+}/* =========================
+   PRODUCT PRO LEVEL
+========================= */
+
+.product-page {
+  padding: 60px 40px;
+}
+
+.product-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* ===== КАРТИНКА ===== */
+
+.product-image {
+  width: 420px;
+  background: #132733;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.product-image img {
+  width: 100%;
+  object-fit: contain;
+}
+
+
+/* ===== ИНФО ===== */
+
+.product-info {
+  flex: 1;
+}
+
+.product-type {
+  font-size: 13px;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.product-en {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.product-title {
+  font-size: 34px;
+  margin: 10px 0 15px;
+}
+
+.product-style {
+  font-size: 15px;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+.product-price {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+
+/* ===== КНОПКИ ===== */
+
+.product-actions {
+  display: flex;
+  gap: 15px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 900px) {
+
+  .product-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-image {
+    width: 100%;
+  }
+
 }
