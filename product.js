@@ -30,12 +30,10 @@ function findBestImage(productName, images) {
     const fileWords = getWords(file);
 
     let score = 0;
-
     productWords.forEach(w => {
       if (fileWords.includes(w)) score++;
     });
 
-    // 🔥 учитываем процент совпадения
     const ratio = score / Math.max(productWords.length, 1);
 
     if (ratio > bestScore) {
@@ -44,7 +42,6 @@ function findBestImage(productName, images) {
     }
   });
 
-  // минимум 40% совпадения
   if (bestScore >= 0.4 && bestFile) {
     return `/assets/wines/${bestFile}`;
   }
@@ -90,7 +87,7 @@ Promise.all([
     (product.price || 0) + " ₽";
 
 
-  // ===== КАРТИНКА (НОВАЯ СИСТЕМА) =====
+  // ===== КАРТИНКА (НОВАЯ ЛОГИКА) =====
   const img = document.querySelector(".product-image img");
 
   const smartImage = findBestImage(product.name_ru || "", images);
@@ -157,7 +154,7 @@ Promise.all([
   `;
 
 
-  // ===== ПОХОЖИЕ =====
+  // ===== ПОХОЖИЕ ТОВАРЫ =====
   const similar = products
     .filter(p =>
       p.id !== product.id &&
