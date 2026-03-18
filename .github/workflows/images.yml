@@ -1,1 +1,30 @@
 
+name: Generate images.json
+
+on:
+  push:
+    paths:
+      - 'assets/wines/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate images.json
+        run: |
+          mkdir -p data
+          printf "[\n" > data/images.json
+          ls assets/wines | grep -v ".keep" | sed 's/^/  "/; s/$/",/' >> data/images.json
+          sed -i '$ s/,$//' data/images.json
+          printf "\n]" >> data/images.json
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/images.json
+          git commit -m "auto images.json" || echo "no changes"
+          git push
