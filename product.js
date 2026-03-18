@@ -2,18 +2,24 @@ async function loadProduct() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get('id');
 
-  // --- грузим товары ---
-  const res = await fetch('/data/products.json');
-  const products = await res.json();
+  // --- загрузка товаров ---
+  let products = [];
+  try {
+    const res = await fetch('/data/products.json');
+    products = await res.json();
+  } catch (e) {
+    console.error('Ошибка загрузки products.json', e);
+    return;
+  }
 
   const product = products.find(p => String(p.id) === id);
 
   if (!product) {
-    document.body.innerHTML = '<h1>Товар не найден</h1>';
+    console.warn('Товар не найден');
     return;
   }
 
-  // --- НОРМАЛИЗАЦИЯ ---
+  // --- нормализация ---
   function normalize(str) {
     return str
       .toLowerCase()
@@ -28,7 +34,7 @@ async function loadProduct() {
 
   const productWords = getWords(product.name);
 
-  // --- ВСЕ ФАЙЛЫ (пока вручную один раз, но универсально) ---
+  // --- список файлов (ПОКА БЕРЕМ ИЗВЕСТНЫЕ) ---
   const files = [
     "Ален Байи Петрониј , 0.75 л.png",
     "Ален Байи Роз де Серзи, 0.75 л.png",
@@ -40,10 +46,9 @@ async function loadProduct() {
     "марселан дивноморское.jpg"
   ];
 
-  // --- УМНОЕ СРАВНЕНИЕ ---
+  // --- поиск лучшего совпадения ---
   function matchScore(productWords, fileName) {
     const fileWords = getWords(fileName);
-
     let score = 0;
 
     productWords.forEach(w => {
@@ -59,15 +64,13 @@ async function loadProduct() {
 
     files.forEach(file => {
       const score = matchScore(productWords, file);
-
       if (score > bestScore) {
         bestScore = score;
         bestFile = file;
       }
     });
 
-    // минимум совпадений (чтобы не было мусора)
-    if (bestScore >= 2) {
+    if (bestScore >= 2 && bestFile) {
       return `/assets/wines/${bestFile}`;
     }
 
@@ -76,27 +79,36 @@ async function loadProduct() {
 
   const imageUrl = findBestImage();
 
-  // --- ВСТАВКА ---
-  document.querySelector('.product-image').innerHTML = `
+  // --- БЕЗОПАСНАЯ ВСТАВКА ---
+  function setText(selector, value) {
+    const el = document.querySelector(selector);
+    if (el) el.textContent = value;
+  }
+
+  function setHTML(selector, value) {
+    const el = document.querySelector(selector);
+    if (el) el.innerHTML = value;
+  }
+
+  // --- заполняем страницу ---
+  setText('.product-title', product.name);
+  setText('.product-subtitle', product.subtitle || '');
+  setText('.product-price', product.price + ' ₽');
+  setText('.product-description', product.description || 'Описание скоро появится');
+  setText('.product-category', product.category || 'ВИНО');
+
+  setHTML('.product-image', `
     <img src="${imageUrl}" alt="${product.name}">
-  `;
-
-  document.querySelector('.product-category').textContent = product.category || 'ВИНО';
-  document.querySelector('.product-title').textContent = product.name;
-  document.querySelector('.product-subtitle').textContent = product.subtitle || '';
-  document.querySelector('.product-price').textContent = product.price + ' ₽';
-
-  document.querySelector('.product-description').textContent =
-    product.description || 'Описание скоро появится';
+  `);
 
   // --- характеристики ---
-  const specs = document.querySelector('.product-specs');
-  if (specs && product.specs) {
-    specs.innerHTML = Object.entries(product.specs)
-      .map(([key, value]) => `
+  const specsEl = document.querySelector('.product-specs');
+  if (specsEl && product.specs) {
+    specsEl.innerHTML = Object.entries(product.specs)
+      .map(([k, v]) => `
         <div class="spec-row">
-          <span>${key}</span>
-          <span>${value}</span>
+          <span>${k}</span>
+          <span>${v}</span>
         </div>
       `).join('');
   }
