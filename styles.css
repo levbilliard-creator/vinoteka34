@@ -272,4 +272,77 @@ body {
     text-align: center;
   }
 
+}/* =========================
+   СТРАНИЦА ТОВАРА
+========================= */
+
+.product-page {
+  padding: 40px;
+}
+
+.product-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+
+/* ===== КАРТИНКА ===== */
+
+.product-image {
+  width: 400px;
+}
+
+.product-image img {
+  width: 100%;
+  background: #1c3a4a;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+
+/* ===== ИНФО ===== */
+
+.product-info {
+  max-width: 500px;
+}
+
+.product-type {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.product-en {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.product-title {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.product-style {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 900px) {
+
+  .product-container {
+    flex-direction: column;
+  }
+
+  .product-image {
+    width: 100%;
+  }
+
 }
