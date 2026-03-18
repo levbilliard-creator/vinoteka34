@@ -1,10 +1,9 @@
-
 name: Generate images.json
 
 on:
   push:
     paths:
-      - 'assets/wines/**'
+      - assets/wines/**
 
 jobs:
   build:
@@ -16,10 +15,17 @@ jobs:
       - name: Generate images.json
         run: |
           mkdir -p data
-          printf "[\n" > data/images.json
-          ls assets/wines | grep -v ".keep" | sed 's/^/  "/; s/$/",/' >> data/images.json
+          echo "[" > data/images.json
+
+          for file in assets/wines/*; do
+            filename=$(basename "$file")
+            if [ "$filename" != ".keep" ]; then
+              echo "  \"$filename\"," >> data/images.json
+            fi
+          done
+
           sed -i '$ s/,$//' data/images.json
-          printf "\n]" >> data/images.json
+          echo "]" >> data/images.json
 
       - name: Commit
         run: |
