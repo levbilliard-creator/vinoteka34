@@ -14,20 +14,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Debug files (проверка)
+        run: |
+          echo "=== LIST FILES ==="
+          ls -R assets || true
+
       - name: Generate images.json
         run: |
           mkdir -p data
           echo "[" > data/images.json
 
-          find assets/wines -type f ! -name ".keep" | while read file; do
-            filename=$(basename "$file")
-            echo "  \"$filename\"," >> data/images.json
+          for file in assets/wines/*; do
+            if [ -f "$file" ]; then
+              filename=$(basename "$file")
+              if [ "$filename" != ".keep" ]; then
+                echo "  \"$filename\"," >> data/images.json
+              fi
+            fi
           done
 
-          # убрать запятую у последнего элемента
           sed -i '$ s/,$//' data/images.json
-
           echo "]" >> data/images.json
+
+      - name: Show result
+        run: |
+          echo "=== RESULT ==="
+          cat data/images.json
 
       - name: Commit and push
         run: |
