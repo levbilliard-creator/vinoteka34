@@ -1,107 +1,51 @@
-let ALL = []
+// получаем id
+const params = new URLSearchParams(window.location.search);
+const productId = Number(params.get("id"));
 
-init()
+// грузим JSON
+fetch("/data/products.json")
+  .then(res => res.json())
+  .then(products => {
 
-async function init(){
+    const product = products.find(p => p.id === productId);
 
-  const res = await fetch("./data/products.json")
-  ALL = await res.json()
+    if (!product) {
+      document.body.innerHTML = "<h1 style='padding:40px'>Товар не найден</h1>";
+      return;
+    }
 
-  const params = new URLSearchParams(window.location.search)
-  const id = Number(params.get("id"))
+    // название
+    document.querySelector(".product-title").textContent = product.name_ru;
 
-  const product = ALL.find(w => w.id === id)
+    // тип
+    document.querySelector(".product-type").textContent =
+      product.type === "wine" ? "Вино" : "Крепкий алкоголь";
 
-  if(!product) return
+    // стиль
+    document.querySelector(".product-style").textContent =
+      `${product.color || ""} ${product.style || ""}`.trim();
 
-  render(product)
-  renderSimilar(product)
+    // цена
+    document.querySelector(".product-price").textContent =
+      product.price + " ₽";
 
-}
+    // картинка (ВАЖНО — чтобы не ломалось)
+    const img = document.querySelector(".product-image img");
 
+    img.src = `/images/${product.id}.jpg`;
+    img.onerror = () => {
+      img.src = "/images/placeholder.jpg";
+    };
 
-/* ===== КАРТИНКИ ===== */
+    // описание (пока авто-заглушка)
+    document.querySelector(".product-description p").textContent =
+      product.name_ru;
 
-function getImage(id){
+    // характеристики
+    document.querySelector(".product-specs").innerHTML = `
+      <div><span>Тип:</span> ${product.type}</div>
+      <div><span>Цвет:</span> ${product.color || "-"}</div>
+      <div><span>Стиль:</span> ${product.style || "-"}</div>
+    `;
 
-  const map = {
-    1: "./assets/wines/арманьяк сент обен.png",
-    5: "./assets/wines/марселан дивноморское.jpg"
-  }
-
-  return map[id] || "./assets/no-wine.png"
-}
-
-
-/* ===== РЕНДЕР ТОВАРА ===== */
-
-function render(p){
-
-  document.getElementById("productImage").src = getImage(p.id)
-
-  document.getElementById("productType").innerText = translate(p.type)
-
-  document.getElementById("productName").innerText = p.name_ru
-
-  document.getElementById("productStyle").innerText =
-    `${p.color || ""} ${p.style || ""}`
-
-  document.getElementById("productPrice").innerText =
-    `${p.price} ₽`
-
-}
-
-
-/* ===== ПОХОЖИЕ ===== */
-
-function renderSimilar(p){
-
-  const container = document.querySelector(".similarGrid")
-
-  if(!container) return
-
-  const similar = ALL
-    .filter(w => w.type === p.type && w.id !== p.id)
-    .slice(0,4)
-
-  container.innerHTML = ""
-
-  similar.forEach(w => {
-
-    container.innerHTML += `
-      <div class="product-card">
-
-        <img src="${getImage(w.id)}" class="wine-img">
-
-        <div class="wine-type">${translate(w.type)}</div>
-
-        <div class="wine-ru">${w.name_ru}</div>
-
-        <div class="wine-price">${w.price} ₽</div>
-
-        <a href="./product.html?id=${w.id}" class="btn-link">
-          Подробнее →
-        </a>
-
-      </div>
-    `
-  })
-
-}
-
-
-/* ===== ПЕРЕВОД ===== */
-
-function translate(type){
-
-  if(type === "wine") return "Вино"
-  if(type === "sparkling") return "Игристое"
-  if(type === "beer") return "Пиво"
-  if(type === "strong") return "Крепкий алкоголь"
-  if(type === "grocery") return "Бакалея"
-  if(type === "soft") return "Безалкогольные"
-  if(type === "tea") return "Чай"
-  if(type === "accessories") return "Аксессуары"
-
-  return type
-}
+  });
