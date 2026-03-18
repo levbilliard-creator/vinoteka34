@@ -3,12 +3,66 @@ const params = new URLSearchParams(window.location.search);
 const productId = Number(params.get("id"));
 
 
+// ===== НОРМАЛИЗАЦИЯ =====
+function normalize(str) {
+  return str
+    .toLowerCase()
+    .replace(/ё/g, "е")
+    .replace(/[^a-zа-я0-9\s]/gi, "")
+    .trim();
+}
+
+function getWords(str) {
+  return normalize(str).split(/\s+/).filter(w => w.length > 2);
+}
+
+
+// ===== УМНЫЙ ПОИСК КАРТИНКИ =====
+function findImage(productName) {
+
+  const files = [
+    "Ален Байи Петрониј , 0.75 л.png",
+    "Ален Байи Роз де Серзи, 0.75 л.png",
+    "Крис Пино Гриджо, 2024, 0.75 л.png",
+    "Моет & Шандон Империал Брют, 0.75 л.jpg",
+    "Нед Совиньон Блан Мариско Виньярдс, 2024, 0.75 л.png",
+    "Фиорино д'Оро Просекко Спуманте, 0.75 л.png",
+    "арманьяк сент обен.png",
+    "марселан дивноморское.jpg"
+  ];
+
+  const productWords = getWords(productName);
+
+  let bestScore = 0;
+  let bestFile = null;
+
+  files.forEach(file => {
+    const fileWords = getWords(file);
+
+    let score = 0;
+    productWords.forEach(w => {
+      if (fileWords.includes(w)) score++;
+    });
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestFile = file;
+    }
+  });
+
+  if (bestScore >= 2 && bestFile) {
+    return `/assets/wines/${bestFile}`;
+  }
+
+  return "/images/no-wine.png";
+}
+
+
 // ===== ЗАГРУЗКА =====
 fetch("/data/products.json")
   .then(res => res.json())
   .then(products => {
 
-    // 🔥 фиксим баг с id
     const product = products.find(p => Number(p.id) === productId);
 
     if (!product) {
@@ -39,10 +93,13 @@ fetch("/data/products.json")
       (product.price || 0) + " ₽";
 
 
-    // ===== КАРТИНКА =====
+    // ===== КАРТИНКА (НОВАЯ ЛОГИКА) =====
     const img = document.querySelector(".product-image img");
 
+    const smartImage = findImage(product.name_ru || "");
+
     const tryPaths = [
+      smartImage, // 🔥 сначала умный поиск
       `/images/wine${product.id}.jpg`,
       `/images/${product.id}.jpg`,
       `/images/${product.id}.png`,
