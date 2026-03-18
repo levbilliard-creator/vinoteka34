@@ -13,58 +13,70 @@ async function loadProduct() {
     return;
   }
 
-  // --- НОРМАЛИЗАЦИЯ НАЗВАНИЯ ---
+  // --- НОРМАЛИЗАЦИЯ ---
   function normalize(str) {
     return str
       .toLowerCase()
       .replace(/ё/g, 'е')
-      .replace(/[^a-zа-я0-9]/gi, '');
+      .replace(/[^a-zа-я0-9\s]/gi, '')
+      .trim();
   }
 
-  // --- СПИСОК ФАЙЛОВ (через попытки загрузки) ---
-  async function findImage(name) {
-    const base = normalize(name);
+  function getWords(str) {
+    return normalize(str).split(/\s+/).filter(w => w.length > 2);
+  }
 
-    // список возможных файлов (расширяем)
-    const extensions = ['.jpg', '.jpeg', '.png', '.webp'];
+  const productWords = getWords(product.name);
 
-    // попробуем все файлы из папки (перебор по известным именам)
-    // ВАЖНО: браузер не может читать папку → поэтому делаем через "угадывание"
-    
-    const possibleNames = [
-      name,
-      name.replace(/,/g, ''),
-      name.replace(/\s+/g, ' '),
-      name.replace(/\./g, ''),
-      name.replace(/л/g, 'л'),
-    ];
+  // --- ВСЕ ФАЙЛЫ (пока вручную один раз, но универсально) ---
+  const files = [
+    "Ален Байи Петрониј , 0.75 л.png",
+    "Ален Байи Роз де Серзи, 0.75 л.png",
+    "Крис Пино Гриджо, 2024, 0.75 л.png",
+    "Моет & Шандон Империал Брют, 0.75 л.jpg",
+    "Нед Совиньон Блан Мариско Виньярдс, 2024, 0.75 л.png",
+    "Фиорино д'Оро Просекко Спуманте, 0.75 л.png",
+    "арманьяк сент обен.png",
+    "марселан дивноморское.jpg"
+  ];
 
-    // добавим урезанные варианты
-    const words = name.split(' ');
-    if (words.length > 2) {
-      possibleNames.push(words.slice(0, 3).join(' '));
-      possibleNames.push(words.slice(0, 2).join(' '));
-    }
+  // --- УМНОЕ СРАВНЕНИЕ ---
+  function matchScore(productWords, fileName) {
+    const fileWords = getWords(fileName);
 
-    for (let variant of possibleNames) {
-      const clean = variant.trim();
+    let score = 0;
 
-      for (let ext of extensions) {
-        const url = `/assets/wines/${clean}${ext}`;
+    productWords.forEach(w => {
+      if (fileWords.includes(w)) score++;
+    });
 
-        try {
-          const res = await fetch(url, { method: 'HEAD' });
-          if (res.ok) return url;
-        } catch (e) {}
+    return score;
+  }
+
+  function findBestImage() {
+    let bestScore = 0;
+    let bestFile = null;
+
+    files.forEach(file => {
+      const score = matchScore(productWords, file);
+
+      if (score > bestScore) {
+        bestScore = score;
+        bestFile = file;
       }
+    });
+
+    // минимум совпадений (чтобы не было мусора)
+    if (bestScore >= 2) {
+      return `/assets/wines/${bestFile}`;
     }
 
     return '/assets/no-image.png';
   }
 
-  const imageUrl = await findImage(product.name);
+  const imageUrl = findBestImage();
 
-  // --- ВСТАВКА В HTML ---
+  // --- ВСТАВКА ---
   document.querySelector('.product-image').innerHTML = `
     <img src="${imageUrl}" alt="${product.name}">
   `;
@@ -77,7 +89,7 @@ async function loadProduct() {
   document.querySelector('.product-description').textContent =
     product.description || 'Описание скоро появится';
 
-  // --- ХАРАКТЕРИСТИКИ ---
+  // --- характеристики ---
   const specs = document.querySelector('.product-specs');
   if (specs && product.specs) {
     specs.innerHTML = Object.entries(product.specs)
