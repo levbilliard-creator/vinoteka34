@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write   # 🔥 ВАЖНО (иначе 403)
+      contents: write
 
     steps:
       - uses: actions/checkout@v3
@@ -19,12 +19,12 @@ jobs:
         run: |
           mkdir -p data
 
-          files=$(ls assets/wines | grep -v ".keep" | sort)
-
           echo "[" > data/images.json
 
           first=true
-          for file in $files; do
+
+          ls assets/wines | grep -v ".keep" | sort | while IFS= read -r file
+          do
             if [ "$first" = true ]; then
               echo "  \"$file\"" >> data/images.json
               first=false
