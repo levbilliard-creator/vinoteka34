@@ -18,10 +18,24 @@ function getWords(str) {
     .filter(w => w.length > 2);
 }
 
+// убираем мусорные слова
+function cleanWords(words) {
+  const stopWords = [
+    "вино", "шампань", "игристое",
+    "белое", "красное", "розовое",
+    "брют", "сухое", "полусладкое",
+    "экстра", "док", "doc", "dop",
+    "0", "75", "075", "л"
+  ];
+
+  return words.filter(w => !stopWords.includes(w));
+}
+
 
 // ===== ПОИСК КАРТИНКИ =====
 function findBestImage(productName, images) {
-  const productWords = getWords(productName);
+
+  let productWords = cleanWords(getWords(productName));
 
   let bestScore = 0;
   let bestFile = null;
@@ -30,6 +44,7 @@ function findBestImage(productName, images) {
     const fileWords = getWords(file);
 
     let score = 0;
+
     productWords.forEach(w => {
       if (fileWords.includes(w)) score++;
     });
@@ -42,7 +57,8 @@ function findBestImage(productName, images) {
     }
   });
 
-  if (bestScore >= 0.4 && bestFile) {
+  // порог
+  if (bestScore >= 0.3 && bestFile) {
     return `/assets/wines/${bestFile}`;
   }
 
@@ -87,7 +103,7 @@ Promise.all([
     (product.price || 0) + " ₽";
 
 
-  // ===== КАРТИНКА (НОВАЯ ЛОГИКА) =====
+  // ===== КАРТИНКА =====
   const img = document.querySelector(".product-image img");
 
   const smartImage = findBestImage(product.name_ru || "", images);
@@ -155,13 +171,17 @@ Promise.all([
 
 
   // ===== ПОХОЖИЕ ТОВАРЫ =====
-  const similar = products
-    .filter(p =>
-      p.id !== product.id &&
-      p.type === product.type &&
-      p.color === product.color
-    )
-    .slice(0, 4);
+  function getSimilar(products, current) {
+    return products
+      .filter(p =>
+        p.id !== current.id &&
+        p.type === current.type &&
+        p.color === current.color
+      )
+      .slice(0, 4);
+  }
+
+  const similar = getSimilar(products, product);
 
   const container = document.querySelector(".similar-grid");
 
@@ -171,8 +191,7 @@ Promise.all([
         <img src="/images/wine${p.id}.jpg" onerror="this.src='/images/no-wine.png'">
         <div>${p.name_ru}</div>
         <div>${p.price} ₽</div>
-      </a>
-    `).join("");
+      `).join("");
   } else {
     container.innerHTML = "<div style='opacity:0.6'>Нет похожих товаров</div>";
   }
