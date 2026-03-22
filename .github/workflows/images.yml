@@ -4,44 +4,38 @@ on:
   push:
     paths:
       - 'assets/wines/**'
-  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    permissions:
+      contents: write   # 🔥 ВАЖНО (иначе 403)
 
-      - name: Debug files (проверка)
-        run: |
-          echo "=== LIST FILES ==="
-          ls -R assets || true
+    steps:
+      - uses: actions/checkout@v3
 
       - name: Generate images.json
         run: |
           mkdir -p data
+
+          files=$(ls assets/wines | grep -v ".keep" | sort)
+
           echo "[" > data/images.json
 
-          for file in assets/wines/*; do
-            if [ -f "$file" ]; then
-              filename=$(basename "$file")
-              if [ "$filename" != ".keep" ]; then
-                echo "  \"$filename\"," >> data/images.json
-              fi
+          first=true
+          for file in $files; do
+            if [ "$first" = true ]; then
+              echo "  \"$file\"" >> data/images.json
+              first=false
+            else
+              echo "  ,\"$file\"" >> data/images.json
             fi
           done
 
-          sed -i '$ s/,$//' data/images.json
           echo "]" >> data/images.json
 
-      - name: Show result
-        run: |
-          echo "=== RESULT ==="
-          cat data/images.json
-
-      - name: Commit and push
+      - name: Commit
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
