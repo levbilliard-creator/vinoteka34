@@ -27,6 +27,60 @@ async function init(){
 }
 
 
+/* ===== НОРМАЛИЗАЦИЯ ===== */
+
+function normalize(str){
+  return (str || "")
+    .toLowerCase()
+    .replace(/[^a-zа-я0-9\s]/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+
+/* ===== УЛУЧШЕННЫЙ МАТЧИНГ ===== */
+
+function findImage(product){
+
+  if(!IMAGES || IMAGES.length === 0){
+    return "./assets/no-wine.png"
+  }
+
+  const name = normalize(product.name_ru)
+
+  let bestMatch = null
+  let bestScore = 0
+
+  IMAGES.forEach(file => {
+
+    const fileName = normalize(file.replace(/\.(png|jpg|jpeg)/, ""))
+
+    let score = 0
+
+    const words = fileName.split(" ")
+
+    words.forEach(word => {
+      if(word.length > 2 && name.includes(word)){
+        score++
+      }
+    })
+
+    if(score > bestScore){
+      bestScore = score
+      bestMatch = file
+    }
+
+  })
+
+  // 🔥 Порог — чтобы не было мусора
+  if(bestMatch && bestScore >= 2){
+    return "./assets/wines/" + bestMatch
+  }
+
+  return "./assets/no-wine.png"
+}
+
+
 /* ===== КНОПКИ ===== */
 
 function bindButtons(){
@@ -73,55 +127,6 @@ function bindSearch(){
 
   })
 
-}
-
-
-/* ===== НОРМАЛИЗАЦИЯ ===== */
-
-function normalize(str){
-  return (str || "")
-    .toLowerCase()
-    .replace(/[^a-zа-я0-9\s]/gi, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-}
-
-
-/* ===== ПОИСК КАРТИНКИ ===== */
-
-function findImage(product){
-
-  if(!IMAGES || IMAGES.length === 0){
-    return "./assets/no-wine.png"
-  }
-
-  const name = normalize(product.name_ru)
-
-  let bestMatch = null
-  let bestScore = 0
-
-  IMAGES.forEach(file => {
-
-    const fileName = normalize(file.replace(/\.(png|jpg|jpeg)/, ""))
-
-    let score = 0
-
-    fileName.split(" ").forEach(word => {
-      if(name.includes(word)) score++
-    })
-
-    if(score > bestScore){
-      bestScore = score
-      bestMatch = file
-    }
-
-  })
-
-  if(bestMatch && bestScore >= 2){
-    return "./assets/wines/" + bestMatch
-  }
-
-  return "./assets/no-wine.png"
 }
 
 
