@@ -1,4 +1,5 @@
 let ALL = []
+let IMAGES = []
 
 const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
@@ -8,12 +9,18 @@ init()
 
 async function init(){
   try{
-    const res = await fetch("./data/products.json")
-    ALL = await res.json()
+    const [productsRes, imagesRes] = await Promise.all([
+      fetch("./data/products.json"),
+      fetch("./data/images.json")
+    ])
+
+    ALL = await productsRes.json()
+    IMAGES = await imagesRes.json()
 
     render(ALL)
     bindButtons()
     bindSearch()
+
   }catch(e){
     console.error("Ошибка загрузки данных", e)
   }
@@ -69,16 +76,52 @@ function bindSearch(){
 }
 
 
-/* ===== КАРТИНКИ ===== */
+/* ===== НОРМАЛИЗАЦИЯ ===== */
 
-function getImage(id){
+function normalize(str){
+  return (str || "")
+    .toLowerCase()
+    .replace(/[^a-zа-я0-9\s]/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+}
 
-  const map = {
-    1: "./assets/wines/арманьяк сент обен.png",
-    5: "./assets/wines/марселан дивноморское.jpg"
+
+/* ===== ПОИСК КАРТИНКИ ===== */
+
+function findImage(product){
+
+  if(!IMAGES || IMAGES.length === 0){
+    return "./assets/no-wine.png"
   }
 
-  return map[id] || "./assets/no-wine.png"
+  const name = normalize(product.name_ru)
+
+  let bestMatch = null
+  let bestScore = 0
+
+  IMAGES.forEach(file => {
+
+    const fileName = normalize(file.replace(/\.(png|jpg|jpeg)/, ""))
+
+    let score = 0
+
+    fileName.split(" ").forEach(word => {
+      if(name.includes(word)) score++
+    })
+
+    if(score > bestScore){
+      bestScore = score
+      bestMatch = file
+    }
+
+  })
+
+  if(bestMatch && bestScore >= 2){
+    return "./assets/wines/" + bestMatch
+  }
+
+  return "./assets/no-wine.png"
 }
 
 
@@ -100,10 +143,13 @@ function render(items){
 
   items.forEach(w => {
 
+    const img = findImage(w)
+
     grid.innerHTML += `
       <div class="product-card">
 
-        <img src="${getImage(w.id)}" class="wine-img">
+        <img src="${img}" class="wine-img"
+             onerror="this.src='./assets/no-wine.png'">
 
         <div class="wine-type">${translate(w.type)}</div>
 
