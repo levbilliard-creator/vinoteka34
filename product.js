@@ -3,73 +3,10 @@ const params = new URLSearchParams(window.location.search);
 const productId = Number(params.get("id"));
 
 
-// ===== НОРМАЛИЗАЦИЯ =====
-function normalize(str) {
-  return str
-    .toLowerCase()
-    .replace(/ё/g, "е")
-    .replace(/[^a-zа-я0-9\s]/gi, "")
-    .trim();
-}
-
-function getWords(str) {
-  return normalize(str)
-    .split(/\s+/)
-    .filter(w => w.length > 2);
-}
-
-// убираем мусорные слова
-function cleanWords(words) {
-  const stopWords = [
-    "вино", "шампань", "игристое",
-    "белое", "красное", "розовое",
-    "брют", "сухое", "полусладкое",
-    "экстра", "док", "doc", "dop",
-    "0", "75", "075", "л"
-  ];
-
-  return words.filter(w => !stopWords.includes(w));
-}
-
-
-// ===== ПОИСК КАРТИНКИ =====
-function findBestImage(productName, images) {
-
-  let productWords = cleanWords(getWords(productName));
-
-  let bestScore = 0;
-  let bestFile = null;
-
-  images.forEach(file => {
-    const fileWords = getWords(file);
-
-    let score = 0;
-
-    productWords.forEach(w => {
-      if (fileWords.includes(w)) score++;
-    });
-
-    const ratio = score / Math.max(productWords.length, 1);
-
-    if (ratio > bestScore) {
-      bestScore = ratio;
-      bestFile = file;
-    }
-  });
-
-  // порог
-  if (bestScore >= 0.3 && bestFile) {
-    return `/assets/wines/${bestFile}`;
-  }
-
-  return "/images/no-wine.png";
-}
-
-
 // ===== ЗАГРУЗКА =====
 Promise.all([
-  fetch("/data/products.json").then(r => r.json()),
-  fetch("/data/images.json").then(r => r.json())
+  fetch("/data/products.json").then(res => res.json()),
+  fetch("/data/images.json").then(res => res.json())
 ])
 .then(([products, images]) => {
 
@@ -103,29 +40,45 @@ Promise.all([
     (product.price || 0) + " ₽";
 
 
-  // ===== КАРТИНКА =====
-  const img = document.querySelector(".product-image img");
-
-  const smartImage = findBestImage(product.name_ru || "", images);
-
-  const tryPaths = [
-    smartImage,
-    `/images/wine${product.id}.jpg`,
-    `/images/${product.id}.jpg`,
-    `/images/${product.id}.png`,
-    `/images/no-wine.png`
-  ];
-
-  let i = 0;
-
-  function loadNext() {
-    if (i >= tryPaths.length) return;
-    img.src = tryPaths[i];
-    i++;
+  // ===== ПОИСК КАРТИНКИ =====
+  function normalize(str) {
+    return str
+      .toLowerCase()
+      .replace(/ё/g, "е")
+      .replace(/[^a-zа-я0-9 ]/gi, "")
+      .split(" ")
+      .filter(w => w.length > 2);
   }
 
-  img.onerror = loadNext;
-  loadNext();
+  function findImage(productName, images) {
+    const words = normalize(productName);
+
+    let bestMatch = null;
+    let bestScore = 0;
+
+    images.forEach(img => {
+      const imgWords = normalize(img);
+
+      let score = words.filter(w => imgWords.includes(w)).length;
+
+      if (score > bestScore) {
+        bestScore = score;
+        bestMatch = img;
+      }
+    });
+
+    return bestScore >= 2 ? bestMatch : null;
+  }
+
+  const img = document.querySelector(".product-image img");
+
+  const foundImage = findImage(product.name_ru, images);
+
+  if (foundImage) {
+    img.src = `/assets/wines/${foundImage}`;
+  } else {
+    img.src = "/images/no-wine.png";
+  }
 
 
   // ===== ОПИСАНИЕ =====
@@ -135,7 +88,7 @@ Promise.all([
 
   function generateDescription(p) {
     if (p.type === "wine") {
-      return `${capitalize(p.color)} ${p.style} вино "${p.name_ru}" с гармоничным вкусом и приятным ароматом.`;
+      return `${capitalize(p.color)} ${p.style} вино "${p.name_ru}" с гармоничным вкусом и приятным ароматом. Отлично подойдет как для ужина, так и для особого случая.`;
     }
 
     if (p.type === "strong") {
@@ -151,13 +104,23 @@ Promise.all([
 
   // ===== ГАСТРОНОМИЯ =====
   function getFoodPairing(p) {
+    if (p.type !== "wine") {
+      return "Рекомендуется употреблять в чистом виде.";
+    }
 
-    if (p.type !== "wine") return "Рекомендуется употреблять в чистом виде.";
-    if (p.color === "красное") return "Идеально к мясу и сырам.";
-    if (p.color === "белое") return "К рыбе и морепродуктам.";
-    if (p.style === "игристое") return "К закускам и десертам.";
+    if (p.color === "красное") {
+      return "Идеально к мясу и сырам.";
+    }
 
-    return "Универсально.";
+    if (p.color === "белое") {
+      return "Подходит к рыбе и морепродуктам.";
+    }
+
+    if (p.style === "игристое") {
+      return "Отлично к закускам и десертам.";
+    }
+
+    return "Универсальное сочетание.";
   }
 
 
@@ -170,7 +133,7 @@ Promise.all([
   `;
 
 
-  // ===== ПОХОЖИЕ ТОВАРЫ =====
+  // ===== ПОХОЖИЕ =====
   function getSimilar(products, current) {
     return products
       .filter(p =>
@@ -188,10 +151,10 @@ Promise.all([
   if (similar.length > 0) {
     container.innerHTML = similar.map(p => `
       <a href="/product.html?id=${p.id}" class="similar-card">
-        <img src="/images/wine${p.id}.jpg" onerror="this.src='/images/no-wine.png'">
         <div>${p.name_ru}</div>
         <div>${p.price} ₽</div>
-      `).join("");
+      </a>
+    `).join("");
   } else {
     container.innerHTML = "<div style='opacity:0.6'>Нет похожих товаров</div>";
   }
