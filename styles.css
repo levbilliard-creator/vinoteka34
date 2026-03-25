@@ -226,49 +226,22 @@ body {
   color: white;
   text-decoration: none;
 }
-.similar {
-  margin-top: 60px;
-}
 
-.similar-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.similar-card {
-  background: #111;
-  padding: 15px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: white;
-  transition: 0.2s;
-}
-
-.similar-card:hover {
-  transform: translateY(-5px);
-}
-
-.similar-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
-}
 
 /* =========================
-   PRODUCT PREMIUM (ФИКС)
+   PRODUCT (КОМПАКТНАЯ ВЕРСИЯ)
 ========================= */
 
 .product-page {
-  padding: 60px 40px;
+  padding: 30px 40px; /* БЫЛО 60 → СТАЛО КОМПАКТНЕЕ */
 }
 
 .product-container {
   display: flex;
-  gap: 80px;
-  align-items: center;
+  gap: 40px; /* БЫЛО 80 */
+  align-items: flex-start; /* ВАЖНО */
   justify-content: center;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -276,53 +249,53 @@ body {
 /* ===== ФОТО ===== */
 
 .product-image {
-  flex: 0 0 380px;
+  flex: 0 0 320px; /* БЫЛО 360 */
   display: flex;
   justify-content: center;
   align-items: center;
   background: radial-gradient(circle at center, #1c3a4a 0%, #132733 100%);
-  border-radius: 24px;
-  padding: 40px;
+  border-radius: 20px;
+  padding: 25px; /* БЫЛО 40 */
 }
 
 .product-image img {
-  max-height: 420px;   /* фикс размера */
+  max-height: 300px; /* БЫЛО 420 */
   width: auto;
-  object-fit: contain;
 }
 
 
 /* ===== ИНФО ===== */
 
 .product-info {
-  max-width: 520px;
+  max-width: 500px;
 }
 
 .product-type {
-  font-size: 12px;
+  font-size: 11px;
   opacity: 0.5;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   text-transform: uppercase;
 }
 
 .product-en {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.5;
 }
 
 .product-title {
-  font-size: 36px;
-  margin: 10px 0 15px;
+  font-size: 28px; /* БЫЛО 36 */
+  margin: 8px 0 10px;
 }
 
 .product-style {
+  font-size: 14px;
   opacity: 0.7;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .product-price {
-  font-size: 32px;
-  margin-bottom: 30px;
+  font-size: 24px; /* БЫЛО 32 */
+  margin-bottom: 15px;
   font-weight: bold;
 }
 
@@ -331,7 +304,73 @@ body {
 
 .product-actions {
   display: flex;
-  gap: 15px;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.product-actions a {
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+
+/* ===== ОПИСАНИЕ ===== */
+
+.product-description {
+  margin-top: 15px; /* БЫЛО 40 */
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+
+/* ===== ХАРАКТЕРИСТИКИ ===== */
+
+.product-specs {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.product-specs div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 4px;
+  font-size: 13px;
+}
+
+
+/* ===== ПОХОЖИЕ ===== */
+
+.similar {
+  margin-top: 30px; /* БЫЛО 60 */
+}
+
+.similar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.similar-card {
+  background: #111;
+  padding: 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+  font-size: 13px;
+}
+
+.similar-card:hover {
+  transform: translateY(-5px);
+}
+
+.similar-card img {
+  width: 100%;
+  height: 120px; /* БЫЛО 180 */
+  object-fit: contain;
 }
 
 
@@ -356,7 +395,7 @@ body {
 
   .product-container {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
   }
 
   .product-image {
@@ -364,71 +403,7 @@ body {
   }
 
   .product-image img {
-    max-height: 300px;
+    max-height: 260px;
   }
 
-}/* =========================
-   PRODUCT (ДОБАВКА БЕЗ ПОЛОМОК)
-========================= */
-
-.product-page {
-  padding: 60px 40px;
-}
-
-.product-container {
-  display: flex;
-  gap: 80px;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.product-image {
-  flex: 0 0 360px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at center, #1c3a4a 0%, #132733 100%);
-  border-radius: 24px;
-  padding: 40px;
-}
-
-.product-image img {
-  max-height: 320px;
-  width: auto;
-}
-
-.product-info {
-  max-width: 520px;
-}
-
-.product-title {
-  font-size: 36px;
-}
-
-.product-price {
-  font-size: 32px;
-  margin: 20px 0;
-}
-
-.product-actions {
-  display: flex;
-  gap: 15px;
-}
-
-.product-description {
-  margin-top: 40px;
-}
-
-.product-specs {
-  display: grid;
-  gap: 10px;
-}
-
-.product-specs div {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding-bottom: 5px;
 }
