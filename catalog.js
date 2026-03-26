@@ -39,7 +39,7 @@ function normalize(str){
 }
 
 
-/* ===== УМНЫЙ МАТЧИНГ ===== */
+/* ===== MATCHING ===== */
 
 function findImage(product){
 
@@ -53,7 +53,6 @@ function findImage(product){
 
   const ru = normalize(product.name_ru)
   const en = normalize(product.name_en)
-
   const name = ru + " " + en
 
   let bestMatch = null
@@ -72,13 +71,8 @@ function findImage(product){
 
       if(word.length < 3) return
 
-      if(nameWords.includes(word)){
-        score += 2
-      }
-
-      if(name.includes(word)){
-        score += 1
-      }
+      if(nameWords.includes(word)) score += 2
+      if(name.includes(word)) score += 1
 
     })
 
@@ -171,24 +165,10 @@ function render(items){
     const img = findImage(w)
 
     grid.innerHTML += `
-      <div class="product-card" style="
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
-        height:100%;
-      ">
+      <div class="product-card">
 
-        <div style="
-          width:100%;
-          height:160px;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-          overflow:hidden;
-          margin-bottom:10px;
-        ">
-          <img src="${img}" 
-               style="max-height:140px; max-width:90%; object-fit:contain;"
+        <div class="img-wrap">
+          <img src="${img}" class="wine-img"
                onerror="this.src='./assets/no-wine.png'">
         </div>
 
@@ -196,9 +176,7 @@ function render(items){
 
         ${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
 
-        <div class="wine-ru" style="min-height:48px;">
-          ${w.name_ru}
-        </div>
+        <div class="wine-ru">${w.name_ru}</div>
 
         ${(w.color || w.style) ? `
           <div class="wine-style">
@@ -206,17 +184,10 @@ function render(items){
           </div>
         ` : ""}
 
-        <div style="
-          margin-top:auto;
-          display:flex;
-          justify-content:space-between;
-          align-items:center;
-        ">
+        <div class="wine-bottom">
           <div class="wine-price">${w.price} ₽</div>
 
-          <a href="./product.html?id=${w.id}" 
-             class="btn-link"
-             style="pointer-events:auto;">
+          <a href="./product.html?id=${w.id}" class="btn-link">
             Открыть →
           </a>
         </div>
