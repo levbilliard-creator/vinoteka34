@@ -42,7 +42,7 @@ function normalize(str){
 }
 
 
-/* ===== РАЗБИВКА НА СЛОВА ===== */
+/* ===== СЛОВА ===== */
 
 function words(str){
   return normalize(str)
@@ -57,13 +57,13 @@ function buildImageCache(){
 
   ALL.forEach(product => {
 
-    // ручная картинка — приоритет
+    // 🔴 ручная картинка
     if(product.image && product.image.trim() !== ""){
-      IMAGE_CACHE[product.id] = "./assets/wines/" + product.image.trim()
+      IMAGE_CACHE[product.id] = encodeURI("./assets/wines/" + product.image.trim())
       return
     }
 
-    const productWords = words(product.name_ru + " " + (product.name_en || ""))
+    const productWords = words(product.name_ru)
 
     let bestMatch = null
     let bestScore = 0
@@ -80,11 +80,6 @@ function buildImageCache(){
         }
       })
 
-      // бонус если совпало 2+ слова подряд
-      if(score >= 2){
-        score += 2
-      }
-
       if(score > bestScore){
         bestScore = score
         bestMatch = file
@@ -93,7 +88,7 @@ function buildImageCache(){
     })
 
     if(bestMatch){
-      IMAGE_CACHE[product.id] = "./assets/wines/" + bestMatch
+      IMAGE_CACHE[product.id] = encodeURI("./assets/wines/" + bestMatch)
     } else {
       IMAGE_CACHE[product.id] = "./assets/no-wine.png"
     }
@@ -159,7 +154,7 @@ function bindSearch(){
 }
 
 
-/* ===== РЕНДЕР (БЕЗ МИГАНИЯ) ===== */
+/* ===== РЕНДЕР ===== */
 
 function render(items){
 
@@ -183,7 +178,8 @@ function render(items){
       <div class="product-card">
 
         <div class="img-wrap">
-          <img src="${img}" class="wine-img"
+          <img src="${img}"
+               class="wine-img"
                onerror="this.src='./assets/no-wine.png'">
         </div>
 
