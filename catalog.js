@@ -1,5 +1,6 @@
 let ALL = []
 let IMAGES = []
+let IMAGE_CACHE = {}
 
 const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
@@ -16,6 +17,9 @@ async function init(){
 
     ALL = await productsRes.json()
     IMAGES = await imagesRes.json()
+
+    // 🔥 один раз считаем все картинки
+    buildImageCache()
 
     render(ALL)
     bindButtons()
@@ -39,59 +43,69 @@ function normalize(str){
 }
 
 
-/* ===== MATCHING ===== */
+/* ===== КЭШ КАРТИНОК ===== */
 
-function findImage(product){
+function buildImageCache(){
 
-  if(product.image){
-    return "./assets/wines/" + product.image
-  }
+  ALL.forEach(product => {
 
-  if(!IMAGES || IMAGES.length === 0){
-    return "./assets/no-wine.png"
-  }
+    // если вручную задано — сразу фиксируем
+    if(product.image){
+      IMAGE_CACHE[product.id] = "./assets/wines/" + product.image
+      return
+    }
 
-  const ru = normalize(product.name_ru)
-  const en = normalize(product.name_en)
-  const name = ru + " " + en
+    const ru = normalize(product.name_ru)
+    const en = normalize(product.name_en)
+    const name = ru + " " + en
 
-  let bestMatch = null
-  let bestScore = 0
+    let bestMatch = null
+    let bestScore = 0
 
-  IMAGES.forEach(file => {
+    IMAGES.forEach(file => {
 
-    const fileName = normalize(file.replace(/\.(png|jpg|jpeg)/, ""))
+      const fileName = normalize(file.replace(/\.(png|jpg|jpeg)/, ""))
 
-    let score = 0
+      let score = 0
 
-    const fileWords = fileName.split(" ")
-    const nameWords = name.split(" ")
+      const fileWords = fileName.split(" ")
+      const nameWords = name.split(" ")
 
-    fileWords.forEach(word => {
+      fileWords.forEach(word => {
 
-      if(word.length < 3) return
+        if(word.length < 3) return
 
-      if(nameWords.includes(word)) score += 2
-      if(name.includes(word)) score += 1
+        if(nameWords.includes(word)) score += 2
+        if(name.includes(word)) score += 1
+
+      })
+
+      if(fileWords[0] && name.startsWith(fileWords[0])){
+        score += 2
+      }
+
+      if(score > bestScore){
+        bestScore = score
+        bestMatch = file
+      }
 
     })
 
-    if(fileWords[0] && name.startsWith(fileWords[0])){
-      score += 2
-    }
-
-    if(score > bestScore){
-      bestScore = score
-      bestMatch = file
+    if(bestMatch && bestScore >= 3){
+      IMAGE_CACHE[product.id] = "./assets/wines/" + bestMatch
+    } else {
+      IMAGE_CACHE[product.id] = "./assets/no-wine.png"
     }
 
   })
 
-  if(bestMatch && bestScore >= 3){
-    return "./assets/wines/" + bestMatch
-  }
+}
 
-  return "./assets/no-wine.png"
+
+/* ===== ПОЛУЧЕНИЕ КАРТИНКИ ===== */
+
+function getImage(product){
+  return IMAGE_CACHE[product.id] || "./assets/no-wine.png"
 }
 
 
@@ -162,13 +176,14 @@ function render(items){
 
   items.forEach(w => {
 
-    const img = findImage(w)
+    const img = getImage(w)
 
     grid.innerHTML += `
       <div class="product-card">
 
         <div class="img-wrap">
           <img src="${img}" class="wine-img"
+               loading="lazy"
                onerror="this.src='./assets/no-wine.png'">
         </div>
 
