@@ -36,6 +36,7 @@ function normalize(str){
   return (str || "")
     .toLowerCase()
     .replace(/ё/g, "е")
+    .replace(/[’']/g, "")   // 🔥 ключевая строка
     .replace(/[^a-zа-я0-9\s]/gi, " ")
     .replace(/\s+/g, " ")
     .trim()
@@ -51,44 +52,54 @@ function words(str){
 }
 
 
+/* ===== ПОИСК ФАЙЛА (ГЛАВНОЕ) ===== */
+
+function findRealImage(product){
+
+  const pWords = words(product.name_ru)
+
+  let bestMatch = null
+  let bestScore = 0
+
+  IMAGES.forEach(file => {
+
+    const fWords = words(file)
+
+    let score = 0
+
+    pWords.forEach(w => {
+      if(fWords.includes(w)){
+        score++
+      }
+    })
+
+    if(score > bestScore){
+      bestScore = score
+      bestMatch = file
+    }
+
+  })
+
+  return bestMatch
+}
+
+
 /* ===== КЭШ ===== */
 
 function buildImageCache(){
 
   ALL.forEach(product => {
 
-    // 🔴 ручная картинка
+    // ручная картинка
     if(product.image && product.image.trim() !== ""){
-      IMAGE_CACHE[product.id] = encodeURI("./assets/wines/" + product.image.trim())
+      IMAGE_CACHE[product.id] = "./assets/wines/" + product.image.trim()
       return
     }
 
-    const productWords = words(product.name_ru)
+    const file = findRealImage(product)
 
-    let bestMatch = null
-    let bestScore = 0
-
-    IMAGES.forEach(file => {
-
-      const fileWords = words(file)
-
-      let score = 0
-
-      productWords.forEach(w => {
-        if(fileWords.includes(w)){
-          score++
-        }
-      })
-
-      if(score > bestScore){
-        bestScore = score
-        bestMatch = file
-      }
-
-    })
-
-    if(bestMatch){
-      IMAGE_CACHE[product.id] = encodeURI("./assets/wines/" + bestMatch)
+    if(file){
+      IMAGE_CACHE[product.id] = "./assets/wines/" + file
     } else {
       IMAGE_CACHE[product.id] = "./assets/no-wine.png"
     }
@@ -178,8 +189,7 @@ function render(items){
       <div class="product-card">
 
         <div class="img-wrap">
-          <img src="${img}"
-               class="wine-img"
+          <img src="${img}" class="wine-img"
                onerror="this.src='./assets/no-wine.png'">
         </div>
 
