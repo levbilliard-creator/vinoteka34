@@ -18,10 +18,9 @@ async function init(){
     ALL = await productsRes.json()
     IMAGES = await imagesRes.json()
 
-    // 🔥 один раз считаем все картинки
     buildImageCache()
-
     render(ALL)
+
     bindButtons()
     bindSearch()
 
@@ -49,9 +48,9 @@ function buildImageCache(){
 
   ALL.forEach(product => {
 
-    // если вручную задано — сразу фиксируем
-    if(product.image){
-      IMAGE_CACHE[product.id] = "./assets/wines/" + product.image
+    // 🔴 ЖЕСТКИЙ ПРИОРИТЕТ РУЧНОЙ КАРТИНКИ
+    if(product.image && product.image.trim() !== ""){
+      IMAGE_CACHE[product.id] = "./assets/wines/" + product.image.trim()
       return
     }
 
@@ -79,10 +78,6 @@ function buildImageCache(){
         if(name.includes(word)) score += 1
 
       })
-
-      if(fileWords[0] && name.startsWith(fileWords[0])){
-        score += 2
-      }
 
       if(score > bestScore){
         bestScore = score
@@ -158,7 +153,7 @@ function bindSearch(){
 }
 
 
-/* ===== РЕНДЕР ===== */
+/* ===== РЕНДЕР (БЕЗ МИГАНИЯ) ===== */
 
 function render(items){
 
@@ -167,18 +162,18 @@ function render(items){
     return
   }
 
-  grid.innerHTML = ""
-
   if(items.length === 0){
     grid.innerHTML = "<p style='opacity:0.6'>Нет товаров</p>"
     return
   }
 
+  let html = ""
+
   items.forEach(w => {
 
     const img = getImage(w)
 
-    grid.innerHTML += `
+    html += `
       <div class="product-card">
 
         <div class="img-wrap">
@@ -211,6 +206,8 @@ function render(items){
     `
   })
 
+  // 🔥 ОДНА ВСТАВКА = НЕТ МИГАНИЯ
+  grid.innerHTML = html
 }
 
 
