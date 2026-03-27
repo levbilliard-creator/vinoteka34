@@ -1,5 +1,4 @@
 let ALL = []
-let IMAGES = []
 
 const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
@@ -9,57 +8,25 @@ init()
 
 async function init(){
   try{
-    const [productsRes, imagesRes] = await Promise.all([
-      fetch("./data/products.json"),
-      fetch("./data/images.json")
-    ])
-
-    ALL = await productsRes.json()
-    IMAGES = await imagesRes.json()
+    const res = await fetch("./data/products.json")
+    ALL = await res.json()
 
     render(ALL)
     bindButtons()
     bindSearch()
 
   }catch(e){
-    console.error("Ошибка загрузки данных", e)
+    console.error("Ошибка загрузки", e)
   }
 }
 
 
-/* ===== НОРМАЛИЗАЦИЯ ===== */
-
-function norm(str){
-  return (str || "")
-    .toLowerCase()
-    .replace(/ё/g, "е")
-    .replace(/[’']/g, "")
-}
-
-
-/* ===== ПРОСТОЙ ПОИСК ФАЙЛА ===== */
+/* ===== ПОЛУЧЕНИЕ КАРТИНКИ ===== */
 
 function getImage(product){
 
-  // ручная картинка
-  if(product.image){
+  if(product.image && product.image.trim() !== ""){
     return encodeURI("./assets/wines/" + product.image)
-  }
-
-  const name = norm(product.name_ru)
-
-  for(let file of IMAGES){
-
-    const f = norm(file)
-
-    // если хотя бы одно слово совпало — берем
-    const words = name.split(" ")
-
-    for(let w of words){
-      if(w.length > 3 && f.includes(w)){
-        return encodeURI("./assets/wines/" + file)
-      }
-    }
   }
 
   return "./assets/no-wine.png"
@@ -125,7 +92,9 @@ function render(items){
 /* ===== КНОПКИ ===== */
 
 function bindButtons(){
+
   buttons.forEach(btn => {
+
     btn.addEventListener("click", () => {
 
       buttons.forEach(b => b.classList.remove("active"))
@@ -138,30 +107,41 @@ function bindButtons(){
         return
       }
 
-      render(ALL.filter(w => w.type === type))
+      const filtered = ALL.filter(w => w.type === type)
+
+      render(filtered)
+
     })
+
   })
+
 }
 
 
 /* ===== ПОИСК ===== */
 
 function bindSearch(){
+
   searchInput.addEventListener("input", () => {
 
     const value = searchInput.value.toLowerCase()
 
-    render(ALL.filter(w =>
+    const filtered = ALL.filter(w =>
       (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
       (w.name_en && w.name_en.toLowerCase().includes(value))
-    ))
+    )
+
+    render(filtered)
+
   })
+
 }
 
 
 /* ===== ПЕРЕВОД ===== */
 
 function translate(type){
+
   if(type === "wine") return "Вино"
   if(type === "sparkling") return "Игристое"
   if(type === "beer") return "Пиво"
@@ -170,5 +150,6 @@ function translate(type){
   if(type === "soft") return "Безалкогольные"
   if(type === "tea") return "Чай"
   if(type === "accessories") return "Аксессуары"
+
   return type
 }
