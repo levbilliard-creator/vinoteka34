@@ -1,5 +1,5 @@
 let ALL = []
-let IMAGES = []
+let CURRENT = []
 
 const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
@@ -9,15 +9,12 @@ init()
 
 async function init(){
   try{
-    const [productsRes, imagesRes] = await Promise.all([
-      fetch("./data/products.json"),
-      fetch("./data/images.json")
-    ])
+    const res = await fetch("./data/products.json")
+    ALL = await res.json()
+    CURRENT = ALL
 
-    ALL = await productsRes.json()
-    IMAGES = await imagesRes.json()
+    initialRender()   // 🔥 один раз
 
-    render(ALL)
     bindButtons()
     bindSearch()
 
@@ -27,70 +24,31 @@ async function init(){
 }
 
 
-/* ===== НОРМАЛИЗАЦИЯ ===== */
+/* ===== КАРТИНКА ===== */
 
-function norm(str){
-  return (str || "")
-    .toLowerCase()
-    .replace(/ё/g, "е")
-    .replace(/[’']/g, "")
-}
-
-
-/* ===== ВРЕМЕННЫЙ ПОИСК (ЕСЛИ НЕТ image) ===== */
-
-function fallbackImage(product){
-
-  const name = norm(product.name_ru)
-
-  for(let file of IMAGES){
-
-    const f = norm(file)
-
-    if(name.split(" ").some(w => w.length > 3 && f.includes(w))){
-      return encodeURI("./assets/wines/" + file)
-    }
+function getImage(product){
+  if(product.image){
+    return encodeURI("./assets/wines/" + product.image)
   }
-
   return "./assets/no-wine.png"
 }
 
 
-/* ===== ПОЛУЧЕНИЕ КАРТИНКИ ===== */
+/* ===== ПЕРВЫЙ РЕНДЕР ===== */
 
-function getImage(product){
-
-  // 🔥 НОВАЯ СИСТЕМА
-  if(product.image && product.image.trim() !== ""){
-    return encodeURI("./assets/wines/" + product.image)
-  }
-
-  // 🔴 СТАРАЯ СИСТЕМА (временно)
-  return fallbackImage(product)
-}
-
-
-/* ===== РЕНДЕР ===== */
-
-function render(items){
-
-  if(!grid){
-    console.error("catalogGrid не найден")
-    return
-  }
+function initialRender(){
 
   let html = ""
 
-  items.forEach(w => {
+  ALL.forEach(w => {
 
     const img = getImage(w)
 
     html += `
-      <div class="product-card">
+      <div class="product-card" data-id="${w.id}">
 
         <div class="img-wrap">
-          <img src="${img}" class="wine-img"
-               onerror="this.src='./assets/no-wine.png'">
+          <img src="${img}" class="wine-img">
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
@@ -107,7 +65,6 @@ function render(items){
 
         <div class="wine-bottom">
           <div class="wine-price">${w.price} ₽</div>
-
           <a href="./product.html?id=${w.id}" class="btn-link">
             Открыть →
           </a>
@@ -121,10 +78,32 @@ function render(items){
 }
 
 
+/* ===== ФИЛЬТР БЕЗ ПЕРЕРИСОВКИ ===== */
+
+function updateView(list){
+
+  const ids = new Set(list.map(x => x.id))
+
+  document.querySelectorAll(".product-card").forEach(card => {
+
+    const id = Number(card.dataset.id)
+
+    if(ids.has(id)){
+      card.style.display = ""
+    } else {
+      card.style.display = "none"
+    }
+
+  })
+}
+
+
 /* ===== КНОПКИ ===== */
 
 function bindButtons(){
+
   buttons.forEach(btn => {
+
     btn.addEventListener("click", () => {
 
       buttons.forEach(b => b.classList.remove("active"))
@@ -133,28 +112,37 @@ function bindButtons(){
       const type = btn.dataset.type
 
       if(type === "all"){
-        render(ALL)
-        return
+        CURRENT = ALL
+      } else {
+        CURRENT = ALL.filter(w => w.type === type)
       }
 
-      render(ALL.filter(w => w.type === type))
+      updateView(CURRENT)
+
     })
+
   })
+
 }
 
 
 /* ===== ПОИСК ===== */
 
 function bindSearch(){
+
   searchInput.addEventListener("input", () => {
 
     const value = searchInput.value.toLowerCase()
 
-    render(ALL.filter(w =>
+    CURRENT = ALL.filter(w =>
       (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
       (w.name_en && w.name_en.toLowerCase().includes(value))
-    ))
+    )
+
+    updateView(CURRENT)
+
   })
+
 }
 
 
