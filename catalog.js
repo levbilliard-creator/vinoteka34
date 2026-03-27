@@ -32,30 +32,21 @@ async function init(){
 function normalize(str){
   return (str || "")
     .toLowerCase()
-    .replace(/ё/g, "е")
     .replace(/[^a-zа-я0-9\s]/gi, " ")
     .replace(/\s+/g, " ")
     .trim()
 }
 
 
-/* ===== УМНЫЙ МАТЧИНГ V2 ===== */
+/* ===== УЛУЧШЕННЫЙ МАТЧИНГ ===== */
 
 function findImage(product){
-
-  // если задано вручную — используем
-  if(product.image){
-    return "./assets/wines/" + product.image
-  }
 
   if(!IMAGES || IMAGES.length === 0){
     return "./assets/no-wine.png"
   }
 
-  const ru = normalize(product.name_ru)
-  const en = normalize(product.name_en)
-
-  const name = ru + " " + en
+  const name = normalize(product.name_ru)
 
   let bestMatch = null
   let bestScore = 0
@@ -66,27 +57,13 @@ function findImage(product){
 
     let score = 0
 
-    const fileWords = fileName.split(" ")
-    const nameWords = name.split(" ")
+    const words = fileName.split(" ")
 
-    fileWords.forEach(word => {
-
-      if(word.length < 3) return
-
-      if(nameWords.includes(word)){
-        score += 2
+    words.forEach(word => {
+      if(word.length > 2 && name.includes(word)){
+        score++
       }
-
-      if(name.includes(word)){
-        score += 1
-      }
-
     })
-
-    // бонус за совпадение начала
-    if(fileWords[0] && name.startsWith(fileWords[0])){
-      score += 2
-    }
 
     if(score > bestScore){
       bestScore = score
@@ -95,8 +72,8 @@ function findImage(product){
 
   })
 
-  // жесткий порог
-  if(bestMatch && bestScore >= 3){
+  // 🔥 Порог — чтобы не было мусора
+  if(bestMatch && bestScore >= 2){
     return "./assets/wines/" + bestMatch
   }
 
@@ -176,10 +153,8 @@ function render(items){
     grid.innerHTML += `
       <div class="product-card">
 
-        <div class="img-wrap">
-          <img src="${img}" class="wine-img"
-               onerror="this.src='./assets/no-wine.png'">
-        </div>
+        <img src="${img}" class="wine-img"
+             onerror="this.src='./assets/no-wine.png'">
 
         <div class="wine-type">${translate(w.type)}</div>
 
@@ -193,13 +168,11 @@ function render(items){
           </div>
         ` : ""}
 
-        <div class="wine-bottom">
-          <div class="wine-price">${w.price} ₽</div>
+        <div class="wine-price">${w.price} ₽</div>
 
-          <a href="./product.html?id=${w.id}" class="btn-link">
-            Открыть →
-          </a>
-        </div>
+        <a href="./product.html?id=${w.id}" class="btn-link">
+          Подробнее →
+        </a>
 
       </div>
     `
