@@ -1,4 +1,5 @@
 let ALL = []
+let IMAGES = []
 
 const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
@@ -8,8 +9,13 @@ init()
 
 async function init(){
   try{
-    const res = await fetch("./data/products.json")
-    ALL = await res.json()
+    const [productsRes, imagesRes] = await Promise.all([
+      fetch("./data/products.json"),
+      fetch("./data/images.json")
+    ])
+
+    ALL = await productsRes.json()
+    IMAGES = await imagesRes.json()
 
     render(ALL)
     bindButtons()
@@ -21,15 +27,46 @@ async function init(){
 }
 
 
+/* ===== НОРМАЛИЗАЦИЯ ===== */
+
+function norm(str){
+  return (str || "")
+    .toLowerCase()
+    .replace(/ё/g, "е")
+    .replace(/[’']/g, "")
+}
+
+
+/* ===== ВРЕМЕННЫЙ ПОИСК (ЕСЛИ НЕТ image) ===== */
+
+function fallbackImage(product){
+
+  const name = norm(product.name_ru)
+
+  for(let file of IMAGES){
+
+    const f = norm(file)
+
+    if(name.split(" ").some(w => w.length > 3 && f.includes(w))){
+      return encodeURI("./assets/wines/" + file)
+    }
+  }
+
+  return "./assets/no-wine.png"
+}
+
+
 /* ===== ПОЛУЧЕНИЕ КАРТИНКИ ===== */
 
 function getImage(product){
 
+  // 🔥 НОВАЯ СИСТЕМА
   if(product.image && product.image.trim() !== ""){
     return encodeURI("./assets/wines/" + product.image)
   }
 
-  return "./assets/no-wine.png"
+  // 🔴 СТАРАЯ СИСТЕМА (временно)
+  return fallbackImage(product)
 }
 
 
@@ -39,11 +76,6 @@ function render(items){
 
   if(!grid){
     console.error("catalogGrid не найден")
-    return
-  }
-
-  if(items.length === 0){
-    grid.innerHTML = "<p style='opacity:0.6'>Нет товаров</p>"
     return
   }
 
@@ -92,9 +124,7 @@ function render(items){
 /* ===== КНОПКИ ===== */
 
 function bindButtons(){
-
   buttons.forEach(btn => {
-
     btn.addEventListener("click", () => {
 
       buttons.forEach(b => b.classList.remove("active"))
@@ -107,41 +137,30 @@ function bindButtons(){
         return
       }
 
-      const filtered = ALL.filter(w => w.type === type)
-
-      render(filtered)
-
+      render(ALL.filter(w => w.type === type))
     })
-
   })
-
 }
 
 
 /* ===== ПОИСК ===== */
 
 function bindSearch(){
-
   searchInput.addEventListener("input", () => {
 
     const value = searchInput.value.toLowerCase()
 
-    const filtered = ALL.filter(w =>
+    render(ALL.filter(w =>
       (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
       (w.name_en && w.name_en.toLowerCase().includes(value))
-    )
-
-    render(filtered)
-
+    ))
   })
-
 }
 
 
 /* ===== ПЕРЕВОД ===== */
 
 function translate(type){
-
   if(type === "wine") return "Вино"
   if(type === "sparkling") return "Игристое"
   if(type === "beer") return "Пиво"
@@ -150,6 +169,5 @@ function translate(type){
   if(type === "soft") return "Безалкогольные"
   if(type === "tea") return "Чай"
   if(type === "accessories") return "Аксессуары"
-
   return type
 }
