@@ -1,6 +1,5 @@
 let ALL = []
 let IMAGES = []
-let IMAGE_CACHE = {}
 
 const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
@@ -18,9 +17,7 @@ async function init(){
     ALL = await productsRes.json()
     IMAGES = await imagesRes.json()
 
-    buildImageCache()
     render(ALL)
-
     bindButtons()
     bindSearch()
 
@@ -32,136 +29,40 @@ async function init(){
 
 /* ===== НОРМАЛИЗАЦИЯ ===== */
 
-function normalize(str){
+function norm(str){
   return (str || "")
     .toLowerCase()
     .replace(/ё/g, "е")
-    .replace(/[’']/g, "")   // 🔥 ключевая строка
-    .replace(/[^a-zа-я0-9\s]/gi, " ")
-    .replace(/\s+/g, " ")
-    .trim()
+    .replace(/[’']/g, "")
 }
 
 
-/* ===== СЛОВА ===== */
-
-function words(str){
-  return normalize(str)
-    .split(" ")
-    .filter(w => w.length > 2)
-}
-
-
-/* ===== ПОИСК ФАЙЛА (ГЛАВНОЕ) ===== */
-
-function findRealImage(product){
-
-  const pWords = words(product.name_ru)
-
-  let bestMatch = null
-  let bestScore = 0
-
-  IMAGES.forEach(file => {
-
-    const fWords = words(file)
-
-    let score = 0
-
-    pWords.forEach(w => {
-      if(fWords.includes(w)){
-        score++
-      }
-    })
-
-    if(score > bestScore){
-      bestScore = score
-      bestMatch = file
-    }
-
-  })
-
-  return bestMatch
-}
-
-
-/* ===== КЭШ ===== */
-
-function buildImageCache(){
-
-  ALL.forEach(product => {
-
-    // ручная картинка
-    if(product.image && product.image.trim() !== ""){
-      IMAGE_CACHE[product.id] = "./assets/wines/" + product.image.trim()
-      return
-    }
-
-    const file = findRealImage(product)
-
-    if(file){
-      IMAGE_CACHE[product.id] = "./assets/wines/" + file
-    } else {
-      IMAGE_CACHE[product.id] = "./assets/no-wine.png"
-    }
-
-  })
-
-}
-
-
-/* ===== ПОЛУЧЕНИЕ ===== */
+/* ===== ПРОСТОЙ ПОИСК ФАЙЛА ===== */
 
 function getImage(product){
-  return IMAGE_CACHE[product.id] || "./assets/no-wine.png"
-}
 
+  // ручная картинка
+  if(product.image){
+    return encodeURI("./assets/wines/" + product.image)
+  }
 
-/* ===== КНОПКИ ===== */
+  const name = norm(product.name_ru)
 
-function bindButtons(){
+  for(let file of IMAGES){
 
-  buttons.forEach(btn => {
+    const f = norm(file)
 
-    btn.addEventListener("click", () => {
+    // если хотя бы одно слово совпало — берем
+    const words = name.split(" ")
 
-      buttons.forEach(b => b.classList.remove("active"))
-      btn.classList.add("active")
-
-      const type = btn.dataset.type
-
-      if(type === "all"){
-        render(ALL)
-        return
+    for(let w of words){
+      if(w.length > 3 && f.includes(w)){
+        return encodeURI("./assets/wines/" + file)
       }
+    }
+  }
 
-      const filtered = ALL.filter(w => w.type === type)
-
-      render(filtered)
-
-    })
-
-  })
-
-}
-
-
-/* ===== ПОИСК ===== */
-
-function bindSearch(){
-
-  searchInput.addEventListener("input", () => {
-
-    const value = searchInput.value.toLowerCase()
-
-    const filtered = ALL.filter(w =>
-      (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
-      (w.name_en && w.name_en.toLowerCase().includes(value))
-    )
-
-    render(filtered)
-
-  })
-
+  return "./assets/no-wine.png"
 }
 
 
@@ -221,10 +122,46 @@ function render(items){
 }
 
 
+/* ===== КНОПКИ ===== */
+
+function bindButtons(){
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+      buttons.forEach(b => b.classList.remove("active"))
+      btn.classList.add("active")
+
+      const type = btn.dataset.type
+
+      if(type === "all"){
+        render(ALL)
+        return
+      }
+
+      render(ALL.filter(w => w.type === type))
+    })
+  })
+}
+
+
+/* ===== ПОИСК ===== */
+
+function bindSearch(){
+  searchInput.addEventListener("input", () => {
+
+    const value = searchInput.value.toLowerCase()
+
+    render(ALL.filter(w =>
+      (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
+      (w.name_en && w.name_en.toLowerCase().includes(value))
+    ))
+  })
+}
+
+
 /* ===== ПЕРЕВОД ===== */
 
 function translate(type){
-
   if(type === "wine") return "Вино"
   if(type === "sparkling") return "Игристое"
   if(type === "beer") return "Пиво"
@@ -233,6 +170,5 @@ function translate(type){
   if(type === "soft") return "Безалкогольные"
   if(type === "tea") return "Чай"
   if(type === "accessories") return "Аксессуары"
-
   return type
 }
