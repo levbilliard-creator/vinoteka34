@@ -39,7 +39,7 @@ function normalize(str){
 }
 
 
-/* ===== УМНЫЙ МАТЧИНГ (ИСПРАВЛЕН) ===== */
+/* ===== MATCHING ===== */
 
 function findImage(product){
 
@@ -53,7 +53,6 @@ function findImage(product){
 
   const ru = normalize(product.name_ru)
   const en = normalize(product.name_en)
-
   const name = ru + " " + en
 
   let bestMatch = null
@@ -72,17 +71,14 @@ function findImage(product){
 
       if(word.length < 3) return
 
-      if(nameWords.includes(word)){
-        score += 2
-      }
-
-      if(name.includes(word)){
-        score += 1
-      }
+      if(nameWords.includes(word)) score += 2
+      if(name.includes(word)) score += 1
 
     })
 
-    // ❌ УДАЛЕН ЛОМАЮЩИЙ БОНУС ПО ПОРЯДКУ СЛОВ
+    if(fileWords[0] && name.startsWith(fileWords[0])){
+      score += 2
+    }
 
     if(score > bestScore){
       bestScore = score
