@@ -39,7 +39,7 @@ function normalize(str){
 }
 
 
-/* ===== УМНЫЙ МАТЧИНГ V2 ===== */
+/* ===== УМНЫЙ МАТЧИНГ (ИСПРАВЛЕН) ===== */
 
 function findImage(product){
 
@@ -82,9 +82,7 @@ function findImage(product){
 
     })
 
-    if(fileWords[0] && name.startsWith(fileWords[0])){
-      score += 2
-    }
+    // ❌ УДАЛЕН ЛОМАЮЩИЙ БОНУС ПО ПОРЯДКУ СЛОВ
 
     if(score > bestScore){
       bestScore = score
