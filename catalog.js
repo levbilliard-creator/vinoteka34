@@ -42,42 +42,48 @@ function normalize(str){
 }
 
 
-/* ===== КЭШ КАРТИНОК ===== */
+/* ===== РАЗБИВКА НА СЛОВА ===== */
+
+function words(str){
+  return normalize(str)
+    .split(" ")
+    .filter(w => w.length > 2)
+}
+
+
+/* ===== КЭШ ===== */
 
 function buildImageCache(){
 
   ALL.forEach(product => {
 
-    // 🔴 ЖЕСТКИЙ ПРИОРИТЕТ РУЧНОЙ КАРТИНКИ
+    // ручная картинка — приоритет
     if(product.image && product.image.trim() !== ""){
       IMAGE_CACHE[product.id] = "./assets/wines/" + product.image.trim()
       return
     }
 
-    const ru = normalize(product.name_ru)
-    const en = normalize(product.name_en)
-    const name = ru + " " + en
+    const productWords = words(product.name_ru + " " + (product.name_en || ""))
 
     let bestMatch = null
     let bestScore = 0
 
     IMAGES.forEach(file => {
 
-      const fileName = normalize(file.replace(/\.(png|jpg|jpeg)/, ""))
+      const fileWords = words(file)
 
       let score = 0
 
-      const fileWords = fileName.split(" ")
-      const nameWords = name.split(" ")
-
-      fileWords.forEach(word => {
-
-        if(word.length < 3) return
-
-        if(nameWords.includes(word)) score += 2
-        if(name.includes(word)) score += 1
-
+      productWords.forEach(w => {
+        if(fileWords.includes(w)){
+          score++
+        }
       })
+
+      // бонус если совпало 2+ слова подряд
+      if(score >= 2){
+        score += 2
+      }
 
       if(score > bestScore){
         bestScore = score
@@ -86,7 +92,7 @@ function buildImageCache(){
 
     })
 
-    if(bestMatch && bestScore >= 3){
+    if(bestMatch){
       IMAGE_CACHE[product.id] = "./assets/wines/" + bestMatch
     } else {
       IMAGE_CACHE[product.id] = "./assets/no-wine.png"
@@ -97,7 +103,7 @@ function buildImageCache(){
 }
 
 
-/* ===== ПОЛУЧЕНИЕ КАРТИНКИ ===== */
+/* ===== ПОЛУЧЕНИЕ ===== */
 
 function getImage(product){
   return IMAGE_CACHE[product.id] || "./assets/no-wine.png"
@@ -178,7 +184,6 @@ function render(items){
 
         <div class="img-wrap">
           <img src="${img}" class="wine-img"
-               loading="lazy"
                onerror="this.src='./assets/no-wine.png'">
         </div>
 
@@ -206,7 +211,6 @@ function render(items){
     `
   })
 
-  // 🔥 ОДНА ВСТАВКА = НЕТ МИГАНИЯ
   grid.innerHTML = html
 }
 
