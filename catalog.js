@@ -1,5 +1,4 @@
 let ALL = []
-let IMAGES = []
 
 const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
@@ -9,75 +8,83 @@ init()
 
 async function init(){
   try{
-    const [productsRes, imagesRes] = await Promise.all([
-      fetch("./data/products.json"),
-      fetch("./data/images.json")
-    ])
-
-    ALL = await productsRes.json()
-    IMAGES = await imagesRes.json()
+    const res = await fetch("./data/products.json")
+    ALL = await res.json()
 
     render(ALL)
     bindButtons()
     bindSearch()
 
   }catch(e){
-    console.error("Ошибка загрузки данных", e)
+    console.error("Ошибка загрузки", e)
   }
 }
 
 
-/* ===== НОРМАЛИЗАЦИЯ ===== */
+/* ===== КАРТИНКА ===== */
 
-function normalize(str){
-  return (str || "")
-    .toLowerCase()
-    .replace(/[^a-zа-я0-9\s]/gi, " ")
-    .replace(/\s+/g, " ")
-    .trim()
+function getImage(product){
+  if(product.image){
+    return "./assets/wines/" + product.image
+  }
+  return "./assets/no-wine.png"
 }
 
 
-/* ===== УЛУЧШЕННЫЙ МАТЧИНГ ===== */
+/* ===== РЕНДЕР ===== */
 
-function findImage(product){
+function render(items){
 
-  if(!IMAGES || IMAGES.length === 0){
-    return "./assets/no-wine.png"
+  if(!grid){
+    console.error("catalogGrid не найден")
+    return
   }
 
-  const name = normalize(product.name_ru)
+  if(items.length === 0){
+    grid.innerHTML = "<p style='opacity:0.6'>Нет товаров</p>"
+    return
+  }
 
-  let bestMatch = null
-  let bestScore = 0
+  let html = ""
 
-  IMAGES.forEach(file => {
+  items.forEach(w => {
 
-    const fileName = normalize(file.replace(/\.(png|jpg|jpeg)/, ""))
+    const img = getImage(w)
 
-    let score = 0
+    html += `
+      <div class="product-card">
 
-    const words = fileName.split(" ")
+        <div class="img-wrap">
+          <img src="${img}" class="wine-img"
+               loading="lazy"
+               onerror="this.src='./assets/no-wine.png'">
+        </div>
 
-    words.forEach(word => {
-      if(word.length > 2 && name.includes(word)){
-        score++
-      }
-    })
+        <div class="wine-type">${translate(w.type)}</div>
 
-    if(score > bestScore){
-      bestScore = score
-      bestMatch = file
-    }
+        ${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
 
+        <div class="wine-ru">${w.name_ru}</div>
+
+        ${(w.color || w.style) ? `
+          <div class="wine-style">
+            ${w.color || ""} ${w.style || ""}
+          </div>
+        ` : ""}
+
+        <div class="wine-bottom">
+          <div class="wine-price">${w.price} ₽</div>
+
+          <a href="./product.html?id=${w.id}" class="btn-link">
+            Подробнее →
+          </a>
+        </div>
+
+      </div>
+    `
   })
 
-  // 🔥 Порог — чтобы не было мусора
-  if(bestMatch && bestScore >= 2){
-    return "./assets/wines/" + bestMatch
-  }
-
-  return "./assets/no-wine.png"
+  grid.innerHTML = html
 }
 
 
@@ -99,9 +106,7 @@ function bindButtons(){
         return
       }
 
-      const filtered = ALL.filter(w => w.type === type)
-
-      render(filtered)
+      render(ALL.filter(w => w.type === type))
 
     })
 
@@ -118,64 +123,11 @@ function bindSearch(){
 
     const value = searchInput.value.toLowerCase()
 
-    const filtered = ALL.filter(w =>
+    render(ALL.filter(w =>
       (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
       (w.name_en && w.name_en.toLowerCase().includes(value))
-    )
+    ))
 
-    render(filtered)
-
-  })
-
-}
-
-
-/* ===== РЕНДЕР ===== */
-
-function render(items){
-
-  if(!grid){
-    console.error("catalogGrid не найден")
-    return
-  }
-
-  grid.innerHTML = ""
-
-  if(items.length === 0){
-    grid.innerHTML = "<p style='opacity:0.6'>Нет товаров</p>"
-    return
-  }
-
-  items.forEach(w => {
-
-    const img = findImage(w)
-
-    grid.innerHTML += `
-      <div class="product-card">
-
-        <img src="${img}" class="wine-img"
-             onerror="this.src='./assets/no-wine.png'">
-
-        <div class="wine-type">${translate(w.type)}</div>
-
-        ${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
-
-        <div class="wine-ru">${w.name_ru}</div>
-
-        ${(w.color || w.style) ? `
-          <div class="wine-style">
-            ${w.color || ""} ${w.style || ""}
-          </div>
-        ` : ""}
-
-        <div class="wine-price">${w.price} ₽</div>
-
-        <a href="./product.html?id=${w.id}" class="btn-link">
-          Подробнее →
-        </a>
-
-      </div>
-    `
   })
 
 }
