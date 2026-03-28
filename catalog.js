@@ -1,4 +1,6 @@
 let ALL = []
+let IMAGES = []
+let IMAGE_MAP = {}
 
 const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
@@ -8,8 +10,15 @@ init()
 
 async function init(){
   try{
-    const res = await fetch("./data/products.json")
-    ALL = await res.json()
+    const [productsRes, imagesRes] = await Promise.all([
+      fetch("./data/products.json"),
+      fetch("./data/images.json")
+    ])
+
+    ALL = await productsRes.json()
+    IMAGES = await imagesRes.json()
+
+    buildImageMap()   // ← ВАЖНО (ОДИН РАЗ)
 
     render(ALL)
     bindButtons()
@@ -21,24 +30,131 @@ async function init(){
 }
 
 
-/* ===== КАРТИНКА ===== */
+/* ===== НОРМАЛИЗАЦИЯ ===== */
 
-function getImage(product){
-  if(product.image){
-    return "./assets/wines/" + product.image
-  }
-  return "./assets/no-wine.png"
+function normalize(str){
+  return (str || "")
+    .toLowerCase()
+    .replace(/ё/g, "е")
+    .replace(/[^a-zа-я0-9\s]/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim()
 }
 
 
-/* ===== РЕНДЕР ===== */
+/* ===== СТРОИМ КАРТИНКИ 1 РАЗ (УБИРАЕТ МИГАНИЕ) ===== */
+
+function buildImageMap(){
+
+  ALL.forEach(product => {
+
+    if(product.image){
+      IMAGE_MAP[product.id] = "./assets/wines/" + product.image
+      return
+    }
+
+    const name = normalize(product.name_ru + " " + product.name_en)
+
+    let bestMatch = null
+    let bestScore = 0
+
+    IMAGES.forEach(file => {
+
+      const fileName = normalize(file.replace(/\.(png|jpg|jpeg)/, ""))
+
+      let score = 0
+
+      fileName.split(" ").forEach(word => {
+
+        if(word.length < 3) return
+        if(name.includes(word)) score++
+
+      })
+
+      if(score > bestScore){
+        bestScore = score
+        bestMatch = file
+      }
+
+    })
+
+    if(bestMatch){
+      IMAGE_MAP[product.id] = "./assets/wines/" + bestMatch
+    }else{
+      IMAGE_MAP[product.id] = "./assets/no-wine.png"
+    }
+
+  })
+}
+
+
+/* ===== КНОПКИ (ПРЯМОЕ СРАВНЕНИЕ) ===== */
+
+function bindButtons(){
+
+  buttons.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      buttons.forEach(b => b.classList.remove("active"))
+      btn.classList.add("active")
+
+      const type = btn.dataset.type
+
+      if(type === "all"){
+        render(ALL)
+        return
+      }
+
+      const filtered = ALL.filter(w => {
+
+        const t = (w.type || "").toLowerCase()
+
+        if(type === "wine") return t.includes("вино")
+        if(type === "sparkling") return t.includes("игрист")
+        if(type === "beer") return t.includes("пиво")
+        if(type === "strong") return t.includes("виск") || t.includes("коньяк") || t.includes("ром") || t.includes("водка")
+        if(type === "grocery") return t.includes("бакале")
+        if(type === "soft") return t.includes("безалк")
+        if(type === "tea") return t.includes("чай")
+        if(type === "accessories") return t.includes("аксесс")
+
+        return false
+      })
+
+      render(filtered)
+
+    })
+
+  })
+}
+
+
+/* ===== ПОИСК ===== */
+
+function bindSearch(){
+
+  searchInput.addEventListener("input", () => {
+
+    const value = searchInput.value.toLowerCase()
+
+    const filtered = ALL.filter(w =>
+      (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
+      (w.name_en && w.name_en.toLowerCase().includes(value))
+    )
+
+    render(filtered)
+
+  })
+
+}
+
+
+/* ===== РЕНДЕР (СТАБИЛЬНЫЙ) ===== */
 
 function render(items){
 
-  if(!grid){
-    console.error("catalogGrid не найден")
-    return
-  }
+  if(!grid) return
 
   if(items.length === 0){
     grid.innerHTML = "<p style='opacity:0.6'>Нет товаров</p>"
@@ -49,7 +165,7 @@ function render(items){
 
   items.forEach(w => {
 
-    const img = getImage(w)
+    const img = IMAGE_MAP[w.id] || "./assets/no-wine.png"
 
     html += `
       <div class="product-card">
@@ -88,63 +204,18 @@ function render(items){
 }
 
 
-/* ===== КНОПКИ ===== */
-
-function bindButtons(){
-
-  buttons.forEach(btn => {
-
-    btn.addEventListener("click", () => {
-
-      buttons.forEach(b => b.classList.remove("active"))
-      btn.classList.add("active")
-
-      const type = btn.dataset.type
-
-      if(type === "all"){
-        render(ALL)
-        return
-      }
-
-      render(ALL.filter(w => w.type === type))
-
-    })
-
-  })
-
-}
-
-
-/* ===== ПОИСК ===== */
-
-function bindSearch(){
-
-  searchInput.addEventListener("input", () => {
-
-    const value = searchInput.value.toLowerCase()
-
-    render(ALL.filter(w =>
-      (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
-      (w.name_en && w.name_en.toLowerCase().includes(value))
-    ))
-
-  })
-
-}
-
-
 /* ===== ПЕРЕВОД ===== */
 
 function translate(type){
 
-  if(type === "wine") return "Вино"
-  if(type === "sparkling") return "Игристое"
-  if(type === "beer") return "Пиво"
-  if(type === "strong") return "Крепкий алкоголь"
-  if(type === "grocery") return "Бакалея"
-  if(type === "soft") return "Безалкогольные"
-  if(type === "tea") return "Чай"
-  if(type === "accessories") return "Аксессуары"
+  if(type.includes("вино")) return "Вино"
+  if(type.includes("игрист")) return "Игристое"
+  if(type.includes("пиво")) return "Пиво"
+  if(type.includes("креп")) return "Крепкий алкоголь"
+  if(type.includes("бакале")) return "Бакалея"
+  if(type.includes("безалк")) return "Безалкогольные"
+  if(type.includes("чай")) return "Чай"
+  if(type.includes("аксесс")) return "Аксессуары"
 
   return type
 }
