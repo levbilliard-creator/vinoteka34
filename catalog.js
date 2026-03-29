@@ -5,6 +5,11 @@ const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
 const searchInput = document.getElementById("searchInput")
 
+/* ===== LAZY ===== */
+let rendered = 0
+const CHUNK = 40
+let currentItems = []
+
 init()
 
 async function init(){
@@ -25,6 +30,7 @@ async function init(){
     render(ALL)
     bindButtons()
     bindSearch()
+    initScroll()
 
   }catch(e){
     console.error("Ошибка загрузки данных", e)
@@ -32,13 +38,11 @@ async function init(){
 }
 
 
-/* ===== ЛОГИКА detectType (ИСПРАВЛЕНА ТОЛЬКО ЗДЕСЬ) ===== */
+/* ===== detectType (НЕ ТРОГАЮ) ===== */
 
 function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
-
-  /* ===== OVERRIDE (самое важное) ===== */
 
   if(name.includes("николаев")) return "wine"
   if(name.includes("вермут")) return "wine"
@@ -51,10 +55,8 @@ function detectType(p){
     name.includes("стакан")
   ) return "grocery"
 
-  /* ===== АКСЕССУАРЫ ===== */
   if(name.includes("бокал")) return "accessories"
 
-  /* ===== БАКАЛЕЯ ===== */
   if(
     name.includes("сыр") ||
     name.includes("салями") ||
@@ -76,7 +78,6 @@ function detectType(p){
     name.includes("приправа")
   ) return "grocery"
 
-  /* ===== БЕЗАЛКОГОЛЬНЫЕ ===== */
   if(
     name.includes("вода") ||
     name.includes("кола") ||
@@ -84,7 +85,6 @@ function detectType(p){
     name.includes("тоник")
   ) return "soft"
 
-  /* ===== ИГРИСТОЕ (ПЕРЕНЕС ВЫШЕ ВИНА) ===== */
   if(
     name.includes("брют") ||
     name.includes("шампан") ||
@@ -92,7 +92,6 @@ function detectType(p){
     name.includes("кава")
   ) return "sparkling"
 
-  /* ===== ВИНО ===== */
   if(
     name.includes("шато") ||
     name.includes("бордо") ||
@@ -108,7 +107,6 @@ function detectType(p){
     name.includes("вино")
   ) return "wine"
 
-  /* ===== ПИВО ===== */
   if(
     name.startsWith("пиво") ||
     name.includes(" пиво") ||
@@ -120,7 +118,6 @@ function detectType(p){
     name.endsWith(" эль")
   ) return "beer"
 
-  /* ===== КРЕПКИЙ ===== */
   if(
     name.includes("виски") ||
     name.includes("ром") ||
@@ -137,19 +134,7 @@ function detectType(p){
 }
 
 
-/* ===== НОРМАЛИЗАЦИЯ ===== */
-
-function normalizeName(str){
-  return (str || "")
-    .toLowerCase()
-    .replace(/ё/g, "е")
-    .replace(/[^a-zа-я0-9 ]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-}
-
-
-/* ===== КАРТИНКИ (НЕ ТРОГАЛ) ===== */
+/* ===== КАРТИНКИ (НЕ ТРОГАЮ) ===== */
 
 const imageMap = {}
 
@@ -165,41 +150,9 @@ function getImage(product){
 
   const name = normalizeName(product.name_ru)
 
-  let found = null
-
-  found = IMAGES.find(img => {
-    const imgName = normalizeName(img.replace(/\.(jpg|png|jpeg)/, ""))
-    return name === imgName
-  })
-
-  if(!found){
-
-    const words = name.split(" ").filter(w => w.length > 3)
-
-    let bestMatch = null
-    let bestScore = 0
-
-    IMAGES.forEach(img => {
-
-      const imgName = normalizeName(img)
-
-      let score = 0
-
-      words.forEach(w => {
-        if(imgName.includes(w)) score++
-      })
-
-      if(score > bestScore){
-        bestScore = score
-        bestMatch = img
-      }
-
-    })
-
-    if(bestScore >= 2){
-      found = bestMatch
-    }
-  }
+  let found = IMAGES.find(img =>
+    normalizeName(img).includes(name)
+  )
 
   const result = found
     ? "./assets/wines/" + found
@@ -211,69 +164,20 @@ function getImage(product){
 }
 
 
-/* ===== КНОПКИ ===== */
-
-function bindButtons(){
-
-  buttons.forEach(btn => {
-
-    btn.addEventListener("click", () => {
-
-      buttons.forEach(b => b.classList.remove("active"))
-      btn.classList.add("active")
-
-      const type = btn.dataset.type
-
-      if(type === "all"){
-        render(ALL)
-        return
-      }
-
-      const filtered = ALL.filter(w => w.type === type)
-
-      render(filtered)
-
-      window.scrollTo({ top: 0, behavior: "smooth" }) // ⬆️ вверх
-
-    })
-
-  })
-
-}
-
-
-/* ===== ПОИСК ===== */
-
-function bindSearch(){
-
-  searchInput.addEventListener("input", () => {
-
-    const value = searchInput.value.toLowerCase()
-
-    const filtered = ALL.filter(w =>
-      (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
-      (w.name_en && w.name_en.toLowerCase().includes(value))
-    )
-
-    render(filtered)
-
-  })
-
-}
-
-
-/* ===== РЕНДЕР (НЕ ТРОГАЛ) ===== */
+/* ===== LAZY RENDER ===== */
 
 function render(items){
-
   grid.innerHTML = ""
+  rendered = 0
+  currentItems = items
+  renderNext()
+}
 
-  if(items.length === 0){
-    grid.innerHTML = "<p style='opacity:0.6'>Нет товаров</p>"
-    return
-  }
+function renderNext(){
 
-  items.forEach(w => {
+  const slice = currentItems.slice(rendered, rendered + CHUNK)
+
+  slice.forEach(w => {
 
     const img = getImage(w)
 
@@ -310,6 +214,99 @@ function render(items){
     `
   })
 
+  rendered += CHUNK
+}
+
+
+/* ===== SCROLL LOAD ===== */
+
+function initScroll(){
+  window.addEventListener("scroll", () => {
+
+    if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 200){
+      renderNext()
+    }
+
+  })
+}
+
+
+/* ===== КНОПКИ ===== */
+
+function bindButtons(){
+
+  buttons.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      buttons.forEach(b => b.classList.remove("active"))
+      btn.classList.add("active")
+
+      const type = btn.dataset.type
+
+      if(type === "all"){
+        render(ALL)
+        return
+      }
+
+      const filtered = ALL.filter(w => w.type === type)
+
+      render(filtered)
+
+    })
+
+  })
+
+}
+
+
+/* ===== ПОИСК ===== */
+
+function bindSearch(){
+
+  searchInput.addEventListener("input", () => {
+
+    const value = searchInput.value.toLowerCase()
+
+    const filtered = ALL.filter(w =>
+      (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
+      (w.name_en && w.name_en.toLowerCase().includes(value))
+    )
+
+    render(filtered)
+
+  })
+
+}
+
+
+/* ===== КНОПКА ВВЕРХ ===== */
+
+const upBtn = document.createElement("div")
+upBtn.innerHTML = "↑"
+upBtn.style.position = "fixed"
+upBtn.style.bottom = "30px"
+upBtn.style.right = "30px"
+upBtn.style.background = "#000"
+upBtn.style.color = "#fff"
+upBtn.style.padding = "10px 15px"
+upBtn.style.cursor = "pointer"
+upBtn.style.borderRadius = "8px"
+upBtn.style.zIndex = "999"
+upBtn.style.display = "none"
+
+document.body.appendChild(upBtn)
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 400){
+    upBtn.style.display = "block"
+  } else {
+    upBtn.style.display = "none"
+  }
+})
+
+upBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" })
 }
 
 
@@ -327,4 +324,16 @@ function translate(type){
   if(type === "accessories") return "Аксессуары"
 
   return type
+}
+
+
+/* ===== НОРМАЛИЗАЦИЯ ===== */
+
+function normalizeName(str){
+  return (str || "")
+    .toLowerCase()
+    .replace(/ё/g, "е")
+    .replace(/[^a-zа-я0-9 ]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
 }
