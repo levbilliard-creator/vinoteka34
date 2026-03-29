@@ -134,15 +134,10 @@ function detectType(p){
 }
 
 
-/* ===== КАРТИНКИ (ИСПРАВЛЕНО — БЕЗ МИГАНИЯ) ===== */
+/* ===== КАРТИНКИ (ФИНАЛ — ЧЕРЕЗ ID) ===== */
 
 function getImage(product){
-
-  if(product.image){
-    return "./assets/wines/" + product.image
-  }
-
-  return "" // нет фото → пусто
+  return `./assets/wines/${product.id}.jpg`
 }
 
 
@@ -167,11 +162,9 @@ function renderNext(){
       <div class="product-card">
 
         <div class="img-wrap">
-          ${
-            img
-              ? `<img src="${img}" class="wine-img" loading="lazy">`
-              : ``
-          }
+          <img src="${img}" class="wine-img"
+               loading="lazy"
+               onerror="this.style.display='none'">
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
