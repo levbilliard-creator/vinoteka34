@@ -17,10 +17,10 @@ async function init(){
     ALL = await productsRes.json()
     IMAGES = await imagesRes.json()
 
-    // ✅ нормализация типов (аккуратно)
+    // ✅ нормализация типов
     ALL = ALL.map(p => ({
       ...p,
-      type: normalizeType(p)
+      type: detectType(p)
     }))
 
     render(ALL)
@@ -33,33 +33,69 @@ async function init(){
 }
 
 
-/* ===== НОРМАЛИЗАЦИЯ ТИПОВ ===== */
+/* ===== ГЛАВНАЯ ЛОГИКА ===== */
 
-function normalizeType(p){
+function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
-  const type = (p.type || "").toLowerCase()
-  const color = (p.color || "").toLowerCase()
 
-  // ✅ если уже нормальный — оставляем
-  if([
-    "wine","beer","strong","sparkling",
-    "soft","tea","grocery","accessories"
-  ].includes(type)){
-    return type
+  /* ===== 1. АКСЕССУАРЫ ===== */
+  if(name.includes("бокал") || name.includes("glass")){
+    return "accessories"
   }
 
-  // 🍾 игристые (без привязки к слову "игристое")
+  /* ===== 2. БАКАЛЕЯ ===== */
   if(
-    name.includes("брют") ||
-    name.includes("шампан") ||
-    name.includes("просекко") ||
-    name.includes("кава")
+    name.includes("сыр") ||
+    name.includes("салями") ||
+    name.includes("колбас") ||
+    name.includes("ветчина") ||
+    name.includes("брезаола") ||
+    name.includes("анчоус") ||
+    name.includes("оливк") ||
+    name.includes("томат") ||
+    name.includes("песто") ||
+    name.includes("масло") ||
+    name.includes("перчик") ||
+    name.includes("палочки") ||
+    name.includes("гриссини") ||
+    name.includes("ассорти") ||
+    name.includes("леденцы") ||
+    name.includes("печенье") ||
+    name.includes("шоколад") ||
+    name.includes("сорбио") ||
+    name.includes("приправа")
   ){
-    return "sparkling"
+    return "grocery"
   }
 
-  // 🥃 крепкий алкоголь
+  /* ===== 3. ЧАЙ ===== */
+  if(name.includes("чай")){
+    return "tea"
+  }
+
+  /* ===== 4. БЕЗАЛКО ===== */
+  if(
+    name.includes("вода") ||
+    name.includes("cola") ||
+    name.includes("кола") ||
+    name.includes("сок") ||
+    name.includes("тоник")
+  ){
+    return "soft"
+  }
+
+  /* ===== 5. ПИВО ===== */
+  if(
+    name.includes("пиво") ||
+    name.includes("эль") ||
+    name.includes("лагер") ||
+    name.includes("корона")
+  ){
+    return "beer"
+  }
+
+  /* ===== 6. КРЕПКИЙ ===== */
   if(
     name.includes("виски") ||
     name.includes("ром") ||
@@ -72,60 +108,22 @@ function normalizeType(p){
     return "strong"
   }
 
-  // 🍺 пиво
+  /* ===== 7. ИГРИСТОЕ (без слова "игристое") ===== */
   if(
-    name.includes("пиво") ||
-    name.includes("эль") ||
-    name.includes("лагер") ||
-    name.includes("корона")
+    name.includes("брют") ||
+    name.includes("шампан") ||
+    name.includes("просекко") ||
+    name.includes("кава")
   ){
-    return "beer"
+    return "sparkling"
   }
 
-  // 🧃 безалкогольные
-  if(
-    name.includes("вода") ||
-    name.includes("cola") ||
-    name.includes("кола") ||
-    name.includes("сок") ||
-    name.includes("тоник")
-  ){
-    return "soft"
-  }
-
-  // 🍵 чай
-  if(name.includes("чай")){
-    return "tea"
-  }
-
-  // 🍷 ВИНО (КЛЮЧЕВОЕ)
-  if(
-    color === "красное" ||
-    color === "белое" ||
-    color === "розовое"
-  ){
-    return "wine"
-  }
-
-  // 🥖 бакалея
-  if(
-    name.includes("сыр") ||
-    name.includes("оливки") ||
-    name.includes("колбас") ||
-    name.includes("чипсы") ||
-    name.includes("печенье") ||
-    name.includes("масло") ||
-    name.includes("соус")
-  ){
-    return "grocery"
-  }
-
-  // 🍷 fallback → считаем вином
+  /* ===== 8. ВСЁ ОСТАЛЬНОЕ → ВИНО ===== */
   return "wine"
 }
 
 
-/* ===== КАРТИНКИ (СТАБИЛЬНО) ===== */
+/* ===== КАРТИНКИ (без мигания) ===== */
 
 const imageMap = {}
 
@@ -135,10 +133,8 @@ function getImage(product){
     return "./assets/wines/" + product.image
   }
 
-  const key = product.id
-
-  if(imageMap[key]){
-    return imageMap[key]
+  if(imageMap[product.id]){
+    return imageMap[product.id]
   }
 
   const name = (product.name_ru || "").toLowerCase()
@@ -151,7 +147,8 @@ function getImage(product){
     ? "./assets/wines/" + found
     : "./assets/no-wine.png"
 
-  imageMap[key] = result
+  imageMap[product.id] = result
+
   return result
 }
 
@@ -209,11 +206,6 @@ function bindSearch(){
 
 function render(items){
 
-  if(!grid){
-    console.error("catalogGrid не найден")
-    return
-  }
-
   grid.innerHTML = ""
 
   if(items.length === 0){
@@ -230,6 +222,7 @@ function render(items){
 
         <div class="img-wrap">
           <img src="${img}" class="wine-img"
+               loading="lazy"
                onerror="this.src='./assets/no-wine.png'">
         </div>
 
@@ -248,7 +241,7 @@ function render(items){
         <div class="wine-bottom">
           <div class="wine-price">${w.price} ₽</div>
 
-          <a href="./product.html?id=${w.id}" class="btn-link">
+          <a href="product.html?id=${w.id}" class="btn-link">
             Подробнее →
           </a>
         </div>
