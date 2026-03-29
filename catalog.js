@@ -32,18 +32,15 @@ async function init(){
 }
 
 
-/* ===== ГЛАВНАЯ ЛОГИКА (ИСПРАВЛЕНА БЕЗ ЛОМАНИЯ СТРУКТУРЫ) ===== */
+/* ===== ИСПРАВЛЕНА ТОЛЬКО ЛОГИКА ===== */
 
 function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
 
-  /* 1. АКСЕССУАРЫ */
-  if(name.includes("бокал")){
-    return "accessories"
-  }
+  if(name.includes("бокал")) return "accessories"
 
-  /* 2. ВИНО + ВЕРМУТ (ВАЖНО РАНЬШЕ БАКАЛЕИ) */
+  /* ВИНО */
   if(
     name.includes("вермут") ||
     name.includes("шато") ||
@@ -57,34 +54,19 @@ function detectType(p){
     name.includes("шардоне") ||
     name.includes("рислинг") ||
     name.includes("николаев") ||
+    name.includes("эльзас") ||
     name.includes("вино")
-  ){
-    return "wine"
-  }
+  ) return "wine"
 
-  /* 3. ИГРИСТОЕ */
+  /* ИГРИСТОЕ */
   if(
     name.includes("брют") ||
     name.includes("шампан") ||
     name.includes("просекко") ||
     name.includes("кава")
-  ){
-    return "sparkling"
-  }
+  ) return "sparkling"
 
-  /* 4. ПИВО + ПИВОСОДЕРЖАЩИЕ */
-  if(
-    name.startsWith("пиво") ||
-    name.includes(" пиво") ||
-    name.includes("пивной напиток") ||
-    name.includes("пивосодержащ") ||
-    name.includes("эль") ||
-    name.includes("лагер")
-  ){
-    return "beer"
-  }
-
-  /* 5. КРЕПКИЙ */
+  /* КРЕПКИЙ — ВЫШЕ ПИВА */
   if(
     name.includes("виски") ||
     name.includes("ром") ||
@@ -93,11 +75,21 @@ function detectType(p){
     name.includes("текила") ||
     name.includes("коньяк") ||
     name.includes("бренди")
-  ){
-    return "strong"
-  }
+  ) return "strong"
 
-  /* 6. БАКАЛЕЯ */
+  /* ПИВО (АККУРАТНО) */
+  if(
+    name.startsWith("пиво") ||
+    name.includes(" пиво") ||
+    name.includes("пивной напиток") ||
+    name.includes("пивосодержащ") ||
+    name.includes(" лагер") ||
+    name.endsWith(" лагер") ||
+    name.includes(" эль ") ||
+    name.endsWith(" эль")
+  ) return "beer"
+
+  /* БАКАЛЕЯ */
   if(
     name.includes("сыр") ||
     name.includes("салями") ||
@@ -117,30 +109,22 @@ function detectType(p){
     name.includes("печенье") ||
     name.includes("шоколад") ||
     name.includes("приправа")
-  ){
-    return "grocery"
-  }
+  ) return "grocery"
 
-  /* 7. ЧАЙ */
-  if(name.includes("чай")){
-    return "tea"
-  }
+  if(name.includes("чай")) return "tea"
 
-  /* 8. БЕЗАЛКО */
   if(
     name.includes("вода") ||
     name.includes("кола") ||
     name.includes("сок") ||
     name.includes("тоник")
-  ){
-    return "soft"
-  }
+  ) return "soft"
 
   return "wine"
 }
 
 
-/* ===== КАРТИНКИ (НЕ ТРОГАЛ) ===== */
+/* ===== ВСЁ ОСТАЛЬНОЕ НЕ ТРОГАЛ ===== */
 
 const imageMap = {}
 
@@ -169,15 +153,9 @@ function getImage(product){
   return result
 }
 
-
-/* ===== КНОПКИ ===== */
-
 function bindButtons(){
-
   buttons.forEach(btn => {
-
     btn.addEventListener("click", () => {
-
       buttons.forEach(b => b.classList.remove("active"))
       btn.classList.add("active")
 
@@ -189,22 +167,13 @@ function bindButtons(){
       }
 
       const filtered = ALL.filter(w => w.type === type)
-
       render(filtered)
-
     })
-
   })
-
 }
 
-
-/* ===== ПОИСК ===== */
-
 function bindSearch(){
-
   searchInput.addEventListener("input", () => {
-
     const value = searchInput.value.toLowerCase()
 
     const filtered = ALL.filter(w =>
@@ -213,13 +182,8 @@ function bindSearch(){
     )
 
     render(filtered)
-
   })
-
 }
-
-
-/* ===== РЕНДЕР (НЕ ТРОГАЛ) ===== */
 
 function render(items){
 
@@ -266,14 +230,9 @@ function render(items){
       </div>
     `
   })
-
 }
 
-
-/* ===== ПЕРЕВОД ===== */
-
 function translate(type){
-
   if(type === "wine") return "Вино"
   if(type === "sparkling") return "Игристое"
   if(type === "beer") return "Пиво"
@@ -282,6 +241,5 @@ function translate(type){
   if(type === "soft") return "Безалкогольные"
   if(type === "tea") return "Чай"
   if(type === "accessories") return "Аксессуары"
-
   return type
 }
