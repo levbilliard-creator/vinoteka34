@@ -134,9 +134,7 @@ function detectType(p){
 }
 
 
-/* ===== КАРТИНКИ (НЕ ТРОГАЮ) ===== */
-
-const imageMap = {}
+/* ===== КАРТИНКИ (ИСПРАВЛЕНО — БЕЗ МИГАНИЯ) ===== */
 
 function getImage(product){
 
@@ -144,23 +142,7 @@ function getImage(product){
     return "./assets/wines/" + product.image
   }
 
-  if(imageMap[product.id]){
-    return imageMap[product.id]
-  }
-
-  const name = normalizeName(product.name_ru)
-
-  let found = IMAGES.find(img =>
-    normalizeName(img).includes(name)
-  )
-
-  const result = found
-    ? "./assets/wines/" + found
-    : "./assets/no-wine.png"
-
-  imageMap[product.id] = result
-
-  return result
+  return "" // нет фото → пусто
 }
 
 
@@ -185,9 +167,11 @@ function renderNext(){
       <div class="product-card">
 
         <div class="img-wrap">
-          <img src="${img}" class="wine-img"
-               loading="lazy"
-               onerror="this.src='./assets/no-wine.png'">
+          ${
+            img
+              ? `<img src="${img}" class="wine-img" loading="lazy">`
+              : ``
+          }
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
@@ -324,16 +308,4 @@ function translate(type){
   if(type === "accessories") return "Аксессуары"
 
   return type
-}
-
-
-/* ===== НОРМАЛИЗАЦИЯ ===== */
-
-function normalizeName(str){
-  return (str || "")
-    .toLowerCase()
-    .replace(/ё/g, "е")
-    .replace(/[^a-zа-я0-9 ]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
 }
