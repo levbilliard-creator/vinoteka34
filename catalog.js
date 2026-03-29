@@ -17,7 +17,6 @@ async function init(){
     ALL = await productsRes.json()
     IMAGES = await imagesRes.json()
 
-    // ✅ нормализация типов
     ALL = ALL.map(p => ({
       ...p,
       type: detectType(p)
@@ -33,18 +32,18 @@ async function init(){
 }
 
 
-/* ===== ГЛАВНАЯ ЛОГИКА ===== */
+/* ===== ГЛАВНАЯ ЛОГИКА (ИСПРАВЛЕНА) ===== */
 
 function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
 
-  /* ===== 1. АКСЕССУАРЫ ===== */
-  if(name.includes("бокал") || name.includes("glass")){
+  /* 1. АКСЕССУАРЫ */
+  if(name.includes("бокал")){
     return "accessories"
   }
 
-  /* ===== 2. БАКАЛЕЯ ===== */
+  /* 2. БАКАЛЕЯ */
   if(
     name.includes("сыр") ||
     name.includes("салями") ||
@@ -63,39 +62,28 @@ function detectType(p){
     name.includes("леденцы") ||
     name.includes("печенье") ||
     name.includes("шоколад") ||
-    name.includes("сорбио") ||
     name.includes("приправа")
   ){
     return "grocery"
   }
 
-  /* ===== 3. ЧАЙ ===== */
+  /* 3. ЧАЙ */
   if(name.includes("чай")){
     return "tea"
   }
 
-  /* ===== 4. БЕЗАЛКО ===== */
+  /* 4. ПИВО — ТОЛЬКО ЕСЛИ ЭТО ДЕЙСТВИТЕЛЬНО ПИВО */
   if(
-    name.includes("вода") ||
-    name.includes("cola") ||
-    name.includes("кола") ||
-    name.includes("сок") ||
-    name.includes("тоник")
-  ){
-    return "soft"
-  }
-
-  /* ===== 5. ПИВО ===== */
-  if(
-    name.includes("пиво") ||
-    name.includes("эль") ||
-    name.includes("лагер") ||
-    name.includes("корона")
+    name.startsWith("пиво") ||
+    name.includes(" пиво ") ||
+    name.includes(" lager") ||
+    name.includes(" ipa") ||
+    name.includes(" stout")
   ){
     return "beer"
   }
 
-  /* ===== 6. КРЕПКИЙ ===== */
+  /* 5. КРЕПКИЙ */
   if(
     name.includes("виски") ||
     name.includes("ром") ||
@@ -108,7 +96,7 @@ function detectType(p){
     return "strong"
   }
 
-  /* ===== 7. ИГРИСТОЕ (без слова "игристое") ===== */
+  /* 6. ИГРИСТОЕ */
   if(
     name.includes("брют") ||
     name.includes("шампан") ||
@@ -118,12 +106,40 @@ function detectType(p){
     return "sparkling"
   }
 
-  /* ===== 8. ВСЁ ОСТАЛЬНОЕ → ВИНО ===== */
+  /* 7. ВИНО (ВАЖНО — ДО БЕЗАЛКО) */
+  if(
+    name.includes("вино") ||
+    name.includes("шато") ||
+    name.includes("бордо") ||
+    name.includes("бургунд") ||
+    name.includes("тоскана") ||
+    name.includes("риоха") ||
+    name.includes("совиньон") ||
+    name.includes("мерло") ||
+    name.includes("пино") ||
+    name.includes("шардоне") ||
+    name.includes("рислинг") ||
+    name.includes("николаев") ||
+    name.includes("вермут")
+  ){
+    return "wine"
+  }
+
+  /* 8. БЕЗАЛКО (ПОСЛЕ ВИНА!) */
+  if(
+    name.includes("вода") ||
+    name.includes("кола") ||
+    name.includes("сок") ||
+    name.includes("тоник")
+  ){
+    return "soft"
+  }
+
   return "wine"
 }
 
 
-/* ===== КАРТИНКИ (без мигания) ===== */
+/* ===== КАРТИНКИ (НЕ ТРОГАЛ) ===== */
 
 const imageMap = {}
 
@@ -202,7 +218,7 @@ function bindSearch(){
 }
 
 
-/* ===== РЕНДЕР ===== */
+/* ===== РЕНДЕР (НЕ ТРОГАЛ) ===== */
 
 function render(items){
 
