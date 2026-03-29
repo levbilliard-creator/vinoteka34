@@ -11,8 +11,9 @@ async function loadProducts(){
     const res = await fetch(API_URL)
     const data = await res.json()
 
-    PRODUCTS = data.map(p => ({
+    PRODUCTS = data.map((p, index) => ({
       ...p,
+      _index: index, // ВАЖНО: используем индекс как раньше
       category: detectType(p)
     }))
 
@@ -23,18 +24,14 @@ async function loadProducts(){
 }
 
 /* ===================== */
-/* КАТЕГОРИИ (ИСПРАВЛЕНО) */
+/* КАТЕГОРИИ */
 /* ===================== */
 function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
 
-  /* АКСЕССУАРЫ */
-  if(name.includes("бокал")){
-    return "accessories"
-  }
+  if(name.includes("бокал")) return "accessories"
 
-  /* БАКАЛЕЯ */
   if(
     name.includes("сыр") ||
     name.includes("салями") ||
@@ -54,11 +51,8 @@ function detectType(p){
     name.includes("печенье") ||
     name.includes("шоколад") ||
     name.includes("приправа")
-  ){
-    return "grocery"
-  }
+  ) return "grocery"
 
-  /* ВИНО + ВЕРМУТ */
   if(
     name.includes("вермут") ||
     name.includes("шато") ||
@@ -74,21 +68,15 @@ function detectType(p){
     name.includes("николаев") ||
     name.includes("эльзас") ||
     name.includes("вино")
-  ){
-    return "wine"
-  }
+  ) return "wine"
 
-  /* ИГРИСТОЕ */
   if(
     name.includes("брют") ||
     name.includes("шампан") ||
     name.includes("просекко") ||
     name.includes("кава")
-  ){
-    return "sparkling"
-  }
+  ) return "sparkling"
 
-  /* КРЕПКИЙ */
   if(
     name.includes("виски") ||
     name.includes("ром") ||
@@ -97,11 +85,8 @@ function detectType(p){
     name.includes("текила") ||
     name.includes("коньяк") ||
     name.includes("бренди")
-  ){
-    return "strong"
-  }
+  ) return "strong"
 
-  /* ПИВО */
   if(
     name.startsWith("пиво") ||
     name.includes(" пиво") ||
@@ -111,24 +96,16 @@ function detectType(p){
     name.endsWith(" лагер") ||
     name.includes(" эль ") ||
     name.endsWith(" эль")
-  ){
-    return "beer"
-  }
+  ) return "beer"
 
-  /* ЧАЙ */
-  if(name.includes("чай")){
-    return "tea"
-  }
+  if(name.includes("чай")) return "tea"
 
-  /* БЕЗАЛКО */
   if(
     name.includes("вода") ||
     name.includes("кола") ||
     name.includes("сок") ||
     name.includes("тоник")
-  ){
-    return "soft"
-  }
+  ) return "soft"
 
   return "wine"
 }
@@ -186,7 +163,7 @@ function createCard(p){
 
       <div class="card-price">${formatPrice(p.price)}</div>
 
-      <a href="product.html?id=${p.id}" class="card-btn">Подробнее →</a>
+      <a href="product.html?i=${p._index}" class="card-btn">Подробнее →</a>
     </div>
   `
 
