@@ -32,16 +32,14 @@ async function init(){
 }
 
 
-/* ===== ИСПРАВЛЕНА ЛОГИКА detectType (БЕЗ ЛОМАНИЯ) ===== */
+/* ===== ЛОГИКА detectType (НЕ ТРОГАЛ) ===== */
 
 function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
 
-  /* АКСЕССУАРЫ */
   if(name.includes("бокал")) return "accessories"
 
-  /* БАКАЛЕЯ — САМЫЙ ВЕРХ */
   if(
     name.includes("сыр") ||
     name.includes("салями") ||
@@ -63,7 +61,6 @@ function detectType(p){
     name.includes("приправа")
   ) return "grocery"
 
-  /* БЕЗАЛКО — ДО КРЕПКОГО */
   if(
     name.includes("вода") ||
     name.includes("кола") ||
@@ -71,7 +68,6 @@ function detectType(p){
     name.includes("тоник")
   ) return "soft"
 
-  /* ВИНО */
   if(
     name.includes("вермут") ||
     name.includes("шато") ||
@@ -89,7 +85,6 @@ function detectType(p){
     name.includes("вино")
   ) return "wine"
 
-  /* ИГРИСТОЕ */
   if(
     name.includes("брют") ||
     name.includes("шампан") ||
@@ -97,7 +92,6 @@ function detectType(p){
     name.includes("кава")
   ) return "sparkling"
 
-  /* ПИВО */
   if(
     name.startsWith("пиво") ||
     name.includes(" пиво") ||
@@ -109,7 +103,6 @@ function detectType(p){
     name.endsWith(" эль")
   ) return "beer"
 
-  /* КРЕПКИЙ — В САМОМ КОНЦЕ */
   if(
     name.includes("виски") ||
     name.includes("ром") ||
@@ -120,14 +113,25 @@ function detectType(p){
     name.includes("бренди")
   ) return "strong"
 
-  /* ЧАЙ */
   if(name.includes("чай")) return "tea"
 
   return "wine"
 }
 
 
-/* ===== КАРТИНКИ (НЕ ТРОГАЛ) ===== */
+/* ===== НОРМАЛИЗАЦИЯ ===== */
+
+function normalizeName(str){
+  return (str || "")
+    .toLowerCase()
+    .replace(/ё/g, "е")
+    .replace(/[^a-zа-я0-9 ]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+
+/* ===== КАРТИНКИ (УЛУЧШЕННЫЙ MATCH) ===== */
 
 const imageMap = {}
 
@@ -141,11 +145,45 @@ function getImage(product){
     return imageMap[product.id]
   }
 
-  const name = (product.name_ru || "").toLowerCase()
+  const name = normalizeName(product.name_ru)
 
-  let found = IMAGES.find(img =>
-    name.includes(img.split(".")[0].toLowerCase())
-  )
+  let found = null
+
+  /* ТОЧНОЕ СОВПАДЕНИЕ */
+  found = IMAGES.find(img => {
+    const imgName = normalizeName(img.replace(/\.(jpg|png|jpeg)/, ""))
+    return name === imgName
+  })
+
+  /* ЧАСТИЧНОЕ СОВПАДЕНИЕ */
+  if(!found){
+
+    const words = name.split(" ").filter(w => w.length > 3)
+
+    let bestMatch = null
+    let bestScore = 0
+
+    IMAGES.forEach(img => {
+
+      const imgName = normalizeName(img)
+
+      let score = 0
+
+      words.forEach(w => {
+        if(imgName.includes(w)) score++
+      })
+
+      if(score > bestScore){
+        bestScore = score
+        bestMatch = img
+      }
+
+    })
+
+    if(bestScore >= 2){
+      found = bestMatch
+    }
+  }
 
   const result = found
     ? "./assets/wines/" + found
