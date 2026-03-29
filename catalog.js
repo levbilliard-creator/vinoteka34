@@ -27,18 +27,16 @@ async function init(){
 }
 
 
-/* ===== КЛАССИФИКАЦИЯ (ИСПРАВЛЕННАЯ) ===== */
+/* ===== ТОЛЬКО ЛОГИКА КАТЕГОРИЙ ===== */
 
 function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
 
-  /* ===== АКСЕССУАРЫ ===== */
-  if(name.includes("бокал")){
-    return "accessories"
-  }
+  /* аксессуары */
+  if(name.includes("бокал")) return "accessories"
 
-  /* ===== БАКАЛЕЯ ===== */
+  /* бакалея */
   if(
     name.includes("сыр") ||
     name.includes("салями") ||
@@ -57,41 +55,31 @@ function detectType(p){
     name.includes("печенье") ||
     name.includes("шоколад") ||
     name.includes("приправа")
-  ){
-    return "grocery"
-  }
+  ) return "grocery"
 
-  /* ===== ЧАЙ ===== */
-  if(name.includes("чай")){
-    return "tea"
-  }
+  /* чай */
+  if(name.includes("чай")) return "tea"
 
-  /* ===== ПИВО (СТРОГО) ===== */
+  /* пиво — строго */
   if(
-    name.includes("пиво ") ||
     name.startsWith("пиво") ||
-    name.includes(" lager") ||
-    name.includes(" stout") ||
-    name.includes(" ipa") ||
-    name.includes("корона")
-  ){
-    return "beer"
-  }
+    name.includes(" пиво") ||
+    name.includes("lager") ||
+    name.includes("ipa") ||
+    name.includes("stout")
+  ) return "beer"
 
-  /* ===== ИГРИСТОЕ ===== */
+  /* игристое */
   if(
     name.includes("брют") ||
     name.includes("шампан") ||
     name.includes("просекко") ||
     name.includes("кава")
-  ){
-    return "sparkling"
-  }
+  ) return "sparkling"
 
-  /* ===== ВИНО (ГЛАВНОЕ) ===== */
+  /* вино */
   if(
     name.includes("вино") ||
-    name.includes("вин") ||
     name.includes("шато") ||
     name.includes("бордо") ||
     name.includes("бургунд") ||
@@ -104,11 +92,9 @@ function detectType(p){
     name.includes("рислинг") ||
     name.includes("николаев") ||
     name.includes("вермут")
-  ){
-    return "wine"
-  }
+  ) return "wine"
 
-  /* ===== КРЕПКИЙ ===== */
+  /* крепкий */
   if(
     name.includes("виски") ||
     name.includes("ром") ||
@@ -117,25 +103,21 @@ function detectType(p){
     name.includes("текила") ||
     name.includes("коньяк") ||
     name.includes("бренди")
-  ){
-    return "strong"
-  }
+  ) return "strong"
 
-  /* ===== БЕЗАЛКО ===== */
+  /* безалко */
   if(
     name.includes("вода") ||
     name.includes("кола") ||
     name.includes("сок") ||
     name.includes("тоник")
-  ){
-    return "soft"
-  }
+  ) return "soft"
 
   return "wine"
 }
 
 
-/* ===== КАРТИНКИ (КАК БЫЛО) ===== */
+/* ===== КАРТИНКИ — КАК БЫЛО ===== */
 
 function getImage(product){
 
@@ -155,7 +137,7 @@ function getImage(product){
 }
 
 
-/* ===== UI ===== */
+/* ===== КНОПКИ ===== */
 
 function bindButtons(){
   buttons.forEach(btn => {
@@ -175,6 +157,9 @@ function bindButtons(){
   })
 }
 
+
+/* ===== ПОИСК ===== */
+
 function bindSearch(){
   searchInput.addEventListener("input", () => {
     const value = searchInput.value.toLowerCase()
@@ -187,7 +172,7 @@ function bindSearch(){
 }
 
 
-/* ===== РЕНДЕР (НЕ ТРОГАЕМ СТРУКТУРУ) ===== */
+/* ===== РЕНДЕР — НЕ ТРОГАЕМ ===== */
 
 function render(items){
 
@@ -205,22 +190,26 @@ function render(items){
     grid.innerHTML += `
       <div class="card">
 
-        <div class="img-wrap">
+        <div class="card-image">
           <img src="${img}" loading="lazy"
                onerror="this.src='./assets/no-wine.png'">
         </div>
 
-        <div class="wine-type">${translate(w.type)}</div>
+        <div class="card-body">
 
-        ${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
+          <div class="card-type">${translate(w.type)}</div>
 
-        <div class="wine-ru">${w.name_ru}</div>
+          ${w.name_en ? `<div class="card-en">${w.name_en}</div>` : ""}
 
-        <div class="wine-price">${w.price} ₽</div>
+          <div class="card-title">${w.name_ru}</div>
 
-        <a href="product.html?id=${w.id}" class="btn-link">
-          Подробнее →
-        </a>
+          <div class="card-price">${w.price} ₽</div>
+
+          <a href="product.html?id=${w.id}" class="card-btn">
+            Подробнее →
+          </a>
+
+        </div>
 
       </div>
     `
