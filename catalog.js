@@ -1,5 +1,5 @@
 let ALL = []
-let IMAGES = []
+let IMAGES = {}
 
 const grid = document.querySelector(".catalogGrid")
 const buttons = document.querySelectorAll(".categories button")
@@ -15,7 +15,14 @@ async function init(){
     ])
 
     ALL = await productsRes.json()
-    IMAGES = await imagesRes.json()
+
+    const imagesArr = await imagesRes.json()
+
+    /* ПРЕВРАЩАЕМ В ОБЪЕКТ id → файл */
+    IMAGES = {}
+    imagesArr.forEach(i => {
+      IMAGES[i.id] = i.file
+    })
 
     ALL = ALL.map(p => ({
       ...p,
@@ -32,7 +39,7 @@ async function init(){
 }
 
 
-/* ===== ЛОГИКА detectType (НЕ ТРОГАЛ) ===== */
+/* ===== detectType НЕ ТРОГАЕМ ===== */
 
 function detectType(p){
 
@@ -55,7 +62,6 @@ function detectType(p){
     name.includes("палочки") ||
     name.includes("гриссини") ||
     name.includes("ассорти") ||
-    name.includes("леденцы") ||
     name.includes("печенье") ||
     name.includes("шоколад") ||
     name.includes("приправа")
@@ -94,13 +100,8 @@ function detectType(p){
 
   if(
     name.startsWith("пиво") ||
-    name.includes(" пиво") ||
     name.includes("пивной напиток") ||
-    name.includes("пивосодержащ") ||
-    name.includes(" лагер") ||
-    name.endsWith(" лагер") ||
-    name.includes(" эль ") ||
-    name.endsWith(" эль")
+    name.includes("пивосодержащ")
   ) return "beer"
 
   if(
@@ -119,79 +120,18 @@ function detectType(p){
 }
 
 
-/* ===== НОРМАЛИЗАЦИЯ ===== */
-
-function normalizeName(str){
-  return (str || "")
-    .toLowerCase()
-    .replace(/ё/g, "е")
-    .replace(/[^a-zа-я0-9 ]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-}
-
-
-/* ===== КАРТИНКИ (УЛУЧШЕННЫЙ MATCH) ===== */
-
-const imageMap = {}
+/* ===== ЖЁСТКАЯ ПРИВЯЗКА КАРТИНОК ===== */
 
 function getImage(product){
 
-  if(product.image){
-    return "./assets/wines/" + product.image
+  const file = IMAGES[product.id]
+
+  if(file){
+    return "./assets/wines/" + file
   }
 
-  if(imageMap[product.id]){
-    return imageMap[product.id]
-  }
-
-  const name = normalizeName(product.name_ru)
-
-  let found = null
-
-  /* ТОЧНОЕ СОВПАДЕНИЕ */
-  found = IMAGES.find(img => {
-    const imgName = normalizeName(img.replace(/\.(jpg|png|jpeg)/, ""))
-    return name === imgName
-  })
-
-  /* ЧАСТИЧНОЕ СОВПАДЕНИЕ */
-  if(!found){
-
-    const words = name.split(" ").filter(w => w.length > 3)
-
-    let bestMatch = null
-    let bestScore = 0
-
-    IMAGES.forEach(img => {
-
-      const imgName = normalizeName(img)
-
-      let score = 0
-
-      words.forEach(w => {
-        if(imgName.includes(w)) score++
-      })
-
-      if(score > bestScore){
-        bestScore = score
-        bestMatch = img
-      }
-
-    })
-
-    if(bestScore >= 2){
-      found = bestMatch
-    }
-  }
-
-  const result = found
-    ? "./assets/wines/" + found
-    : "./assets/no-wine.png"
-
-  imageMap[product.id] = result
-
-  return result
+  /* НЕТ ФОТО → ПУСТО */
+  return ""
 }
 
 
@@ -244,16 +184,11 @@ function bindSearch(){
 }
 
 
-/* ===== РЕНДЕР (НЕ ТРОГАЛ) ===== */
+/* ===== РЕНДЕР ===== */
 
 function render(items){
 
   grid.innerHTML = ""
-
-  if(items.length === 0){
-    grid.innerHTML = "<p style='opacity:0.6'>Нет товаров</p>"
-    return
-  }
 
   items.forEach(w => {
 
@@ -263,9 +198,11 @@ function render(items){
       <div class="product-card">
 
         <div class="img-wrap">
-          <img src="${img}" class="wine-img"
-               loading="lazy"
-               onerror="this.src='./assets/no-wine.png'">
+          ${
+            img
+              ? `<img src="${img}" class="wine-img" loading="lazy">`
+              : ``
+          }
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
