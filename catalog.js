@@ -32,7 +32,7 @@ async function init(){
 }
 
 
-/* ===== ИСПРАВЛЕНА ТОЛЬКО ЛОГИКА detectType ===== */
+/* ===== ИСПРАВЛЕНА ЛОГИКА detectType (БЕЗ ЛОМАНИЯ) ===== */
 
 function detectType(p){
 
@@ -40,6 +40,36 @@ function detectType(p){
 
   /* АКСЕССУАРЫ */
   if(name.includes("бокал")) return "accessories"
+
+  /* БАКАЛЕЯ — САМЫЙ ВЕРХ */
+  if(
+    name.includes("сыр") ||
+    name.includes("салями") ||
+    name.includes("колбас") ||
+    name.includes("ветчина") ||
+    name.includes("брезаола") ||
+    name.includes("анчоус") ||
+    name.includes("оливк") ||
+    name.includes("томат") ||
+    name.includes("песто") ||
+    name.includes("масло") ||
+    name.includes("перчик") ||
+    name.includes("палочки") ||
+    name.includes("гриссини") ||
+    name.includes("ассорти") ||
+    name.includes("леденцы") ||
+    name.includes("печенье") ||
+    name.includes("шоколад") ||
+    name.includes("приправа")
+  ) return "grocery"
+
+  /* БЕЗАЛКО — ДО КРЕПКОГО */
+  if(
+    name.includes("вода") ||
+    name.includes("кола") ||
+    name.includes("сок") ||
+    name.includes("тоник")
+  ) return "soft"
 
   /* ВИНО */
   if(
@@ -67,48 +97,7 @@ function detectType(p){
     name.includes("кава")
   ) return "sparkling"
 
-  /* БАКАЛЕЯ — ПЕРЕНЕСЕНА ВЫШЕ */
-  if(
-    name.includes("сыр") ||
-    name.includes("салями") ||
-    name.includes("колбас") ||
-    name.includes("ветчина") ||
-    name.includes("брезаола") ||
-    name.includes("анчоус") ||
-    name.includes("оливк") ||
-    name.includes("томат") ||
-    name.includes("песто") ||
-    name.includes("масло") ||
-    name.includes("перчик") ||
-    name.includes("палочки") ||
-    name.includes("гриссини") ||
-    name.includes("ассорти") ||
-    name.includes("леденцы") ||
-    name.includes("печенье") ||
-    name.includes("шоколад") ||
-    name.includes("приправа")
-  ) return "grocery"
-
-  /* БЕЗАЛКО — ТОЖЕ ВЫШЕ */
-  if(
-    name.includes("вода") ||
-    name.includes("кола") ||
-    name.includes("сок") ||
-    name.includes("тоник")
-  ) return "soft"
-
-  /* КРЕПКИЙ */
-  if(
-    name.includes("виски") ||
-    name.includes("ром") ||
-    name.includes("джин") ||
-    name.includes("водка") ||
-    name.includes("текила") ||
-    name.includes("коньяк") ||
-    name.includes("бренди")
-  ) return "strong"
-
-  /* ПИВО (БЕЗ ЛОВЛИ "эльзас") */
+  /* ПИВО */
   if(
     name.startsWith("пиво") ||
     name.includes(" пиво") ||
@@ -119,6 +108,17 @@ function detectType(p){
     name.includes(" эль ") ||
     name.endsWith(" эль")
   ) return "beer"
+
+  /* КРЕПКИЙ — В САМОМ КОНЦЕ */
+  if(
+    name.includes("виски") ||
+    name.includes("ром") ||
+    name.includes("джин") ||
+    name.includes("водка") ||
+    name.includes("текила") ||
+    name.includes("коньяк") ||
+    name.includes("бренди")
+  ) return "strong"
 
   /* ЧАЙ */
   if(name.includes("чай")) return "tea"
