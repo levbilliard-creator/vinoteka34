@@ -17,7 +17,7 @@ async function init(){
     ALL = await productsRes.json()
     IMAGES = await imagesRes.json()
 
-    // 🔥 НОРМАЛИЗАЦИЯ ТИПОВ (ОДИН РАЗ)
+    // ✅ нормализация типов (аккуратно)
     ALL = ALL.map(p => ({
       ...p,
       type: normalizeType(p)
@@ -32,52 +32,100 @@ async function init(){
   }
 }
 
+
+/* ===== НОРМАЛИЗАЦИЯ ТИПОВ ===== */
+
 function normalizeType(p){
 
   const name = (p.name_ru || "").toLowerCase()
+  const type = (p.type || "").toLowerCase()
+  const color = (p.color || "").toLowerCase()
 
-  // ВИНО
-  if(name.includes("вино")) return "wine"
+  // ✅ если уже нормальный — оставляем
+  if([
+    "wine","beer","strong","sparkling",
+    "soft","tea","grocery","accessories"
+  ].includes(type)){
+    return type
+  }
 
-  // ИГРИСТОЕ
-  if(name.includes("игрист") || name.includes("шампан")) return "sparkling"
+  // 🍾 игристые (без привязки к слову "игристое")
+  if(
+    name.includes("брют") ||
+    name.includes("шампан") ||
+    name.includes("просекко") ||
+    name.includes("кава")
+  ){
+    return "sparkling"
+  }
 
-  // ПИВО
-  if(name.includes("пиво") || name.includes("эль") || name.includes("лагер") || name.includes("корона"))
-    return "beer"
-
-  // КРЕПКИЙ АЛКОГОЛЬ
+  // 🥃 крепкий алкоголь
   if(
     name.includes("виски") ||
     name.includes("ром") ||
     name.includes("джин") ||
     name.includes("водка") ||
     name.includes("текила") ||
+    name.includes("коньяк") ||
     name.includes("бренди")
-  ) return "strong"
+  ){
+    return "strong"
+  }
 
-  // БЕЗАЛКОГОЛЬНЫЕ
+  // 🍺 пиво
+  if(
+    name.includes("пиво") ||
+    name.includes("эль") ||
+    name.includes("лагер") ||
+    name.includes("корона")
+  ){
+    return "beer"
+  }
+
+  // 🧃 безалкогольные
   if(
     name.includes("вода") ||
     name.includes("cola") ||
     name.includes("кола") ||
     name.includes("сок") ||
     name.includes("тоник")
-  ) return "soft"
+  ){
+    return "soft"
+  }
 
-  // ЧАЙ
-  if(name.includes("чай")) return "tea"
+  // 🍵 чай
+  if(name.includes("чай")){
+    return "tea"
+  }
 
-  // АКСЕССУАРЫ
-  if(name.includes("бокал") || name.includes("штопор"))
-    return "accessories"
+  // 🍷 ВИНО (КЛЮЧЕВОЕ)
+  if(
+    color === "красное" ||
+    color === "белое" ||
+    color === "розовое"
+  ){
+    return "wine"
+  }
 
-  // БАКАЛЕЯ
-  return "grocery"
+  // 🥖 бакалея
+  if(
+    name.includes("сыр") ||
+    name.includes("оливки") ||
+    name.includes("колбас") ||
+    name.includes("чипсы") ||
+    name.includes("печенье") ||
+    name.includes("масло") ||
+    name.includes("соус")
+  ){
+    return "grocery"
+  }
+
+  // 🍷 fallback → считаем вином
+  return "wine"
 }
 
 
-/* ===== ИЗОБРАЖЕНИЯ (СТАБИЛЬНО) ===== */
+/* ===== КАРТИНКИ (СТАБИЛЬНО) ===== */
 
 const imageMap = {}
 
