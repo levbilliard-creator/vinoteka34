@@ -32,7 +32,7 @@ async function init(){
 }
 
 
-/* ===== ГЛАВНАЯ ЛОГИКА (ИСПРАВЛЕНА) ===== */
+/* ===== ГЛАВНАЯ ЛОГИКА (ИСПРАВЛЕНА БЕЗ ЛОМАНИЯ СТРУКТУРЫ) ===== */
 
 function detectType(p){
 
@@ -43,7 +43,61 @@ function detectType(p){
     return "accessories"
   }
 
-  /* 2. БАКАЛЕЯ */
+  /* 2. ВИНО + ВЕРМУТ (ВАЖНО РАНЬШЕ БАКАЛЕИ) */
+  if(
+    name.includes("вермут") ||
+    name.includes("шато") ||
+    name.includes("бордо") ||
+    name.includes("бургунд") ||
+    name.includes("тоскана") ||
+    name.includes("риоха") ||
+    name.includes("совиньон") ||
+    name.includes("мерло") ||
+    name.includes("пино") ||
+    name.includes("шардоне") ||
+    name.includes("рислинг") ||
+    name.includes("николаев") ||
+    name.includes("вино")
+  ){
+    return "wine"
+  }
+
+  /* 3. ИГРИСТОЕ */
+  if(
+    name.includes("брют") ||
+    name.includes("шампан") ||
+    name.includes("просекко") ||
+    name.includes("кава")
+  ){
+    return "sparkling"
+  }
+
+  /* 4. ПИВО + ПИВОСОДЕРЖАЩИЕ */
+  if(
+    name.startsWith("пиво") ||
+    name.includes(" пиво") ||
+    name.includes("пивной напиток") ||
+    name.includes("пивосодержащ") ||
+    name.includes("эль") ||
+    name.includes("лагер")
+  ){
+    return "beer"
+  }
+
+  /* 5. КРЕПКИЙ */
+  if(
+    name.includes("виски") ||
+    name.includes("ром") ||
+    name.includes("джин") ||
+    name.includes("водка") ||
+    name.includes("текила") ||
+    name.includes("коньяк") ||
+    name.includes("бренди")
+  ){
+    return "strong"
+  }
+
+  /* 6. БАКАЛЕЯ */
   if(
     name.includes("сыр") ||
     name.includes("салями") ||
@@ -67,65 +121,12 @@ function detectType(p){
     return "grocery"
   }
 
-  /* 3. ЧАЙ */
+  /* 7. ЧАЙ */
   if(name.includes("чай")){
     return "tea"
   }
 
-  /* 4. ПИВО — ТОЛЬКО ЕСЛИ ЭТО ДЕЙСТВИТЕЛЬНО ПИВО */
-  if(
-    name.startsWith("пиво") ||
-    name.includes(" пиво ") ||
-    name.includes(" lager") ||
-    name.includes(" ipa") ||
-    name.includes(" stout")
-  ){
-    return "beer"
-  }
-
-  /* 5. КРЕПКИЙ */
-  if(
-    name.includes("виски") ||
-    name.includes("ром") ||
-    name.includes("джин") ||
-    name.includes("водка") ||
-    name.includes("текила") ||
-    name.includes("коньяк") ||
-    name.includes("бренди")
-  ){
-    return "strong"
-  }
-
-  /* 6. ИГРИСТОЕ */
-  if(
-    name.includes("брют") ||
-    name.includes("шампан") ||
-    name.includes("просекко") ||
-    name.includes("кава")
-  ){
-    return "sparkling"
-  }
-
-  /* 7. ВИНО (ВАЖНО — ДО БЕЗАЛКО) */
-  if(
-    name.includes("вино") ||
-    name.includes("шато") ||
-    name.includes("бордо") ||
-    name.includes("бургунд") ||
-    name.includes("тоскана") ||
-    name.includes("риоха") ||
-    name.includes("совиньон") ||
-    name.includes("мерло") ||
-    name.includes("пино") ||
-    name.includes("шардоне") ||
-    name.includes("рислинг") ||
-    name.includes("николаев") ||
-    name.includes("вермут")
-  ){
-    return "wine"
-  }
-
-  /* 8. БЕЗАЛКО (ПОСЛЕ ВИНА!) */
+  /* 8. БЕЗАЛКО */
   if(
     name.includes("вода") ||
     name.includes("кола") ||
