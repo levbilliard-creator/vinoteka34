@@ -21,6 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return
   }
 
+  /* ===== ДОБАВЛЕНО: читаем категорию из URL ===== */
+  const params = new URLSearchParams(window.location.search)
+  const from = params.get("type")
+  if(from){
+    currentType = from
+  }
+
   init()
 })
 
@@ -34,7 +41,13 @@ async function init(){
       type: detectType(p)
     }))
 
-    render(ALL)
+    /* ===== ДОБАВЛЕНО: сразу фильтруем если есть категория ===== */
+    if(currentType !== "all"){
+      render(ALL.filter(w => w.type === currentType))
+    } else {
+      render(ALL)
+    }
+
     bindButtons()
     bindSearch()
     initScroll()
@@ -45,7 +58,7 @@ async function init(){
 }
 
 
-/* ===== detectType (НЕ ТРОГАЮ) ===== */
+/* ===== detectType (РАСШИРЕН, НЕ УРЕЗАН) ===== */
 
 function detectType(p){
 
@@ -59,17 +72,40 @@ function detectType(p){
   if(name.includes("чипс") || name.includes("сорбиодетокс") || name.includes("стакан")) return "grocery"
   if(name.includes("бокал")) return "accessories"
 
-  if(name.includes("сыр") || name.includes("оливк") || name.includes("анчоус") || name.includes("приправа")) return "grocery"
+  /* ===== РАСШИРЕНА БАКАЛЕЯ ===== */
+  if(
+    name.includes("сыр") ||
+    name.includes("оливк") ||
+    name.includes("анчоус") ||
+    name.includes("приправа") ||
+    name.includes("салями") ||
+    name.includes("ветчина") ||
+    name.includes("колбас") ||
+    name.includes("печенье") ||
+    name.includes("шоколад") ||
+    name.includes("масло") ||
+    name.includes("песто") ||
+    name.includes("перчик") ||
+    name.includes("томаты") ||
+    name.includes("гриссини")
+  ) return "grocery"
 
-  if(name.includes("вода") || name.includes("сок")) return "soft"
+  if(name.includes("вода") || name.includes("сок") || name.includes("тоник")) return "soft"
 
   if(name.includes("брют") || name.includes("шампан") || name.includes("просекко") || name.includes("кава")) return "sparkling"
 
-  if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино")) return "wine"
+  if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино") || name.includes("эльзас") || name.includes("тоскана")) return "wine"
 
-  if(name.includes("пиво")) return "beer"
+  /* ===== ДОБАВЛЕНО ПИВО ===== */
+  if(
+    name.includes("пиво") ||
+    name.includes("пивосодержащ") ||
+    name.includes("пивной напиток") ||
+    name.includes("corona") ||
+    name.includes("корона")
+  ) return "beer"
 
-  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк")) return "strong"
+  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк") || name.includes("бренди")) return "strong"
 
   if(name.includes("чай")) return "tea"
 
@@ -77,7 +113,7 @@ function detectType(p){
 }
 
 
-/* ===== КАРТИНКИ (СТАБИЛЬНО) ===== */
+/* ===== КАРТИНКИ (НЕ ТРОГАЮ) ===== */
 
 function getImage(product){
 
