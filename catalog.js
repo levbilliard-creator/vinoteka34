@@ -1,311 +1,260 @@
-let ALL = []
-let IMAGES = []
+// ===== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ =====
+let PRODUCTS = []
+let IMAGES = {}
 
-const grid = document.querySelector(".catalogGrid")
-const buttons = document.querySelectorAll(".categories button")
-const searchInput = document.getElementById("searchInput")
+let CURRENT_CATEGORY = 'all'
+let SEARCH_QUERY = ''
 
-/* ===== LAZY ===== */
-let rendered = 0
-const CHUNK = 40
-let currentItems = []
 
-init()
-
-async function init(){
+// ===== ЗАГРУЗКА =====
+async function loadData(){
   try{
     const [productsRes, imagesRes] = await Promise.all([
-      fetch("./data/products.json"),
-      fetch("./data/images.json")
+      fetch('/data/products.json'),
+      fetch('/data/images.json')
     ])
 
-    ALL = await productsRes.json()
+    PRODUCTS = await productsRes.json()
     IMAGES = await imagesRes.json()
 
-    ALL = ALL.map(p => ({
-      ...p,
-      type: detectType(p)
-    }))
-
-    render(ALL)
-    bindButtons()
-    bindSearch()
-    initScroll()
+    initFromURL()
+    renderCatalog()
 
   }catch(e){
-    console.error("Ошибка загрузки данных", e)
+    console.error('Ошибка загрузки', e)
   }
 }
 
 
-/* ===== detectType (НЕ ТРОГАЮ) ===== */
+// ===== ЧТЕНИЕ КАТЕГОРИИ ИЗ URL =====
+function initFromURL(){
+  const params = new URLSearchParams(window.location.search)
+  const cat = params.get('cat')
 
-function detectType(p){
-
-  const name = (p.name_ru || "").toLowerCase()
-
-  if(name.includes("николаев")) return "wine"
-  if(name.includes("вермут")) return "wine"
-  if(name.includes("ракия")) return "strong"
-  if(name.includes("ром выдержанный эль")) return "strong"
-
-  if(
-    name.includes("чипс") ||
-    name.includes("сорбиодетокс") ||
-    name.includes("стакан")
-  ) return "grocery"
-
-  if(name.includes("бокал")) return "accessories"
-
-  if(
-    name.includes("сыр") ||
-    name.includes("салями") ||
-    name.includes("колбас") ||
-    name.includes("ветчина") ||
-    name.includes("брезаола") ||
-    name.includes("анчоус") ||
-    name.includes("оливк") ||
-    name.includes("томат") ||
-    name.includes("песто") ||
-    name.includes("масло") ||
-    name.includes("перчик") ||
-    name.includes("палочки") ||
-    name.includes("гриссини") ||
-    name.includes("ассорти") ||
-    name.includes("леденцы") ||
-    name.includes("печенье") ||
-    name.includes("шоколад") ||
-    name.includes("приправа")
-  ) return "grocery"
-
-  if(
-    name.includes("вода") ||
-    name.includes("кола") ||
-    name.includes("сок") ||
-    name.includes("тоник")
-  ) return "soft"
-
-  if(
-    name.includes("брют") ||
-    name.includes("шампан") ||
-    name.includes("просекко") ||
-    name.includes("кава")
-  ) return "sparkling"
-
-  if(
-    name.includes("шато") ||
-    name.includes("бордо") ||
-    name.includes("бургунд") ||
-    name.includes("тоскана") ||
-    name.includes("риоха") ||
-    name.includes("совиньон") ||
-    name.includes("мерло") ||
-    name.includes("пино") ||
-    name.includes("шардоне") ||
-    name.includes("рислинг") ||
-    name.includes("эльзас") ||
-    name.includes("вино")
-  ) return "wine"
-
-  if(
-    name.startsWith("пиво") ||
-    name.includes(" пиво") ||
-    name.includes("пивной напиток") ||
-    name.includes("пивосодержащ") ||
-    name.includes(" лагер") ||
-    name.endsWith(" лагер") ||
-    name.includes(" эль ") ||
-    name.endsWith(" эль")
-  ) return "beer"
-
-  if(
-    name.includes("виски") ||
-    name.includes("ром") ||
-    name.includes("джин") ||
-    name.includes("водка") ||
-    name.includes("текила") ||
-    name.includes("коньяк") ||
-    name.includes("бренди")
-  ) return "strong"
-
-  if(name.includes("чай")) return "tea"
-
-  return "wine"
+  if(cat){
+    CURRENT_CATEGORY = cat
+  }
 }
 
 
-/* ===== КАРТИНКИ (ИСПРАВЛЕНО — БЕЗ МИГАНИЯ) ===== */
+// ===== СОХРАНЕНИЕ КАТЕГОРИИ =====
+function saveCategory(){
+  localStorage.setItem('lastCategory', CURRENT_CATEGORY)
+}
 
+
+// ===== КАРТИНКА (СТАБИЛЬНО) =====
 function getImage(product){
 
-  if(product.image){
-    return "./assets/wines/" + product.image
+  if(IMAGES && IMAGES[product.id]){
+    return `/assets/wines/${IMAGES[product.id]}`
   }
 
-  return "" // нет фото → пусто
+  return `/assets/wines/${product.id}.jpg`
 }
 
 
-/* ===== LAZY RENDER ===== */
+// ===== ФИЛЬТР =====
+function filterProducts(){
 
-function render(items){
-  grid.innerHTML = ""
-  rendered = 0
-  currentItems = items
-  renderNext()
-}
+  return PRODUCTS.filter(p => {
 
-function renderNext(){
-
-  const slice = currentItems.slice(rendered, rendered + CHUNK)
-
-  slice.forEach(w => {
-
-    const img = getImage(w)
-
-    grid.innerHTML += `
-      <div class="product-card">
-
-        <div class="img-wrap">
-          ${
-            img
-              ? `<img src="${img}" class="wine-img" loading="lazy">`
-              : ``
-          }
-        </div>
-
-        <div class="wine-type">${translate(w.type)}</div>
-
-        ${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
-
-        <div class="wine-ru">${w.name_ru}</div>
-
-        ${(w.color || w.style) ? `
-          <div class="wine-style">
-            ${w.color || ""} ${w.style || ""}
-          </div>
-        ` : ""}
-
-        <div class="wine-bottom">
-          <div class="wine-price">${w.price} ₽</div>
-
-          <a href="product.html?id=${w.id}&from=${w.type}" class="btn-link">
-            Подробнее →
-          </a>
-        </div>
-
-      </div>
-    `
-  })
-
-  rendered += CHUNK
-}
-
-
-/* ===== SCROLL LOAD ===== */
-
-function initScroll(){
-  window.addEventListener("scroll", () => {
-
-    if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 200){
-      renderNext()
+    if(CURRENT_CATEGORY !== 'all'){
+      if(mapCategory(p) !== CURRENT_CATEGORY) return false
     }
 
+    if(SEARCH_QUERY){
+      const text = (p.name_ru + ' ' + (p.name_en || '')).toLowerCase()
+      if(!text.includes(SEARCH_QUERY)) return false
+    }
+
+    return true
   })
 }
 
 
-/* ===== КНОПКИ ===== */
+// ===== КАТЕГОРИИ =====
+function mapCategory(p){
 
-function bindButtons(){
+  const name = (p.name_ru || '').toLowerCase()
 
-  buttons.forEach(btn => {
-
-    btn.addEventListener("click", () => {
-
-      buttons.forEach(b => b.classList.remove("active"))
-      btn.classList.add("active")
-
-      const type = btn.dataset.type
-
-      if(type === "all"){
-        render(ALL)
-        return
-      }
-
-      const filtered = ALL.filter(w => w.type === type)
-
-      render(filtered)
-
-    })
-
-  })
-
-}
-
-
-/* ===== ПОИСК ===== */
-
-function bindSearch(){
-
-  searchInput.addEventListener("input", () => {
-
-    const value = searchInput.value.toLowerCase()
-
-    const filtered = ALL.filter(w =>
-      (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
-      (w.name_en && w.name_en.toLowerCase().includes(value))
-    )
-
-    render(filtered)
-
-  })
-
-}
-
-
-/* ===== КНОПКА ВВЕРХ ===== */
-
-const upBtn = document.createElement("div")
-upBtn.innerHTML = "↑"
-upBtn.style.position = "fixed"
-upBtn.style.bottom = "30px"
-upBtn.style.right = "30px"
-upBtn.style.background = "#000"
-upBtn.style.color = "#fff"
-upBtn.style.padding = "10px 15px"
-upBtn.style.cursor = "pointer"
-upBtn.style.borderRadius = "8px"
-upBtn.style.zIndex = "999"
-upBtn.style.display = "none"
-
-document.body.appendChild(upBtn)
-
-window.addEventListener("scroll", () => {
-  if(window.scrollY > 400){
-    upBtn.style.display = "block"
-  } else {
-    upBtn.style.display = "none"
+  if(name.includes('чипс') || name.includes('печенье') || name.includes('олив') || name.includes('анчоус') || name.includes('приправа') || name.includes('хлеб')){
+    return 'grocery'
   }
+
+  if(name.includes('чай') || name.includes('улун') || name.includes('пуэр')){
+    return 'tea'
+  }
+
+  if(name.includes('вода') || name.includes('сок')){
+    return 'soft'
+  }
+
+  if(name.includes('пиво')){
+    return 'beer'
+  }
+
+  if(
+    name.includes('виски') ||
+    name.includes('ром') ||
+    name.includes('текил') ||
+    name.includes('джин') ||
+    name.includes('коньяк') ||
+    name.includes('бренди') ||
+    name.includes('ракия')
+  ){
+    return 'strong'
+  }
+
+  if(name.includes('игрист') || name.includes('шампан')){
+    return 'sparkling'
+  }
+
+  return 'wine'
+}
+
+
+// ===== РЕНДЕР =====
+function renderCatalog(){
+
+  const container = document.getElementById('catalog')
+  container.innerHTML = ''
+
+  const items = filterProducts()
+
+  items.forEach(product => {
+
+    const card = document.createElement('div')
+    card.className = 'card'
+
+    const imgSrc = getImage(product)
+
+    card.innerHTML = `
+      <div class="card-img">
+        <img src="${imgSrc}" loading="lazy"
+             onerror="this.style.display='none'">
+      </div>
+
+      <div class="card-body">
+        <div class="card-type">${getCategoryName(mapCategory(product))}</div>
+
+        <div class="card-title">
+          ${product.name_en ? `<div class="en">${product.name_en}</div>` : ''}
+          <div class="ru">${cleanName(product.name_ru)}</div>
+        </div>
+
+        <div class="card-meta">
+          ${product.color || ''} ${product.style || ''}
+        </div>
+
+        <div class="card-price">
+          ${formatPrice(product.price)}
+        </div>
+
+        <button class="card-btn" onclick="openProduct(${product.id})">
+          Подробнее →
+        </button>
+      </div>
+    `
+
+    container.appendChild(card)
+  })
+
+  renderScrollTopButton()
+}
+
+
+// ===== КНОПКА ↑ =====
+function renderScrollTopButton(){
+
+  let btn = document.getElementById('scrollTopBtn')
+
+  if(!btn){
+    btn = document.createElement('button')
+    btn.id = 'scrollTopBtn'
+    btn.textContent = '↑'
+
+    btn.style.position = 'fixed'
+    btn.style.bottom = '30px'
+    btn.style.right = '30px'
+    btn.style.padding = '12px 16px'
+    btn.style.borderRadius = '12px'
+    btn.style.border = 'none'
+    btn.style.cursor = 'pointer'
+    btn.style.background = 'linear-gradient(45deg,#7b5cff,#ff4ecd)'
+    btn.style.color = '#fff'
+    btn.style.fontSize = '18px'
+    btn.style.display = 'none'
+    btn.style.zIndex = '999'
+
+    btn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
+    document.body.appendChild(btn)
+  }
+
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 400){
+      btn.style.display = 'block'
+    } else {
+      btn.style.display = 'none'
+    }
+  })
+}
+
+
+// ===== ОТКРЫТИЕ ТОВАРА =====
+function openProduct(id){
+  saveCategory()
+  window.location.href = `/product.html?id=${id}`
+}
+
+
+// ===== УТИЛИТЫ =====
+function formatPrice(p){
+  return new Intl.NumberFormat('ru-RU').format(p) + ' ₽'
+}
+
+function cleanName(name){
+  return (name || '')
+    .replace(/вино/gi, '')
+    .replace(/сортовое/gi, '')
+    .replace(/марочное/gi, '')
+    .replace(/ординарное/gi, '')
+    .replace(/выдержанное/gi, '')
+    .replace(/столовое/gi, '')
+    .trim()
+}
+
+function getCategoryName(cat){
+  const map = {
+    wine: 'Вино',
+    sparkling: 'Игристое',
+    strong: 'Крепкий алкоголь',
+    beer: 'Пиво',
+    soft: 'Безалкогольные',
+    grocery: 'Бакалея',
+    tea: 'Чай'
+  }
+  return map[cat] || ''
+}
+
+
+// ===== СОБЫТИЯ =====
+document.getElementById('search').addEventListener('input', e => {
+  SEARCH_QUERY = e.target.value.toLowerCase()
+  renderCatalog()
 })
 
-upBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" })
-}
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    CURRENT_CATEGORY = btn.dataset.cat
+    saveCategory()
+    renderCatalog()
+  })
+})
 
 
-/* ===== ПЕРЕВОД ===== */
-
-function translate(type){
-
-  if(type === "wine") return "Вино"
-  if(type === "sparkling") return "Игристое"
-  if(type === "beer") return "Пиво"
-  if(type === "strong") return "Крепкий алкоголь"
-  if(type === "grocery") return "Бакалея"
-  if(type === "soft") return "Безалкогольные"
-  if(type === "tea") return "Чай"
-  if(type === "accessories") return "Аксессуары"
-
-  return type
-}
+// ===== СТАРТ =====
+loadData()
