@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return
   }
 
-  /* ===== ДОБАВЛЕНО: читаем категорию из URL ===== */
+  /* ===== UX: читаем категорию ===== */
   const params = new URLSearchParams(window.location.search)
   const from = params.get("type")
   if(from){
@@ -41,7 +41,7 @@ async function init(){
       type: detectType(p)
     }))
 
-    /* ===== ДОБАВЛЕНО: сразу фильтруем если есть категория ===== */
+    /* ===== UX: рендер нужной категории ===== */
     if(currentType !== "all"){
       render(ALL.filter(w => w.type === currentType))
     } else {
@@ -51,6 +51,7 @@ async function init(){
     bindButtons()
     bindSearch()
     initScroll()
+    highlightActive()
 
   }catch(e){
     console.error("Ошибка загрузки данных", e)
@@ -58,10 +59,9 @@ async function init(){
 }
 
 
-/* ===== detectType (РАСШИРЕН, НЕ УРЕЗАН) ===== */
+/* ===== detectType НЕ ТРОГАЮ ===== */
 
 function detectType(p){
-
   const name = (p.name_ru || "").toLowerCase()
 
   if(name.includes("николаев")) return "wine"
@@ -72,22 +72,12 @@ function detectType(p){
   if(name.includes("чипс") || name.includes("сорбиодетокс") || name.includes("стакан")) return "grocery"
   if(name.includes("бокал")) return "accessories"
 
-  /* ===== РАСШИРЕНА БАКАЛЕЯ ===== */
   if(
-    name.includes("сыр") ||
-    name.includes("оливк") ||
-    name.includes("анчоус") ||
-    name.includes("приправа") ||
-    name.includes("салями") ||
-    name.includes("ветчина") ||
-    name.includes("колбас") ||
-    name.includes("печенье") ||
-    name.includes("шоколад") ||
-    name.includes("масло") ||
-    name.includes("песто") ||
-    name.includes("перчик") ||
-    name.includes("томаты") ||
-    name.includes("гриссини")
+    name.includes("сыр") || name.includes("оливк") || name.includes("анчоус") ||
+    name.includes("приправа") || name.includes("салями") || name.includes("ветчина") ||
+    name.includes("колбас") || name.includes("печенье") || name.includes("шоколад") ||
+    name.includes("масло") || name.includes("песто") || name.includes("перчик") ||
+    name.includes("томаты") || name.includes("гриссини")
   ) return "grocery"
 
   if(name.includes("вода") || name.includes("сок") || name.includes("тоник")) return "soft"
@@ -96,14 +86,7 @@ function detectType(p){
 
   if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино") || name.includes("эльзас") || name.includes("тоскана")) return "wine"
 
-  /* ===== ДОБАВЛЕНО ПИВО ===== */
-  if(
-    name.includes("пиво") ||
-    name.includes("пивосодержащ") ||
-    name.includes("пивной напиток") ||
-    name.includes("corona") ||
-    name.includes("корона")
-  ) return "beer"
+  if(name.includes("пиво") || name.includes("пивосодержащ") || name.includes("пивной напиток") || name.includes("корона")) return "beer"
 
   if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк") || name.includes("бренди")) return "strong"
 
@@ -113,13 +96,17 @@ function detectType(p){
 }
 
 
-/* ===== КАРТИНКИ (НЕ ТРОГАЮ) ===== */
+/* ===== КАРТИНКИ (НОВАЯ СТАБИЛЬНАЯ ЛОГИКА) ===== */
 
 function getImage(product){
 
-  if(!product.image) return ""
+  // 1. приоритет — ручная привязка
+  if(product.image){
+    return "./assets/wines/" + product.image
+  }
 
-  return "./assets/wines/" + product.image
+  // 2. fallback — по ID
+  return "./assets/wines/" + product.id + ".jpg"
 }
 
 
@@ -144,7 +131,9 @@ function renderNext(){
       <div class="product-card">
 
         <div class="img-wrap">
-          ${img ? `<img src="${img}" class="wine-img" loading="lazy">` : ``}
+          <img src="${img}" class="wine-img"
+               loading="lazy"
+               onerror="this.style.display='none'">
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
@@ -175,18 +164,18 @@ function renderNext(){
 }
 
 
-/* ===== SCROLL ===== */
+/* ===== UX: ПОДСВЕТКА ===== */
 
-function initScroll(){
-  window.addEventListener("scroll", () => {
-    if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 200){
-      renderNext()
+function highlightActive(){
+  buttons.forEach(btn => {
+    if(btn.dataset.type === currentType){
+      btn.classList.add("active")
     }
   })
 }
 
 
-/* ===== КНОПКИ ===== */
+/* ===== UX: КНОПКИ ===== */
 
 function bindButtons(){
 
@@ -199,6 +188,11 @@ function bindButtons(){
 
       const type = btn.dataset.type
       currentType = type
+
+      /* ===== обновляем URL ===== */
+      const url = new URL(window.location)
+      url.searchParams.set("type", type)
+      window.history.replaceState({}, "", url)
 
       if(type === "all"){
         render(ALL)
@@ -216,7 +210,6 @@ function bindButtons(){
 /* ===== ПОИСК ===== */
 
 function bindSearch(){
-
   searchInput.addEventListener("input", () => {
 
     const value = searchInput.value.toLowerCase()
@@ -227,7 +220,17 @@ function bindSearch(){
         (w.name_en && w.name_en.toLowerCase().includes(value))
       )
     )
+  })
+}
 
+
+/* ===== SCROLL ===== */
+
+function initScroll(){
+  window.addEventListener("scroll", () => {
+    if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 200){
+      renderNext()
+    }
   })
 }
 
