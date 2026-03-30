@@ -4,6 +4,9 @@ let grid
 let buttons
 let searchInput
 
+/* ===== ДОБАВЛЕНО: IMAGES ===== */
+let IMAGES = []
+
 /* ===== LAZY ===== */
 let rendered = 0
 const CHUNK = 40
@@ -21,37 +24,30 @@ document.addEventListener("DOMContentLoaded", () => {
     return
   }
 
-  /* ===== UX: читаем категорию ===== */
-  const params = new URLSearchParams(window.location.search)
-  const from = params.get("type")
-  if(from){
-    currentType = from
-  }
-
   init()
 })
 
 async function init(){
   try{
-    const res = await fetch("./data/products.json")
-    ALL = await res.json()
+
+    /* ===== ДОБАВЛЕНО: грузим сразу оба файла ===== */
+    const [resProducts, resImages] = await Promise.all([
+      fetch("./data/products.json"),
+      fetch("./data/images.json")
+    ])
+
+    ALL = await resProducts.json()
+    IMAGES = await resImages.json()
 
     ALL = ALL.map(p => ({
       ...p,
       type: detectType(p)
     }))
 
-    /* ===== UX: рендер нужной категории ===== */
-    if(currentType !== "all"){
-      render(ALL.filter(w => w.type === currentType))
-    } else {
-      render(ALL)
-    }
-
+    render(ALL)
     bindButtons()
     bindSearch()
     initScroll()
-    highlightActive()
 
   }catch(e){
     console.error("Ошибка загрузки данных", e)
@@ -59,9 +55,10 @@ async function init(){
 }
 
 
-/* ===== detectType НЕ ТРОГАЮ ===== */
+/* ===== detectType (НЕ ТРОГАЮ) ===== */
 
 function detectType(p){
+
   const name = (p.name_ru || "").toLowerCase()
 
   if(name.includes("николаев")) return "wine"
@@ -72,23 +69,17 @@ function detectType(p){
   if(name.includes("чипс") || name.includes("сорбиодетокс") || name.includes("стакан")) return "grocery"
   if(name.includes("бокал")) return "accessories"
 
-  if(
-    name.includes("сыр") || name.includes("оливк") || name.includes("анчоус") ||
-    name.includes("приправа") || name.includes("салями") || name.includes("ветчина") ||
-    name.includes("колбас") || name.includes("печенье") || name.includes("шоколад") ||
-    name.includes("масло") || name.includes("песто") || name.includes("перчик") ||
-    name.includes("томаты") || name.includes("гриссини")
-  ) return "grocery"
+  if(name.includes("сыр") || name.includes("оливк") || name.includes("анчоус") || name.includes("приправа")) return "grocery"
 
-  if(name.includes("вода") || name.includes("сок") || name.includes("тоник")) return "soft"
+  if(name.includes("вода") || name.includes("сок")) return "soft"
 
   if(name.includes("брют") || name.includes("шампан") || name.includes("просекко") || name.includes("кава")) return "sparkling"
 
-  if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино") || name.includes("эльзас") || name.includes("тоскана")) return "wine"
+  if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино")) return "wine"
 
-  if(name.includes("пиво") || name.includes("пивосодержащ") || name.includes("пивной напиток") || name.includes("корона")) return "beer"
+  if(name.includes("пиво")) return "beer"
 
-  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк") || name.includes("бренди")) return "strong"
+  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк")) return "strong"
 
   if(name.includes("чай")) return "tea"
 
@@ -96,16 +87,87 @@ function detectType(p){
 }
 
 
-/* ===== КАРТИНКИ (НОВАЯ СТАБИЛЬНАЯ ЛОГИКА) ===== */
+/* =========================================================
+   ===== НОВОЕ: УМНЫЙ МАТЧИНГ ИЗОБРАЖЕНИЙ =====
+   ========================================================= */
+
+/* нормализация */
+function normalize(str){
+  return (str || "")
+    .toLowerCase()
+    .replace(/ё/g, "е")
+    .replace(/[^a-zа-я0-9 ]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+/* убираем расширение */
+function normalizeFile(file){
+  return normalize(file.replace(/\.[^/.]+$/, ""))
+}
+
+/* токены */
+function getTokens(str){
+  return normalize(str).split(" ").filter(w => w.length > 2)
+}
+
+/* скор совпадений */
+function matchScore(productTokens, fileTokens){
+  let score = 0
+
+  productTokens.forEach(t => {
+    if(fileTokens.includes(t)){
+      score++
+    }
+  })
+
+  return score
+}
+
+/* поиск лучшего изображения */
+function findBestImage(product){
+
+  if(!IMAGES || !IMAGES.length) return null
+
+  const pTokens = getTokens(product.name_ru)
+
+  let best = null
+  let bestScore = 0
+
+  IMAGES.forEach(file => {
+
+    const fTokens = getTokens(normalizeFile(file))
+    const score = matchScore(pTokens, fTokens)
+
+    /* минимум 2 совпадения — защита от мусора */
+    if(score > bestScore && score >= 2){
+      bestScore = score
+      best = file
+    }
+
+  })
+
+  return best
+}
+
+
+/* ===== КАРТИНКИ (ПЕРЕПИСАНО АККУРАТНО) ===== */
 
 function getImage(product){
 
-  // 1. приоритет — ручная привязка
+  /* 1. ручная привязка */
   if(product.image){
     return "./assets/wines/" + product.image
   }
 
-  // 2. fallback — по ID
+  /* 2. умный поиск */
+  const best = findBestImage(product)
+
+  if(best){
+    return "./assets/wines/" + best
+  }
+
+  /* 3. fallback по ID */
   return "./assets/wines/" + product.id + ".jpg"
 }
 
@@ -131,9 +193,7 @@ function renderNext(){
       <div class="product-card">
 
         <div class="img-wrap">
-          <img src="${img}" class="wine-img"
-               loading="lazy"
-               onerror="this.style.display='none'">
+          ${img ? `<img src="${img}" class="wine-img" loading="lazy" onerror="this.style.display='none'">` : ``}
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
@@ -164,18 +224,18 @@ function renderNext(){
 }
 
 
-/* ===== UX: ПОДСВЕТКА ===== */
+/* ===== SCROLL ===== */
 
-function highlightActive(){
-  buttons.forEach(btn => {
-    if(btn.dataset.type === currentType){
-      btn.classList.add("active")
+function initScroll(){
+  window.addEventListener("scroll", () => {
+    if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 200){
+      renderNext()
     }
   })
 }
 
 
-/* ===== UX: КНОПКИ ===== */
+/* ===== КНОПКИ ===== */
 
 function bindButtons(){
 
@@ -188,11 +248,6 @@ function bindButtons(){
 
       const type = btn.dataset.type
       currentType = type
-
-      /* ===== обновляем URL ===== */
-      const url = new URL(window.location)
-      url.searchParams.set("type", type)
-      window.history.replaceState({}, "", url)
 
       if(type === "all"){
         render(ALL)
@@ -210,6 +265,7 @@ function bindButtons(){
 /* ===== ПОИСК ===== */
 
 function bindSearch(){
+
   searchInput.addEventListener("input", () => {
 
     const value = searchInput.value.toLowerCase()
@@ -220,17 +276,7 @@ function bindSearch(){
         (w.name_en && w.name_en.toLowerCase().includes(value))
       )
     )
-  })
-}
 
-
-/* ===== SCROLL ===== */
-
-function initScroll(){
-  window.addEventListener("scroll", () => {
-    if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 200){
-      renderNext()
-    }
   })
 }
 
