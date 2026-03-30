@@ -1,16 +1,30 @@
 let ALL = []
 let IMAGES = []
 
-const grid = document.querySelector(".catalogGrid")
-const buttons = document.querySelectorAll(".categories button")
-const searchInput = document.getElementById("searchInput")
+let grid
+let buttons
+let searchInput
 
 /* ===== LAZY ===== */
 let rendered = 0
 const CHUNK = 40
 let currentItems = []
 
-init()
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  grid = document.querySelector(".catalogGrid")
+  buttons = document.querySelectorAll(".categories button")
+  searchInput = document.getElementById("searchInput")
+
+  if(!grid){
+    console.error("❌ catalogGrid не найден")
+    return
+  }
+
+  init()
+})
+
 
 async function init(){
   try{
@@ -134,7 +148,7 @@ function detectType(p){
 }
 
 
-/* ===== КАРТИНКИ (ИСПРАВЛЕНО — БЕЗ МИГАНИЯ) ===== */
+/* ===== КАРТИНКИ ===== */
 
 function getImage(product){
 
@@ -142,7 +156,7 @@ function getImage(product){
     return "./assets/wines/" + product.image
   }
 
-  return "" // нет фото → пусто
+  return ""
 }
 
 
@@ -157,6 +171,8 @@ function render(items){
 
 function renderNext(){
 
+  if(!currentItems.length) return
+
   const slice = currentItems.slice(rendered, rendered + CHUNK)
 
   slice.forEach(w => {
@@ -167,11 +183,7 @@ function renderNext(){
       <div class="product-card">
 
         <div class="img-wrap">
-          ${
-            img
-              ? `<img src="${img}" class="wine-img" loading="lazy">`
-              : ``
-          }
+          ${img ? `<img src="${img}" class="wine-img" loading="lazy">` : ``}
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
@@ -202,7 +214,7 @@ function renderNext(){
 }
 
 
-/* ===== SCROLL LOAD ===== */
+/* ===== SCROLL ===== */
 
 function initScroll(){
   window.addEventListener("scroll", () => {
@@ -233,9 +245,7 @@ function bindButtons(){
         return
       }
 
-      const filtered = ALL.filter(w => w.type === type)
-
-      render(filtered)
+      render(ALL.filter(w => w.type === type))
 
     })
 
@@ -252,19 +262,19 @@ function bindSearch(){
 
     const value = searchInput.value.toLowerCase()
 
-    const filtered = ALL.filter(w =>
-      (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
-      (w.name_en && w.name_en.toLowerCase().includes(value))
+    render(
+      ALL.filter(w =>
+        (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
+        (w.name_en && w.name_en.toLowerCase().includes(value))
+      )
     )
-
-    render(filtered)
 
   })
 
 }
 
 
-/* ===== КНОПКА ВВЕРХ ===== */
+/* ===== КНОПКА ↑ ===== */
 
 const upBtn = document.createElement("div")
 upBtn.innerHTML = "↑"
@@ -282,11 +292,7 @@ upBtn.style.display = "none"
 document.body.appendChild(upBtn)
 
 window.addEventListener("scroll", () => {
-  if(window.scrollY > 400){
-    upBtn.style.display = "block"
-  } else {
-    upBtn.style.display = "none"
-  }
+  upBtn.style.display = window.scrollY > 400 ? "block" : "none"
 })
 
 upBtn.onclick = () => {
