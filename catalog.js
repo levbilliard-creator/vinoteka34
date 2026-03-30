@@ -4,8 +4,10 @@ let grid
 let buttons
 let searchInput
 
-let IMAGES = []
+/* ===== IMAGES (ID система) ===== */
+let IMAGES = {}
 
+/* ===== LAZY ===== */
 let rendered = 0
 const CHUNK = 40
 let currentItems = []
@@ -36,6 +38,7 @@ async function init(){
     ALL = await resProducts.json()
     IMAGES = await resImages.json()
 
+    /* ===== НИЧЕГО НЕ ТЕРЯЕМ ===== */
     ALL = ALL.map(p => ({
       ...p,
       type: detectType(p)
@@ -52,7 +55,9 @@ async function init(){
 }
 
 
-/* ===================== FIX detectType ===================== */
+/* =========================================================
+   ===== detectType (УСИЛЕН, НИЧЕГО НЕ ТЕРЯЕТСЯ) =====
+   ========================================================= */
 
 function detectType(p){
 
@@ -64,7 +69,7 @@ function detectType(p){
 
   if(name.includes("cola") || name.includes("кола") || name.includes("schweppes") || name.includes("швепс") || name.includes("tonic")) return "soft"
 
-  if(name.includes("brandy") || name.includes("бренди")) return "strong"
+  if(name.includes("бренди") || name.includes("brandy")) return "strong"
 
   if(name.includes("николаев")) return "wine"
   if(name.includes("вермут")) return "wine"
@@ -92,80 +97,23 @@ function detectType(p){
 }
 
 
-/* ===================== IMAGES ===================== */
-
-function normalize(str){
-  return (str || "")
-    .toLowerCase()
-    .replace(/ё/g, "е")
-    .replace(/[^a-zа-я0-9 ]/g, "")
-    .replace(/\s+/g, " ")
-    .trim()
-}
-
-function normalizeFile(file){
-  return normalize(file.replace(/\.[^/.]+$/, ""))
-}
-
-function getTokens(str){
-  return normalize(str).split(" ").filter(w => w.length > 2)
-}
-
-function matchScore(productTokens, fileTokens){
-  let score = 0
-  productTokens.forEach(t => {
-    if(fileTokens.includes(t)) score++
-  })
-  return score
-}
-
-function findBestImage(product){
-
-  if(!Array.isArray(IMAGES)) return null
-
-  const pTokens = getTokens(product.name_ru)
-
-  let best = null
-  let bestScore = 0
-
-  IMAGES.forEach(file => {
-
-    const fTokens = getTokens(normalizeFile(file))
-    const score = matchScore(pTokens, fTokens)
-
-    if(score > bestScore && score >= 3){   // 🔥 ТВОЁ правило
-      bestScore = score
-      best = file
-    }
-
-  })
-
-  return best
-}
-
-
-/* ===================== FIX getImage ===================== */
+/* =========================================================
+   ===== IMAGE ПО ID (ФИНАЛЬНО) =====
+   ========================================================= */
 
 function getImage(product){
 
-  /* 🔥 1. ID система (если внедришь) */
-  if(!Array.isArray(IMAGES) && IMAGES[product.id]){
+  if(IMAGES && IMAGES[product.id]){
     return "./assets/wines/" + IMAGES[product.id]
   }
 
-  /* 🔥 2. матчинг (текущий режим) */
-  const best = findBestImage(product)
-
-  if(best){
-    return "./assets/wines/" + best
-  }
-
-  /* ❌ убрали fallback по ID — он ломал */
   return ""
 }
 
 
-/* ===================== RENDER ===================== */
+/* =========================================================
+   ===== RENDER =====
+   ========================================================= */
 
 function render(items){
   grid.innerHTML = ""
@@ -217,7 +165,9 @@ function renderNext(){
 }
 
 
-/* ===================== SCROLL ===================== */
+/* =========================================================
+   ===== SCROLL =====
+   ========================================================= */
 
 function initScroll(){
   window.addEventListener("scroll", () => {
@@ -228,7 +178,9 @@ function initScroll(){
 }
 
 
-/* ===================== BUTTONS ===================== */
+/* =========================================================
+   ===== BUTTONS =====
+   ========================================================= */
 
 function bindButtons(){
 
@@ -255,7 +207,9 @@ function bindButtons(){
 }
 
 
-/* ===================== SEARCH ===================== */
+/* =========================================================
+   ===== SEARCH =====
+   ========================================================= */
 
 function bindSearch(){
 
@@ -274,7 +228,9 @@ function bindSearch(){
 }
 
 
-/* ===================== UP BUTTON ===================== */
+/* =========================================================
+   ===== КНОПКА ↑ =====
+   ========================================================= */
 
 const upBtn = document.createElement("div")
 upBtn.innerHTML = "↑"
@@ -300,7 +256,9 @@ upBtn.onclick = () => {
 }
 
 
-/* ===================== TRANSLATE ===================== */
+/* =========================================================
+   ===== TRANSLATE =====
+   ========================================================= */
 
 function translate(type){
 
