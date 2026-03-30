@@ -1,5 +1,4 @@
 let ALL = []
-let IMAGES = {}
 
 let grid
 let buttons
@@ -27,20 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function init(){
   try{
-    const [productsRes, imagesRes] = await Promise.all([
-      fetch("./data/products.json"),
-      fetch("./data/images.json")
-    ])
-
-    ALL = await productsRes.json()
-    IMAGES = await imagesRes.json()
-
-    // 👉 делаем быстрый доступ по id
-    const map = {}
-    IMAGES.forEach(i => {
-      if(i.id) map[i.id] = i.file
-    })
-    IMAGES = map
+    const res = await fetch("./data/products.json")
+    ALL = await res.json()
 
     ALL = ALL.map(p => ({
       ...p,
@@ -69,84 +56,20 @@ function detectType(p){
   if(name.includes("ракия")) return "strong"
   if(name.includes("ром выдержанный эль")) return "strong"
 
-  if(
-    name.includes("чипс") ||
-    name.includes("сорбиодетокс") ||
-    name.includes("стакан")
-  ) return "grocery"
-
+  if(name.includes("чипс") || name.includes("сорбиодетокс") || name.includes("стакан")) return "grocery"
   if(name.includes("бокал")) return "accessories"
 
-  if(
-    name.includes("сыр") ||
-    name.includes("салями") ||
-    name.includes("колбас") ||
-    name.includes("ветчина") ||
-    name.includes("брезаола") ||
-    name.includes("анчоус") ||
-    name.includes("оливк") ||
-    name.includes("томат") ||
-    name.includes("песто") ||
-    name.includes("масло") ||
-    name.includes("перчик") ||
-    name.includes("палочки") ||
-    name.includes("гриссини") ||
-    name.includes("ассорти") ||
-    name.includes("леденцы") ||
-    name.includes("печенье") ||
-    name.includes("шоколад") ||
-    name.includes("приправа")
-  ) return "grocery"
+  if(name.includes("сыр") || name.includes("оливк") || name.includes("анчоус") || name.includes("приправа")) return "grocery"
 
-  if(
-    name.includes("вода") ||
-    name.includes("кола") ||
-    name.includes("сок") ||
-    name.includes("тоник")
-  ) return "soft"
+  if(name.includes("вода") || name.includes("сок")) return "soft"
 
-  if(
-    name.includes("брют") ||
-    name.includes("шампан") ||
-    name.includes("просекко") ||
-    name.includes("кава")
-  ) return "sparkling"
+  if(name.includes("брют") || name.includes("шампан") || name.includes("просекко") || name.includes("кава")) return "sparkling"
 
-  if(
-    name.includes("шато") ||
-    name.includes("бордо") ||
-    name.includes("бургунд") ||
-    name.includes("тоскана") ||
-    name.includes("риоха") ||
-    name.includes("совиньон") ||
-    name.includes("мерло") ||
-    name.includes("пино") ||
-    name.includes("шардоне") ||
-    name.includes("рислинг") ||
-    name.includes("эльзас") ||
-    name.includes("вино")
-  ) return "wine"
+  if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино")) return "wine"
 
-  if(
-    name.startsWith("пиво") ||
-    name.includes(" пиво") ||
-    name.includes("пивной напиток") ||
-    name.includes("пивосодержащ") ||
-    name.includes(" лагер") ||
-    name.endsWith(" лагер") ||
-    name.includes(" эль ") ||
-    name.endsWith(" эль")
-  ) return "beer"
+  if(name.includes("пиво")) return "beer"
 
-  if(
-    name.includes("виски") ||
-    name.includes("ром") ||
-    name.includes("джин") ||
-    name.includes("водка") ||
-    name.includes("текила") ||
-    name.includes("коньяк") ||
-    name.includes("бренди")
-  ) return "strong"
+  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк")) return "strong"
 
   if(name.includes("чай")) return "tea"
 
@@ -154,18 +77,13 @@ function detectType(p){
 }
 
 
-/* ===== КАРТИНКИ ПО ID (СТАБИЛЬНО) ===== */
+/* ===== КАРТИНКИ (СТАБИЛЬНО) ===== */
 
 function getImage(product){
 
-  const file = IMAGES[product.id]
+  if(!product.image) return ""
 
-  if(!file) return ""
-
-  const img = new Image()
-  img.src = "./assets/wines/" + file
-
-  return img.src
+  return "./assets/wines/" + product.image
 }
 
 
