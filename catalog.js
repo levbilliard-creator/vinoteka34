@@ -1,5 +1,5 @@
 let ALL = []
-let IMAGES = []
+let IMAGES = {}
 
 let grid
 let buttons
@@ -9,7 +9,7 @@ let searchInput
 let rendered = 0
 const CHUNK = 40
 let currentItems = []
-
+let currentType = "all"
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
   init()
 })
 
-
 async function init(){
   try{
     const [productsRes, imagesRes] = await Promise.all([
@@ -35,6 +34,13 @@ async function init(){
 
     ALL = await productsRes.json()
     IMAGES = await imagesRes.json()
+
+    // 👉 делаем быстрый доступ по id
+    const map = {}
+    IMAGES.forEach(i => {
+      if(i.id) map[i.id] = i.file
+    })
+    IMAGES = map
 
     ALL = ALL.map(p => ({
       ...p,
@@ -148,19 +154,22 @@ function detectType(p){
 }
 
 
-/* ===== КАРТИНКИ ===== */
+/* ===== КАРТИНКИ ПО ID (СТАБИЛЬНО) ===== */
 
 function getImage(product){
 
-  if(product.image){
-    return "./assets/wines/" + product.image
-  }
+  const file = IMAGES[product.id]
 
-  return ""
+  if(!file) return ""
+
+  const img = new Image()
+  img.src = "./assets/wines/" + file
+
+  return img.src
 }
 
 
-/* ===== LAZY RENDER ===== */
+/* ===== RENDER ===== */
 
 function render(items){
   grid.innerHTML = ""
@@ -170,8 +179,6 @@ function render(items){
 }
 
 function renderNext(){
-
-  if(!currentItems.length) return
 
   const slice = currentItems.slice(rendered, rendered + CHUNK)
 
@@ -201,7 +208,7 @@ function renderNext(){
         <div class="wine-bottom">
           <div class="wine-price">${w.price} ₽</div>
 
-          <a href="product.html?id=${w.id}&from=${w.type}" class="btn-link">
+          <a href="product.html?id=${w.id}&from=${currentType}" class="btn-link">
             Подробнее →
           </a>
         </div>
@@ -218,11 +225,9 @@ function renderNext(){
 
 function initScroll(){
   window.addEventListener("scroll", () => {
-
     if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 200){
       renderNext()
     }
-
   })
 }
 
@@ -239,6 +244,7 @@ function bindButtons(){
       btn.classList.add("active")
 
       const type = btn.dataset.type
+      currentType = type
 
       if(type === "all"){
         render(ALL)
@@ -250,7 +256,6 @@ function bindButtons(){
     })
 
   })
-
 }
 
 
@@ -270,7 +275,6 @@ function bindSearch(){
     )
 
   })
-
 }
 
 
