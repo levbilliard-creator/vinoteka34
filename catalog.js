@@ -36,10 +36,9 @@ async function init(){
     ALL = await resProducts.json()
     IMAGES = await resImages.json()
 
-    /* 🔥 ГЛАВНЫЙ ФИКС — ПРИОРИТЕТ category */
     ALL = ALL.map(p => ({
       ...p,
-      type: p.category ? p.category : detectType(p)
+      type: detectType(p)
     }))
 
     render(ALL)
@@ -53,21 +52,39 @@ async function init(){
 }
 
 
-/* ===================== detectType (облегчённый) ===================== */
+/* ===================== FIX detectType ===================== */
 
 function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
 
-  /* 🔥 только базовые fallback */
+  /* 🔥 критические фиксы */
+  if(name.includes("corona")) return "beer"
+  if(name.includes("пивосодержащ")) return "beer"
 
-  if(name.includes("пиво") || name.includes("corona")) return "beer"
+  if(name.includes("cola") || name.includes("кола") || name.includes("schweppes") || name.includes("швепс") || name.includes("tonic")) return "soft"
 
-  if(name.includes("cola") || name.includes("кола") || name.includes("schweppes") || name.includes("швепс")) return "soft"
+  if(name.includes("brandy") || name.includes("бренди")) return "strong"
 
-  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк") || name.includes("бренди")) return "strong"
+  if(name.includes("николаев")) return "wine"
+  if(name.includes("вермут")) return "wine"
+  if(name.includes("ракия")) return "strong"
+  if(name.includes("ром выдержанный эль")) return "strong"
+
+  if(name.includes("чипс") || name.includes("сорбиодетокс") || name.includes("стакан")) return "grocery"
+  if(name.includes("бокал")) return "accessories"
+
+  if(name.includes("сыр") || name.includes("оливк") || name.includes("анчоус") || name.includes("приправа")) return "grocery"
+
+  if(name.includes("вода") || name.includes("сок")) return "soft"
 
   if(name.includes("брют") || name.includes("шампан") || name.includes("просекко") || name.includes("кава")) return "sparkling"
+
+  if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино")) return "wine"
+
+  if(name.includes("пиво")) return "beer"
+
+  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк")) return "strong"
 
   if(name.includes("чай")) return "tea"
 
@@ -116,7 +133,7 @@ function findBestImage(product){
     const fTokens = getTokens(normalizeFile(file))
     const score = matchScore(pTokens, fTokens)
 
-    if(score > bestScore && score >= 3){
+    if(score > bestScore && score >= 3){   // 🔥 ТВОЁ правило
       bestScore = score
       best = file
     }
@@ -131,18 +148,19 @@ function findBestImage(product){
 
 function getImage(product){
 
-  /* 🔥 если в product уже есть image — используем */
-  if(product.image){
-    return "./assets/wines/" + product.image
+  /* 🔥 1. ID система (если внедришь) */
+  if(!Array.isArray(IMAGES) && IMAGES[product.id]){
+    return "./assets/wines/" + IMAGES[product.id]
   }
 
-  /* fallback на матчинг */
+  /* 🔥 2. матчинг (текущий режим) */
   const best = findBestImage(product)
 
   if(best){
     return "./assets/wines/" + best
   }
 
+  /* ❌ убрали fallback по ID — он ломал */
   return ""
 }
 
