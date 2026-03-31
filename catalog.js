@@ -113,13 +113,22 @@ function detectType(p){
 }
 
 
-/* ===== КАРТИНКИ (НЕ ТРОГАЮ) ===== */
+/* ===== КАРТИНКИ (УЛУЧШЕНЫ, БЕЗ ЛОМКИ) ===== */
 
 function getImage(product){
 
-  if(!product.image) return ""
+  /* 1. если задано явно */
+  if(product.image){
+    return "./assets/wines/" + product.image
+  }
 
-  return "./assets/wines/" + product.image
+  /* 2. fallback по ID */
+  if(product.id){
+    return "./assets/wines/" + product.id + ".jpg"
+  }
+
+  /* 3. placeholder */
+  return "./assets/wines/placeholder.jpg"
 }
 
 
