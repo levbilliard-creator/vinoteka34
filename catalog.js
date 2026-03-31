@@ -4,10 +4,8 @@ let grid
 let buttons
 let searchInput
 
-/* ===== IMAGES (ID система) ===== */
-let IMAGES = {}
+let IMAGES = []
 
-/* ===== LAZY ===== */
 let rendered = 0
 const CHUNK = 40
 let currentItems = []
@@ -38,10 +36,10 @@ async function init(){
     ALL = await resProducts.json()
     IMAGES = await resImages.json()
 
-    /* ===== НИЧЕГО НЕ ТЕРЯЕМ ===== */
+    /* 🔥 ГЛАВНЫЙ ФИКС — ПРИОРИТЕТ category */
     ALL = ALL.map(p => ({
       ...p,
-      type: detectType(p)
+      type: p.category ? p.category : detectType(p)
     }))
 
     render(ALL)
@@ -55,41 +53,21 @@ async function init(){
 }
 
 
-/* =========================================================
-   ===== detectType (УСИЛЕН, НИЧЕГО НЕ ТЕРЯЕТСЯ) =====
-   ========================================================= */
+/* ===================== detectType (облегчённый) ===================== */
 
 function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
 
-  /* 🔥 критические фиксы */
-  if(name.includes("corona")) return "beer"
-  if(name.includes("пивосодержащ")) return "beer"
+  /* 🔥 только базовые fallback */
 
-  if(name.includes("cola") || name.includes("кола") || name.includes("schweppes") || name.includes("швепс") || name.includes("tonic")) return "soft"
+  if(name.includes("пиво") || name.includes("corona")) return "beer"
 
-  if(name.includes("бренди") || name.includes("brandy")) return "strong"
+  if(name.includes("cola") || name.includes("кола") || name.includes("schweppes") || name.includes("швепс")) return "soft"
 
-  if(name.includes("николаев")) return "wine"
-  if(name.includes("вермут")) return "wine"
-  if(name.includes("ракия")) return "strong"
-  if(name.includes("ром выдержанный эль")) return "strong"
-
-  if(name.includes("чипс") || name.includes("сорбиодетокс") || name.includes("стакан")) return "grocery"
-  if(name.includes("бокал")) return "accessories"
-
-  if(name.includes("сыр") || name.includes("оливк") || name.includes("анчоус") || name.includes("приправа")) return "grocery"
-
-  if(name.includes("вода") || name.includes("сок")) return "soft"
+  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк") || name.includes("бренди")) return "strong"
 
   if(name.includes("брют") || name.includes("шампан") || name.includes("просекко") || name.includes("кава")) return "sparkling"
-
-  if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино")) return "wine"
-
-  if(name.includes("пиво")) return "beer"
-
-  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк")) return "strong"
 
   if(name.includes("чай")) return "tea"
 
@@ -97,23 +75,79 @@ function detectType(p){
 }
 
 
-/* =========================================================
-   ===== IMAGE ПО ID (ФИНАЛЬНО) =====
-   ========================================================= */
+/* ===================== IMAGES ===================== */
+
+function normalize(str){
+  return (str || "")
+    .toLowerCase()
+    .replace(/ё/g, "е")
+    .replace(/[^a-zа-я0-9 ]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+function normalizeFile(file){
+  return normalize(file.replace(/\.[^/.]+$/, ""))
+}
+
+function getTokens(str){
+  return normalize(str).split(" ").filter(w => w.length > 2)
+}
+
+function matchScore(productTokens, fileTokens){
+  let score = 0
+  productTokens.forEach(t => {
+    if(fileTokens.includes(t)) score++
+  })
+  return score
+}
+
+function findBestImage(product){
+
+  if(!Array.isArray(IMAGES)) return null
+
+  const pTokens = getTokens(product.name_ru)
+
+  let best = null
+  let bestScore = 0
+
+  IMAGES.forEach(file => {
+
+    const fTokens = getTokens(normalizeFile(file))
+    const score = matchScore(pTokens, fTokens)
+
+    if(score > bestScore && score >= 3){
+      bestScore = score
+      best = file
+    }
+
+  })
+
+  return best
+}
+
+
+/* ===================== FIX getImage ===================== */
 
 function getImage(product){
 
-  if(IMAGES && IMAGES[product.id]){
-    return "./assets/wines/" + IMAGES[product.id]
+  /* 🔥 если в product уже есть image — используем */
+  if(product.image){
+    return "./assets/wines/" + product.image
+  }
+
+  /* fallback на матчинг */
+  const best = findBestImage(product)
+
+  if(best){
+    return "./assets/wines/" + best
   }
 
   return ""
 }
 
 
-/* =========================================================
-   ===== RENDER =====
-   ========================================================= */
+/* ===================== RENDER ===================== */
 
 function render(items){
   grid.innerHTML = ""
@@ -165,9 +199,7 @@ function renderNext(){
 }
 
 
-/* =========================================================
-   ===== SCROLL =====
-   ========================================================= */
+/* ===================== SCROLL ===================== */
 
 function initScroll(){
   window.addEventListener("scroll", () => {
@@ -178,9 +210,7 @@ function initScroll(){
 }
 
 
-/* =========================================================
-   ===== BUTTONS =====
-   ========================================================= */
+/* ===================== BUTTONS ===================== */
 
 function bindButtons(){
 
@@ -207,9 +237,7 @@ function bindButtons(){
 }
 
 
-/* =========================================================
-   ===== SEARCH =====
-   ========================================================= */
+/* ===================== SEARCH ===================== */
 
 function bindSearch(){
 
@@ -228,9 +256,7 @@ function bindSearch(){
 }
 
 
-/* =========================================================
-   ===== КНОПКА ↑ =====
-   ========================================================= */
+/* ===================== UP BUTTON ===================== */
 
 const upBtn = document.createElement("div")
 upBtn.innerHTML = "↑"
@@ -256,9 +282,7 @@ upBtn.onclick = () => {
 }
 
 
-/* =========================================================
-   ===== TRANSLATE =====
-   ========================================================= */
+/* ===================== TRANSLATE ===================== */
 
 function translate(type){
 
