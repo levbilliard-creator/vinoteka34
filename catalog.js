@@ -4,8 +4,7 @@ let grid
 let buttons
 let searchInput
 
-let IMAGES = []
-
+/* ===== LAZY ===== */
 let rendered = 0
 const CHUNK = 40
 let currentItems = []
@@ -22,26 +21,33 @@ document.addEventListener("DOMContentLoaded", () => {
     return
   }
 
+  /* ===== ДОБАВЛЕНО: читаем категорию из URL ===== */
+  const params = new URLSearchParams(window.location.search)
+  const from = params.get("type")
+  if(from){
+    currentType = from
+  }
+
   init()
 })
 
 async function init(){
   try{
-
-    const [resProducts, resImages] = await Promise.all([
-      fetch("./data/products.json"),
-      fetch("./data/images.json")
-    ])
-
-    ALL = await resProducts.json()
-    IMAGES = await resImages.json()
+    const res = await fetch("./data/products.json")
+    ALL = await res.json()
 
     ALL = ALL.map(p => ({
       ...p,
       type: detectType(p)
     }))
 
-    render(ALL)
+    /* ===== ДОБАВЛЕНО: сразу фильтруем если есть категория ===== */
+    if(currentType !== "all"){
+      render(ALL.filter(w => w.type === currentType))
+    } else {
+      render(ALL)
+    }
+
     bindButtons()
     bindSearch()
     initScroll()
@@ -52,19 +58,11 @@ async function init(){
 }
 
 
-/* ===================== FIX detectType ===================== */
+/* ===== detectType (РАСШИРЕН, НЕ УРЕЗАН) ===== */
 
 function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
-
-  /* 🔥 критические фиксы */
-  if(name.includes("corona")) return "beer"
-  if(name.includes("пивосодержащ")) return "beer"
-
-  if(name.includes("cola") || name.includes("кола") || name.includes("schweppes") || name.includes("швепс") || name.includes("tonic")) return "soft"
-
-  if(name.includes("brandy") || name.includes("бренди")) return "strong"
 
   if(name.includes("николаев")) return "wine"
   if(name.includes("вермут")) return "wine"
@@ -74,17 +72,40 @@ function detectType(p){
   if(name.includes("чипс") || name.includes("сорбиодетокс") || name.includes("стакан")) return "grocery"
   if(name.includes("бокал")) return "accessories"
 
-  if(name.includes("сыр") || name.includes("оливк") || name.includes("анчоус") || name.includes("приправа")) return "grocery"
+  /* ===== РАСШИРЕНА БАКАЛЕЯ ===== */
+  if(
+    name.includes("сыр") ||
+    name.includes("оливк") ||
+    name.includes("анчоус") ||
+    name.includes("приправа") ||
+    name.includes("салями") ||
+    name.includes("ветчина") ||
+    name.includes("колбас") ||
+    name.includes("печенье") ||
+    name.includes("шоколад") ||
+    name.includes("масло") ||
+    name.includes("песто") ||
+    name.includes("перчик") ||
+    name.includes("томаты") ||
+    name.includes("гриссини")
+  ) return "grocery"
 
-  if(name.includes("вода") || name.includes("сок")) return "soft"
+  if(name.includes("вода") || name.includes("сок") || name.includes("тоник")) return "soft"
 
   if(name.includes("брют") || name.includes("шампан") || name.includes("просекко") || name.includes("кава")) return "sparkling"
 
-  if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино")) return "wine"
+  if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино") || name.includes("эльзас") || name.includes("тоскана")) return "wine"
 
-  if(name.includes("пиво")) return "beer"
+  /* ===== ДОБАВЛЕНО ПИВО ===== */
+  if(
+    name.includes("пиво") ||
+    name.includes("пивосодержащ") ||
+    name.includes("пивной напиток") ||
+    name.includes("corona") ||
+    name.includes("корона")
+  ) return "beer"
 
-  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк")) return "strong"
+  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк") || name.includes("бренди")) return "strong"
 
   if(name.includes("чай")) return "tea"
 
@@ -92,80 +113,17 @@ function detectType(p){
 }
 
 
-/* ===================== IMAGES ===================== */
-
-function normalize(str){
-  return (str || "")
-    .toLowerCase()
-    .replace(/ё/g, "е")
-    .replace(/[^a-zа-я0-9 ]/g, "")
-    .replace(/\s+/g, " ")
-    .trim()
-}
-
-function normalizeFile(file){
-  return normalize(file.replace(/\.[^/.]+$/, ""))
-}
-
-function getTokens(str){
-  return normalize(str).split(" ").filter(w => w.length > 2)
-}
-
-function matchScore(productTokens, fileTokens){
-  let score = 0
-  productTokens.forEach(t => {
-    if(fileTokens.includes(t)) score++
-  })
-  return score
-}
-
-function findBestImage(product){
-
-  if(!Array.isArray(IMAGES)) return null
-
-  const pTokens = getTokens(product.name_ru)
-
-  let best = null
-  let bestScore = 0
-
-  IMAGES.forEach(file => {
-
-    const fTokens = getTokens(normalizeFile(file))
-    const score = matchScore(pTokens, fTokens)
-
-    if(score > bestScore && score >= 3){   // 🔥 ТВОЁ правило
-      bestScore = score
-      best = file
-    }
-
-  })
-
-  return best
-}
-
-
-/* ===================== FIX getImage ===================== */
+/* ===== КАРТИНКИ (НЕ ТРОГАЮ) ===== */
 
 function getImage(product){
 
-  /* 🔥 1. ID система (если внедришь) */
-  if(!Array.isArray(IMAGES) && IMAGES[product.id]){
-    return "./assets/wines/" + IMAGES[product.id]
-  }
+  if(!product.image) return ""
 
-  /* 🔥 2. матчинг (текущий режим) */
-  const best = findBestImage(product)
-
-  if(best){
-    return "./assets/wines/" + best
-  }
-
-  /* ❌ убрали fallback по ID — он ломал */
-  return ""
+  return "./assets/wines/" + product.image
 }
 
 
-/* ===================== RENDER ===================== */
+/* ===== RENDER ===== */
 
 function render(items){
   grid.innerHTML = ""
@@ -186,7 +144,7 @@ function renderNext(){
       <div class="product-card">
 
         <div class="img-wrap">
-          ${img ? `<img src="${img}" class="wine-img" loading="lazy" onerror="this.style.display='none'">` : ``}
+          ${img ? `<img src="${img}" class="wine-img" loading="lazy">` : ``}
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
@@ -217,7 +175,7 @@ function renderNext(){
 }
 
 
-/* ===================== SCROLL ===================== */
+/* ===== SCROLL ===== */
 
 function initScroll(){
   window.addEventListener("scroll", () => {
@@ -228,7 +186,7 @@ function initScroll(){
 }
 
 
-/* ===================== BUTTONS ===================== */
+/* ===== КНОПКИ ===== */
 
 function bindButtons(){
 
@@ -255,7 +213,7 @@ function bindButtons(){
 }
 
 
-/* ===================== SEARCH ===================== */
+/* ===== ПОИСК ===== */
 
 function bindSearch(){
 
@@ -274,7 +232,7 @@ function bindSearch(){
 }
 
 
-/* ===================== UP BUTTON ===================== */
+/* ===== КНОПКА ↑ ===== */
 
 const upBtn = document.createElement("div")
 upBtn.innerHTML = "↑"
@@ -300,7 +258,7 @@ upBtn.onclick = () => {
 }
 
 
-/* ===================== TRANSLATE ===================== */
+/* ===== ПЕРЕВОД ===== */
 
 function translate(type){
 
