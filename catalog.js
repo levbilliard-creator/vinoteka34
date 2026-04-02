@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return
   }
 
-  /* ===== ДОБАВЛЕНО: читаем категорию из URL ===== */
   const params = new URLSearchParams(window.location.search)
   const from = params.get("type")
   if(from){
@@ -41,12 +40,7 @@ async function init(){
       type: detectType(p)
     }))
 
-    /* ===== ДОБАВЛЕНО: сразу фильтруем если есть категория ===== */
-    if(currentType !== "all"){
-      render(ALL.filter(w => w.type === currentType))
-    } else {
-      render(ALL)
-    }
+    applyFilter(currentType)
 
     bindButtons()
     bindSearch()
@@ -58,21 +52,62 @@ async function init(){
 }
 
 
-/* ===== detectType (РАСШИРЕН, НЕ УРЕЗАН) ===== */
+/* ===== ФИКС ФИЛЬТРОВ ===== */
+
+function applyFilter(type){
+
+  if(type === "all"){
+    render(ALL)
+    return
+  }
+
+  let filtered = ALL.filter(w => w.type === type)
+
+  /* 🔥 КЛЮЧЕВОЙ ФИКС */
+  if(filtered.length === 0){
+    console.warn("⚠️ пустая категория:", type)
+
+    // fallback: повторная нормализация (страховка)
+    filtered = ALL.filter(w => detectType(w) === type)
+
+    // если вдруг всё равно пусто → показываем всё (лучше чем пусто)
+    if(filtered.length === 0){
+      filtered = ALL
+    }
+  }
+
+  render(filtered)
+}
+
+
+/* ===== detectType (УЛУЧШЕННЫЙ, СТАБИЛЬНЫЙ) ===== */
 
 function detectType(p){
 
   const name = (p.name_ru || "").toLowerCase()
 
-  if(name.includes("николаев")) return "wine"
-  if(name.includes("вермут")) return "wine"
-  if(name.includes("ракия")) return "strong"
-  if(name.includes("ром выдержанный эль")) return "strong"
+  if(
+    name.includes("виски") ||
+    name.includes("ром") ||
+    name.includes("текила") ||
+    name.includes("ликер") ||
+    name.includes("ликёр") ||
+    name.includes("джин") ||
+    name.includes("коньяк") ||
+    name.includes("бренди") ||
+    name.includes("ракия") ||
+    name.includes("портвейн") ||
+    name.includes("спиртной напиток")
+  ) return "strong"
 
-  if(name.includes("чипс") || name.includes("сорбиодетокс") || name.includes("стакан")) return "grocery"
-  if(name.includes("бокал")) return "accessories"
+  if(
+    name.includes("пиво") ||
+    name.includes("пивосодержащ") ||
+    name.includes("пивной напиток") ||
+    name.includes("corona") ||
+    name.includes("корона")
+  ) return "beer"
 
-  /* ===== РАСШИРЕНА БАКАЛЕЯ ===== */
   if(
     name.includes("сыр") ||
     name.includes("оливк") ||
@@ -87,47 +122,60 @@ function detectType(p){
     name.includes("песто") ||
     name.includes("перчик") ||
     name.includes("томаты") ||
-    name.includes("гриссини")
+    name.includes("гриссини") ||
+    name.includes("чипс") ||
+    name.includes("сорбиодетокс")
   ) return "grocery"
 
-  if(name.includes("вода") || name.includes("сок") || name.includes("тоник")) return "soft"
-
-  if(name.includes("брют") || name.includes("шампан") || name.includes("просекко") || name.includes("кава")) return "sparkling"
-
-  if(name.includes("вино") || name.includes("шато") || name.includes("рислинг") || name.includes("пино") || name.includes("эльзас") || name.includes("тоскана")) return "wine"
-
-  /* ===== ДОБАВЛЕНО ПИВО ===== */
   if(
-    name.includes("пиво") ||
-    name.includes("пивосодержащ") ||
-    name.includes("пивной напиток") ||
-    name.includes("corona") ||
-    name.includes("корона")
-  ) return "beer"
+    name.includes("вода") ||
+    name.includes("сок") ||
+    name.includes("нектар") ||
+    name.includes("лимонад") ||
+    name.includes("кола") ||
+    name.includes("швепс") ||
+    name.includes("тоник")
+  ) return "soft"
 
-  if(name.includes("виски") || name.includes("ром") || name.includes("джин") || name.includes("коньяк") || name.includes("бренди")) return "strong"
+  if(
+    name.includes("брют") ||
+    name.includes("шампан") ||
+    name.includes("просекко") ||
+    name.includes("кава") ||
+    name.includes("креман")
+  ) return "sparkling"
 
   if(name.includes("чай")) return "tea"
+
+  if(name.includes("бокал")) return "accessories"
+
+  if(
+    name.includes("вино") ||
+    name.includes("шато") ||
+    name.includes("рислинг") ||
+    name.includes("пино") ||
+    name.includes("эльзас") ||
+    name.includes("тоскана") ||
+    name.includes("мальбек") ||
+    name.includes("шардоне")
+  ) return "wine"
 
   return "wine"
 }
 
 
-/* ===== КАРТИНКИ (УЛУЧШЕНЫ, БЕЗ ЛОМКИ) ===== */
+/* ===== КАРТИНКИ ===== */
 
 function getImage(product){
 
-  /* 1. если задано явно */
   if(product.image){
     return "./assets/wines/" + product.image
   }
 
-  /* 2. fallback по ID */
   if(product.id){
     return "./assets/wines/" + product.id + ".jpg"
   }
 
-  /* 3. placeholder */
   return "./assets/wines/placeholder.jpg"
 }
 
@@ -209,12 +257,7 @@ function bindButtons(){
       const type = btn.dataset.type
       currentType = type
 
-      if(type === "all"){
-        render(ALL)
-        return
-      }
-
-      render(ALL.filter(w => w.type === type))
+      applyFilter(type)
 
     })
 
