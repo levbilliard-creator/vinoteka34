@@ -35,9 +35,6 @@ async function init(){
     const res = await fetch("./data/products.json")
     ALL = await res.json()
 
-    // ❗ ВАЖНО: БОЛЬШЕ НЕ ПЕРЕЗАТИРАЕМ type
-    // detectType УДАЛЕН ИЗ РАБОЧЕЙ ЛОГИКИ
-
     applyFilter(currentType)
 
     bindButtons()
@@ -50,6 +47,23 @@ async function init(){
 }
 
 
+/* ===== НОРМАЛИЗАЦИЯ ===== */
+
+function normalizeType(type){
+
+  if(type === "Безалкогольные") return "soft"
+  if(type === "Пиво") return "beer"
+  if(type === "Вино") return "wine"
+  if(type === "Игристое") return "sparkling"
+  if(type === "Крепкий алкоголь") return "strong"
+  if(type === "Бакалея") return "grocery"
+  if(type === "Чай") return "tea"
+  if(type === "Аксессуары") return "accessories"
+
+  return type
+}
+
+
 /* ===== ФИЛЬТРЫ (СТРОГО ПО TYPE) ===== */
 
 function applyFilter(type){
@@ -59,13 +73,11 @@ function applyFilter(type){
     return
   }
 
-  let filtered = ALL.filter(w => w.type === type)
+  const normalized = normalizeType(type)
 
-  /* fallback только если в JSON реально пусто */
-  if(filtered.length === 0){
-    console.warn("⚠️ пустая категория:", type)
-    filtered = ALL
-  }
+  let filtered = ALL.filter(w => w.type === normalized)
+
+  // ❗ fallback УДАЛЕН — это и было основной причиной поломки
 
   render(filtered)
 }
