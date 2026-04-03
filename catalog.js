@@ -35,7 +35,7 @@ async function init(){
   initScroll()
 }
 
-/* ===== ФИЛЬТР (ЧИСТЫЙ) ===== */
+/* ===== ФИЛЬТР ===== */
 
 function normalizeType(type){
   if(type === "Безалкогольные") return "soft"
@@ -63,12 +63,21 @@ function applyFilter(type){
   render(filtered)
 }
 
-/* ===== КАРТИНКИ ===== */
+/* ===== КАРТИНКИ (ID СИСТЕМА) ===== */
 
 function getImage(product){
+
+  // 1. если вручную задано
   if(product.image){
     return "./assets/wines/" + product.image
   }
+
+  // 2. по ID
+  if(product.id){
+    return "./assets/wines/" + product.id + ".jpg"
+  }
+
+  // 3. заглушка
   return "./assets/wines/placeholder.jpg"
 }
 
@@ -126,7 +135,7 @@ function initScroll(){
   })
 }
 
-/* ===== UI ===== */
+/* ===== КНОПКИ ===== */
 
 function bindButtons(){
   buttons.forEach(btn => {
@@ -139,6 +148,8 @@ function bindButtons(){
     })
   })
 }
+
+/* ===== ПОИСК ===== */
 
 function bindSearch(){
   searchInput.addEventListener("input", () => {
@@ -153,7 +164,32 @@ function bindSearch(){
   })
 }
 
-/* ===== LABELS ===== */
+/* ===== СТРЕЛКА ВВЕРХ ===== */
+
+const upBtn = document.createElement("div")
+upBtn.innerHTML = "↑"
+upBtn.style.position = "fixed"
+upBtn.style.bottom = "30px"
+upBtn.style.right = "30px"
+upBtn.style.background = "#000"
+upBtn.style.color = "#fff"
+upBtn.style.padding = "10px 15px"
+upBtn.style.cursor = "pointer"
+upBtn.style.borderRadius = "8px"
+upBtn.style.zIndex = "999"
+upBtn.style.display = "none"
+
+document.body.appendChild(upBtn)
+
+window.addEventListener("scroll", () => {
+  upBtn.style.display = window.scrollY > 400 ? "block" : "none"
+})
+
+upBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" })
+}
+
+/* ===== ПЕРЕВОД ===== */
 
 function translate(type){
   if(type==="wine") return "Вино"
