@@ -35,10 +35,8 @@ async function init(){
     const res = await fetch("./data/products.json")
     ALL = await res.json()
 
-    ALL = ALL.map(p => ({
-      ...p,
-      type: detectType(p)
-    }))
+    // ❗ ВАЖНО: БОЛЬШЕ НЕ ПЕРЕЗАТИРАЕМ type
+    // detectType УДАЛЕН ИЗ РАБОЧЕЙ ЛОГИКИ
 
     applyFilter(currentType)
 
@@ -52,7 +50,7 @@ async function init(){
 }
 
 
-/* ===== ФИКС ФИЛЬТРОВ ===== */
+/* ===== ФИЛЬТРЫ (СТРОГО ПО TYPE) ===== */
 
 function applyFilter(type){
 
@@ -63,24 +61,17 @@ function applyFilter(type){
 
   let filtered = ALL.filter(w => w.type === type)
 
-  /* 🔥 КЛЮЧЕВОЙ ФИКС */
+  /* fallback только если в JSON реально пусто */
   if(filtered.length === 0){
     console.warn("⚠️ пустая категория:", type)
-
-    // fallback: повторная нормализация (страховка)
-    filtered = ALL.filter(w => detectType(w) === type)
-
-    // если вдруг всё равно пусто → показываем всё (лучше чем пусто)
-    if(filtered.length === 0){
-      filtered = ALL
-    }
+    filtered = ALL
   }
 
   render(filtered)
 }
 
 
-/* ===== detectType (УЛУЧШЕННЫЙ, СТАБИЛЬНЫЙ) ===== */
+/* ===== detectType (ОСТАВЛЕН НО НЕ ИСПОЛЬЗУЕТСЯ) ===== */
 
 function detectType(p){
 
