@@ -64,7 +64,7 @@ function normalizeType(type){
 }
 
 
-/* ===== ФИЛЬТРЫ (СТРОГО ПО TYPE) ===== */
+/* ===== ФИЛЬТРЫ (ИСПРАВЛЕНО БЕЗ ЛОМАЮЩИХ УПРОЩЕНИЙ) ===== */
 
 function applyFilter(type){
 
@@ -75,15 +75,93 @@ function applyFilter(type){
 
   const normalized = normalizeType(type)
 
-  let filtered = ALL.filter(w => w.type === normalized)
+  let filtered = ALL.filter(w => {
 
-  // ❗ fallback УДАЛЕН — это и было основной причиной поломки
+    // 1. если type уже правильный — используем его
+    if(w.type && w.type === normalized) return true
+
+    const name = (w.name_ru || "").toLowerCase()
+
+    // 2. ЖЁСТКИЕ fallback правила (без мусора)
+
+    if(normalized === "beer"){
+      return (
+        name.includes("пиво") ||
+        name.includes("пивной") ||
+        name.includes("пивосодержащ") ||
+        name.includes("пивной напиток") ||
+        name.includes("corona") ||
+        name.includes("корона")
+      )
+    }
+
+    if(normalized === "soft"){
+      return (
+        name.includes("вода") ||
+        name.includes("сок") ||
+        name.includes("нектар") ||
+        name.includes("лимонад") ||
+        name.includes("кола") ||
+        name.includes("швепс") ||
+        name.includes("тоник")
+      )
+    }
+
+    if(normalized === "grocery"){
+      return (
+        name.includes("сыр") ||
+        name.includes("салями") ||
+        name.includes("ветчина") ||
+        name.includes("печенье") ||
+        name.includes("шоколад") ||
+        name.includes("чипс") ||
+        name.includes("оливк")
+      )
+    }
+
+    if(normalized === "wine"){
+      return (
+        name.includes("вино") ||
+        name.includes("рислинг") ||
+        name.includes("шардоне") ||
+        name.includes("пино") ||
+        name.includes("совиньон")
+      )
+    }
+
+    if(normalized === "sparkling"){
+      return (
+        name.includes("игрист") ||
+        name.includes("брют") ||
+        name.includes("шампан") ||
+        name.includes("просекко") ||
+        name.includes("кава")
+      )
+    }
+
+    if(normalized === "strong"){
+      return (
+        name.includes("виски") ||
+        name.includes("ром") ||
+        name.includes("текила") ||
+        name.includes("ликер") ||
+        name.includes("ликёр") ||
+        name.includes("джин") ||
+        name.includes("коньяк") ||
+        name.includes("бренди") ||
+        name.includes("ракия") ||
+        name.includes("вермут")
+      )
+    }
+
+    return false
+  })
 
   render(filtered)
 }
 
 
-/* ===== detectType (ОСТАВЛЕН НО НЕ ИСПОЛЬЗУЕТСЯ) ===== */
+/* ===== detectType (НЕ ИСПОЛЬЗУЕТСЯ — ОСТАВЛЕН ДЛЯ СПОКОЙСТВИЯ) ===== */
 
 function detectType(p){
 
