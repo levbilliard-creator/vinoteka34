@@ -25,22 +25,25 @@
     <source src="./assets/hero.mp4" type="video/mp4">
   </video>
 
-  <!-- ЗАТЕМНЕНИЕ -->
+  <!-- ЗАТЕМНЕНИЕ (глубже и дороже) -->
   <div class="hero-overlay"></div>
+
+  <!-- ДОПОЛНИТЕЛЬНЫЙ ГРАДИЕНТ (премиум эффект) -->
+  <div class="hero-gradient"></div>
 
   <!-- КОНТЕНТ -->
   <div class="hero-content">
 
     <h1>ВИНОТЕКА</h1>
 
-    <p>
+    <p class="hero-subtitle">
       Винный бутик и клуб сомелье<br>
       Более 500 вин со всего мира
     </p>
 
     <div class="hero-buttons">
       <a href="/catalog" class="btn-main">Смотреть каталог</a>
-      <a href="#" class="btn-secondary">Подобрать вино</a>
+      <a href="/catalog?group=wine" class="btn-secondary">Подобрать вино</a>
     </div>
 
     <div class="hero-info">
@@ -50,6 +53,44 @@
   </div>
 
 </section>
+
+
+<!-- АКЦИЯ (новый премиум-блок, но без ломания структуры) -->
+<section class="promo">
+
+  <div class="promo-inner">
+
+    <div class="promo-badge">
+      -10%
+    </div>
+
+    <div class="promo-text">
+      <h2>Каждый понедельник — скидка на всё</h2>
+      <p>Начните неделю на хорошей ноте. Подберем идеальное вино под ваше настроение.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ДОПОЛНИТЕЛЬНЫЙ ИМИДЖЕВЫЙ БЛОК (делает сайт дороже) -->
+<section class="about">
+
+  <div class="about-inner">
+
+    <h2>Бутик, клуб и сомелье-сервис</h2>
+
+    <p>
+      Индивидуальный подход к каждому гостю.<br>
+      Подбираем вино на ваш вкус, заботимся о вашем бюджете<br>
+      и гарантируем удовольствие от выбора.
+    </p>
+
+  </div>
+
+</section>
+
 
 </body>
 </html>
