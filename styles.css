@@ -1,9 +1,15 @@
 /* ===== БАЗА ===== */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Inter, Arial, sans-serif;
-  background: #0b0f14;
+  font-family: 'Inter', Arial, sans-serif;
+  background: radial-gradient(circle at top, #11131a, #050608);
   color: #fff;
 }
 
@@ -15,12 +21,19 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+
+  background: rgba(10, 12, 18, 0.85);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .logo {
   color: #b06cff;
   font-weight: bold;
   font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
 }
 
 .phone-block {
@@ -49,8 +62,11 @@ body {
 
 .hero {
   position: relative;
-  height: 85vh;
-  overflow: hidden;
+
+  min-height: 100vh; /* фикс обрезания */
+  padding-top: 100px;
+  padding-bottom: 140px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,7 +86,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.6);
   z-index: 1;
 }
 
@@ -83,13 +99,17 @@ body {
 }
 
 .hero h1 {
-  font-size: 56px;
+  font-size: 64px;
   margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
 }
 
 .hero p {
   font-size: 18px;
   margin-bottom: 25px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
 }
 
 .hero-buttons {
@@ -98,12 +118,25 @@ body {
   margin-bottom: 20px;
 }
 
+/* ===== КНОПКИ (УЛУЧШЕНЫ, но без ломки) ===== */
+
 .btn-main {
   padding: 14px 24px;
   border-radius: 12px;
-  background: linear-gradient(90deg, #7b61ff, #ff4fa3);
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
   color: white;
   text-decoration: none;
+
+  font-weight: 500;
+  font-size: 14px;
+
+  box-shadow: 0 10px 30px rgba(124,58,237,0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(124,58,237,0.5);
 }
 
 .btn-secondary {
@@ -112,11 +145,71 @@ body {
   background: rgba(255,255,255,0.15);
   color: white;
   text-decoration: none;
+
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.22);
 }
 
 .hero-info {
   font-size: 14px;
   opacity: 0.8;
+}
+
+
+/* ===== PROMO В HERO ===== */
+
+.promo-inside {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+.promo-card {
+  max-width: 800px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background: rgba(15,15,20,0.75);
+  backdrop-filter: blur(10px);
+
+  border-radius: 14px;
+  padding: 16px 20px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.promo-badge {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.promo-text h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.promo-text p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
 }
 
 
@@ -229,42 +322,36 @@ body {
 
 
 /* =========================
-   PRODUCT (КОМПАКТНАЯ ВЕРСИЯ)
+   PRODUCT
 ========================= */
 
 .product-page {
-  padding: 30px 40px; /* БЫЛО 60 → СТАЛО КОМПАКТНЕЕ */
+  padding: 30px 40px;
 }
 
 .product-container {
   display: flex;
-  gap: 40px; /* БЫЛО 80 */
-  align-items: flex-start; /* ВАЖНО */
+  gap: 40px;
+  align-items: flex-start;
   justify-content: center;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-
-/* ===== ФОТО ===== */
-
 .product-image {
-  flex: 0 0 320px; /* БЫЛО 360 */
+  flex: 0 0 320px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: radial-gradient(circle at center, #1c3a4a 0%, #132733 100%);
   border-radius: 20px;
-  padding: 25px; /* БЫЛО 40 */
+  padding: 25px;
 }
 
 .product-image img {
-  max-height: 300px; /* БЫЛО 420 */
+  max-height: 300px;
   width: auto;
 }
-
-
-/* ===== ИНФО ===== */
 
 .product-info {
   max-width: 500px;
@@ -283,7 +370,7 @@ body {
 }
 
 .product-title {
-  font-size: 28px; /* БЫЛО 36 */
+  font-size: 28px;
   margin: 8px 0 10px;
 }
 
@@ -294,13 +381,10 @@ body {
 }
 
 .product-price {
-  font-size: 24px; /* БЫЛО 32 */
+  font-size: 24px;
   margin-bottom: 15px;
   font-weight: bold;
 }
-
-
-/* ===== КНОПКИ ===== */
 
 .product-actions {
   display: flex;
@@ -314,17 +398,11 @@ body {
   font-size: 14px;
 }
 
-
-/* ===== ОПИСАНИЕ ===== */
-
 .product-description {
-  margin-top: 15px; /* БЫЛО 40 */
+  margin-top: 15px;
   font-size: 14px;
   opacity: 0.85;
 }
-
-
-/* ===== ХАРАКТЕРИСТИКИ ===== */
 
 .product-specs {
   display: grid;
@@ -344,7 +422,7 @@ body {
 /* ===== ПОХОЖИЕ ===== */
 
 .similar {
-  margin-top: 30px; /* БЫЛО 60 */
+  margin-top: 30px;
 }
 
 .similar-grid {
@@ -369,7 +447,7 @@ body {
 
 .similar-card img {
   width: 100%;
-  height: 120px; /* БЫЛО 180 */
+  height: 120px;
   object-fit: contain;
 }
 
@@ -380,12 +458,29 @@ body {
 
 @media (max-width: 900px) {
 
+  .header {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .phone-number {
+    display: none;
+  }
+
   .catalog-page {
     flex-direction: column;
   }
 
   .catalogGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 160px;
   }
 
   .hero-content {
@@ -406,52 +501,28 @@ body {
     max-height: 260px;
   }
 
-}/* ===== PROMO ВНУТРИ HERO ===== */
+  .hero h1 {
+    font-size: 36px;
+  }
 
-.promo-inside {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  padding: 0 20px;
-  z-index: 3;
-}
+  .hero p {
+    font-size: 15px;
+  }
 
-.promo-card {
-  max-width: 800px;
-  margin: 0 auto;
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  .btn-main,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
 
-  background: rgba(15,15,20,0.75);
-  backdrop-filter: blur(10px);
+  .promo-card {
+    flex-direction: column;
+    text-align: center;
+  }
 
-  border-radius: 14px;
-  padding: 16px 20px;
-
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-}
-
-.promo-badge {
-  background: linear-gradient(135deg, #a855f7, #ec4899);
-  color: #fff;
-  font-weight: 700;
-  padding: 8px 12px;
-  border-radius: 8px;
-}
-
-.promo-text h2 {
-  margin: 0;
-  font-size: 16px;
-  color: #fff;
-}
-
-.promo-text p {
-  margin: 4px 0 0;
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
 }
