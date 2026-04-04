@@ -406,4 +406,52 @@ body {
     max-height: 260px;
   }
 
+}/* ===== PROMO ВНУТРИ HERO ===== */
+
+.promo-inside {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+.promo-card {
+  max-width: 800px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background: rgba(15,15,20,0.75);
+  backdrop-filter: blur(10px);
+
+  border-radius: 14px;
+  padding: 16px 20px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.promo-badge {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.promo-text h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.promo-text p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
 }
