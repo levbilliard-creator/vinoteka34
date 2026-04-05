@@ -1070,4 +1070,10 @@ p,
     bottom: 10px;
   }
 
+}/* =========================
+   REMOVE "В НАЛИЧИИ"
+========================= */
+
+.product-image::before {
+  display: none !important;
 }
