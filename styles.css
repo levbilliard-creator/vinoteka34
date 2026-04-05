@@ -603,4 +603,77 @@ body {
     flex-wrap: wrap;
   }
 
+}/* =========================
+   RELATED PRODUCTS (FIX)
+========================= */
+
+.related-products {
+  margin-top: 50px;
+}
+
+.related-products h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* контейнер */
+.related-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* каждая ссылка превращается в карточку */
+.related-list a {
+  display: block;
+  text-decoration: none;
+  color: white;
+
+  background: linear-gradient(180deg, #0F1F19 0%, #0A1512 100%);
+  border-radius: 16px;
+  padding: 14px;
+
+  border: 1px solid rgba(214,185,123,0.08);
+  transition: 0.3s;
+}
+
+.related-list a:hover {
+  transform: translateY(-4px);
+  border: 1px solid rgba(214,185,123,0.25);
+}
+
+/* картинка */
+.related-list img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+
+  background: radial-gradient(circle, #1C3A2C, #0F1F19);
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+}
+
+/* название */
+.related-title {
+  font-size: 13px;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+/* цена */
+.related-price {
+  font-size: 15px;
+  color: #D6B97B;
+}/* =========================
+   PREMIUM TYPOGRAPHY
+========================= */
+
+h1, h2, .product-title, .logo {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+body, p, div, span {
+  font-family: 'Inter', sans-serif;
 }
