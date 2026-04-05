@@ -17,7 +17,7 @@ body {
 /* ===== HEADER ===== */
 
 .header {
-  height: 80px;
+  height: 70px; /* БЫЛО 80 */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +32,7 @@ body {
 .logo {
   color: #C2A878;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px; /* БЫЛО 22 */
   font-family: 'Playfair Display', serif;
 }
 
@@ -63,12 +63,10 @@ body {
 
 .hero {
   position: relative;
-  height: calc(100vh - 80px);
-
+  height: calc(100vh - 70px); /* БЫЛО 80 */
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
 }
 
@@ -86,7 +84,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(13,20,18,0.9));
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(13,20,18,0.95)); /* ЧУТЬ ТЕМНЕЕ */
   z-index: 1;
 }
 
@@ -94,26 +92,26 @@ body {
   position: relative;
   z-index: 2;
 
-  max-width: 460px;
+  max-width: 420px; /* БЫЛО 460 */
   text-align: center;
   margin-left: 0;
 }
 
 .hero h1 {
-  font-size: 44px;
-  margin-bottom: 14px;
+  font-size: 40px; /* БЫЛО 44 */
+  margin-bottom: 10px; /* БЫЛО 14 */
   font-family: 'Playfair Display', serif;
 }
 
 .hero p {
-  font-size: 15px;
-  margin-bottom: 16px;
+  font-size: 14px; /* БЫЛО 15 */
+  margin-bottom: 12px; /* БЫЛО 16 */
 }
 
 .hero-buttons {
   display: flex;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 8px; /* БЫЛО 10 */
+  margin-bottom: 10px; /* БЫЛО 12 */
   justify-content: center;
 }
 
@@ -121,11 +119,12 @@ body {
 /* ===== КНОПКИ ===== */
 
 .btn-main {
-  padding: 11px 18px;
+  padding: 10px 16px; /* БЫЛО 11 18 */
   border-radius: 10px;
   background: #1F3D2B;
   color: white;
   text-decoration: none;
+  font-size: 13px; /* ДОБАВЛЕНО */
 }
 
 .btn-main:hover {
@@ -133,11 +132,12 @@ body {
 }
 
 .btn-secondary {
-  padding: 11px 18px;
+  padding: 10px 16px;
   border-radius: 10px;
   background: rgba(255,255,255,0.08);
   color: white;
   text-decoration: none;
+  font-size: 13px;
 }
 
 .btn-secondary:hover {
@@ -147,7 +147,7 @@ body {
 
 .hero-info {
   font-size: 11px;
-  opacity: 0.8;
+  opacity: 0.7; /* БЫЛО 0.8 */
 }
 
 
@@ -155,7 +155,7 @@ body {
 
 .promo-inside {
   position: absolute;
-  bottom: 10px; /* ВНУТРИ ЭКРАНА */
+  bottom: 6px; /* БЫЛО 10 */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -164,16 +164,16 @@ body {
 }
 
 .promo-card {
-  max-width: 640px;
+  max-width: 580px; /* БЫЛО 640 */
   margin: 0 auto;
 
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px; /* БЫЛО 10 */
 
   background: #16201B;
   border-radius: 10px;
-  padding: 10px 14px;
+  padding: 8px 12px; /* БЫЛО 10 14 */
 
   border: 1px solid rgba(194,168,120,0.2);
 }
@@ -182,18 +182,19 @@ body {
   background: #C2A878;
   color: #000;
   font-weight: 700;
-  padding: 5px 8px;
-  border-radius: 5px;
+  padding: 4px 6px; /* БЫЛО 5 8 */
+  border-radius: 4px;
+  font-size: 11px;
 }
 
 .promo-text h2 {
   margin: 0;
-  font-size: 13px;
+  font-size: 12px; /* БЫЛО 13 */
 }
 
 .promo-text p {
   margin: 2px 0 0;
-  font-size: 11px;
+  font-size: 10px; /* БЫЛО 11 */
   color: rgba(255,255,255,0.7);
 }
 
