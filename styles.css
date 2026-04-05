@@ -532,4 +532,75 @@ body {
     font-size: 10px;
   }
 
+}/* =========================
+   PRODUCT FIX (БЕЗ ЛОМА ФАЙЛА)
+========================= */
+
+.product-container {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 60px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  align-items: center;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at center, #1C3A2C 0%, #0F1F19 70%);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.product-image img {
+  max-height: 420px;
+  width: auto;
+}
+
+.product-info {
+  max-width: 520px;
+}
+
+.product-title {
+  font-size: 34px;
+  margin: 10px 0 15px;
+}
+
+.product-price {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #D6B97B;
+}
+
+.product-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+
+/* MOBILE FIX */
+
+@media (max-width: 900px) {
+
+  .product-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .product-image img {
+    max-height: 300px;
+  }
+
+  .product-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
 }
