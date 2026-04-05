@@ -59,7 +59,7 @@ body {
 
 
 /* =========================
-   HERO (ПРЕМИУМ)
+   HERO
 ========================= */
 
 .hero {
@@ -67,8 +67,8 @@ body {
   height: calc(100vh - 70px);
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* СДВИГ ВЛЕВО */
-  padding-left: 80px; /* ВОЗДУХ */
+  justify-content: flex-start;
+  padding-left: 80px;
   overflow: hidden;
 }
 
@@ -179,10 +179,12 @@ body {
 
 .promo-inside {
   position: absolute;
-  bottom: 12px;
-  left: 80px; /* ВЫРОВНЯЛ ПОД ТЕКСТ */
-  transform: none;
-  width: auto;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 20px;
+  z-index: 3;
 }
 
 .promo-card {
@@ -192,7 +194,7 @@ body {
   align-items: center;
   gap: 10px;
 
-  background: rgba(15,31,25,0.85);
+  background: rgba(15,31,25,0.9);
   backdrop-filter: blur(6px);
 
   border-radius: 12px;
@@ -223,7 +225,7 @@ body {
 
 
 /* =========================
-   КАТАЛОГ (НЕ ТРОГАЕМ)
+   КАТАЛОГ
 ========================= */
 
 .catalog-page {
