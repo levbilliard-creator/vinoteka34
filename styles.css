@@ -17,11 +17,11 @@ body {
 /* ===== HEADER ===== */
 
 .header {
-  height: 80px; /* добавлено */
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px; /* было 20px 40px */
+  padding: 0 40px;
 
   background: rgba(13,20,18,0.9);
   backdrop-filter: blur(10px);
@@ -63,11 +63,13 @@ body {
 
 .hero {
   position: relative;
-  height: calc(100vh - 80px); /* ключевой фикс */
-  overflow: hidden;
+  height: calc(100vh - 80px);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
 }
 
 .hero-video {
@@ -91,26 +93,27 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 480px; /* было 520 */
-  text-align: center; /* было left */
-  margin-left: 0; /* было -120px */
+
+  max-width: 460px;
+  text-align: center;
+  margin-left: 0;
 }
 
 .hero h1 {
-  font-size: 48px; /* было 56 */
-  margin-bottom: 16px;
+  font-size: 44px;
+  margin-bottom: 14px;
   font-family: 'Playfair Display', serif;
 }
 
 .hero p {
-  font-size: 16px; /* было 18 */
-  margin-bottom: 18px; /* было 25 */
+  font-size: 15px;
+  margin-bottom: 16px;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 10px; /* было 12 */
-  margin-bottom: 16px; /* было 20 */
+  gap: 10px;
+  margin-bottom: 12px;
   justify-content: center;
 }
 
@@ -118,8 +121,8 @@ body {
 /* ===== КНОПКИ ===== */
 
 .btn-main {
-  padding: 12px 20px; /* было 14x24 */
-  border-radius: 12px;
+  padding: 11px 18px;
+  border-radius: 10px;
   background: #1F3D2B;
   color: white;
   text-decoration: none;
@@ -130,8 +133,8 @@ body {
 }
 
 .btn-secondary {
-  padding: 12px 20px;
-  border-radius: 12px;
+  padding: 11px 18px;
+  border-radius: 10px;
   background: rgba(255,255,255,0.08);
   color: white;
   text-decoration: none;
@@ -143,7 +146,7 @@ body {
 }
 
 .hero-info {
-  font-size: 12px; /* было 14 */
+  font-size: 11px;
   opacity: 0.8;
 }
 
@@ -152,7 +155,7 @@ body {
 
 .promo-inside {
   position: absolute;
-  bottom: 20px; /* было -30px */
+  bottom: 10px; /* ВНУТРИ ЭКРАНА */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -161,16 +164,16 @@ body {
 }
 
 .promo-card {
-  max-width: 700px; /* было 800 */
+  max-width: 640px;
   margin: 0 auto;
 
   display: flex;
   align-items: center;
-  gap: 12px; /* было 16 */
+  gap: 10px;
 
   background: #16201B;
-  border-radius: 12px;
-  padding: 12px 16px; /* было 16x20 */
+  border-radius: 10px;
+  padding: 10px 14px;
 
   border: 1px solid rgba(194,168,120,0.2);
 }
@@ -179,18 +182,18 @@ body {
   background: #C2A878;
   color: #000;
   font-weight: 700;
-  padding: 6px 10px; /* было 8x12 */
-  border-radius: 6px;
+  padding: 5px 8px;
+  border-radius: 5px;
 }
 
 .promo-text h2 {
   margin: 0;
-  font-size: 14px; /* было 16 */
+  font-size: 13px;
 }
 
 .promo-text p {
-  margin: 4px 0 0;
-  font-size: 12px; /* было 13 */
+  margin: 2px 0 0;
+  font-size: 11px;
   color: rgba(255,255,255,0.7);
 }
 
