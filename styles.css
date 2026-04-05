@@ -433,3 +433,103 @@ body {
   }
 
 }
+/* =========================
+   БЕЙДЖИ В КАРТОЧКАХ
+========================= */
+
+.product-card {
+  position: relative;
+}
+
+.wine-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  padding: 5px 10px;
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  backdrop-filter: blur(6px);
+}
+
+
+/* ===== ЦВЕТА БЕЙДЖЕЙ ===== */
+
+.badge-red {
+  background: rgba(120, 20, 30, 0.85);
+  color: #fff;
+}
+
+.badge-white {
+  background: rgba(200, 200, 180, 0.85);
+  color: #000;
+}
+
+.badge-sparkling {
+  background: rgba(214,185,123,0.9);
+  color: #000;
+}
+
+.badge-strong {
+  background: rgba(80, 40, 120, 0.85);
+  color: #fff;
+}
+
+
+/* =========================
+   ФИЛЬТРЫ (САЙДБАР)
+========================= */
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.categories button {
+  padding: 12px 14px;
+
+  border-radius: 14px;
+  border: 1px solid rgba(214,185,123,0.08);
+
+  background: rgba(28,58,44,0.6);
+  color: rgba(255,255,255,0.85);
+
+  text-align: left;
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.categories button:hover {
+  background: rgba(28,58,44,0.9);
+  border: 1px solid rgba(214,185,123,0.25);
+  color: #fff;
+}
+
+.categories button.active {
+  background: linear-gradient(135deg, #1C3A2C, #254A38);
+  border: 1px solid rgba(214,185,123,0.4);
+  color: #fff;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+
+/* =========================
+   МОБИЛА — БЕЙДЖИ
+========================= */
+
+@media (max-width: 900px) {
+
+  .wine-badge {
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+  }
+
+}
