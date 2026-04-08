@@ -25,14 +25,36 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 async function init(){
-  const res = await fetch("/data/products.json")
-  ALL = await res.json()
 
-  applyFilter(currentType)
+  try{
 
-  bindButtons()
-  bindSearch()
-  initScroll()
+    console.log("START LOAD")
+
+    // ✅ ГЛАВНОЕ ИСПРАВЛЕНИЕ
+    const res = await fetch("https://cdn.jsdelivr.net/gh/levbilliard-creator/vinoteka34@main/data/products.json")
+
+    console.log("STATUS:", res.status)
+
+    ALL = await res.json()
+
+    console.log("LOADED:", ALL.length)
+
+    applyFilter(currentType)
+
+    bindButtons()
+    bindSearch()
+    initScroll()
+
+  }catch(e){
+
+    console.error("FETCH ERROR:", e)
+
+    grid.innerHTML = `
+      <div style="color:red; font-size:20px;">
+        Ошибка загрузки каталога
+      </div>
+    `
+  }
 }
 
 /* ===== ФИЛЬТР ===== */
@@ -63,7 +85,7 @@ function applyFilter(type){
   render(filtered)
 }
 
-/* ===== КАРТИНКИ (CDN + fallback) ===== */
+/* ===== КАРТИНКИ ===== */
 
 function getImage(product){
 
