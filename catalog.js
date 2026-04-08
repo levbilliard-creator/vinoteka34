@@ -63,11 +63,11 @@ function applyFilter(type){
   render(filtered)
 }
 
-/* ===== КАРТИНКИ (УСКОРЕННАЯ ВЕРСИЯ) ===== */
+/* ===== КАРТИНКИ (СТАБИЛЬНО ЧЕРЕЗ CDN) ===== */
 
 function getImage(product){
 
-  const BASE = "https://raw.githubusercontent.com/levbilliard-creator/vinoteka34/main/assets/wines/"
+  const BASE = "https://cdn.jsdelivr.net/gh/levbilliard-creator/vinoteka34@main/assets/wines/"
 
   // 1. если вручную задано
   if(product.image){
@@ -107,7 +107,7 @@ function renderNext(){
           <img src="${img}" 
                class="wine-img" 
                loading="lazy"
-               onerror="this.src='https://raw.githubusercontent.com/levbilliard-creator/vinoteka34/main/assets/wines/placeholder.jpg'">
+               onerror="this.src='https://cdn.jsdelivr.net/gh/levbilliard-creator/vinoteka34@main/assets/wines/placeholder.jpg'">
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
