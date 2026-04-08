@@ -18,7 +18,8 @@ function translateType(type){
 
 
 // ===== ЗАГРУЗКА =====
-fetch("/data/products.json")
+// 🔥 ИСПРАВЛЕНО: берём через CDN
+fetch("https://cdn.jsdelivr.net/gh/levbilliard-creator/vinoteka34@main/data/products.json")
   .then(res => res.json())
   .then(products => {
 
@@ -86,6 +87,7 @@ fetch("/data/products.json")
       return bestScore >= 2 ? bestMatch : null;
     }
 
+    // ⚠️ images.json пока НЕ трогаем (как договаривались)
     fetch("/data/images.json")
       .then(res => res.json())
       .then(images => {
