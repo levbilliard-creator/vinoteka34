@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 async function init(){
-  const res = await fetch("./data/products.json")
+  const res = await fetch("/data/products.json")
   ALL = await res.json()
 
   applyFilter(currentType)
