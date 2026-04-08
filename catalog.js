@@ -63,24 +63,23 @@ function applyFilter(type){
   render(filtered)
 }
 
-/* ===== КАРТИНКИ (СТАБИЛЬНО ЧЕРЕЗ CDN) ===== */
+/* ===== КАРТИНКИ (CDN + fallback) ===== */
 
 function getImage(product){
 
-  const BASE = "https://cdn.jsdelivr.net/gh/levbilliard-creator/vinoteka34@main/assets/wines/"
+  const CDN = "https://cdn.jsdelivr.net/gh/levbilliard-creator/vinoteka34@main/assets/wines/"
 
-  // 1. если вручную задано
+  let file = ""
+
   if(product.image){
-    return BASE + product.image
+    file = product.image
+  } else if(product.id){
+    file = product.id + ".jpg"
+  } else {
+    file = "placeholder.jpg"
   }
 
-  // 2. по ID
-  if(product.id){
-    return BASE + product.id + ".jpg"
-  }
-
-  // 3. заглушка
-  return BASE + "placeholder.jpg"
+  return CDN + file
 }
 
 /* ===== RENDER ===== */
@@ -104,10 +103,12 @@ function renderNext(){
       <div class="product-card">
 
         <div class="img-wrap">
-          <img src="${img}" 
-               class="wine-img" 
-               loading="lazy"
-               onerror="this.src='https://cdn.jsdelivr.net/gh/levbilliard-creator/vinoteka34@main/assets/wines/placeholder.jpg'">
+          <img 
+            src="${img}" 
+            class="wine-img" 
+            loading="lazy"
+            onerror="this.onerror=null; this.src='./assets/wines/' + this.src.split('/').pop();"
+          >
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
