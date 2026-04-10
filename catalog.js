@@ -25,36 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 async function init(){
+  const res = await fetch("./data/products.json")
+  ALL = await res.json()
 
-  try{
+  applyFilter(currentType)
 
-    console.log("START LOAD")
-
-    // ✅ ГЛАВНОЕ ИСПРАВЛЕНИЕ
-    const res = await fetch("https://cdn.jsdelivr.net/gh/levbilliard-creator/vinoteka34@main/data/products.json")
-
-    console.log("STATUS:", res.status)
-
-    ALL = await res.json()
-
-    console.log("LOADED:", ALL.length)
-
-    applyFilter(currentType)
-
-    bindButtons()
-    bindSearch()
-    initScroll()
-
-  }catch(e){
-
-    console.error("FETCH ERROR:", e)
-
-    grid.innerHTML = `
-      <div style="color:red; font-size:20px;">
-        Ошибка загрузки каталога
-      </div>
-    `
-  }
+  bindButtons()
+  bindSearch()
+  initScroll()
 }
 
 /* ===== ФИЛЬТР ===== */
@@ -85,23 +63,22 @@ function applyFilter(type){
   render(filtered)
 }
 
-/* ===== КАРТИНКИ ===== */
+/* ===== КАРТИНКИ (ID СИСТЕМА) ===== */
 
 function getImage(product){
 
-  const CDN = "https://cdn.jsdelivr.net/gh/levbilliard-creator/vinoteka34@main/assets/wines/"
-
-  let file = ""
-
+  // 1. если вручную задано
   if(product.image){
-    file = product.image
-  } else if(product.id){
-    file = product.id + ".jpg"
-  } else {
-    file = "placeholder.jpg"
+    return "./assets/wines/" + product.image
   }
 
-  return CDN + file
+  // 2. по ID
+  if(product.id){
+    return "./assets/wines/" + product.id + ".jpg"
+  }
+
+  // 3. заглушка
+  return "./assets/wines/placeholder.jpg"
 }
 
 /* ===== RENDER ===== */
@@ -125,12 +102,7 @@ function renderNext(){
       <div class="product-card">
 
         <div class="img-wrap">
-          <img 
-            src="${img}" 
-            class="wine-img" 
-            loading="lazy"
-            onerror="this.onerror=null; this.src='./assets/wines/' + this.src.split('/').pop();"
-          >
+          <img src="${img}" class="wine-img" loading="lazy">
         </div>
 
         <div class="wine-type">${translate(w.type)}</div>
