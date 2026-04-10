@@ -98,18 +98,18 @@ ${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
 
   <div class="wine-ru">${w.name_ru}</div>
 
-${(w.color || w.style) ? `     <div class="wine-style">
-      ${w.color || ""} ${w.style || ""}     </div>
-  ` : ""}
+${(w.color || w.style) ? `     
+  <div class="wine-style">
+      ${w.color || ""} ${w.style || ""}     
+  </div>
+` : ""}
 
   <div class="wine-bottom">
     <div class="wine-price">${w.price} ₽</div>
 
-```
-<a href="/product.html?id=${w.id}&from=${currentType}" class="btn-link">
-  Подробнее →
-</a>
-```
+    <a href="/product.html?id=${w.id}&from=${currentType}" class="btn-link">
+      Подробнее →
+    </a>
 
   </div>
 
