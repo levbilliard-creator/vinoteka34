@@ -89,7 +89,10 @@ grid.innerHTML += `
 <div class="product-card">
 
   <div class="img-wrap">
-    ${img ? `<img src="${img}" class="wine-img" loading="lazy" onerror="this.style.display='none'">` : ``}
+    ${img 
+      ? `<img src="${img}" class="wine-img" loading="lazy" onerror="this.src='/assets/wines/placeholder.jpg'">`
+      : `<div class="no-img"></div>`
+    }
   </div>
 
   <div class="wine-type">${translate(w.type)}</div>
