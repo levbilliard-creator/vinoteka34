@@ -9,7 +9,7 @@ const CHUNK = 40
 let currentItems = []
 let currentType = "all"
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
 
 grid = document.querySelector(".catalogGrid")
 buttons = document.querySelectorAll(".categories button")
