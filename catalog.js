@@ -5,7 +5,7 @@ let buttons
 let searchInput
 
 let rendered = 0
-const CHUNK = 40
+const CHUNK = 20
 let currentItems = []
 let currentType = "all"
 
@@ -45,20 +45,6 @@ console.error("Ошибка загрузки данных", e)
 }
 }
 
-function normalizeType(type){
-
-if(type === "Безалкогольные") return "soft"
-if(type === "Пиво") return "beer"
-if(type === "Вино") return "wine"
-if(type === "Игристое") return "sparkling"
-if(type === "Крепкий алкоголь") return "strong"
-if(type === "Бакалея") return "grocery"
-if(type === "Чай") return "tea"
-if(type === "Аксессуары") return "accessories"
-
-return type
-}
-
 function applyFilter(type){
 
 if(type === "all"){
@@ -66,9 +52,7 @@ render(ALL)
 return
 }
 
-const normalized = normalizeType(type)
-let filtered = ALL.filter(w => w.type === normalized)
-
+let filtered = ALL.filter(w => w.type === type)
 render(filtered)
 }
 
@@ -82,7 +66,7 @@ if(product.id){
 return "/assets/wines/" + product.id + ".jpg"
 }
 
-return "/assets/wines/placeholder.jpg"
+return ""
 }
 
 function render(items){
@@ -101,30 +85,34 @@ slice.forEach(w => {
 const img = getImage(w)
 
 grid.innerHTML += `
+
 <div class="product-card">
+
   <div class="img-wrap">
-    ${img ? `<img src="${img}" class="wine-img" loading="lazy">` : ``}
+    ${img ? `<img src="${img}" class="wine-img" loading="lazy" onerror="this.style.display='none'">` : ``}
   </div>
 
   <div class="wine-type">${translate(w.type)}</div>
 
-  ${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
+${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
 
   <div class="wine-ru">${w.name_ru}</div>
 
-  ${(w.color || w.style) ? `
-    <div class="wine-style">
-      ${w.color || ""} ${w.style || ""}
-    </div>
+${(w.color || w.style) ? `     <div class="wine-style">
+      ${w.color || ""} ${w.style || ""}     </div>
   ` : ""}
 
   <div class="wine-bottom">
     <div class="wine-price">${w.price} ₽</div>
 
-    <a href="/product.html?id=${w.id}&from=${currentType}" class="btn-link">
-      Подробнее →
-    </a>
+```
+<a href="/product.html?id=${w.id}&from=${currentType}" class="btn-link">
+  Подробнее →
+</a>
+```
+
   </div>
+
 </div>
 `
 
@@ -174,29 +162,6 @@ ALL.filter(w =>
 )
 
 })
-}
-
-const upBtn = document.createElement("div")
-upBtn.innerHTML = "↑"
-upBtn.style.position = "fixed"
-upBtn.style.bottom = "30px"
-upBtn.style.right = "30px"
-upBtn.style.background = "#000"
-upBtn.style.color = "#fff"
-upBtn.style.padding = "10px 15px"
-upBtn.style.cursor = "pointer"
-upBtn.style.borderRadius = "8px"
-upBtn.style.zIndex = "999"
-upBtn.style.display = "none"
-
-document.body.appendChild(upBtn)
-
-window.addEventListener("scroll", () => {
-upBtn.style.display = window.scrollY > 400 ? "block" : "none"
-})
-
-upBtn.onclick = () => {
-window.scrollTo({ top: 0, behavior: "smooth" })
 }
 
 function translate(type){
