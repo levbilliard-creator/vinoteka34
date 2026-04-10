@@ -11,7 +11,7 @@ let currentType = "all"
 
 document.addEventListener("DOMContentLoaded", () => {
 
-grid = document.getElementById("catalogGrid")
+grid = document.querySelector(".catalogGrid")
 buttons = document.querySelectorAll(".categories button")
 searchInput = document.getElementById("searchInput")
 
@@ -34,13 +34,11 @@ try{
 const res = await fetch("/data/products.json")
 ALL = await res.json()
 
-```
 applyFilter(currentType)
 
 bindButtons()
 bindSearch()
 initScroll()
-```
 
 }catch(e){
 console.error("Ошибка загрузки данных", e)
@@ -100,37 +98,35 @@ const slice = currentItems.slice(rendered, rendered + CHUNK)
 
 slice.forEach(w => {
 
-```
 const img = getImage(w)
 
 grid.innerHTML += `
-  <div class="product-card">
-    <div class="img-wrap">
-      ${img ? `<img src="${img}" class="wine-img" loading="lazy">` : ``}
-    </div>
-
-    <div class="wine-type">${translate(w.type)}</div>
-
-    ${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
-
-    <div class="wine-ru">${w.name_ru}</div>
-
-    ${(w.color || w.style) ? `
-      <div class="wine-style">
-        ${w.color || ""} ${w.style || ""}
-      </div>
-    ` : ""}
-
-    <div class="wine-bottom">
-      <div class="wine-price">${w.price} ₽</div>
-
-      <a href="/product.html?id=${w.id}&from=${currentType}" class="btn-link">
-        Подробнее →
-      </a>
-    </div>
+<div class="product-card">
+  <div class="img-wrap">
+    ${img ? `<img src="${img}" class="wine-img" loading="lazy">` : ``}
   </div>
+
+  <div class="wine-type">${translate(w.type)}</div>
+
+  ${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
+
+  <div class="wine-ru">${w.name_ru}</div>
+
+  ${(w.color || w.style) ? `
+    <div class="wine-style">
+      ${w.color || ""} ${w.style || ""}
+    </div>
+  ` : ""}
+
+  <div class="wine-bottom">
+    <div class="wine-price">${w.price} ₽</div>
+
+    <a href="/product.html?id=${w.id}&from=${currentType}" class="btn-link">
+      Подробнее →
+    </a>
+  </div>
+</div>
 `
-```
 
 })
 
@@ -149,19 +145,17 @@ function bindButtons(){
 
 buttons.forEach(btn => {
 
-```
 btn.addEventListener("click", () => {
 
-  buttons.forEach(b => b.classList.remove("active"))
-  btn.classList.add("active")
+buttons.forEach(b => b.classList.remove("active"))
+btn.classList.add("active")
 
-  const type = btn.dataset.type
-  currentType = type
+const type = btn.dataset.type
+currentType = type
 
-  applyFilter(type)
+applyFilter(type)
 
 })
-```
 
 })
 }
@@ -170,16 +164,14 @@ function bindSearch(){
 
 searchInput.addEventListener("input", () => {
 
-```
 const value = searchInput.value.toLowerCase()
 
 render(
-  ALL.filter(w =>
-    (w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
-    (w.name_en && w.name_en.toLowerCase().includes(value))
-  )
+ALL.filter(w =>
+(w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
+(w.name_en && w.name_en.toLowerCase().includes(value))
 )
-```
+)
 
 })
 }
@@ -220,6 +212,3 @@ if(type === "accessories") return "Аксессуары"
 
 return type
 }
-
-```
-```
