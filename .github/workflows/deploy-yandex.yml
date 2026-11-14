@@ -1,0 +1,77 @@
+name: Publish VINOTEKA34 to Yandex
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - '*.js'
+      - 'styles.css'
+      - 'assets/**'
+      - 'data/products.json'
+      - 'data/images.json'
+      - 'catalog/index.html'
+      - 'product/index.html'
+      - 'scripts/deploy_yandex.py'
+      - '.github/workflows/deploy-yandex.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: vinoteka34-production
+  cancel-in-progress: false
+jobs:
+  publish:
+    # Manual run can select a branch; production must always use main.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check catalog and scripts
+        run: |
+          node --test tests/catalog.test.cjs
+          node --check product-data.js
+          node --check catalog.js
+          node --check product.js
+          node --check app.js
+          python3 -m unittest discover -s tests -p '*_test.py'
+      - name: Check one-time connection settings
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+        run: |
+          test -n "$AWS_ACCESS_KEY_ID" || { echo 'Configure YC_ACCESS_KEY_ID in the production environment'; exit 1; }
+          test -n "$AWS_SECRET_ACCESS_KEY" || { echo 'Configure YC_SECRET_ACCESS_KEY in the production environment'; exit 1; }
+      - name: Install S3 client
+        run: python3 -m pip install 'boto3>=1.35,<2'
+      - name: Prepare changes and previous-version backup
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+          YC_BUCKET: vinoteka34.ru
+        run: python3 scripts/deploy_yandex.py plan
+      - name: Save rollback before publishing
+        uses: actions/upload-artifact@v4
+        with:
+          name: vinoteka34-rollback-${{ github.run_id }}
+          path: .deploy-work/
+          include-hidden-files: true
+          retention-days: 30
+          if-no-files-found: error
+      - name: Publish changed files and verify uploaded bytes
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+          YC_BUCKET: vinoteka34.ru
+        run: python3 scripts/deploy_yandex.py apply
+      - name: Deployment summary
+        run: |
+          echo '### VINOTEKA34 published to Yandex Object Storage' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Changed files were checked byte-for-byte. Previous objects are in the rollback artifact.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'The domain may continue to show cached content if Cloud CDN is configured.' >> "$GITHUB_STEP_SUMMARY"
