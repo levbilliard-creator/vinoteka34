@@ -192,7 +192,21 @@
     "333": "VINOTERRA-NEXT-333.png",
     "652": "VINOTERRA-NEXT-652.jpg",
     "757": "SVAM-NEXT-757.webp",
-    "620": "VINOTERRA-NEXT-333.png"
+    "620": "VINOTERRA-NEXT-333.png",
+    "15": "REVIEWED-20261114-15.webp",
+    "18": "REVIEWED-20261114-18.webp",
+    "39": "REVIEWED-20261114-39.webp",
+    "409": "REVIEWED-20261114-409.webp",
+    "23": "REVIEWED-20261114-23.webp",
+    "252": "REVIEWED-20261114-252.webp",
+    "394": "REVIEWED-20261114-394.webp",
+    "469": "REVIEWED-20261114-469.webp",
+    "470": "REVIEWED-20261114-470.webp",
+    "763": "REVIEWED-20261114-763.webp",
+    "766": "REVIEWED-20261114-766.webp",
+    "832": "REVIEWED-20261114-832.webp",
+    "866": "REVIEWED-20261114-866.webp",
+    "877": "REVIEWED-20261114-877.webp"
   },
   "web_sources": [
     {
@@ -1038,6 +1052,118 @@
       "file": "VINOTERRA-NEXT-333.png",
       "retrieved_on": "2026-11-14",
       "name_en": "Guy Allion Crémant de Loire"
+    },
+    {
+      "id": 15,
+      "file": "REVIEWED-20261114-15.webp",
+      "source_url": "https://moivinoteki.ru/item/benriach-the-original-ten-10-years-pu.htm",
+      "image_url": "https://moivinoteki.ru/photos/benriach-the-original-ten-10-years-pu.webp",
+      "identity": "БенРиах Ориджинал Тэн, 0,7 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 18,
+      "file": "REVIEWED-20261114-18.webp",
+      "source_url": "https://moivinoteki.ru/item/benriach-12-years.htm",
+      "image_url": "https://moivinoteki.ru/photos/benriach-12-years.webp",
+      "identity": "Бен Риах Твэлв, 0,7 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 39,
+      "file": "REVIEWED-20261114-39.webp",
+      "source_url": "https://moivinoteki.ru/item/baileys-original.htm",
+      "image_url": "https://moivinoteki.ru/photos/baileys-original-2.webp",
+      "identity": "Бэйлис, 0,7 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 409,
+      "file": "REVIEWED-20261114-409.webp",
+      "source_url": "https://moivinoteki.ru/item/ducento-montepulciano-dabruzzo.htm",
+      "image_url": "https://moivinoteki.ru/photos/ducento-montepulciano-dabruzzo.webp",
+      "identity": "Монтепульчано д'Абруццо Дученто, 0,75 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 23,
+      "file": "REVIEWED-20261114-23.webp",
+      "source_url": "https://moivinoteki.ru/item/ocean-buffet-vinho-verde-rose.htm",
+      "image_url": "https://moivinoteki.ru/photos/ocean-buffet-vinho-verde-rose.webp",
+      "identity": "Оушн Буффе Виньо Верде Розе, 0,75 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 252,
+      "file": "REVIEWED-20261114-252.webp",
+      "source_url": "https://moivinoteki.ru/item/humberto-canale-estate-sauvignon-blanc.htm",
+      "image_url": "https://moivinoteki.ru/photos/humberto-canale-estate-sauvignon-blanc.webp",
+      "identity": "Умберто Канале Эстейт Совиньон Блан, 0,75 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 394,
+      "file": "REVIEWED-20261114-394.webp",
+      "source_url": "https://moivinoteki.ru/item/ardbeg-wee-beastie.htm",
+      "image_url": "https://moivinoteki.ru/photos/ardbeg-wee-beastie.webp",
+      "identity": "Ардбег Ви Бисти 5 лет, 0,7 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 469,
+      "file": "REVIEWED-20261114-469.webp",
+      "source_url": "https://moivinoteki.ru/item/macallan-double-cask-12-years-1.htm",
+      "image_url": "https://moivinoteki.ru/photos/macallan-double-cask-12-years-1.webp",
+      "identity": "Макаллан Дабл Каск 12 лет, 0,7 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 470,
+      "file": "REVIEWED-20261114-470.webp",
+      "source_url": "https://moivinoteki.ru/item/glenfiddich-12-years.htm",
+      "image_url": "https://moivinoteki.ru/photos/glenfiddich-12-years.webp",
+      "identity": "Гленфиддик 12 лет, 0,7 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 763,
+      "file": "REVIEWED-20261114-763.webp",
+      "source_url": "https://moivinoteki.ru/item/pure-altitude-pinot-noir.htm",
+      "image_url": "https://moivinoteki.ru/photos/pure-altitude-pinot-noir.webp",
+      "identity": "Пюр Альтитюд Пино Нуар, 0,75 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 766,
+      "file": "REVIEWED-20261114-766.webp",
+      "source_url": "https://moivinoteki.ru/item/pure-altitude-chardonnay.htm",
+      "image_url": "https://moivinoteki.ru/photos/pure-altitude-chardonnay.webp",
+      "identity": "Пюр Альтитюд Шардоне, 0,75 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 832,
+      "file": "REVIEWED-20261114-832.webp",
+      "source_url": "https://moivinoteki.ru/item/becherovka.htm",
+      "image_url": "https://moivinoteki.ru/photos/becherovka-1.webp",
+      "identity": "Бехеровка, 0,7 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 866,
+      "file": "REVIEWED-20261114-866.webp",
+      "source_url": "https://vinoterra.ru/catalog/product/sierra-cantabria-rosado-2022-750-2020/",
+      "image_url": "https://vinoterra.ru/upload/iblock/34a/jvfff36hvb4o6ddeg3udqfyc9greqbs1/00019837-sierra-cantabria-rosado-2022-retoush.jpg",
+      "identity": "Сьерра Кантабрия Росадо Риоха, 0,75 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 877,
+      "file": "REVIEWED-20261114-877.webp",
+      "source_url": "https://moivinoteki.ru/item/jose-cuervo-especial-silver.htm",
+      "image_url": "https://moivinoteki.ru/photos/jose-cuervo-especial-silver.webp",
+      "identity": "Хосе Куэрво Эспесьяль Сильвер, 0,7 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
+      "retrieved_on": "2026-11-14"
     }
   ]
 }

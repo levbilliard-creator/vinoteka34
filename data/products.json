@@ -144,7 +144,7 @@
     "country": "Шотландия",
     "name_en": "",
     "price": 6224.0,
-    "image": null,
+    "image": "REVIEWED-20261114-15.webp",
     "inventory_key": "1247947e5e583e7350009a682899c59cb506b2be10eac0830aeb2becc92a9c53",
     "stock_date": "2026-10-31"
   },
@@ -188,7 +188,7 @@
     "country": "Шотландия",
     "name_en": "",
     "price": 7392.0,
-    "image": null,
+    "image": "REVIEWED-20261114-18.webp",
     "inventory_key": "e3eb398d731f81ae3e9331ba378d5bd2e59f93c9b92aa48067351eb037a8260d",
     "stock_date": "2026-10-31"
   },
@@ -382,7 +382,7 @@
     "country": "Ирландия",
     "name_en": "",
     "price": 2990.0,
-    "image": null,
+    "image": "REVIEWED-20261114-39.webp",
     "inventory_key": "2ed1daa9a98f837ffe78bbc46ef808a0e77b80f26d2ff6625222a05fa1173ac6",
     "stock_date": "2026-10-31"
   },
@@ -2569,7 +2569,7 @@
     "country": "Италия",
     "name_en": "",
     "price": 1590.0,
-    "image": null,
+    "image": "REVIEWED-20261114-409.webp",
     "inventory_key": "0e877cbbc859c81f148fddc063d277bf03ab9fde5529e89555a6b664c193c2ad",
     "stock_date": "2026-10-31"
   },
@@ -2761,7 +2761,7 @@
     "volume": "0,75 л",
     "name_en": "",
     "price": 1282.0,
-    "image": null,
+    "image": "REVIEWED-20261114-23.webp",
     "inventory_key": "8b02c774dd0e8cfd90b3adb10aaa0ab7ffbf12da949540f4e84743a30531ca04",
     "stock_date": "2026-10-31"
   },
@@ -2896,7 +2896,7 @@
     "country": "Аргентина",
     "name_en": "Sauvignon Blanc",
     "price": 2232.0,
-    "image": null,
+    "image": "REVIEWED-20261114-252.webp",
     "inventory_key": "0979c40aa7c96f37728faf6d4be2d434c827376b1d84ec80266e667ddffee7db",
     "stock_date": "2026-10-31"
   },
@@ -5270,7 +5270,7 @@
     "country": "Шотландия",
     "name_en": "",
     "price": 6690.0,
-    "image": null,
+    "image": "REVIEWED-20261114-394.webp",
     "inventory_key": "7c6cbf63f0728bd70774226abd04a6297d8ef2abc55ad344a3fd4561040509d7",
     "stock_date": "2026-10-31"
   },
@@ -6040,7 +6040,7 @@
     "country": "Шотландия",
     "name_en": "",
     "price": 11940.0,
-    "image": null,
+    "image": "REVIEWED-20261114-469.webp",
     "inventory_key": "2c36ab4fbec8a40b4de9efc804068fd4216ea5844e4bcb5c1020eb2aa4a8af86",
     "stock_date": "2026-10-31"
   },
@@ -6115,7 +6115,7 @@
     "country": "Шотландия",
     "name_en": "",
     "price": 5790.0,
-    "image": null,
+    "image": "REVIEWED-20261114-470.webp",
     "inventory_key": "c91a282a6d3920a0c7e38784d4435ed23c532c33595ca83d58052771ca7bc50a",
     "stock_date": "2026-10-31"
   },
@@ -7772,7 +7772,7 @@
     "country": "Франция",
     "name_en": "",
     "price": 1690.0,
-    "image": null,
+    "image": "REVIEWED-20261114-763.webp",
     "inventory_key": "097b2effe478e151ad5fe2e2eeddb59e99e5eef27b564359921182670b938f77",
     "stock_date": "2026-10-31"
   },
@@ -7817,7 +7817,7 @@
     "country": "Франция",
     "name_en": "",
     "price": 1690.0,
-    "image": null,
+    "image": "REVIEWED-20261114-766.webp",
     "inventory_key": "608283c1d91d3a0aab4fb6662c33d20d1131406343280de28709a988b9c241aa",
     "stock_date": "2026-10-31"
   },
@@ -8818,7 +8818,7 @@
     "country": "Чехия",
     "name_en": "",
     "price": 2140.0,
-    "image": null,
+    "image": "REVIEWED-20261114-832.webp",
     "inventory_key": "b69f4eb0ff364ed9292ba0099232d9890834564585bbae483b4f465cb737c4d3",
     "stock_date": "2026-10-31"
   },
@@ -9303,7 +9303,7 @@
     "country": "Испания",
     "name_en": "",
     "price": 1690.0,
-    "image": null,
+    "image": "REVIEWED-20261114-866.webp",
     "inventory_key": "f0dc976ee9d0c80a1680bdac5fe12c1059f37cc0f47018b843daa43c3176bcde",
     "stock_date": "2026-10-31"
   },
@@ -9465,7 +9465,7 @@
     "country": "Мексика",
     "name_en": "",
     "price": 1740.0,
-    "image": null,
+    "image": "REVIEWED-20261114-877.webp",
     "inventory_key": "64a5e0ed4940df79da850dc657eda0ff5d40d5174eb7c86e8b4bc526f1e08b09",
     "stock_date": "2026-10-31"
   },
