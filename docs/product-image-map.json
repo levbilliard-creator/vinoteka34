@@ -164,7 +164,35 @@
     "795": "PREMIER-795.jpg",
     "856": "PREMIER-856.png",
     "193": "PREMIER-193.jpg",
-    "857": "PREMIER-857.jpg"
+    "857": "PREMIER-857.jpg",
+    "639": "AROMA-NEXT-639.jpg",
+    "707": "AROMA-NEXT-707.jpg",
+    "602": "AROMA-NEXT-602.jpg",
+    "651": "AROMA-NEXT-651.jpg",
+    "855": "AROMA-NEXT-855.jpg",
+    "604": "AROMA-NEXT-604.jpg",
+    "268": "AROMA-NEXT-268.jpg",
+    "597": "AROMA-NEXT-597.jpg",
+    "510": "AROMA-NEXT-510.jpg",
+    "697": "FORTWINE-NEXT-697.jpg",
+    "336": "FORTWINE-NEXT-336.jpg",
+    "372": "JOIA-NEXT-372.jpg",
+    "759": "FORTWINE-NEXT-759.jpg",
+    "159": "VINOTERRA-NEXT-159.jpg",
+    "165": "VINOTERRA-NEXT-165.jpg",
+    "42": "VINOTERRA-NEXT-42.jpg",
+    "556": "VINOTERRA-NEXT-556.jpg",
+    "608": "VINOTERRA-NEXT-608.jpg",
+    "867": "VINOTERRA-NEXT-867.jpg",
+    "870": "VINOTERRA-NEXT-870.jpg",
+    "871": "VINOTERRA-NEXT-871.jpg",
+    "794": "VINOTERRA-NEXT-794.jpg",
+    "869": "VINOTERRA-NEXT-869.jpg",
+    "374": "VINOTERRA-NEXT-374.png",
+    "333": "VINOTERRA-NEXT-333.png",
+    "652": "VINOTERRA-NEXT-652.jpg",
+    "757": "SVAM-NEXT-757.webp",
+    "620": "VINOTERRA-NEXT-333.png"
   },
   "web_sources": [
     {
@@ -758,6 +786,258 @@
       "retrieved_on": "2026-11-14",
       "file": "PREMIER-857.jpg",
       "name_en": "Lordson Dry Gin"
+    },
+    {
+      "id": 639,
+      "source_url": "https://aroma.ru/produktsiya/vino/shardone-l-f-e-pyupilla-chardonnay-l-f-e-pupilla-0-187/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/1684/01b_LFE-Chardonay.jpg",
+      "identity": "ШАРДОНЕ Л.Ф.Э. ПЬЮПИЛЛА (CHARDONNAY L.F.E. PUPILLA)",
+      "file": "AROMA-NEXT-639.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Luis Felipe Edwards Pupilla Chardonnay"
+    },
+    {
+      "id": 707,
+      "source_url": "https://aroma.ru/produktsiya/vino/shardone-l-f-e-pyupilla-chardonnay-l-f-e-pupilla/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/676/01b_1.jpg",
+      "identity": "ШАРДОНЕ Л.Ф.Э. ПЬЮПИЛЛА (CHARDONNAY L.F.E. PUPILLA)",
+      "file": "AROMA-NEXT-707.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Luis Felipe Edwards Pupilla Chardonnay"
+    },
+    {
+      "id": 602,
+      "source_url": "https://aroma.ru/produktsiya/vino/kaberne-sovinon-l-f-e-pyupilla-cabernet-sauvignon-l-f-e-pupilla-0-187/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/1685/01b_LFE-Cabernet-Sauvignon.jpg",
+      "identity": "КАБЕРНЕ СОВИНЬОН Л.Ф.Э. ПЬЮПИЛЛА (CABERNET SAUVIGNON L.F.E. PUPILLA)",
+      "file": "AROMA-NEXT-602.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Luis Felipe Edwards Pupilla Cabernet Sauvignon"
+    },
+    {
+      "id": 651,
+      "source_url": "https://aroma.ru/produktsiya/vino/sovinon-blan-l-f-e-pyupilla-sauvignon-blanc-l-f-e-pupilla-0-187/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/1686/01b_LFE-Sauvignon-Blanc_2.jpg",
+      "identity": "СОВИНЬОН БЛАН Л.Ф.Э. ПЬЮПИЛЛА (SAUVIGNON BLANC L.F.E. PUPILLA)",
+      "file": "AROMA-NEXT-651.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Luis Felipe Edwards Pupilla Sauvignon Blanc"
+    },
+    {
+      "id": 855,
+      "source_url": "https://aroma.ru/produktsiya/vino/karmener-l-f-e-pyupilla-carmenere-l-f-e-pupilla-0-187/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/1687/01b_LFE-Carmenere.jpg",
+      "identity": "КАРМЕНЕР Л.Ф.Э. ПЬЮПИЛЛА (CARMENERE L.F.E. PUPILLA)",
+      "file": "AROMA-NEXT-855.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Luis Felipe Edwards Pupilla Carmenere"
+    },
+    {
+      "id": 604,
+      "source_url": "https://aroma.ru/produktsiya/vino/pino-gridzhio-l-f-e-pyupilla-pinot-grigio-l-f-e-pupilla1/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/2002/01b_LFE-Pinot-Grigio.jpg",
+      "identity": "ПИНО ГРИДЖИО Л.Ф.Э. ПЬЮПИЛЛА (PINOT GRIGIO L.F.E. PUPILLA)",
+      "file": "AROMA-NEXT-604.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Luis Felipe Edwards Pupilla Pinot Grigio"
+    },
+    {
+      "id": 268,
+      "source_url": "https://aroma.ru/produktsiya/krepkie-napitki/rom-matusalem-solera-7-matusalem-solera-7/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/1140/01b_1.jpg",
+      "identity": "Ром Матусалем Солера 7 (MATUSALEM SOLERA 7)",
+      "file": "AROMA-NEXT-268.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Matusalem Solera 7"
+    },
+    {
+      "id": 597,
+      "source_url": "https://aroma.ru/produktsiya/krepkie-napitki/viski-henki-bennister-blended-kupazhirovannyj-hankey-bannister-blended-0.7/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/935/01b_1.jpg",
+      "identity": "Виски  ХЭНКИ БЭННИСТЕР БЛЕНДЕД (КУПАЖИРОВАННЫЙ) (HANKEY BANNISTER BLENDED)",
+      "file": "AROMA-NEXT-597.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Hankey Bannister Original"
+    },
+    {
+      "id": 510,
+      "source_url": "https://aroma.ru/produktsiya/krepkie-napitki/viski-spejbern-10-let-speyburn-10-y-o/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/874/01b_1.jpg",
+      "identity": "Виски  СПЕЙБЕРН 10 ЛЕТ (SPEYBURN 10 Y.O.)",
+      "file": "AROMA-NEXT-510.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Speyburn 10 Years Old"
+    },
+    {
+      "id": 697,
+      "source_url": "https://fortwine.ru/product/vino-nittnaus-zweigelt-rose-2024-0-75/",
+      "image_url": "https://fortwine.ru/upload/iblock/da7/gebrnwl15cxc2wwb5zy1aiqhtyh2s8fw.jpg",
+      "identity": "Вино Nittnaus Zweigelt Rose 2024 г 750 мл",
+      "file": "FORTWINE-NEXT-697.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Nittnaus Zweigelt Rosé"
+    },
+    {
+      "id": 336,
+      "source_url": "https://fortwine.ru/product/vino-wohlmuth-s-dsteiermark-dac-gew-rztraminer-2022-0-75/",
+      "image_url": "https://fortwine.ru/upload/iblock/191/bqbaxbc8ifvq12zx4si7pbnw71ocyval.jpg",
+      "identity": "Вино Wohlmuth Südsteiermark DAC Gewürztraminer 2022 г 750 мл",
+      "file": "FORTWINE-NEXT-336.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Wohlmuth Gewürztraminer"
+    },
+    {
+      "id": 372,
+      "source_url": "https://joia.ru/product/vino_zukkardi_torrontes_seriya_a_2019_beloe_sukhoe_0_75l/",
+      "image_url": "https://joia.ru/upload/resize_cache/iblock/5f8/852_1278_1619711fa078991f0a23d032687646b21/n41vgzpq9h794tqwegt1ra4uz4fqbbq7.jpg",
+      "identity": "Вино Зуккарди Торронтес Серия А, белое, сухое, 0.75л",
+      "file": "JOIA-NEXT-372.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Zuccardi Torrontés"
+    },
+    {
+      "id": 759,
+      "source_url": "https://fortwine.ru/product/Vino-Simonsig-Chenin-Blanc-2020/",
+      "image_url": "https://fortwine.ru/upload/iblock/140/1406af5a5d628ac4bf153d240de3f10b.jpg",
+      "identity": "Вино Simonsig Chenin Blanc 2020 г 750 мл",
+      "file": "FORTWINE-NEXT-759.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Simonsig Chenin Blanc"
+    },
+    {
+      "id": 159,
+      "source_url": "https://vinoterra.ru/catalog/product/fattoria-lavacchio-puro-chianti-2021-750-2021/",
+      "image_url": "https://vinoterra.ru/upload/iblock/42f/711o7f0dojw43hymeow0q70xsx44nmwu/00020278-fattoria-lavacchio-puro-chianti-2021.jpg",
+      "identity": "Fattoria Lavacchio, Puro Chianti, 2021",
+      "file": "VINOTERRA-NEXT-159.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Fattoria Lavacchio Puro Chianti"
+    },
+    {
+      "id": 165,
+      "source_url": "https://vinoterra.ru/catalog/product/fattoria-lavacchio-puro-chianti-riserva-2015-750-2015/",
+      "image_url": "https://vinoterra.ru/upload/iblock/a4a/wutt2dhar9h4foefucu1tflpz7qubu7v/00017802-fattoria-lavacchio-puro-chianti-riserva-2015.jpg",
+      "identity": "Fattoria Lavacchio, Puro Chianti Riserva, 2015",
+      "file": "VINOTERRA-NEXT-165.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Fattoria Lavacchio Puro Chianti Riserva"
+    },
+    {
+      "id": 42,
+      "source_url": "https://vinoterra.ru/catalog/product/weinert-malbec-2018-750-2018/",
+      "image_url": "https://vinoterra.ru/upload/iblock/b4e/ol11dnyh2r25bsg2bf2t0kyspubn8t9i/malbec.jpg",
+      "identity": "Weinert, Malbec, 2018",
+      "file": "VINOTERRA-NEXT-42.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Weinert Malbec"
+    },
+    {
+      "id": 556,
+      "source_url": "https://vinoterra.ru/catalog/product/corvezzo-prosecco-brut-750-/",
+      "image_url": "https://vinoterra.ru/upload/iblock/ffd/dw822fhbjcjzxinrrlnwtc5vautfqqds/00019638-corvezzo-prosecco-brut.jpg",
+      "identity": "Игристое вино Corvezzo, Prosecco Brut",
+      "file": "VINOTERRA-NEXT-556.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Corvezzo Prosecco Brut"
+    },
+    {
+      "id": 608,
+      "source_url": "https://vinoterra.ru/catalog/product/corvezzo-pinot-grigio-2023-750-2023/",
+      "image_url": "https://vinoterra.ru/upload/iblock/e35/txklde6jhtr6x25eemki9n2kzq031ibg/00019515-corvezzo-pinot-grigio-2021.jpg",
+      "identity": "Corvezzo, Pinot Grigio, 2023",
+      "file": "VINOTERRA-NEXT-608.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Corvezzo Pinot Grigio"
+    },
+    {
+      "id": 867,
+      "source_url": "https://vinoterra.ru/catalog/product/les-vignobles-foncalieu-reserve-saint-marc-pinot-noir-2025-750-2025/",
+      "image_url": "https://vinoterra.ru/upload/iblock/bae/aig4qonc51ftjc4cla3gfxm02mrjgi0r/00023548-les-vignobles-foncalieu-reserve-saint-marc-pinot-noir-2025.jpg",
+      "identity": "Les Vignobles Foncalieu, Reserve Saint Marc Pinot Noir, 2025",
+      "file": "VINOTERRA-NEXT-867.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Les Vignobles Foncalieu Réserve Saint Marc Pinot Noir"
+    },
+    {
+      "id": 870,
+      "source_url": "https://vinoterra.ru/catalog/product/les-vignobles-foncalieu-injuste-2025-750-2025/",
+      "image_url": "https://vinoterra.ru/upload/iblock/3a1/vb5ucgpu2jb4906aq7rqttdjy5m0l03k/00023543-les-vignobles-foncalieu-injuste-2025.jpg",
+      "identity": "Les Vignobles Foncalieu, Injuste, 2025",
+      "file": "VINOTERRA-NEXT-870.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Les Vignobles Foncalieu Injuste"
+    },
+    {
+      "id": 871,
+      "source_url": "https://vinoterra.ru/catalog/product/les-vignobles-foncalieu-le-pigeonnier-vieilles-vignes-2024-750-2024/",
+      "image_url": "https://vinoterra.ru/upload/iblock/81f/fk8wmo7etxfggq45uiv0t3vq1gkhy0i0/00023541-les-vignobles-foncalieu-le-pigeonnier-vieilles-vignes-2024.jpg",
+      "identity": "Les Vignobles Foncalieu, Le Pigeonnier Vieilles Vignes, 2024",
+      "file": "VINOTERRA-NEXT-871.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Les Vignobles Foncalieu Le Pigeonnier Vieilles Vignes"
+    },
+    {
+      "id": 794,
+      "source_url": "https://vinoterra.ru/catalog/product/chateau-l-ermite-d-auzan-rose-2024-750-2024/",
+      "image_url": "https://vinoterra.ru/upload/iblock/7c5/04d76rriyu2rr7xzzup414yfrwjqkze8/Rose.jpg",
+      "identity": "Chateau L'Ermite d'Auzan, Rose, 2024",
+      "file": "VINOTERRA-NEXT-794.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Château L’Ermite d’Auzan Rosé"
+    },
+    {
+      "id": 869,
+      "source_url": "https://vinoterra.ru/catalog/product/chateau-l-ermite-d-auzan-gavroche-rouge-2024-750-2024/",
+      "image_url": "https://vinoterra.ru/upload/iblock/9d4/24vhidl1nolci1njtnl3hhltbdid958x/00019210-chateau-lermite-dauzan-gavroche-rouge-2021.jpg",
+      "identity": "Chateau L'Ermite d'Auzan, Gavroche Rouge, 2024",
+      "file": "VINOTERRA-NEXT-869.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Château L’Ermite d’Auzan Gavroche Rouge"
+    },
+    {
+      "id": 374,
+      "source_url": "https://vinoterra.ru/catalog/product/casa-rojo-machoman-2019/",
+      "image_url": "https://vinoterra.ru/upload/iblock/2b7/8gbnpl9xj30ke3c5ysm2lt7qs3gcs95x/Casa-Rojo-Machoman-2019.png",
+      "identity": "Casa Rojo, Machoman, 2019",
+      "file": "VINOTERRA-NEXT-374.png",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Casa Rojo Machoman"
+    },
+    {
+      "id": 333,
+      "source_url": "https://vinoterra.ru/catalog/product/guy-allion-cremant-de-loire-750-/",
+      "image_url": "https://vinoterra.ru/upload/iblock/9ab/hnkqcc5zci122x43rvlx0hvwin568uyd/00018797_Guy_Allion_Cremant_de_Loire.png",
+      "identity": "Игристое вино Guy Allion, Cremant de Loire",
+      "file": "VINOTERRA-NEXT-333.png",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Guy Allion Crémant de Loire"
+    },
+    {
+      "id": 652,
+      "source_url": "https://vinoterra.ru/catalog/product/corvezzo-prestige-rose-brut-750-/",
+      "image_url": "https://vinoterra.ru/upload/iblock/95b/0jfchgk3u8aob4il6o1o2va4yysnb517/00021834-corvezzo-prestige-rose-brut.jpg",
+      "identity": "Игристое вино Corvezzo, Prestige Rose Brut",
+      "file": "VINOTERRA-NEXT-652.jpg",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Corvezzo Prestige Rosé Brut"
+    },
+    {
+      "id": 757,
+      "source_url": "https://svamgroup.ru/products/tikhoe_vino/la_chasse_reserve_cotes_du_rhone_blanc",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9025310&w=640&q=75",
+      "identity": "La Chasse Reserve Cotes du Rhone blanc",
+      "file": "SVAM-NEXT-757.webp",
+      "retrieved_on": "2026-11-14",
+      "name_en": "La Chasse Réserve Côtes du Rhône Blanc"
+    },
+    {
+      "id": 620,
+      "source_url": "https://vinoterra.ru/catalog/product/guy-allion-cremant-de-loire-750-/",
+      "image_url": "https://vinoterra.ru/upload/iblock/9ab/hnkqcc5zci122x43rvlx0hvwin568uyd/00018797_Guy_Allion_Cremant_de_Loire.png",
+      "identity": "Игристое вино Guy Allion, Cremant de Loire",
+      "file": "VINOTERRA-NEXT-333.png",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Guy Allion Crémant de Loire"
     }
   ]
 }
