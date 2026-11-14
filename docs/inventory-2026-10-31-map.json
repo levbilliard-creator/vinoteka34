@@ -352,7 +352,8 @@
     "18": "Страна в акте расходится с данными производителя/импортера; исправлена на Австрия. Источник: https://www.nittnaus.net/en/weine/blaufraenkisch/",
     "300": "Страна в акте расходится с данными производителя/импортера; исправлена на Австрия. Источник: https://en.wohlmuth.at/product-category/white-wines/",
     "302": "Страна в акте расходится с данными производителя/импортера; исправлена на Франция. Источник: https://www.vineyardbrands.com/content/Tech%20Sheets/0085/0085-25-03-19-06-33-05-767.pdf",
-    "317": "Страна в акте расходится с данными производителя/импортера; исправлена на Испания. Источник: https://www.enterwine.com/es/nordes-blanco"
+    "317": "Страна в акте расходится с данными производителя/импортера; исправлена на Испания. Источник: https://www.enterwine.com/es/nordes-blanco",
+    "559": "Да Фейра Трейшадура: в акте Португалия; поставщик указывает Испанию, Галисию/Рибейро. Страна исправлена; исходный акт сохранён."
   },
   "omit_country": [
     96,
@@ -362,12 +363,14 @@
     "18": "Австрия",
     "300": "Австрия",
     "302": "Франция",
-    "317": "Испания"
+    "317": "Испания",
+    "559": "Испания"
   },
   "country_sources": {
     "18": "https://www.nittnaus.net/en/weine/blaufraenkisch/",
     "300": "https://en.wohlmuth.at/product-category/white-wines/",
     "302": "https://www.vineyardbrands.com/content/Tech%20Sheets/0085/0085-25-03-19-06-33-05-767.pdf",
-    "317": "https://www.enterwine.com/es/nordes-blanco"
+    "317": "https://www.enterwine.com/es/nordes-blanco",
+    "559": "https://premierwine.ru/catalog/vino/ispaniya/7736/"
   }
 }

@@ -137,7 +137,34 @@
     "8": "FORTWINE-8.jpg",
     "356": "JOIA-356.jpg",
     "340": "WINEDISCOVERY-340.png",
-    "825": "AST-825.png"
+    "825": "AST-825.png",
+    "670": "PREMIER-670.png",
+    "685": "PREMIER-685.jpg",
+    "787": "PREMIER-787.jpg",
+    "788": "PREMIER-788.jpg",
+    "784": "PREMIER-784.jpg",
+    "799": "PREMIER-799.jpg",
+    "796": "PREMIER-796.jpg",
+    "640": "PREMIER-640.png",
+    "607": "PREMIER-607.png",
+    "195": "PREMIER-195.png",
+    "188": "PREMIER-188.jpg",
+    "655": "PREMIER-655.jpg",
+    "797": "PREMIER-797.png",
+    "830": "PREMIER-830.jpg",
+    "629": "PREMIER-629.jpg",
+    "786": "PREMIER-786.png",
+    "712": "PREMIER-712.jpg",
+    "612": "PREMIER-612.jpg",
+    "192": "PREMIER-192.jpg",
+    "653": "PREMIER-653.png",
+    "789": "PREMIER-789.jpg",
+    "429": "PREMIER-429.jpg",
+    "635": "PREMIER-635.png",
+    "795": "PREMIER-795.jpg",
+    "856": "PREMIER-856.png",
+    "193": "PREMIER-193.jpg",
+    "857": "PREMIER-857.jpg"
   },
   "web_sources": [
     {
@@ -488,6 +515,249 @@
       "note": "Данные карточки подтверждены по поисковому представлению AST; прямое открытие старого URL из этой среды возвращает 404.",
       "file": "AST-825.png",
       "name_en": "Fiorino d'Oro Prosecco Rosé"
+    },
+    {
+      "id": 670,
+      "source_url": "https://premierwine.ru/catalog/vino/chili/8123/",
+      "image_url": "https://premierwine.ru/upload/resize_cache/iblock/a2a/450_450_140cd750bba9870f18aada2478b24840a/xk5i44cp08bhorq0fjdq11lo6trfqh4f.png",
+      "identity": "Вино Санта Альба Резерв Пино Нуар красное сухое 0,75л",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-670.png",
+      "name_en": "Santa Alba Reserva Pinot Noir"
+    },
+    {
+      "id": 685,
+      "source_url": "https://premierwine.ru/catalog/viski_/8164/",
+      "image_url": "https://premierwine.ru/upload/iblock/e32/wvn6xi9002u970aawbhvejqm9xh3n2ki.jpg",
+      "identity": "Виски японский купажированный  ФУЮ 0,75л Япония",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-685.jpg",
+      "name_en": "Fuyu Blended Japanese Whisky"
+    },
+    {
+      "id": 787,
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/8050/",
+      "image_url": "https://premierwine.ru/upload/iblock/91d/ljotvgs43dzlnvhgq81jlgkwectuz88j.jpeg",
+      "identity": "КАСТИЛЬО ДЕ АРЕСАН СИРА BIO & VEGAN 14,5%  красное сухое  0,75л.  Испания",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-787.jpg",
+      "name_en": "Castillo de Aresan Syrah"
+    },
+    {
+      "id": 788,
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/8082/",
+      "image_url": "https://premierwine.ru/upload/iblock/478/pbrwms7b3xpijlffd01oyy4ure6qjb6e.jpg",
+      "identity": "Пéталос де Аресан  Вердехо - Совиньон Блан BIO & VEGAN 12%  белое сухое  0,75л.  Испания",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-788.jpg",
+      "name_en": "Pétalos de Aresan Verdejo Sauvignon Blanc"
+    },
+    {
+      "id": 784,
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/7300/",
+      "image_url": "https://premierwine.ru/upload/iblock/85c/r85aessdln1tga208s0adxxnp02amzrs.jpg",
+      "identity": "БРИЛЛО ДЕЛЬ ДИА СОВИНЬОН БЛАН 12,5%  белое сухое  0,187л.  Испания",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-784.jpg",
+      "name_en": "Brillo del Día Sauvignon Blanc"
+    },
+    {
+      "id": 799,
+      "source_url": "https://premierwine.ru/catalog/vino/frantsiya/8375/",
+      "image_url": "https://premierwine.ru/upload/iblock/772/tuadtkq23fs8nplcdv96plkg2xt1jkoh.jpg",
+      "identity": "Киви Кюве Шардоне",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-799.jpg",
+      "name_en": "Kiwi Cuvée Chardonnay"
+    },
+    {
+      "id": 796,
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8534/",
+      "image_url": "https://premierwine.ru/upload/iblock/f5c/b13gm6gqjuut2c0pm62aopqmrw87bvms.jpeg",
+      "identity": "Борго дей Вассалли Фриулано (Фриули Изонцо DOC)",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-796.jpg",
+      "name_en": "Borgo dei Vassalli Friulano"
+    },
+    {
+      "id": 640,
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8448/",
+      "image_url": "https://premierwine.ru/upload/resize_cache/iblock/55e/450_450_140cd750bba9870f18aada2478b24840a/d0f41kxlegnnc7cvnitchpriam8ksvia.png",
+      "identity": "Саннедда Этна Россо (DOC Этна / Контрада «Санта Спирито»)",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-640.png",
+      "name_en": "Sorelle Zumbo Sannedda Etna Rosso"
+    },
+    {
+      "id": 607,
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8489/",
+      "image_url": "https://premierwine.ru/upload/iblock/9dd/9tv2jaib09klqshtpv158t8pqftez5kr.png",
+      "identity": "Кьяретто ди Бардолино Классико \"Касаль Бусоль\"",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-607.png",
+      "name_en": "Casal Busol Chiaretto di Bardolino Classico"
+    },
+    {
+      "id": 195,
+      "source_url": "https://premierwine.ru/catalog/vino/frantsiya/8428/",
+      "image_url": "https://premierwine.ru/upload/resize_cache/iblock/3b1/450_450_140cd750bba9870f18aada2478b24840a/vcxz4lqgg7hld0nkmz5mh1w1dmlz93az.png",
+      "identity": "Сансер «Ля Кот де Бюи»",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-195.png",
+      "name_en": "Jean-Max Roger Sancerre La Côte de Bué"
+    },
+    {
+      "id": 188,
+      "source_url": "https://premierwine.ru/catalog/igristye_vina/frantsiya_1/8303/",
+      "image_url": "https://premierwine.ru/upload/iblock/7fe/xad5rg6i8ynkpqlu5sg4trhz0mmhaxrf.jpg",
+      "identity": "Пьер Соннен Креман д'Эльзас Шардоне",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-188.jpg",
+      "name_en": "Pierre Sonnen Crémant d’Alsace Chardonnay"
+    },
+    {
+      "id": 655,
+      "source_url": "https://premierwine.ru/catalog/igristye_vina/yuar/8353/",
+      "image_url": "https://premierwine.ru/upload/iblock/d30/c2kugnyoxi3ihs2tqqy6i084cn4hb84j.jpg",
+      "identity": "Киви Кюве Кап Классик",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-655.jpg",
+      "name_en": "Kiwi Cuvée Cap Classique"
+    },
+    {
+      "id": 797,
+      "source_url": "https://premierwine.ru/catalog/igristye_vina/frantsiya_1/7600/",
+      "image_url": "https://premierwine.ru/upload/resize_cache/iblock/7b5/450_450_140cd750bba9870f18aada2478b24840a/ml63achwft0nwfxcqqdim80odsrly0s5.png",
+      "identity": "Моаяр-Гриво КРЕМАН ДЕ БУРГОНЬ  11,5%  белое брют  0,75л.  Франция",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-797.png",
+      "name_en": "Moillard-Grivot Crémant de Bourgogne"
+    },
+    {
+      "id": 830,
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/7769/",
+      "image_url": "https://premierwine.ru/upload/iblock/1aa/zp17qwzsutqmwjpa4uceugzq06baf0ig.jpg",
+      "identity": "ПАСО ДЕ МИРАСОЛЕС АЛЬБАРИНЬО  12%  белое сухое  0,75л.  Испания",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-830.jpg",
+      "name_en": "Paso de Mirasoles Albariño"
+    },
+    {
+      "id": 629,
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/7780/",
+      "image_url": "https://premierwine.ru/upload/iblock/388/etsboet4foca0bg842i89hp9k3rlfihk.jpg",
+      "identity": "КАСТИЛЬО ДЕ АРЕCАН КАБЕРНЕ СОВИНЬОН  14%  красное сухое  0,75л.  Испания",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-629.jpg",
+      "name_en": "Castillo de Aresan Cabernet Sauvignon"
+    },
+    {
+      "id": 786,
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/7736/",
+      "image_url": "https://premierwine.ru/upload/resize_cache/iblock/8b9/450_450_140cd750bba9870f18aada2478b24840a/4krbni4830680c8284nhlju0n3du8357.png",
+      "identity": "ДА ФЕЙРА Трейшадура  12%  белое сухое  0,75л.  Испания",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-786.png",
+      "name_en": "Da Feira Treixadura"
+    },
+    {
+      "id": 712,
+      "source_url": "https://premierwine.ru/catalog/vino/germaniya/8388/",
+      "image_url": "https://premierwine.ru/upload/iblock/9c7/r2h5nzaoezqoj6cxeq6upo5e63gwwa6n.jpg",
+      "identity": "Санкт Габриэль Рислинг",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-712.jpg",
+      "name_en": "Saint Gabriel Riesling"
+    },
+    {
+      "id": 612,
+      "source_url": "https://premierwine.ru/catalog/vino/frantsiya/7711/",
+      "image_url": "https://premierwine.ru/upload/iblock/5af/clj13bis6f4649suq98hw04k20cxr10t.jpg",
+      "identity": "ШАТО Ла Флер Бодрон БОРДО СУПЕРИОР  13%  красное сухое  0,75  Франция",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-612.jpg",
+      "name_en": "Château La Fleur Baudron Bordeaux Supérieur"
+    },
+    {
+      "id": 192,
+      "source_url": "https://premierwine.ru/catalog/vino/frantsiya/8078/",
+      "image_url": "https://premierwine.ru/upload/iblock/837/qmxi0em8obfq3ps45tn464culr0r0vih.jpg",
+      "identity": "Вино Домен де ла Шартрез Крю дю Рон Шатонеф-дю-Пап 15%  красное сухое  0,75  Франция",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-192.jpg",
+      "name_en": "Domaine de la Chartreuse Châteauneuf-du-Pape"
+    },
+    {
+      "id": 653,
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/7305/",
+      "image_url": "https://premierwine.ru/upload/resize_cache/iblock/800/450_450_140cd750bba9870f18aada2478b24840a/3742sna3j6qagb0fxcnfid8lph1m37di.png",
+      "identity": "ВИЛЛА ПЬЕРИ Примитиво  14%  красное сухое  0,187л.  Италия",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-653.png",
+      "name_en": "Villa Pieri Primitivo"
+    },
+    {
+      "id": 789,
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/7728/",
+      "image_url": "https://premierwine.ru/upload/iblock/e6f/3n7cto3lb8lc5yd22i422010myc1zmxv.jpg",
+      "identity": "КАМПИ РУДИ РОССО  14%  красное  полусухое  0,75л.  Италия",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-789.jpg",
+      "name_en": "Campi Rudi Rosso"
+    },
+    {
+      "id": 429,
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/7802/",
+      "image_url": "https://premierwine.ru/upload/iblock/588/bqaticq0tz00xa7tugjv328i35fkthnx.jpg",
+      "identity": "ТОННО СИРА  14%  красное полусухое  0,75л.  Италия",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-429.jpg",
+      "name_en": "Tonno Syrah"
+    },
+    {
+      "id": 635,
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8482/",
+      "image_url": "https://premierwine.ru/upload/iblock/8aa/ju9iitabawn3ra1rkgpk30mg03tsqq0i.png",
+      "identity": "Солейано Россо",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-635.png",
+      "name_en": "Soleiano Marche Rosso"
+    },
+    {
+      "id": 795,
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8538/",
+      "image_url": "https://premierwine.ru/upload/iblock/d2f/y6dfd8yqcbqw07rzty3gyz851pynhw87.jpeg",
+      "identity": "Борго дей Вассалли Пино Нуар (Фриули DOC)",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-795.jpg",
+      "name_en": "Borgo dei Vassalli Pinot Noir"
+    },
+    {
+      "id": 856,
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/7285/",
+      "image_url": "https://premierwine.ru/upload/iblock/b28/5dlfoj17dlga7tpjx5k0uxtmkvxklmeo.png",
+      "identity": "КАНТИНА САНГРО ТЕРРА РЕДЖИА МОНТЕПУЛЬЧАНО Д’АБРУЦЦО РИЗЕРВА  14%  красное сухое  0,75л.  Италия",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-856.png",
+      "name_en": "Cantina Sangro Terra Regia Montepulciano d’Abruzzo Riserva"
+    },
+    {
+      "id": 193,
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8149/",
+      "image_url": "https://premierwine.ru/upload/iblock/943/anw95wt2n2m9ng6n2vz5d3ukxn0m63b8.jpg",
+      "identity": "Вино Пассороне Аппассименто Органик красное полусухое 0,75л Италия",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-193.jpg",
+      "name_en": "Passorone Appassimento"
+    },
+    {
+      "id": 857,
+      "source_url": "https://premierwine.ru/catalog/dzhin/7280/",
+      "image_url": "https://premierwine.ru/upload/iblock/7be/yg5luv1x070m0aymtbivlw60oao0z643.jpg",
+      "identity": "ЛОРДСОН ДРАЙ ДЖИН  37,5%  джин  0,7л.  Франция",
+      "retrieved_on": "2026-11-14",
+      "file": "PREMIER-857.jpg",
+      "name_en": "Lordson Dry Gin"
     }
   ]
 }
