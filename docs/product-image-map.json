@@ -88,7 +88,7 @@
     "417": "Вино красное сухое. НОУ БУЛЛ ЗИНФАНДЕЛЬ 0,75л. США,Калифорния.jpg",
     "319": "Габриэль глас.jpg",
     "395": "Вермут Атха Оранж красный сладкий 1л. Испания.png",
-    "549": "Клаштер Светли Лежак. Светлое фильтрованное. Чешская республика.jpg",
+    "549": "SVAM-klaster_svetle.webp",
     "473": "Классический черный чай, обогащенный антиоксидантами «Энергия».jpg",
     "457": "Чайный напиток «Индиго» с добавлением цветков Анчан.jpg",
     "502": "Моет & Шандон Империал Брют.jpg",
@@ -106,7 +106,28 @@
     "50": "St-Michael-Eppan-Riesling-Montiggl-075.jpg",
     "7": "Bagots-Triple-Batch-070.png",
     "65": "Josep-Ventosa-Cava-Brut-Rose-075.webp",
-    "43": "Don-Julio-Reposado-070.webp"
+    "43": "Don-Julio-Reposado-070.webp",
+    "657": "SVAM-tour_de_grapefruit_2.webp",
+    "599": "SVAM-maisels_weisse_original.webp",
+    "646": "SVAM-jacobinus_klosterbiere_hefeweizen_2.webp",
+    "645": "SVAM-jacobinus_klosterbiere_classic_pils.webp",
+    "686": "SVAM-ausweis.webp",
+    "664": "SVAM-maisels_weisse_alkoholfrei.webp",
+    "711": "SVAM-milk_of_amnesia_non_alcoholic.webp",
+    "828": "SVAM-lindemans_kriek_3.webp",
+    "791": "SVAM-sint_gummarus_tripel_2.webp",
+    "548": "SVAM-bowler_ipa.webp",
+    "662": "SVAM-inu_merlot.webp",
+    "673": "SVAM-grande_nuit_chardonnay.webp",
+    "755": "SVAM-inu_carmenere.webp",
+    "642": "SimpleWine-Bruni-Zero-075.png",
+    "751": "SimpleWine-Hans-Baer-Riesling-Nonalcoholic-075.png",
+    "583": "VT-Rem-Akchurin-Merlot.jpg",
+    "585": "VT-Rem-Akchurin-Kokur.jpg",
+    "594": "VT-Rem-Akchurin-Muscat-Orange.jpg",
+    "771": "VT-Rem-Akchurin-Muscat-Brut.jpg",
+    "170": "VT-Heinrich-Weisze-Freyheit-2017-075.jpg",
+    "172": "VT-Heinrich-Weisze-Freyheit-2017-075.jpg"
   },
   "web_sources": [
     {
@@ -156,6 +177,216 @@
       "source_url": "https://moivinoteki.ru/item/don-julio-reposado.htm",
       "identity": "Don Julio Reposado 0.7 l",
       "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 657,
+      "file": "SVAM-tour_de_grapefruit_2.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/tour_de_grapefruit_2",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9025125&w=640&q=75",
+      "identity": "Tour de grapefruit 0.5 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "67a5b1e5c9d389fac1a2358a",
+      "name_en": "Tour de grapefruit"
+    },
+    {
+      "id": 599,
+      "file": "SVAM-maisels_weisse_original.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/maisels_weisse_original",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9001787&w=640&q=75",
+      "identity": "Maisels Weisse Original 0.5 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "651440079bc8cc1055d98f24",
+      "name_en": "Maisels Weisse Original"
+    },
+    {
+      "id": 646,
+      "file": "SVAM-jacobinus_klosterbiere_hefeweizen_2.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/jacobinus_klosterbiere_hefeweizen_2",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9025552&w=640&q=75",
+      "identity": "Jacobinus Klosterbiere Hefeweizen 0.5 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "69b3e2a686bbfdfe11e44765",
+      "name_en": "Jacobinus Klosterbiere Hefeweizen"
+    },
+    {
+      "id": 645,
+      "file": "SVAM-jacobinus_klosterbiere_classic_pils.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/jacobinus_klosterbiere_classic_pils",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9025551&w=640&q=75",
+      "identity": "Jacobinus Klosterbiere Classic Pils 0.5 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "69b3e2a686bbfdfe11e44761",
+      "name_en": "Jacobinus Klosterbiere Classic Pils"
+    },
+    {
+      "id": 686,
+      "file": "SVAM-ausweis.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/ausweis",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9020269&w=640&q=75",
+      "identity": "Ausweis 0.5 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "651440079bc8cc1055d98f60",
+      "name_en": "Ausweis"
+    },
+    {
+      "id": 664,
+      "file": "SVAM-maisels_weisse_alkoholfrei.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/maisels_weisse_alkoholfrei",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9001790&w=640&q=75",
+      "identity": "Maisels Weisse Alkoholfrei 0.5 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "651440079bc8cc1055d98f28",
+      "name_en": "Maisels Weisse Alkoholfrei"
+    },
+    {
+      "id": 549,
+      "file": "SVAM-klaster_svetle.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/klaster_svetle",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9023248&w=640&q=75",
+      "identity": "Klaster Svetle 0.5 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "651440079bc8cc1055d98f6c",
+      "name_en": "Klaster Svetle"
+    },
+    {
+      "id": 711,
+      "file": "SVAM-milk_of_amnesia_non_alcoholic.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/milk_of_amnesia_non_alcoholic",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9025550&w=640&q=75",
+      "identity": "Milk of Amnesia non-alcoholic 0.5 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "69c3ded788048b924d9e65ee",
+      "name_en": "Milk of Amnesia non-alcoholic"
+    },
+    {
+      "id": 828,
+      "file": "SVAM-lindemans_kriek_3.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/lindemans_kriek_3",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9012092&w=640&q=75",
+      "identity": "Lindemans Kriek 0.25 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "656092ec95a184aa7b6f5e12",
+      "name_en": "Lindemans Kriek"
+    },
+    {
+      "id": 791,
+      "file": "SVAM-sint_gummarus_tripel_2.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/sint_gummarus_tripel_2",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9019930&w=640&q=75",
+      "identity": "Sint Gummarus Tripel 0.75 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "655e609d95a184aa7b6f5425",
+      "name_en": "Sint Gummarus Tripel"
+    },
+    {
+      "id": 548,
+      "file": "SVAM-bowler_ipa.webp",
+      "source_url": "https://svamgroup.ru/products/pivo_fasovka/bowler_ipa",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9015921&w=640&q=75",
+      "identity": "Bowler IPA 0.5 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "651440079bc8cc1055d98f40",
+      "name_en": "Bowler IPA"
+    },
+    {
+      "id": 662,
+      "file": "SVAM-inu_merlot.webp",
+      "source_url": "https://svamgroup.ru/products/tikhoe_vino/inu_merlot",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9024452&w=640&q=75",
+      "identity": "Inu Merlot 0.75 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "6724d34db068ee6b42c2789f",
+      "name_en": "Inu Merlot"
+    },
+    {
+      "id": 673,
+      "file": "SVAM-grande_nuit_chardonnay.webp",
+      "source_url": "https://svamgroup.ru/products/tikhoe_vino/grande_nuit_chardonnay",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9022748&w=640&q=75",
+      "identity": "Grande Nuit Chardonnay 0.75 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "651440089bc8cc1055d99158",
+      "name_en": "Grande Nuit Chardonnay"
+    },
+    {
+      "id": 755,
+      "file": "SVAM-inu_carmenere.webp",
+      "source_url": "https://svamgroup.ru/products/tikhoe_vino/inu_carmenere",
+      "image_url": "https://svamgroup.ru/_next/image?url=%2Fapi%2Ffiles%2FgetFile%3Fid%3D%D1%8F9024451&w=640&q=75",
+      "identity": "Inu Carmenere 0.75 l",
+      "retrieved_on": "2026-11-14",
+      "supplier_id": "6724d34db068ee6b42c2789b",
+      "name_en": "Inu Carmenere"
+    },
+    {
+      "id": 642,
+      "file": "SimpleWine-Bruni-Zero-075.png",
+      "source_url": "https://simplewine.ru/catalog/product/zero_075_158682/",
+      "image_url": "https://static.simplewine.ru/upload/iblock/a3a/a3a55b5a1e51c6eac6492f1e857dea00.png?fmt=webp",
+      "identity": "Bruni Zero 0.75 l",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 751,
+      "file": "SimpleWine-Hans-Baer-Riesling-Nonalcoholic-075.png",
+      "source_url": "https://simplewine.ru/catalog/product/hans_baer_riesling_no_alcohol_075_160829/",
+      "image_url": "https://static.simplewine.ru/upload/iblock/ef7/ef776090930bd7fafff9cae1944fc511.png?fmt=webp",
+      "identity": "Hans Baer Riesling Low Alcohol 0.75 l",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 583,
+      "file": "VT-Rem-Akchurin-Merlot.jpg",
+      "source_url": "https://vinoterra.ru/catalog/product/rem-akchurin-merlot-2024-750-2024/",
+      "image_url": "https://vinoterra.ru/upload/iblock/764/c74gz92yks1sn304m2xmum677uibzzay/rem-akchurin-merlot.jpg",
+      "identity": "Rem Akchurin, Merlot, 2024, 750 мл",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Rem Akchurin, Merlot"
+    },
+    {
+      "id": 585,
+      "file": "VT-Rem-Akchurin-Kokur.jpg",
+      "source_url": "https://vinoterra.ru/catalog/product/rem-akchurin-kokur-2025-750-2025/",
+      "image_url": "https://vinoterra.ru/upload/iblock/4b1/vwx4r4rj6w9ty7b1tv4eoi8fplv20rg4/00023271-rem-akchurin-kokur-2025.jpg",
+      "identity": "Rem Akchurin, Kokur, 2025, 750 мл",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Rem Akchurin, Kokur"
+    },
+    {
+      "id": 594,
+      "file": "VT-Rem-Akchurin-Muscat-Orange.jpg",
+      "source_url": "https://vinoterra.ru/catalog/product/rem-akchurin-muscat-orange-2023-750-2023/",
+      "image_url": "https://vinoterra.ru/upload/iblock/3b9/sfj1ayxmaaqmxd3es7q3bppppyqwhk5z/rem-akchurin-muscat-orange.jpg",
+      "identity": "Rem Akchurin, Muscat Orange, 2023, 750 мл",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Rem Akchurin, Muscat Orange"
+    },
+    {
+      "id": 771,
+      "file": "VT-Rem-Akchurin-Muscat-Brut.jpg",
+      "source_url": "https://vinoterra.ru/catalog/product/rem-akchurin-muscat-brut-2024-750-/",
+      "image_url": "https://vinoterra.ru/upload/iblock/12c/3cvrf9zmhxvrzrty387vwfrcef2ll5ke/00023129-rem-akchurin-muscat-brut-2024.jpg",
+      "identity": "Rem Akchurin, Muscat Brut, 2024, 750 мл",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Rem Akchurin, Muscat Brut"
+    },
+    {
+      "id": 170,
+      "file": "VT-Heinrich-Weisze-Freyheit-2017-075.jpg",
+      "source_url": "https://vinoterra.ru/catalog/product/heinrich-weisze-freyheit-2017-750-2017/",
+      "image_url": "https://vinoterra.ru/upload/iblock/9f0/87q5tmdlt46uuoc332fups751g4vp34l/00018706_Heinrich_WeiszeFreyheit_2017.jpg",
+      "identity": "Heinrich, Weisze Freyheit, 2017, 750 мл",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Heinrich, Weisze Freyheit"
+    },
+    {
+      "id": 172,
+      "file": "VT-Heinrich-Weisze-Freyheit-2017-075.jpg",
+      "source_url": "https://vinoterra.ru/catalog/product/heinrich-weisze-freyheit-2017-750-2017/",
+      "image_url": "https://vinoterra.ru/upload/iblock/9f0/87q5tmdlt46uuoc332fups751g4vp34l/00018706_Heinrich_WeiszeFreyheit_2017.jpg",
+      "identity": "Heinrich, Weisze Freyheit, 2017, 750 мл",
+      "retrieved_on": "2026-11-14",
+      "name_en": "Heinrich, Weisze Freyheit"
     }
   ]
 }
