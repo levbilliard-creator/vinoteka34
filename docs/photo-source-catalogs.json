@@ -1,0 +1,64 @@
+{
+  "reviewed_on": "2026-11-14",
+  "purpose": "Фотографии для существующих товарных карточек",
+  "retail_prices": "Только из акта инвентаризации. Цены поставщиков не импортируются.",
+  "identity_rules": [
+    "Совпадение производителя, названия и линейки",
+    "Проверка объёма, цвета и алкогольной/безалкогольной версии",
+    "Год на фото не заполняет отсутствующий в акте год урожая",
+    "Сомнительное совпадение остаётся без фото"
+  ],
+  "sources": [
+    {
+      "name": "SVAM Group",
+      "url": "https://svamgroup.ru/products",
+      "status": "used"
+    },
+    {
+      "name": "SimpleWine",
+      "url": "https://simplewine.ru/stock/all-the-same-but-0/",
+      "status": "used"
+    },
+    {
+      "name": "Винотерра",
+      "url": "https://vinoterra.ru/catalog/",
+      "status": "used"
+    },
+    {
+      "name": "AST",
+      "url": "https://ast.wine/",
+      "status": "used"
+    },
+    {
+      "name": "Fortwine",
+      "url": "https://fortwine.ru/",
+      "status": "used"
+    },
+    {
+      "name": "Vinicom",
+      "url": "https://vinicom.ru/",
+      "status": "used"
+    },
+    {
+      "name": "Joia",
+      "url": "https://joia.ru/",
+      "status": "used"
+    },
+    {
+      "name": "Wine Discovery",
+      "url": "https://winediscovery.ru/",
+      "status": "used"
+    },
+    {
+      "name": "Bravo Trade",
+      "url": "https://bravotrade.ru/",
+      "status": "retry_later",
+      "note": "Каталог прочитан через поисковое представление. Прямые запросы из этой среды возвращают HTTP 503; точные фото текущих позиций для загрузки пока не подтверждены."
+    }
+  ],
+  "matching_notes": [
+    "Valdo Marca Oro Prosecco Superiore и Aquarius Blanc de Blancs: источник указывает Extra Dry, акт — брют. Новые фото не присвоены до уточнения варианта.",
+    "Quinta do Infantado Porto Tawny: источник 0,75 л, акт 0,7 л. Фото не присвоено другому объёму.",
+    "Fiorino Prosecco Rosé: фото подтверждено по именованной карточке в поисковом представлении AST; прямой URL старой карточки возвращает 404. Год с этикетки в товар не переносится."
+  ]
+}

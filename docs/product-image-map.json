@@ -127,7 +127,17 @@
     "594": "VT-Rem-Akchurin-Muscat-Orange.jpg",
     "771": "VT-Rem-Akchurin-Muscat-Brut.jpg",
     "170": "VT-Heinrich-Weisze-Freyheit-2017-075.jpg",
-    "172": "VT-Heinrich-Weisze-Freyheit-2017-075.jpg"
+    "172": "VT-Heinrich-Weisze-Freyheit-2017-075.jpg",
+    "744": "VINICOM-744.png",
+    "410": "VINICOM-410.png",
+    "683": "VINICOM-683.png",
+    "665": "JOIA-665.jpg",
+    "373": "JOIA-373.jpg",
+    "660": "JOIA-660.jpg",
+    "8": "FORTWINE-8.jpg",
+    "356": "JOIA-356.jpg",
+    "340": "WINEDISCOVERY-340.png",
+    "825": "AST-825.png"
   },
   "web_sources": [
     {
@@ -387,6 +397,97 @@
       "identity": "Heinrich, Weisze Freyheit, 2017, 750 мл",
       "retrieved_on": "2026-11-14",
       "name_en": "Heinrich, Weisze Freyheit"
+    },
+    {
+      "id": 744,
+      "image_url": "https://vinicom.ru/wa-data/public/shop/products/09/44/4409/images/10437/10437.750.png",
+      "source_url": "https://vinicom.ru/champagnes-and-sparkling/italy/valdo/valdo-rose-brut-doc-0.2l/",
+      "identity": "Игристое вино Valdo Rosè Brut Prosecco DOC 0,2 l розовое брют",
+      "retrieved_on": "2026-11-14",
+      "file": "VINICOM-744.png",
+      "name_en": "Valdo Rosé Brut Prosecco DOC"
+    },
+    {
+      "id": 410,
+      "image_url": "https://vinicom.ru/wa-data/public/shop/products/60/80/8060/images/17767/17767.750.png",
+      "source_url": "https://vinicom.ru/champagnes-and-sparkling/italy/valdo/valdo-aquarius-rose-brut/",
+      "identity": "Игристое вино Valdo Aquarius Rose Brut розовое брют",
+      "retrieved_on": "2026-11-14",
+      "file": "VINICOM-410.png",
+      "name_en": "Valdo Aquarius Rosé Brut"
+    },
+    {
+      "id": 683,
+      "image_url": "https://vinicom.ru/wa-data/public/shop/products/65/27/2765/images/1336/1336.750.png",
+      "source_url": "https://vinicom.ru/champagnes-and-sparkling/italy/valdo/valdo-marca-oro-rose-brut-doc/",
+      "identity": "Игристое вино Valdo Marca Oro Rosè Brut Prosecco DOC розовое брют",
+      "retrieved_on": "2026-11-14",
+      "file": "VINICOM-683.png",
+      "name_en": "Valdo Marca Oro Rosé Brut Prosecco DOC"
+    },
+    {
+      "id": 665,
+      "image_url": "https://joia.ru/upload/resize_cache/iblock/cd5/500_500_0619711fa078991f0a23d032687646b21/sv320516gzfg0x3ekq1j2dcroj3eyb0d.jpeg",
+      "source_url": "https://joia.ru/product/vino_koto_de_imas_rezerva_riokha_doc_krasnoe_sukhoe_0_75l/",
+      "identity": "Вино Кото де Имас Резерва Риоха, DOC, красное, сухое, 0.75л",
+      "retrieved_on": "2026-11-14",
+      "file": "JOIA-665.jpg",
+      "name_en": "Coto de Imaz Reserva Rioja"
+    },
+    {
+      "id": 373,
+      "image_url": "https://joia.ru/upload/resize_cache/iblock/d73/500_500_0619711fa078991f0a23d032687646b21/co7cqm2w10nl96kwvrv2qtn8qnw9398n.jpg",
+      "source_url": "https://joia.ru/product/vino_tito_zukkardi_2016_krasnoe_sukhoe_0_75l/",
+      "identity": "Вино Тито Зуккарди, красное, сухое, 0.75л",
+      "retrieved_on": "2026-11-14",
+      "file": "JOIA-373.jpg",
+      "name_en": "Tito Zuccardi"
+    },
+    {
+      "id": 660,
+      "image_url": "https://joia.ru/upload/resize_cache/iblock/9d1/500_500_0619711fa078991f0a23d032687646b21/0r8ay3e5yalibn6r1cfnwh8i2o9whv53.jpeg",
+      "source_url": "https://joia.ru/product/vino_el_koto_kriansa_riokha_doc_krasnoe_sukhoe_0_75l/",
+      "identity": "Вино Эль Кото Крианса Риоха, DOC, красное, сухое, 0.75л",
+      "retrieved_on": "2026-11-14",
+      "file": "JOIA-660.jpg",
+      "name_en": "El Coto Crianza Rioja"
+    },
+    {
+      "id": 8,
+      "image_url": "https://fortwine.ru/upload/iblock/e6d/y7th49p37pc5a7yawft37ib6fzxbwi24.jpg",
+      "source_url": "https://fortwine.ru/product/vino-nittnaus-blaufrankisch-selection-2022-0-75/",
+      "identity": "Вино Nittnaus Blaufrankisch Selection",
+      "retrieved_on": "2026-11-14",
+      "file": "FORTWINE-8.jpg",
+      "name_en": "Nittnaus Blaufränkisch Selection"
+    },
+    {
+      "id": 356,
+      "source_url": "https://joia.ru/product/nordes_blanko_belyy_sladkiy_1l/",
+      "image_url": "https://joia.ru/upload/resize_cache/iblock/ca5/852_1278_1619711fa078991f0a23d032687646b21/4sf9g35zwhk2bg212wivd68hn8zkhwc7.jpg",
+      "identity": "Вермут Нордес Бланко, белый, сладкий, 1л",
+      "retrieved_on": "2026-11-14",
+      "file": "JOIA-356.jpg",
+      "name_en": "Nordés Vermouth Blanco"
+    },
+    {
+      "id": 340,
+      "source_url": "https://winediscovery.ru/katalog/tovar/gruner_veltliner_stift_gottweig_2024_075/",
+      "image_url": "https://winediscovery.ru/upload/iblock/324/9l94hmlvrit85iwj795sm9vrai3z7tnu/03716.png@x750",
+      "identity": "Gruner Veltliner Stift Gottweig",
+      "retrieved_on": "2026-11-14",
+      "file": "WINEDISCOVERY-340.png",
+      "name_en": "Stift Göttweig Grüner Veltliner"
+    },
+    {
+      "id": 825,
+      "source_url": "https://ast.wine/catalog/product/fiorino_d_oro_prosecco_rose_8001592005536_31508/",
+      "image_url": "https://static.ast.wine/iblock/29b/29b44e77264f558ebeab9b844369439b/1f24f28d4b946a88a188a73dcc686731.png",
+      "identity": "Fiorino d'Oro Prosecco Rosé 0.75 l",
+      "retrieved_on": "2026-11-14",
+      "note": "Данные карточки подтверждены по поисковому представлению AST; прямое открытие старого URL из этой среды возвращает 404.",
+      "file": "AST-825.png",
+      "name_en": "Fiorino d'Oro Prosecco Rosé"
     }
   ]
 }
