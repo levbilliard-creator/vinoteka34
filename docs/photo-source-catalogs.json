@@ -72,6 +72,31 @@
       "url": "https://moivinoteki.ru/",
       "status": "used",
       "verified_photo_bindings": 13
+    },
+    {
+      "name": "РЕММА",
+      "url": "https://remma.ru/shop",
+      "status": "used"
+    },
+    {
+      "name": "Каталог РЕММА, октябрь 2026",
+      "url": "https://remma.ru/katalog_remma.pdf",
+      "status": "used"
+    },
+    {
+      "name": "Winemore",
+      "url": "https://winemore.ru/",
+      "status": "used"
+    },
+    {
+      "name": "1001Spirits",
+      "url": "https://www.1001spirits.com/",
+      "status": "used"
+    },
+    {
+      "name": "Le Comptoir Irlandais",
+      "url": "https://www.comptoir-irlandais.com/",
+      "status": "used"
     }
   ],
   "matching_notes": [

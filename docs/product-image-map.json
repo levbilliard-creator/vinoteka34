@@ -206,7 +206,170 @@
     "766": "REVIEWED-20261114-766.webp",
     "832": "REVIEWED-20261114-832.webp",
     "866": "REVIEWED-20261114-866.webp",
-    "877": "REVIEWED-20261114-877.webp"
+    "877": "REVIEWED-20261114-877.webp",
+    "545": "PHOTO-20261114-545.webp",
+    "25": "PHOTO-20261114-25.webp",
+    "36": "PHOTO-20261114-36.webp",
+    "34": "PHOTO-20261114-34.webp",
+    "558": "PHOTO-20261114-558.webp",
+    "49": "PHOTO-20261114-49.webp",
+    "565": "PHOTO-20261114-565.webp",
+    "55": "PHOTO-20261114-55.webp",
+    "56": "PHOTO-20261114-56.webp",
+    "58": "PHOTO-20261114-58.webp",
+    "567": "PHOTO-20261114-567.webp",
+    "568": "PHOTO-20261114-568.webp",
+    "569": "PHOTO-20261114-569.webp",
+    "570": "PHOTO-20261114-570.webp",
+    "290": "PHOTO-20261114-290.webp",
+    "88": "PHOTO-20261114-88.webp",
+    "89": "PHOTO-20261114-89.webp",
+    "93": "PHOTO-20261114-93.webp",
+    "574": "PHOTO-20261114-574.webp",
+    "97": "PHOTO-20261114-97.webp",
+    "101": "PHOTO-20261114-101.webp",
+    "575": "PHOTO-20261114-575.webp",
+    "386": "PHOTO-20261114-386.webp",
+    "111": "PHOTO-20261114-111.webp",
+    "113": "PHOTO-20261114-113.webp",
+    "576": "PHOTO-20261114-576.webp",
+    "450": "PHOTO-20261114-450.webp",
+    "579": "PHOTO-20261114-579.webp",
+    "236": "PHOTO-20261114-236.webp",
+    "582": "PHOTO-20261114-582.webp",
+    "133": "PHOTO-20261114-133.webp",
+    "586": "PHOTO-20261114-586.webp",
+    "587": "PHOTO-20261114-587.webp",
+    "589": "PHOTO-20261114-589.webp",
+    "593": "PHOTO-20261114-593.webp",
+    "598": "PHOTO-20261114-598.webp",
+    "168": "PHOTO-20261114-168.webp",
+    "183": "PHOTO-20261114-183.webp",
+    "603": "PHOTO-20261114-603.webp",
+    "221": "PHOTO-20261114-221.webp",
+    "203": "PHOTO-20261114-203.webp",
+    "222": "PHOTO-20261114-222.webp",
+    "228": "PHOTO-20261114-228.webp",
+    "241": "PHOTO-20261114-241.webp",
+    "611": "PHOTO-20261114-611.webp",
+    "341": "PHOTO-20261114-341.webp",
+    "615": "PHOTO-20261114-615.webp",
+    "32": "PHOTO-20261114-32.webp",
+    "616": "PHOTO-20261114-616.webp",
+    "248": "PHOTO-20261114-248.webp",
+    "618": "PHOTO-20261114-618.webp",
+    "525": "PHOTO-20261114-525.webp",
+    "619": "PHOTO-20261114-619.webp",
+    "621": "PHOTO-20261114-621.webp",
+    "625": "PHOTO-20261114-625.webp",
+    "626": "PHOTO-20261114-626.webp",
+    "627": "PHOTO-20261114-627.webp",
+    "630": "PHOTO-20261114-630.webp",
+    "631": "PHOTO-20261114-631.webp",
+    "633": "PHOTO-20261114-633.webp",
+    "636": "PHOTO-20261114-636.webp",
+    "281": "PHOTO-20261114-281.webp",
+    "287": "PHOTO-20261114-287.webp",
+    "54": "PHOTO-20261114-54.webp",
+    "64": "PHOTO-20261114-64.webp",
+    "102": "PHOTO-20261114-102.webp",
+    "309": "PHOTO-20261114-309.webp",
+    "315": "PHOTO-20261114-315.webp",
+    "318": "PHOTO-20261114-318.webp",
+    "321": "PHOTO-20261114-321.webp",
+    "543": "PHOTO-20261114-543.webp",
+    "313": "PHOTO-20261114-313.webp",
+    "335": "PHOTO-20261114-335.webp",
+    "226": "PHOTO-20261114-226.webp",
+    "234": "PHOTO-20261114-234.webp",
+    "243": "PHOTO-20261114-243.webp",
+    "244": "PHOTO-20261114-244.webp",
+    "343": "PHOTO-20261114-343.webp",
+    "663": "PHOTO-20261114-663.webp",
+    "667": "PHOTO-20261114-667.webp",
+    "671": "PHOTO-20261114-671.webp",
+    "378": "PHOTO-20261114-378.webp",
+    "379": "PHOTO-20261114-379.webp",
+    "674": "PHOTO-20261114-674.webp",
+    "680": "PHOTO-20261114-680.webp",
+    "681": "PHOTO-20261114-681.webp",
+    "451": "PHOTO-20261114-451.webp",
+    "401": "PHOTO-20261114-401.webp",
+    "404": "PHOTO-20261114-404.webp",
+    "684": "PHOTO-20261114-684.webp",
+    "416": "PHOTO-20261114-416.webp",
+    "689": "PHOTO-20261114-689.webp",
+    "694": "PHOTO-20261114-694.webp",
+    "696": "PHOTO-20261114-696.webp",
+    "442": "PHOTO-20261114-442.webp",
+    "448": "PHOTO-20261114-448.webp",
+    "452": "PHOTO-20261114-452.webp",
+    "454": "PHOTO-20261114-454.webp",
+    "458": "PHOTO-20261114-458.webp",
+    "703": "PHOTO-20261114-703.webp",
+    "704": "PHOTO-20261114-704.webp",
+    "478": "PHOTO-20261114-478.webp",
+    "722": "PHOTO-20261114-722.webp",
+    "216": "PHOTO-20261114-216.webp",
+    "724": "PHOTO-20261114-724.webp",
+    "725": "PHOTO-20261114-725.webp",
+    "726": "PHOTO-20261114-726.webp",
+    "729": "PHOTO-20261114-729.webp",
+    "730": "PHOTO-20261114-730.webp",
+    "731": "PHOTO-20261114-731.webp",
+    "732": "PHOTO-20261114-732.webp",
+    "733": "PHOTO-20261114-733.webp",
+    "734": "PHOTO-20261114-734.webp",
+    "283": "PHOTO-20261114-283.webp",
+    "538": "PHOTO-20261114-538.webp",
+    "414": "PHOTO-20261114-414.webp",
+    "736": "PHOTO-20261114-736.webp",
+    "740": "PHOTO-20261114-740.webp",
+    "741": "PHOTO-20261114-741.webp",
+    "745": "PHOTO-20261114-745.webp",
+    "746": "PHOTO-20261114-746.webp",
+    "752": "PHOTO-20261114-752.webp",
+    "753": "PHOTO-20261114-753.webp",
+    "754": "PHOTO-20261114-754.webp",
+    "756": "PHOTO-20261114-756.webp",
+    "758": "PHOTO-20261114-758.webp",
+    "762": "PHOTO-20261114-762.webp",
+    "765": "PHOTO-20261114-765.webp",
+    "767": "PHOTO-20261114-767.webp",
+    "768": "PHOTO-20261114-768.webp",
+    "778": "PHOTO-20261114-778.webp",
+    "792": "PHOTO-20261114-792.webp",
+    "801": "PHOTO-20261114-801.webp",
+    "802": "PHOTO-20261114-802.webp",
+    "809": "PHOTO-20261114-809.webp",
+    "810": "PHOTO-20261114-810.webp",
+    "811": "PHOTO-20261114-811.webp",
+    "817": "PHOTO-20261114-817.webp",
+    "818": "PHOTO-20261114-818.webp",
+    "821": "PHOTO-20261114-821.webp",
+    "822": "PHOTO-20261114-822.webp",
+    "827": "PHOTO-20261114-827.webp",
+    "829": "PHOTO-20261114-829.webp",
+    "836": "PHOTO-20261114-836.webp",
+    "838": "PHOTO-20261114-838.webp",
+    "839": "PHOTO-20261114-839.webp",
+    "840": "PHOTO-20261114-840.webp",
+    "841": "PHOTO-20261114-841.webp",
+    "842": "PHOTO-20261114-842.webp",
+    "845": "PHOTO-20261114-845.webp",
+    "846": "PHOTO-20261114-846.webp",
+    "848": "PHOTO-20261114-848.webp",
+    "849": "PHOTO-20261114-849.webp",
+    "850": "PHOTO-20261114-850.webp",
+    "851": "PHOTO-20261114-851.webp",
+    "852": "PHOTO-20261114-852.webp",
+    "853": "PHOTO-20261114-853.webp",
+    "854": "PHOTO-20261114-854.webp",
+    "859": "PHOTO-20261114-859.webp",
+    "860": "PHOTO-20261114-860.webp",
+    "862": "PHOTO-20261114-862.webp",
+    "863": "PHOTO-20261114-863.webp",
+    "874": "PHOTO-20261114-874.webp"
   },
   "web_sources": [
     {
@@ -1164,6 +1327,1497 @@
       "image_url": "https://moivinoteki.ru/photos/jose-cuervo-especial-silver.webp",
       "identity": "Хосе Куэрво Эспесьяль Сильвер, 0,7 л; проверены название, линейка, цвет/сахар и объём; год с фото не переносится",
       "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 545,
+      "file": "PHOTO-20261114-545.webp",
+      "source_url": "https://moivinoteki.ru/item/guicciardini-strozzi-ocra-bolgheri-pu.htm",
+      "image_url": "https://moivinoteki.ru/photos/guicciardini-strozzi-ocra-bolgheri-pu.webp",
+      "identity": "Окра; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 25,
+      "file": "PHOTO-20261114-25.webp",
+      "source_url": "https://moivinoteki.ru/item/ocean-eight-pinot-noir.htm",
+      "image_url": "https://moivinoteki.ru/photos/ocean-eight-pinot-noir.webp",
+      "identity": "Оушн Эйт Пино Нуар; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 36,
+      "file": "PHOTO-20261114-36.webp",
+      "source_url": "https://moivinoteki.ru/item/paul-thomas-silex-sancerre-blanc.htm",
+      "image_url": "https://moivinoteki.ru/photos/paul-thomas-silex-sancerre-blanc.webp",
+      "identity": "Сансер Поль Томас Силекс; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 34,
+      "file": "PHOTO-20261114-34.webp",
+      "source_url": "https://moivinoteki.ru/item/shinobu-mizunara-oak-finish.htm",
+      "image_url": "https://moivinoteki.ru/photos/shinobu-mizunara-oak-finish.webp",
+      "identity": "Шинобу Мизунара Финиш; 0,7 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 558,
+      "file": "PHOTO-20261114-558.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=86",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=86",
+      "identity": "Окорок свиной Хамон 50г с/в Casa Margot",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 86 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 86,
+      "pdf_image_xref": 5857
+    },
+    {
+      "id": 49,
+      "file": "PHOTO-20261114-49.webp",
+      "source_url": "https://www.wwine.ru/catalog/igristoe-vino/kava-bryut-natyur-rezerva-dzhaz-natyur/",
+      "image_url": "https://www.wwine.ru/upload/iblock/872/872eb0f2b68f5bcb803137706a1174d7.png",
+      "identity": "Кава Резерва Джаз Натюр; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 565,
+      "file": "PHOTO-20261114-565.webp",
+      "source_url": "https://moivinoteki.ru/item/nube-chardonnay.htm",
+      "image_url": "https://moivinoteki.ru/photos/nube-chardonnay.webp",
+      "identity": "Нубе Шардоне; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 55,
+      "file": "PHOTO-20261114-55.webp",
+      "source_url": "https://moivinoteki.ru/item/fiorino-doro-asti-spumante.htm",
+      "image_url": "https://moivinoteki.ru/photos/fiorino-doro-asti-spumante.webp",
+      "identity": "Асти Спуманте Фиорино д'Оро; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 56,
+      "file": "PHOTO-20261114-56.webp",
+      "source_url": "https://www.1001spirits.com/product/34364/autentico-nativo-overproof--54--070-l",
+      "image_url": "https://www.1001spirits.com/tuotekuvat/1500x1500/Autentico%20Nativo%20Overproof%2054%25%200.7%20l.png",
+      "identity": "Аутентико Нативо Овер Пруф; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 58,
+      "file": "PHOTO-20261114-58.webp",
+      "source_url": "https://moivinoteki.ru/item/fiorino-doro-brut.htm",
+      "image_url": "https://moivinoteki.ru/photos/fiorino-doro-brut.webp",
+      "identity": "Брют Фиорино д'Оро; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 567,
+      "file": "PHOTO-20261114-567.webp",
+      "source_url": "https://moivinoteki.ru/item/survivor-cabernet-sauvignon.htm",
+      "image_url": "https://moivinoteki.ru/photos/survivor-cabernet-sauvignon.webp",
+      "identity": "Севайвор Каберне Совиньон; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 568,
+      "file": "PHOTO-20261114-568.webp",
+      "source_url": "https://moivinoteki.ru/item/backwoods-zinfandel-reserve.htm",
+      "image_url": "https://moivinoteki.ru/photos/backwoods-zinfandel-reserve.webp",
+      "identity": "Зинфандель Резерв Лоди Калифорния Бэквудс; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 569,
+      "file": "PHOTO-20261114-569.webp",
+      "source_url": "https://vinoterra.ru/catalog/product/cecchi-primocolle-villa-cerna-chianti-classico-2022-750-2022/",
+      "image_url": "https://vinoterra.ru/upload/iblock/60a/rwfbthfs0017jqlvwl3l2yx3mhmp0o7o/00023001-cecchi-primocolle-villa-cerna-chianti-classico-2022.jpg",
+      "identity": "Чекки Кьянти Классико ДОКГ Примоколле Вилла Черна",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 570,
+      "file": "PHOTO-20261114-570.webp",
+      "source_url": "https://remma.ru/shop/mjasnaja-gastronomija/pashtety/pashtet-iz-govjazhei-pecheni.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop282.jpg",
+      "identity": "Паштет из говяжьей печени, ст/б 90г, Casa Margot",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 290,
+      "file": "PHOTO-20261114-290.webp",
+      "source_url": "https://www.wwine.ru/catalog/vino/vino-kyanti-klassiko-rizerva-fattoriya-montekko-krasnoe-sukhoe-0-75-l-701880/",
+      "image_url": "https://www.wwine.ru/upload/iblock/f89/f898ee16be1e5202dc215dc8238f28a8.png",
+      "identity": "Кьянти Классико Ризерва Фаттория Монтеккьо; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 88,
+      "file": "PHOTO-20261114-88.webp",
+      "source_url": "https://aroma.ru/produktsiya/vino/rosso-di-montalchino-val-di-suga-rosso-di-montalcino-val-di-suga/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/1890/01b_1.jpg",
+      "identity": "Валь ди Суга Россо ди Монтальчино; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 89,
+      "file": "PHOTO-20261114-89.webp",
+      "source_url": "https://moivinoteki.ru/item/vino-rioja-blanco-baron-ladron-de-guevara.htm",
+      "image_url": "https://moivinoteki.ru/photos/vino-rioja-blanco-baron-ladron-de-guevara.webp",
+      "identity": "Барон Ладрон де Гевара; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 93,
+      "file": "PHOTO-20261114-93.webp",
+      "source_url": "https://moivinoteki.ru/item/st-michael-eppan-fallwind-pinot-grigio.htm",
+      "image_url": "https://moivinoteki.ru/photos/st-michael-eppan-fallwind-pinot-grigio.webp",
+      "identity": "Пино Гриджо Фолвинд; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 574,
+      "file": "PHOTO-20261114-574.webp",
+      "source_url": "https://remma.ru/shop/mjasnaja-gastronomija/pashtety/pashtet-iz-govjazhei-pecheni-s-tryufelem.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop285.jpg",
+      "identity": "Паштет из говяжьей печени с трюфелем, ст/б 90г, Casa Margot",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 97,
+      "file": "PHOTO-20261114-97.webp",
+      "source_url": "https://moivinoteki.ru/item/la-smilla-barbera-dasti.htm",
+      "image_url": "https://moivinoteki.ru/photos/la-smilla-barbera-dasti.webp",
+      "identity": "Барбера д'Асти Ла Смилла; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 101,
+      "file": "PHOTO-20261114-101.webp",
+      "source_url": "https://moivinoteki.ru/item/la-smilla-dolcetto-di-ovada.htm",
+      "image_url": "https://moivinoteki.ru/photos/la-smilla-dolcetto-di-ovada.webp",
+      "identity": "Дольчетто ди Овада Ла Смилла; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 575,
+      "file": "PHOTO-20261114-575.webp",
+      "source_url": "https://moivinoteki.ru/item/pfefferer.htm",
+      "image_url": "https://moivinoteki.ru/photos/pfefferer.webp",
+      "identity": "Пфефферер; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 386,
+      "file": "PHOTO-20261114-386.webp",
+      "source_url": "https://moivinoteki.ru/item/wild-life-semi-sweet-white.htm",
+      "image_url": "https://moivinoteki.ru/photos/wild-life-semi-sweet-white.webp",
+      "identity": "Уайт Семи Свит Уайлд Лайф; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 111,
+      "file": "PHOTO-20261114-111.webp",
+      "source_url": "https://moivinoteki.ru/item/canard-duchene-charles-vii-brut-rose.htm",
+      "image_url": "https://moivinoteki.ru/photos/canard-duchene-charles-vii-brut-rose.webp",
+      "identity": "Шампань Канар-Дюшен Шарль 7; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 113,
+      "file": "PHOTO-20261114-113.webp",
+      "source_url": "https://moivinoteki.ru/item/franz-haas-pinot-nero.htm",
+      "image_url": "https://moivinoteki.ru/photos/franz-haas-pinot-nero.webp",
+      "identity": "Пино Неро Франц Хаас; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 576,
+      "file": "PHOTO-20261114-576.webp",
+      "source_url": "https://remma.ru/shop/bakaleja/antipasti/perec-cherri-so-slivochnym-syrom-i-tryuf.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop387.jpg",
+      "identity": "Перец Черри со сливочным сыром и трюфелем - Antipasti 250 гр, AMYGA",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 450,
+      "file": "PHOTO-20261114-450.webp",
+      "source_url": "https://moivinoteki.ru/item/don-ramon.htm",
+      "image_url": "https://moivinoteki.ru/photos/don-ramon.webp",
+      "identity": "Дон Рамон; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 579,
+      "file": "PHOTO-20261114-579.webp",
+      "source_url": "https://moivinoteki.ru/item/bouvet-rose-brut.htm",
+      "image_url": "https://moivinoteki.ru/photos/bouvet-rose-brut.webp",
+      "identity": "Буве Розе; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 236,
+      "file": "PHOTO-20261114-236.webp",
+      "source_url": "https://moivinoteki.ru/item/darenberg-the-laughing-magpie.htm",
+      "image_url": "https://moivinoteki.ru/photos/darenberg-the-laughing-magpie.webp",
+      "identity": "Лафин Мэгпай; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 582,
+      "file": "PHOTO-20261114-582.webp",
+      "source_url": "https://vinoterra.ru/catalog/product/la-traversata-primitivo-puglia-2025-750-2025/",
+      "image_url": "https://vinoterra.ru/upload/iblock/c03/6vfb7n9wh409d9xskwogjxv1w82v3er1/00019678-la-traversata-primitivo-puglia.jpg",
+      "identity": "Ла Траверсата Примитиво Пулия ИГТ",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 133,
+      "file": "PHOTO-20261114-133.webp",
+      "source_url": "https://moivinoteki.ru/item/usadba-divnomorskoe-shardone.htm",
+      "image_url": "https://moivinoteki.ru/photos/usadba-divnomorskoe-shardone.webp",
+      "identity": "Дивноморское Шардоне; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 586,
+      "file": "PHOTO-20261114-586.webp",
+      "source_url": "https://moivinoteki.ru/item/dopolavoro-organic-frizzante-rose-brut.htm",
+      "image_url": "https://moivinoteki.ru/photos/dopolavoro-organic-frizzante-rose-brut.webp",
+      "identity": "Дополаворо",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 587,
+      "file": "PHOTO-20261114-587.webp",
+      "source_url": "https://moivinoteki.ru/item/domini-veneti-amarone-della-valpolicella-classico-derevyannaya-pu.htm",
+      "image_url": "https://moivinoteki.ru/photos/domini-veneti-amarone-della-valpolicella-classico-derevyannaya-pu.webp",
+      "identity": "Домини Венети Амароне; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 589,
+      "file": "PHOTO-20261114-589.webp",
+      "source_url": "https://moivinoteki.ru/item/castello-banfi-brunello-di-montalcino-8.htm",
+      "image_url": "https://moivinoteki.ru/photos/castello-banfi-brunello-di-montalcino-8.webp",
+      "identity": "Брунелло ди Монтальчино Банфи; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 593,
+      "file": "PHOTO-20261114-593.webp",
+      "source_url": "https://moivinoteki.ru/item/austrian-pepper-gruner-veltliner.htm",
+      "image_url": "https://moivinoteki.ru/photos/austrian-pepper-gruner-veltliner.webp",
+      "identity": "Австрийский Перец; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 598,
+      "file": "PHOTO-20261114-598.webp",
+      "source_url": "https://moivinoteki.ru/item/cavas-masachs-vibracions-cava-brut-2.htm",
+      "image_url": "https://moivinoteki.ru/photos/cavas-masachs-vibracions-cava-brut-2.webp",
+      "identity": "Вибрасионс Кава; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 168,
+      "file": "PHOTO-20261114-168.webp",
+      "source_url": "https://vinoterra.ru/catalog/product/celler-credo-ratpenat-2019-750-2019/",
+      "image_url": "https://vinoterra.ru/upload/iblock/9bd/haiv3upl08sdj8a5zbdt678nochoxluu/CellerCredo_Ratpenat_2019_00019131.jpg",
+      "identity": "Сейер Кредо Ратпетнат; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 183,
+      "file": "PHOTO-20261114-183.webp",
+      "source_url": "https://aroma.ru/produktsiya/vino/domen-naturalist-diskaveri-sira-domaine-naturaliste-discovery-syrah/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/1484/01b_1.jpg",
+      "identity": "Дискавери Сира Маргарет Ривер; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 603,
+      "file": "PHOTO-20261114-603.webp",
+      "source_url": "https://joia.ru/product/vino_paololeo_passitivo_appassimento_primitivo_igp_krasnoe_polusukhoe_0_75l/",
+      "image_url": "https://joia.ru/upload/resize_cache/iblock/a18/1200_1500_0619711fa078991f0a23d032687646b21/7g5clf3kxlewhobut8y8mzizzchx67wj.jpg",
+      "identity": "Пасситиво Аппассименто Примитиво ИГП",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 221,
+      "file": "PHOTO-20261114-221.webp",
+      "source_url": "https://moivinoteki.ru/item/nikolaev-i-synovya-zolotoy-klyuch-2022.htm",
+      "image_url": "https://moivinoteki.ru/photos/nikolaev-i-synovya-zolotoy-klyuch-2022.webp",
+      "identity": "Золотой ключ 22; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 203,
+      "file": "PHOTO-20261114-203.webp",
+      "source_url": "https://moivinoteki.ru/item/domaine-weinbach-clos-des-capucins-pinot-gris.htm",
+      "image_url": "https://moivinoteki.ru/photos/domaine-weinbach-clos-des-capucins-pinot-gris.webp",
+      "identity": "Домен Вайнбах Пино Гри Кло де Капусен; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 222,
+      "file": "PHOTO-20261114-222.webp",
+      "source_url": "https://moivinoteki.ru/item/domaine-weinbach-altenbourg-riesling.htm",
+      "image_url": "https://moivinoteki.ru/photos/domaine-weinbach-altenbourg-riesling.webp",
+      "identity": "Домен Вайнбах Рислинг Альтенбург; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 228,
+      "file": "PHOTO-20261114-228.webp",
+      "source_url": "https://vinoterra.ru/catalog/product/nikolaev-sons-puzyrki-2021-750-2021/",
+      "image_url": "https://vinoterra.ru/upload/iblock/d3d/aydm042ntw7ypw1c34yosstt62qwa435/00021455-nikolaev-_-sons-puzyrki-2021.jpg",
+      "identity": "Пузырьки 21; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 241,
+      "file": "PHOTO-20261114-241.webp",
+      "source_url": "https://moivinoteki.ru/item/glaetzer-dixon-mon-pere-shiraz.htm",
+      "image_url": "https://moivinoteki.ru/photos/glaetzer-dixon-mon-pere-shiraz.webp",
+      "identity": "Мон Пэр Шираз Тасмания Глейцер-Диксон; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 611,
+      "file": "PHOTO-20261114-611.webp",
+      "source_url": "https://moivinoteki.ru/item/lirica-primitivo-di-manduria.htm",
+      "image_url": "https://moivinoteki.ru/photos/lirica-primitivo-di-manduria.webp",
+      "identity": "Лирика Примитиво ди Мандурия; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 341,
+      "file": "PHOTO-20261114-341.webp",
+      "source_url": "https://moivinoteki.ru/item/piper-heidsieck-rose-sauvage-brut.htm",
+      "image_url": "https://moivinoteki.ru/photos/piper-heidsieck-rose-sauvage-brut.webp",
+      "identity": "Шампань Пайпер-Хайдсик; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 615,
+      "file": "PHOTO-20261114-615.webp",
+      "source_url": "https://moivinoteki.ru/item/montes-reserva-sauvignon-blanc.htm",
+      "image_url": "https://moivinoteki.ru/photos/montes-reserva-sauvignon-blanc.webp",
+      "identity": "Монтес Ресерва Совиньон Блан; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 32,
+      "file": "PHOTO-20261114-32.webp",
+      "source_url": "https://moivinoteki.ru/item/clement-et-florian-berthier-sancerre-blanc.htm",
+      "image_url": "https://moivinoteki.ru/photos/clement-et-florian-berthier-sancerre-blanc.webp",
+      "identity": "Сансер Клеман и Флориан Бертье; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 616,
+      "file": "PHOTO-20261114-616.webp",
+      "source_url": "https://moivinoteki.ru/item/chateau-latapie-reserve-bordeaux-aoc.htm",
+      "image_url": "https://moivinoteki.ru/photos/chateau-latapie-reserve-bordeaux-aoc.webp",
+      "identity": "Шато Латапи Резерв; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 248,
+      "file": "PHOTO-20261114-248.webp",
+      "source_url": "https://moivinoteki.ru/item/chateau-de-la-ragotiere-sauvignon-cuvee-prestige.htm",
+      "image_url": "https://moivinoteki.ru/photos/chateau-de-la-ragotiere-sauvignon-cuvee-prestige.webp",
+      "identity": "Домэн де ля Раготьер Совиньон Кюве Престиж; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 618,
+      "file": "PHOTO-20261114-618.webp",
+      "source_url": "https://moivinoteki.ru/item/etnico-organic-malbec.htm",
+      "image_url": "https://moivinoteki.ru/photos/etnico-organic-malbec.webp",
+      "identity": "Этнико Органик Мальбек; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 525,
+      "file": "PHOTO-20261114-525.webp",
+      "source_url": "https://moivinoteki.ru/item/loco-cimbali-riesling.htm",
+      "image_url": "https://moivinoteki.ru/photos/loco-cimbali-riesling.webp",
+      "identity": "Локо Чимбали Рислинг; 0,75 л",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 619,
+      "file": "PHOTO-20261114-619.webp",
+      "source_url": "https://moivinoteki.ru/item/federalist-pinot-noir.htm",
+      "image_url": "https://moivinoteki.ru/photos/federalist-pinot-noir.webp",
+      "identity": "Федералист Пино Нуар Сентрал Кост",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 621,
+      "file": "PHOTO-20261114-621.webp",
+      "source_url": "https://moivinoteki.ru/item/simply-0-white-alcoholfree-sparkling.htm",
+      "image_url": "https://moivinoteki.ru/photos/simply-0-white-alcoholfree-sparkling.webp",
+      "identity": "Симпли; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 625,
+      "file": "PHOTO-20261114-625.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=14",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=14",
+      "identity": "Сыр мягкий с белой плесенью Бри 150г, AMGUSTIA",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 14 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 14,
+      "pdf_image_xref": 936
+    },
+    {
+      "id": 626,
+      "file": "PHOTO-20261114-626.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=86",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=86",
+      "identity": "Говядина Брезаола, с/в 50г Casa Margot",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 86 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 86,
+      "pdf_image_xref": 5875
+    },
+    {
+      "id": 627,
+      "file": "PHOTO-20261114-627.webp",
+      "source_url": "https://remma.ru/shop/syry/polutverdye/belper-s-tomatami.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop580.jpg",
+      "identity": "Сыр полутвердый Белпер томат 100г, AMGUSTIA",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 630,
+      "file": "PHOTO-20261114-630.webp",
+      "source_url": "https://moivinoteki.ru/item/higuana-anejo-reserva-9-years.htm",
+      "image_url": "https://moivinoteki.ru/photos/higuana-anejo-reserva-9-years.webp",
+      "identity": "Игуана Аньехо Резерва 9; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 631,
+      "file": "PHOTO-20261114-631.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=31",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=31",
+      "identity": "Сыр Камамбер классический 125 гр, ЕГОРЛЫК МОЛОКО",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 31 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 31,
+      "pdf_image_xref": 2114
+    },
+    {
+      "id": 633,
+      "file": "PHOTO-20261114-633.webp",
+      "source_url": "https://moivinoteki.ru/item/tholomies-cremant-de-limoux.htm",
+      "image_url": "https://moivinoteki.ru/photos/tholomies-cremant-de-limoux.webp",
+      "identity": "Толоми Креман де Лиму; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 636,
+      "file": "PHOTO-20261114-636.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=111",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=111",
+      "identity": "Мини-твисты с солью, 75г, Roland",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 111 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 111,
+      "pdf_image_xref": 7422
+    },
+    {
+      "id": 281,
+      "file": "PHOTO-20261114-281.webp",
+      "source_url": "https://moivinoteki.ru/item/la-smilla-bergi-monferrato.htm",
+      "image_url": "https://moivinoteki.ru/photos/la-smilla-bergi-monferrato.webp",
+      "identity": "Берджи Монферрато Ла Смилла; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 287,
+      "file": "PHOTO-20261114-287.webp",
+      "source_url": "https://moivinoteki.ru/item/baron-ladron-de-guevara-vino-de-autor-crianza.htm",
+      "image_url": "https://moivinoteki.ru/photos/baron-ladron-de-guevara-vino-de-autor-crianza.webp",
+      "identity": "Аутор Барон Ладрон де Гевара Крианса; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 54,
+      "file": "PHOTO-20261114-54.webp",
+      "source_url": "https://www.wwine.ru/catalog/igristoe-vino/shampanskoe-g-rishomm-lya-shevron-bryut-0-75-l-701593/",
+      "image_url": "https://www.wwine.ru/upload/iblock/cb9/cb9a2446f4dc65b0506f2ff4c163d7f2.png",
+      "identity": "Шампань Ле Шевроне Г.Ришом; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 64,
+      "file": "PHOTO-20261114-64.webp",
+      "source_url": "https://www.wwine.ru/catalog/igristoe-vino/shampanskoe-g-rishomm-lya-fyuzionel-bryut-0-75-l-701594/",
+      "image_url": "https://www.wwine.ru/upload/iblock/076/07685222c9748bc9aaa7c1fc4cdf3106.png",
+      "identity": "Шампань Ля Фюзьонель Г.Ришом; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 102,
+      "file": "PHOTO-20261114-102.webp",
+      "source_url": "https://moivinoteki.ru/item/la-smilla-calicanto.htm",
+      "image_url": "https://moivinoteki.ru/photos/la-smilla-calicanto.webp",
+      "identity": "Каликанто Барбера д'Асти Ла Смилла; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 309,
+      "file": "PHOTO-20261114-309.webp",
+      "source_url": "https://moivinoteki.ru/item/alpenhof-zweigelt.htm",
+      "image_url": "https://moivinoteki.ru/photos/alpenhof-zweigelt.webp",
+      "identity": "Цвайгельт Альпенхоф; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 315,
+      "file": "PHOTO-20261114-315.webp",
+      "source_url": "https://moivinoteki.ru/item/loimer-donauriesling-sparkling-grape-juice.htm",
+      "image_url": "https://moivinoteki.ru/photos/loimer-donauriesling-sparkling-grape-juice.webp",
+      "identity": "Виноградный сок Лоймер 0,75л. Австрия; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 318,
+      "file": "PHOTO-20261114-318.webp",
+      "source_url": "https://moivinoteki.ru/item/loco-cimbali-kuprin.htm",
+      "image_url": "https://moivinoteki.ru/photos/loco-cimbali-kuprin.webp",
+      "identity": "Локо Чимбали Куприн; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 321,
+      "file": "PHOTO-20261114-321.webp",
+      "source_url": "https://moivinoteki.ru/item/monnet-vs-7.htm",
+      "image_url": "https://moivinoteki.ru/photos/monnet-vs-7.webp",
+      "identity": "Монне ВС; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 543,
+      "file": "PHOTO-20261114-543.webp",
+      "source_url": "https://www.comptoir-irlandais.com/en/ireland/13865-the-pogues-70cl.html",
+      "image_url": "https://www.comptoir-irlandais.com/38645-product_main_2x/the-pogues-70cl.jpg",
+      "identity": "Поугс; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 313,
+      "file": "PHOTO-20261114-313.webp",
+      "source_url": "https://moivinoteki.ru/item/alta-vista-malbec-terroir-selection.htm",
+      "image_url": "https://moivinoteki.ru/photos/alta-vista-malbec-terroir-selection.webp",
+      "identity": "Альта Виста Мальбек Терруар Селексьон; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 335,
+      "file": "PHOTO-20261114-335.webp",
+      "source_url": "https://moivinoteki.ru/item/wente-riesling-riverbank.htm",
+      "image_url": "https://moivinoteki.ru/photos/wente-riesling-riverbank.webp",
+      "identity": "Венте Виньярдс Ривербэнк Рислинг; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 226,
+      "file": "PHOTO-20261114-226.webp",
+      "source_url": "https://moivinoteki.ru/item/dourthe-1-bordeaux-rose.htm",
+      "image_url": "https://moivinoteki.ru/photos/dourthe-1-bordeaux-rose.webp",
+      "identity": "Дурт №1 Бордо Розе; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 234,
+      "file": "PHOTO-20261114-234.webp",
+      "source_url": "https://moivinoteki.ru/item/clotilde-davenne-chablis.htm",
+      "image_url": "https://moivinoteki.ru/photos/clotilde-davenne-chablis.webp",
+      "identity": "Клотильд Давэн Шабли; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 243,
+      "file": "PHOTO-20261114-243.webp",
+      "source_url": "https://moivinoteki.ru/item/frankland-estate-rocky-gully-cabernets.htm",
+      "image_url": "https://moivinoteki.ru/photos/frankland-estate-rocky-gully-cabernets.webp",
+      "identity": "Роки Галли Каберне; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 244,
+      "file": "PHOTO-20261114-244.webp",
+      "source_url": "https://moivinoteki.ru/item/santes.htm",
+      "image_url": "https://moivinoteki.ru/photos/santes.webp",
+      "identity": "Сантес; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 343,
+      "file": "PHOTO-20261114-343.webp",
+      "source_url": "https://moivinoteki.ru/item/lalomba-finca-valhonta.htm",
+      "image_url": "https://moivinoteki.ru/photos/lalomba-finca-valhonta.webp",
+      "identity": "Рамон Бильбао Лаломба Финка Вальонта; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 663,
+      "file": "PHOTO-20261114-663.webp",
+      "source_url": "https://moivinoteki.ru/item/aves-del-sur-carmenere.htm",
+      "image_url": "https://moivinoteki.ru/photos/aves-del-sur-carmenere.webp",
+      "identity": "Карменер Авес дель Сур; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 667,
+      "file": "PHOTO-20261114-667.webp",
+      "source_url": "https://moivinoteki.ru/item/ducento-soave.htm",
+      "image_url": "https://moivinoteki.ru/photos/ducento-soave.webp",
+      "identity": "Соаве Дученто; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 671,
+      "file": "PHOTO-20261114-671.webp",
+      "source_url": "https://moivinoteki.ru/item/opia-cabernet-sauvignon-alcohol-free.htm",
+      "image_url": "https://moivinoteki.ru/photos/opia-cabernet-sauvignon-alcohol-free.webp",
+      "identity": "Опиа Каберне Совиньон; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 378,
+      "file": "PHOTO-20261114-378.webp",
+      "source_url": "https://moivinoteki.ru/item/castillo-de-covanegra-tempranillo.htm",
+      "image_url": "https://moivinoteki.ru/photos/castillo-de-covanegra-tempranillo.webp",
+      "identity": "Кастилло де Коварнега; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 379,
+      "file": "PHOTO-20261114-379.webp",
+      "source_url": "https://moivinoteki.ru/item/prima-festa-toscana.htm",
+      "image_url": "https://moivinoteki.ru/photos/prima-festa-toscana.webp",
+      "identity": "Прима Феста; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 674,
+      "file": "PHOTO-20261114-674.webp",
+      "source_url": "https://moivinoteki.ru/item/tarapaca-carmenere.htm",
+      "image_url": "https://moivinoteki.ru/photos/tarapaca-carmenere.webp",
+      "identity": "Карменер Тарапака; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 680,
+      "file": "PHOTO-20261114-680.webp",
+      "source_url": "https://moivinoteki.ru/item/rustaveli-kindzmarauli.htm",
+      "image_url": "https://moivinoteki.ru/photos/rustaveli-kindzmarauli.webp",
+      "identity": "Киндзмараули Руставели; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 681,
+      "file": "PHOTO-20261114-681.webp",
+      "source_url": "https://moivinoteki.ru/item/east-london-dry-gin.htm",
+      "image_url": "https://moivinoteki.ru/photos/east-london-dry-gin.webp",
+      "identity": "Ист Лондон; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 451,
+      "file": "PHOTO-20261114-451.webp",
+      "source_url": "https://moivinoteki.ru/item/argentiera-poggio-ai-ginepri-rosso.htm",
+      "image_url": "https://moivinoteki.ru/photos/argentiera-poggio-ai-ginepri-rosso.webp",
+      "identity": "Поджио ай Джинепри; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 401,
+      "file": "PHOTO-20261114-401.webp",
+      "source_url": "https://moivinoteki.ru/item/jean-marie-reverdy-la-villaudiere-sancerre-blanc.htm",
+      "image_url": "https://moivinoteki.ru/photos/jean-marie-reverdy-la-villaudiere-sancerre-blanc.webp",
+      "identity": "Сансер Ля Виллодьер; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; фото проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 404,
+      "file": "PHOTO-20261114-404.webp",
+      "source_url": "https://moivinoteki.ru/item/beluga-noble-3.htm",
+      "image_url": "https://moivinoteki.ru/photos/beluga-noble-3.webp",
+      "identity": "Белуга Нобл; 0,5 л",
+      "review_note": "На этикетке явно 0.5 LITER; соответствует карточке 0,5 л.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 684,
+      "file": "PHOTO-20261114-684.webp",
+      "source_url": "https://moivinoteki.ru/item/etnico-organic-carmenere.htm",
+      "image_url": "https://moivinoteki.ru/photos/etnico-organic-carmenere.webp",
+      "identity": "Этнико Органик Карменер; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 416,
+      "file": "PHOTO-20261114-416.webp",
+      "source_url": "https://moivinoteki.ru/item/federalist-chardonnay.htm",
+      "image_url": "https://moivinoteki.ru/photos/federalist-chardonnay.webp",
+      "identity": "Федералист Шардоне; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 689,
+      "file": "PHOTO-20261114-689.webp",
+      "source_url": "https://moivinoteki.ru/item/folio-soave.htm",
+      "image_url": "https://moivinoteki.ru/photos/folio-soave.webp",
+      "identity": "Фолио Соаве; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 694,
+      "file": "PHOTO-20261114-694.webp",
+      "source_url": "https://moivinoteki.ru/item/sabado-grand-khikhvi-qvevri.htm",
+      "image_url": "https://moivinoteki.ru/photos/sabado-grand-khikhvi-qvevri.webp",
+      "identity": "Хихви Квеври Сабадо; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 696,
+      "file": "PHOTO-20261114-696.webp",
+      "source_url": "https://moivinoteki.ru/item/rustaveli-saperavi.htm",
+      "image_url": "https://moivinoteki.ru/photos/rustaveli-saperavi.webp",
+      "identity": "Саперави Руставели; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 442,
+      "file": "PHOTO-20261114-442.webp",
+      "source_url": "https://moivinoteki.ru/item/merito-pedro-ximenez.htm",
+      "image_url": "https://moivinoteki.ru/photos/merito-pedro-ximenez.webp",
+      "identity": "Мерито Педро Хименес; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 448,
+      "file": "PHOTO-20261114-448.webp",
+      "source_url": "https://moivinoteki.ru/item/folio-nero-davola.htm",
+      "image_url": "https://moivinoteki.ru/photos/folio-nero-davola.webp",
+      "identity": "Фолио Неро д'Авола; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 452,
+      "file": "PHOTO-20261114-452.webp",
+      "source_url": "https://moivinoteki.ru/item/argentiera-villa-donoratico.htm",
+      "image_url": "https://moivinoteki.ru/photos/argentiera-villa-donoratico.webp",
+      "identity": "Вилла Доноратико; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 454,
+      "file": "PHOTO-20261114-454.webp",
+      "source_url": "https://moivinoteki.ru/item/argentiera.htm",
+      "image_url": "https://moivinoteki.ru/photos/argentiera.webp",
+      "identity": "Арджентьера; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 458,
+      "file": "PHOTO-20261114-458.webp",
+      "source_url": "https://moivinoteki.ru/item/chateau-citran-haut-medoc.htm",
+      "image_url": "https://moivinoteki.ru/photos/chateau-citran-haut-medoc.webp",
+      "identity": "Шато Ситран; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 703,
+      "file": "PHOTO-20261114-703.webp",
+      "source_url": "https://moivinoteki.ru/item/viu-manent-estate-collection-chardonnay-reserva.htm",
+      "image_url": "https://moivinoteki.ru/photos/viu-manent-estate-collection-chardonnay-reserva.webp",
+      "identity": "Вью Манент Эстейт Коллекшн Резерва Шардонне; 0,375 л",
+      "review_note": "Карточка источника относится к 0,375 л; на фото нет противоречащего обозначения объёма.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 704,
+      "file": "PHOTO-20261114-704.webp",
+      "source_url": "https://moivinoteki.ru/item/sabado-classic-saperavi.htm",
+      "image_url": "https://moivinoteki.ru/photos/sabado-classic-saperavi.webp",
+      "identity": "Саперави Сабадо; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 478,
+      "file": "PHOTO-20261114-478.webp",
+      "source_url": "https://moivinoteki.ru/item/protos-roble.htm",
+      "image_url": "https://moivinoteki.ru/photos/protos-roble.webp",
+      "identity": "Протос Робле; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 722,
+      "file": "PHOTO-20261114-722.webp",
+      "source_url": "https://moivinoteki.ru/item/matsu-el-picaro.htm",
+      "image_url": "https://moivinoteki.ru/photos/matsu-el-picaro.webp",
+      "identity": "Матсу Эль Пикаро; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 216,
+      "file": "PHOTO-20261114-216.webp",
+      "source_url": "https://moivinoteki.ru/item/medusa-brut.htm",
+      "image_url": "https://moivinoteki.ru/photos/medusa-brut.webp",
+      "identity": "Медуса; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 724,
+      "file": "PHOTO-20261114-724.webp",
+      "source_url": "https://moivinoteki.ru/item/krinitsa-viognier.htm",
+      "image_url": "https://moivinoteki.ru/photos/krinitsa-viognier.webp",
+      "identity": "Криница Вионье; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 725,
+      "file": "PHOTO-20261114-725.webp",
+      "source_url": "https://moivinoteki.ru/item/porto-valdouro-tawny-port.htm",
+      "image_url": "https://moivinoteki.ru/photos/porto-valdouro-tawny-port.webp",
+      "identity": "Порто Вальдоуру Тоуни Порт",
+      "review_note": "На фото явно Porto Valdouro Tawny Port; цвет в метаданных источника ошибочно указан белым, в каталоге магазина не изменён.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 726,
+      "file": "PHOTO-20261114-726.webp",
+      "source_url": "https://moivinoteki.ru/item/tarapaca-cabernet-sauvignon.htm",
+      "image_url": "https://moivinoteki.ru/photos/tarapaca-cabernet-sauvignon.webp",
+      "identity": "Каберне Совиньон Тарапака; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 729,
+      "file": "PHOTO-20261114-729.webp",
+      "source_url": "https://moivinoteki.ru/item/santa-vittoria-barbaresco.htm",
+      "image_url": "https://moivinoteki.ru/photos/santa-vittoria-barbaresco.webp",
+      "identity": "Санта Виттория Барбареско; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 730,
+      "file": "PHOTO-20261114-730.webp",
+      "source_url": "https://moivinoteki.ru/item/bruni-prosecco-brut.htm",
+      "image_url": "https://moivinoteki.ru/photos/bruni-prosecco-brut.webp",
+      "identity": "Бруни Просекко; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 731,
+      "file": "PHOTO-20261114-731.webp",
+      "source_url": "https://remma.ru/shop/mjasnaja-gastronomija/mjasnye-delikatesy/hamon-vyderzhannyi-iz-utinoi-grudki-nare.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop542.jpg",
+      "identity": "Выдержанный хамон из утиной грудки, сыровяленый 30г, Marguareis",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 732,
+      "file": "PHOTO-20261114-732.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=86",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=86",
+      "identity": "Ветчина Прошутто Крудо Маттонелла, 50г, Casa Margot",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 86 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 86,
+      "pdf_image_xref": 5883
+    },
+    {
+      "id": 733,
+      "file": "PHOTO-20261114-733.webp",
+      "source_url": "https://moivinoteki.ru/item/protos-crianza.htm",
+      "image_url": "https://moivinoteki.ru/photos/protos-crianza.webp",
+      "identity": "Протос Крианца; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 734,
+      "file": "PHOTO-20261114-734.webp",
+      "source_url": "https://moivinoteki.ru/item/1666-london-burning-small-batch-london-dry-gin.htm",
+      "image_url": "https://moivinoteki.ru/photos/1666-london-burning-small-batch-london-dry-gin.webp",
+      "identity": "Лондон Бёрнинг 1666; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 283,
+      "file": "PHOTO-20261114-283.webp",
+      "source_url": "https://moivinoteki.ru/item/torneo-sauvignon-blanc.htm",
+      "image_url": "https://moivinoteki.ru/photos/torneo-sauvignon-blanc.webp",
+      "identity": "Совиньон Блан Торнео; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 538,
+      "file": "PHOTO-20261114-538.webp",
+      "source_url": "https://moivinoteki.ru/item/schenk-vespucci-chianti.htm",
+      "image_url": "https://moivinoteki.ru/photos/schenk-vespucci-chianti.webp",
+      "identity": "Кьянти Веспуччи; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 414,
+      "file": "PHOTO-20261114-414.webp",
+      "source_url": "https://moivinoteki.ru/item/ducento-primitivo.htm",
+      "image_url": "https://moivinoteki.ru/photos/ducento-primitivo.webp",
+      "identity": "Примитиво Дученто; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 736,
+      "file": "PHOTO-20261114-736.webp",
+      "source_url": "https://moivinoteki.ru/item/gaumen-spiel-riesling-trocken.htm",
+      "image_url": "https://moivinoteki.ru/photos/gaumen-spiel-riesling-trocken.webp",
+      "identity": "Гаумен Шпиль Рислинг",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 740,
+      "file": "PHOTO-20261114-740.webp",
+      "source_url": "https://remma.ru/shop/syry/krem-syry/chizkeik-nyu-iork-chernaja-smorodina.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop430.jpg",
+      "identity": "Сыр-Десерт Чизкейк Нью-йорк Черная смородина 100г AMGUSTIA",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 741,
+      "file": "PHOTO-20261114-741.webp",
+      "source_url": "https://moivinoteki.ru/item/gai-kodzor-chardonnay.htm",
+      "image_url": "https://moivinoteki.ru/photos/gai-kodzor-chardonnay.webp",
+      "identity": "Гай Кодзор Шардоне; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 745,
+      "file": "PHOTO-20261114-745.webp",
+      "source_url": "https://moivinoteki.ru/item/rose-de-gai-kodzor.htm",
+      "image_url": "https://moivinoteki.ru/photos/rose-de-gai-kodzor.webp",
+      "identity": "РОЗЕ де ГАЙ-КОДЗОР; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 746,
+      "file": "PHOTO-20261114-746.webp",
+      "source_url": "https://moivinoteki.ru/item/sabado-grand-saperavi-qvevri.htm",
+      "image_url": "https://moivinoteki.ru/photos/sabado-grand-saperavi-qvevri.webp",
+      "identity": "Саперави Квеври Сабадо; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 752,
+      "file": "PHOTO-20261114-752.webp",
+      "source_url": "https://moivinoteki.ru/item/kaffa-brut.htm",
+      "image_url": "https://moivinoteki.ru/photos/kaffa-brut.webp",
+      "identity": "Каффа; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 753,
+      "file": "PHOTO-20261114-753.webp",
+      "source_url": "https://moivinoteki.ru/item/mont-mes-chardonnay.htm",
+      "image_url": "https://moivinoteki.ru/photos/mont-mes-chardonnay.webp",
+      "identity": "Шардоне Виньети Делле Доломити Мщнт Мес; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 754,
+      "file": "PHOTO-20261114-754.webp",
+      "source_url": "https://moivinoteki.ru/item/aves-del-sur-sauvignon-blanc.htm",
+      "image_url": "https://moivinoteki.ru/photos/aves-del-sur-sauvignon-blanc.webp",
+      "identity": "Совиньон Блан Авес дель Сур; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 756,
+      "file": "PHOTO-20261114-756.webp",
+      "source_url": "https://moivinoteki.ru/item/rutini-trumpeter-chardonnay.htm",
+      "image_url": "https://moivinoteki.ru/photos/rutini-trumpeter-chardonnay.webp",
+      "identity": "Шардоне Трумпетер; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 758,
+      "file": "PHOTO-20261114-758.webp",
+      "source_url": "https://moivinoteki.ru/item/simonsig-cabernet-sauvignon-shiraz.htm",
+      "image_url": "https://moivinoteki.ru/photos/simonsig-cabernet-sauvignon-shiraz.webp",
+      "identity": "Симрнсиг Каберне Совиньон Шираз; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 762,
+      "file": "PHOTO-20261114-762.webp",
+      "source_url": "https://moivinoteki.ru/item/stormhoek-cabernet-sauvignon-merlot.htm",
+      "image_url": "https://moivinoteki.ru/photos/stormhoek-cabernet-sauvignon-merlot.webp",
+      "identity": "Стормхоук Каберне Совиньон Мерло; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 765,
+      "file": "PHOTO-20261114-765.webp",
+      "source_url": "https://moivinoteki.ru/item/lenotti-capomastro.htm",
+      "image_url": "https://moivinoteki.ru/photos/lenotti-capomastro.webp",
+      "identity": "Ленотти Капомастро; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 767,
+      "file": "PHOTO-20261114-767.webp",
+      "source_url": "https://moivinoteki.ru/item/julien-riehl-gewurztraminer.htm",
+      "image_url": "https://moivinoteki.ru/photos/julien-riehl-gewurztraminer.webp",
+      "identity": "Жюльен Риль Гевюрцтраминер; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 768,
+      "file": "PHOTO-20261114-768.webp",
+      "source_url": "https://moivinoteki.ru/item/anterra-nero-davola-2021.htm",
+      "image_url": "https://moivinoteki.ru/photos/anterra-nero-davola-2021.webp",
+      "identity": "Антерра Неро д'Авола; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 778,
+      "file": "PHOTO-20261114-778.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=96",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=96",
+      "identity": "Сладкий крем-соус из клюквы, 40г, т.м. BREZZO",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 96 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 96,
+      "pdf_image_xref": 6446
+    },
+    {
+      "id": 792,
+      "file": "PHOTO-20261114-792.webp",
+      "source_url": "https://moivinoteki.ru/item/sancho-garces-crianza.htm",
+      "image_url": "https://moivinoteki.ru/photos/sancho-garces-crianza.webp",
+      "identity": "Санчо Гарсес Крианца; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 801,
+      "file": "PHOTO-20261114-801.webp",
+      "source_url": "https://moivinoteki.ru/item/calvados-vieux-forme-pomme.htm",
+      "image_url": "https://moivinoteki.ru/photos/calvados-vieux-forme-pomme.webp",
+      "identity": "Кальвадос в графине в форме Яблока; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 802,
+      "file": "PHOTO-20261114-802.webp",
+      "source_url": "https://remma.ru/shop/syry/s-plesenyu/kamamber-fitnes.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop693.jpg",
+      "identity": "Сыр мягкий с белой плесенью Камамбер Фитнес 150г, AMGUSTIA",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 809,
+      "file": "PHOTO-20261114-809.webp",
+      "source_url": "https://moivinoteki.ru/item/tiffon-vs.htm",
+      "image_url": "https://moivinoteki.ru/photos/tiffon-vs.webp",
+      "identity": "Тиффон ВС; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 810,
+      "file": "PHOTO-20261114-810.webp",
+      "source_url": "https://moivinoteki.ru/item/tiffon-vsop.htm",
+      "image_url": "https://moivinoteki.ru/photos/tiffon-vsop.webp",
+      "identity": "Тиффон ВСОП; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 811,
+      "file": "PHOTO-20261114-811.webp",
+      "source_url": "https://moivinoteki.ru/item/loriot-pagel-carte-dor-extra-brut-3.htm",
+      "image_url": "https://moivinoteki.ru/photos/loriot-pagel-carte-dor-extra-brut-3.webp",
+      "identity": "Шампань Лорио-Пажель Карт д'Ор Экстра Брют",
+      "review_note": "Источник прямо называет Carte d’Or Extra Brut; в общей категории брют. На фото нет другого винтажа; год товара не меняется.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 817,
+      "file": "PHOTO-20261114-817.webp",
+      "source_url": "https://moivinoteki.ru/item/finca-besaya-crianza.htm",
+      "image_url": "https://moivinoteki.ru/photos/finca-besaya-crianza.webp",
+      "identity": "Финка Бесайя Крианса; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 818,
+      "file": "PHOTO-20261114-818.webp",
+      "source_url": "https://moivinoteki.ru/item/prosecco-neirano.htm",
+      "image_url": "https://moivinoteki.ru/photos/prosecco-neirano.webp",
+      "identity": "Нейрано Проссеко; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 821,
+      "file": "PHOTO-20261114-821.webp",
+      "source_url": "https://moivinoteki.ru/item/hoppers-mandarin-rosemary.htm",
+      "image_url": "https://moivinoteki.ru/photos/hoppers-mandarin-rosemary.webp",
+      "identity": "Хопперс Мандарин и Розмарин; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 822,
+      "file": "PHOTO-20261114-822.webp",
+      "source_url": "https://moivinoteki.ru/item/hoppers-lavender-thyme.htm",
+      "image_url": "https://moivinoteki.ru/photos/hoppers-lavender-thyme.webp",
+      "identity": "Хопперс Лаванда Чабрец; 0,7 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 827,
+      "file": "PHOTO-20261114-827.webp",
+      "source_url": "https://moivinoteki.ru/item/myrtle-grove-vinho-crispy.htm",
+      "image_url": "https://moivinoteki.ru/photos/myrtle-grove-vinho-crispy.webp",
+      "identity": "Миртл Гроув Винью Криспи",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 829,
+      "file": "PHOTO-20261114-829.webp",
+      "source_url": "https://moivinoteki.ru/item/castillo-de-aresan-tempranillo-toro.htm",
+      "image_url": "https://moivinoteki.ru/photos/castillo-de-aresan-tempranillo-toro.webp",
+      "identity": "Кастильо де Арезано Темпранильо; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 836,
+      "file": "PHOTO-20261114-836.webp",
+      "source_url": "https://moivinoteki.ru/item/kleine-zalze-cellar-selection-sauvignon-blanc.htm",
+      "image_url": "https://moivinoteki.ru/photos/kleine-zalze-cellar-selection-sauvignon-blanc.webp",
+      "identity": "Совиньон Блан Селлар Селекшен Кляйне Зальзе; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 838,
+      "file": "PHOTO-20261114-838.webp",
+      "source_url": "https://remma.ru/shop/syry/polutverdye/belper-s-tryufelem.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop581.jpg",
+      "identity": "Сыр Белллер трюфель 100г AMGUSTIA",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 839,
+      "file": "PHOTO-20261114-839.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=17",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=17",
+      "identity": "Сырная тарелка Квадро 120г AMGUSTIA",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 17 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 17,
+      "pdf_image_xref": 1104
+    },
+    {
+      "id": 840,
+      "file": "PHOTO-20261114-840.webp",
+      "source_url": "https://remma.ru/shop/syry/krem-syry/krem-syr-pashtet-mramornaja-govjadina.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop432.jpg",
+      "identity": "Сыр сливочный паштет мраморная говядина 100г AMGUSTIA",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 841,
+      "file": "PHOTO-20261114-841.webp",
+      "source_url": "https://remma.ru/shop/syry/s-plesenyu/kamamber-iz-kozego-moloka-mjagkii-s-belo.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop489.jpg",
+      "identity": "Сыр мягкий Камамбер козий 125г Егорлык",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 842,
+      "file": "PHOTO-20261114-842.webp",
+      "source_url": "https://remma.ru/shop/syry/krem-syry/krem-syr-brusketta-120-g.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop370.jpg",
+      "identity": "Крем сыр Брускетта 120 гр Amyga",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 845,
+      "file": "PHOTO-20261114-845.webp",
+      "source_url": "https://remma.ru/shop/mjasnaja-gastronomija/mjasnye-delikatesy/basturma.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop257.jpg",
+      "identity": "Бастурма из говядины, с/в, 50г Casa Margot",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 846,
+      "file": "PHOTO-20261114-846.webp",
+      "source_url": "https://remma.ru/shop/mjasnaja-gastronomija/mjasnye-delikatesy/sheika-koppa.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop256.jpg",
+      "identity": "Шейка свиная Коппа, с/в, 50г, Casa Margot",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 848,
+      "file": "PHOTO-20261114-848.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=73",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=73",
+      "identity": "Фуа-гра утиная 85г, блок, FRANCOTE",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 73 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 73,
+      "pdf_image_xref": 4907
+    },
+    {
+      "id": 849,
+      "file": "PHOTO-20261114-849.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=96",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=96",
+      "identity": "Сладкий крем-соус из красного лука, 40г, т.м. BREZZO",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 96 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 96,
+      "pdf_image_xref": 6452
+    },
+    {
+      "id": 850,
+      "file": "PHOTO-20261114-850.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=96",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=96",
+      "identity": "Сладкий крем-соус из перца Чили, 40г, т.м. BREZZO",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 96 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 96,
+      "pdf_image_xref": 6462
+    },
+    {
+      "id": 851,
+      "file": "PHOTO-20261114-851.webp",
+      "source_url": "https://remma.ru/shop/bakaleja/sousy/sous-malina-krasnyi-perec-110-g.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop624.jpg",
+      "identity": "Соус Малина - красный перец ст/б 110г, ТМ Philosophia de Natura",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 852,
+      "file": "PHOTO-20261114-852.webp",
+      "source_url": "https://remma.ru/shop/bakaleja/sousy/sous-indiiskii-karri-230-g.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop627.jpg",
+      "identity": "Соус индийский Карри ст/б 230гр, Philosophia de Natura",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 853,
+      "file": "PHOTO-20261114-853.webp",
+      "source_url": "https://remma.ru/shop/bakaleja/sousy/sous-tehasskii-barbekyu-230-g.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop628.jpg",
+      "identity": "Соус техасский Барбекю ст/б 230гр, Philosophia de Natura",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 854,
+      "file": "PHOTO-20261114-854.webp",
+      "source_url": "https://remma.ru/shop/bakaleja/sousy/fruktovaja-gorchica-chyornaja-smorodina-.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop619.jpg",
+      "identity": "Фруктовая горчица Чёрная смородина ст/б 120г, Santa Gracia",
+      "review_note": "Название, версия и объём/вес сверены с источником; изображение проверено визуально.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 859,
+      "file": "PHOTO-20261114-859.webp",
+      "source_url": "https://moivinoteki.ru/item/domaine-denis-race-chablis-1er-cru-montmains.htm",
+      "image_url": "https://moivinoteki.ru/photos/domaine-denis-race-chablis-1er-cru-montmains.webp",
+      "identity": "Шабли Премье Крю Монмэн Домэн Дени Рас",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 860,
+      "file": "PHOTO-20261114-860.webp",
+      "source_url": "https://moivinoteki.ru/item/laurent-delaunay-les-grappillages-bourgogne-chardonnay.htm",
+      "image_url": "https://moivinoteki.ru/photos/laurent-delaunay-les-grappillages-bourgogne-chardonnay.webp",
+      "identity": "Лоран Дэланэ Ле Граппияж Бургонь Шардоне",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 862,
+      "file": "PHOTO-20261114-862.webp",
+      "source_url": "https://moivinoteki.ru/item/salasar-revelation-cremant-de-limoux.htm",
+      "image_url": "https://moivinoteki.ru/photos/salasar-revelation-cremant-de-limoux.webp",
+      "identity": "Салазар Ревелейшн Креман де Лиму",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 863,
+      "file": "PHOTO-20261114-863.webp",
+      "source_url": "https://moivinoteki.ru/item/stormhoek-sauvignon-blanc.htm",
+      "image_url": "https://moivinoteki.ru/photos/stormhoek-sauvignon-blanc.webp",
+      "identity": "Стормхоук Совиньон Блан; 0,75 л",
+      "review_note": "Название, линейка, цвет и объём сверены с карточкой источника; изображение проверено. Год из фото в данные не переносится.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 874,
+      "file": "PHOTO-20261114-874.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf#page=111",
+      "image_url": "https://remma.ru/katalog_remma.pdf#page=111",
+      "identity": "Мини-твисты с сыром, 75г, Roland",
+      "review_note": "Проверены наименование, бренд, вес и фото на странице 111 официального каталога Remma (октябрь 2026).",
+      "retrieved_on": "2026-11-14",
+      "pdf_page": 111,
+      "pdf_image_xref": 7444
     }
   ]
 }
