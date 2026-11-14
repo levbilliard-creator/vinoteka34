@@ -1,10 +1,10 @@
 {
   "date": "2026-11-14",
   "total": 644,
-  "with_photo": 369,
-  "placeholders": 275,
+  "with_photo": 517,
+  "placeholders": 127,
   "target_max_placeholders": 128,
-  "approved_in_this_search": 163,
+  "approved_in_this_search": 311,
   "rejected_candidates": {
     "3": "Источник указывает 2018 вместо 2017",
     "20": "Источник 0,7 л вместо 0,75 л",
