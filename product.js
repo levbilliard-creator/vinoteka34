@@ -16,7 +16,7 @@
       const products=await V.loadProducts();
       let product=products.find(p=>String(p.id)===id);
       if(!product) {
-        const response=await fetch('/data/products-archive.json');
+        const response=await fetch('/data/products-archive.json?v=20261031-1',{cache:'no-store'});
         if(!response.ok) throw new Error('Archive unavailable');
         const archived=await response.json();
         if(!Array.isArray(archived)) throw new Error('Invalid archive');

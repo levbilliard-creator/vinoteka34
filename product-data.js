@@ -35,7 +35,7 @@
     return '/product.html?' + params.toString();
   }
   async function loadProducts() {
-    const response = await fetch('/data/products.json');
+    const response = await fetch('/data/products.json?v=20261031-1', {cache:'no-store'});
     if(!response.ok) throw new Error('Не удалось загрузить каталог: HTTP ' + response.status);
     const products = await response.json();
     if(!Array.isArray(products) || !products.every(p => p && p.id != null && typeof p.name_ru === 'string')) throw new Error('Неверный формат каталога');
