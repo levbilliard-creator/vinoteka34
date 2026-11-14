@@ -2,7 +2,7 @@
   "release": "VINOTEKA34_STABILITY_v1",
   "date": "2026-11-14",
   "base_commit": "db7c9e3df9fbe2652ed59c03e206430a63b771e7",
-  "production_deployed": false,
+  "production_deployed": true,
   "products_count": 553,
   "products_sha256": "9528ce902774bfcb2f101d5b3debb4ef8b603946a61503e9fc695b3746404fc3",
   "files": {
@@ -27,6 +27,24 @@
   "hosting": {
     "provider": "Yandex Cloud Object Storage",
     "bucket_from_history": "vinoteka34.ru",
-    "direct_access_verified": false
+    "direct_access_verified": true
+  },
+  "deployment": {
+    "provider": "Yandex Cloud Object Storage",
+    "bucket": "vinoteka34.ru",
+    "commit": "058fa4b8ee95ed774d4d9e431b125ffd42d2cb88",
+    "workflow_run": 43601549881,
+    "result": "success",
+    "uploaded_objects": 111,
+    "rollback_artifact": 14116641825,
+    "public_files_match": true,
+    "live_browser_checks": [
+      "wine category 300",
+      "tea search exclusion",
+      "tea search 2 results",
+      "product and return preserving query",
+      "home"
+    ],
+    "mobile_browser_checked": false
   }
 }
