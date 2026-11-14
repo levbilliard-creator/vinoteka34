@@ -533,7 +533,21 @@
     "779": "PHOTO-20261114-779.webp",
     "405": "PHOTO-20261114-405.webp",
     "831": "PHOTO-20261114-831.webp",
-    "837": "PHOTO-20261114-837.webp"
+    "837": "PHOTO-20261114-837.webp",
+    "555": "PHOTO-20261115-555.webp",
+    "557": "PHOTO-20261115-557.webp",
+    "20": "PHOTO-20261115-20.webp",
+    "194": "PHOTO-20261115-194.webp",
+    "672": "PHOTO-20261115-672.webp",
+    "486": "PHOTO-20261115-486.webp",
+    "371": "PHOTO-20261115-371.webp",
+    "505": "PHOTO-20261115-505.webp",
+    "286": "PHOTO-20261115-286.webp",
+    "532": "PHOTO-20261115-532.webp",
+    "776": "PHOTO-20261115-776.webp",
+    "815": "PHOTO-20261115-815.webp",
+    "843": "PHOTO-20261115-843.webp",
+    "847": "PHOTO-20261115-847.webp"
   },
   "web_sources": [
     {
@@ -4458,6 +4472,132 @@
       "identity": "Совиньон Блан Валь де Луар Лез Анж; 0,75 л",
       "review_note": "Les Anges Sauvignon, IGP Val de Loire, Blanc sec, 75 cl. Фото этикетки проверено; год в остатке не указан и из фото не добавлялся.",
       "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 555,
+      "file": "PHOTO-20261115-555.webp",
+      "source_url": "https://vinoteca-online.ru/catalog/krepkiy-alkogol/vodka/vodka-organik-0-5-l/",
+      "image_url": "https://vinoteca-online.ru/upload/resize_cache/iblock/c15/206_466_1/qls9sf4pf5cgdhwfgmqofjprzy8hby0f.jpg",
+      "identity": "Органик; 0,5 л",
+      "review_note": "Органик / Organic Pure & Natural Vodka: отдельная страница 0,5 л, бутылка того же названия и фасовки. Не Organika.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 557,
+      "file": "PHOTO-20261115-557.webp",
+      "source_url": "https://joia.ru/product/vkusovaya_vodka_lab_38_lesnye_yagody_brusnika_chernika_0_7l/",
+      "image_url": "https://joia.ru/upload/resize_cache/iblock/52a/850_1276_1619711fa078991f0a23d032687646b21/1opodl11s94pholn9gvoc3n0kflenv34.png",
+      "identity": "Брусника Черника; 0,7 л",
+      "review_note": "Точный вкус LAB №38 Forest Berries / брусника, черника, 0,7 л подтверждён поставщиком Joia; соответствует соседним позициям той же серии и цене в остатке. Название карточки не расширялось.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 20,
+      "file": "PHOTO-20261115-20.webp",
+      "source_url": "https://www.thebarreltap.com/collections/black-friday-sale/products/the-dalmore-12-year-old-scotch-whisky-750ml",
+      "image_url": "http://www.thebarreltap.com/cdn/shop/files/dalmore-12-year-750ml.webp?v=1794276439",
+      "identity": "Далмор 12 лет; 0,75 л",
+      "review_note": "Dalmore 12 regular: на фото прямо указано 750 ml и 12 years; соответствует 0,75 л, не Sherry Cask Select.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 194,
+      "file": "PHOTO-20261115-194.webp",
+      "source_url": "https://www.banfi.it/eng/le-rime/",
+      "image_url": "https://www.banfi.it/wp-content/uploads/2024/07/banfi-toscana-le-rime-bianco.webp",
+      "identity": "Ле Риме; 0,75 л",
+      "review_note": "Официальный производитель Banfi Le Rime: проверено фото стандартной бутылки и линейка Chardonnay / Pinot Grigio. Объём 750 мл дополнительно подтверждён https://sangiorgiovini.it/prodotto/le-rime-toscana-igt/ ; год в остатке отсутствует.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 672,
+      "file": "PHOTO-20261115-672.webp",
+      "source_url": "https://www.fallonandbyrne.com/shop/crisps-snacks/san-carlo-paprika-potato-crisps/",
+      "image_url": "https://www.fallonandbyrne.com/wp-content/uploads/2025/06/San-Carlo-Paprika-Crisps-1400x1400-1.png",
+      "identity": "Чипсы Сан Карло паприка 150 гр. Италия",
+      "review_note": "Сверены название, линейка и фасовка источника; фото товара просмотрено. Характеристики и название карточки сохранены.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 486,
+      "file": "PHOTO-20261115-486.webp",
+      "source_url": "https://ekb.italioni.ru/catalog/myasnaya-gastronomiya/myasnaya-gastronomiya/govyadina-syrovyalenaya-brezaola-bresaola-artigiano-narezka-0-070-kg-upak-10-sht-rossiya/",
+      "image_url": "https://ekb.italioni.ru/upload/iblock/14d/0jqalfqv5eakpuh7f9uwf9byynjfm7cb.jpg",
+      "identity": "Брезаола Artigiano 70 гр",
+      "review_note": "Сверены название, линейка и фасовка источника; фото товара просмотрено. Характеристики и название карточки сохранены.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 371,
+      "file": "PHOTO-20261115-371.webp",
+      "source_url": "https://wg-wine.ru/vse-vina/cuvee-16-limited-edition-kyuve-16/",
+      "image_url": "https://wg-wine.ru/images/detailed/8/%D0%9A%D1%8E%D0%B2%D0%B5_16.png",
+      "identity": "Кюве 16; 0,75 л",
+      "review_note": "Импортёр White Group: Cuvee 16 Limited Edition Botter, красное полусухое, 0,75 л; фотография соответствует. Старый источник с сухим не использован.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 505,
+      "file": "PHOTO-20261115-505.webp",
+      "source_url": "https://www.fairprice.com.sg/product/tartufi-jimmy-white-truffle-olive-oil-250-ml-90079721",
+      "image_url": "https://media.nedigital.sg/fairprice/90079721_XL1_20261105094628_9c6fa653ec719d533241d9e0740269fe.jpg",
+      "identity": "Масло оливковое Тартуфи Джимми с белым трюфелем 250 мл",
+      "review_note": "Сверены название, линейка и фасовка источника; фото товара просмотрено. Характеристики и название карточки сохранены.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 286,
+      "file": "PHOTO-20261115-286.webp",
+      "source_url": "https://fozgourmet.com/produto/vinho-tinto-conceito-legitimo-75cl-douro/",
+      "image_url": "https://fozgourmet.com/wp-content/uploads/2025/11/Vinho-Tinto-Conceito-Legitimo.jpg",
+      "identity": "Консеито Легитимо; 0,75 л",
+      "review_note": "Сверены название, линейка и фасовка источника; фото товара просмотрено. Характеристики и название карточки сохранены.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 532,
+      "file": "PHOTO-20261115-532.webp",
+      "source_url": "https://www.espaciovino.com.ar/vinos-ficha/Desquiciado-Syrah",
+      "image_url": "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65312_default_big.jpeg",
+      "identity": "Дескиадо Сира; 0,75 л",
+      "review_note": "Сверены название, линейка и фасовка источника; фото товара просмотрено. Характеристики и название карточки сохранены.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 776,
+      "file": "PHOTO-20261115-776.webp",
+      "source_url": "https://probkibutylki.ru/shop/pivo/germanija/pivo-flensburger-gold-0-5-l.html",
+      "image_url": "https://probkibutylki.ru/34945-small_00origjpg/pivo-flensburger-gold-0-5-l.jpg",
+      "identity": "Фленсбургер Голд; 0,5 л",
+      "review_note": "Сверены название, линейка и фасовка источника; фото товара просмотрено. Характеристики и название карточки сохранены.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 815,
+      "file": "PHOTO-20261115-815.webp",
+      "source_url": "https://ivn.decanter.ru/product/krinitsa-ester-2025-id273043",
+      "image_url": "https://static.decanter.ru/upload/images/462499/462499-vino-krinitsa-ester-2025-0-75-l-sq.jpg",
+      "identity": "Эстер",
+      "review_note": "Криница Ester: источник отдельного урожая 2025, белое сухое 0,75 л; новая фотография без противоречащего года. Прежний снимок 2020 не использован.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 843,
+      "file": "PHOTO-20261115-843.webp",
+      "source_url": "https://biomarketorganic.ru/product/kolbasa-syrovyalenaya-casa-margot-110-g/",
+      "image_url": "http://biomarketorganic.ru/wp-content/uploads/2026/03/casa-margot-salchichon-montanya-premium-110-g_673db14e6acc7.jpg",
+      "identity": "Колбаса Сальчичон Монтанья Премиум 110г, Casa Margot",
+      "review_note": "Сверены название, линейка и фасовка источника; фото товара просмотрено. Характеристики и название карточки сохранены.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 847,
+      "file": "PHOTO-20261115-847.webp",
+      "source_url": "https://remma.ru/shop/mjasnaja-gastronomija/syrovjalenye-kolbasy/kolbasa-fiorentino-95-g.html",
+      "image_url": "https://remma.ru/images/photos/medium/shop569.jpg",
+      "identity": "Колбаса Фиорентино полусухая 95г, МЯСНОЕ АТЕЛЬЕ",
+      "review_note": "Первичный источник РЕММА: Фиорентино 95 г; каталог РЕММА, стр. 64, Мясное ателье MA006. Фото товара проверено.",
+      "retrieved_on": "2026-11-15"
     }
   ]
 }
