@@ -517,7 +517,23 @@
     "868": "PHOTO-20261114-868.webp",
     "875": "PHOTO-20261114-875.webp",
     "876": "PHOTO-20261114-876.webp",
-    "105": "PHOTO-20261114-105.webp"
+    "105": "PHOTO-20261114-105.webp",
+    "554": "PHOTO-20261114-554.webp",
+    "566": "PHOTO-20261114-566.webp",
+    "609": "PHOTO-20261114-609.webp",
+    "632": "PHOTO-20261114-632.webp",
+    "359": "PHOTO-20261114-359.webp",
+    "369": "PHOTO-20261114-369.webp",
+    "676": "PHOTO-20261114-676.webp",
+    "688": "PHOTO-20261114-688.webp",
+    "705": "PHOTO-20261114-705.webp",
+    "488": "PHOTO-20261114-488.webp",
+    "495": "PHOTO-20261114-495.webp",
+    "728": "PHOTO-20261114-728.webp",
+    "779": "PHOTO-20261114-779.webp",
+    "405": "PHOTO-20261114-405.webp",
+    "831": "PHOTO-20261114-831.webp",
+    "837": "PHOTO-20261114-837.webp"
   },
   "web_sources": [
     {
@@ -4297,6 +4313,150 @@
       "image_url": "https://aroma.ru/uploads/gss/goods/1776/01b_1.jpg",
       "identity": "Жюль Мерлино Бургонь Шардоне; 0,75 л",
       "review_note": "Название, линейка и фасовка сверены по источнику; фото просмотрено. Изображение соответствует позиции, данные карточки сохранены.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 554,
+      "file": "PHOTO-20261114-554.webp",
+      "source_url": "https://daskowine.ru/product/vino-donya-dominga-pino-nuar-rezerva-de-familiya",
+      "image_url": "https://cdn.insales-shop.ru/images/products/1/3353/3271265561/0_0_1390x1200.webp",
+      "identity": "Донья Доминга Резерва де Фамилиа Пино Нуар",
+      "review_note": "Сверены точное название и линейка, характеристики и фасовка страницы; фото просмотрено, противоречащих обозначений не обнаружено.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 566,
+      "file": "PHOTO-20261114-566.webp",
+      "source_url": "https://www.meregallipremium.it/it/prodotto/skin_settanta_2022-4427MA22",
+      "image_url": "https://www.meregalli.com/contents/prodotti/medium/primosic-skin_settanta-meregalli(4427MA).jpg",
+      "identity": "СкинСеттанта ИГТ Венеция Джулия",
+      "review_note": "Официальный импортёр Meregalli: Skin Settanta, Annata 2022, Capacità 0.75 l. Фото этой линейки без противоречащего года.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 609,
+      "file": "PHOTO-20261114-609.webp",
+      "source_url": "https://probkibutylki.ru/shop/pivo/chehija/pivo-cernovar-cerne-0-5-l.html",
+      "image_url": "https://probkibutylki.ru/102947-small_00orig/pivo-cernovar-cerne-0-5-l.jpg",
+      "identity": "Черновар; 0,5 л",
+      "review_note": "Сверены точное название и линейка, характеристики и фасовка страницы; фото просмотрено, противоречащих обозначений не обнаружено.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 632,
+      "file": "PHOTO-20261114-632.webp",
+      "source_url": "https://decanter.ru/product/sikory-gertz-2022-id266529",
+      "image_url": "https://static.decanter.ru/upload/images/448351/448351-vino-sikory-gertz-2022-0-75-l-sq.jpg",
+      "identity": "Герцъ Сикоры; 0,75 л",
+      "review_note": "Сверены точное название и линейка, характеристики и фасовка страницы; фото просмотрено, противоречащих обозначений не обнаружено.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 359,
+      "file": "PHOTO-20261114-359.webp",
+      "source_url": "https://www.joia.ru/product/viski_kirker_shemrok_kupazhirovannyy_0_7l/",
+      "image_url": "https://www.joia.ru/upload/resize_cache/iblock/020/852_1278_1619711fa078991f0a23d032687646b21/v985b37e9kbuy1d9wh2rojto3ljiroxb.jpg",
+      "identity": "Киркер Шэмрок; 0,7 л",
+      "review_note": "Сверены точное название и линейка, характеристики и фасовка страницы; фото просмотрено, противоречащих обозначений не обнаружено.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 369,
+      "file": "PHOTO-20261114-369.webp",
+      "source_url": "https://nesco.ru/product/vino_burgon_aligote_domen_edmon_kornyu_e_fis_aoc_beloe_sukhoe_0_75l/",
+      "image_url": "https://nesco.ru/upload/resize_cache/iblock/ea5/852_1278_1619711fa078991f0a23d032687646b21/11b0cuyqyfil7obbhtnwpoi56y6wakmt.png",
+      "identity": "Алиготе Домен Эдмонд Корню э Фис; 0,75 л",
+      "review_note": "Сверены точное название и линейка, характеристики и фасовка страницы; фото просмотрено, противоречащих обозначений не обнаружено.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 676,
+      "file": "PHOTO-20261114-676.webp",
+      "source_url": "https://www.cru.ru/beer/china/tsindao-premium-lager-0-33l/",
+      "image_url": "https://www.cru.ru/upload/resize_cache/ram.watermark/c99/4da/c1f/1074863/662_992_1/pivo-tsingtao-premium-lager-0-33-pivo-tsindao-svetloe-filtrovannoe-0-33-l-0-33.webp",
+      "identity": "Циндао Премиум; 0,33 л",
+      "review_note": "Сверены точное название и линейка, характеристики и фасовка страницы; фото просмотрено, противоречащих обозначений не обнаружено.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 688,
+      "file": "PHOTO-20261114-688.webp",
+      "source_url": "https://sabonis.ru/productDetail/vkusovaia-vodka-lab-no38-chernaia-smorodina-tsvety-buziny",
+      "image_url": "https://sabonis.ru/_next/image?url=https%3A%2F%2Fapi.sabonis.ru%2Fmedia%2Fproducts%2F00037061.webp&w=3840&q=75",
+      "identity": "Лаб №38 черная смородина, бузина",
+      "review_note": "На фото LAB №38 Blackcurrant Elderflower, 0.7 L / 38%; соответствует указанной в остатке линейке и вкусу.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 705,
+      "file": "PHOTO-20261114-705.webp",
+      "source_url": "https://winemore.ru/catalog/krepkie_napitki/nastoyka_yagodnaya_onegin_gurme_kuraga_05_l_sw/",
+      "image_url": "https://winemore.ru/upload/dev2fun.imagecompress/webp/iblock/5e1/p719362vahabq2pxe7cyx8t93g0o49v2/ac642c5a745930a97654850947d00146.webp",
+      "identity": "Онегин Гурмэ Курага; 0,5 л",
+      "review_note": "Сверены точное название и линейка, характеристики и фасовка страницы; фото просмотрено, противоречащих обозначений не обнаружено.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 488,
+      "file": "PHOTO-20261114-488.webp",
+      "source_url": "https://www.alcoplaza.ru/Wine/schaller-camille-and-laurent-bourgogne-chardonnay-075-beloe-suhoe",
+      "image_url": "https://www.alcoplaza.ru/photo_it/photo138746.jpeg",
+      "identity": "Шаллер Камилль эт Лоран Бургонь Шардоне; 0,75 л",
+      "review_note": "Сверены точное название и линейка, характеристики и фасовка страницы; фото просмотрено, противоречащих обозначений не обнаружено.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 495,
+      "file": "PHOTO-20261114-495.webp",
+      "source_url": "https://moivinoteki.ru/item/lizard-50-riesling.htm",
+      "image_url": "https://moivinoteki.ru/photos/lizard-50-riesling.webp",
+      "identity": "Лизард Рислинг; 0,75 л",
+      "review_note": "Lizard 50° Riesling: подтверждены белое полусладкое и 0.75 л; не использовано фото Lizard Trocken.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 728,
+      "file": "PHOTO-20261114-728.webp",
+      "source_url": "https://decanter.ru/product/glen-scanlan-blended-scotch-whisky-id106733",
+      "image_url": "https://static.decanter.ru/upload/images/292814/292814-viski-glen-scanlan-blended-scotch-whisky-0-2-l-sq.jpg",
+      "identity": "Глен Сканлан; 0,2 л",
+      "review_note": "Glen Scanlan: отдельная страница 200 мл и фото мини-бутылки 0.2 L.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 779,
+      "file": "PHOTO-20261114-779.webp",
+      "source_url": "https://nesco.ru/product/vodka_belaya_berezka_0_05l/",
+      "image_url": "https://nesco.ru/upload/resize_cache/iblock/017/867_1300_1619711fa078991f0a23d032687646b21/9p7ayprx2gt5ip5dc6r003xydp7p74hf.jpg",
+      "identity": "Белая Березка; 0,05 л",
+      "review_note": "Белая Берёзка 0.05 л: точная фасовка миниатюры подтверждена страницей поставщика Nesco и фото.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 405,
+      "file": "PHOTO-20261114-405.webp",
+      "source_url": "https://www.cru.ru/vodka/beluga-transatlantic-0-5/",
+      "image_url": "https://www.cru.ru/upload/resize_cache/ram.watermark/35b/c62/74d/1065482/662_992_1/beluga-transatlantic-racing-0-5.webp",
+      "identity": "Белуга Трансантлантик Рейсинг; 0,5 л",
+      "review_note": "Beluga Transatlantic Racing 0.5 л: отдельная страница объёма 0.5 л, фото этой бутылки; не использован прежний вариант 0.7 л.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 831,
+      "file": "PHOTO-20261114-831.webp",
+      "source_url": "https://www.cru.ru/vodka/beluga-noble-1l/",
+      "image_url": "https://www.cru.ru/upload/resize_cache/ram.watermark/0f1/45d/a2a/1065549/662_992_1/beluga-noble-1.webp",
+      "identity": "Белуга Нобл; 1 л",
+      "review_note": "Beluga Noble: на фотографии явно указано 1.0 LITRE; соответствует объёму 1 л.",
+      "retrieved_on": "2026-11-14"
+    },
+    {
+      "id": 837,
+      "file": "PHOTO-20261114-837.webp",
+      "source_url": "https://www.terredeboissons.com/les-caves-de-la-loire-les-anges-sauvignon.html",
+      "image_url": "https://api.lechais.com/assets/preview/b2/sauvignon-les-anges__preview.jpg",
+      "identity": "Совиньон Блан Валь де Луар Лез Анж; 0,75 л",
+      "review_note": "Les Anges Sauvignon, IGP Val de Loire, Blanc sec, 75 cl. Фото этикетки проверено; год в остатке не указан и из фото не добавлялся.",
       "retrieved_on": "2026-11-14"
     }
   ]

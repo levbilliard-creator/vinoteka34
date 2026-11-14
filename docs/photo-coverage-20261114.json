@@ -1,10 +1,10 @@
 {
   "date": "2026-11-14",
   "total": 644,
-  "with_photo": 517,
-  "placeholders": 127,
-  "target_max_placeholders": 128,
-  "approved_in_this_search": 311,
+  "with_photo": 533,
+  "placeholders": 111,
+  "target_max_placeholders": 32,
+  "approved_in_this_search": 327,
   "rejected_candidates": {
     "3": "Источник указывает 2018 вместо 2017",
     "20": "Источник 0,7 л вместо 0,75 л",
@@ -32,5 +32,27 @@
     "648": "Полусладкое вместо сладкого",
     "588": "На фото Onza Silver 1.0 L, в магазине 0,7 л",
     "831": "На фото Beluga 0.5 LITER вместо 1 л"
-  }
+  },
+  "target_percent": 5,
+  "current_placeholder_percent": 17.24,
+  "additional_photos_needed_for_target": 79,
+  "last_batch_added": 16,
+  "last_batch_product_ids": [
+    369,
+    779,
+    405,
+    831,
+    705,
+    359,
+    688,
+    676,
+    566,
+    632,
+    554,
+    488,
+    837,
+    495,
+    609,
+    728
+  ]
 }
