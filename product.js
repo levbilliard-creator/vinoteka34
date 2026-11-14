@@ -1,212 +1,52 @@
-// ===== ID из URL =====
-const params = new URLSearchParams(window.location.search);
-const productId = Number(params.get("id"));
-
-
-// ===== ПЕРЕВОД ТИПА =====
-function translateType(type){
-  if(type === "wine") return "Вино"
-  if(type === "sparkling") return "Игристое"
-  if(type === "strong") return "Крепкий алкоголь"
-  if(type === "beer") return "Пиво"
-  if(type === "grocery") return "Бакалея"
-  if(type === "soft") return "Безалкогольные"
-  if(type === "tea") return "Чай"
-  if(type === "accessories") return "Аксессуары"
-  return type
-}
-
-
-// ===== ЗАГРУЗКА =====
-fetch("/data/products.json")
-  .then(res => res.json())
-  .then(products => {
-
-    const product = products.find(p => Number(p.id) === productId);
-
-    if (!product) {
-      document.body.innerHTML = "<h1 style='padding:40px'>Товар не найден</h1>";
-      return;
-    }
-
-
-    // ===== НАЗВАНИЕ =====
-    document.querySelector(".product-title").textContent =
-      product.name_ru || "Без названия";
-
-
-    // ===== ТИП =====
-    document.querySelector(".product-type").textContent =
-      translateType(product.type);
-
-
-    // ===== СТИЛЬ =====
-    document.querySelector(".product-style").textContent =
-      `${product.color || ""} ${product.style || ""}`.trim();
-
-
-    // ===== ЦЕНА =====
-    document.querySelector(".product-price").textContent =
-      (product.price || 0) + " ₽";
-
-
-    // ===== КАРТИНКА (умный подбор по имени) =====
-    const img = document.querySelector(".product-image img");
-
-    function normalize(str){
-      return (str || "")
-        .toLowerCase()
-        .replace(/ё/g, "е")
-        .replace(/[^a-zа-я0-9 ]/gi, "")
-        .split(" ")
-        .filter(w => w.length > 2);
-    }
-
-    function matchImage(productName, fileList){
-      const words = normalize(productName);
-
-      let bestMatch = null;
-      let bestScore = 0;
-
-      fileList.forEach(file => {
-        const fileWords = normalize(file);
-
-        let score = 0;
-
-        words.forEach(w => {
-          if(fileWords.includes(w)) score++;
-        });
-
-        if(score > bestScore){
-          bestScore = score;
-          bestMatch = file;
-        }
-      });
-
-      return bestScore >= 2 ? bestMatch : null;
-    }
-
-    fetch("/data/images.json")
-      .then(res => res.json())
-      .then(images => {
-
-        const match = matchImage(product.name_ru, images);
-
-        if(match){
-          img.src = "/assets/wines/" + match;
-        } else {
-          img.src = "/assets/no-wine.png";
-        }
-
-      })
-      .catch(() => {
-        img.src = "/assets/no-wine.png";
-      });
-
-
-    // ===== ОПИСАНИЕ (УЛУЧШЕННОЕ) =====
-    function capitalize(str) {
-      return str ? str.charAt(0).toUpperCase() + str.slice(1) : "";
-    }
-
-    function generateDescription(p) {
-
-      if (p.type === "wine" || p.type === "sparkling") {
-
-        let parts = [];
-        if(p.color) parts.push(p.color);
-        if(p.style) parts.push(p.style);
-
-        return `${capitalize(parts.join(" "))} ${p.name_ru}.
-Происхождение: ${p.country || "не указано"}.
-Рекомендации: ${getFoodPairing(p)}`;
+(() => {
+  'use strict';
+  const V=window.Vino;
+  const params=new URLSearchParams(location.search);
+  const id=params.get('id');
+  const state={type:V.typeOf(params.get('from')),query:params.get('q') || '',shown:Math.min(1000,Math.max(20,Number(params.get('shown')) || 20))};
+  const status=document.getElementById('productStatus');
+  const retry=document.getElementById('retryLoad');
+  const content=document.getElementById('productContent');
+  const back=document.getElementById('backToCatalog');
+  back.href=V.catalogURL(state.type,state.query,state.shown);
+  async function init() {
+    content.hidden=true;retry.hidden=true;status.hidden=false;
+    status.textContent='Загружаем товар…';
+    try {
+      const products=await V.loadProducts();
+      const product=products.find(p=>String(p.id)===id);
+      if(!product) {status.textContent='Товар не найден. Вернитесь в каталог и выберите другую позицию.';document.title='Товар не найден — VINOTEKA34';return;}
+      document.title=product.name_ru+' — VINOTEKA34';
+      document.querySelector('meta[name="description"]').content=product.name_ru+'. '+V.priceOf(product.price)+'. Винный бутик VINOTEKA34.';
+      const canonical=document.querySelector('link[rel="canonical"]');
+      canonical.href='https://vinoteka34.ru/product.html?id='+encodeURIComponent(product.id);
+      document.querySelector('.product-title').textContent=product.name_ru;
+      const original=document.querySelector('.product-name-en');
+      original.textContent=product.name_en || '';original.hidden=!product.name_en;
+      document.querySelector('.product-type').textContent=V.types[product.type] || 'Товар';
+      document.querySelector('.product-style').textContent=[product.color,product.style].filter(Boolean).join(' · ');
+      document.querySelector('.product-price').textContent=V.priceOf(product.price);
+      document.querySelector('.product-image').replaceChildren(V.makeImage(product,true));
+      const description=document.getElementById('productDescription');
+      description.textContent=product.description || 'Подробности об этом товаре можно уточнить у сомелье.';
+      const specs=document.querySelector('.product-specs');specs.replaceChildren();
+      const fields=[['Тип',V.types[product.type]],['Цвет',product.color],['Стиль',product.style],['Страна',product.country],['Регион',product.region],['Сорт винограда',product.grape],['Объем',product.volume],['Год урожая',product.year]];
+      for(const [label,value] of fields) {
+        if(value == null || value === '') continue;
+        const row=V.element('div','spec');
+        row.append(V.element('dt','',label),V.element('dd','',String(value)));
+        specs.append(row);
       }
-
-      if (p.type === "strong") {
-        return `${p.name_ru}.
-Крепкий напиток, рекомендуется употреблять в чистом виде.`;
-      }
-
-      return p.name_ru || "Описание отсутствует";
+      const similar=products.filter(p=>String(p.id)!==String(product.id) && p.type===product.type).slice(0,4);
+      const related=document.querySelector('.similar-grid');related.replaceChildren();
+      for(const item of similar) related.append(V.card(item,state));
+      document.querySelector('.similar').hidden=!similar.length;
+      status.hidden=true;content.hidden=false;
+    } catch {
+      status.textContent='Не удалось загрузить товар. Проверьте соединение и попробуйте ещё раз.';
+      retry.hidden=false;
     }
-
-    document.querySelector(".product-description p").textContent =
-      generateDescription(product);
-
-
-    // ===== ГАСТРОНОМИЯ =====
-    function getFoodPairing(p) {
-
-      if (p.type !== "wine" && p.type !== "sparkling") {
-        return "Рекомендуется употреблять в чистом виде.";
-      }
-
-      if (p.color === "красное") {
-        return "Идеально к мясу и сырам.";
-      }
-
-      if (p.color === "белое") {
-        return "Подходит к рыбе и морепродуктам.";
-      }
-
-      if (p.color === "розе") {
-        return "Хорошо к легким закускам.";
-      }
-
-      if (p.style === "игристое") {
-        return "Отлично к закускам и десертам.";
-      }
-
-      return "Универсальное сочетание.";
-    }
-
-
-    // ===== ХАРАКТЕРИСТИКИ =====
-    document.querySelector(".product-specs").innerHTML = `
-      <div><span>Тип:</span> ${translateType(product.type) || "-"}</div>
-      <div><span>Цвет:</span> ${product.color || "-"}</div>
-      <div><span>Стиль:</span> ${product.style || "-"}</div>
-      <div><span>Страна:</span> ${product.country || "-"}</div>
-      <div><span>Регион:</span> ${product.region || "-"}</div>
-      <div><span>Гастрономия:</span> ${getFoodPairing(product)}</div>
-    `;
-
-
-    // ===== ПОХОЖИЕ ТОВАРЫ =====
-    function getSimilar(products, current) {
-      return products
-        .filter(p =>
-          p.id !== current.id &&
-          p.type === current.type
-        )
-        .slice(0, 4);
-    }
-
-    const similar = getSimilar(products, product);
-
-    const container = document.querySelector(".similar-grid");
-
-    if (similar.length > 0) {
-      container.innerHTML = similar.map(p => `
-        <a href="/product.html?id=${p.id}" class="similar-card">
-
-          <img src="/assets/no-wine.png">
-
-          <div class="wine-type">${translateType(p.type)}</div>
-
-          ${p.name_en ? `<div class="wine-en">${p.name_en}</div>` : ""}
-
-          <div>${p.name_ru}</div>
-
-          <div>${p.price} ₽</div>
-
-        </a>
-      `).join("");
-    } else {
-      container.innerHTML = "<div style='opacity:0.6'>Нет похожих товаров</div>";
-    }
-
-  })
-  .catch(() => {
-    document.body.innerHTML = "<h1 style='padding:40px'>Ошибка загрузки</h1>";
-  });
+  }
+  retry.addEventListener('click',init);
+  init();
+})();

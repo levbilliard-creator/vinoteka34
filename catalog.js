@@ -1,182 +1,71 @@
-let ALL = []
-
-let grid
-let buttons
-let searchInput
-
-let rendered = 0
-const CHUNK = 20
-let currentItems = []
-let currentType = "all"
-
-window.addEventListener("load", () => {
-
-grid = document.querySelector(".catalogGrid")
-buttons = document.querySelectorAll(".categories button")
-searchInput = document.getElementById("searchInput")
-
-if(!grid){
-console.error("catalogGrid не найден")
-return
-}
-
-const params = new URLSearchParams(window.location.search)
-const from = params.get("type")
-if(from){
-currentType = from
-}
-
-init()
-})
-
-async function init(){
-try{
-const res = await fetch("/data/products.json")
-ALL = await res.json()
-
-applyFilter(currentType)
-
-bindButtons()
-bindSearch()
-initScroll()
-
-}catch(e){
-console.error("Ошибка загрузки данных", e)
-}
-}
-
-function applyFilter(type){
-
-if(type === "all"){
-render(ALL)
-return
-}
-
-let filtered = ALL.filter(w => w.type === type)
-render(filtered)
-}
-
-function getImage(product){
-
-if(product.image){
-return "/assets/wines/" + product.image
-}
-
-if(product.id){
-return "/assets/wines/" + product.id + ".jpg"
-}
-
-return ""
-}
-
-function render(items){
-grid.innerHTML = ""
-rendered = 0
-currentItems = items
-renderNext()
-}
-
-function renderNext(){
-
-const slice = currentItems.slice(rendered, rendered + CHUNK)
-
-slice.forEach(w => {
-
-const img = getImage(w)
-
-grid.innerHTML += `
-
-<div class="product-card">
-
-  <div class="img-wrap">
-    ${img 
-      ? `<img src="${img}" class="wine-img" loading="lazy" onerror="this.src='/assets/wines/placeholder.jpg'">`
-      : `<div class="no-img"></div>`
+(() => {
+  'use strict';
+  const V = window.Vino;
+  const grid = document.querySelector('.catalogGrid');
+  const input = document.getElementById('searchInput');
+  const status = document.getElementById('catalogStatus');
+  const more = document.getElementById('loadMore');
+  const retry = document.getElementById('retryLoad');
+  const buttons = [...document.querySelectorAll('[data-type]')];
+  const params = new URLSearchParams(location.search);
+  const state = {type:V.typeOf(params.get('type') || params.get('group')),query:params.get('q') || '',shown:Math.min(1000,Math.max(20,Number(params.get('shown')) || 20))};
+  let products = [], items = [];
+  input.value = state.query;
+  function syncURL() {
+    history.replaceState(null,'',V.catalogURL(state.type,state.query,state.shown));
+  }
+  function updateStatus() {
+    status.textContent = items.length ? 'Найдено: ' + items.length + '. Показано: ' + Math.min(state.shown,items.length) + '.' : 'По вашему запросу ничего не найдено. Измените поиск или категорию.';
+    more.hidden = state.shown >= items.length;
+  }
+  function appendRange(start,end) {
+    const fragment = document.createDocumentFragment();
+    for(const product of items.slice(start,end)) fragment.append(V.card(product,state));
+    grid.append(fragment);
+  }
+  function refresh() {
+    items = V.filter(products,state.type,state.query);
+    state.shown = Math.min(state.shown,Math.max(20,items.length));
+    grid.replaceChildren();
+    buttons.forEach(button => {const active=button.dataset.type === state.type;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
+    appendRange(0,state.shown);
+    syncURL(); updateStatus();
+  }
+  function showMore() {
+    const previous = state.shown;
+    state.shown = Math.min(items.length,previous+20);
+    appendRange(previous,state.shown);
+    // Links return to the complete portion of the catalog already opened.
+    grid.querySelectorAll('.btn-link').forEach((link,index) => {link.href=V.productURL(items[index].id,state);});
+    syncURL(); updateStatus();
+  }
+  async function init() {
+    retry.hidden=true; more.hidden=true;
+    status.textContent='Загружаем каталог…';
+    grid.setAttribute('aria-busy','true');
+    input.disabled=true;buttons.forEach(b=>b.disabled=true);
+    try {
+      products=await V.loadProducts();
+      buttons.forEach(button => {const type=button.dataset.type; const count=type==='all'?products.length:products.filter(p=>p.type===type).length;button.textContent=V.types[type]+' ('+count+')';});
+      refresh();
+      input.disabled=false;buttons.forEach(b=>b.disabled=false);
+      try {
+        const saved=JSON.parse(sessionStorage.getItem('vinoteka-catalog-position') || 'null');
+        if(saved?.url===location.pathname+location.search) requestAnimationFrame(()=>window.scrollTo(0,saved.y));
+      } catch { /* Storage is optional. */ }
+    } catch {
+      status.textContent='Не удалось загрузить каталог. Проверьте соединение и попробуйте ещё раз.';
+      retry.hidden=false;
+    } finally {grid.setAttribute('aria-busy','false');}
+  }
+  buttons.forEach(button => button.addEventListener('click',()=>{state.type=button.dataset.type;state.shown=20;refresh();}));
+  input.addEventListener('input',()=>{state.query=input.value;state.shown=20;refresh();});
+  more.addEventListener('click',showMore);
+  retry.addEventListener('click',init);
+  grid.addEventListener('click',event=>{
+    if(event.target.closest('.btn-link')) {
+      try {sessionStorage.setItem('vinoteka-catalog-position',JSON.stringify({url:location.pathname+location.search,y:window.scrollY}));} catch { /* Storage is optional. */ }
     }
-  </div>
-
-  <div class="wine-type">${translate(w.type)}</div>
-
-${w.name_en ? `<div class="wine-en">${w.name_en}</div>` : ""}
-
-  <div class="wine-ru">${w.name_ru}</div>
-
-${(w.color || w.style) ? `     
-  <div class="wine-style">
-      ${w.color || ""} ${w.style || ""}     
-  </div>
-` : ""}
-
-  <div class="wine-bottom">
-    <div class="wine-price">${w.price} ₽</div>
-
-    <a href="/product.html?id=${w.id}&from=${currentType}" class="btn-link">
-      Подробнее →
-    </a>
-
-  </div>
-
-</div>
-`
-
-})
-
-rendered += CHUNK
-}
-
-function initScroll(){
-window.addEventListener("scroll", () => {
-if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 200){
-renderNext()
-}
-})
-}
-
-function bindButtons(){
-
-buttons.forEach(btn => {
-
-btn.addEventListener("click", () => {
-
-buttons.forEach(b => b.classList.remove("active"))
-btn.classList.add("active")
-
-const type = btn.dataset.type
-currentType = type
-
-applyFilter(type)
-
-})
-
-})
-}
-
-function bindSearch(){
-
-searchInput.addEventListener("input", () => {
-
-const value = searchInput.value.toLowerCase()
-
-render(
-ALL.filter(w =>
-(w.name_ru && w.name_ru.toLowerCase().includes(value)) ||
-(w.name_en && w.name_en.toLowerCase().includes(value))
-)
-)
-
-})
-}
-
-function translate(type){
-
-if(type === "wine") return "Вино"
-if(type === "sparkling") return "Игристое"
-if(type === "beer") return "Пиво"
-if(type === "strong") return "Крепкий алкоголь"
-if(type === "grocery") return "Бакалея"
-if(type === "soft") return "Безалкогольные"
-if(type === "tea") return "Чай"
-if(type === "accessories") return "Аксессуары"
-
-return type
-}
+  });
+  init();
+})();

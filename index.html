@@ -2,18 +2,22 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Винотека</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VINOTEKA34 — винный бутик и клуб сомелье</title>
+  <meta name="description" content="Более 500 вин со всего мира. Подбор вина и дегустации. Москва, Карамышевская набережная, 34.">
+  <link rel="canonical" href="https://vinoteka34.ru/">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
   <!-- 🔥 ПРЕМИУМ ШРИФТЫ -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css?v=20261114-1">
 </head>
 
 <body>
 
 <header class="header">
-  <div class="logo">ВИНОТЕКА</div>
+  <a href="/" class="logo">ВИНОТЕКА</a>
 
   <a href="tel:+74959471010" class="phone-block">
     <span class="phone-number">+7 (495) 947-10-10</span>
@@ -22,11 +26,11 @@
 </header>
 
 
-<section class="hero">
+<main class="hero">
 
   <!-- ВИДЕО -->
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="./assets/hero.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline preload="metadata" poster="/assets/img/hero.jpg" aria-hidden="true" class="hero-video">
+    <source data-src="/assets/hero.mp4" type="video/mp4">
   </video>
 
   <!-- ЗАТЕМНЕНИЕ -->
@@ -35,16 +39,17 @@
   <!-- КОНТЕНТ -->
   <div class="hero-content">
 
-    <h1>ВИНОТЕКА</h1>
+    <h1>VINOTEKA34</h1>
 
     <p class="hero-subtitle">
-      Винный бутик и клуб сомелье<br>
-      Более 500 вин со всего мира
+      Винный бутик<br>и клуб сомелье
     </p>
+
+    <p class="hero-description">Более 500 вин со всего мира.<br>Подбор вина и дегустации.</p>
 
     <div class="hero-buttons">
       <a href="/catalog.html" class="btn-main">Смотреть каталог</a>
-      <a href="/catalog.html?group=wine" class="btn-secondary">Подобрать вино</a>
+      <a href="/catalog.html?type=wine" class="btn-secondary">Подобрать вино</a>
     </div>
 
     <div class="hero-info">
@@ -70,7 +75,8 @@
 
   </div>
 
-</section>
+</main>
 
+<script src="/app.js?v=20261114-1" defer></script>
 </body>
 </html>

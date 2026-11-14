@@ -1,0 +1,27 @@
+{
+  "release": "VINOTEKA34_STABILITY_v1",
+  "date": "2026-11-14",
+  "base_commit": "db7c9e3df9fbe2652ed59c03e206430a63b771e7",
+  "production_deployed": false,
+  "products_count": 553,
+  "products_sha256": "9528ce902774bfcb2f101d5b3debb4ef8b603946a61503e9fc695b3746404fc3",
+  "files": {
+    "index.html": "d3d4846b06e011c7620e677be7769f9cf51e4bc22b6b627ab792c795aa9affc8",
+    "app.js": "f70cd5390cbbdea9599de0f79b161f24ed302396834fec47b8793e827d1d178c",
+    "catalog.html": "a19c98087abde407c996620465ca75edb00ef5cfeee9382d2d3553f6fc57d880",
+    "catalog.js": "54fe14a3a9471f37f64a2864447e187fb21190ba2354bb0ae2018235a899cca9",
+    "product.html": "de5af8b3a6e779d58e801f450b36f4dff47e56d29691f894116daa7e9189b76e",
+    "product.js": "da027b42167427e988df8d23ade69dd23fafafe9fdde1c499d0b91eee447550b",
+    "product-data.js": "c4868c686540a963517b423b909ef87e086b5d90cb0589c96980104b373fe39d",
+    "styles.css": "b09c7ec1b55f97aae89fc2adb9377f885308daa16397cea96ef6d6b37d3f0bd9",
+    "catalog/index.html": "00ea6f85942aa80785d3023b300340bad166c468a61404896e35593692aa339f",
+    "product/index.html": "541fcea39532ec397f9796776e62f5a287e86b3688deda2f76925bf179a6daee",
+    "assets/product-placeholder.svg": "0aa1d787d95a1c48bfff80d720e0214ab4e061b4fa46ecd6eb0e13bb0c8bb827"
+  },
+  "validation": {
+    "node_tests_passed": 6,
+    "desktop_browser_checked": true,
+    "mobile_browser_checked": false,
+    "data_changed": false
+  }
+}

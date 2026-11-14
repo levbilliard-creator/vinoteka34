@@ -1,53 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Каталог — Винотека</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог — VINOTEKA34</title>
+  <meta name="description" content="Каталог вин, игристых, крепких напитков и других товаров винного бутика VINOTEKA34.">
+  <link rel="canonical" href="https://vinoteka34.ru/catalog.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/styles.css?v=20261114-1">
+  <script src="/product-data.js?v=20261114-1" defer></script>
+  <script src="/catalog.js?v=20261114-1" defer></script>
 </head>
-
 <body>
-
 <header class="header">
-  <div class="logo">ВИНОТЕКА</div>
-
-  <a href="tel:+74959471010" class="phone-block">
-    <span class="phone-number">+7 (495) 947-10-10</span>
-    <span class="phone-icon">📞</span>
-  </a>
+  <a href="/" class="logo">ВИНОТЕКА</a>
+  <a href="tel:+74959471010" class="phone-block"><span class="phone-number">+7 (495) 947-10-10</span><span class="phone-icon" aria-hidden="true">📞</span></a>
 </header>
-
-
-<section class="catalog-page">
-
-  <aside class="sidebar">
-
-    <h2>Каталог</h2>
-
-    <input id="searchInput" placeholder="Поиск вина..." />
-
-    <div class="categories">
-      <button data-type="all" class="active">Все</button>
-      <button data-type="wine">Вино</button>
-      <button data-type="sparkling">Игристое</button>
-      <button data-type="strong">Крепкий алкоголь</button>
-      <button data-type="beer">Пиво</button>
-      <button data-type="soft">Безалкогольные</button>
-      <button data-type="grocery">Бакалея</button>
-      <button data-type="tea">Чай</button>
-      <button data-type="accessories">Аксессуары</button>
+<main class="catalog-page">
+  <aside class="sidebar" aria-label="Фильтры каталога">
+    <h1>Каталог</h1>
+    <label class="search-label" for="searchInput">Название товара</label>
+    <input id="searchInput" type="search" placeholder="Поиск по каталогу" autocomplete="off" disabled>
+    <div class="categories" aria-label="Категории">
+      <button type="button" data-type="all" class="active" aria-pressed="true" disabled>Все</button>
+      <button type="button" data-type="wine" aria-pressed="false" disabled>Вино</button>
+      <button type="button" data-type="sparkling" aria-pressed="false" disabled>Игристое</button>
+      <button type="button" data-type="strong" aria-pressed="false" disabled>Крепкий алкоголь</button>
+      <button type="button" data-type="beer" aria-pressed="false" disabled>Пиво</button>
+      <button type="button" data-type="soft" aria-pressed="false" disabled>Безалкогольные</button>
+      <button type="button" data-type="grocery" aria-pressed="false" disabled>Бакалея</button>
+      <button type="button" data-type="tea" aria-pressed="false" disabled>Чай</button>
+      <button type="button" data-type="accessories" aria-pressed="false" disabled>Аксессуары</button>
     </div>
-
   </aside>
-
-  <main class="catalog-content">
-    <div class="catalogGrid"></div>
-  </main>
-
-</section>
-
-<script src="catalog.js" defer></script>
-
+  <section class="catalog-content" aria-label="Товары">
+    <p id="catalogStatus" class="catalog-status" role="status" aria-live="polite">Загружаем каталог…</p>
+    <button type="button" id="retryLoad" class="btn-secondary" hidden>Повторить загрузку</button>
+    <div class="catalogGrid" aria-busy="true"></div>
+    <button type="button" id="loadMore" class="btn-main load-more" hidden>Показать ещё</button>
+    <noscript>Для поиска и просмотра товаров включите JavaScript в браузере. Уточнить ассортимент можно по телефону +7 (495) 947-10-10.</noscript>
+  </section>
+</main>
 </body>
 </html>
-```

@@ -1,41 +1,12 @@
-async function loadFeatured(){
-
-const res = await fetch("data/products.json")
-
-const products = await res.json()
-
-const grid = document.getElementById("featuredGrid")
-
-const featured = products.slice(0,8)
-
-featured.forEach(p=>{
-
-const card = document.createElement("div")
-
-card.className="catalog-card"
-
-card.innerHTML=`
-
-<div class="catalog-type">${p.type || ""}</div>
-
-<div class="catalog-title">${p.name}</div>
-
-<div class="catalog-price">${p.price} ₽</div>
-
-<button class="catalog-btn">Открыть</button>
-
-`
-
-card.querySelector("button").onclick=()=>{
-
-window.location.href="/product.html?id="+p.id
-
-}
-
-grid.appendChild(card)
-
-})
-
-}
-
-loadFeatured()
+(() => {
+  const video=document.querySelector('.hero-video');
+  const source=video?.querySelector('source[data-src]');
+  if(!source) return;
+  const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  function update(){
+    if(motion.matches){video.pause();video.removeAttribute('autoplay');source.removeAttribute('src');video.load();}
+    else {source.src=source.dataset.src;video.autoplay=true;video.load();video.play().catch(()=>{});}
+  }
+  motion.addEventListener('change',update);
+  update();
+})();
