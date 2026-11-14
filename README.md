@@ -41,7 +41,7 @@ node --check app.js
 
 ## Публикация и откат
 
-Установлена побайтовая идентичность исходной main-версии и опубликованных index.html, catalog.html, catalog.js, product.html, product.js, styles.css и data/products.json. Однако связь GitHub с действующим объектным хостингом и механизм публикации не установлены.
+Установлена побайтовая идентичность исходной main-версии и опубликованных index.html, catalog.html, catalog.js, product.html, product.js, styles.css и data/products.json. В переписке от 26.04.2026 указан Яндекс Облако Object Storage, новый бакет vinoteka34.ru, веб-хостинг с index.html. Доступ к бакету из текущей сессии пока не подтвержден; автоматическая публикация из GitHub не установлена.
 
 Не считать изменение GitHub публикацией на vinoteka34.ru. Не переносить домен и не создавать новый хостинг для обновления.
 

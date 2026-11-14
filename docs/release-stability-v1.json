@@ -23,5 +23,10 @@
     "desktop_browser_checked": true,
     "mobile_browser_checked": false,
     "data_changed": false
+  },
+  "hosting": {
+    "provider": "Yandex Cloud Object Storage",
+    "bucket_from_history": "vinoteka34.ru",
+    "direct_access_verified": false
   }
 }
