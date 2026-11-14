@@ -14,23 +14,31 @@
     status.textContent='Загружаем товар…';
     try {
       const products=await V.loadProducts();
-      const product=products.find(p=>String(p.id)===id);
+      let product=products.find(p=>String(p.id)===id);
+      if(!product) {
+        const response=await fetch('/data/products-archive.json');
+        if(!response.ok) throw new Error('Archive unavailable');
+        const archived=await response.json();
+        if(!Array.isArray(archived)) throw new Error('Invalid archive');
+        product=archived.find(p=>String(p.id)===id);
+      }
       if(!product) {status.textContent='Товар не найден. Вернитесь в каталог и выберите другую позицию.';document.title='Товар не найден — VINOTEKA34';return;}
       document.title=product.name_ru+' — VINOTEKA34';
-      document.querySelector('meta[name="description"]').content=product.name_ru+'. '+V.priceOf(product.price)+'. Винный бутик VINOTEKA34.';
+      const isArchived=product.active===false;
+      document.querySelector('meta[name="description"]').content=product.name_ru+'. '+(isArchived?'Нет в текущем ассортименте.':V.priceOf(product.price)+'.')+' Винный бутик VINOTEKA34.';
       const canonical=document.querySelector('link[rel="canonical"]');
       canonical.href='https://vinoteka34.ru/product.html?id='+encodeURIComponent(product.id);
       document.querySelector('.product-title').textContent=product.name_ru;
       const original=document.querySelector('.product-name-en');
       original.textContent=product.name_en || '';original.hidden=!product.name_en;
-      document.querySelector('.product-type').textContent=V.types[product.type] || 'Товар';
+      document.querySelector('.product-type').textContent=product.kind || V.types[product.type] || 'Товар';
       document.querySelector('.product-style').textContent=[product.color,product.style].filter(Boolean).join(' · ');
-      document.querySelector('.product-price').textContent=V.priceOf(product.price);
+      document.querySelector('.product-price').textContent=isArchived?'Нет в текущем ассортименте':V.priceOf(product.price);
       document.querySelector('.product-image').replaceChildren(V.makeImage(product,true));
       const description=document.getElementById('productDescription');
-      description.textContent=product.description || 'Подробности об этом товаре можно уточнить у сомелье.';
+      description.textContent=isArchived?'Карточка сохранена в архиве. Уточните у сомелье возможность нового поступления.':(product.description || 'Подробности об этом товаре можно уточнить у сомелье.');
       const specs=document.querySelector('.product-specs');specs.replaceChildren();
-      const fields=[['Тип',V.types[product.type]],['Цвет',product.color],['Стиль',product.style],['Страна',product.country],['Регион',product.region],['Сорт винограда',product.grape],['Объем',product.volume],['Год урожая',product.year]];
+      const fields=[['Тип',product.kind || V.types[product.type]],['Цвет',product.color],['Стиль',product.style],['Страна',product.country],['Регион',product.region],['Сорт винограда',product.grape],['Объем',product.volume],['Год урожая',product.year],['Упаковка',product.packaging]];
       for(const [label,value] of fields) {
         if(value == null || value === '') continue;
         const row=V.element('div','spec');

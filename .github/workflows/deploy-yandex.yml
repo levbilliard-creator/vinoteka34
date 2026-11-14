@@ -8,6 +8,7 @@ on:
       - 'styles.css'
       - 'assets/**'
       - 'data/products.json'
+      - 'data/products-archive.json'
       - 'data/images.json'
       - 'catalog/index.html'
       - 'product/index.html'

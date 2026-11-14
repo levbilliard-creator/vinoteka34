@@ -1,0 +1,4534 @@
+{
+  "inventory_date": "2026-10-31",
+  "source_filename": "ИНВЕНТАРИЗАЦИЯ 31.10.26 Розничные цены.xlsx",
+  "source_sha256": "282d46dfa093a11b74a5eb957dc5b836ca88f84781477b0f0658d1e90c2634ca",
+  "source_sheet": "Лист_1",
+  "source_rows": 645,
+  "active_products": 644,
+  "excluded_zero_stock": 1,
+  "archive_products": 233,
+  "counts_by_type": {
+    "strong": 98,
+    "wine": 344,
+    "grocery": 54,
+    "sparkling": 99,
+    "beer": 21,
+    "soft": 15,
+    "accessories": 7,
+    "tea": 6
+  },
+  "added": 324,
+  "retained": 320,
+  "reactivated": 0,
+  "price_changes": 39,
+  "rows": [
+    {
+      "source_row": 11,
+      "id": 1,
+      "action": "retained",
+      "price": 6890.0,
+      "previous_price": 6890
+    },
+    {
+      "source_row": 12,
+      "id": 2,
+      "action": "retained",
+      "price": 3990.0,
+      "previous_price": 3990
+    },
+    {
+      "source_row": 13,
+      "id": 3,
+      "action": "retained",
+      "price": 33437.0,
+      "previous_price": 33437
+    },
+    {
+      "source_row": 14,
+      "id": 4,
+      "action": "retained",
+      "price": 9504.0,
+      "previous_price": 9504
+    },
+    {
+      "source_row": 15,
+      "id": 6,
+      "action": "retained",
+      "price": 9168.0,
+      "previous_price": 9168
+    },
+    {
+      "source_row": 16,
+      "id": 7,
+      "action": "retained",
+      "price": 5722.0,
+      "previous_price": 5722
+    },
+    {
+      "source_row": 17,
+      "id": 554,
+      "action": "added",
+      "price": 1632.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 18,
+      "id": 8,
+      "action": "retained",
+      "price": 1987.0,
+      "previous_price": 1987
+    },
+    {
+      "source_row": 19,
+      "id": 11,
+      "action": "retained",
+      "price": 440.0,
+      "previous_price": 440
+    },
+    {
+      "source_row": 20,
+      "id": 15,
+      "action": "retained",
+      "price": 6224.0,
+      "previous_price": 6224
+    },
+    {
+      "source_row": 21,
+      "id": 555,
+      "action": "added",
+      "price": 1012.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 22,
+      "id": 556,
+      "action": "added",
+      "price": 2140.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 23,
+      "id": 18,
+      "action": "retained",
+      "price": 7392.0,
+      "previous_price": 7392
+    },
+    {
+      "source_row": 24,
+      "id": 17,
+      "action": "retained",
+      "price": 3216.0,
+      "previous_price": 3216
+    },
+    {
+      "source_row": 25,
+      "id": 407,
+      "action": "retained",
+      "price": 2690.0,
+      "previous_price": 2690
+    },
+    {
+      "source_row": 26,
+      "id": 557,
+      "action": "added",
+      "price": 1641.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 27,
+      "id": 19,
+      "action": "retained",
+      "price": 4656.0,
+      "previous_price": 4656
+    },
+    {
+      "source_row": 28,
+      "id": 20,
+      "action": "retained",
+      "price": 11984.0,
+      "previous_price": 11984
+    },
+    {
+      "source_row": 29,
+      "id": 545,
+      "action": "retained",
+      "price": 6707.0,
+      "previous_price": 6707
+    },
+    {
+      "source_row": 30,
+      "id": 26,
+      "action": "retained",
+      "price": 8832.0,
+      "previous_price": 8832
+    },
+    {
+      "source_row": 31,
+      "id": 24,
+      "action": "retained",
+      "price": 8957.0,
+      "previous_price": 8957
+    },
+    {
+      "source_row": 32,
+      "id": 25,
+      "action": "retained",
+      "price": 9587.0,
+      "previous_price": 9587
+    },
+    {
+      "source_row": 33,
+      "id": 36,
+      "action": "retained",
+      "price": 5870.0,
+      "previous_price": 5870
+    },
+    {
+      "source_row": 34,
+      "id": 34,
+      "action": "retained",
+      "price": 5994.0,
+      "previous_price": 5994
+    },
+    {
+      "source_row": 35,
+      "id": 558,
+      "action": "added",
+      "price": 265.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 36,
+      "id": 39,
+      "action": "retained",
+      "price": 2990.0,
+      "previous_price": 2990
+    },
+    {
+      "source_row": 37,
+      "id": 559,
+      "action": "added",
+      "price": 1190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 38,
+      "id": 40,
+      "action": "retained",
+      "price": 6590.0,
+      "previous_price": 6590
+    },
+    {
+      "source_row": 39,
+      "id": 419,
+      "action": "retained",
+      "price": 2340.0,
+      "previous_price": 2340
+    },
+    {
+      "source_row": 40,
+      "id": 560,
+      "action": "added",
+      "price": 2340.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 41,
+      "id": 42,
+      "action": "retained",
+      "price": 16224.0,
+      "previous_price": 16224
+    },
+    {
+      "source_row": 42,
+      "id": 43,
+      "action": "retained",
+      "price": 8784.0,
+      "previous_price": 8784
+    },
+    {
+      "source_row": 43,
+      "id": 46,
+      "action": "retained",
+      "price": 2774.0,
+      "previous_price": 2774
+    },
+    {
+      "source_row": 44,
+      "id": 47,
+      "action": "retained",
+      "price": 2538.0,
+      "previous_price": 2538
+    },
+    {
+      "source_row": 45,
+      "id": 561,
+      "action": "added",
+      "price": 3010.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 46,
+      "id": 562,
+      "action": "added",
+      "price": 2190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 47,
+      "id": 48,
+      "action": "retained",
+      "price": 3590.0,
+      "previous_price": 3590
+    },
+    {
+      "source_row": 48,
+      "id": 563,
+      "action": "added",
+      "price": 290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 49,
+      "id": 215,
+      "action": "retained",
+      "price": 2840.0,
+      "previous_price": 3282
+    },
+    {
+      "source_row": 50,
+      "id": 564,
+      "action": "added",
+      "price": 4928.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 51,
+      "id": 49,
+      "action": "retained",
+      "price": 2693.0,
+      "previous_price": 2693
+    },
+    {
+      "source_row": 52,
+      "id": 565,
+      "action": "added",
+      "price": 1590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 53,
+      "id": 50,
+      "action": "retained",
+      "price": 4771.0,
+      "previous_price": 4771
+    },
+    {
+      "source_row": 54,
+      "id": 51,
+      "action": "retained",
+      "price": 9925.0,
+      "previous_price": 9925
+    },
+    {
+      "source_row": 55,
+      "id": 55,
+      "action": "retained",
+      "price": 1690.0,
+      "previous_price": 1840
+    },
+    {
+      "source_row": 56,
+      "id": 56,
+      "action": "retained",
+      "price": 7485.0,
+      "previous_price": 7485
+    },
+    {
+      "source_row": 57,
+      "id": 57,
+      "action": "retained",
+      "price": 16114.0,
+      "previous_price": 16114
+    },
+    {
+      "source_row": 58,
+      "id": 566,
+      "action": "added",
+      "price": 4409.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 59,
+      "id": 58,
+      "action": "retained",
+      "price": 1490.0,
+      "previous_price": 1490
+    },
+    {
+      "source_row": 60,
+      "id": 567,
+      "action": "added",
+      "price": 2490.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 61,
+      "id": 59,
+      "action": "retained",
+      "price": 4742.0,
+      "previous_price": 4742
+    },
+    {
+      "source_row": 62,
+      "id": 65,
+      "action": "retained",
+      "price": 2590.0,
+      "previous_price": 2590
+    },
+    {
+      "source_row": 63,
+      "id": 568,
+      "action": "added",
+      "price": 1970.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 64,
+      "id": 569,
+      "action": "added",
+      "price": 3071.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 65,
+      "id": 570,
+      "action": "added",
+      "price": 279.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 66,
+      "id": 75,
+      "action": "retained",
+      "price": 6326.0,
+      "previous_price": 6326
+    },
+    {
+      "source_row": 67,
+      "id": 76,
+      "action": "retained",
+      "price": 11912.0,
+      "previous_price": 11912
+    },
+    {
+      "source_row": 68,
+      "id": 571,
+      "action": "added",
+      "price": 2240.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 69,
+      "id": 290,
+      "action": "retained",
+      "price": 4283.0,
+      "previous_price": 4283
+    },
+    {
+      "source_row": 70,
+      "id": 572,
+      "action": "added",
+      "price": 2190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 71,
+      "id": 77,
+      "action": "retained",
+      "price": 6400.0,
+      "previous_price": 6400
+    },
+    {
+      "source_row": 72,
+      "id": 573,
+      "action": "added",
+      "price": 2490.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 73,
+      "id": 84,
+      "action": "retained",
+      "price": 4570.0,
+      "previous_price": 4570
+    },
+    {
+      "source_row": 74,
+      "id": 86,
+      "action": "retained",
+      "price": 2650.0,
+      "previous_price": 2650
+    },
+    {
+      "source_row": 75,
+      "id": 63,
+      "action": "retained",
+      "price": 2240.0,
+      "previous_price": 2240
+    },
+    {
+      "source_row": 76,
+      "id": 87,
+      "action": "retained",
+      "price": 2490.0,
+      "previous_price": 2237
+    },
+    {
+      "source_row": 77,
+      "id": 88,
+      "action": "retained",
+      "price": 3690.0,
+      "previous_price": 3690
+    },
+    {
+      "source_row": 78,
+      "id": 89,
+      "action": "retained",
+      "price": 1990.0,
+      "previous_price": 1990
+    },
+    {
+      "source_row": 79,
+      "id": 90,
+      "action": "retained",
+      "price": 3802.0,
+      "previous_price": 3802
+    },
+    {
+      "source_row": 80,
+      "id": 93,
+      "action": "retained",
+      "price": 4762.0,
+      "previous_price": 4762
+    },
+    {
+      "source_row": 81,
+      "id": 574,
+      "action": "added",
+      "price": 327.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 82,
+      "id": 96,
+      "action": "retained",
+      "price": 5136.0,
+      "previous_price": 5136
+    },
+    {
+      "source_row": 83,
+      "id": 97,
+      "action": "retained",
+      "price": 2011.0,
+      "previous_price": 2011
+    },
+    {
+      "source_row": 84,
+      "id": 100,
+      "action": "retained",
+      "price": 4144.0,
+      "previous_price": 4144
+    },
+    {
+      "source_row": 85,
+      "id": 101,
+      "action": "retained",
+      "price": 1979.0,
+      "previous_price": 1979
+    },
+    {
+      "source_row": 86,
+      "id": 575,
+      "action": "added",
+      "price": 2390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 87,
+      "id": 386,
+      "action": "retained",
+      "price": 1390.0,
+      "previous_price": 1390
+    },
+    {
+      "source_row": 88,
+      "id": 117,
+      "action": "retained",
+      "price": 1690.0,
+      "previous_price": 1690
+    },
+    {
+      "source_row": 89,
+      "id": 106,
+      "action": "retained",
+      "price": 3917.0,
+      "previous_price": 3917
+    },
+    {
+      "source_row": 90,
+      "id": 110,
+      "action": "retained",
+      "price": 3464.0,
+      "previous_price": 3464
+    },
+    {
+      "source_row": 91,
+      "id": 111,
+      "action": "retained",
+      "price": 9790.0,
+      "previous_price": 9790
+    },
+    {
+      "source_row": 92,
+      "id": 113,
+      "action": "retained",
+      "price": 3968.0,
+      "previous_price": 3968
+    },
+    {
+      "source_row": 93,
+      "id": 576,
+      "action": "added",
+      "price": 556.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 94,
+      "id": 115,
+      "action": "retained",
+      "price": 4982.0,
+      "previous_price": 4982
+    },
+    {
+      "source_row": 95,
+      "id": 577,
+      "action": "added",
+      "price": 350.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 96,
+      "id": 450,
+      "action": "retained",
+      "price": 1690.0,
+      "previous_price": 1690
+    },
+    {
+      "source_row": 97,
+      "id": 116,
+      "action": "retained",
+      "price": 2038.0,
+      "previous_price": 2038
+    },
+    {
+      "source_row": 98,
+      "id": 578,
+      "action": "added",
+      "price": 2190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 99,
+      "id": 119,
+      "action": "retained",
+      "price": 12034.0,
+      "previous_price": 12034
+    },
+    {
+      "source_row": 100,
+      "id": 579,
+      "action": "added",
+      "price": 2640.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 101,
+      "id": 122,
+      "action": "retained",
+      "price": 2659.0,
+      "previous_price": 2659
+    },
+    {
+      "source_row": 102,
+      "id": 580,
+      "action": "added",
+      "price": 3990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 103,
+      "id": 581,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 104,
+      "id": 236,
+      "action": "retained",
+      "price": 3885.0,
+      "previous_price": 3885
+    },
+    {
+      "source_row": 105,
+      "id": 582,
+      "action": "added",
+      "price": 2650.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 106,
+      "id": 583,
+      "action": "added",
+      "price": 2600.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 107,
+      "id": 133,
+      "action": "retained",
+      "price": 3826.0,
+      "previous_price": 3826
+    },
+    {
+      "source_row": 108,
+      "id": 136,
+      "action": "retained",
+      "price": 1490.0,
+      "previous_price": 1490
+    },
+    {
+      "source_row": 109,
+      "id": 584,
+      "action": "added",
+      "price": 190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 110,
+      "id": 141,
+      "action": "retained",
+      "price": 3773.0,
+      "previous_price": 2704
+    },
+    {
+      "source_row": 111,
+      "id": 585,
+      "action": "added",
+      "price": 2600.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 112,
+      "id": 586,
+      "action": "added",
+      "price": 2340.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 113,
+      "id": 142,
+      "action": "retained",
+      "price": 6240.0,
+      "previous_price": 6240
+    },
+    {
+      "source_row": 114,
+      "id": 587,
+      "action": "added",
+      "price": 6990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 115,
+      "id": 588,
+      "action": "added",
+      "price": 3440.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 116,
+      "id": 143,
+      "action": "retained",
+      "price": 7200.0,
+      "previous_price": 7200
+    },
+    {
+      "source_row": 117,
+      "id": 589,
+      "action": "added",
+      "price": 7990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 118,
+      "id": 144,
+      "action": "retained",
+      "price": 2960.0,
+      "previous_price": 2960
+    },
+    {
+      "source_row": 119,
+      "id": 590,
+      "action": "added",
+      "price": 3990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 120,
+      "id": 591,
+      "action": "added",
+      "price": 3184.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 121,
+      "id": 592,
+      "action": "added",
+      "price": 2270.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 122,
+      "id": 148,
+      "action": "retained",
+      "price": 4784.0,
+      "previous_price": 4784
+    },
+    {
+      "source_row": 123,
+      "id": 593,
+      "action": "added",
+      "price": 2542.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 124,
+      "id": 149,
+      "action": "retained",
+      "price": 4090.0,
+      "previous_price": 4090
+    },
+    {
+      "source_row": 125,
+      "id": 150,
+      "action": "retained",
+      "price": 2544.0,
+      "previous_price": 2544
+    },
+    {
+      "source_row": 126,
+      "id": 152,
+      "action": "retained",
+      "price": 2224.0,
+      "previous_price": 2224
+    },
+    {
+      "source_row": 127,
+      "id": 594,
+      "action": "added",
+      "price": 2600.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 128,
+      "id": 155,
+      "action": "retained",
+      "price": 3040.0,
+      "previous_price": 3040
+    },
+    {
+      "source_row": 129,
+      "id": 595,
+      "action": "added",
+      "price": 1890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 130,
+      "id": 156,
+      "action": "retained",
+      "price": 3184.0,
+      "previous_price": 3184
+    },
+    {
+      "source_row": 131,
+      "id": 159,
+      "action": "retained",
+      "price": 2544.0,
+      "previous_price": 2544
+    },
+    {
+      "source_row": 132,
+      "id": 596,
+      "action": "added",
+      "price": 1343.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 133,
+      "id": 189,
+      "action": "retained",
+      "price": 3790.0,
+      "previous_price": 4790
+    },
+    {
+      "source_row": 134,
+      "id": 161,
+      "action": "retained",
+      "price": 2080.0,
+      "previous_price": 2080
+    },
+    {
+      "source_row": 135,
+      "id": 162,
+      "action": "retained",
+      "price": 4000.0,
+      "previous_price": 4000
+    },
+    {
+      "source_row": 136,
+      "id": 597,
+      "action": "added",
+      "price": 2150.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 137,
+      "id": 165,
+      "action": "retained",
+      "price": 3040.0,
+      "previous_price": 3040
+    },
+    {
+      "source_row": 138,
+      "id": 598,
+      "action": "added",
+      "price": 2590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 139,
+      "id": 167,
+      "action": "retained",
+      "price": 1390.0,
+      "previous_price": 1390
+    },
+    {
+      "source_row": 140,
+      "id": 168,
+      "action": "retained",
+      "price": 4480.0,
+      "previous_price": 4480
+    },
+    {
+      "source_row": 141,
+      "id": 599,
+      "action": "added",
+      "price": 550.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 142,
+      "id": 169,
+      "action": "retained",
+      "price": 2400.0,
+      "previous_price": 2400
+    },
+    {
+      "source_row": 143,
+      "id": 172,
+      "action": "retained",
+      "price": 4000.0,
+      "previous_price": 4000
+    },
+    {
+      "source_row": 144,
+      "id": 170,
+      "action": "retained",
+      "price": 4000.0,
+      "previous_price": 4000
+    },
+    {
+      "source_row": 145,
+      "id": 174,
+      "action": "retained",
+      "price": 190368.0,
+      "previous_price": 190368
+    },
+    {
+      "source_row": 146,
+      "id": 175,
+      "action": "retained",
+      "price": 29568.0,
+      "previous_price": 29568
+    },
+    {
+      "source_row": 147,
+      "id": 176,
+      "action": "retained",
+      "price": 3013.0,
+      "previous_price": 3013
+    },
+    {
+      "source_row": 148,
+      "id": 177,
+      "action": "retained",
+      "price": 37872.0,
+      "previous_price": 37872
+    },
+    {
+      "source_row": 149,
+      "id": 178,
+      "action": "retained",
+      "price": 45888.0,
+      "previous_price": 45888
+    },
+    {
+      "source_row": 150,
+      "id": 552,
+      "action": "retained",
+      "price": 250.0,
+      "previous_price": 290
+    },
+    {
+      "source_row": 151,
+      "id": 183,
+      "action": "retained",
+      "price": 2990.0,
+      "previous_price": 2990
+    },
+    {
+      "source_row": 152,
+      "id": 600,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 153,
+      "id": 184,
+      "action": "retained",
+      "price": 8352.0,
+      "previous_price": 8352
+    },
+    {
+      "source_row": 154,
+      "id": 190,
+      "action": "retained",
+      "price": 4790.0,
+      "previous_price": 4790
+    },
+    {
+      "source_row": 155,
+      "id": 601,
+      "action": "added",
+      "price": 1190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 156,
+      "id": 192,
+      "action": "retained",
+      "price": 8674.0,
+      "previous_price": 8674
+    },
+    {
+      "source_row": 157,
+      "id": 193,
+      "action": "retained",
+      "price": 2990.0,
+      "previous_price": 2990
+    },
+    {
+      "source_row": 158,
+      "id": 602,
+      "action": "added",
+      "price": 390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 159,
+      "id": 603,
+      "action": "added",
+      "price": 2950.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 160,
+      "id": 194,
+      "action": "retained",
+      "price": 2090.0,
+      "previous_price": 2090
+    },
+    {
+      "source_row": 161,
+      "id": 195,
+      "action": "retained",
+      "price": 10942.0,
+      "previous_price": 10942
+    },
+    {
+      "source_row": 162,
+      "id": 202,
+      "action": "retained",
+      "price": 1584.0,
+      "previous_price": 1584
+    },
+    {
+      "source_row": 163,
+      "id": 604,
+      "action": "added",
+      "price": 360.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 164,
+      "id": 206,
+      "action": "retained",
+      "price": 2552.0,
+      "previous_price": 2552
+    },
+    {
+      "source_row": 165,
+      "id": 207,
+      "action": "retained",
+      "price": 4558.0,
+      "previous_price": 4558
+    },
+    {
+      "source_row": 166,
+      "id": 164,
+      "action": "retained",
+      "price": 7294.0,
+      "previous_price": 7294
+    },
+    {
+      "source_row": 167,
+      "id": 605,
+      "action": "added",
+      "price": 1540.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 168,
+      "id": 217,
+      "action": "retained",
+      "price": 2940.0,
+      "previous_price": 3690
+    },
+    {
+      "source_row": 169,
+      "id": 606,
+      "action": "added",
+      "price": 2790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 170,
+      "id": 218,
+      "action": "retained",
+      "price": 5755.0,
+      "previous_price": 5755
+    },
+    {
+      "source_row": 171,
+      "id": 221,
+      "action": "retained",
+      "price": 2208.0,
+      "previous_price": 2208
+    },
+    {
+      "source_row": 172,
+      "id": 607,
+      "action": "added",
+      "price": 2140.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 173,
+      "id": 203,
+      "action": "retained",
+      "price": 6982.0,
+      "previous_price": 6982
+    },
+    {
+      "source_row": 174,
+      "id": 222,
+      "action": "retained",
+      "price": 10770.0,
+      "previous_price": 10770
+    },
+    {
+      "source_row": 175,
+      "id": 205,
+      "action": "retained",
+      "price": 2208.0,
+      "previous_price": 2208
+    },
+    {
+      "source_row": 176,
+      "id": 224,
+      "action": "retained",
+      "price": 2640.0,
+      "previous_price": 2640
+    },
+    {
+      "source_row": 177,
+      "id": 223,
+      "action": "retained",
+      "price": 9573.0,
+      "previous_price": 9573
+    },
+    {
+      "source_row": 178,
+      "id": 608,
+      "action": "added",
+      "price": 2350.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 179,
+      "id": 228,
+      "action": "retained",
+      "price": 2208.0,
+      "previous_price": 2208
+    },
+    {
+      "source_row": 180,
+      "id": 229,
+      "action": "retained",
+      "price": 1762.0,
+      "previous_price": 1762
+    },
+    {
+      "source_row": 181,
+      "id": 609,
+      "action": "added",
+      "price": 370.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 182,
+      "id": 610,
+      "action": "added",
+      "price": 2640.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 183,
+      "id": 409,
+      "action": "retained",
+      "price": 1590.0,
+      "previous_price": 1690
+    },
+    {
+      "source_row": 184,
+      "id": 239,
+      "action": "retained",
+      "price": 3190.0,
+      "previous_price": 3190
+    },
+    {
+      "source_row": 185,
+      "id": 233,
+      "action": "retained",
+      "price": 3984.0,
+      "previous_price": 3984
+    },
+    {
+      "source_row": 186,
+      "id": 126,
+      "action": "retained",
+      "price": 5568.0,
+      "previous_price": 5568
+    },
+    {
+      "source_row": 187,
+      "id": 130,
+      "action": "retained",
+      "price": 9984.0,
+      "previous_price": 9984
+    },
+    {
+      "source_row": 188,
+      "id": 238,
+      "action": "retained",
+      "price": 2496.0,
+      "previous_price": 2496
+    },
+    {
+      "source_row": 189,
+      "id": 241,
+      "action": "retained",
+      "price": 10458.0,
+      "previous_price": 10458
+    },
+    {
+      "source_row": 190,
+      "id": 611,
+      "action": "added",
+      "price": 3428.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 191,
+      "id": 12,
+      "action": "retained",
+      "price": 15840.0,
+      "previous_price": 15840
+    },
+    {
+      "source_row": 192,
+      "id": 341,
+      "action": "retained",
+      "price": 11075.0,
+      "previous_price": 11075
+    },
+    {
+      "source_row": 193,
+      "id": 14,
+      "action": "retained",
+      "price": 440.0,
+      "previous_price": 440
+    },
+    {
+      "source_row": 194,
+      "id": 612,
+      "action": "added",
+      "price": 2390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 195,
+      "id": 613,
+      "action": "added",
+      "price": 1751.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 196,
+      "id": 23,
+      "action": "retained",
+      "price": 1282.0,
+      "previous_price": 1282
+    },
+    {
+      "source_row": 197,
+      "id": 614,
+      "action": "added",
+      "price": 1890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 198,
+      "id": 615,
+      "action": "added",
+      "price": 1790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 199,
+      "id": 32,
+      "action": "retained",
+      "price": 5126.0,
+      "previous_price": 5126
+    },
+    {
+      "source_row": 200,
+      "id": 33,
+      "action": "retained",
+      "price": 5664.0,
+      "previous_price": 5664
+    },
+    {
+      "source_row": 201,
+      "id": 616,
+      "action": "added",
+      "price": 2193.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 202,
+      "id": 248,
+      "action": "retained",
+      "price": 3790.0,
+      "previous_price": 3790
+    },
+    {
+      "source_row": 203,
+      "id": 247,
+      "action": "retained",
+      "price": 7800.0,
+      "previous_price": 8016
+    },
+    {
+      "source_row": 204,
+      "id": 251,
+      "action": "retained",
+      "price": 3360.0,
+      "previous_price": 3456
+    },
+    {
+      "source_row": 205,
+      "id": 252,
+      "action": "retained",
+      "price": 2232.0,
+      "previous_price": 2232
+    },
+    {
+      "source_row": 206,
+      "id": 617,
+      "action": "added",
+      "price": 6890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 207,
+      "id": 253,
+      "action": "retained",
+      "price": 3456.0,
+      "previous_price": 3456
+    },
+    {
+      "source_row": 208,
+      "id": 255,
+      "action": "retained",
+      "price": 4704.0,
+      "previous_price": 4704
+    },
+    {
+      "source_row": 209,
+      "id": 618,
+      "action": "added",
+      "price": 1358.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 210,
+      "id": 525,
+      "action": "retained",
+      "price": 1690.0,
+      "previous_price": 1590
+    },
+    {
+      "source_row": 211,
+      "id": 256,
+      "action": "retained",
+      "price": 9792.0,
+      "previous_price": 9792
+    },
+    {
+      "source_row": 212,
+      "id": 258,
+      "action": "retained",
+      "price": 16224.0,
+      "previous_price": 16224
+    },
+    {
+      "source_row": 213,
+      "id": 539,
+      "action": "retained",
+      "price": 3190.0,
+      "previous_price": 3190
+    },
+    {
+      "source_row": 214,
+      "id": 619,
+      "action": "added",
+      "price": 4164.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 215,
+      "id": 259,
+      "action": "retained",
+      "price": 3090.0,
+      "previous_price": 3090
+    },
+    {
+      "source_row": 216,
+      "id": 320,
+      "action": "retained",
+      "price": 4890.0,
+      "previous_price": 4890
+    },
+    {
+      "source_row": 217,
+      "id": 260,
+      "action": "retained",
+      "price": 4176.0,
+      "previous_price": 4176
+    },
+    {
+      "source_row": 218,
+      "id": 261,
+      "action": "retained",
+      "price": 6240.0,
+      "previous_price": 6240
+    },
+    {
+      "source_row": 219,
+      "id": 620,
+      "action": "added",
+      "price": 3168.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 220,
+      "id": 264,
+      "action": "retained",
+      "price": 2390.0,
+      "previous_price": 2256
+    },
+    {
+      "source_row": 221,
+      "id": 265,
+      "action": "retained",
+      "price": 3504.0,
+      "previous_price": 3504
+    },
+    {
+      "source_row": 222,
+      "id": 465,
+      "action": "retained",
+      "price": 2490.0,
+      "previous_price": 2490
+    },
+    {
+      "source_row": 223,
+      "id": 621,
+      "action": "added",
+      "price": 990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 224,
+      "id": 257,
+      "action": "retained",
+      "price": 3490.0,
+      "previous_price": 3490
+    },
+    {
+      "source_row": 225,
+      "id": 266,
+      "action": "retained",
+      "price": 8832.0,
+      "previous_price": 8832
+    },
+    {
+      "source_row": 226,
+      "id": 429,
+      "action": "retained",
+      "price": 1590.0,
+      "previous_price": 1590
+    },
+    {
+      "source_row": 227,
+      "id": 269,
+      "action": "retained",
+      "price": 2112.0,
+      "previous_price": 2112
+    },
+    {
+      "source_row": 228,
+      "id": 272,
+      "action": "retained",
+      "price": 23184.0,
+      "previous_price": 23184
+    },
+    {
+      "source_row": 229,
+      "id": 622,
+      "action": "added",
+      "price": 1890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 230,
+      "id": 623,
+      "action": "added",
+      "price": 2190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 231,
+      "id": 624,
+      "action": "added",
+      "price": 1790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 232,
+      "id": 625,
+      "action": "added",
+      "price": 390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 233,
+      "id": 273,
+      "action": "retained",
+      "price": 21024.0,
+      "previous_price": 21024
+    },
+    {
+      "source_row": 234,
+      "id": 626,
+      "action": "added",
+      "price": 420.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 235,
+      "id": 627,
+      "action": "added",
+      "price": 320.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 236,
+      "id": 274,
+      "action": "retained",
+      "price": 22944.0,
+      "previous_price": 22944
+    },
+    {
+      "source_row": 237,
+      "id": 628,
+      "action": "added",
+      "price": 2240.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 238,
+      "id": 629,
+      "action": "added",
+      "price": 2440.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 239,
+      "id": 277,
+      "action": "retained",
+      "price": 19104.0,
+      "previous_price": 19104
+    },
+    {
+      "source_row": 240,
+      "id": 630,
+      "action": "added",
+      "price": 2990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 241,
+      "id": 331,
+      "action": "retained",
+      "price": 40.0,
+      "previous_price": 40
+    },
+    {
+      "source_row": 242,
+      "id": 631,
+      "action": "added",
+      "price": 340.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 243,
+      "id": 632,
+      "action": "added",
+      "price": 2190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 244,
+      "id": 417,
+      "action": "retained",
+      "price": 2940.0,
+      "previous_price": 3590
+    },
+    {
+      "source_row": 245,
+      "id": 278,
+      "action": "retained",
+      "price": 17712.0,
+      "previous_price": 17712
+    },
+    {
+      "source_row": 246,
+      "id": 633,
+      "action": "added",
+      "price": 2100.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 247,
+      "id": 271,
+      "action": "retained",
+      "price": 2990.0,
+      "previous_price": 2990
+    },
+    {
+      "source_row": 248,
+      "id": 634,
+      "action": "added",
+      "price": 2090.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 249,
+      "id": 279,
+      "action": "retained",
+      "price": 23808.0,
+      "previous_price": 23808
+    },
+    {
+      "source_row": 250,
+      "id": 635,
+      "action": "added",
+      "price": 2240.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 251,
+      "id": 280,
+      "action": "retained",
+      "price": 21312.0,
+      "previous_price": 21312
+    },
+    {
+      "source_row": 252,
+      "id": 636,
+      "action": "added",
+      "price": 240.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 253,
+      "id": 281,
+      "action": "retained",
+      "price": 2509.0,
+      "previous_price": 2509
+    },
+    {
+      "source_row": 254,
+      "id": 282,
+      "action": "retained",
+      "price": 42573.0,
+      "previous_price": 42573
+    },
+    {
+      "source_row": 255,
+      "id": 287,
+      "action": "retained",
+      "price": 3307.0,
+      "previous_price": 3307
+    },
+    {
+      "source_row": 256,
+      "id": 637,
+      "action": "added",
+      "price": 2922.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 257,
+      "id": 54,
+      "action": "retained",
+      "price": 9379.0,
+      "previous_price": 9379
+    },
+    {
+      "source_row": 258,
+      "id": 64,
+      "action": "retained",
+      "price": 7704.0,
+      "previous_price": 7704
+    },
+    {
+      "source_row": 259,
+      "id": 61,
+      "action": "retained",
+      "price": 8246.0,
+      "previous_price": 8246
+    },
+    {
+      "source_row": 260,
+      "id": 102,
+      "action": "retained",
+      "price": 2427.0,
+      "previous_price": 2427
+    },
+    {
+      "source_row": 261,
+      "id": 302,
+      "action": "retained",
+      "price": 3331.0,
+      "previous_price": 3331
+    },
+    {
+      "source_row": 262,
+      "id": 303,
+      "action": "retained",
+      "price": 3531.0,
+      "previous_price": 3531
+    },
+    {
+      "source_row": 263,
+      "id": 638,
+      "action": "added",
+      "price": 1790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 264,
+      "id": 109,
+      "action": "retained",
+      "price": 380.0,
+      "previous_price": 340
+    },
+    {
+      "source_row": 265,
+      "id": 305,
+      "action": "retained",
+      "price": 3914.0,
+      "previous_price": 3914
+    },
+    {
+      "source_row": 266,
+      "id": 186,
+      "action": "retained",
+      "price": 4299.0,
+      "previous_price": 4299
+    },
+    {
+      "source_row": 267,
+      "id": 639,
+      "action": "added",
+      "price": 390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 268,
+      "id": 306,
+      "action": "retained",
+      "price": 4565.0,
+      "previous_price": 4565
+    },
+    {
+      "source_row": 269,
+      "id": 640,
+      "action": "added",
+      "price": 3990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 270,
+      "id": 309,
+      "action": "retained",
+      "price": 1291.0,
+      "previous_price": 1291
+    },
+    {
+      "source_row": 271,
+      "id": 641,
+      "action": "added",
+      "price": 701.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 272,
+      "id": 314,
+      "action": "retained",
+      "price": 17442.0,
+      "previous_price": 17442
+    },
+    {
+      "source_row": 273,
+      "id": 642,
+      "action": "added",
+      "price": 1190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 274,
+      "id": 643,
+      "action": "added",
+      "price": 4224.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 275,
+      "id": 544,
+      "action": "retained",
+      "price": 7310.0,
+      "previous_price": 7310
+    },
+    {
+      "source_row": 276,
+      "id": 79,
+      "action": "retained",
+      "price": 5590.0,
+      "previous_price": 5590
+    },
+    {
+      "source_row": 277,
+      "id": 644,
+      "action": "added",
+      "price": 340.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 278,
+      "id": 315,
+      "action": "retained",
+      "price": 1990.0,
+      "previous_price": 1990
+    },
+    {
+      "source_row": 279,
+      "id": 316,
+      "action": "retained",
+      "price": 4290.0,
+      "previous_price": 4290
+    },
+    {
+      "source_row": 280,
+      "id": 317,
+      "action": "retained",
+      "price": 1890.0,
+      "previous_price": 1890
+    },
+    {
+      "source_row": 281,
+      "id": 645,
+      "action": "added",
+      "price": 550.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 282,
+      "id": 318,
+      "action": "retained",
+      "price": 2290.0,
+      "previous_price": 2190
+    },
+    {
+      "source_row": 283,
+      "id": 319,
+      "action": "retained",
+      "price": 7990.0,
+      "previous_price": 7990
+    },
+    {
+      "source_row": 284,
+      "id": 646,
+      "action": "added",
+      "price": 550.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 285,
+      "id": 321,
+      "action": "retained",
+      "price": 3990.0,
+      "previous_price": 3990
+    },
+    {
+      "source_row": 286,
+      "id": 322,
+      "action": "retained",
+      "price": 5280.0,
+      "previous_price": 5280
+    },
+    {
+      "source_row": 287,
+      "id": 364,
+      "action": "retained",
+      "price": 2190.0,
+      "previous_price": 2190
+    },
+    {
+      "source_row": 288,
+      "id": 363,
+      "action": "retained",
+      "price": 2197.0,
+      "previous_price": 2197
+    },
+    {
+      "source_row": 289,
+      "id": 543,
+      "action": "retained",
+      "price": 3990.0,
+      "previous_price": 3990
+    },
+    {
+      "source_row": 290,
+      "id": 647,
+      "action": "added",
+      "price": 990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 291,
+      "id": 333,
+      "action": "retained",
+      "price": 3685.0,
+      "previous_price": 3685
+    },
+    {
+      "source_row": 292,
+      "id": 648,
+      "action": "added",
+      "price": 1940.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 293,
+      "id": 313,
+      "action": "retained",
+      "price": 3566.0,
+      "previous_price": 3566
+    },
+    {
+      "source_row": 294,
+      "id": 649,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 295,
+      "id": 650,
+      "action": "added",
+      "price": 374.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 296,
+      "id": 651,
+      "action": "added",
+      "price": 390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 297,
+      "id": 652,
+      "action": "added",
+      "price": 1790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 298,
+      "id": 214,
+      "action": "retained",
+      "price": 28867.0,
+      "previous_price": 28867
+    },
+    {
+      "source_row": 299,
+      "id": 335,
+      "action": "retained",
+      "price": 2856.0,
+      "previous_price": 2856
+    },
+    {
+      "source_row": 300,
+      "id": 336,
+      "action": "retained",
+      "price": 3440.0,
+      "previous_price": 3440
+    },
+    {
+      "source_row": 301,
+      "id": 653,
+      "action": "added",
+      "price": 571.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 302,
+      "id": 220,
+      "action": "retained",
+      "price": 7064.0,
+      "previous_price": 7064
+    },
+    {
+      "source_row": 303,
+      "id": 226,
+      "action": "retained",
+      "price": 2520.0,
+      "previous_price": 2520
+    },
+    {
+      "source_row": 304,
+      "id": 654,
+      "action": "added",
+      "price": 2200.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 305,
+      "id": 125,
+      "action": "retained",
+      "price": 3226.0,
+      "previous_price": 3226
+    },
+    {
+      "source_row": 306,
+      "id": 234,
+      "action": "retained",
+      "price": 5646.0,
+      "previous_price": 5646
+    },
+    {
+      "source_row": 307,
+      "id": 29,
+      "action": "retained",
+      "price": 9899.0,
+      "previous_price": 9899
+    },
+    {
+      "source_row": 308,
+      "id": 243,
+      "action": "retained",
+      "price": 2507.0,
+      "previous_price": 2507
+    },
+    {
+      "source_row": 309,
+      "id": 244,
+      "action": "retained",
+      "price": 1800.0,
+      "previous_price": 1800
+    },
+    {
+      "source_row": 310,
+      "id": 343,
+      "action": "retained",
+      "price": 9899.0,
+      "previous_price": 9899
+    },
+    {
+      "source_row": 311,
+      "id": 655,
+      "action": "added",
+      "price": 1390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 312,
+      "id": 656,
+      "action": "added",
+      "price": 1540.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 313,
+      "id": 657,
+      "action": "added",
+      "price": 300.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 314,
+      "id": 658,
+      "action": "added",
+      "price": 2100.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 315,
+      "id": 355,
+      "action": "retained",
+      "price": 2870.0,
+      "previous_price": 2870
+    },
+    {
+      "source_row": 316,
+      "id": 659,
+      "action": "added",
+      "price": 1640.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 317,
+      "id": 356,
+      "action": "retained",
+      "price": 4018.0,
+      "previous_price": 4018
+    },
+    {
+      "source_row": 318,
+      "id": 660,
+      "action": "added",
+      "price": 2500.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 319,
+      "id": 661,
+      "action": "added",
+      "price": 270.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 320,
+      "id": 358,
+      "action": "retained",
+      "price": 1641.0,
+      "previous_price": 1440
+    },
+    {
+      "source_row": 321,
+      "id": 359,
+      "action": "retained",
+      "price": 5544.0,
+      "previous_price": 5544
+    },
+    {
+      "source_row": 322,
+      "id": 360,
+      "action": "retained",
+      "price": 1894.0,
+      "previous_price": 1894
+    },
+    {
+      "source_row": 323,
+      "id": 662,
+      "action": "added",
+      "price": 933.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 324,
+      "id": 663,
+      "action": "added",
+      "price": 1290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 325,
+      "id": 664,
+      "action": "added",
+      "price": 330.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 326,
+      "id": 665,
+      "action": "added",
+      "price": 3835.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 327,
+      "id": 666,
+      "action": "added",
+      "price": 14990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 328,
+      "id": 327,
+      "action": "retained",
+      "price": 2565.0,
+      "previous_price": 2565
+    },
+    {
+      "source_row": 329,
+      "id": 667,
+      "action": "added",
+      "price": 1590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 330,
+      "id": 368,
+      "action": "retained",
+      "price": 3685.0,
+      "previous_price": 3685
+    },
+    {
+      "source_row": 331,
+      "id": 369,
+      "action": "retained",
+      "price": 4112.0,
+      "previous_price": 4112
+    },
+    {
+      "source_row": 332,
+      "id": 372,
+      "action": "retained",
+      "price": 2325.0,
+      "previous_price": 2325
+    },
+    {
+      "source_row": 333,
+      "id": 668,
+      "action": "added",
+      "price": 4200.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 334,
+      "id": 669,
+      "action": "added",
+      "price": 990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 335,
+      "id": 373,
+      "action": "retained",
+      "price": 5525.0,
+      "previous_price": 5525
+    },
+    {
+      "source_row": 336,
+      "id": 374,
+      "action": "retained",
+      "price": 6750.0,
+      "previous_price": 4480
+    },
+    {
+      "source_row": 337,
+      "id": 670,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 338,
+      "id": 671,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 339,
+      "id": 375,
+      "action": "retained",
+      "price": 10.0,
+      "previous_price": 10
+    },
+    {
+      "source_row": 340,
+      "id": 376,
+      "action": "retained",
+      "price": 380.0,
+      "previous_price": 380
+    },
+    {
+      "source_row": 341,
+      "id": 672,
+      "action": "added",
+      "price": 380.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 342,
+      "id": 378,
+      "action": "retained",
+      "price": 1613.0,
+      "previous_price": 1613
+    },
+    {
+      "source_row": 343,
+      "id": 379,
+      "action": "retained",
+      "price": 1414.0,
+      "previous_price": 1414
+    },
+    {
+      "source_row": 344,
+      "id": 673,
+      "action": "added",
+      "price": 1800.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 345,
+      "id": 674,
+      "action": "added",
+      "price": 1290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 346,
+      "id": 380,
+      "action": "retained",
+      "price": 6290.0,
+      "previous_price": 6290
+    },
+    {
+      "source_row": 347,
+      "id": 675,
+      "action": "added",
+      "price": 290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 348,
+      "id": 381,
+      "action": "retained",
+      "price": 5210.0,
+      "previous_price": 5210
+    },
+    {
+      "source_row": 349,
+      "id": 676,
+      "action": "added",
+      "price": 250.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 350,
+      "id": 677,
+      "action": "added",
+      "price": 260.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 351,
+      "id": 400,
+      "action": "retained",
+      "price": 2190.0,
+      "previous_price": 2190
+    },
+    {
+      "source_row": 352,
+      "id": 678,
+      "action": "added",
+      "price": 330.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 353,
+      "id": 679,
+      "action": "added",
+      "price": 1490.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 354,
+      "id": 384,
+      "action": "retained",
+      "price": 8990.0,
+      "previous_price": 8990
+    },
+    {
+      "source_row": 355,
+      "id": 680,
+      "action": "added",
+      "price": 1140.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 356,
+      "id": 385,
+      "action": "retained",
+      "price": 1590.0,
+      "previous_price": 1590
+    },
+    {
+      "source_row": 357,
+      "id": 108,
+      "action": "retained",
+      "price": 9790.0,
+      "previous_price": 9790
+    },
+    {
+      "source_row": 358,
+      "id": 387,
+      "action": "retained",
+      "price": 2590.0,
+      "previous_price": 2590
+    },
+    {
+      "source_row": 359,
+      "id": 388,
+      "action": "retained",
+      "price": 2990.0,
+      "previous_price": 2990
+    },
+    {
+      "source_row": 360,
+      "id": 181,
+      "action": "retained",
+      "price": 4590.0,
+      "previous_price": 4590
+    },
+    {
+      "source_row": 361,
+      "id": 390,
+      "action": "retained",
+      "price": 2690.0,
+      "previous_price": 2690
+    },
+    {
+      "source_row": 362,
+      "id": 681,
+      "action": "added",
+      "price": 2290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 363,
+      "id": 451,
+      "action": "retained",
+      "price": 3290.0,
+      "previous_price": 3290
+    },
+    {
+      "source_row": 364,
+      "id": 393,
+      "action": "retained",
+      "price": 2000.0,
+      "previous_price": 1890
+    },
+    {
+      "source_row": 365,
+      "id": 394,
+      "action": "retained",
+      "price": 6690.0,
+      "previous_price": 6690
+    },
+    {
+      "source_row": 366,
+      "id": 395,
+      "action": "retained",
+      "price": 2790.0,
+      "previous_price": 2790
+    },
+    {
+      "source_row": 367,
+      "id": 396,
+      "action": "retained",
+      "price": 15990.0,
+      "previous_price": 15990
+    },
+    {
+      "source_row": 368,
+      "id": 188,
+      "action": "retained",
+      "price": 2190.0,
+      "previous_price": 3931
+    },
+    {
+      "source_row": 369,
+      "id": 398,
+      "action": "retained",
+      "price": 1940.0,
+      "previous_price": 1940
+    },
+    {
+      "source_row": 370,
+      "id": 399,
+      "action": "retained",
+      "price": 7690.0,
+      "previous_price": 7690
+    },
+    {
+      "source_row": 371,
+      "id": 401,
+      "action": "retained",
+      "price": 2290.0,
+      "previous_price": 2290
+    },
+    {
+      "source_row": 372,
+      "id": 434,
+      "action": "retained",
+      "price": 3490.0,
+      "previous_price": 3190
+    },
+    {
+      "source_row": 373,
+      "id": 682,
+      "action": "added",
+      "price": 915.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 374,
+      "id": 404,
+      "action": "retained",
+      "price": 1990.0,
+      "previous_price": 2290
+    },
+    {
+      "source_row": 375,
+      "id": 240,
+      "action": "retained",
+      "price": 2440.0,
+      "previous_price": 2440
+    },
+    {
+      "source_row": 376,
+      "id": 683,
+      "action": "added",
+      "price": 2290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 377,
+      "id": 410,
+      "action": "retained",
+      "price": 2440.0,
+      "previous_price": 2440
+    },
+    {
+      "source_row": 378,
+      "id": 684,
+      "action": "added",
+      "price": 1358.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 379,
+      "id": 416,
+      "action": "retained",
+      "price": 4490.0,
+      "previous_price": 4490
+    },
+    {
+      "source_row": 380,
+      "id": 685,
+      "action": "added",
+      "price": 3740.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 381,
+      "id": 686,
+      "action": "added",
+      "price": 200.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 382,
+      "id": 687,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 383,
+      "id": 418,
+      "action": "retained",
+      "price": 3490.0,
+      "previous_price": 3490
+    },
+    {
+      "source_row": 384,
+      "id": 420,
+      "action": "retained",
+      "price": 2140.0,
+      "previous_price": 1790
+    },
+    {
+      "source_row": 385,
+      "id": 688,
+      "action": "added",
+      "price": 1641.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 386,
+      "id": 689,
+      "action": "added",
+      "price": 2088.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 387,
+      "id": 421,
+      "action": "retained",
+      "price": 1275.0,
+      "previous_price": 1440
+    },
+    {
+      "source_row": 388,
+      "id": 690,
+      "action": "added",
+      "price": 290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 389,
+      "id": 422,
+      "action": "retained",
+      "price": 290.0,
+      "previous_price": 290
+    },
+    {
+      "source_row": 390,
+      "id": 423,
+      "action": "retained",
+      "price": 290.0,
+      "previous_price": 290
+    },
+    {
+      "source_row": 391,
+      "id": 691,
+      "action": "added",
+      "price": 3290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 392,
+      "id": 692,
+      "action": "added",
+      "price": 690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 393,
+      "id": 268,
+      "action": "retained",
+      "price": 2790.0,
+      "previous_price": 2790
+    },
+    {
+      "source_row": 394,
+      "id": 693,
+      "action": "added",
+      "price": 1990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 395,
+      "id": 430,
+      "action": "retained",
+      "price": 1890.0,
+      "previous_price": 1890
+    },
+    {
+      "source_row": 396,
+      "id": 433,
+      "action": "retained",
+      "price": 1390.0,
+      "previous_price": 1490
+    },
+    {
+      "source_row": 397,
+      "id": 437,
+      "action": "retained",
+      "price": 3990.0,
+      "previous_price": 3990
+    },
+    {
+      "source_row": 398,
+      "id": 694,
+      "action": "added",
+      "price": 1790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 399,
+      "id": 439,
+      "action": "retained",
+      "price": 2690.0,
+      "previous_price": 2690
+    },
+    {
+      "source_row": 400,
+      "id": 695,
+      "action": "added",
+      "price": 1590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 401,
+      "id": 441,
+      "action": "retained",
+      "price": 1990.0,
+      "previous_price": 1990
+    },
+    {
+      "source_row": 402,
+      "id": 696,
+      "action": "added",
+      "price": 990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 403,
+      "id": 442,
+      "action": "retained",
+      "price": 2090.0,
+      "previous_price": 2090
+    },
+    {
+      "source_row": 404,
+      "id": 697,
+      "action": "added",
+      "price": 2290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 405,
+      "id": 448,
+      "action": "retained",
+      "price": 1990.0,
+      "previous_price": 1990
+    },
+    {
+      "source_row": 406,
+      "id": 452,
+      "action": "retained",
+      "price": 5490.0,
+      "previous_price": 5490
+    },
+    {
+      "source_row": 407,
+      "id": 453,
+      "action": "retained",
+      "price": 2990.0,
+      "previous_price": 3290
+    },
+    {
+      "source_row": 408,
+      "id": 454,
+      "action": "retained",
+      "price": 14990.0,
+      "previous_price": 14990
+    },
+    {
+      "source_row": 409,
+      "id": 304,
+      "action": "retained",
+      "price": 2990.0,
+      "previous_price": 2990
+    },
+    {
+      "source_row": 410,
+      "id": 549,
+      "action": "retained",
+      "price": 550.0,
+      "previous_price": 490
+    },
+    {
+      "source_row": 411,
+      "id": 458,
+      "action": "retained",
+      "price": 6290.0,
+      "previous_price": 6290
+    },
+    {
+      "source_row": 412,
+      "id": 698,
+      "action": "added",
+      "price": 290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 413,
+      "id": 699,
+      "action": "added",
+      "price": 890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 414,
+      "id": 464,
+      "action": "retained",
+      "price": 3840.0,
+      "previous_price": 3790
+    },
+    {
+      "source_row": 415,
+      "id": 467,
+      "action": "retained",
+      "price": 4390.0,
+      "previous_price": 4390
+    },
+    {
+      "source_row": 416,
+      "id": 700,
+      "action": "added",
+      "price": 690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 417,
+      "id": 469,
+      "action": "retained",
+      "price": 11940.0,
+      "previous_price": 11940
+    },
+    {
+      "source_row": 418,
+      "id": 701,
+      "action": "added",
+      "price": 1740.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 419,
+      "id": 702,
+      "action": "added",
+      "price": 1790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 420,
+      "id": 703,
+      "action": "added",
+      "price": 890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 421,
+      "id": 704,
+      "action": "added",
+      "price": 1190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 422,
+      "id": 470,
+      "action": "retained",
+      "price": 5790.0,
+      "previous_price": 5790
+    },
+    {
+      "source_row": 423,
+      "id": 471,
+      "action": "retained",
+      "price": 1140.0,
+      "previous_price": 1140
+    },
+    {
+      "source_row": 424,
+      "id": 455,
+      "action": "retained",
+      "price": 3890.0,
+      "previous_price": 3890
+    },
+    {
+      "source_row": 425,
+      "id": 457,
+      "action": "retained",
+      "price": 1440.0,
+      "previous_price": 1440
+    },
+    {
+      "source_row": 426,
+      "id": 705,
+      "action": "added",
+      "price": 1440.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 427,
+      "id": 472,
+      "action": "retained",
+      "price": 1140.0,
+      "previous_price": 1140
+    },
+    {
+      "source_row": 428,
+      "id": 473,
+      "action": "retained",
+      "price": 1140.0,
+      "previous_price": 1140
+    },
+    {
+      "source_row": 429,
+      "id": 438,
+      "action": "retained",
+      "price": 890.0,
+      "previous_price": 890
+    },
+    {
+      "source_row": 430,
+      "id": 474,
+      "action": "retained",
+      "price": 890.0,
+      "previous_price": 890
+    },
+    {
+      "source_row": 431,
+      "id": 114,
+      "action": "retained",
+      "price": 150.0,
+      "previous_price": 150
+    },
+    {
+      "source_row": 432,
+      "id": 475,
+      "action": "retained",
+      "price": 440.0,
+      "previous_price": 440
+    },
+    {
+      "source_row": 433,
+      "id": 706,
+      "action": "added",
+      "price": 340.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 434,
+      "id": 707,
+      "action": "added",
+      "price": 1140.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 435,
+      "id": 476,
+      "action": "retained",
+      "price": 440.0,
+      "previous_price": 440
+    },
+    {
+      "source_row": 436,
+      "id": 35,
+      "action": "retained",
+      "price": 340.0,
+      "previous_price": 340
+    },
+    {
+      "source_row": 437,
+      "id": 342,
+      "action": "retained",
+      "price": 340.0,
+      "previous_price": 340
+    },
+    {
+      "source_row": 438,
+      "id": 444,
+      "action": "retained",
+      "price": 340.0,
+      "previous_price": 340
+    },
+    {
+      "source_row": 439,
+      "id": 708,
+      "action": "added",
+      "price": 1184.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 440,
+      "id": 446,
+      "action": "retained",
+      "price": 340.0,
+      "previous_price": 340
+    },
+    {
+      "source_row": 441,
+      "id": 709,
+      "action": "added",
+      "price": 375.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 442,
+      "id": 362,
+      "action": "retained",
+      "price": 1890.0,
+      "previous_price": 1790
+    },
+    {
+      "source_row": 443,
+      "id": 710,
+      "action": "added",
+      "price": 1290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 444,
+      "id": 711,
+      "action": "added",
+      "price": 209.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 445,
+      "id": 478,
+      "action": "retained",
+      "price": 2790.0,
+      "previous_price": 2490
+    },
+    {
+      "source_row": 446,
+      "id": 366,
+      "action": "retained",
+      "price": 2140.0,
+      "previous_price": 2140
+    },
+    {
+      "source_row": 447,
+      "id": 479,
+      "action": "retained",
+      "price": 2140.0,
+      "previous_price": 2140
+    },
+    {
+      "source_row": 448,
+      "id": 480,
+      "action": "retained",
+      "price": 1290.0,
+      "previous_price": 1490
+    },
+    {
+      "source_row": 449,
+      "id": 483,
+      "action": "retained",
+      "price": 1890.0,
+      "previous_price": 1890
+    },
+    {
+      "source_row": 450,
+      "id": 486,
+      "action": "retained",
+      "price": 490.0,
+      "previous_price": 460
+    },
+    {
+      "source_row": 451,
+      "id": 482,
+      "action": "retained",
+      "price": 90.0,
+      "previous_price": 90
+    },
+    {
+      "source_row": 452,
+      "id": 712,
+      "action": "added",
+      "price": 1540.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 453,
+      "id": 391,
+      "action": "retained",
+      "price": 2100.0,
+      "previous_price": 2100
+    },
+    {
+      "source_row": 454,
+      "id": 488,
+      "action": "retained",
+      "price": 4300.0,
+      "previous_price": 4300
+    },
+    {
+      "source_row": 455,
+      "id": 489,
+      "action": "retained",
+      "price": 1900.0,
+      "previous_price": 1900
+    },
+    {
+      "source_row": 456,
+      "id": 299,
+      "action": "retained",
+      "price": 3100.0,
+      "previous_price": 3100
+    },
+    {
+      "source_row": 457,
+      "id": 713,
+      "action": "added",
+      "price": 2355.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 458,
+      "id": 714,
+      "action": "added",
+      "price": 1641.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 459,
+      "id": 371,
+      "action": "retained",
+      "price": 2790.0,
+      "previous_price": 2790
+    },
+    {
+      "source_row": 460,
+      "id": 715,
+      "action": "added",
+      "price": 2490.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 461,
+      "id": 716,
+      "action": "added",
+      "price": 915.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 462,
+      "id": 717,
+      "action": "added",
+      "price": 370.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 463,
+      "id": 502,
+      "action": "retained",
+      "price": 7290.0,
+      "previous_price": 7290
+    },
+    {
+      "source_row": 464,
+      "id": 505,
+      "action": "retained",
+      "price": 790.0,
+      "previous_price": 790
+    },
+    {
+      "source_row": 465,
+      "id": 286,
+      "action": "retained",
+      "price": 1800.0,
+      "previous_price": 1800
+    },
+    {
+      "source_row": 466,
+      "id": 718,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 467,
+      "id": 509,
+      "action": "retained",
+      "price": 3090.0,
+      "previous_price": 3090
+    },
+    {
+      "source_row": 468,
+      "id": 459,
+      "action": "retained",
+      "price": 3690.0,
+      "previous_price": 3690
+    },
+    {
+      "source_row": 469,
+      "id": 719,
+      "action": "added",
+      "price": 120.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 470,
+      "id": 463,
+      "action": "retained",
+      "price": 2150.0,
+      "previous_price": 1840
+    },
+    {
+      "source_row": 471,
+      "id": 510,
+      "action": "retained",
+      "price": 5790.0,
+      "previous_price": 5790
+    },
+    {
+      "source_row": 472,
+      "id": 515,
+      "action": "retained",
+      "price": 4090.0,
+      "previous_price": 4090
+    },
+    {
+      "source_row": 473,
+      "id": 520,
+      "action": "retained",
+      "price": 2190.0,
+      "previous_price": 2190
+    },
+    {
+      "source_row": 474,
+      "id": 720,
+      "action": "added",
+      "price": 1290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 475,
+      "id": 522,
+      "action": "retained",
+      "price": 4890.0,
+      "previous_price": 4890
+    },
+    {
+      "source_row": 476,
+      "id": 721,
+      "action": "added",
+      "price": 120.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 477,
+      "id": 523,
+      "action": "retained",
+      "price": 2638.0,
+      "previous_price": 2990
+    },
+    {
+      "source_row": 478,
+      "id": 495,
+      "action": "retained",
+      "price": 1190.0,
+      "previous_price": 1190
+    },
+    {
+      "source_row": 479,
+      "id": 722,
+      "action": "added",
+      "price": 1990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 480,
+      "id": 216,
+      "action": "retained",
+      "price": 1690.0,
+      "previous_price": 1690
+    },
+    {
+      "source_row": 481,
+      "id": 723,
+      "action": "added",
+      "price": 8440.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 482,
+      "id": 724,
+      "action": "added",
+      "price": 3690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 483,
+      "id": 725,
+      "action": "added",
+      "price": 1987.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 484,
+      "id": 526,
+      "action": "retained",
+      "price": 1690.0,
+      "previous_price": 1690
+    },
+    {
+      "source_row": 485,
+      "id": 726,
+      "action": "added",
+      "price": 1285.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 486,
+      "id": 727,
+      "action": "added",
+      "price": 3043.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 487,
+      "id": 485,
+      "action": "retained",
+      "price": 2090.0,
+      "previous_price": 2090
+    },
+    {
+      "source_row": 488,
+      "id": 728,
+      "action": "added",
+      "price": 882.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 489,
+      "id": 729,
+      "action": "added",
+      "price": 4998.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 490,
+      "id": 528,
+      "action": "retained",
+      "price": 2490.0,
+      "previous_price": 2490
+    },
+    {
+      "source_row": 491,
+      "id": 158,
+      "action": "retained",
+      "price": 2190.0,
+      "previous_price": 2190
+    },
+    {
+      "source_row": 492,
+      "id": 530,
+      "action": "retained",
+      "price": 2490.0,
+      "previous_price": 2490
+    },
+    {
+      "source_row": 493,
+      "id": 147,
+      "action": "retained",
+      "price": 2390.0,
+      "previous_price": 2390
+    },
+    {
+      "source_row": 494,
+      "id": 730,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 495,
+      "id": 731,
+      "action": "added",
+      "price": 552.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 496,
+      "id": 532,
+      "action": "retained",
+      "price": 3001.0,
+      "previous_price": 2890
+    },
+    {
+      "source_row": 497,
+      "id": 732,
+      "action": "added",
+      "price": 250.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 498,
+      "id": 733,
+      "action": "added",
+      "price": 4990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 499,
+      "id": 734,
+      "action": "added",
+      "price": 2590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 500,
+      "id": 533,
+      "action": "retained",
+      "price": 2690.0,
+      "previous_price": 2690
+    },
+    {
+      "source_row": 501,
+      "id": 283,
+      "action": "retained",
+      "price": 1390.0,
+      "previous_price": 1390
+    },
+    {
+      "source_row": 502,
+      "id": 131,
+      "action": "retained",
+      "price": 2790.0,
+      "previous_price": 2790
+    },
+    {
+      "source_row": 503,
+      "id": 735,
+      "action": "added",
+      "price": 2294.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 504,
+      "id": 538,
+      "action": "retained",
+      "price": 1690.0,
+      "previous_price": 1690
+    },
+    {
+      "source_row": 505,
+      "id": 414,
+      "action": "retained",
+      "price": 1690.0,
+      "previous_price": 1690
+    },
+    {
+      "source_row": 506,
+      "id": 736,
+      "action": "added",
+      "price": 1513.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 507,
+      "id": 542,
+      "action": "retained",
+      "price": 6990.0,
+      "previous_price": 6990
+    },
+    {
+      "source_row": 508,
+      "id": 737,
+      "action": "added",
+      "price": 1290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 509,
+      "id": 738,
+      "action": "added",
+      "price": 1290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 510,
+      "id": 340,
+      "action": "retained",
+      "price": 2140.0,
+      "previous_price": 1890
+    },
+    {
+      "source_row": 511,
+      "id": 739,
+      "action": "added",
+      "price": 990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 512,
+      "id": 740,
+      "action": "added",
+      "price": 253.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 513,
+      "id": 741,
+      "action": "added",
+      "price": 881.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 514,
+      "id": 548,
+      "action": "retained",
+      "price": 230.0,
+      "previous_price": 240
+    },
+    {
+      "source_row": 515,
+      "id": 742,
+      "action": "added",
+      "price": 640.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 516,
+      "id": 743,
+      "action": "added",
+      "price": 2290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 517,
+      "id": 744,
+      "action": "added",
+      "price": 640.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 518,
+      "id": 745,
+      "action": "added",
+      "price": 1540.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 519,
+      "id": 746,
+      "action": "added",
+      "price": 1990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 520,
+      "id": 747,
+      "action": "added",
+      "price": 1740.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 521,
+      "id": 748,
+      "action": "added",
+      "price": 2140.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 522,
+      "id": 749,
+      "action": "added",
+      "price": 3390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 523,
+      "id": 750,
+      "action": "added",
+      "price": 3690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 524,
+      "id": 751,
+      "action": "added",
+      "price": 1290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 525,
+      "id": 752,
+      "action": "added",
+      "price": 790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 526,
+      "id": 753,
+      "action": "added",
+      "price": 1890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 527,
+      "id": 754,
+      "action": "added",
+      "price": 1290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 528,
+      "id": 755,
+      "action": "added",
+      "price": 933.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 529,
+      "id": 756,
+      "action": "added",
+      "price": 1590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 530,
+      "id": 757,
+      "action": "added",
+      "price": 1760.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 531,
+      "id": 758,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 532,
+      "id": 759,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 533,
+      "id": 760,
+      "action": "added",
+      "price": 1340.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 534,
+      "id": 761,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 535,
+      "id": 762,
+      "action": "added",
+      "price": 1090.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 536,
+      "id": 763,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 537,
+      "id": 764,
+      "action": "added",
+      "price": 2790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 538,
+      "id": 765,
+      "action": "added",
+      "price": 2490.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 539,
+      "id": 766,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 540,
+      "id": 767,
+      "action": "added",
+      "price": 2190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 541,
+      "id": 768,
+      "action": "added",
+      "price": 1890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 542,
+      "id": 769,
+      "action": "added",
+      "price": 9744.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 543,
+      "id": 770,
+      "action": "added",
+      "price": 9312.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 544,
+      "id": 771,
+      "action": "added",
+      "price": 2304.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 545,
+      "id": 772,
+      "action": "added",
+      "price": 1910.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 546,
+      "id": 773,
+      "action": "added",
+      "price": 2990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 547,
+      "id": 774,
+      "action": "added",
+      "price": 1590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 548,
+      "id": 775,
+      "action": "added",
+      "price": 690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 549,
+      "id": 776,
+      "action": "added",
+      "price": 580.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 550,
+      "id": 777,
+      "action": "added",
+      "price": 2540.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 551,
+      "id": 778,
+      "action": "added",
+      "price": 280.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 552,
+      "id": 779,
+      "action": "added",
+      "price": 220.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 553,
+      "id": 780,
+      "action": "added",
+      "price": 220.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 554,
+      "id": 781,
+      "action": "added",
+      "price": 460.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 555,
+      "id": 782,
+      "action": "added",
+      "price": 310.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 556,
+      "id": 783,
+      "action": "added",
+      "price": 370.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 557,
+      "id": 784,
+      "action": "added",
+      "price": 540.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 558,
+      "id": 785,
+      "action": "added",
+      "price": 1740.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 559,
+      "id": 786,
+      "action": "added",
+      "price": 1990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 560,
+      "id": 787,
+      "action": "added",
+      "price": 2140.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 561,
+      "id": 788,
+      "action": "added",
+      "price": 2690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 562,
+      "id": 789,
+      "action": "added",
+      "price": 1590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 563,
+      "id": 790,
+      "action": "added",
+      "price": 1290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 564,
+      "id": 791,
+      "action": "added",
+      "price": 990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 565,
+      "id": 792,
+      "action": "added",
+      "price": 2038.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 566,
+      "id": 793,
+      "action": "added",
+      "price": 1698.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 567,
+      "id": 794,
+      "action": "added",
+      "price": 2190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 568,
+      "id": 795,
+      "action": "added",
+      "price": 2590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 569,
+      "id": 796,
+      "action": "added",
+      "price": 2590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 570,
+      "id": 797,
+      "action": "added",
+      "price": 3490.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 571,
+      "id": 798,
+      "action": "added",
+      "price": 2190.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 572,
+      "id": 799,
+      "action": "added",
+      "price": 1790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 573,
+      "id": 800,
+      "action": "added",
+      "price": 2540.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 574,
+      "id": 801,
+      "action": "added",
+      "price": 6450.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 575,
+      "id": 802,
+      "action": "added",
+      "price": 390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 576,
+      "id": 803,
+      "action": "added",
+      "price": 8990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 577,
+      "id": 804,
+      "action": "added",
+      "price": 890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 578,
+      "id": 805,
+      "action": "added",
+      "price": 1590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 579,
+      "id": 806,
+      "action": "added",
+      "price": 1590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 580,
+      "id": 807,
+      "action": "added",
+      "price": 1390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 581,
+      "id": 808,
+      "action": "added",
+      "price": 3840.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 582,
+      "id": 809,
+      "action": "added",
+      "price": 4690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 583,
+      "id": 810,
+      "action": "added",
+      "price": 5990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 584,
+      "id": 811,
+      "action": "added",
+      "price": 7800.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 585,
+      "id": 812,
+      "action": "added",
+      "price": 3106.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 586,
+      "id": 242,
+      "action": "retained",
+      "price": 8791.0,
+      "previous_price": 10512
+    },
+    {
+      "source_row": 587,
+      "id": 813,
+      "action": "added",
+      "price": 440.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 588,
+      "id": 814,
+      "action": "added",
+      "price": 375.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 589,
+      "id": 815,
+      "action": "added",
+      "price": 2300.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 590,
+      "id": 816,
+      "action": "added",
+      "price": 1160.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 591,
+      "id": 817,
+      "action": "added",
+      "price": 1750.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 592,
+      "id": 818,
+      "action": "added",
+      "price": 2150.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 593,
+      "id": 819,
+      "action": "added",
+      "price": 2790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 594,
+      "id": 820,
+      "action": "added",
+      "price": 319.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 595,
+      "id": 821,
+      "action": "added",
+      "price": 1700.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 596,
+      "id": 822,
+      "action": "added",
+      "price": 1700.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 597,
+      "id": 823,
+      "action": "added",
+      "price": 890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 598,
+      "id": 824,
+      "action": "added",
+      "price": 560.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 599,
+      "id": 825,
+      "action": "added",
+      "price": 1640.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 600,
+      "id": 405,
+      "action": "retained",
+      "price": 1990.0,
+      "previous_price": 2440
+    },
+    {
+      "source_row": 601,
+      "id": 826,
+      "action": "added",
+      "price": 26165.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 602,
+      "id": 827,
+      "action": "added",
+      "price": 882.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 603,
+      "id": 828,
+      "action": "added",
+      "price": 440.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 604,
+      "id": 829,
+      "action": "added",
+      "price": 1240.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 605,
+      "id": 830,
+      "action": "added",
+      "price": 2490.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 606,
+      "id": 831,
+      "action": "added",
+      "price": 3590.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 607,
+      "id": 832,
+      "action": "added",
+      "price": 2140.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 608,
+      "id": 833,
+      "action": "added",
+      "price": 1528.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 609,
+      "id": 834,
+      "action": "added",
+      "price": 1890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 610,
+      "id": 835,
+      "action": "added",
+      "price": 220.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 611,
+      "id": 836,
+      "action": "added",
+      "price": 1940.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 612,
+      "id": 837,
+      "action": "added",
+      "price": 1890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 613,
+      "id": 462,
+      "action": "retained",
+      "price": 10990.0,
+      "previous_price": 7990
+    },
+    {
+      "source_row": 614,
+      "id": 838,
+      "action": "added",
+      "price": 320.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 615,
+      "id": 839,
+      "action": "added",
+      "price": 490.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 616,
+      "id": 840,
+      "action": "added",
+      "price": 249.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 617,
+      "id": 841,
+      "action": "added",
+      "price": 490.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 618,
+      "id": 842,
+      "action": "added",
+      "price": 288.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 619,
+      "id": 843,
+      "action": "added",
+      "price": 340.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 620,
+      "id": 844,
+      "action": "added",
+      "price": 288.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 621,
+      "id": 845,
+      "action": "added",
+      "price": 420.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 622,
+      "id": 846,
+      "action": "added",
+      "price": 348.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 624,
+      "id": 847,
+      "action": "added",
+      "price": 373.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 625,
+      "id": 848,
+      "action": "added",
+      "price": 744.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 626,
+      "id": 849,
+      "action": "added",
+      "price": 274.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 627,
+      "id": 850,
+      "action": "added",
+      "price": 280.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 628,
+      "id": 851,
+      "action": "added",
+      "price": 280.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 629,
+      "id": 852,
+      "action": "added",
+      "price": 351.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 630,
+      "id": 853,
+      "action": "added",
+      "price": 305.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 631,
+      "id": 854,
+      "action": "added",
+      "price": 338.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 632,
+      "id": 855,
+      "action": "added",
+      "price": 390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 633,
+      "id": 856,
+      "action": "added",
+      "price": 2540.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 634,
+      "id": 857,
+      "action": "added",
+      "price": 1890.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 635,
+      "id": 858,
+      "action": "added",
+      "price": 5490.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 636,
+      "id": 859,
+      "action": "added",
+      "price": 5790.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 637,
+      "id": 860,
+      "action": "added",
+      "price": 3801.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 638,
+      "id": 861,
+      "action": "added",
+      "price": 1018.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 639,
+      "id": 862,
+      "action": "added",
+      "price": 2038.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 640,
+      "id": 863,
+      "action": "added",
+      "price": 940.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 641,
+      "id": 864,
+      "action": "added",
+      "price": 2440.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 642,
+      "id": 865,
+      "action": "added",
+      "price": 1990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 643,
+      "id": 866,
+      "action": "added",
+      "price": 1690.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 644,
+      "id": 867,
+      "action": "added",
+      "price": 2140.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 645,
+      "id": 868,
+      "action": "added",
+      "price": 2240.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 646,
+      "id": 869,
+      "action": "added",
+      "price": 2390.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 647,
+      "id": 870,
+      "action": "added",
+      "price": 2740.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 648,
+      "id": 871,
+      "action": "added",
+      "price": 2740.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 649,
+      "id": 872,
+      "action": "added",
+      "price": 2990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 650,
+      "id": 873,
+      "action": "added",
+      "price": 2990.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 651,
+      "id": 874,
+      "action": "added",
+      "price": 290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 652,
+      "id": 875,
+      "action": "added",
+      "price": 1290.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 653,
+      "id": 876,
+      "action": "added",
+      "price": 1540.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 654,
+      "id": 877,
+      "action": "added",
+      "price": 1740.0,
+      "previous_price": null
+    },
+    {
+      "source_row": 655,
+      "id": 105,
+      "action": "retained",
+      "price": 3240.0,
+      "previous_price": 3240
+    }
+  ]
+}

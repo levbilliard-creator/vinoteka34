@@ -1,4 +1,4 @@
-/* Shared display rules. Product records and stable IDs remain unchanged. */
+/* Shared catalog and archived-product display rules. */
 (function (root) {
   'use strict';
   const types = Object.freeze({all:'Все', wine:'Вино', sparkling:'Игристое', strong:'Крепкий алкоголь', beer:'Пиво', soft:'Безалкогольные', grocery:'Бакалея', tea:'Чай', accessories:'Аксессуары'});
@@ -8,7 +8,7 @@
   const normalize = value => String(value || '').normalize('NFKC').toLocaleLowerCase('ru').replace(/ё/g,'е').trim();
   function filter(products, type, query) {
     const tokens = normalize(query).split(/\s+/).filter(Boolean);
-    return products.filter(p => (type === 'all' || p.type === type) && tokens.every(token => normalize([p.name_ru,p.name_en].filter(Boolean).join(' ')).includes(token)));
+    return products.filter(p => (type === 'all' || p.type === type) && tokens.every(token => normalize([p.name_ru,p.name_en,p.kind,p.country,p.volume,p.year].filter(Boolean).join(' ')).includes(token)));
   }
   function imageOf(product) {
     const name = typeof product.image === 'string' ? product.image.trim() : '';
@@ -66,9 +66,11 @@
     if(product.name_en) article.append(element('div','wine-en',product.name_en));
     article.append(element('h2','wine-ru',product.name_ru));
     const bottom = element('div','wine-bottom');
-    bottom.append(element('div','wine-type', types[product.type] || 'Товар'));
+    bottom.append(element('div','wine-type', product.kind || types[product.type] || 'Товар'));
     const style = [product.color, product.style].filter(Boolean).join(' · ');
     if(style) bottom.append(element('div','wine-style',style));
+    const details = [product.volume,product.year,product.packaging].filter(Boolean).join(' · ');
+    if(details) bottom.append(element('div','wine-style',details));
     bottom.append(element('div','wine-price',priceOf(product.price)));
     const link = element('a','btn-link','Открыть →');
     link.href = productURL(product.id,state);

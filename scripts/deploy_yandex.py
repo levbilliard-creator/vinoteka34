@@ -18,7 +18,7 @@ def digest(content):
     return hashlib.sha256(content).hexdigest()
 
 def files():
-    result = list(RUNTIME) + ['data/products.json','data/images.json']
+    result = list(RUNTIME) + ['data/products-archive.json','data/products.json','data/images.json']
     for path in (ROOT / 'assets').rglob('*'):
         if path.is_file() and path.suffix.lower() in PUBLIC_ASSETS and not path.is_symlink():
             relative = path.relative_to(ROOT).as_posix()
