@@ -563,7 +563,22 @@
     "147": "PHOTO-20261115-147.webp",
     "739": "PHOTO-20261115-739.webp",
     "833": "PHOTO-20261115-833.webp",
-    "865": "PHOTO-20261115-865.webp"
+    "865": "PHOTO-20261115-865.webp",
+    "559": "PHOTO-20261115-559.webp",
+    "564": "PHOTO-20261115-564.webp",
+    "259": "PHOTO-20261115-259.webp",
+    "261": "PHOTO-20261115-261.webp",
+    "214": "PHOTO-20261115-214.webp",
+    "400": "PHOTO-20261115-400.webp",
+    "390": "PHOTO-20261115-390.webp",
+    "393": "PHOTO-20261115-393.webp",
+    "420": "PHOTO-20261115-420.webp",
+    "423": "PHOTO-20261115-423.webp",
+    "453": "PHOTO-20261115-453.webp",
+    "708": "PHOTO-20261115-708.webp",
+    "737": "PHOTO-20261115-737.webp",
+    "798": "PHOTO-20261115-798.webp",
+    "858": "PHOTO-20261115-858.webp"
   },
   "web_sources": [
     {
@@ -4757,6 +4772,141 @@
       "image_url": "https://www.tenutaterraviva.it/wp-content/uploads/2021/05/Trebbiano-terraviva-2024-scaled.png",
       "identity": "Терравива Треббьяно д'Абруццо; 0,75 л",
       "review_note": "Официальный производитель Tenuta Terraviva: базовая линейка Trebbiano d’Abruzzo DOC, 0,75 л, не MPH Amphora и не Vecchie Vigne. Фото проверено; сухой стиль также https://www.livewine.it/web/live-wine-2022/italy-2022/tenuta-terraviva/ .",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 559,
+      "file": "PHOTO-20261115-559.webp",
+      "source_url": "https://ampirwine.ru/wine/tproduct/390623698-731350839531-el-autoctono-pais-secano-interior-do",
+      "image_url": "https://static.tildacdn.com/tild6137-3666-4135-b730-613462383961/60C8774A-C971-4442-A.jpeg",
+      "identity": "Паис Эль Аутоктоно Секано Интерьор; 0,75 л",
+      "review_note": "El Autóctono País D.O. Secano Interior, красное полусухое0,75л: источник Ampirwine явно подтверждает полусухое; не использованы источники с описанием сухое или белым Pais White.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 564,
+      "file": "PHOTO-20261115-564.webp",
+      "source_url": "https://decanter.ru/product/barth-riesling-extra-brut-2022-id269864",
+      "image_url": "https://static.decanter.ru/upload/images/456372/456372-igristoe-vino-barth-riesling-extra-brut-2022-0-75-l-sq.jpg",
+      "identity": "Барт Рислинг Экстра Брют",
+      "review_note": "Barth Riesling Extra Brut2022, 0,75л: отдельная страница урожая2022; на фото Extra Brut, не просто Brut. Характеристика подтверждена также техническим листом импортёра https://mack-editions.de/download/expertise/54510-121-0000 .",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 259,
+      "file": "PHOTO-20261115-259.webp",
+      "source_url": "https://jensensliquors.com/products/romate-solera-reserva-brandy-de-jerez",
+      "image_url": "http://jensensliquors.com/cdn/shop/files/romate-750-new-web.png?v=1726864796",
+      "identity": "Херес Солера Резерва Ромате; 0,75 л",
+      "review_note": "Romate Solera Reserva Brandy de Jerez: Jensen’s Liquors, отдельная фасовка750ML и экспортная бутылка. Прежнее фото Bodega Mi Amiga с видимым70cl отклонено. В исходном акте это бренди, поле kind сохранено.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 261,
+      "file": "PHOTO-20261115-261.webp",
+      "source_url": "https://winezone.ru/aksessuari/vajn-vizhen-eva-burgundiq-v-podarochnoj-upakovke-nabor-bokalov-2-sht-800-ml",
+      "image_url": "https://winezone.ru/assets/files/images/1788448107vajn-vizhen-eva-burgundiq-v-podarochnoj-upakovke-nabor-bokalov-2-sht-800-ml.jpg",
+      "identity": "Бокалы Вайн Вижен Бургундия 2 шт 800 мл; 0,8 л",
+      "review_note": "Vine Vision Eva Burgundy: набор2бокалов по800мл. На фото коробка2PCS и модельBurgundy; фасовка подтверждена карточкой источника. Не набор6бокалов и неUniversal500мл.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 214,
+      "file": "PHOTO-20261115-214.webp",
+      "source_url": "https://www.enotecacollova.com/en/brunello-di-montalcino-la-casaccia-2017-p9069/",
+      "image_url": "https://cdn.enotecacollova.com/media/images/products/9069/large/vini-rossi-brunello-di-montalcino_brunello-di-montalcino-la-casaccia-2017-canalicchio-di-sopra-l-810d.jpg",
+      "identity": "Брунелло ди Монтальчино Ла Казачча Каналиккьо ди Сопра; 0,75 л",
+      "review_note": "Canalicchio di Sopra La Casaccia Brunello di Montalcino, 0,75 л: на этикетке отчётливо виден 2017, совпадает со страницей и остатком. Дополнительно технический лист производителя https://www.canalicchiodisopra.com/pdfgen/sheet/35/398/it подтверждает2017 и бутылки750мл.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 400,
+      "file": "PHOTO-20261115-400.webp",
+      "source_url": "https://aroma.ru/produktsiya/vino/pino-nuar-360-pinot-noir-360/",
+      "image_url": "https://aroma.ru/uploads/gss/goods/1091/01b_1.jpg",
+      "identity": "Пино Нуар Серия 360; 0,75 л",
+      "review_note": "Первичный импортёр ТД Арома: Luis Felipe Edwards Pinot Noir360, 0,75л, Чили; фотография конкретного продукта, не общий баннер бренда.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 390,
+      "file": "PHOTO-20261115-390.webp",
+      "source_url": "https://www.cigarpro.ru/drinks/brandy/marceau/marceau-grand-cru-xo-700-ml/",
+      "image_url": "https://www.cigarpro.ru/images/products/brandy/medium/1724850743-marceau-grand-cru-xo-700-ml.webp",
+      "identity": "Марсо Гран Крю ХО; 0,7 л",
+      "review_note": "Marceau Grand Cru XO Brandy de France, отдельная страница и фотография0,7л; не Cognac и не0,5л. Сохранён исходный водяной знак источника.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 393,
+      "file": "PHOTO-20261115-393.webp",
+      "source_url": "https://www.cigarpro.ru/drinks/brandy/marceau/marceau-grand-cru-xo-500-ml/",
+      "image_url": "https://www.cigarpro.ru/images/products/brandy/medium/1724850642-marceau-grand-cru-xo-500-ml.webp",
+      "identity": "Марсо Гран Крю ХО; 0,5 л",
+      "review_note": "Marceau Grand Cru XO Brandy de France, отдельная страница и фотография0,5л; не Cognac и не0,7л. Сохранён исходный водяной знак источника.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 420,
+      "file": "PHOTO-20261115-420.webp",
+      "source_url": "https://www.bordershop.com/en/global/castellani/castellani-chianti-docg-dry-red-0-75l/p/000000000001071399/",
+      "image_url": "https://www.bordershop.com/medias/527Wx527H-null?context=bWFzdGVyfGltYWdlc3wyMjk1M3xpbWFnZS9qcGVnfGFHVXdMMmhtWXk4eE16VTRNREl6TkRrNE1UUXdOaTgxTWpkWGVEVXlOMGhmYm5Wc2JBfDVkMGJjOWJiNzg1M2E4YThiY2YxOWVhYjZiNDFkNGQwZjk0ODY2YjU0YWZmYTI2NzMxMzY4NDcxNDk0MTVjYmM&v=1778190961485",
+      "identity": "Кастеллани Кьянти ДОКГ; 0,75 л",
+      "review_note": "Castellani Chianti DOCG dry red0,75л: отдельная страница Scandlines BorderShop; фото базового Chianti, не Classico и не Riserva.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 423,
+      "file": "PHOTO-20261115-423.webp",
+      "source_url": "https://robertoalimentare.com/prodotto/mini-crocchini-pomodoro-origano/",
+      "image_url": "https://robertoalimentare.com/wp-content/uploads/2025/03/Crocchini-multipack-pizza_600x600.png",
+      "identity": "Палочки хлебные гриссини кроккини миньон с томатами и орегано Роберто 150гр. Италия",
+      "review_note": "Официальный производитель Roberto: Mini Crocchini con pomodoro e origano, томаты с орегано, фасовка150г подтверждена https://robertoalimentare.com/customer_files/mini-crocchini-pomodoro-origano-multipack-g-150/ . Фотография упаковки нужного вкуса, не розмарин и не соль.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 453,
+      "file": "PHOTO-20261115-453.webp",
+      "source_url": "https://bestwine24.ru/igristoe-vino-lovo-prosecco-millesimato-doc-15-l/",
+      "image_url": "https://bestwine24.ru/storage/optimized/product/01KFXFYM39NYY6WJ9FJWEP9376_1200x1600.webp",
+      "identity": "Лово Просекко; 1,5 л",
+      "review_note": "Lovo Prosecco Millesimato DOC, белое брют: источник BestWine24 отдельно подтверждает магнум1,5л, фото этой страницы, без противоречащего обозначения объёма.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 708,
+      "file": "PHOTO-20261115-708.webp",
+      "source_url": "https://tsimlawines.ru/wine/tikhoe-cuvee-malbec/",
+      "image_url": "https://tsimlawines.ru/wp-content/uploads/2025/08/cuvee_malbec.png",
+      "identity": "Цимлянское кюве. мальбек",
+      "review_note": "Первичный производитель Цимлянские вина: Цимлянское кюве Мальбек, красное сухое. На фото точная линейка и сорт; год в остатке отсутствует.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 737,
+      "file": "PHOTO-20261115-737.webp",
+      "source_url": "https://wine-city.ru/product/11099/vodka-fergana-gold-fergana-gold-0-7l-krepost-40/",
+      "image_url": "https://wine-city.ru/data/images/catalog/efdf6af6-79ff-11f1-85b1-509a4c59ad30/PRODIMAGE_efdf6af679ff11f185b1509a4c59ad30_fc99aa8b819d11f18f68f079595f2c48.jpg",
+      "identity": "Фергана голд; 0,7 л",
+      "review_note": "Fergana Gold Vodka0,7л: страница WineCity подтверждает бренд, вид напитка и объём; фото проверено. Отсутствующая в остатке страна из фото не добавлялась.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 798,
+      "file": "PHOTO-20261115-798.webp",
+      "source_url": "https://issi-spirits.ru/catalog/kreman/igristoe-vino-gyustav-de-fonkod-kreman-de-bordo-bryut/",
+      "image_url": "https://issi-spirits.ru/upload/iblock/156/marjdfmaxv11uz433vwagy6zzk13sfz2.jpg",
+      "identity": "Гюстав де Фонкод Креман де Бордо; 0,75 л",
+      "review_note": "Gustave de Foncaude Crémant de Bordeaux Brut, белое брют0,75л: название, производитель и этикетка проверены.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 858,
+      "file": "PHOTO-20261115-858.webp",
+      "source_url": "https://www.bovinowines.es/moillard-grivot/bourgogne-pinot-noir/a148896",
+      "image_url": "https://www.bovinowines.es/userdata/artikelen/moillard-grivot-bourgogne-pinot-noir-0-75l-2022-145779663-es-G.jpg?h=20260203124041000",
+      "identity": "БУРГОНЬ ПИНО НУАР Моаяр Гриво; 0,75 л",
+      "review_note": "Moillard-Grivot Bourgogne Pinot Noir, 0,75л, Франция, красное: базовая линейка, не Grand Cru. На этикетке подтверждён бренд; год в остатке отсутствует.",
       "retrieved_on": "2026-11-15"
     }
   ]
