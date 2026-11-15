@@ -1,10 +1,10 @@
 {
   "date": "2026-11-15",
   "total": 644,
-  "with_photo": 578,
-  "placeholders": 66,
+  "with_photo": 586,
+  "placeholders": 58,
   "target_max_placeholders": 32,
-  "approved_in_this_search": 372,
+  "approved_in_this_search": 380,
   "rejected_candidates": {
     "3": "Источник указывает 2018 вместо 2017",
     "20": "Источник 0,7 л вместо 0,75 л",
@@ -34,24 +34,17 @@
     "831": "На фото Beluga 0.5 LITER вместо 1 л"
   },
   "target_percent": 5,
-  "current_placeholder_percent": 10.2,
-  "additional_needed_for_target": 34,
-  "last_batch_added": 15,
+  "current_placeholder_percent": 9.0,
+  "additional_needed_for_target": 26,
+  "last_batch_added": 8,
   "last_batch_ids": [
-    214,
-    259,
-    390,
-    393,
-    559,
-    400,
-    798,
-    858,
-    564,
-    453,
-    423,
-    737,
-    708,
-    420,
-    261
+    79,
+    35,
+    342,
+    444,
+    446,
+    482,
+    399,
+    781
   ]
 }

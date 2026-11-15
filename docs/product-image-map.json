@@ -578,7 +578,15 @@
     "708": "PHOTO-20261115-708.webp",
     "737": "PHOTO-20261115-737.webp",
     "798": "PHOTO-20261115-798.webp",
-    "858": "PHOTO-20261115-858.webp"
+    "858": "PHOTO-20261115-858.webp",
+    "79": "PHOTO-20261115-79.webp",
+    "399": "PHOTO-20261115-399.webp",
+    "35": "PHOTO-20261115-35.webp",
+    "342": "PHOTO-20261115-342.webp",
+    "444": "PHOTO-20261115-444.webp",
+    "446": "PHOTO-20261115-446.webp",
+    "482": "PHOTO-20261115-482.webp",
+    "781": "PHOTO-20261115-781.webp"
   },
   "web_sources": [
     {
@@ -4907,6 +4915,78 @@
       "image_url": "https://www.bovinowines.es/userdata/artikelen/moillard-grivot-bourgogne-pinot-noir-0-75l-2022-145779663-es-G.jpg?h=20260203124041000",
       "identity": "БУРГОНЬ ПИНО НУАР Моаяр Гриво; 0,75 л",
       "review_note": "Moillard-Grivot Bourgogne Pinot Noir, 0,75л, Франция, красное: базовая линейка, не Grand Cru. На этикетке подтверждён бренд; год в остатке отсутствует.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 79,
+      "file": "PHOTO-20261115-79.webp",
+      "source_url": "https://malva.si/en/collections/in-stock-products/products/ole-smoky-moonshine-charred-51-5-vol-0-7l",
+      "image_url": "http://malva.si/cdn/shop/files/47543480f1b0e0211cee922fd5465d6e_1200x1200.jpg?v=1793551051",
+      "identity": "Муншайн Оле Смоуки Теннесси Чаррд; 0,7 л",
+      "review_note": "Ole Smoky Charred Moonshine 51,5%, 0,7 л: страница Malva и видимая надпись700ML на банке подтверждают нужную фасовку.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 399,
+      "file": "PHOTO-20261115-399.webp",
+      "source_url": "https://www.thebarreltap.com/collections/online-liquor-store/products/ancnoc-12-years-old-scotch-whiskey",
+      "image_url": "http://www.thebarreltap.com/cdn/shop/files/ancnoc-12-years-old-scotch-whiskey-750-ml-the-barrel-tap-www-thebarreltap-com.jpg?v=1691179456",
+      "identity": "Ан Нок 12 лет; 0,75 л",
+      "review_note": "anCnoc12Years Old: отдельная карточка TheBarrelTap750mL, фото именно12лет; возраст и бренд проверены на этикетке. Надписи о другом объёме на фото не выявлено.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 35,
+      "file": "PHOTO-20261115-35.webp",
+      "source_url": "https://agenyz.kz/catalog/food/priprava-dlya-shashlyka-d2",
+      "image_url": "https://agenyz.kz/resize/w2048/dr/pt/doy_pack_shashl_2000x2000.1zmews6egzfxshjamncm0.png",
+      "identity": "Приправа для шашлыка 44 г",
+      "review_note": "AlfaChef: приправа для шашлыка44г. Официальная карточка Agenyz подтверждает вкус и44г; бренд установлен по совпадающей группе четырёх приправ44г. Исходное название сохранено.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 342,
+      "file": "PHOTO-20261115-342.webp",
+      "source_url": "https://agenyz.kz/catalog/food/priprava-dlya-ryby-d2",
+      "image_url": "https://agenyz.kz/resize/w2048/i2/fu/doy_pack_fish_2000x2000.v98bmllg0dkza8xq6jmgip3k3hd.png",
+      "identity": "Приправа для рыбы 44 г",
+      "review_note": "AlfaChef: приправа для рыбы44г. Официальная карточка Agenyz подтверждает вкус и44г; бренд установлен по совпадающей группе четырёх приправ44г. Исходное название сохранено.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 444,
+      "file": "PHOTO-20261115-444.webp",
+      "source_url": "https://agenyz.kz/catalog/food/priprava-dlya-bifshteksa-d2",
+      "image_url": "https://agenyz.kz/resize/w2048/tt/ol/doy_pack_beef_2000x2000.ndhgg5vcl.png",
+      "identity": "Приправа для бифштекаса 44 г",
+      "review_note": "AlfaChef: приправа для бифштекса44г. Официальная карточка Agenyz подтверждает вкус и44г; бренд установлен по совпадающей группе четырёх приправ44г. Исходное название сохранено.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 446,
+      "file": "PHOTO-20261115-446.webp",
+      "source_url": "https://agenyz.kz/catalog/food/priprava-dlya-kuritsy-d2",
+      "image_url": "https://agenyz.kz/resize/w2048/o8/bf/doy_pack_chicken_2000x2000.550bzhx6uyr61.png",
+      "identity": "Приправа для курицы 44 г",
+      "review_note": "AlfaChef: приправа для курицы44г. Официальная карточка Agenyz подтверждает вкус и44г; бренд установлен по совпадающей группе четырёх приправ44г. Исходное название сохранено.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 482,
+      "file": "PHOTO-20261115-482.webp",
+      "source_url": "https://agenyz.kz/catalog/food/shokolad-iq-shok-90-g-kz",
+      "image_url": "https://agenyz.kz/resize/w2048/cd/f8/694be26eaf00b.q18qtuu96ii4u1z5pgq1r0.png",
+      "identity": "Шоколад IQ- шок",
+      "review_note": "Уникальное название iQ-ШОК совпадает с официальным продуктом Agenyz. Фото коробки проверено; отсутствующий в остатке вес не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 781,
+      "file": "PHOTO-20261115-781.webp",
+      "source_url": "https://www.bevande.cz/en/amaretti-classici-alle-mandorle--falcone--170g/",
+      "image_url": "https://cdn.myshoptet.com/usr/www.bevande.cz/user/shop/big/492-4_amaretti-classici.png?ff=1&x=1024&y=1365&q=85&ts=67d70278&sg=b18c963d",
+      "identity": "Печенье классические Амаретти 170гр. Италия",
+      "review_note": "Falcone Amaretti Classici170г: бренд подтверждён исходной фотографией шоколадных Amaretti Falcone170г в ассортименте. Карточка Bevande и первичный каталог Falcone2021 подтверждают классические170г, EAN8023696005762, AM170. Фото реальной упаковки; не lifestyle-изображение.",
       "retrieved_on": "2026-11-15"
     }
   ]
