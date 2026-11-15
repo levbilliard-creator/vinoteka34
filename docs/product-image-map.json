@@ -547,7 +547,23 @@
     "776": "PHOTO-20261115-776.webp",
     "815": "PHOTO-20261115-815.webp",
     "843": "PHOTO-20261115-843.webp",
-    "847": "PHOTO-20261115-847.webp"
+    "847": "PHOTO-20261115-847.webp",
+    "562": "PHOTO-20261115-562.webp",
+    "577": "PHOTO-20261115-577.webp",
+    "596": "PHOTO-20261115-596.webp",
+    "641": "PHOTO-20261115-641.webp",
+    "220": "PHOTO-20261115-220.webp",
+    "29": "PHOTO-20261115-29.webp",
+    "360": "PHOTO-20261115-360.webp",
+    "384": "PHOTO-20261115-384.webp",
+    "387": "PHOTO-20261115-387.webp",
+    "706": "PHOTO-20261115-706.webp",
+    "489": "PHOTO-20261115-489.webp",
+    "158": "PHOTO-20261115-158.webp",
+    "147": "PHOTO-20261115-147.webp",
+    "739": "PHOTO-20261115-739.webp",
+    "833": "PHOTO-20261115-833.webp",
+    "865": "PHOTO-20261115-865.webp"
   },
   "web_sources": [
     {
@@ -4597,6 +4613,150 @@
       "image_url": "https://remma.ru/images/photos/medium/shop569.jpg",
       "identity": "Колбаса Фиорентино полусухая 95г, МЯСНОЕ АТЕЛЬЕ",
       "review_note": "Первичный источник РЕММА: Фиорентино 95 г; каталог РЕММА, стр. 64, Мясное ателье MA006. Фото товара проверено.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 562,
+      "file": "PHOTO-20261115-562.webp",
+      "source_url": "https://www.ewscompany.ru/catalog/item/mvsa-cava-brut-nature-white/",
+      "image_url": "https://www.ewscompany.ru/upload/iblock/e67/8s3jfyjq6i9f3pbepnt2u3urupoe14s6.png",
+      "identity": "Муза Кава; 0,75 л",
+      "review_note": "Официальный импортёр EWS: MVSA Cava Brut Nature White, 0,75 л. Проверена этикетка Brut Nature; не Brut и не безалкогольная MVSA.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 577,
+      "file": "PHOTO-20261115-577.webp",
+      "source_url": "https://leolsbeer.ru/catalog/pivo/martens_kristoffel_brune/",
+      "image_url": "https://leolsbeer.ru/upload/resize_cache/iblock/259/420_420_1/2599ea43056a4676c5db138be0f00358.png",
+      "identity": "Кристоффель Дарк; 0,33 л",
+      "review_note": "Martens Kristoffel Brune / Dark, 0,33 л, Бельгия, тёмное фильтрованное; страница подтверждает эквивалентность названий Brune и Dark, 6%. Фото стеклянной бутылки.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 596,
+      "file": "PHOTO-20261115-596.webp",
+      "source_url": "https://decanter.ru/product/landgut-zweigelt-rose-id253611",
+      "image_url": "https://static.decanter.ru/upload/images/438862/438862-vino-landgut-zweigelt-rose-0-75-l-sq.jpg",
+      "identity": "Ландгут Цвайгельт Розе; 0,75 л",
+      "review_note": "Сверены точное название и линейка, фасовка, цвет и тип источника; фотография этикетки просмотрена. Год в остатке не указан, из фото не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 641,
+      "file": "PHOTO-20261115-641.webp",
+      "source_url": "https://www.globalalco.ru/item/The-Wild-Geese-Classic-Blend-Irish-Whiskey-0-05-64498",
+      "image_url": "https://www.globalalco.ru/i/Avalon-Group/The-Wild-Geese-Irish-Soldiers-Heroes-Classic-Blend-Irish-Whiskey-0-75-l--64498/106301-1708248578_source_trim.png",
+      "identity": "Вайлд Гис Классик; 0,05 л",
+      "review_note": "The Wild Geese Classic Blend: на фото явно указано 5 cl, соответствует миниатюре 0,05 л. Несмотря на старый сегмент 0-75 в пути файла, фактическая этикетка и страница подтверждают 50 мл.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 220,
+      "file": "PHOTO-20261115-220.webp",
+      "source_url": "https://www.saq.com/en/10273521",
+      "image_url": "https://www.saq.com/media/catalog/product/1/0/10273521-1_1582896308.png?optimize=high&fit=bounds&height=&width=&format=jpeg",
+      "identity": "Домен Вайнбах Мускат; 0,75 л",
+      "review_note": "Domaine Weinbach Muscat, 750 ml: фотография SAQ; белое сухое дополнительно подтверждено https://www.thegoodwineshop.co.uk/products/domaine-weinbach-muscat . Год в остатке отсутствует.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 29,
+      "file": "PHOTO-20261115-29.webp",
+      "source_url": "https://solowine.es/es/catalog/ramon-bilbao-lalomba-finca-valhonta-2018",
+      "image_url": "https://solowine.es/storage/products/01m1pd80gqf2x7vd0gskbfzhxj/images/01m1pgyca4nj269ww95q3czb7j/conversions/16052024152215.LALOMBA_Rioja_2018_1_web-og.jpg",
+      "identity": "Рамон Бильбао Лаломба Финка Вальонта; 0,75 л",
+      "review_note": "Ramón Bilbao Lalomba Finca Valhonta 2018, 0,75 л: 2018 виден на этикетке и подтверждён страницей; красное сухое.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 360,
+      "file": "PHOTO-20261115-360.webp",
+      "source_url": "https://nesco.ru/product/gro_plan_syur_li_yuto_bulanzhe/",
+      "image_url": "https://nesco.ru/upload/resize_cache/iblock/10b/852_1278_1619711fa078991f0a23d032687646b21/89n2hqqdvisq38phpkmdxbjwdoi3ttms.jpg",
+      "identity": "Гро План сюр Ли Юто Буланже; 0,75 л",
+      "review_note": "Сверены точное название и линейка, фасовка, цвет и тип источника; фотография этикетки просмотрена. Год в остатке не указан, из фото не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 384,
+      "file": "PHOTO-20261115-384.webp",
+      "source_url": "https://probkibutylki.ru/shop/vino/krasnoe-vino/argentina/mendosa/vino-antigal-one-la-dolores-vineyard-malbec.html",
+      "image_url": "https://probkibutylki.ru/1147266-small_image/vino-antigal-one-la-dolores-vineyard-malbec.png",
+      "identity": "Уан Ла Долорес Виньярд Мальбек; 0,75 л",
+      "review_note": "Сверены точное название и линейка, фасовка, цвет и тип источника; фотография этикетки просмотрена. Год в остатке не указан, из фото не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 387,
+      "file": "PHOTO-20261115-387.webp",
+      "source_url": "https://winediscovery.ru/katalog/tovar/blanc_doux_gaillac_grande_reserve_de_labastide/",
+      "image_url": "https://winediscovery.ru/upload/iblock/5df/cbsa7ml7wvh5y151aijy5tpit0qp34s1/05859.png@x750",
+      "identity": "Блан Ду Гайак Гранд Резерв де Лабастид; 0,75 л",
+      "review_note": "Wine Discovery: Blanc Doux Gaillac Grande Reserve de Labastide, белое сладкое 59 г/л, 0,75 л. Фото именно Blanc Doux, не красное Fut de Chene.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 706,
+      "file": "PHOTO-20261115-706.webp",
+      "source_url": "https://shop.sagasser.de/products/bayreuther-hell-alkoholfrei",
+      "image_url": "http://shop.sagasser.de/cdn/shop/files/9c67f9cd4b7c4cf4b785ee168946e400_42b1916a-31f0-437f-bfe6-c71378b02a97.webp?v=1750765615",
+      "identity": "Байройтер Хель; 0,5 л",
+      "review_note": "Bayreuther Hell Alkoholfrei, 0,5 л: безалкогольная версия, отдельная фасовка 0,5 л; фотография просмотрена. Алкогольный Bayreuther Hell не использован.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 489,
+      "file": "PHOTO-20261115-489.webp",
+      "source_url": "https://winepalace.es/vino/vina-zorzal-el-inquilino",
+      "image_url": "https://alregi.es/pub/Images/Articulos/Web/030702___V-B-RIOJA-VINA-ZORZAL-EL-___0921.webp",
+      "identity": "Эль Инкилино; 0,75 л",
+      "review_note": "Сверены точное название и линейка, фасовка, цвет и тип источника; фотография этикетки просмотрена. Год в остатке не указан, из фото не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 158,
+      "file": "PHOTO-20261115-158.webp",
+      "source_url": "https://wg-wine.ru/novinki-igristoe/sanmartino-blanc-de-blancs-millesimato-brut/",
+      "image_url": "https://wg-wine.ru/images/detailed/9/%D0%A1%D0%B0%D0%BD%D0%BC%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BE_%D0%B1%D0%BB%D0%B0%D0%BD_%D0%B4%D0%B5_%D0%B1%D0%BB%D0%B0%D0%BD_%D0%BC%D0%B8%D0%BB%D0%B5%D0%B7%D0%B8%D0%BC%D0%B0%D1%82%D0%BE.png",
+      "identity": "Санмартино Блан де Блан; 0,75 л",
+      "review_note": "Импортёр White Group: Sanmartino Blanc de Blancs Millesimato Brut, белое брют, 0,75 л; фотография проверена.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 147,
+      "file": "PHOTO-20261115-147.webp",
+      "source_url": "https://wg-wine.ru/vse/quinta-da-trovisca-tawny-port/",
+      "image_url": "https://wg-wine.ru/images/detailed/9/%D0%9A%D0%B8%D0%BD%D1%82%D0%B0_%D0%B4%D0%B0_%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%88%D0%BA%D0%B0_%D1%82%D0%B0%D1%83%D0%BD%D0%B8_%D0%BF%D0%BE%D1%80%D1%82.png",
+      "identity": "Кинта да Тровишка Тони Порт; 0,75 л",
+      "review_note": "Импортёр White Group: Quinta da Trovisca Tawny Port, красное сладкое, 0,75 л. Обычный Tawny, не 10 years и не Ruby.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 739,
+      "file": "PHOTO-20261115-739.webp",
+      "source_url": "https://wine-city.ru/product/11094/vino-vayn-garden-muskat-wine-garden-muscat-beloe-polusladkoe-0-75l-krepost-11-5/",
+      "image_url": "https://wine-city.ru/data/images/catalog/efdf6af0-79ff-11f1-85b1-509a4c59ad30/PRODIMAGE_efdf6af079ff11f185b1509a4c59ad30_34a870b8839011f18f68f079595f2c48.png",
+      "identity": "Вайн Гарден Мускат; 0,75 л",
+      "review_note": "Сверены точное название и линейка, фасовка, цвет и тип источника; фотография этикетки просмотрена. Год в остатке не указан, из фото не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 833,
+      "file": "PHOTO-20261115-833.webp",
+      "source_url": "https://ivn.decanter.ru/product/decordi-costa-blu-prosecco-brut-id271460",
+      "image_url": "https://static.decanter.ru/upload/images/459673/459673-prosekko-decordi-costa-blu-prosecco-brut-0-75-l-sq.jpg",
+      "identity": "Коста Блю Просекко Брют",
+      "review_note": "Сверены точное название и линейка, фасовка, цвет и тип источника; фотография этикетки просмотрена. Год в остатке не указан, из фото не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 865,
+      "file": "PHOTO-20261115-865.webp",
+      "source_url": "https://www.tenutaterraviva.it/prodotto/terraviva-trebbiano-dabruzzo-doc/",
+      "image_url": "https://www.tenutaterraviva.it/wp-content/uploads/2021/05/Trebbiano-terraviva-2024-scaled.png",
+      "identity": "Терравива Треббьяно д'Абруццо; 0,75 л",
+      "review_note": "Официальный производитель Tenuta Terraviva: базовая линейка Trebbiano d’Abruzzo DOC, 0,75 л, не MPH Amphora и не Vecchie Vigne. Фото проверено; сухой стиль также https://www.livewine.it/web/live-wine-2022/italy-2022/tenuta-terraviva/ .",
       "retrieved_on": "2026-11-15"
     }
   ]
