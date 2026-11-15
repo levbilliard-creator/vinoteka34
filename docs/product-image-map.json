@@ -586,7 +586,13 @@
     "444": "PHOTO-20261115-444.webp",
     "446": "PHOTO-20261115-446.webp",
     "482": "PHOTO-20261115-482.webp",
-    "781": "PHOTO-20261115-781.webp"
+    "781": "PHOTO-20261115-781.webp",
+    "3": "PHOTO-20261115-3.webp",
+    "563": "PHOTO-20261115-563.webp",
+    "584": "PHOTO-20261115-584.webp",
+    "282": "PHOTO-20261115-282.webp",
+    "669": "PHOTO-20261115-669.webp",
+    "820": "PHOTO-20261115-820.webp"
   },
   "web_sources": [
     {
@@ -4987,6 +4993,60 @@
       "image_url": "https://cdn.myshoptet.com/usr/www.bevande.cz/user/shop/big/492-4_amaretti-classici.png?ff=1&x=1024&y=1365&q=85&ts=67d70278&sg=b18c963d",
       "identity": "Печенье классические Амаретти 170гр. Италия",
       "review_note": "Falcone Amaretti Classici170г: бренд подтверждён исходной фотографией шоколадных Amaretti Falcone170г в ассортименте. Карточка Bevande и первичный каталог Falcone2021 подтверждают классические170г, EAN8023696005762, AM170. Фото реальной упаковки; не lifestyle-изображение.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 3,
+      "file": "PHOTO-20261115-3.webp",
+      "source_url": "https://pairstore.ru/products/vino-glaetzer-dixon-la-judith-pinot-noir-tasmania-2017/",
+      "image_url": "https://pairstore.ru/upload/resize_cache/webp/iblock/b12/kgqssn2vumoer2rm0m4lth09ptmp9zyg/Vino-Glaetzer_Dixon_-La-Judith-Pinot-Noir_-Tasmania_-2017.webp",
+      "identity": "Ля Жюдит Пино Нуар Тасмания Глейцер-Диксон; 0,75 л",
+      "review_note": "Glaetzer-Dixon La Judith Pinot Noir2017,0,75л: отдельная карточка Pairstore2017; фотография с Pinot Noir, не Shiraz. Противоречащего года на этикетке нет;2018из других источников не использован.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 563,
+      "file": "PHOTO-20261115-563.webp",
+      "source_url": "https://remma.ru/katalog_remma.pdf",
+      "image_url": "https://remma.ru/katalog_remma.pdf",
+      "identity": "Шея свиная Коппа Ризерва с/в, нарезка 70г, AMGUSTIA",
+      "review_note": "REMMA октябрь2026,стр54: AMGUSTIA CoppaRiserva,шея свиная сыровяленая нарезка70г,артикулAMGST046. Извлечено встроенное изображение xref3565с исходной прозрачностьюSMask3563. Не Dobrosco, не DiParma и не Bresaola.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 584,
+      "file": "PHOTO-20261115-584.webp",
+      "source_url": "https://ast.wine/catalog/product/legend_of_baikal_gazirovannaya_voda_steklo_164056_35081/",
+      "image_url": "https://static.ast.wine/iblock/837/837ff843d5a5cb4e564bf5a6690fa2fe/713355666c081a845cd582499385cba3.png",
+      "identity": "Вода газ Легенда Байкала 0,33л стекло. Россия; 0,33 л",
+      "review_note": "AST.WINE: LegendofBaikalГазированнаявода(стекло),0,33л. Отдельная карточка нужного объёма; фото одной стеклянной бутылки с надписьюГазированная, не пластик и не упаковка12бутылок.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 282,
+      "file": "PHOTO-20261115-282.webp",
+      "source_url": "https://www.chateau-clerc-milon.com/fr/vins/chateau-clerc-milon-2014/",
+      "image_url": "https://www.chateau-clerc-milon.com/wp-content/uploads/2023/06/NEWCM-2014.png",
+      "identity": "Шато Клерк Милон Гран Крю Классе; 0,75 л",
+      "review_note": "Официальный сайт ChâteauClercMilon: отдельная страница2014и фотоNEWCM-2014.png;2014явно виден на этикетке. Предыдущее изображение из технического листа2014LaniganEdwardsотклонено: фактически2011наэтикетке. Фасовка750мл подтверждена отдельно карточкойSimpleWine151910.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 669,
+      "file": "PHOTO-20261115-669.webp",
+      "source_url": "https://semishagoff.org/catalog/alkogolnaya-produkciya/vino-vayn-garden-roze-rozpsl-11-13-075l-uzbekistan/",
+      "image_url": "https://semishagoff.org/upload/iblock/275/x3h20mzd9528t1oc1ca3al1a4dbf3zww/89120.jpg",
+      "identity": "Вайн Гарден Розе; 0,75 л",
+      "review_note": "WineGardenRosé,розовое полусладкое750мл: отдельная карточка Семишагофф; на фото надписиROSÉSEMI-SWEETWINE750ML. Год2024виден на фото,но отсутствующий в остатке год не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 820,
+      "file": "PHOTO-20261115-820.webp",
+      "source_url": "https://shop.soyka.ru/product/perets-khalapeno-rezanyy-aceitunas-guerola-340g/",
+      "image_url": "https://shop.soyka.ru/upload/iblock/da3/75gjpt6tri9nswf3yi9e10ul1kmaf65v.jpg",
+      "identity": "Перец Халапеньо резаный, консервы овощные ст/б 340/150 г, Aceitunas Guerola",
+      "review_note": "AceitunasGuerolaХалапеньо резаный340г: отдельная карточка Сойка, масса0,34кг. Фото банки именноGuerola, исходный водяной знак сохранён. Не банка290/190из нового каталогаREMMA.",
       "retrieved_on": "2026-11-15"
     }
   ]

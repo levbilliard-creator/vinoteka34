@@ -41,7 +41,7 @@
     "year": 2017,
     "name_en": "Pinot Noir",
     "price": 33437.0,
-    "image": null,
+    "image": "PHOTO-20261115-3.webp",
     "inventory_key": "6979dfae5829031830c1a8e4be72bdbc6d791052175ce5488631f541c0be7905",
     "stock_date": "2026-10-31"
   },
@@ -559,7 +559,7 @@
     "style": "",
     "name_en": "",
     "price": 290.0,
-    "image": null,
+    "image": "PHOTO-20261115-563.webp",
     "inventory_key": "157b69c982e00cfca5a5f53681eda9c80685c8d2fb0e85ba7917011d3bbc82e9",
     "stock_date": "2026-10-31"
   },
@@ -1461,7 +1461,7 @@
     "country": "Россия",
     "name_en": "",
     "price": 190.0,
-    "image": null,
+    "image": "PHOTO-20261115-584.webp",
     "inventory_key": "3a3ad94bd1e9fa93c5def5d4f320f00ef00bc6e84c4aefec39b13d73831340d3",
     "stock_date": "2026-10-31"
   },
@@ -3622,7 +3622,7 @@
     "year": 2014,
     "name_en": "",
     "price": 42573.0,
-    "image": null,
+    "image": "PHOTO-20261115-282.webp",
     "inventory_key": "1620f6fd03bc138c3e3c3fdbb07796b1f903d333f6938a4d8895eda89924d7af",
     "stock_date": "2026-10-31"
   },
@@ -4811,7 +4811,7 @@
     "volume": "0,75 л",
     "name_en": "",
     "price": 990.0,
-    "image": null,
+    "image": "PHOTO-20261115-669.webp",
     "inventory_key": "5a5698c36058d0acd74b645be7f0d17c4f35fbcec84962a4421ab63bd2d3e9aa",
     "stock_date": "2026-10-31"
   },
@@ -8626,7 +8626,7 @@
     "style": "",
     "name_en": "",
     "price": 319.0,
-    "image": null,
+    "image": "PHOTO-20261115-820.webp",
     "inventory_key": "62adb85b9299aa7c351a011321b6ecbd33f0f5fd20d88b6e2ca5bc89117fc077",
     "stock_date": "2026-10-31"
   },
