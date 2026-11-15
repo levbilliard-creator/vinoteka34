@@ -592,7 +592,27 @@
     "584": "PHOTO-20261115-584.webp",
     "282": "PHOTO-20261115-282.webp",
     "669": "PHOTO-20261115-669.webp",
-    "820": "PHOTO-20261115-820.webp"
+    "820": "PHOTO-20261115-820.webp",
+    "581": "PHOTO-20261115-581.webp",
+    "149": "PHOTO-20261115-149.webp",
+    "223": "PHOTO-20261115-223.webp",
+    "229": "PHOTO-20261115-229.webp",
+    "273": "Вино белое сухое. Домен Луи Моро Шабли Гран Крю Водезир 2020. 0,75л. Франция ,Шабли.jpg",
+    "638": "PHOTO-20261115-638.webp",
+    "364": "PHOTO-20261115-364.webp",
+    "654": "PHOTO-20261115-654.webp",
+    "659": "PHOTO-20261115-659.webp",
+    "679": "PHOTO-20261115-679.webp",
+    "682": "PHOTO-20261115-682.webp",
+    "709": "PHOTO-20261115-709.webp",
+    "299": "PHOTO-20261115-299.webp",
+    "716": "PHOTO-20261115-716.webp",
+    "717": "PHOTO-20261115-717.webp",
+    "738": "PHOTO-20261115-738.webp",
+    "770": "PHOTO-20261115-770.webp",
+    "774": "PHOTO-20261115-774.webp",
+    "823": "PHOTO-20261115-823.webp",
+    "864": "PHOTO-20261115-864.webp"
   },
   "web_sources": [
     {
@@ -5047,6 +5067,177 @@
       "image_url": "https://shop.soyka.ru/upload/iblock/da3/75gjpt6tri9nswf3yi9e10ul1kmaf65v.jpg",
       "identity": "Перец Халапеньо резаный, консервы овощные ст/б 340/150 г, Aceitunas Guerola",
       "review_note": "AceitunasGuerolaХалапеньо резаный340г: отдельная карточка Сойка, масса0,34кг. Фото банки именноGuerola, исходный водяной знак сохранён. Не банка290/190из нового каталогаREMMA.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 581,
+      "file": "PHOTO-20261115-581.webp",
+      "source_url": "https://noandlowdrinks.co.uk/products/opia-chardonnay-halal-alcohol-free-white-wine-750ml",
+      "image_url": "http://noandlowdrinks.co.uk/cdn/shop/files/OPIA_Chardonnay.jpg?v=1775989611",
+      "identity": "Опиа Шардоне; 0,75 л",
+      "review_note": "ÔpiaChardonnayAlcoholFreeStill0,75л,MaisonPierreChavinFrance: совпадают точная марка,сорт,безалкогольная тихая версия и объём. НеSparkling. УЧЁТНОЕ РАСХОЖДЕНИЕ: источникsemi-dry, в карточке«сухое». Тип сахара сохранён и вынесен на уточнение; фотография однозначно того же продукта.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 149,
+      "file": "PHOTO-20261115-149.webp",
+      "source_url": "https://www.alcoplaza.ru/Porto/wine-quinta-trovishka-toni-port-075",
+      "image_url": "https://www.alcoplaza.ru/photo_it/photo171883.jpeg",
+      "identity": "Кинта да Тровишка Тони Порт 10лет; 0,75 л",
+      "review_note": "QuintadaTroviscaTawnyPort10YearOld750мл: точные марка,класс10лет и фасовка. НеобычныйTawnyбез10лет. УЧЁТНОЕ РАСХОЖДЕНИЕ: отдельные российские классификаторы пишут«сладкое»,востатке«полусладкое»; типсахара сохранён и вынесен науточнение. Фотография точного10YearOld.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 223,
+      "file": "PHOTO-20261115-223.webp",
+      "source_url": "https://bestwine24.ru/vino-domaine-weinbach-riesling-colette-alsace-aoc-2023-075-l/",
+      "image_url": "https://bestwine24.ru/storage/optimized/product/vino/1d2e8e1b67c5191734ef04ce3077c14d_67fd175f7bd38_1200x1600.webp",
+      "identity": "Домен Вайнбах Рислинг Колетт; 0,75 л",
+      "review_note": "DomaineWeinbachRieslingColette0,75л: COLETTE иRiesling явно видны на фото. Марка и кюве однозначно совпадают с именем позиции. УЧЁТНОЕ РАСХОЖДЕНИЕ: в карточкеГермания, источник и этикеткаVinAlsace/France. Это ошибка страны существующей карточки, а не другая марка вина. Страна пока сохранена, вынесена на уточнение.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 229,
+      "file": "PHOTO-20261115-229.webp",
+      "source_url": "https://moivinoteki.ru/item/dourthe-grands-terroirs-bordeaux-blanc-medium-sweet.htm",
+      "image_url": "https://moivinoteki.ru/photos/dourthe-grands-terroirs-bordeaux-blanc-medium-sweet.webp",
+      "identity": "Дурт Гран Терруар Бордо; 0,75 л",
+      "review_note": "DourtheGrandsTerroirsBordeauxBlancMediumSweet0,75л: отдельная полусладкая белая версия; MEDIUMSWEET видно на этикетке. Не белое сухое и не красное.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 638,
+      "file": "PHOTO-20261115-638.webp",
+      "source_url": "https://moivinoteki.ru/item/catay-tempranillo-mazuelo.htm",
+      "image_url": "https://moivinoteki.ru/photos/catay-tempranillo-mazuelo.webp",
+      "identity": "Катай Риоха Финка де Лос Арандинос; 0,75 л",
+      "review_note": "CataydeFincadelosArandinosTempranilloMazueloRioja0,75л,красное сухое: базовыйCatay безсуффиксовCrianzaилиReserva; на этикеткеCatay,FincadelosArandinos,TempranilloMazuelo. В исходном имени нетCrianza/Reserva; фото этих линеек не использованы. Сортовой состав не добавлялся вкарточку.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 364,
+      "file": "PHOTO-20261115-364.webp",
+      "source_url": "https://bestwine24.ru/goldeck-zweigelt-rose-trocken-075-l/",
+      "image_url": "https://bestwine24.ru/storage/optimized/product/sampanskoe/d02cdc6fdb0937b8983d2600e646065b_67fd1225a1d60_1200x1600.webp",
+      "identity": "Гольдек Цвайгельт Трокен; 0,75 л",
+      "review_note": "GoldeckZweigeltRoséTrocken0,75л: точные марка,сорт,розовый цвет иTrocken совпадают с названием позиции. У импортёраLuding этот же продукт классифицирован«розовоебрют»; в первичном источникеTrocken. Фото точногоGoldeckZweigeltTrocken,неVeltlinerи недругаялинейка. Разницу классификации сахара вынесли на уточнение.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 654,
+      "file": "PHOTO-20261115-654.webp",
+      "source_url": "https://www.wine-in-black.de/collections/all/products/ra-pfaffl-gruener-veltliner-pur-2025?variant=57265853006198",
+      "image_url": "http://www.wine-in-black.de/cdn/shop/files/200159-flasche.png?v=1794483332",
+      "identity": "Вельтлинер Пур ПфаффльРислинг; 0,75 л",
+      "review_note": "R&APfafflGrünerVeltlinerPur0,75л: точный префикс названия«ВельтлинерПурПфаффль»,белое,Австрия. Источник сообщает остаточный сахар4,4г/л; названиеRiesling в конце учётного имени выглядит склейкой и вынесено на уточнение. Фотография выбранногоVeltlinerPur,нефотоRiesling. Год2025не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 659,
+      "file": "PHOTO-20261115-659.webp",
+      "source_url": "https://moivinoteki.ru/item/kovacevic-orpheline-beli.htm",
+      "image_url": "https://moivinoteki.ru/photos/kovacevic-orpheline-beli.webp",
+      "identity": "Фрушка Гора Орфелайн; 0,75 л",
+      "review_note": "KovačevićOrphelineBeli0,75л: МоиВинотеки отдельно подтверждают белое сухое; на фотоBeliOrpheline. Не розовоеRoze и не красноеCrveni. Не использованы фото другой цветовой версии.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 679,
+      "file": "PHOTO-20261115-679.webp",
+      "source_url": "https://vine-vision.ru/",
+      "image_url": "https://static.tildacdn.com/tild3966-3230-4563-b131-323933613531/glass-1.jpg",
+      "identity": "Бокалы Вайн Вижен 500мл; 0,5 л",
+      "review_note": "Владелец в текущем диалоге подтвердил: это один бокалVineVisionUniversal500мл. Фото одного бокала из официального разделаUniversal500мл наvine-vision.ru; не набор2или6шт. Цена и исходное имя сохранены.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 682,
+      "file": "PHOTO-20261115-682.webp",
+      "source_url": "https://www.alcoplaza.ru/cidre/cidre-de-bretagne-brut-075-filtrovannyj-polusuhoj",
+      "image_url": "https://www.alcoplaza.ru/photo_it/photo133850.jpeg",
+      "identity": "Сидр де Бретань; 0,75 л",
+      "review_note": "ValdeRanceCidredeBretagneBrut0,75л,фильтрованный полусухой: отдельная карточкаАлкоплаза. Бренд подтверждён исходным фото владельца «Сидр де Бретань Брют.Франция390р». Фото чёрной этикеткиBrut; некоричневаяTraditionnel.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 709,
+      "file": "PHOTO-20261115-709.webp",
+      "source_url": "https://mcgrocer.com/products/most-wanted-pinot-grigio-pink-fizz-wine-based-drink-200ml-2026499134",
+      "image_url": "https://mcgrocer.com/cdn/shop/files/b233bc6102fb369ee0aeb8a081c130ec5c996f998f76ecf8fe24e57e88c88802.avif?v=1794563016",
+      "identity": "Мост Уонтед Пинк Физз Пино Гриджио; 0,2 л",
+      "review_note": "MostWantedPinotGrigioPinkFizz200ml: точная полная линейка и фасовка200мл,не187мл. Источник указывает виноград/виноЮАР с фасовкойUK. УЧЁТНОЕ РАСХОЖДЕНИЕ: цвет в карточке«белое»,на банкеPinkFizz и источникRosé. Цвет сохранён и вынесен на уточнение.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 299,
+      "file": "PHOTO-20261115-299.webp",
+      "source_url": "https://bestwine24.ru/textura-encoberta-tinto/",
+      "image_url": "https://bestwine24.ru/storage/optimized/product/01KBASED5GJJMGWVDCN7YFD38T_1200x1600.webp",
+      "identity": "Тешту Вайнс Энкоберта; 0,75 л",
+      "review_note": "TexturaEncobertaTinto0,75л. Старая исходная номенклатура data/inventory.json РТ-00000834 содержит полное «Тештура Вайнс Энкоберта», что подтверждает расшифровку усечённого нынешнего имени. Красное сухое,Португалия. Год в карточку не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 716,
+      "file": "PHOTO-20261115-716.webp",
+      "source_url": "https://www.alcoplaza.ru/cidre/cidre-de-bretagne-brut-traditionnel-075-nefiltrovannyj-polusuhoj",
+      "image_url": "https://www.alcoplaza.ru/photo_it/photo146955.jpeg",
+      "identity": "Сидр де Бретань; 0,75 л",
+      "review_note": "ValdeRanceCidredeBretagneBrutTraditionnel0,75л,нефильтрованный полусухой: отдельная карточкаАлкоплаза и коричневая этикеткаTraditionnel. Не обычный фильтрованныйBrut.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 717,
+      "file": "PHOTO-20261115-717.webp",
+      "source_url": "https://www.alcoplaza.ru/cidre/cidre-de-bretagne-brut-025-polusuhoj",
+      "image_url": "https://www.alcoplaza.ru/photo_it/photo91250.jpeg",
+      "identity": "Сидр де Бретань; 0,25 л",
+      "review_note": "ValdeRanceCidredeBretagneBrut0,25л: отдельная карточкаАлкоплаза, маленькая бутылка с кронен-пробкой; не0,75лс мюзле. Та же подтверждённая исходным фото владельца линейка.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 738,
+      "file": "PHOTO-20261115-738.webp",
+      "source_url": "https://wine-city.ru/product/11097/vodka-alibaba-alibaba-0-7l-krepost-40/",
+      "image_url": "https://wine-city.ru/data/images/catalog/efdf6af4-79ff-11f1-85b1-509a4c59ad30/PRODIMAGE_efdf6af479ff11f185b1509a4c59ad30_8bd38a1c819c11f18f68f079595f2c48.png",
+      "identity": "Алибаба; 0,7 л",
+      "review_note": "WineCity: AlibabaVodka0,7л40%, на бутылкеALIBABA700ML. Точная карточка обнаружена штатным поиском сайтаPOSTq, без угадывания номера товара. Не логотип магазина.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 770,
+      "file": "PHOTO-20261115-770.webp",
+      "source_url": "https://www.armagnac.de/collections/xo-vsop-co/products/laterrade-napoleon-6ans-70",
+      "image_url": "http://www.armagnac.de/cdn/shop/files/Laterrade-Napoleon-6ans-70.jpg?v=1790631779",
+      "identity": "Латеррад Наполеон; 0,7 л",
+      "review_note": "Владелец в текущем диалоге подтвердил фактический объёмLaterradeNapoleon0,7л. Volume исправлен с0,75лна0,7л; отдельная карточкаArmagnac.deNapoleon70cl,фотоNAPOLEON. НеVS/XOи невинтажнаядругаялинейка.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 774,
+      "file": "PHOTO-20261115-774.webp",
+      "source_url": "https://moivinoteki.ru/item/lucci-prosecco-extra-dry.htm",
+      "image_url": "https://moivinoteki.ru/photos/lucci-prosecco-extra-dry.webp",
+      "identity": "Лучи Просекко; 0,75 л",
+      "review_note": "LucciProseccoExtraDry0,75л: МоиВинотеки иDarwin называют именно этот продукт белымбрют; его же фотоExtraDry. Фото точной маркиLucciProseccoи фасовки750мл,неConeglianoValdobbiadeneSuperiore. Расхождение терминаBrut/ExtraDry отмечено отдельно, полеstyle сохранено.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 823,
+      "file": "PHOTO-20261115-823.webp",
+      "source_url": "https://decanter.ru/product/intermarium-brut-2024-id264498",
+      "image_url": "https://static.decanter.ru/upload/images/443931/443931-igristoe-vino-intermarium-brut-2024-0-75-l-sq.jpg",
+      "identity": "Междуморье; 0,75 л",
+      "review_note": "МеждуморьеIntermariumBrut0,75л: отдельная карточкаДекантер2024, на этикеткеБРЮТ. НеReserve и неExtraBrutBlancdeBlancs; отсутствующий год в карточку не добавлялся.",
+      "retrieved_on": "2026-11-15"
+    },
+    {
+      "id": 864,
+      "file": "PHOTO-20261115-864.webp",
+      "source_url": "https://mineralistawines.com/products/terre-di-marca-prosecco-brut-bio",
+      "image_url": "http://mineralistawines.com/cdn/shop/products/terredimarcaprosecco.png?v=1671301985",
+      "identity": "Терре ди Марка Просекко; 0,75 л",
+      "review_note": "CorvezzoTerrediMarcaMillesimatoProseccoBrut0,75л: отдельная карточкаMineralistaBrut. Фото TerrediMarcaBioDOCMillesimato; противоречащей надписиExtraDry нет. Существование линейкиBrut дополнительно подтверждено первичным каталогомCorvezzoProWein2026.",
       "retrieved_on": "2026-11-15"
     }
   ]
