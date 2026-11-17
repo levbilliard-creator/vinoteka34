@@ -2359,7 +2359,7 @@
     "country": "Италия",
     "name_en": "",
     "price": 2790.0,
-    "image": null,
+    "image": "4MAN-Conegliano-Valdobbiadene-Prosecco-Superiore-DOCG-Brut.webp",
     "inventory_key": "57373df13fe17d709f2e21cc3c3029a43a3aaf8fd8d293b706940b56e1bb0cf4",
     "stock_date": "2026-10-31"
   },
@@ -2690,7 +2690,7 @@
     "country": "Франция",
     "name_en": "",
     "price": 15840.0,
-    "image": null,
+    "image": "Chandon-de-Briailles-Pernand-Vergelesses-Premier-Cru-Les-Vergelesses-2020.webp",
     "inventory_key": "3b3a9e75e221faac97755694cc5f6e832149c9bf17e926ee3f2dfde5043e66df",
     "stock_date": "2026-10-31"
   },
@@ -4873,20 +4873,6 @@
     "price": 1690.0,
     "image": "PHOTO-20261114-671.webp",
     "inventory_key": "cd028185215e41254546af5f8a6a6d23ea4dc0957fbd63ce16b33f53f0102efe",
-    "stock_date": "2026-10-31"
-  },
-  {
-    "id": 375,
-    "name_ru": "Стаканчик 0,2 л",
-    "type": "accessories",
-    "kind": "Стаканчик",
-    "color": "",
-    "style": "",
-    "volume": "0,2 л",
-    "name_en": "",
-    "price": 10.0,
-    "image": null,
-    "inventory_key": "2bf81772f2b68365d7c6b0648cf86f2402652b1cd5a8d1c07219f6a39761f720",
     "stock_date": "2026-10-31"
   },
   {
@@ -8509,7 +8495,7 @@
     "year": 2021,
     "name_en": "Barolo",
     "price": 8791.0,
-    "image": null,
+    "image": "Barale-Fratelli-Barolo-DOCG-2021.webp",
     "inventory_key": "929c1fe66de9661a7d508393aa0ea2c0240854b5bacf5926c4f5e1df4a93cf4d",
     "stock_date": "2026-10-31"
   },

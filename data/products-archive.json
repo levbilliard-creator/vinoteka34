@@ -2794,5 +2794,22 @@
     "image": "Петрюс Дабл. Темное фильтрованное. Бельгия.jpg",
     "active": false,
     "archived_on": "2026-10-31"
+  },
+  {
+    "id": 375,
+    "name_ru": "Стаканчик 0,2 л",
+    "type": "accessories",
+    "kind": "Стаканчик",
+    "color": "",
+    "style": "",
+    "volume": "0,2 л",
+    "name_en": "",
+    "price": 10.0,
+    "image": null,
+    "inventory_key": "2bf81772f2b68365d7c6b0648cf86f2402652b1cd5a8d1c07219f6a39761f720",
+    "stock_date": "2026-10-31",
+    "active": false,
+    "archived_on": "2026-11-17",
+    "archive_reason": "Убран из каталога по указанию владельца"
   }
 ]

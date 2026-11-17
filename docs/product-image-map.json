@@ -612,7 +612,10 @@
     "770": "PHOTO-20261115-770.webp",
     "774": "PHOTO-20261115-774.webp",
     "823": "PHOTO-20261115-823.webp",
-    "864": "PHOTO-20261115-864.webp"
+    "864": "PHOTO-20261115-864.webp",
+    "606": "4MAN-Conegliano-Valdobbiadene-Prosecco-Superiore-DOCG-Brut.webp",
+    "12": "Chandon-de-Briailles-Pernand-Vergelesses-Premier-Cru-Les-Vergelesses-2020.webp",
+    "242": "Barale-Fratelli-Barolo-DOCG-2021.webp"
   },
   "web_sources": [
     {
@@ -5239,6 +5242,32 @@
       "identity": "Терре ди Марка Просекко; 0,75 л",
       "review_note": "CorvezzoTerrediMarcaMillesimatoProseccoBrut0,75л: отдельная карточкаMineralistaBrut. Фото TerrediMarcaBioDOCMillesimato; противоречащей надписиExtraDry нет. Существование линейкиBrut дополнительно подтверждено первичным каталогомCorvezzoProWein2026.",
       "retrieved_on": "2026-11-15"
+    }
+  ],
+  "owner_sources": [
+    {
+      "id": 606,
+      "file": "4MAN-Conegliano-Valdobbiadene-Prosecco-Superiore-DOCG-Brut.webp",
+      "original_file": "20261117_134448.jpg",
+      "source": "Фотография владельца магазина; архив от 17.11.2026",
+      "sha256": "8a94d1017daa4a775786789492f1c94aac2d2c53f340ee1f9d47221176eab027",
+      "review_note": "4MAN Conegliano Valdobbiadene Prosecco Superiore DOCG Brut. Название совпадает; характеристики и цена сохранены."
+    },
+    {
+      "id": 12,
+      "file": "Chandon-de-Briailles-Pernand-Vergelesses-Premier-Cru-Les-Vergelesses-2020.webp",
+      "original_file": "20261117_134323.jpg",
+      "source": "Фотография владельца магазина; архив от 17.11.2026",
+      "sha256": "4811fe852e6c3ccad9c44557d07815f3409ac1b6b828259dcf7184e971882a6a",
+      "review_note": "Chandon de Briailles Pernand-Vergelesses Premier Cru Les Vergelesses. Год 2020 виден на фото, в карточку не переносится."
+    },
+    {
+      "id": 242,
+      "file": "Barale-Fratelli-Barolo-DOCG-2021.webp",
+      "original_file": "20261117_134348.jpg",
+      "source": "Фотография владельца магазина; архив от 17.11.2026",
+      "sha256": "98874d325d4a66934e45a3dacc32650388b56fa339853b327e22f2cca1acd136",
+      "review_note": "Barale Fratelli Barolo DOCG 2021. Год совпадает с карточкой."
     }
   ]
 }

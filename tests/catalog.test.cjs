@@ -5,14 +5,16 @@ const V = require('../product-data.js');
 const products = JSON.parse(readFileSync(new URL('../data/products.json','file://'+__filename)));
 
 test('October inventory: active catalog, archived IDs and category coverage',()=>{
-  assert.equal(products.length,644);
-  assert.equal(new Set(products.map(p=>String(p.id))).size,644);
+  assert.equal(products.length,643);
+  assert.equal(new Set(products.map(p=>String(p.id))).size,643);
   const archive=JSON.parse(readFileSync(new URL('../data/products-archive.json','file://'+__filename)));
-  assert.equal(archive.length,233);
+  assert.equal(archive.length,234);
   const activeIds=new Set(products.map(p=>p.id));
   assert.ok(archive.every(p=>p.active===false && !activeIds.has(p.id)));
   assert.equal(new Set([...products,...archive].map(p=>p.id)).size,877);
-  for(const [type,count] of Object.entries({wine:344,sparkling:99,strong:98,beer:21,soft:15,grocery:54,tea:6,accessories:7})) assert.equal(V.filter(products,type,'').length,count,type);
+  assert.ok(!activeIds.has(375));
+  assert.ok(archive.some(p=>p.id===375 && p.active===false));
+  for(const [type,count] of Object.entries({wine:344,sparkling:99,strong:98,beer:21,soft:15,grocery:54,tea:6,accessories:6})) assert.equal(V.filter(products,type,'').length,count,type);
 });
 test('tea search cannot return brandy; changing category preserves the search constraint',()=>{
   assert.equal(V.filter(products,'tea','арманьяк').length,0);
@@ -38,9 +40,13 @@ test('explicit images are used; no guessed numeric filenames or fuzzy matching',
 test('retail prices and rows reconcile to the reviewed import; no warehouse data is public',()=>{
   const receipt=JSON.parse(readFileSync(new URL('../docs/inventory-2026-10-31-release.json','file://'+__filename)));
   assert.equal(receipt.source_rows,645);assert.equal(receipt.excluded_zero_stock,1);
-  assert.equal(receipt.rows.length,products.length);
+  // Preserve the October source receipt; the owner removed cup 375 on November 17.
+  const archive=JSON.parse(readFileSync(new URL('../data/products-archive.json','file://'+__filename)));
+  const ownerRemoved=archive.filter(p=>p.id===375);
+  assert.equal(ownerRemoved.length,1);
+  assert.equal(receipt.rows.length,products.length+ownerRemoved.length);
   assert.ok(!receipt.rows.some(r=>r.source_row===623));
-  const byId=new Map(products.map(p=>[p.id,p]));
+  const byId=new Map([...products,...ownerRemoved].map(p=>[p.id,p]));
   for(const row of receipt.rows) assert.equal(byId.get(row.id).price,row.price);
   for(const p of products) {
     assert.ok(p.price>0 && p.name_ru.trim() && p.stock_date==='2026-10-31');
