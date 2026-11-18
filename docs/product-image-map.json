@@ -615,7 +615,24 @@
     "864": "PHOTO-20261115-864.webp",
     "606": "4MAN-Conegliano-Valdobbiadene-Prosecco-Superiore-DOCG-Brut.webp",
     "12": "Chandon-de-Briailles-Pernand-Vergelesses-Premier-Cru-Les-Vergelesses-2020.webp",
-    "242": "Barale-Fratelli-Barolo-DOCG-2021.webp"
+    "242": "Barale-Fratelli-Barolo-DOCG-2021.webp",
+    "122": "Corvezzo-Pinot-Grigio-Delle-Venezie-DOC-075.webp",
+    "590": "3-Caballos-Gold-1L.webp",
+    "167": "Sapat-Rakija-od-Grozdja-075.webp",
+    "610": "Nikolaev-and-Sons-Petit-Manseng-050.webp",
+    "238": "Haute-Fevrie-Clos-de-la-Fevrie-Muscadet-Sur-Lie-2022-075.webp",
+    "539": "Infantado-Porto-Tawny-075.webp",
+    "331": "Kraft-Bag-One-Bottle.webp",
+    "650": "Most-Wanted-Sauvignon-Blanc-187ml.webp",
+    "699": "Dugladze-Alazani-Valley-Red-Semisweet-075.webp",
+    "472": "Agenyz-teArt-Pishchevarenie-75g.webp",
+    "523": "Pierre-Sparr-Cremant-dAlsace-Brut-Rose-075.webp",
+    "533": "Maccan-Friulano-Friuli-Grave-075.webp",
+    "783": "Most-Wanted-Malbec-187ml.webp",
+    "824": "Ararat-5-Stars-005.webp",
+    "844": "Amyga-Cream-Cheese-Tomato-Pesto-120g.webp",
+    "872": "Free-Run-Asolo-Prosecco-Superiore-Extra-Brut-075.webp",
+    "873": "Valdo-Marca-Oro-Valdobbiadene-Prosecco-Superiore-Brut-075.webp"
   },
   "web_sources": [
     {
@@ -5268,6 +5285,159 @@
       "source": "Фотография владельца магазина; архив от 17.11.2026",
       "sha256": "98874d325d4a66934e45a3dacc32650388b56fa339853b327e22f2cca1acd136",
       "review_note": "Barale Fratelli Barolo DOCG 2021. Год совпадает с карточкой."
+    },
+    {
+      "id": 122,
+      "file": "Corvezzo-Pinot-Grigio-Delle-Venezie-DOC-075.webp",
+      "original_file": "122 Пино Гриджо Корвеццо.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "9b6f6170563b28d21faa36c090567b5f47e114a5de6601313485d8e56cc725be",
+      "published_sha256": "003e4697af86a103a172ee9b90ba74130aec6475ca24b8d6ad61f5572ba5c22e",
+      "owner_answer": "Corvezzo"
+    },
+    {
+      "id": 590,
+      "file": "3-Caballos-Gold-1L.webp",
+      "original_file": "590 3 cabalios gold.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "51574ab5ea14cc4f0961451e8095a830e52adf25fe4ad521df73e88fa9698033",
+      "published_sha256": "d3ff3cb7bd2ba6cf0fed6f9bba86702ca93b86b4f71994d34f38290594e49650",
+      "owner_answer": "Да, 1 л"
+    },
+    {
+      "id": 167,
+      "file": "Sapat-Rakija-od-Grozdja-075.webp",
+      "original_file": "167 Ракия од гроздья.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "abc0dde79b6f41c50e8e572753d441df9eba07b535c21b36ec2a66c8c2484484",
+      "published_sha256": "4bbf06e4a402d3019c9efa900bb5f61841d98f00cedbeb198e6f26a137043b84",
+      "owner_answer": "Да, 0,75"
+    },
+    {
+      "id": 610,
+      "file": "Nikolaev-and-Sons-Petit-Manseng-050.webp",
+      "original_file": "610 Николаев и Сыновья Пти Мансан.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "936bbe2fda2c12aaabf1aa85624775cffffcc5b08b11f7d8f302fb399656c725",
+      "published_sha256": "1a54a8692a86179de1fa4b25c265dafaa9887138669a53b0c3b61b7b8a814931",
+      "owner_answer": "0.5"
+    },
+    {
+      "id": 238,
+      "file": "Haute-Fevrie-Clos-de-la-Fevrie-Muscadet-Sur-Lie-2022-075.webp",
+      "original_file": "238 от феври мюскаде.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "9a35fb0e74bdd7ce4608a0000beef81b0a303f270cc77f0c50fcba4429cc00e5",
+      "published_sha256": "1946897cbeff008e6cf66a0483f1062f26e147160e1e81b7a5ddd42b3ea0833e",
+      "owner_answer": "0.75"
+    },
+    {
+      "id": 539,
+      "file": "Infantado-Porto-Tawny-075.webp",
+      "original_file": "539 Порто Тони Инфантадо.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "576820be26597ddea182ea15285df83eef3970458b1f5bf4fd7bbb696c7ca474",
+      "published_sha256": "d5b68ffa1c0dafb41b3f0521e57b5bacbfe642d4ee1c0279367282fa46faa258",
+      "owner_answer": "0.75"
+    },
+    {
+      "id": 331,
+      "file": "Kraft-Bag-One-Bottle.webp",
+      "original_file": "331 пкет крафтовый.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "aeee86b9a1476d6a09f7746c8e094dd23b756e99156af43b7ccb6097bca0ad72",
+      "published_sha256": "21df997b18a083536b715d7ed892106e9fcc2ee8d6ce91b1ddc994bd7d5ca66c",
+      "owner_answer": "Подписанная фотография с ID товара"
+    },
+    {
+      "id": 650,
+      "file": "Most-Wanted-Sauvignon-Blanc-187ml.webp",
+      "original_file": "650 Мост Уонтед Совиньон Блан.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "7a209bacab9c4bf0c68dfdc1a6284779ad9af300ea6b00a733ece3e141b5a0e9",
+      "published_sha256": "21e570eafbda34064b824453259127eff0c80851eb0cc338f084f49caf1c57e0",
+      "owner_answer": "да,187"
+    },
+    {
+      "id": 699,
+      "file": "Dugladze-Alazani-Valley-Red-Semisweet-075.webp",
+      "original_file": "699 Алазанская долина Дугладзе.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "88216bfc9f341c7cb7d3da8a7f7bd9d115c24c5574ec60753afbb5425a640300",
+      "published_sha256": "f6aae81f51fbec63ab317d4c64d9dc6a113a93a2669b981109cd920bceac377c",
+      "owner_answer": "Алазанская долина белая Marani, красная Dugladze Wine & Spirit"
+    },
+    {
+      "id": 472,
+      "file": "Agenyz-teArt-Pishchevarenie-75g.webp",
+      "original_file": "472 Чай Пищеварение.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "43c2c5ec236df44eb6897412534f111c93b5edd3e4d0fbb8b2ccc0f799d3efae",
+      "published_sha256": "50258501860d66bbe8f80449d0ef5d26863f203fad67b1ac534bbef1c35ab2a3",
+      "owner_answer": "Подписанная фотография с ID товара"
+    },
+    {
+      "id": 523,
+      "file": "Pierre-Sparr-Cremant-dAlsace-Brut-Rose-075.webp",
+      "original_file": "523 Креман д Эльзас Пьер Спар розе.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "18659b452f12e0de9f301b3fbd6182873c1d59c9dbcbd020dbbe81a8b22df181",
+      "published_sha256": "05370afb1aa7f9ac3e27ca5e6e397214c930f5f236ff6f319b940527f66dcd55",
+      "owner_answer": "Pierre Sparr"
+    },
+    {
+      "id": 533,
+      "file": "Maccan-Friulano-Friuli-Grave-075.webp",
+      "original_file": "533 Фриуляно Маккан.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "a2d92a2ebe4b9d72fbd1785ebb86e8f68550c015a14925376402b05b405919d3",
+      "published_sha256": "6034d86e274771baa71b99f5a4a178806830929568b5a342df13d9d51a85a02e",
+      "owner_answer": "Maccan"
+    },
+    {
+      "id": 783,
+      "file": "Most-Wanted-Malbec-187ml.webp",
+      "original_file": "Most-Wanted-Malbec-original.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "9ff6b16b6b4b5dba7b070508a71bae767f434ce999436b91bd04a5acdfedf9a7",
+      "published_sha256": "f4a78e77c2e7661c4fcdc636e04c5ba974064688bd744cfd438b232e74d27899",
+      "owner_answer": "да,187"
+    },
+    {
+      "id": 824,
+      "file": "Ararat-5-Stars-005.webp",
+      "original_file": "824 Арарат 0,05.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "d2c2e4dccd31070a1bd6c64c248f50ccaf1c82587a7051ffbe9be2c0a4e24ac9",
+      "published_sha256": "7643a1ab2c771c35d392e67749782a6568daef3988b993b0aac2c9fbe17e785e",
+      "owner_answer": "прислан Арарат 5 звезд объем 0,05"
+    },
+    {
+      "id": 844,
+      "file": "Amyga-Cream-Cheese-Tomato-Pesto-120g.webp",
+      "original_file": "844 Крем сыр томат соус песто.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "907983827f189c3848d8b79e6826c96343d49e56726bc4f31f366ea0dd867c16",
+      "published_sha256": "0c02c269b3863c2ea60a89f43bfd90e5376c22b27292282800b31246abc85a8a",
+      "owner_answer": "120 грамм"
+    },
+    {
+      "id": 872,
+      "file": "Free-Run-Asolo-Prosecco-Superiore-Extra-Brut-075.webp",
+      "original_file": "872 Азоло просекко суперьоре.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "aaba40c03c8b4552b7ac81088496802e9d13128ce498844118fa99fd4bc2e69d",
+      "published_sha256": "4626ddb16c3ccd1d7b047194003fae70adb8ef88a288ea45b5b5cc4f5ea699c6",
+      "owner_answer": "extra brut"
+    },
+    {
+      "id": 873,
+      "file": "Valdo-Marca-Oro-Valdobbiadene-Prosecco-Superiore-Brut-075.webp",
+      "original_file": "873 Просекко суперьоре Вальдо.jpg",
+      "source": "Подписанная фотография и ответы владельца от 18.11.2026",
+      "source_sha256": "be246eb52d02af4fbdae80fa3e5e5d214ab0122785f0d8f82b73302f206aec3f",
+      "published_sha256": "70b127385e3839386803fae533c8b7c2a04bcb18720bed0fcdb61a66c23367bf",
+      "owner_answer": "brut"
     }
   ]
 }
