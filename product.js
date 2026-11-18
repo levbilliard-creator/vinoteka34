@@ -37,8 +37,11 @@
       document.querySelector('.product-image').replaceChildren(V.makeImage(product,true));
       const description=document.getElementById('productDescription');
       description.textContent=isArchived?'Карточка сохранена в архиве. Уточните у сомелье возможность нового поступления.':(product.description || 'Подробности об этом товаре можно уточнить у сомелье.');
+      const isWine=product.type==='wine' || product.type==='sparkling';
+      description.hidden=!isArchived && !product.description && isWine && [product.grape,product.aroma,product.taste,product.pairing].some(Boolean);
       const specs=document.querySelector('.product-specs');specs.replaceChildren();
-      const fields=[['Тип',product.kind || V.types[product.type]],['Цвет',product.color],['Стиль',product.style],['Страна',product.country],['Регион',product.region],['Сорт винограда',product.grape],['Объем',product.volume],['Год урожая',product.year],['Упаковка',product.packaging]];
+      const fields=[['Тип',product.kind || V.types[product.type]],['Цвет',product.color],['Стиль',product.style],['Страна',product.country],['Регион',product.region],['Объем',product.volume],['Год урожая',product.year],['Упаковка',product.packaging]];
+      if(isWine) fields.push(['Сортовой состав',product.grape],['Аромат',product.aroma],['Вкус',product.taste],['Сочетания с блюдами',product.pairing]);
       for(const [label,value] of fields) {
         if(value == null || value === '') continue;
         const row=V.element('div','spec');

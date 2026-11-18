@@ -1,0 +1,415 @@
+{
+  "reviewed_on": "2026-11-18",
+  "scope": [
+    "wine",
+    "sparkling"
+  ],
+  "rules": [
+    "Сохранённые точные источники фотографий проверены повторно.",
+    "Цены, фото, ID, наличие и год урожая не изменяются.",
+    "Проценты не восстанавливаются по названию сорта.",
+    "Аромат и вкус пересказаны кратко; сочетания добавлены только при наличии рекомендации источника."
+  ],
+  "products": {
+    "583": {
+      "source_url": "https://vinoterra.ru/catalog/product/rem-akchurin-merlot-2024-750-2024/",
+      "source_title": "Rem Akchurin, Merlot, 2024",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste"
+      ],
+      "source_sha256": "de8f6d69ca4299254779e806999026829e9c732f79d226d7ed02024eac1b3185",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "585": {
+      "source_url": "https://vinoterra.ru/catalog/product/rem-akchurin-kokur-2025-750-2025/",
+      "source_title": "Rem Akchurin, Kokur, 2025",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste"
+      ],
+      "source_sha256": "226f9fdcd3d198e5a2824017774c2e864ac670920bdb6a6e059a7dd2b6e88314",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "594": {
+      "source_url": "https://vinoterra.ru/catalog/product/rem-akchurin-muscat-orange-2023-750-2023/",
+      "source_title": "Rem Akchurin, Muscat Orange, 2023",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste"
+      ],
+      "source_sha256": "6d097b35adc510ccc1e8df86390e8079febe395c44c68d56bcb2a916b8c2421a",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "771": {
+      "source_url": "https://vinoterra.ru/catalog/product/rem-akchurin-muscat-brut-2024-750-/",
+      "source_title": "Игристое вино Rem Akchurin, Muscat Brut, 2024",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste"
+      ],
+      "source_sha256": "1000ceb90f7501ad28defaad23bd4dc481566f451f6b86d63f5050b00db13f76",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "170": {
+      "source_url": "https://vinoterra.ru/catalog/product/heinrich-weisze-freyheit-2017-750-2017/",
+      "source_title": "Heinrich, Weisze Freyheit, 2017",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste"
+      ],
+      "source_sha256": "6141c5c767ba46132437e3d3c64147bcc3f0fbf532d3f50da94c11830efd5fa1",
+      "catalog_vintage": 2017,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "670": {
+      "source_url": "https://premierwine.ru/catalog/vino/chili/8123/",
+      "source_title": "Вино Санта Альба Резерв Пино Нуар красное сухое 0,75л",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "8a3f84a7f1112df587b9b103045592a709c7f07a8493dfa07c1785d630c801da",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "787": {
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/8050/",
+      "source_title": "КАСТИЛЬО ДЕ АРЕСАН СИРА BIO & VEGAN 14,5% красное сухое 0,75л. Испания",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "ea3bb1572d36faff86edc8a8b7aa33558dbb39f470258f9df1c4ae3a80c1c437",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "788": {
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/8082/",
+      "source_title": "Пéталос де Аресан Вердехо - Совиньон Блан BIO & VEGAN 12% белое сухое 0,75л. Испания",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "35a6c9658bac7394f0cf16980baa26d3f7bf81fb56ae7cd08c30c9dbe9f3f4ad",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "784": {
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/7300/",
+      "source_title": "БРИЛЛО ДЕЛЬ ДИА СОВИНЬОН БЛАН 12,5% белое сухое 0,187л. Испания",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "00eb4d9852ce855df9077ef14ac4eb294f001ee7b99fef451bca4dc91f7fbcb8",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "799": {
+      "source_url": "https://premierwine.ru/catalog/vino/frantsiya/8375/",
+      "source_title": "Киви Кюве Шардоне",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "fe358aadc6f7dbcac400c021de407529214dc5d2819d07819f15ca44cf68a526",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "796": {
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8534/",
+      "source_title": "Борго дей Вассалли Фриулано (Фриули Изонцо DOC)",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "22398b654e99b7ca169400cfaefceaeb24fa73dce0e2074306f7ed94d2e5ec79",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "640": {
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8448/",
+      "source_title": "Саннедда Этна Россо (DOC Этна / Контрада «Санта Спирито»)",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "f5d1b4e5f06b3f9e1eed501e1bdd30ce3761e8227c1c30e8e435bfb8ef564b58",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "607": {
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8489/",
+      "source_title": "Кьяретто ди Бардолино Классико \"Касаль Бусоль\"",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "62cad30102f59d40a7e3279a5a8299ccd47a62c8ec4e0e5390946ce38f385f1e",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "195": {
+      "source_url": "https://premierwine.ru/catalog/vino/frantsiya/8428/",
+      "source_title": "Сансер «Ля Кот де Бюи»",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "32d25485a4bfaeb23cc3e39ad6a178b33fe3e12b6747dea30ded50e607f758c1",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "188": {
+      "source_url": "https://premierwine.ru/catalog/igristye_vina/frantsiya_1/8303/",
+      "source_title": "Пьер Соннен Креман д'Эльзас Шардоне",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "4b0010c35224b4457c719b08a814bd7ae01efd6c3e0b79979b21b6181319acc2",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "655": {
+      "source_url": "https://premierwine.ru/catalog/igristye_vina/yuar/8353/",
+      "source_title": "Киви Кюве Кап Классик",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "a282f46d33014c011e8f0b1c45884651412c917068fa69c1729acf4dc53031be",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "797": {
+      "source_url": "https://premierwine.ru/catalog/igristye_vina/frantsiya_1/7600/",
+      "source_title": "Моаяр-Гриво КРЕМАН ДЕ БУРГОНЬ 11,5% белое брют 0,75л. Франция",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "87f602532438860d0193175b3093d6611239b8ec5dcbabf244d6dc83edb1d380",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "830": {
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/7769/",
+      "source_title": "ПАСО ДЕ МИРАСОЛЕС АЛЬБАРИНЬО 12% белое сухое 0,75л. Испания",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "b8893757a0b95237752157731ba06e49432e69f90df80d2c2dbd9729dd291b71",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "629": {
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/7780/",
+      "source_title": "КАСТИЛЬО ДЕ АРЕCАН КАБЕРНЕ СОВИНЬОН 14% красное сухое 0,75л. Испания",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "fa4f36adc1da746c53f5930eac7c0a3451305a0aab86a07fbd72c735a21ba20b",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "786": {
+      "source_url": "https://premierwine.ru/catalog/vino/ispaniya/7736/",
+      "source_title": "ДА ФЕЙРА Трейшадура 12% белое сухое 0,75л. Испания",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "361bb470a9aa454f780feb9f91e57544922b5d6292979f6b014ea2b099f8f8a8",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "712": {
+      "source_url": "https://premierwine.ru/catalog/vino/germaniya/8388/",
+      "source_title": "Санкт Габриэль Рислинг",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "5dce857cc2d1ddcf943604d07ff738d6958524b6b2c13c63d2014d5fe60f0fd2",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "612": {
+      "source_url": "https://premierwine.ru/catalog/vino/frantsiya/7711/",
+      "source_title": "ШАТО Ла Флер Бодрон БОРДО СУПЕРИОР 13% красное сухое 0,75 Франция",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "2fcda67b5a821fc1ef11a156b3705c2d99ac62fbb45194c51243255e615a6c0f",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "192": {
+      "source_url": "https://premierwine.ru/catalog/vino/frantsiya/8078/",
+      "source_title": "Вино Домен де ла Шартрез Крю дю Рон Шатонеф-дю-Пап 15% красное сухое 0,75 Франция",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "b6b93b9f773701b6bdfbdc32b174f9d9db43604dd2c4632987ceff442b4cc6ec",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "653": {
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/7305/",
+      "source_title": "ВИЛЛА ПЬЕРИ Примитиво 14% красное сухое 0,187л. Италия",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "298555fadbea1e33c17c5f02108f0669d563177665dab9f23e2b9f22618f75df",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "789": {
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/7728/",
+      "source_title": "КАМПИ РУДИ РОССО 14% красное полусухое 0,75л. Италия",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "078ab9ca0e1831508b62cd99ea55a7978745191b9c3234093756fef245917c6c",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "429": {
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/7802/",
+      "source_title": "ТОННО СИРА 14% красное полусухое 0,75л. Италия",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "4b03aa22ecba5cee626a1a3edae8eb7d8516297a3ef610e2f5a80075b355019e",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "635": {
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8482/",
+      "source_title": "Солейано Россо",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "41307bfcfd5731011866d524bb4ca0b4537b73931000dbff6d1cf2f7d59996d4",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "795": {
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/8538/",
+      "source_title": "Борго дей Вассалли Пино Нуар (Фриули DOC)",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "545d27f58864f9e75bf43114a9da3df699520f3e7d3e8e60eff51408e16612fe",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    },
+    "856": {
+      "source_url": "https://premierwine.ru/catalog/vino/italiya/7285/",
+      "source_title": "КАНТИНА САНГРО ТЕРРА РЕДЖИА МОНТЕПУЛЬЧАНО Д’АБРУЦЦО РИЗЕРВА 14% красное сухое 0,75л. Италия",
+      "retrieved_on": "2026-11-18",
+      "reviewed_fields": [
+        "grape",
+        "aroma",
+        "taste",
+        "pairing"
+      ],
+      "source_sha256": "f02cdd33a779240a43c3a5676234d15f4db7c88edab9847e690afe256e5c6516",
+      "catalog_vintage": null,
+      "scope": "Точная товарная линейка; год из источника в каталог не переносился."
+    }
+  }
+}
