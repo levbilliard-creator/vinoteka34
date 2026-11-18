@@ -112,6 +112,20 @@ def display(raw, row, review):
     if re.search(r'п/у|подарочн|\+\s*2\s*рюм', low): data['packaging'] = 'Подарочная упаковка' + (' · 2 рюмки' if re.search(r'\+\s*2\s*рюм', low) else '')
     return data
 
+def preserve_wine_characteristics(product, previous):
+    """Keep reviewed notes only for the same exact inventory identity and wine version."""
+    if not previous or product.get('type') not in {'wine', 'sparkling'}:
+        return product
+    if not product.get('inventory_key') or product['inventory_key'] != previous.get('inventory_key'):
+        return product
+    if any(product.get(k) != previous.get(k) for k in ('type', 'color', 'year')):
+        return product
+    for field in ('grape', 'aroma', 'taste', 'pairing'):
+        if previous.get(field):
+            product[field] = previous[field]
+    return product
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('source', type=Path); ap.add_argument('--review', type=Path, required=True)
@@ -139,6 +153,7 @@ def main():
         image = image_map.get(str(pid))
         if image and not (ROOT/'assets/wines'/image).is_file(): raise ValueError('Missing reviewed image: ' + image)
         p = {'id':pid, **display(row['raw_name'], row['row'], review), 'name_en':previous.get('name_en','') if previous else '', 'price':row['price'], 'image':image, 'inventory_key':fingerprint, 'stock_date':args.date}
+        preserve_wine_characteristics(p, previous)
         products.append(p)
         receipt.append({'source_row':row['row'], 'id':pid, 'action':'retained' if previous and pid in {x['id'] for x in old} else ('reactivated' if previous else 'added'), 'price':p['price'], 'previous_price':previous['price'] if previous else None})
     archive = [{**p, 'active':False, 'archived_on':p.get('archived_on',args.date)} for pid,p in sorted(prior.items()) if pid not in used]
