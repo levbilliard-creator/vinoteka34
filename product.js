@@ -1,6 +1,9 @@
 (() => {
   'use strict';
   const V=window.Vino;
+  const formatGrapes=value=>typeof value==='string'
+    ? value.replace(/(^|[,;/+])([^\p{L}]*)(\p{L})/gu,(_,separator,prefix,letter)=>separator+prefix+letter.toLocaleUpperCase('ru-RU'))
+    : value;
   const params=new URLSearchParams(location.search);
   const id=params.get('id');
   const state={type:V.typeOf(params.get('from')),query:params.get('q') || '',shown:Math.min(1000,Math.max(20,Number(params.get('shown')) || 20))};
@@ -41,7 +44,7 @@
       description.hidden=!isArchived && !product.description && isWine && [product.grape,product.aroma,product.taste,product.pairing].some(Boolean);
       const specs=document.querySelector('.product-specs');specs.replaceChildren();
       const fields=[['Тип',product.kind || V.types[product.type]],['Цвет',product.color],['Стиль',product.style],['Страна',product.country],['Регион',product.region],['Объем',product.volume],['Год урожая',product.year],['Упаковка',product.packaging]];
-      if(isWine) fields.push(['Сортовой состав',product.grape],['Аромат',product.aroma],['Вкус',product.taste],['Сочетания с блюдами',product.pairing]);
+      if(isWine) fields.push(['Сортовой состав',formatGrapes(product.grape)],['Аромат',product.aroma],['Вкус',product.taste],['Сочетания с блюдами',product.pairing]);
       for(const [label,value] of fields) {
         if(value == null || value === '') continue;
         const row=V.element('div','spec');
