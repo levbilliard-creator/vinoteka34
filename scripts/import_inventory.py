@@ -113,14 +113,14 @@ def display(raw, row, review):
     return data
 
 def preserve_wine_characteristics(product, previous):
-    """Keep reviewed notes only for the same exact inventory identity and wine version."""
-    if not previous or product.get('type') not in {'wine', 'sparkling'}:
+    """Keep reviewed drink notes only for the same inventory identity and version."""
+    if not previous or product.get('type') not in {'wine', 'sparkling', 'strong'}:
         return product
     if not product.get('inventory_key') or product['inventory_key'] != previous.get('inventory_key'):
         return product
-    if any(product.get(k) != previous.get(k) for k in ('type', 'color', 'year')):
+    if any(product.get(k) != previous.get(k) for k in ('type', 'color', 'year', 'kind')):
         return product
-    for field in ('grape', 'aroma', 'taste', 'pairing'):
+    for field in ('grape', 'aroma', 'taste', 'pairing', 'raw_material', 'minimum_age', 'ageing'):
         if previous.get(field):
             product[field] = previous[field]
     return product

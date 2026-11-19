@@ -29,6 +29,18 @@ class WineCharacteristicsRetentionTest(unittest.TestCase):
                 self.assertNotIn('aroma', result)
                 self.assertNotIn('grape', result)
 
+    def test_spirit_refresh_keeps_reviewed_material_and_age_but_not_other_kind(self):
+        old = dict(type='strong', kind='Виски', inventory_key='same-spirit',
+                   raw_material='Ячменный солод', minimum_age='Не менее 10 лет',
+                   ageing='Бочки из американского дуба', aroma='Ваниль', taste='Фрукты', price=100)
+        new = dict(type='strong', kind='Виски', inventory_key='same-spirit', price=200)
+        result = importer.preserve_wine_characteristics(new, old)
+        for field in ('raw_material', 'minimum_age', 'ageing', 'aroma', 'taste'):
+            self.assertEqual(result[field], old[field])
+        self.assertEqual(result['price'], 200)
+        other = importer.preserve_wine_characteristics(dict(type='strong', kind='Ром', inventory_key='same-spirit'), old)
+        self.assertNotIn('minimum_age', other)
+
 
 if __name__ == '__main__':
     unittest.main()
