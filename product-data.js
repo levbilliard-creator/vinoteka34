@@ -59,17 +59,22 @@
     const count = width * height;
     const corners = [0, width - 1, count - width, count - 1];
 
-    const isWhite = index => {
+    function neutralLevel(index) {
       const offset = index * 4;
-      if (data[offset + 3] !== 255) return false;
+      if (data[offset + 3] !== 255) return 0;
       const red = data[offset];
       const green = data[offset + 1];
       const blue = data[offset + 2];
       const minimum = Math.min(red, green, blue);
-      return minimum >= 244 && Math.max(red, green, blue) - minimum <= 12;
-    };
-    // Transparent photos and photos with a non-white scene keep their original rendering.
-    if (corners.filter(isWhite).length < 3) return;
+      return Math.max(red, green, blue) - minimum <= 12 ? minimum : 0;
+    }
+    const cornersByLightness = corners.map(neutralLevel).filter(value => value >= 225).sort((a, b) => a - b);
+    // Require several matching corners before treating a pale studio backdrop as removable.
+    const whiteCorners = cornersByLightness.filter(value => value >= 244).length;
+    if (whiteCorners < 3 && (cornersByLightness.length < 3
+        || cornersByLightness.at(-1) - cornersByLightness[0] > 18)) return;
+    const matte = whiteCorners >= 3 ? 255 : cornersByLightness[1];
+    const backdropThreshold = matte === 255 ? 244 : matte - 9;
 
     const visited = new Uint8Array(count);
     const queue = new Uint32Array(count);
@@ -77,7 +82,7 @@
     function visit(index) {
       if (visited[index]) return;
       visited[index] = 1;
-      if (isWhite(index)) queue[tail++] = index;
+      if (neutralLevel(index) >= backdropThreshold) queue[tail++] = index;
     }
     for (let x = 0; x < width; x++) {
       visit(x);
@@ -128,9 +133,9 @@
           const neighbor = index + dy * width + dx;
           const pos = neighbor * 4;
           if (mask[neighbor] !== 0 || data[pos + 3] !== 255) continue;
-          red += 255 - data[pos];
-          green += 255 - data[pos + 1];
-          blue += 255 - data[pos + 2];
+          red += matte - data[pos];
+          green += matte - data[pos + 1];
+          blue += matte - data[pos + 2];
           samples++;
         }
       }
@@ -138,12 +143,12 @@
       // Estimate how much white was blended into this pixel from the nearest
       // untouched part of the bottle, rather than using a fixed opacity.
       const reference = red * red + green * green + blue * blue;
-      const contrast = (255 - data[offset]) * red
-        + (255 - data[offset + 1]) * green + (255 - data[offset + 2]) * blue;
-      const coverage = reference ? Math.min(1, samples * contrast / reference) : 0.65;
+      const contrast = (matte - data[offset]) * red
+        + (matte - data[offset + 1]) * green + (matte - data[offset + 2]) * blue;
+      const coverage = reference ? Math.max(0, Math.min(1, samples * contrast / reference)) : 0.65;
       if (coverage > 0) {
         for (let channel = 0; channel < 3; channel++) {
-          data[offset + channel] = 255 - (255 - data[offset + channel]) / coverage;
+          data[offset + channel] = matte - (matte - data[offset + channel]) / coverage;
         }
       }
       data[offset + 3] = 224 * coverage;
