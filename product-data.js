@@ -46,7 +46,10 @@
     'Печенье «Амаретти» цитрусовые.jpg': 'polygon(10.7% 9.4%, 88.5% 9%, 89% 9.4%, 83.2% 85.5%, 17% 85.1%, 16.6% 84.7%)'
   };
 
-  function whiteBackdropPreview(img, eager) {
+  // These light-gray packshots were checked on the dark catalog background.
+  const reviewedGrayBackdrops = new Set(['327', '356', '359', '368', '369', '557', '624', '713']);
+
+  function whiteBackdropPreview(img, eager, allowGray = false) {
     const canvas = document.createElement('canvas');
     const scale = Math.min(1, (eager ? 800 : 400) / Math.max(img.naturalWidth, img.naturalHeight));
     const width = canvas.width = Math.max(1, Math.round(img.naturalWidth * scale));
@@ -71,7 +74,7 @@
     const cornersByLightness = corners.map(neutralLevel).filter(value => value >= 225).sort((a, b) => a - b);
     // Require several matching corners before treating a pale studio backdrop as removable.
     const whiteCorners = cornersByLightness.filter(value => value >= 244).length;
-    if (whiteCorners < 3 && (cornersByLightness.length < 3
+    if (whiteCorners < 3 && (!allowGray || cornersByLightness.length < 3
         || cornersByLightness.at(-1) - cornersByLightness[0] > 18)) return;
     const matte = whiteCorners >= 3 ? 255 : cornersByLightness[1];
     const backdropThreshold = matte === 255 ? 244 : matte - 9;
@@ -140,7 +143,7 @@
         }
       }
 
-      // Estimate how much white was blended into this pixel from the nearest
+      // Estimate how much of the backdrop was blended into this pixel from the nearest
       // untouched part of the bottle, rather than using a fixed opacity.
       const reference = red * red + green * green + blue * blue;
       const contrast = (matte - data[offset]) * red
@@ -186,7 +189,7 @@
       img.addEventListener('error', () => img.classList.remove('photo-outline'), {once:true});
     } else if (source !== placeholder) {
       img.addEventListener('load', () => {
-        if (img.getAttribute('src') === source) whiteBackdropPreview(img, eager);
+        if (img.getAttribute('src') === source) whiteBackdropPreview(img, eager, reviewedGrayBackdrops.has(String(product.id)));
       }, {once:true});
     }
     img.src = source;
