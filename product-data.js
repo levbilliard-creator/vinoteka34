@@ -97,8 +97,30 @@
     }
     if (tail < count * 0.025 || tail > count * 0.98) return;
 
-    // Clear only the background connected to an edge. White labels inside the silhouette stay opaque.
-    for (let i = 0; i < tail; i++) data[queue[i] * 4 + 3] = 0;
+    // Soften the outline one pixel inward without touching the label or highlights inside it.
+    const background = new Uint8Array(count);
+    for (let i = 0; i < tail; i++) background[queue[i]] = 1;
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        const index = y * width + x;
+        const offset = index * 4;
+        if (background[index]) {
+          data[offset + 3] = 0;
+          continue;
+        }
+        const exposed = (x > 0 ? background[index - 1] : 0)
+          + (x < width - 1 ? background[index + 1] : 0)
+          + (y > 0 ? background[index - width] : 0)
+          + (y < height - 1 ? background[index + width] : 0);
+        if (!exposed || data[offset + 3] !== 255) continue;
+        const coverage = 1 - Math.min(exposed, 3) / 6;
+        // Remove white mixed into the edge pixels by the original background.
+        for (let channel = 0; channel < 3; channel++) {
+          data[offset + channel] = 255 - (255 - data[offset + channel]) / coverage;
+        }
+        data[offset + 3] = 255 * coverage;
+      }
+    }
     context.putImageData(pixels, 0, 0);
     canvas.toBlob(blob => {
       if (!blob || !img.isConnected) return;
@@ -123,7 +145,10 @@
     img.width = 320; img.height = 220;
     img.addEventListener('error', () => {img.src = placeholder; img.alt='Фото товара пока нет';}, {once:true});
     const outline = Object.hasOwn(photoOutlines, product.image) ? photoOutlines[product.image] : null;
-    if (outline) {
+    if (product.image === 'PHOTO-20261115-555.webp') {
+      img.classList.add('photo-outline', 'organic-bottle-outline');
+      img.addEventListener('error', () => img.classList.remove('photo-outline', 'organic-bottle-outline'), {once:true});
+    } else if (outline) {
       img.classList.add('photo-outline');
       img.style.setProperty('--photo-outline', outline);
       img.addEventListener('error', () => img.classList.remove('photo-outline'), {once:true});
