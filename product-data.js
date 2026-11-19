@@ -97,29 +97,56 @@
     }
     if (tail < count * 0.025 || tail > count * 0.98) return;
 
-    // Soften the outline one pixel inward without touching the label or highlights inside it.
-    const background = new Uint8Array(count);
-    for (let i = 0; i < tail; i++) background[queue[i]] = 1;
-    for (let y = 0; y < height; y++) {
-      for (let x = 0; x < width; x++) {
-        const index = y * width + x;
-        const offset = index * 4;
-        if (background[index]) {
-          data[offset + 3] = 0;
-          continue;
+    // Label the narrow contour before changing any pixels. Diagonal touches matter
+    // where the bottle shoulder or capsule slopes across the white backdrop.
+    const mask = new Uint8Array(count);
+    for (let i = 0; i < tail; i++) mask[queue[i]] = 1;
+    for (let i = 0; i < tail; i++) {
+      const index = queue[i];
+      const x = index % width;
+      const y = Math.floor(index / width);
+      for (let dy = Math.max(-1, -y); dy <= Math.min(1, height - 1 - y); dy++) {
+        for (let dx = Math.max(-1, -x); dx <= Math.min(1, width - 1 - x); dx++) {
+          const neighbor = index + dy * width + dx;
+          if (mask[neighbor] === 0) mask[neighbor] = 2;
         }
-        const exposed = (x > 0 ? background[index - 1] : 0)
-          + (x < width - 1 ? background[index + 1] : 0)
-          + (y > 0 ? background[index - width] : 0)
-          + (y < height - 1 ? background[index + width] : 0);
-        if (!exposed || data[offset + 3] !== 255) continue;
-        const coverage = 1 - Math.min(exposed, 3) / 6;
-        // Remove white mixed into the edge pixels by the original background.
+      }
+      data[index * 4 + 3] = 0;
+    }
+
+    for (let index = 0; index < count; index++) {
+      const offset = index * 4;
+      if (mask[index] !== 2 || data[offset + 3] !== 255) continue;
+      const x = index % width;
+      const y = Math.floor(index / width);
+      let red = 0;
+      let green = 0;
+      let blue = 0;
+      let samples = 0;
+      for (let dy = Math.max(-2, -y); dy <= Math.min(2, height - 1 - y); dy++) {
+        for (let dx = Math.max(-2, -x); dx <= Math.min(2, width - 1 - x); dx++) {
+          const neighbor = index + dy * width + dx;
+          const pos = neighbor * 4;
+          if (mask[neighbor] !== 0 || data[pos + 3] !== 255) continue;
+          red += 255 - data[pos];
+          green += 255 - data[pos + 1];
+          blue += 255 - data[pos + 2];
+          samples++;
+        }
+      }
+
+      // Estimate how much white was blended into this pixel from the nearest
+      // untouched part of the bottle, rather than using a fixed opacity.
+      const reference = red * red + green * green + blue * blue;
+      const contrast = (255 - data[offset]) * red
+        + (255 - data[offset + 1]) * green + (255 - data[offset + 2]) * blue;
+      const coverage = reference ? Math.min(1, samples * contrast / reference) : 0.65;
+      if (coverage > 0) {
         for (let channel = 0; channel < 3; channel++) {
           data[offset + channel] = 255 - (255 - data[offset + channel]) / coverage;
         }
-        data[offset + 3] = 255 * coverage;
       }
+      data[offset + 3] = 224 * coverage;
     }
     context.putImageData(pixels, 0, 0);
     canvas.toBlob(blob => {
