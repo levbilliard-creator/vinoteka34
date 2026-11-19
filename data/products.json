@@ -1543,11 +1543,20 @@
     "style": "темное · фильтрованный",
     "volume": "0,33 л",
     "country": "Бельгия",
-    "name_en": "",
+    "name_en": "Kristoffel Dark",
     "price": 350.0,
     "image": "PHOTO-20261115-577.webp",
     "inventory_key": "0b87fecad1c18826d8f12eebd243cc2f27ee91f63a59cfc537986a6676527806",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Тёмное бельгийское пиво",
+    "ingredients": "Ячмень и хмель; указаны основные компоненты.",
+    "aroma": "Карамель, кофе и грецкий орех.",
+    "taste": "Мягкий, полнотелый вкус с солодовой сладостью.",
+    "abv": "6%",
+    "characteristic_sources": [
+      "https://probkibutylki.ru/shop/pivo/belgija/pivo-martens-kristoffel-dark-0-33-l.html",
+      "https://farmersbar.com.my/products/kristoffel-dark/"
+    ]
   },
   {
     "id": 450,
@@ -2370,11 +2379,22 @@
     "style": "светлое · нефильтрованный",
     "volume": "0,5 л",
     "country": "Германия",
-    "name_en": "Maisels Weisse Original",
+    "name_en": "Maisel’s Weisse Original",
     "price": 550.0,
     "image": "SVAM-maisels_weisse_original.webp",
     "inventory_key": "8432a743ee009e0b770349d273af543ed280257c385ac26a87d7fabb09a35d16",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Баварский вайсбир",
+    "ingredients": "Пшеничный и ячменный солод; пивоварня использует собственную культуру дрожжей.",
+    "aroma": "Банан, гвоздика и лёгкая нотка мускатного ореха.",
+    "taste": "Освежающий, фруктово-пряный, с мелкими пузырьками.",
+    "abv": "5,2%",
+    "brewing": "После открытого брожения пиво проходит второе брожение и продолжает созревать в бутылке.",
+    "characteristic_sources": [
+      "https://www.maisel.com/en/maisels-weisse/maisels-weisse-original/",
+      "https://www.maisel.com/en/maisels-weisse/",
+      "https://beerinsiders.ru/api/brands/maisels_weisse/presentation"
+    ]
   },
   {
     "id": 169,
@@ -2534,11 +2554,21 @@
     "style": "нефильтрованный",
     "volume": "0,5 л",
     "country": "Россия",
-    "name_en": "",
+    "name_en": "Milk of Amnesia v. Tropic",
     "price": 250.0,
     "image": "Милк оф Амнезия Глетчер. Пивной напиток.jpg",
     "inventory_key": "74d26bcc76f0d2f06d33d665e980dabcc79a172e4a63f84e4cd0fbb071d43ce8",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Milkshake IPA",
+    "ingredients": "Ячменный и пшеничный солод, соки ананаса, манго и маракуйи, лактоза, хмель.",
+    "aroma": "Ананас, манго и маракуйя.",
+    "taste": "Округлый и умеренно сладкий, с плотной фруктовой основой и хмелевой горчинкой.",
+    "abv": "5,5%",
+    "ibu": "25–28 IBU",
+    "brewing": "Верховое брожение.",
+    "characteristic_sources": [
+      "https://www.gletcherbrewery.com/en/beer/milk-of-amnesia"
+    ]
   },
   {
     "id": 183,
@@ -3103,11 +3133,19 @@
     "style": "темное",
     "volume": "0,5 л",
     "country": "Чехия",
-    "name_en": "",
+    "name_en": "Černovar Černé",
     "price": 370.0,
     "image": "PHOTO-20261114-609.webp",
     "inventory_key": "cd343c505711a0cbc829d5b1209ffdfdd58d41bc43370b04ca0737a8cb926f40",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Чешский тёмный лагер",
+    "ingredients": "Вода, солод, хмель и дрожжи.",
+    "aroma": "Поджаренный солод и карамель.",
+    "taste": "Насыщенный, с карамельными оттенками и лёгкой сладостью в послевкусии.",
+    "abv": "4,5%",
+    "characteristic_sources": [
+      "https://shop.beerimport.ru/index.php?product_id=3319&route=product%2Fproduct"
+    ]
   },
   {
     "id": 610,
@@ -4780,11 +4818,22 @@
     "style": "темное",
     "volume": "0,44 л",
     "country": "Ирландия",
-    "name_en": "",
+    "name_en": "Guinness Draught",
     "price": 340.0,
     "image": "PHOTO-20261114-644.webp",
     "inventory_key": "fdf9c96c337471f036e4aecf53cb326951d793acb412e67dac52fa705cac7a7f",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Ирландский сухой стаут",
+    "ingredients": "Вода, ячменный солод, обжаренный ячмень, хмель и дрожжи.",
+    "aroma": "Кофейные и солодовые ноты.",
+    "taste": "Мягкая сливочная текстура, баланс солодовой сладости и жареной горечи.",
+    "abv": "4,2%",
+    "brewing": "Азотная капсула в банке образует плотную кремовую пену при открытии.",
+    "characteristic_sources": [
+      "https://www.guinness.com/en/beers/guinness-draught",
+      "https://www.guinness.com/en-ie/frequently-asked-questions",
+      "https://cdn.metro-group.com/hu/hu_fir_715414001003_hu.pdf"
+    ]
   },
   {
     "id": 315,
@@ -4851,7 +4900,17 @@
     "price": 550.0,
     "image": "SVAM-jacobinus_klosterbiere_classic_pils.webp",
     "inventory_key": "7624bd72c3218b7f2e4af5f8ef8f1a2b2f3d9aa5c24664baddc17327e2789df7",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Немецкий пилс",
+    "ingredients": "Вода, ячменный солод, хмель. В засыпи светлый карамельный солод и солод пилснер.",
+    "aroma": "Выразительная тонкая хмелевая нота.",
+    "taste": "Свежий и игристый, с заметной хмелевой горчинкой.",
+    "abv": "4,9%",
+    "serving": "7 °C",
+    "brewing": "Низовое брожение.",
+    "characteristic_sources": [
+      "https://www.eschweger-klosterbrauerei.de/unsere-biere/jacobinus-bierspezialitaeten/classik"
+    ]
   },
   {
     "id": 318,
@@ -4899,7 +4958,17 @@
     "price": 550.0,
     "image": "SVAM-jacobinus_klosterbiere_hefeweizen_2.webp",
     "inventory_key": "90a51e3a93df499554b62c92f3027cca909585c0e57352983caec3ed941cf899",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Немецкий хефевайцен",
+    "ingredients": "Вода, пшеничный и ячменный солод, хмель, дрожжи.",
+    "aroma": "Мягкие цветочно-дрожжевые ноты.",
+    "taste": "Освежающий, с мягкой игристостью и естественной дрожжевой мутностью.",
+    "abv": "5,6%",
+    "serving": "5–7 °C",
+    "brewing": "Верховое брожение.",
+    "characteristic_sources": [
+      "https://www.eschweger-klosterbrauerei.de/unsere-biere/jacobinus-bierspezialitaeten/hefe-weizen"
+    ]
   },
   {
     "id": 321,
@@ -5437,7 +5506,17 @@
     "price": 300.0,
     "image": "SVAM-tour_de_grapefruit_2.webp",
     "inventory_key": "bb9aa5cb4d230f06638895d8ba2d03bd68db0b2e0568d2c40e763a2e45ae4826",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Фруктовый пшеничный эль",
+    "ingredients": "Солод пилснер, пшеничный и овсяный солод, хмель Bobek и сок красного грейпфрута.",
+    "aroma": "Красный грейпфрут.",
+    "taste": "Лёгкий, освежающий, с цитрусовой кислинкой и мягкой горчинкой.",
+    "abv": "5,4%",
+    "ibu": "10 IBU",
+    "pairing": "Овощные салаты, рыба и морепродукты.",
+    "characteristic_sources": [
+      "https://www.gletcherbrewery.com/beer/tour-de-grapefruit"
+    ]
   },
   {
     "id": 658,
@@ -5539,11 +5618,20 @@
     "style": "светлое",
     "volume": "0,5 л",
     "country": "Италия",
-    "name_en": "",
+    "name_en": "Heineken Original",
     "price": 270.0,
     "image": "PHOTO-20261114-661.webp",
     "inventory_key": "dc4810ad6605538d37f8e3b8bdfc52af74bf2317e5d80000218fd39de7f9d1b8",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Светлый лагер",
+    "ingredients": "Вода, ячменный солод и хмель. Для брожения используется культура Heineken A-Yeast.",
+    "taste": "Свежий, с лёгкой фруктовой нотой и умеренной хмелевой горчинкой.",
+    "abv": "5%",
+    "characteristic_sources": [
+      "https://www.heineken.com/it/it/i-nostri-prodotti/heineken-original",
+      "https://www.heineken.com/global/en/faq",
+      "https://www.carrefour.it/p/heineken-original-50-cl/8006890454079.html"
+    ]
   },
   {
     "id": 358,
@@ -6053,11 +6141,19 @@
     "color": "",
     "style": "светлое · фильтрованный",
     "volume": "0,33 л",
-    "name_en": "",
+    "name_en": "Tsingtao Premium Lager",
     "price": 250.0,
     "image": "PHOTO-20261114-676.webp",
     "inventory_key": "727fa104a21f401b871052aeadd3fe371a0d3cb693a96bc984ced08510a5cd64",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Китайский светлый лагер",
+    "ingredients": "Вода, ячменный солод, рис и хмель.",
+    "taste": "Лёгкий, освежающий лагер на ячменно-рисовой основе.",
+    "country": "Китай",
+    "characteristic_sources": [
+      "https://www.ah.nl/producten/product/wi164239/tsingtao-premium-lager-6-pack",
+      "https://www.tsingtao.com.cn/TsingTao/upload/report/2016/10/20161031112129031.pdf"
+    ]
   },
   {
     "id": 677,
@@ -6068,11 +6164,19 @@
     "style": "",
     "volume": "0,33 л",
     "country": "Мексика",
-    "name_en": "",
+    "name_en": "Corona Extra",
     "price": 260.0,
     "image": "PHOTO-20261114-677.webp",
     "inventory_key": "e769ed402bb885007d27689dbbc1177f2cb63486609e1d8c66c7b17599865610",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Мексиканский светлый лагер",
+    "ingredients": "Вода, ячменный солод, несоложёные злаки и хмель.",
+    "taste": "Мягкий и освежающий, с лёгким зерновым профилем.",
+    "abv": "4,5%",
+    "characteristic_sources": [
+      "https://www.coronausa.com/pages/corona-extra",
+      "https://metro.zakaz.md/ru/products/beer-corona-extra-330ml-mexic--05410228277613/"
+    ]
   },
   {
     "id": 400,
@@ -6102,11 +6206,20 @@
     "style": "светлое · фильтрованный",
     "volume": "0,33 л",
     "country": "Италия",
-    "name_en": "",
+    "name_en": "Peroni Nastro Azzurro",
     "price": 330.0,
     "image": "PHOTO-20261114-678.webp",
     "inventory_key": "5164c8f113bbc58a783722e13c6b06e3d81fe52bce83d9804525446256a986b4",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Итальянский светлый лагер",
+    "ingredients": "Вода, ячменный солод, итальянская кукуруза Nostrano и хмель.",
+    "aroma": "Тонкая цитрусовая нота.",
+    "taste": "Сухой и освежающий, с деликатной горчинкой.",
+    "abv": "5%",
+    "characteristic_sources": [
+      "https://www.birraperoni.it/en/prodotto/nastro-azzurro/",
+      "https://www.tesco.ie/shop/en-IE/products/323644885"
+    ]
   },
   {
     "id": 679,
@@ -6471,14 +6584,21 @@
     "type": "beer",
     "kind": "Сидр",
     "color": "",
-    "style": "полусухой · фильтрованный",
+    "style": "брют · фильтрованный",
     "volume": "0,75 л",
     "country": "Франция",
-    "name_en": "",
+    "name_en": "Val de Rance Cidre de Bretagne Brut",
     "price": 915.0,
     "image": "PHOTO-20261115-682.webp",
     "inventory_key": "7aa10a98c1a66e8fb9e1b37649c7989ce190d01370b9467737c4163eca6b35f9",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Бретонский яблочный сидр IGP",
+    "ingredients": "Бретонские сидровые яблоки старинных сортов: сладкие, сладко-горькие и горькие.",
+    "taste": "Выразительный яблочный вкус с лёгкой терпкостью, мягкой горчинкой и освежающим финалом.",
+    "abv": "4,5%",
+    "characteristic_sources": [
+      "https://www.valderance.com/produit/cidre-brut"
+    ]
   },
   {
     "id": 404,
@@ -6627,7 +6747,17 @@
     "price": 200.0,
     "image": "SVAM-ausweis.webp",
     "inventory_key": "f941c4931975f335b3c9749e7939bd3e6853f142aec1f2bf69b14162e0a5e9bc",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Нефильтрованное пшеничное пиво",
+    "ingredients": "Пивоварня указывает воду, солод и словенский хмель.",
+    "aroma": "Лёгкая банановая нота.",
+    "taste": "Бархатистый, с освежающим фруктовым послевкусием.",
+    "abv": "5,2%",
+    "ibu": "15 IBU",
+    "characteristic_sources": [
+      "https://www.gletcherbrewery.com/blog-all/tpost/lp53os88v1-ausweis-vash-propusk-v-mir-nemetskogo-pi",
+      "https://files.gletcherbrewery.com/Gletcher-Brewery-Presentation-ENG.pdf"
+    ]
   },
   {
     "id": 687,
@@ -7131,7 +7261,16 @@
     "price": 550.0,
     "image": "SVAM-klaster_svetle.webp",
     "inventory_key": "e5dadccae1777df75fd59ae5b5bf4c265ffa548cb2f200cf263cef448626c22c",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Чешский светлый лежак",
+    "ingredients": "Вода, ячменный солод, хмель и хмелепродукты.",
+    "taste": "Насыщенный лагер с лёгкой горчинкой в послевкусии.",
+    "abv": "5%",
+    "brewing": "Открытое брожение с дображиванием в скальных подвалах.",
+    "characteristic_sources": [
+      "https://beerinsiders.ru/api/brands/klaster/presentation",
+      "https://www.akcniceny.cz/akce/klaster-premium-pivo-svetly-lezak-0-5l/"
+    ]
   },
   {
     "id": 458,
@@ -7957,14 +8096,23 @@
     "type": "beer",
     "kind": "Сидр",
     "color": "",
-    "style": "полусухой · нефильтрованный",
+    "style": "брют · нефильтрованный",
     "volume": "0,75 л",
     "country": "Франция",
-    "name_en": "",
+    "name_en": "Val de Rance Cidre de Bretagne Brut Traditionnel",
     "price": 915.0,
     "image": "PHOTO-20261115-716.webp",
     "inventory_key": "fdbb44167a05ac88e3d16ff6d51ad41d950093368fcffc4f65636c910afe853f",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Бретонский яблочный сидр IGP",
+    "ingredients": "Бретонские яблоки старинных сортов, преимущественно сладко-горькие и горькие.",
+    "aroma": "Спелые фрукты с лёгкими растительными и древесными нотами.",
+    "taste": "Полнотелый, с выраженной терпкостью и горчинкой.",
+    "abv": "4,5%",
+    "brewing": "Естественная мутность.",
+    "characteristic_sources": [
+      "https://www.valderance.com/produit/cidre-brut-traditionnel"
+    ]
   },
   {
     "id": 717,
@@ -7972,14 +8120,20 @@
     "type": "beer",
     "kind": "Сидр",
     "color": "",
-    "style": "полусухой · фильтрованный",
+    "style": "брют · фильтрованный",
     "volume": "0,25 л",
     "country": "Франция",
-    "name_en": "",
+    "name_en": "Val de Rance Cidre de Bretagne Brut",
     "price": 370.0,
     "image": "PHOTO-20261115-717.webp",
     "inventory_key": "fc09511702493e2a2fbf7762bdc531e8ca75c9b0fb2769a924379490fc77ecb2",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Бретонский яблочный сидр IGP",
+    "ingredients": "Бретонские сидровые яблоки старинных сортов: сладкие, сладко-горькие и горькие.",
+    "taste": "Выразительный яблочный вкус с лёгкой терпкостью, мягкой горчинкой и освежающим финалом.",
+    "characteristic_sources": [
+      "https://www.valderance.com/produit/cidre-brut"
+    ]
   },
   {
     "id": 502,
@@ -8909,7 +9063,18 @@
     "price": 230.0,
     "image": "SVAM-bowler_ipa.webp",
     "inventory_key": "7e102f132cda96b761ad502da124ba970480f1c43eae54fdbfe063fd68da50ee",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Американский IPA",
+    "ingredients": "Солод Pale Ale и MelaBeech. Хмель Styrian Wolf, Chinook, Mosaic и Cascade.",
+    "aroma": "Цитрусы, цветы, хвоя и фрукты.",
+    "taste": "Плотный эль с яркой хмелевой горечью в финале.",
+    "abv": "6,1%",
+    "ibu": "70 IBU",
+    "brewing": "Сухое охмеление Cascade и Mosaic.",
+    "pairing": "Бургеры и блюда азиатской кухни.",
+    "characteristic_sources": [
+      "https://www.gletcherbrewery.com/beer/bowler-ipa"
+    ]
   },
   {
     "id": 742,
@@ -9545,11 +9710,20 @@
     "style": "светлое",
     "volume": "0,5 л",
     "country": "Германия",
-    "name_en": "",
+    "name_en": "Flensburger Gold",
     "price": 580.0,
     "image": "PHOTO-20261115-776.webp",
     "inventory_key": "1fb08433d6534f02f9d1d53430108fd621c6e429f5021bed7d5cc2d9edab2f8e",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Мягкий немецкий лагер",
+    "ingredients": "Пивоварня использует ячменный солод, в том числе светлый карамельный, ароматический хмель и воду из местного источника.",
+    "aroma": "Тонкий хмелевой аромат.",
+    "taste": "Округлый, мягкий и полнотелый.",
+    "abv": "4,8%",
+    "characteristic_sources": [
+      "https://www.flens.de/produkt/flensburger-gold/",
+      "https://shop.flens.de/p/flensburger-gold-016101"
+    ]
   },
   {
     "id": 777,
@@ -9793,7 +9967,17 @@
     "price": 990.0,
     "image": "SVAM-sint_gummarus_tripel_2.webp",
     "inventory_key": "4029e68346537bc781bde372103b07d71fbb76422702729b3f379fc43958d65b",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Бельгийский трипель",
+    "ingredients": "Солодовая основа.",
+    "taste": "Полнотелый, со сложным солодовым профилем.",
+    "abv": "8,3%",
+    "ibu": "30 IBU",
+    "brewing": "Верховое брожение, длительное созревание и повторное брожение в бутылке.",
+    "characteristic_sources": [
+      "https://cornelissenusa.com/our-beers/",
+      "https://brouwerijcornelissen.be/en-be/beers/sint-gummarus-tripel/"
+    ]
   },
   {
     "id": 792,
@@ -10460,7 +10644,17 @@
     "price": 440.0,
     "image": "SVAM-lindemans_kriek_3.webp",
     "inventory_key": "a87b3eb63f3c39038dd56b83ef50e16dcc834258876a77ffc3c3c8c92c88168a",
-    "stock_date": "2026-10-31"
+    "stock_date": "2026-10-31",
+    "beer_style": "Вишнёвый ламбик (крик)",
+    "ingredients": "Ламбик и кислая вишня.",
+    "aroma": "Спелая вишня.",
+    "taste": "Игристый, с выразительной вишней и балансом сладости и кислотности.",
+    "abv": "3,5%",
+    "serving": "2–4 °C",
+    "brewing": "Купаж ламбика с вишней, затем мягкая пастеризация.",
+    "characteristic_sources": [
+      "https://lindemans.be/pages/lindemans-kriek"
+    ]
   },
   {
     "id": 829,
