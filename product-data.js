@@ -41,15 +41,98 @@
     if(!Array.isArray(products) || !products.every(p => p && p.id != null && typeof p.name_ru === 'string')) throw new Error('Неверный формат каталога');
     return products;
   }
+  // These photos have a studio backdrop that is not uniformly white.
+  const photoOutlines = {
+    'Печенье «Амаретти» цитрусовые.jpg': 'polygon(10.7% 9.4%, 88.5% 9%, 89% 9.4%, 83.2% 85.5%, 17% 85.1%, 16.6% 84.7%)'
+  };
+
+  function whiteBackdropPreview(img, eager) {
+    const canvas = document.createElement('canvas');
+    const scale = Math.min(1, (eager ? 800 : 400) / Math.max(img.naturalWidth, img.naturalHeight));
+    const width = canvas.width = Math.max(1, Math.round(img.naturalWidth * scale));
+    const height = canvas.height = Math.max(1, Math.round(img.naturalHeight * scale));
+    const context = canvas.getContext('2d', {willReadFrequently:true});
+    if (!context || width < 3 || height < 3) return;
+    context.drawImage(img, 0, 0, width, height);
+    const pixels = context.getImageData(0, 0, width, height);
+    const {data} = pixels;
+    const count = width * height;
+    const corners = [0, width - 1, count - width, count - 1];
+
+    const isWhite = index => {
+      const offset = index * 4;
+      if (data[offset + 3] !== 255) return false;
+      const red = data[offset];
+      const green = data[offset + 1];
+      const blue = data[offset + 2];
+      const minimum = Math.min(red, green, blue);
+      return minimum >= 244 && Math.max(red, green, blue) - minimum <= 12;
+    };
+    // Transparent photos and photos with a non-white scene keep their original rendering.
+    if (corners.filter(isWhite).length < 3) return;
+
+    const visited = new Uint8Array(count);
+    const queue = new Uint32Array(count);
+    let tail = 0;
+    function visit(index) {
+      if (visited[index]) return;
+      visited[index] = 1;
+      if (isWhite(index)) queue[tail++] = index;
+    }
+    for (let x = 0; x < width; x++) {
+      visit(x);
+      visit(count - width + x);
+    }
+    for (let y = 0; y < height; y++) {
+      visit(y * width);
+      visit(y * width + width - 1);
+    }
+    for (let head = 0; head < tail; head++) {
+      const index = queue[head];
+      const x = index % width;
+      if (x > 0) visit(index - 1);
+      if (x < width - 1) visit(index + 1);
+      if (index >= width) visit(index - width);
+      if (index < count - width) visit(index + width);
+    }
+    if (tail < count * 0.025 || tail > count * 0.98) return;
+
+    // Clear only the background connected to an edge. White labels inside the silhouette stay opaque.
+    for (let i = 0; i < tail; i++) data[queue[i] * 4 + 3] = 0;
+    context.putImageData(pixels, 0, 0);
+    canvas.toBlob(blob => {
+      if (!blob || !img.isConnected) return;
+      const url = URL.createObjectURL(blob);
+      const release = () => {
+        img.removeEventListener('load', release);
+        img.removeEventListener('error', release);
+        URL.revokeObjectURL(url);
+      };
+      img.addEventListener('load', release);
+      img.addEventListener('error', release);
+      img.src = url;
+    });
+  }
+
   function makeImage(product, eager=false) {
     const img = document.createElement('img');
     const source = imageOf(product);
-    img.src = source;
     img.alt = source === placeholder ? 'Фото товара пока нет' : product.name_ru;
     img.loading = eager ? 'eager' : 'lazy';
     img.decoding = 'async';
     img.width = 320; img.height = 220;
     img.addEventListener('error', () => {img.src = placeholder; img.alt='Фото товара пока нет';}, {once:true});
+    const outline = Object.hasOwn(photoOutlines, product.image) ? photoOutlines[product.image] : null;
+    if (outline) {
+      img.classList.add('photo-outline');
+      img.style.setProperty('--photo-outline', outline);
+      img.addEventListener('error', () => img.classList.remove('photo-outline'), {once:true});
+    } else if (source !== placeholder) {
+      img.addEventListener('load', () => {
+        if (img.getAttribute('src') === source) whiteBackdropPreview(img, eager);
+      }, {once:true});
+    }
+    img.src = source;
     return img;
   }
   function element(tag, className, value) {
